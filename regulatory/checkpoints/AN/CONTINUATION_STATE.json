@@ -1,0 +1,19 @@
+{
+  "checkpoint": "AN",
+  "previous": "AM",
+  "date": "2026-10-09",
+  "phase": "Phase 4 Accounting Core / Financial Integrity",
+  "last_completed_wp": "WP-ACC-004 (inherited)",
+  "active_wp": "WP-ACC-005 OPEN BLOCKED",
+  "parallel_workstream": "WP-PAY-GIMAC-001 OPEN NOT ATTEMPTED",
+  "attempted": 1,
+  "completed": 0,
+  "open": 1,
+  "blocked_from_closure": 1,
+  "dependent_attempted": 0,
+  "production_code_loc": 0,
+  "banking_tests_executed": 0,
+  "regulatory_requests_sent": 0,
+  "definition_of_ready": "FAIL",
+  "next_exact_task": "WP-ACC-005 Checkpoint AO: acquire issuer-authenticated complete Regulation 02/25 including printed page 10; obtain separately certified Court dispositions for 01/25 and 02/25; obtain original COBAC-MINFI correspondence and institution-specific approved PCEC/settlement requirements."
+}
