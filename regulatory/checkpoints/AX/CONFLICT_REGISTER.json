@@ -1,0 +1,90 @@
+{
+  "checkpoint": "AX",
+  "date": "2026-11-01",
+  "work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "source_urls": {
+    "bulletin2004": "https://www.beac.int/wp-content/uploads/2016/10/Bulletin-COBAC-n%C2%B06.pdf",
+    "instruction2015": "https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015_01_pcec.pdf",
+    "regulation2018": "https://www.beac.int/wp-content/uploads/2016/10/reglement_cobac_r_2018-01_relatif_a_la_classification_a_la_comptabilisation_et_au_provisionnement_des_creances.pdf",
+    "report2002": "https://www.beac.int/wp-content/uploads/2016/10/rap-2002.pdf",
+    "instructions": "https://www.beac.int/supervision-bancaire/instructions-de-cobac/",
+    "regulations": "https://www.beac.int/supervision-bancaire/reglements-de-cobac/"
+  },
+  "conflicts": [
+    {
+      "id": "AX-C01",
+      "severity": "P0",
+      "topic": "Account 2651/2652 semantic collision",
+      "sources": [
+        "I-2003/01 art.2, COBAC Bulletin 6 printed p.187",
+        "I-2015/01 art.3, printed p.2"
+      ],
+      "observed": "2003 article 2 list assigns 2651=private investment securities and 2652=public; 2003 commentary on same page describes 2651 as public fixed-income securities; 2015 art.3 explicitly subdivides 2651 as public and 2652 as private.",
+      "decision": "Do not resolve by arbitrary choice or overwrite history. Model instrument-versioned mappings and obtain formal authoritative clarification of 2003 internal discrepancy and institution-approved transition; current 2015 wording is an amendment candidate, not proof of full 2026 chart.",
+      "effect": "Incorrect government/private securities classification, prudential aggregation, collateral eligibility and financial statements.",
+      "status": "OPEN_BLOCKING_CHART_ACTIVATION"
+    },
+    {
+      "id": "AX-C02",
+      "severity": "P0",
+      "topic": "I-2015/01 Article 8 apparent internal account-number error",
+      "sources": [
+        "I-2015/01 art.8(b) and 8(d), printed pp.5–7"
+      ],
+      "observed": "Art.8(b) creates 321=short-term healthy and 322=short-term sensitive; art.8(d) names 312 short-term sensitive but all its listed child accounts start with 322.",
+      "decision": "Treat 312 reference as unresolved textual inconsistency, not silently auto-corrected; seek COBAC erratum or licensed-institution-approved mapping with legal review.",
+      "effect": "Potential cross-tenor GL misclassification between medium-term 312 and short-term 322.",
+      "status": "OPEN_BLOCKING_CHART_ACTIVATION"
+    },
+    {
+      "id": "AX-C03",
+      "severity": "P0",
+      "topic": "R-2018/01 Article 33 pre-signature effective date",
+      "sources": [
+        "R-2018/01 art.33 and execution clause, printed p.12, image inspected"
+      ],
+      "observed": "The scanned page reads 1er janvier 2018 as entry into force; document states decided 16 janvier 2018. PDF text extraction omits the superscript day, but page image resolves wording.",
+      "decision": "Record explicit stated date, signature date and separate legal-effect interpretation. Do not apply retrospective postings, provisioning releases or historical journal rewrites without qualified legal/institutional approval.",
+      "effect": "Financial restatement, audit and regulatory risk.",
+      "status": "OPEN_LEGAL_INTERPRETATION"
+    },
+    {
+      "id": "AX-C04",
+      "severity": "P0",
+      "topic": "2015 cross-reference to superseded 2014 credit regulation",
+      "sources": [
+        "I-2015/01 arts.5,14 and related commentary",
+        "R-2018/01 art.32"
+      ],
+      "observed": "2015 PCEC credit-classification commentary references R-2014/01; 2018 art.32 expressly abrogates contrary earlier provisions, notably R-2014/01.",
+      "decision": "Resolve precedence at the rule level; retain historical 2015 account structures separately from current classification decision authority. Never use 2014 definitions merely because 2015 PCEC commentary cites them.",
+      "effect": "Wrong risk staging/provisioning and report mapping.",
+      "status": "OPEN_LEGAL_AND_ACCOUNTING_RECONCILIATION"
+    },
+    {
+      "id": "AX-C05",
+      "severity": "P1",
+      "topic": "I-2002/01 original full text unavailable",
+      "sources": [
+        "BEAC 2002 annual report p.201",
+        "BEAC instructions catalogue"
+      ],
+      "observed": "Issuer annual report states I-2002/01 entered into force 1 July 2002; full authenticated instruction text was not obtained this run.",
+      "decision": "Record effective date as issuer-report historical claim, not substitute for original instrument or current 2026 mapping.",
+      "status": "OPEN_SOURCE_ACQUISITION"
+    },
+    {
+      "id": "AX-C06",
+      "severity": "P0",
+      "topic": "2015 provision general reserve rule vs 2018 rule",
+      "sources": [
+        "I-2015/01 art.2",
+        "R-2018/01 arts.16–17"
+      ],
+      "observed": "2015 PCEC article 2 and 2018 regulation articles 16–17 both address 0.5% annual general provisioning and 2% stock threshold; 2018 text explicitly states annual minimum ceases once 2% achieved, provided threshold is maintained.",
+      "decision": "No standalone threshold from the 2015 extract may be activated without reading the 2018 conditions and any later applicable rule, institutional policy, eligible base and accounting mappings.",
+      "status": "OPEN_CURRENT_LAW_VERIFICATION"
+    }
+  ]
+}
