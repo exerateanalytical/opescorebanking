@@ -1,0 +1,62 @@
+[
+  {
+    "id": "AS-T01",
+    "given": "Official 2025 communiqué names two subjects but not regulation numbers",
+    "expected": "record adoption-by-subject only; block authoritative number-title promotion",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AS-T02",
+    "given": "A third-party PDF provides number 02/25 but printed page 10 is missing",
+    "expected": "preserve identity as secondary claim and fail complete-text gate",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AS-T03",
+    "given": "The October 2026 official communiqué omits implementing rules",
+    "expected": "record scoped negative observation; do not assert no rule was adopted",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AS-T04",
+    "given": "BEAC public index omits 02/25 while issuer later supplies certified signed copy",
+    "expected": "retain both observations, upgrade from issuer proof; do not treat catalogue miss as conflict proving invalidity",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AS-T05",
+    "given": "Official press communiqué is saved as a URL but no binary hash was calculated",
+    "expected": "report custody as URL/visual only; deny cryptographic authenticity claim",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AS-T06",
+    "given": "A certified signed instrument differs from a previously summarized communiqué",
+    "expected": "retain both versions and trigger independent legal review before policy promotion",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AS-T07",
+    "given": "Adoption event is confirmed while CEMAC Bulletin issue/page and legal effective date remain unknown",
+    "expected": "deny executable policy activation and financial postings",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AS-T08",
+    "given": "An evidence reviewer is also the maker of the policy activation request",
+    "expected": "deny approval due to segregation-of-duties",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AS-T09",
+    "given": "A later authenticated implementing regulation changes the rules after historical postings",
+    "expected": "effective-date versioning and prospective controlled change; never edit posted journals",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AS-T10",
+    "given": "An external transfer outcome is UNKNOWN while adoption evidence has become official",
+    "expected": "keep UNKNOWN and reconcile; never retry as a new payment or mark final",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  }
+]

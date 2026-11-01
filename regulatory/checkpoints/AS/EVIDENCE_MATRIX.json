@@ -1,0 +1,122 @@
+{
+  "checkpoint": "AS",
+  "date": "2026-11-01",
+  "predecessor": "AR",
+  "work_package": "WP-ACC-005",
+  "primary_source_review_method": "Official BEAC-hosted PDF images and official web catalogue inspected; no source binary preserved; no PDF SHA-256 calculated; no issuer signature cryptographic verification",
+  "sources": [
+    {
+      "id": "E-AS-001",
+      "kind": "PRIMARY_OFFICIAL_COMMUNIQUE",
+      "date": "2025-07-12",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Communique-CMO-12072025.pdf",
+      "observation": "UMAC ministerial communiqué explicitly records adoption of regulations on CDC supervision and inactive accounts/unclaimed assets",
+      "supports": [
+        "adoption_event_by_subject"
+      ],
+      "does_not_support": [
+        "instrument_number_from_communique",
+        "complete_signed_instrument",
+        "bulletin_issue",
+        "effective_date",
+        "court_status",
+        "PCEC_mapping"
+      ],
+      "custody": "PUBLIC_URL_AND_VISUAL_INSPECTION_ONLY"
+    },
+    {
+      "id": "E-AS-002",
+      "kind": "PRIMARY_OFFICIAL_COMMUNIQUE",
+      "date": "2026-04-08",
+      "url": "https://www.beac.int/wp-content/uploads/2026/04/Communique%CC%81-de-Presse-CM-du-08-avril-2026.pdf",
+      "observation": "Lists other adopted instruments, not dormant-assets implementation",
+      "supports": [
+        "bounded_agenda_observation"
+      ],
+      "does_not_support": [
+        "non_adoption_certification"
+      ]
+    },
+    {
+      "id": "E-AS-003",
+      "kind": "PRIMARY_OFFICIAL_COMMUNIQUE",
+      "date": "2026-07-22",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Communiqu%C3%A9-de-presse-CM-du-22-juillet-2026.pdf",
+      "observation": "Discusses payment-provider regulation revision, not final dormant-assets implementation",
+      "supports": [
+        "bounded_agenda_observation"
+      ],
+      "does_not_support": [
+        "non_adoption_certification"
+      ]
+    },
+    {
+      "id": "E-AS-004",
+      "kind": "PRIMARY_OFFICIAL_COMMUNIQUE",
+      "date": "2026-10-07",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Communiqu%C3%A9-de-Presse-CM-du-07-10-2026.pdf",
+      "observation": "Lists COBAC report and COSUMAF amendment, not final dormant-assets implementation",
+      "supports": [
+        "bounded_agenda_observation"
+      ],
+      "does_not_support": [
+        "non_adoption_certification"
+      ]
+    },
+    {
+      "id": "E-AS-005",
+      "kind": "OFFICIAL_PUBLIC_CATALOGUE",
+      "access_date": "2026-11-01",
+      "url": "https://www.beac.int/supervision-bancaire/reglements-de-cobac/",
+      "observation": "No issuer-certified complete 01/25 or 02/25 text located in inspected index",
+      "supports": [
+        "bounded_catalogue_search_result"
+      ],
+      "does_not_support": [
+        "absence_of_publication",
+        "absence_of_regulation"
+      ]
+    },
+    {
+      "id": "E-AS-006",
+      "kind": "OFFICIAL_PUBLIC_CATALOGUE",
+      "access_date": "2026-11-01",
+      "url": "https://www.beac.int/beac/communiques-de-presse/comites-ministeriels/",
+      "observation": "UMAC dated communiqués indexed",
+      "supports": [
+        "source_discovery"
+      ],
+      "does_not_support": [
+        "exhaustive_regulatory_registry"
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "id": "REG-01-25",
+      "adoption_event_by_subject": "OFFICIAL_COMMUNIQUE_CONFIRMED",
+      "number_to_title_mapping": "PENDING_ISSUER_SIGNED_TEXT",
+      "complete_signed_text": "NOT_ACQUIRED",
+      "bulletin_issue": "UNKNOWN",
+      "bulletin_pages": "UNKNOWN",
+      "effective_date": "UNKNOWN",
+      "court_order": "NOT_ACQUIRED",
+      "policy_activation": "PROHIBITED"
+    },
+    {
+      "id": "REG-02-25",
+      "adoption_event_by_subject": "OFFICIAL_COMMUNIQUE_CONFIRMED",
+      "number_to_title_mapping": "PENDING_ISSUER_SIGNED_TEXT",
+      "complete_signed_text": "NOT_ACQUIRED",
+      "missing_printed_page": "10",
+      "bulletin_issue": "UNKNOWN",
+      "bulletin_pages": "UNKNOWN",
+      "effective_date": "UNKNOWN",
+      "court_order": "NOT_ACQUIRED",
+      "implementing_rules_adoption": "UNVERIFIED",
+      "bank_pcec_mapping": "NOT_APPROVED",
+      "policy_activation": "PROHIBITED"
+    }
+  ],
+  "status_rule": "A press release is evidence of a reported ministerial decision, not a certified copy of the regulation, its publication, entry into force, judicial enforceability or bank-specific implementation. Search silence is not a no-adoption certificate."
+}
