@@ -16,7 +16,8 @@
   "regulatory_requests_sent": 0,
   "definition_of_ready": "FAIL",
   "new_primary_finding": "CEMAC revised Treaty Articles 40–44; Article 43 publication/effective-date proof is a distinct evidence gate",
-  "new_gap": "GAP-ACC-067 candidate P0 publication-chain evidence",
+  "new_gap": "GAP-ACC-069 candidate P0 publication-chain evidence (IDs 067 and 068 already exist in historical archive)",
+  "new_p1_gap": "GAP-ACC-070 proposed evidence/implementation design",
   "acceptance_scenarios_specified": 14,
   "canonical_next_exact_task": "WP-ACC-005 — Checkpoint AS: authenticate CEMAC Bulletin Officiel publication references and complete signed 01/25 and 02/25 (including missing printed page 10), independent certified court orders, COBAC–MINFI original letter, June 2026 implementing text status and bank-specific PCEC/settlement approvals; preserve policy hold and do not implement financial posting."
 }
