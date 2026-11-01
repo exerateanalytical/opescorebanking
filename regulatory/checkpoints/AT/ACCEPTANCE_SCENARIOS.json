@@ -1,0 +1,80 @@
+{
+  "checkpoint": "AT",
+  "date": "2026-11-01",
+  "status": "SPECIFIED_NOT_EXECUTED",
+  "count": 12,
+  "scenarios": [
+    {
+      "id": "AT-T01",
+      "given": "Reject 02/25 scan missing printed page 10 even though terminal signature page visible",
+      "expected": "SOURCE_INCOMPLETE_HOLD",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T02",
+      "given": "Reject use of 01/25 secondary-scan Article 23 date as certified operational effective date",
+      "expected": "LEGAL_EFFECT_HOLD",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T03",
+      "given": "Reject use of 02/25 secondary-scan Article 30 date as certified operational effective date",
+      "expected": "LEGAL_EFFECT_HOLD",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T04",
+      "given": "Reject BVMAC Bulletin Officiel de la Cote as Community Official Bulletin",
+      "expected": "PUBLICATION_EVIDENCE_REJECTED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T05",
+      "given": "Reject third-party July 2025 institutional bulletin listing as issue/page proof for 02/25",
+      "expected": "PUBLICATION_EVIDENCE_REJECTED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T06",
+      "given": "Reject PCE/CEMAC public-sector state accounting directive as bank PCEC chart mapping",
+      "expected": "ACCOUNTING_PROFILE_REJECTED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T07",
+      "given": "Accept source registration with secondary provenance but no policy activation or posting",
+      "expected": "EVIDENCE_ONLY",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T08",
+      "given": "Conflicting later issuer-certified page 10 supersedes evidence and triggers legal re-review, never journal mutation",
+      "expected": "LEGAL_REASSESSMENT_REQUIRED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T09",
+      "given": "Concurrent repeated evidence event with same idempotency key creates one registry record and zero financial events",
+      "expected": "ONE_EVIDENCE_RECORD_ZERO_POSTINGS",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T10",
+      "given": "Unknown external settlement outcome remains pending independent reconciliation; no retry-driven duplicate posting",
+      "expected": "UNKNOWN_OUTCOME_HOLD",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T11",
+      "given": "Legal reviewer approving own uploaded evidence is denied server-side",
+      "expected": "MAKER_CHECKER_DENIED",
+      "execution": "NOT_RUN"
+    },
+    {
+      "id": "AT-T12",
+      "given": "Partial outage during evidence approval resumes safely with unchanged ledger and audit continuity",
+      "expected": "RECOVERABLE_NO_FINANCIAL_SIDE_EFFECT",
+      "execution": "NOT_RUN"
+    }
+  ]
+}

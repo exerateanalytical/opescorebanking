@@ -1,0 +1,29 @@
+{
+  "checkpoint": "AT",
+  "date": "2026-11-01",
+  "previous": "AS",
+  "phase": "Phase 4 — Accounting Core / Financial Integrity",
+  "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+  "active_work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "work_packages_attempted": 1,
+  "work_packages_completed": 0,
+  "work_packages_kept_open": 1,
+  "work_packages_blocked_from_closure": 1,
+  "dependent_packages_attempted": 0,
+  "banking_tests_executed": 0,
+  "production_code_written": 0,
+  "regulatory_requests_sent": 0,
+  "definition_of_ready": "FAIL",
+  "findings": [
+    "Third-party scans show candidate 2025-09-01 dates in 01/25 Article 23 and 02/25 Article 30; NOT issuer-certified or activated",
+    "02/25 academic scan physically 10 PDF pages but missing printed page 10 and Articles 24-26",
+    "Official CEMAC UEAC catalogue's PCE/CEMAC state accounting directive must not be mistaken for bank PCEC",
+    "BVMAC Bulletin Officiel de la Cote and third-party institutional bulletin index do not prove legal publication"
+  ],
+  "p0_closed": 0,
+  "new_gap_ids": [],
+  "acceptance_scenarios_specified": 12,
+  "acceptance_scenarios_executed": 0,
+  "canonical_next_exact_task": "WP-ACC-005 — Checkpoint AU: obtain issuer-certified complete 01/25 and 02/25 (including printed page 10), authenticate Community Official Bulletin issue/date/pages and effective dates, separate certified court dispositions, original COBAC–MINFI letter, adopted implementing texts, and bank-signed PCEC/settlement mapping; preserve financial activation hold."
+}

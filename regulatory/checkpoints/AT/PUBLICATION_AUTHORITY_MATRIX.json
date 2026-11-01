@@ -1,0 +1,67 @@
+{
+  "checkpoint": "AT",
+  "date": "2026-11-01",
+  "predecessor": "AS",
+  "work_package": "WP-ACC-005",
+  "entries": [
+    {
+      "id": "AT-E01",
+      "class": "THIRD_PARTY_DOCUMENT_REPRODUCTION",
+      "instrument": "01/25",
+      "pdf_pages_observed": 8,
+      "article23_effective_date_candidate": "2025-09-01",
+      "article26_publication_instruction": true,
+      "issuer_certified": false,
+      "legal_effect_promotable": false
+    },
+    {
+      "id": "AT-E02",
+      "class": "INCOMPLETE_THIRD_PARTY_DOCUMENT_REPRODUCTION",
+      "instrument": "02/25",
+      "pdf_pages_observed": 10,
+      "printed_page_10_present": false,
+      "missing_articles": [
+        "23_continuation",
+        "24",
+        "25",
+        "26"
+      ],
+      "article30_effective_date_candidate": "2025-09-01",
+      "article31_publication_instruction": true,
+      "issuer_certified": false,
+      "legal_effect_promotable": false
+    },
+    {
+      "id": "AT-E03",
+      "class": "OFFICIAL_CEMAC_UEAC_CATALOGUE",
+      "url": "https://cemac.int/reglements-directives/",
+      "contains": "PCE/CEMAC public-sector state accounting directive",
+      "not_equivalent_to": "PCEC bank chart of accounts",
+      "legal_publication_for_01_25_02_25": false
+    },
+    {
+      "id": "AT-E04",
+      "class": "OFFICIAL_MARKET_QUOTATION_BULLETIN",
+      "url": "https://www.bvm-ac.org/wp-content/uploads/2025/07/BOC-20250723.pdf",
+      "publisher": "BVMAC",
+      "not_equivalent_to": "CEMAC Community Official Bulletin"
+    },
+    {
+      "id": "AT-E05",
+      "class": "THIRD_PARTY_INDEX",
+      "url": "https://app.maathis.com/droit/cemac/autre/bulletin-officiel-cemac-juillet-2025",
+      "legal_bulletin_issue_pages_verified": false
+    }
+  ],
+  "blocking_propositions": [
+    "ISSUER_CERTIFIED_COMPLETE_TEXT",
+    "CEMAC_COMMUNITY_BULLETIN_ISSUE_PAGE",
+    "LEGAL_EFFECT_COURT_DISPOSITION",
+    "ORIGINAL_COBAC_MINFI",
+    "FINAL_IMPLEMENTING_RULES",
+    "BANK_APPROVED_PCEC_SETTLEMENT"
+  ],
+  "policy_activation": "PROHIBITED",
+  "source_binary_custody": "NOT_RETAINED",
+  "sha256": "NOT_CALCULATED"
+}

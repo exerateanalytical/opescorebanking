@@ -1,0 +1,18 @@
+# AT — Proposed source-type and legal-applicability controls (NON-EXECUTABLE)
+These are design requirements; no code, schema migration, executable contract, bank approval, or certification is asserted.
+
+- **AT-R01 Distinct legal source types:** represent `ISSUER_ORIGINAL`, `CERTIFIED_COPY`, `OFFICIAL_BULLETIN_ISSUE`, `OFFICIAL_COMMUNIQUE`, `SECONDARY_SCAN`, `THIRD_PARTY_INDEX`, `MARKET_QUOTATION_BULLETIN` separately. Never promote based on title keywords or a visible seal alone.
+- **AT-R02 Page inventory gate:** for a scanned instrument store physical PDF page count, printed page numbers, article spans, missing/duplicate pages, annex completeness, provenance, and reviewer attestations. A discontinuity (02/25 printed page 10) triggers `SOURCE_INCOMPLETE_HOLD` even if terminal signature page exists.
+- **AT-R03 Legal-date separation:** model `stated_effective_date_candidate`, `authenticated_effective_date`, `official_publication_reference`, `judicial_effect`, `applicability_review` as independent fields. A candidate '2025-09-01' from third-party scans must never activate policy or be silently substituted for authenticated applicability.
+- **AT-R04 Correct Bulletin identity:** require issuer, series, issue number, date, pages, source binary, certified authenticity, and instrument match. Explicitly reject BVMAC `Bulletin Officiel de la Cote` and a news bulletin as Community Official Bulletin evidence.
+- **AT-R05 Accounting taxonomy firewall:** separate `PCE/CEMAC` public-sector state accounting from bank-specific `PCEC` and other institution-class charts. Chart selection must be signed by institution CFO/finance and regulatory reviewers, effective-dated and institution-profile scoped. No automated crosswalk from matching acronym.
+- **AT-R06 Provenance-preserving corrections:** source conflict, missing page recovery, newly certified publication or judicial order creates a superseding evidence decision, never edits posted journals, retroactively changes balances or silently replays transfers.
+- **AT-R07 Approval chain:** legal reviewers authenticate authority/applicability; compliance reviews AML/claimant privacy; finance approves chart and journals; operations approves settlement/reconciliation; security verifies custody/access. Maker-checker enforced server-side with tamper-resistant audit.
+- **AT-R08 API/event boundary:** evidence-ingestion `RegulatoryEvidenceObserved` must be informational only and idempotent; any future `PolicyActivationRequested` requires signed evidence IDs, legal decision, institution scope, effective window, dual approvals and explicit zero-side-effect dry-run. No ledger posting, account closure or transfer on source upload.
+- **AT-R09 Recovery and unknown outcomes:** rejected evidence stays searchable; source conflicts create review holds; interrupted policy review resumes without side effects; unknown external settlement cannot be treated as success or retried blindly.
+
+### Bounded context ownership
+Evidence Registry owns source inventory and page integrity; Legal Applicability owns law and court effect; Policy Governance owns approval and effective-dated activation; Accounting Core owns immutable double-entry journals; Payments owns instructions and external status; independent Reconciliation owns external outcome confirmation. All financial activation remains blocked for WP-ACC-005.
+
+### Existing gaps preserved
+GAP-ACC-057, -064, -066, -068 and -069 remain OPEN P0 or P0 candidate as previously classified; GAP-ACC-070 remains OPEN P1. No new ID allocated without authoritative master register reconciliation. No closure by third-party scan.
