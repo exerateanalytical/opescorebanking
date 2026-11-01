@@ -1,0 +1,7 @@
+# AX execution report — 2026-11-01
+Phase: 4 Accounting Core/Financial Integrity. Parent AW verified SHA: a8559bdd938fdb5de7031686ff065728f8116735.
+Work packages attempted **1** (WP-ACC-005), completed **0**, kept open **1**, blocked from closure **1**, dependent packages attempted **0**.
+Substantive delta: primary-source crosscheck found the 2003 intra-instrument 2651 inconsistency and 2015 2651/2652 reversal; 2015 article-8 312/322 apparent print error; 2018 article-33 **1 January 2018** text visually verified despite OCR omission, with 16 January decision date; 2015 references to superseded 2014 credit regulation. Historical 2002 instruction effective date independently supported by issuer annual report but original text not obtained.
+Conflict records **6**; candidate requirements **8**; scenarios specified **12**, executed **0**. Banking tests **0**; production code **0**; external regulatory requests **0**; P0 closures **0**. Original source PDF binaries/hash **not retained**. Financial Definition of Ready **FAIL**.
+Remote delivery status at document creation: **PENDING_REMOTE_VERIFICATION**; verify branch commit, parent, exact files and retrieved content before reporting delivery.
+NEXT EXACT TASK: WP-ACC-005 — Checkpoint AY: authenticate missing I-2002/01 and obtain formal COBAC clarifications of 2651/2652 and 312/322 plus qualified 2018 effective-date opinion and institution chart approvals; continue original 01/25–02/25 legal/publication/judicial and settlement evidence. No dependent production implementation.
