@@ -1,0 +1,49 @@
+{
+  "checkpoint": "BB",
+  "status": "PROPOSED_NON_EXECUTABLE",
+  "source_issuer": "COBAC / BEAC hosted scans",
+  "edges": [
+    {
+      "from": "COBAC R-2016/03 Art36",
+      "to": "COBAC R-93/02 as amended R-2001/01 and R-2013/01",
+      "relation": "express repeal of contrary earlier net-own-funds provisions",
+      "effective_date_observed": "2017-01-01",
+      "evidence": "R-2016/03 Arts 36–37",
+      "approval": "NOT_APPROVED_CURRENT"
+    },
+    {
+      "from": "COBAC R-2010/01 Art2",
+      "to": "COBAC R-93/02 as amended R-2001/01",
+      "relation": "historical own-funds definition reference",
+      "conflict": "R-2016/03 subsequent replacement",
+      "approval": "UNRESOLVED"
+    },
+    {
+      "from": "COBAC R-2010/01 preamble",
+      "to": "COBAC R-2009/01",
+      "relation": "claims amendment of R-2003/03",
+      "conflict": "BEAC-hosted R-2009/01 concerns minimum share capital",
+      "approval": "ISSUER_CLARIFICATION_REQUIRED"
+    },
+    {
+      "from": "COBAC R-2003/03 Art16",
+      "to": "COBAC R-2003/03",
+      "relation": "labels cited regulation as asset-disposal accounting",
+      "conflict": "official index names R-2003/04 as asset-disposal rule",
+      "approval": "ISSUER_CORRIGENDUM_REQUIRED"
+    },
+    {
+      "from": "COBAC R-2013/04 Art1",
+      "to": "COBAC R-93/06 Art2 para3",
+      "relation": "modifies liquidity numerator treatment",
+      "effective_date_observed": "2013-12-19",
+      "approval": "HISTORICAL_ONLY"
+    }
+  ],
+  "not_conclusions": [
+    "R-2016/03 does not by itself prove repeal of R-2010/01 credit-risk coverage ratio",
+    "No historical prudential weight or capital ratio is approved as a current executable constant",
+    "A source citation discrepancy is not automatically a typographical error",
+    "Visual scan is not cryptographic signature validation"
+  ]
+}
