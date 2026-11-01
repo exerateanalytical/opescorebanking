@@ -1,0 +1,44 @@
+[
+  {
+    "id": "AO-TEST-001",
+    "scenario": "Supervisor communiqué references a draft implementation regulation",
+    "expected": "Registry classifies draft as non-executable; does not auto-activate policy",
+    "status": "SPECIFIED_NOT_EXECUTED"
+  },
+  {
+    "id": "AO-TEST-002",
+    "scenario": "Supervisor states transfer obligation under existing regulation",
+    "expected": "Do not infer legal suspension from unresolved litigation; create mandatory counsel-review case",
+    "status": "SPECIFIED_NOT_EXECUTED"
+  },
+  {
+    "id": "AO-TEST-003",
+    "scenario": "Two independent reproductions omit printed page 10",
+    "expected": "Source completeness gate fails; Articles 24–26 remain UNKNOWN, not inferred",
+    "status": "SPECIFIED_NOT_EXECUTED"
+  },
+  {
+    "id": "AO-TEST-004",
+    "scenario": "An operator attempts a dormant-assets transfer with only draft rules and no bank approvals",
+    "expected": "Reject instruction and financial posting; preserve exception evidence",
+    "status": "SPECIFIED_NOT_EXECUTED"
+  },
+  {
+    "id": "AO-TEST-005",
+    "scenario": "Court disposition provided for 01/25 but not 02/25",
+    "expected": "Maintain separate instrument legal-status records and prevent status propagation",
+    "status": "SPECIFIED_NOT_EXECUTED"
+  },
+  {
+    "id": "AO-TEST-006",
+    "scenario": "Bank receives a purported COBAC circular with no verifiable provenance",
+    "expected": "Quarantine pending issuer authentication and two-person approval; never auto-enable policy",
+    "status": "SPECIFIED_NOT_EXECUTED"
+  },
+  {
+    "id": "AO-TEST-007",
+    "scenario": "External transfer confirmation missing after instruction",
+    "expected": "Outcome UNKNOWN, reconcile independently; no liability derecognition from request status",
+    "status": "SPECIFIED_NOT_EXECUTED"
+  }
+]
