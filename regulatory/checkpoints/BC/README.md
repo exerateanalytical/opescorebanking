@@ -1,0 +1,17 @@
+# Checkpoint BC — 2021 prudential amendments and 2024 IT-risk source-chain reconciliation
+**Date:** 2026-11-02. **Predecessor:** BB, verified on remote main before work. **Phase:** 4 — Accounting Core / Financial Integrity. **Active:** WP-ACC-005 OPEN / P0 BLOCKED. Last completed WP-ACC-004 is inherited, not independently reaudited.
+
+## Distinct contributions beyond BB
+1. An **official BEAC-hosted 2021 financial stability review** explicitly identifies **COBAC R-2021/01 amending R-2010/01** (risk coverage) and **R-2021/02 amending R-2010/02** (risk concentration/division). The review describes a **conditional**, not automatic, possibility of 0% weighting for certain State-issued securities where a secure repayment mechanism exists. This adds two amendment edges missing from BB's historical source graph. The review is an official institutional secondary account of the regulations; the **signed full amendment texts, exact clauses, conditions, effective dates, later supersession and institution applicability remain unverified**.
+2. The official COBAC 2024 annual report includes the **text of COBAC R-2024/01 on IT-risk management** in its annex. Article 16 requires the institution's data to be **available** within its CEMAC head-office State; this is **not a standalone proof of exclusive hosting or permission for unrestricted foreign processing**. Articles 22–30, 34–40 establish security, incident, recovery, change and data-quality obligations.
+3. R-2024/01 Article 41 states **2025-01-01** as formal entry into force, with **12-month transition for credit/payment institutions and 18 months for microfinance**. The report's narrative section characterizes the relevant dates as **2026-01-01 and 2026-07-01** respectively. Treat these as **formal effective date vs transition/compliance dates** pending legal confirmation, not as an unexamined contradiction. Do not silently encode a single date for all institution classes.
+4. Source custody and complete clause-level regulatory applicability remain open. No banking code, financial policy activation, tests or certifications.
+
+## Decisions
+- Append verified **historical amendment-existence** edges R-2021/01 → R-2010/01 and R-2021/02 → R-2010/02. Mark their **operative contents as unverified** until authenticated full texts and all subsequent amendments are obtained.
+- Never assume 0% sovereign security risk weight based solely on issuer identity or this secondary summary; require documented secured-repayment condition, applicability, CFO/risk/legal sign-off, eligible asset evidence and calculation/reconciliation controls.
+- Keep prudential risk weighting distinct from accounting classification, liquidity eligibility, securities custody, actual payment settlement and capital recognition.
+- Add IT-risk annex requirements as **cross-domain design dependencies**, not completed compliance or a new closed work package.
+- Preserve P0 financial implementation hold and existing checkpoint history.
+
+**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint BD: obtain issuer-authenticated complete COBAC R-2021/01 and R-2021/02 texts, subsequent amendment chain and qualified applicability interpretation for R-2010/01/02/03 and R-2016/03; authenticate COBAC R-2024/01 Article 41 transition and Article 16 territorial availability requirements; obtain institution-approved PCEC/capital/security/settlement mappings and outstanding 01/25–02/25 legal evidence. Do not implement financial posting.
