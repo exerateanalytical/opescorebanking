@@ -1,0 +1,76 @@
+[
+  {
+    "id": "AP-PRI-001",
+    "type": "primary",
+    "issuer": "COBAC Secretariat General / BEAC",
+    "document": "Final communiqué of 22–24 June 2026 consultation",
+    "date": "2026-06-24",
+    "url": "https://www.beac.int/wp-content/uploads/2016/10/Communiqu%C3%A9-final-consultation-de-la-profession_260624_183742.pdf",
+    "locator": "printed page 3",
+    "verified": "web opened and page image visually reviewed 2026-11-01",
+    "supports": "supervisor recognizes transfer obligation under rules in force; modalities were still a draft proposed for future adoption",
+    "does_not_support": "final adoption, final payment/settlement instructions, judicial disposition"
+  },
+  {
+    "id": "AP-PRI-002",
+    "type": "primary official catalogue",
+    "issuer": "BEAC",
+    "document": "COBAC communiqués",
+    "url": "https://www.beac.int/supervision-bancaire/la-commission-bancaire/communiques-de-presse",
+    "verified": "catalogue checked 2026-11-01",
+    "supports": "publication provenance of AP-PRI-001",
+    "does_not_support": "absence of later rules, repeal, or stay"
+  },
+  {
+    "id": "AP-SEC-003",
+    "type": "secondary press",
+    "issuer": "Investir au Cameroun",
+    "document": "COBAC: la CDEC conteste un projet de règlement...",
+    "date": "2026-06-18",
+    "url": "https://www.investiraucameroun.com/gestion-publique/1806-23505-cobac-la-cdec-conteste-un-projet-de-reglement-qualifiant-les-consignations-d-operations-de-banque",
+    "verified": "text inspected 2026-11-01",
+    "supports": "research lead: two separate alleged court challenges, registry stamps 2025-09-08, alleged stay applications 2025-10-01",
+    "does_not_support": "certified case numbers, admissibility, stay grant, judgment, binding status"
+  },
+  {
+    "id": "AP-SEC-004",
+    "type": "secondary press",
+    "issuer": "SocialActu",
+    "document": "CDEC maintient son recours",
+    "date": "2026-07-20",
+    "url": "https://socialactu.com/cemac-la-cdec-maintient-son-recours-contre-la-supervision-de-la-cobac/",
+    "verified": "text inspected 2026-11-01",
+    "supports": "lead that CDEC continued disputing supervision under 01/25",
+    "does_not_support": "02/25 status or court order"
+  },
+  {
+    "id": "AP-SEC-005",
+    "type": "secondary incomplete legal reproduction",
+    "issuer": "GECAM/LEGE-CAM",
+    "document": "Regulation 02/25 scanned reproduction",
+    "url": "https://legecam.cm/wp-content/uploads/2025/08/Reglement-N%C2%B002_traitement-comptes-inactifs-des-avoirs-en-desherence.pdf",
+    "verified": "prior AO/AN source review; not independently reacquired this run",
+    "supports": "identification of 2025 instrument and known missing page",
+    "does_not_support": "issuer-complete text or executable rules"
+  },
+  {
+    "id": "AP-PRI-006",
+    "type": "primary official institutional legal reference",
+    "issuer": "CEMAC",
+    "document": "Convention régissant la Cour de justice communautaire",
+    "url": "https://cemac.int/wp-content/uploads/2025/01/Convention-Cour-de-Justice.pdf",
+    "verified": "official document located 2026-11-01; not legal-opinion reviewed",
+    "supports": "official court jurisdiction research",
+    "does_not_support": "any disposition in 01/25 or 02/25"
+  },
+  {
+    "id": "AP-SEC-007",
+    "type": "institutional court directory",
+    "issuer": "AHJUCAF",
+    "document": "CEMAC Cour de Justice directory",
+    "url": "https://www.ahjucaf.org/cemac-cour-de-justice",
+    "verified": "directory inspected 2026-11-01",
+    "supports": "route to court registry and case evidence",
+    "does_not_support": "certified court case status"
+  }
+]
