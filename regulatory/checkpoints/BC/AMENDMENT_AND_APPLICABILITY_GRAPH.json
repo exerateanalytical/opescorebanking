@@ -1,0 +1,72 @@
+{
+  "checkpoint": "BC",
+  "date": "2026-11-02",
+  "status": "RESEARCH_ONLY_NO_EXECUTABLE_POLICY",
+  "source": "https://www.beac.int/wp-content/uploads/2022/08/RSF_AC_2021.pdf",
+  "edges": [
+    {
+      "amending": "COBAC R-2021/01",
+      "amended": "COBAC R-2010/01",
+      "subject": "risk coverage",
+      "proof": "official institutional report §3.1.2.6",
+      "confidence": "EXISTENCE_HIGH_EXACT_TEXT_MISSING",
+      "operative_clauses": "UNVERIFIED",
+      "current_status": "UNVERIFIED"
+    },
+    {
+      "amending": "COBAC R-2021/02",
+      "amended": "COBAC R-2010/02",
+      "subject": "risk division/concentration",
+      "proof": "official institutional report §3.1.2.6",
+      "confidence": "EXISTENCE_HIGH_EXACT_TEXT_MISSING",
+      "operative_clauses": "UNVERIFIED",
+      "current_status": "UNVERIFIED"
+    },
+    {
+      "amending": "COBAC R-2016/03",
+      "amended": "COBAC R-93/02 and named amendments",
+      "subject": "net own funds",
+      "proof": "prior BB issuer source Art36-37",
+      "confidence": "HISTORICAL_PRIMARY_OBSERVATION",
+      "current_status": "LATER_AMENDMENTS_UNVERIFIED"
+    }
+  ],
+  "controls": [
+    {
+      "id": "BC-PRUD-001",
+      "rule": "zero risk weighting for sovereign securities must not default to eligible",
+      "required_evidence": [
+        "authenticated amendment clauses",
+        "security issuer and instrument classification",
+        "secured-repayment mechanism evidence",
+        "effective date and applicable institution",
+        "approved risk model",
+        "risk/legal/CFO approval"
+      ],
+      "on_missing": "NOT_ELIGIBLE_PENDING_REVIEW"
+    },
+    {
+      "id": "BC-PRUD-002",
+      "rule": "regulatory risk weight is not accounting valuation, liquidity eligibility, title transfer or settlement",
+      "on_missing": "NO_AUTOMATIC_CROSS_DOMAIN_PROMOTION"
+    },
+    {
+      "id": "BC-PRUD-003",
+      "rule": "historic and current regulatory calculations must carry effective-dated provenance",
+      "on_missing": "BLOCK_CALCULATION_PUBLICATION"
+    }
+  ],
+  "separate_it_risk_source": "https://www.beac.int/wp-content/uploads/2016/10/Rapport-annuel-de-la-COBAC-2024-PDF-14.8-Mo_compressed-1.pdf",
+  "it_risk_legal_date": {
+    "article41_formal_commencement": "2025-01-01",
+    "credit_payment_transition": "12 months",
+    "microfinance_transition": "18 months",
+    "report_summary_characterization": [
+      "2026-01-01",
+      "2026-07-01"
+    ],
+    "interpretation": "DO_NOT_COLLAPSE_LEGAL_COMMENCEMENT_AND_COMPLIANCE_TRANSITION",
+    "current_amendments": "UNVERIFIED"
+  },
+  "cross_domain": "BC does not close WP-ACC-005, authorize IT architecture deployment or certify compliance"
+}
