@@ -1,0 +1,175 @@
+{
+  "checkpoint": "BA",
+  "status": "SPECIFIED_ONLY_NOT_EXECUTED",
+  "scenario_count": 12,
+  "scenarios": [
+    {
+      "id": "BA-T01",
+      "title": "Securities trade confirmed without evidence of legal title",
+      "expected": "Trade state may advance; ownership posting and finality must remain blocked; unresolved off-balance treatment routed for institution approval.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T02",
+      "title": "Custodian confirms holding but clearing operator returns UNKNOWN",
+      "expected": "Keep separate custody and settlement states; never fabricate finality or duplicate a posting on retry.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T03",
+      "title": "R-2010/03 historical six-month exception requested for a 2026 exposure",
+      "expected": "Reject prudential waiver absent current supersession proof, effective-dated rule and institution approval.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T04",
+      "title": "R-2010/03 Article 2 signature date not legible",
+      "expected": "Do not invent an effective date; keep candidate quarantined pending issuer/qualified legal evidence.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T05",
+      "title": "R-2003/03 original Article 24 used after identified 2010 replacement",
+      "expected": "Reject unqualified old clause; require amendment-chain selection and currentness review.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T06",
+      "title": "I-2015/01 0.5% / 2% provisioning values loaded as current defaults",
+      "expected": "Block release; require verified current rule and source-linked institutional approval.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T07",
+      "title": "I-2015/01 Article 14 cross-reference to R-2014/01 used as proof of 2026 rule",
+      "expected": "Reject inferred current classification; reconcile R-2018/01 and later instruments first.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T08",
+      "title": "Downloaded PDF hash differs from previously approved immutable evidence at same issuer URL",
+      "expected": "Quarantine new binary; retain prior copy; require legal review and release versioning; never overwrite old hash.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T09",
+      "title": "A valid SHA-256 is presented without official publication or institutional approval",
+      "expected": "Reject policy activation; hash proves byte identity only, not legal authority.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T10",
+      "title": "Source acquisition operator self-approves chart and prudential release",
+      "expected": "Reject segregation-of-duties violation, emit tamper-evident audit event, do not post money.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T11",
+      "title": "Historical 2003 securities position reconstructed after 2015 chart amendment",
+      "expected": "Use original effective-dated chart and evidence; any restatement requires distinct controlled journal/reports, not mutation.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    },
+    {
+      "id": "BA-T12",
+      "title": "Disaster recovery replays settlement callback twice while custodian outcome unknown",
+      "expected": "Return original idempotency outcome or explicit UNKNOWN; independent reconciliation required; never duplicate posted journal.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT",
+      "trace": [
+        "BA-ADR-CANDIDATE-01",
+        "BA-ADR-CANDIDATE-02",
+        "BA-ADR-CANDIDATE-03",
+        "BA-ADR-CANDIDATE-04",
+        "BA-ADR-CANDIDATE-05"
+      ]
+    }
+  ]
+}
