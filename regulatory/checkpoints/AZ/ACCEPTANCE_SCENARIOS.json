@@ -1,0 +1,105 @@
+{
+  "checkpoint": "AZ",
+  "status": "SPECIFIED_ONLY_NOT_EXECUTED",
+  "scenario_count": 14,
+  "scenarios": [
+    {
+      "id": "AZ-T01",
+      "title": "2002 historical 908 journal replay",
+      "expected": "Resolve to its historical chart version; never silently relabel existing posting as 918.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T02",
+      "title": "2004-dated custody import using 908",
+      "expected": "Quarantine pending authoritative release/applicability validation; no auto conversion to 918.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T03",
+      "title": "2003 Article 7(a) successor mapping",
+      "expected": "Record 908->918 as source-linked correction edge, not a reversible rename or money transfer.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T04",
+      "title": "2003 Article 7(b) successor mapping",
+      "expected": "Record 928->938 as source-linked correction edge with depositor and instrument category.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T05",
+      "title": "Unowned securities held for third party",
+      "expected": "Reject balance-sheet ownership assumption; require independently approved custody treatment.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T06",
+      "title": "2003 account 2651 historical interpretation",
+      "expected": "Block mapping because enumeration and commentary conflict; preserve evidence alternatives.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T07",
+      "title": "2015 account 2651/2652 mapping",
+      "expected": "Require release date, issuer evidence, institutional signoff; do not retroactively recode 2003 journals.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T08",
+      "title": "2015 provision 29651 linked to asset 2651 by suffix",
+      "expected": "Reject automatic suffix-based linkage; require explicit approved mapping.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T09",
+      "title": "2015 Article 8(d) 312 header with 322 children",
+      "expected": "Reject policy activation; log source discrepancy, maker-checker escalation.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T10",
+      "title": "Branch 459 avis de sort received twice",
+      "expected": "Deduplicate internal notice; never set external settlement finality or double post.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T11",
+      "title": "Unmatched 999 off-balance import",
+      "expected": "Quarantine with owner, aging and audit; do not conceal discrepancy or post financial balance.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T12",
+      "title": "Policy release approval without issuer binary or formal interpretation",
+      "expected": "Fail closed; no ledger rule activation; alert and retain signed review history.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T13",
+      "title": "Old chart report recomputation after new release",
+      "expected": "Reconstruct original journal and original report version, with separately approved restatement if required.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    },
+    {
+      "id": "AZ-T14",
+      "title": "Recovery after crash between approval and posting",
+      "expected": "Idempotency key prevents duplicate journal; unknown external outcome remains UNKNOWN pending evidence.",
+      "execution_status": "NOT_EXECUTED",
+      "category": "NEGATIVE_OR_INVARIANT_SPECIFICATION"
+    }
+  ]
+}
