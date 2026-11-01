@@ -1,0 +1,31 @@
+{
+  "checkpoint": "BC",
+  "date": "2026-11-02",
+  "previous": "BB",
+  "phase": "Phase 4 — Accounting Core / Financial Integrity",
+  "last_completed_work_package": "WP-ACC-004 (inherited; not independently reaudited)",
+  "active_work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "definition_of_ready": "FAIL",
+  "work_packages_attempted": 1,
+  "work_packages_completed": 0,
+  "work_packages_kept_open": 1,
+  "work_packages_blocked_from_closure": 1,
+  "dependent_packages_attempted": 0,
+  "new_findings": [
+    "Official BEAC 2021 review confirms R-2021/01 amends R-2010/01",
+    "Official BEAC 2021 review confirms R-2021/02 amends R-2010/02",
+    "0% sovereign-security weighting described as conditional on secured repayment mechanism, exact clauses missing",
+    "COBAC 2024 annual annex contains R-2024/01 Article 16 territorial data availability and Arts22-40 security/DR/data controls",
+    "R-2024/01 Article41 formal 2025-01-01 commencement vs transitional 2026 dates in report narrative; do not collapse"
+  ],
+  "new_acceptance_scenarios_specified": 15,
+  "acceptance_scenarios_executed": 0,
+  "banking_tests_executed": 0,
+  "production_code_written": 0,
+  "regulatory_requests_transmitted": 0,
+  "original_issuer_binaries_retained": 0,
+  "original_issuer_hashes_computed": 0,
+  "p0_gaps_closed": 0,
+  "canonical_next_exact_task": "WP-ACC-005 — Checkpoint BD: acquire signed full COBAC R-2021/01 and R-2021/02 texts and subsequent amendments, current R-2010/01/02/03 and R-2016/03 applicability, R-2024/01 Article 41 transition and Article 16 territorial interpretation; secure bank-approved PCEC and prudential mappings and outstanding 01/25–02/25 publication/court/settlement evidence. Preserve P0 hold."
+}
