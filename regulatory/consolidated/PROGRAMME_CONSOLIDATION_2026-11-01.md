@@ -2,7 +2,7 @@
 **Owner:** OPESWARE TECHNOLOGIES  
 **As-of:** 2026-11-01  
 **Status:** Research/design consolidation; not implementation or certification  
-**Canonical latest remotely inspected checkpoint:** AR (successor AQ → AP → AO → AN cumulative archive).  
+**Canonical latest remotely inspected checkpoint:** BB (verified continuation through AS–BA; predecessors AO–AR and AN cumulative archive).  
 **Current phase:** Phase 4 — Accounting Core / Financial Integrity  
 **Last reported completed work package:** WP-ACC-004 (inherited; not independently reaudited)  
 **Active:** WP-ACC-005 — PCEC Regulatory Accounting Extraction, OPEN / P0 BLOCKED.  
@@ -70,3 +70,18 @@ These are research pointers, not fresh validation of every URL in this consolida
 
 ## Consolidation execution report
 Work packages attempted: 1 (documentation reconciliation/consolidation); completed: 1 documentation consolidation **only**; kept open: WP-ACC-005 (1); blocked: WP-ACC-005 (1); dependent engineering packages attempted: 0; banking tests: 0; production code: 0. Remote delivery status and SHA must be recorded from actual GitHub response, not assumed.
+
+
+## Addendum — Checkpoints AS through BB (2026-11-01)
+The repository's canonical continuation states were independently read for **AS, AT, AU, AV, AW, AX, AY, AZ, BA and BB**. All continue `WP-ACC-005` as OPEN/P0 BLOCKED, with zero banking implementation and no executed banking tests. Earlier local R01 uncertainty about remote checkpoint availability is superseded by these remote reads.
+
+- AS: official UMAC 2025-07-12 ministerial adoption event by subject; does not establish numbered complete instruments or publication.
+- AT: candidate effective-date text in incomplete third-party scans; issuer-certified dates and complete 02/25 missing.
+- AU: BEAC 2025-04-15 working-group communiqué; no P0 closure.
+- AV–AZ: PCEC 1998 baseline and I-2002/01, I-2003/01, I-2015/01 amendment crosswalk; material 2651/2652, 312/322, 265/2965x conflicts; I-2003/01 Article 7 correction to I-2002/01; no approved bank-specific crosswalk.
+- BA: issuer-hosted R-2003/03 and R-2010/03 securities-accounting and prudential amendment; trade, ownership, custody, settlement remain separate; source binaries not retained.
+- **BB**: BEAC-hosted R-2016/03 Arts 36–37 expressly supersede earlier own-funds rules effective 2017-01-01 (historical); R-2010/01 Art2 references superseded own-funds definition; R-2010/01 preamble cites R-2009/01 as a securities amendment although issuer-hosted R-2009/01 concerns minimum share capital; R-2003/03 Art16 names its own number for asset-disposal rules while the BEAC index lists R-2003/04; R-2013/04 modifies historical R-93/06 liquidity. These are source-level legal ambiguities, not corrected or activated regulations. See `regulatory/checkpoints/BB/` for the detailed evidence, proposed amendment graph, twelve unexecuted acceptance scenarios, quality review and execution report.
+
+**Current consolidated decision:** `WP-ACC-005` remains OPEN/P0; DoR FAIL; no production code, tests, certifications, current prudential weights or accounting policy activated. Original issuer PDF binary custody and current consolidated regulation chain remain unresolved. All earlier dormant-asset and settlement P0 holds continue.
+
+**Updated single NEXT EXACT TASK:** `WP-ACC-005 — Checkpoint BC`: secure COBAC/legal resolution of historical net-own-funds cross-reference and 2009/2003 numbering conflicts; establish later amendment chain of R-2010/01/02/03 and R-2016/03; retain/hash authenticated source binaries; obtain institution-approved PCEC mapping; continue 01/25–02/25 full publication, Court, implementing and settlement evidence. Do not implement financial postings.
