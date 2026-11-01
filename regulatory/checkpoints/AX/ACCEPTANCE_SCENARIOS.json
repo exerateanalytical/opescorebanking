@@ -1,0 +1,151 @@
+{
+  "checkpoint": "AX",
+  "date": "2026-11-01",
+  "tests_executed": 0,
+  "scenarios": [
+    {
+      "id": "AX-T01",
+      "title": "2651 mapping under 2003 snapshot",
+      "expected": "A 2003-era journal tagged 2651 is evaluated against contemporaneous approved chart, not the 2015 meaning; ambiguous 2003 text quarantines unapproved mapping.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T02",
+      "title": "2651 mapping under 2015 snapshot",
+      "expected": "A 2015+ transaction uses 2651 public securities only after signed institutional chart approval and verified applicability.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T03",
+      "title": "2652 mapping reversal",
+      "expected": "A change of label between source versions never silently reclassifies existing posted securities or rewrites old financial reports.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T04",
+      "title": "312 vs 322 conflict",
+      "expected": "A request to auto-generate short-term sensitive account 312 from 2015 art.8(d) is rejected pending approved correction; 322 children cannot be parented under 312.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T05",
+      "title": "Effective date versus signature",
+      "expected": "The system stores 2018-01-01 as stated regulatory effective date and 2018-01-16 as decision date without creating backdated journals or policy activation.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T06",
+      "title": "Superseded rule reference",
+      "expected": "A 2015 PCEC commentary reference to R-2014/01 cannot override the 2018 repeal; no automatic 2014 classification policy after valid successor applicability.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T07",
+      "title": "Unverified I-2002 text",
+      "expected": "An issuer annual report alone cannot create executable 2002 chart mappings.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T08",
+      "title": "General provisions",
+      "expected": "At 2% stock threshold, an annual 0.5% charge cannot be blindly posted without applying current 2018 art.17 conditions and approved policy.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T09",
+      "title": "Counterparty contagion",
+      "expected": "Credit-risk classification decisions (2018 art.10) cannot mutate GL balances; all resulting entries require independent Accounting Core authorization.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T10",
+      "title": "Correction after period closure",
+      "expected": "A proposed retroactive change posts neither into a sealed accounting period nor by editing historical journal rows; approved correction workflow produces new traceable journals.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T11",
+      "title": "External unknown settlement",
+      "expected": "A settlement request with unknown external result remains unresolved; retry does not duplicate posting, claim finality, or invent liquidity.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    },
+    {
+      "id": "AX-T12",
+      "title": "Regulatory evidence revocation",
+      "expected": "Revoking an instrument approval quarantines pending activation while preserving original source, decision, actor, timestamp, and historical report reproducibility.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "kind": "negative_or_invariant",
+      "requires": [
+        "source_provenance",
+        "institution_profile",
+        "approval_evidence"
+      ]
+    }
+  ]
+}
