@@ -1,0 +1,86 @@
+[
+  {
+    "id": "AR-T01",
+    "given": "Treaty Article 41 alone, without instrument-specific publication proof",
+    "expected": "deny policy activation; record source gate unresolved",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T02",
+    "given": "An online article claims 2025-09-01 effective date but Bulletin issue/page missing",
+    "expected": "preserve as claim; prohibit authoritative effective-date promotion",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T03",
+    "given": "Two incomplete PDFs reproduce the same printed-page gap",
+    "expected": "do not mark completeness by source count",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T04",
+    "given": "Official bulletin issue located but certified copy differs from previously indexed text",
+    "expected": "hold, preserve both hashes, escalate for issuer clarification",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T05",
+    "given": "Court petition exists for 01/25 without an operative certified order",
+    "expected": "do not set 01/25 to suspended; do not modify 02/25 status",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T06",
+    "given": "Certified order affects only 02/25 and is later amended on appeal",
+    "expected": "separate versioned legal dispositions; no cross-instrument propagation",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T07",
+    "given": "Draft COBAC implementation proposal is presented as a final rule",
+    "expected": "deny activation until signed adopted text and publication chain authenticated",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T08",
+    "given": "Legal applicability signed but bank CFO/PCEC mapping absent",
+    "expected": "no financial posting, liability derecognition or transfer",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T09",
+    "given": "Legal rule changes after a posted journal",
+    "expected": "preserve original journal; new approved reversal/correction only",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T10",
+    "given": "Settlement submission acknowledged, external outcome unknown",
+    "expected": "remain unresolved; no finality, no duplicate retry",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T11",
+    "given": "Source uploader attempts to approve own policy and finance mapping",
+    "expected": "deny segregation-of-duties violation and audit",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T12",
+    "given": "Source file SHA-256 matches but issuer signature/provenance is unverified",
+    "expected": "do not mark source authenticated",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T13",
+    "given": "A newly acquired bulletin has a date but no instrument page reference",
+    "expected": "do not treat as evidence that 02/25 was published",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  },
+  {
+    "id": "AR-T14",
+    "given": "Dormancy classification becomes eligible while legal transfer gate is held",
+    "expected": "classification allowed only if separately authorized; no funds movement",
+    "status": "SPECIFIED_ONLY_NOT_EXECUTED"
+  }
+]
