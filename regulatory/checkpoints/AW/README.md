@@ -1,0 +1,5 @@
+# AW — WP-ACC-005: PCEC baseline recovery and amendment-chain controls
+Date: 2026-11-01. Parent: AV (main @ d589cccba3f3b7713dad9d360d0282d77151cfbe). Phase 4 Accounting Core / Financial Integrity.
+**Outcome:** Official BEAC-hosted **258-page historical PCEC edition (July 1998)** located and its key sections inspected; earlier AV lacked this full baseline. This is not a certified consolidated 2026 chart. WP-ACC-005 remains OPEN/P0-BLOCKED. No production code, financial policy activation, banking tests, or regulator contact.
+Deliverables: PRIMARY_EVIDENCE_DELTA.md, PCEC_AUTHORITY_CHAIN.json, ACCOUNTING_CONTROL_DESIGN.md, REQUIREMENTS_AND_TESTS.json, QUALITY_REVIEW.md, CONTINUATION_STATE.json, EXECUTION_REPORT.md.
+Canonical discipline: never treat the 1998 edition as a current account mapping without amendment-chain reconciliation and institution approval. No historical posted journal changes. Continue from AW to AX only after this research checkpoint is independently retrievable. Source PDF binary could not be retained/hash-verified in the runtime; publisher hosting is not cryptographic authentication.

@@ -1,0 +1,164 @@
+{
+  "checkpoint": "AW",
+  "execution": "SPECIFIED_ONLY_NO_TESTS_EXECUTED",
+  "requirements": [
+    {
+      "id": "AW-REQ-01",
+      "description": "Full historical 1998 PCEC must be registered with exact edition, 258-page structural inventory and source custody status",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-02",
+      "description": "Versioned PCEC chart release requires source-specific authority chain and institution CFO/compliance approval",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-03",
+      "description": "Every account mapping must be effective-dated and uniquely applicable by institution and profile",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-04",
+      "description": "Off-balance class-9 postings must satisfy independent double-entry balancing invariants",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-05",
+      "description": "Derived management class-8 indicators must not post money or alter ledger balances",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-06",
+      "description": "Closed accounting periods reject ordinary backdated postings; exceptional complementary window requires approval",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-07",
+      "description": "Historical corrections use explicit journal reversal/reposting, never edits to posted journals",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-08",
+      "description": "Reports must reconstruct from source to journal to mapped report cell in both directions",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-09",
+      "description": "Credit classification/provision calculations cannot directly mutate GL or bypass posting authorization",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-10",
+      "description": "Historical 1998 Cameroon fiscal-year statement must never be promoted into current operational configuration without 2026 authority",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-11",
+      "description": "R-2018/01 Article 33 legal-effect discrepancy must be legally resolved before historical applicability rules activate",
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    {
+      "id": "AW-REQ-12",
+      "description": "Unverified chart code or ambiguous amendment chain must fail closed; no silent generic OHADA/public-sector substitution",
+      "status": "PROPOSED_NOT_APPROVED"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "AW-T01",
+      "description": "Given 1998 chart and no current amendments approval, activating its codes fails",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T02",
+      "description": "Overlapping effective-dated ACTIVE chart releases are rejected",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T03",
+      "description": "Unbalanced class-9 off-balance journal is rejected",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T04",
+      "description": "Attempted class-8 money-creating posting is rejected",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T05",
+      "description": "Posting ordinary journal into SEALED period fails",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T06",
+      "description": "Complementary-day attempt without dual approval fails",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T07",
+      "description": "Editing posted historical journal fails; correction requires new linked reversal",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T08",
+      "description": "Changing historical mapping after posting leaves historical reports reproducible",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T09",
+      "description": "Missing residence/group attribute generates evidence exception, not fabricated value",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T10",
+      "description": "Credit risk classification event cannot change ledger balance directly",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T11",
+      "description": "Missing R-2018/01 Article 33 legal interpretation blocks retroactive rule activation",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T12",
+      "description": "Generic SYSCOHADA/public-sector account mapping rejected for banking PCEC without explicit authority",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T13",
+      "description": "Unknown source account code routes to controlled exception without auto-posting",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T14",
+      "description": "Repeated outbox delivery and retries do not duplicate postings",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T15",
+      "description": "Unknown settlement outcome remains unresolved and no finality or liquidity is fabricated",
+      "executed": false,
+      "result": "NOT_RUN"
+    },
+    {
+      "id": "AW-T16",
+      "description": "As-filed and restated reports both preserve evidence and reconciliation",
+      "executed": false,
+      "result": "NOT_RUN"
+    }
+  ]
+}

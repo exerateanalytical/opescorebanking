@@ -1,0 +1,71 @@
+{
+  "checkpoint": "AW",
+  "date": "2026-11-01",
+  "scope": "CEMAC credit institutions only; exclude microfinance/public-sector chart without institution-specific legal assessment",
+  "authority_status": "HISTORICAL_SOURCE_CHAIN_PARTIALLY_MAPPED_NOT_CURRENT_CERTIFIED",
+  "instruments": [
+    {
+      "id": "R-98/01",
+      "role": "PCEC founding regulation",
+      "status": "ISSUER_HOSTED_HISTORICAL",
+      "effective_date": "historical rollout by country; see Article 5",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/cbR-98_01.pdf"
+    },
+    {
+      "id": "PCEC-1998",
+      "role": "258-page historical baseline including annexes",
+      "status": "ISSUER_HOSTED_HISTORICAL_NOT_CONSOLIDATED",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Plan-comptable-des-e%CC%81tablissements-de-cre%CC%81dit-1998.pdf",
+      "verification": "page count and key chapters inspected via web; binary not retained"
+    },
+    {
+      "id": "R-99/01",
+      "role": "procedures to update PCEC",
+      "status": "CATALOGUE_LISTED_FULL_TEXT_NOT_VERIFIED",
+      "url": "https://www.beac.int/supervision-bancaire/reglements-de-cobac/"
+    },
+    {
+      "id": "I-2002/01",
+      "role": "PCEC amendment",
+      "status": "CATALOGUE_LISTED_AND_CITED_BY_LATER_INSTRUMENTS_FULL_TEXT_NOT_VERIFIED",
+      "url": "https://www.beac.int/supervision-bancaire/instructions-de-cobac/"
+    },
+    {
+      "id": "I-2003/01",
+      "role": "PCEC amendment and I-2002/01 amendment",
+      "status": "ISSUER_BULLETIN_TEXT_INSPECTED",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Bulletin-COBAC-n%C2%B06.pdf"
+    },
+    {
+      "id": "R-2003/01",
+      "role": "bank accounting organization",
+      "status": "ISSUER_TEXT_PREVIOUSLY_INSPECTED_AV",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/R-2003_01.pdf"
+    },
+    {
+      "id": "I-2015/01",
+      "role": "PCEC amendment",
+      "status": "ISSUER_TEXT_PREVIOUSLY_INSPECTED_AV",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015_01_pcec.pdf"
+    },
+    {
+      "id": "R-2018/01",
+      "role": "credit classification, accounting, provisioning; supersedes R-2014/01",
+      "status": "ISSUER_TEXT_PREVIOUSLY_INSPECTED_AV_LEGAL_EFFECT_UNRESOLVED",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/reglement_cobac_r_2018-01_relatif_a_la_classification_a_la_comptabilisation_et_au_provisionnement_des_creances.pdf"
+    }
+  ],
+  "open_questions": [
+    "Check all intervening and post-2018 PCEC amendments and supervisory circulars against issuer registers and licensed-institution correspondence",
+    "Validate R-2018/01 Article 33 legal effect and any later amendment with qualified counsel",
+    "Acquire signed and approved institution-specific PCEC mapping and reporting templates",
+    "Authenticate 01/25 and 02/25 full legal/publication/judicial chain and missing printed page 10",
+    "Establish controlled current chart release with source-provenanced effective dates and migration tests"
+  ],
+  "prohibitions": [
+    "DO_NOT_ACTIVATE_HISTORICAL_CODES",
+    "DO_NOT_BACKDATE_OR_EDIT_POSTED_JOURNALS",
+    "DO_NOT_INFER_ABSENCE_OF_LATER_LAW_FROM_CATALOGUE",
+    "DO_NOT_USE_PUBLIC_SECTOR_PCE_AS_BANKING_PCEC"
+  ]
+}
