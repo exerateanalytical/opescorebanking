@@ -1,0 +1,106 @@
+{
+  "checkpoint": "AV",
+  "as_of": "2026-11-01",
+  "status": "RESEARCH_ONLY_NOT_POLICY",
+  "candidates": [
+    {
+      "id": "AV-R01",
+      "source": "R-2018/01 arts 1-3",
+      "area": "CREDIT_EXPOSURE_SCOPE",
+      "requirement": "Classification applies to on/off-balance exposure; collateral cannot alter initial risk class.",
+      "status": "NON_EXECUTABLE_REVIEW",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R02",
+      "source": "R-2018/01 arts 4-10",
+      "area": "RISK_CLASSIFICATION",
+      "requirement": "Track healthy/sensitive/immobilized/unpaid/doubtful with article-specific evidence and dates.",
+      "status": "NON_EXECUTABLE_REVIEW",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R03",
+      "source": "R-2018/01 art 10",
+      "area": "COUNTERPARTY_CONTAGION",
+      "requirement": "Doubtful classification can propagate across the same beneficiary and linked parties; requires verified graph.",
+      "status": "NON_EXECUTABLE_REVIEW",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R04",
+      "source": "R-2018/01 arts 12-14",
+      "area": "RESTRUCTURING",
+      "requirement": "Require independent authority, conditions, probation and exception handling before reclassification.",
+      "status": "NON_EXECUTABLE_REVIEW",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R05",
+      "source": "R-2018/01 art 15(e)",
+      "area": "INTEREST_RECOGNITION",
+      "requirement": "Uncollected impaired interest/fees are not treated as collected income; controlled reversal and off-balance tracking.",
+      "status": "NON_EXECUTABLE_REVIEW",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R06",
+      "source": "R-2018/01 arts 16-17",
+      "area": "GENERAL_PROVISION",
+      "requirement": "Historical 0.5% annual contribution and 2% floor; preserve precise bases, floor stop rule, no runtime activation.",
+      "status": "HISTORICAL_UNVERIFIED_CURRENT",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R07",
+      "source": "R-2018/01 arts 18-23",
+      "area": "SPECIFIC_PROVISION",
+      "requirement": "Eligible collateral, coverage and time buckets govern specific provision; no generic rate.",
+      "status": "NON_EXECUTABLE_REVIEW",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R08",
+      "source": "R-2018/01 arts 25-28",
+      "area": "CONTROL_AND_WRITE_OFF",
+      "requirement": "Trace classifications; related-party write-off requires prior regulator approval.",
+      "status": "NON_EXECUTABLE_REVIEW",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R09",
+      "source": "R-2018/01 arts 30,32-33",
+      "area": "VERSION_AND_REVERSE",
+      "requirement": "No unearned provision release; R-2014/01 repeal and apparent 1-Jan-2018 effect require legal versioning.",
+      "status": "NON_EXECUTABLE_REVIEW",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R10",
+      "source": "I-2015/01 arts 1-14",
+      "area": "PCEC_ACCOUNT_CODES",
+      "requirement": "Version chart accounts and mapping; do not assume 2015 code assignments are final for all institutions.",
+      "status": "HISTORICAL_UNVERIFIED_CURRENT",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R11",
+      "source": "R-2003/01 art 13",
+      "area": "LEDGER_INTEGRITY",
+      "requirement": "Exact balanced postings, immutable evidence, chronology, auditable origin and controlled corrections.",
+      "status": "ARCHITECTURE_ONLY",
+      "scope": "institution-specific legal and accounting approval required"
+    },
+    {
+      "id": "AV-R12",
+      "source": "01/25,02/25 unresolved",
+      "area": "DORMANT_ASSET_HOLD",
+      "requirement": "Do not enable transfers/closures until complete law, court, bulletin, accounting and settlement gates pass.",
+      "status": "BLOCKED",
+      "scope": "institution-specific legal and accounting approval required"
+    }
+  ],
+  "activation_allowed": false,
+  "source_binary_hashes_verified": false,
+  "bank_approved_mapping": false
+}

@@ -1,0 +1,118 @@
+{
+  "checkpoint": "AV",
+  "execution_status": "NOT_EXECUTED",
+  "cases": [
+    {
+      "id": "AV-T01",
+      "given": "2015 PCEC account code is presented as current without 2018/legal version reconciliation",
+      "expected": "Reject mapping activation and require authority review",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T02",
+      "given": "Attempt to classify guaranteed doubtful exposure as healthy solely due to collateral",
+      "expected": "Reject; risk classification independent of guarantees",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T03",
+      "given": "Doubtful exposure discovered for one member of same-beneficiary group",
+      "expected": "Require review of contagion graph and all linked exposures; no silent omission",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T04",
+      "given": "Unknown linked-party identity or conflicting ownership graph",
+      "expected": "Hold classification propagation; flag risk/legal review",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T05",
+      "given": "Restructure approved by same hierarchy as original credit approval",
+      "expected": "Reject absent applicable superior authority and required approvals",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T06",
+      "given": "Probationary restructuring with new arrears",
+      "expected": "Prevent automatic healthy reclassification; evaluate governing article and evidence",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T07",
+      "given": "Unpaid impaired interest proposed as collected income",
+      "expected": "Reject posting and require controlled treatment with off-balance record",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T08",
+      "given": "Provision job rerun with same source and idempotency key",
+      "expected": "No duplicate journal; same durable outcome returned",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T09",
+      "given": "Provision model applies one rate regardless of eligible collateral and exposure age",
+      "expected": "Reject; require article-specific classification and coverage",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T10",
+      "given": "Historical 0.5% or 2% value activated without current instrument and bank signoff",
+      "expected": "Reject policy activation",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T11",
+      "given": "Related-party write-off requested without prior COBAC approval",
+      "expected": "Reject and preserve evidence",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T12",
+      "given": "Provision reversal proposed merely because newer model computes lower reserve",
+      "expected": "Block absent applicable recovery and approved authority",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T13",
+      "given": "Accounting journal debit and credit differ by smallest monetary unit",
+      "expected": "Reject atomically; no balance mutation",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T14",
+      "given": "Accounting event delivery times out after durable posting",
+      "expected": "Resolve by durable posting ID; do not blindly retry",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T15",
+      "given": "2018 effective date preceding signature is applied retroactively to historical entries",
+      "expected": "Hold for legal decision; preserve posted journals",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    },
+    {
+      "id": "AV-T16",
+      "given": "Dormant account transfer attempted using PCEC evidence alone",
+      "expected": "Reject; 01/25/02/25 and institution settlement gates still unmet",
+      "category": "NEGATIVE_OR_CONTROL",
+      "executed": false
+    }
+  ]
+}
