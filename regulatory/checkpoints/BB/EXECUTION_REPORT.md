@@ -1,0 +1,6 @@
+# BB execution report — 2026-11-01
+Phase 4; predecessor BA verified on GitHub; active WP-ACC-005 OPEN/P0 BLOCKED. Distinct new historical primary observations: R-2016/03 Art36 explicit repeal of older own-funds rules and Art37 2017-01-01 commencement; R-2010/01 Art2 stale reference; R-2010/01 preamble cites unrelated R-2009/01; R-2003/03 Art16 subject/number conflict; R-2013/04 liquidity amendment scope and historical adoption date.
+**Work packages attempted 1; completed 0; kept open 1; blocked from closure 1; dependent attempted 0.** 12 new negative acceptance scenarios specified; **0 executed**. Production banking code 0; banking tests 0; source PDFs retained 0; original-source SHA-256 0; regulatory requests sent 0; P0 closed 0; DoR FAIL.
+Direct HTTPS PDF acquisition failed DNS. Browser source review is not durable original custody. No live policy, current prudential threshold or financial posting authorized.
+**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint BC: legal/COBAC clarification and current supersession chain of own-funds, securities and risk-coverage cross-references; original binary custody; institution-approved PCEC; 01/25–02/25 publication, court and settlement evidence. Preserve P0 holds.
+GitHub remote commit/read-back must be independently verified and reported separately.
