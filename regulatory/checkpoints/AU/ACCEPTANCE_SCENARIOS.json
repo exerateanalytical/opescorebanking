@@ -1,0 +1,67 @@
+{
+  "checkpoint": "AU",
+  "status": "SPECIFIED_NOT_EXECUTED",
+  "banking_tests_executed": 0,
+  "scenarios": [
+    {
+      "id": "AU-T01",
+      "precondition": "April pre-adoption communiqué uploaded as law",
+      "expected_result": "Reject activation; classify as consultation evidence; no journal or transfer.",
+      "executed": false
+    },
+    {
+      "id": "AU-T02",
+      "precondition": "CDC disagreement on total supervision interpreted as a stay of 02/25",
+      "expected_result": "Reject cross-instrument legal inference; require separate certified judicial disposition.",
+      "executed": false
+    },
+    {
+      "id": "AU-T03",
+      "precondition": "July adoption communiqué used as substitute for complete 02/25 including printed page 10",
+      "expected_result": "Reject publication/text completeness gate; no effective policy.",
+      "executed": false
+    },
+    {
+      "id": "AU-T04",
+      "precondition": "June 2026 proposed modalities imported as enacted transfer deadlines",
+      "expected_result": "Reject draft-to-law promotion; keep effective-dated rule unavailable.",
+      "executed": false
+    },
+    {
+      "id": "AU-T05",
+      "precondition": "A 2026 draft is uploaded after a 2025 adopted instrument",
+      "expected_result": "Do not silently supersede earlier law or balances; legal review required.",
+      "executed": false
+    },
+    {
+      "id": "AU-T06",
+      "precondition": "Court filing reported by media but no certified court order",
+      "expected_result": "Do not mark regulation suspended or annulled; record unresolved legal effect.",
+      "executed": false
+    },
+    {
+      "id": "AU-T07",
+      "precondition": "Policy source review approved while bank CFO PCEC mapping missing",
+      "expected_result": "No accounting/settlement activation; separate finance hold.",
+      "executed": false
+    },
+    {
+      "id": "AU-T08",
+      "precondition": "Transfer API returns timeout/unknown after submission",
+      "expected_result": "Preserve UNKNOWN; do not create duplicate instruction or journal; reconcile externally.",
+      "executed": false
+    },
+    {
+      "id": "AU-T09",
+      "precondition": "Original official PDF cannot be retained due to network failure",
+      "expected_result": "Record URL-only inspection; do not invent SHA-256, binary custody or signature verification.",
+      "executed": false
+    },
+    {
+      "id": "AU-T10",
+      "precondition": "Institution licence profile changes or CDC activity scope disputed",
+      "expected_result": "Reopen applicability decision for that institution only; no global policy activation.",
+      "executed": false
+    }
+  ]
+}

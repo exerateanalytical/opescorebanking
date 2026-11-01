@@ -1,0 +1,88 @@
+{
+  "checkpoint": "AU",
+  "date": "2026-11-01",
+  "work_package": "WP-ACC-005",
+  "predecessor": "AT",
+  "events": [
+    {
+      "id": "AU-E02",
+      "date": "2025-02-12",
+      "stage": "DRAFT_CONSULTATION",
+      "issuer": "BEAC",
+      "document": "official communiqué",
+      "url": "https://www.beac.int/wp-content/uploads/2025/02/communiqu%C3%A9-de-presse_001.pdf",
+      "supports": [
+        "two draft topics under discussion",
+        "supervisory options unresolved"
+      ],
+      "does_not_support": [
+        "enacted rule",
+        "publication date",
+        "legal suspension"
+      ],
+      "new_in_checkpoint": false
+    },
+    {
+      "id": "AU-E01",
+      "date": "2025-04-15",
+      "stage": "DRAFT_CONSULTATION",
+      "issuer": "BEAC",
+      "document": "official communiqué",
+      "url": "https://www.beac.int/wp-content/uploads/2025/04/communiqu%C3%A9-de-presse-gpe-travail-CDC-du-15-avril-2025.pdf",
+      "supports": [
+        "working group consensus on inactive-account draft",
+        "two active CDCs opposed total COBAC supervision and preferred banking-activity-limited supervision",
+        "texts to be submitted to competent organs"
+      ],
+      "does_not_support": [
+        "final adopted supervision scope",
+        "final legal effective date",
+        "court effect"
+      ],
+      "new_in_checkpoint": true
+    },
+    {
+      "id": "AU-E03",
+      "date": "2025-07-12",
+      "stage": "ADOPTION_ANNOUNCED",
+      "issuer": "UMAC Ministerial Committee",
+      "document": "official communiqué",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Communique-CMO-12072025.pdf",
+      "supports": [
+        "adoption of two regulations by subject"
+      ],
+      "does_not_support": [
+        "complete issuer-certified numbered texts",
+        "Community Official Bulletin issue and page",
+        "effective date authentication",
+        "absence of litigation"
+      ],
+      "new_in_checkpoint": false
+    },
+    {
+      "id": "AU-E04",
+      "date": "2026-06-24",
+      "stage": "ADDITIONAL_DRAFT_CONSULTATION",
+      "issuer": "COBAC",
+      "document": "official communiqué",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Communiqu%C3%A9-final-consultation-de-la-profession_260624_183742.pdf",
+      "supports": [
+        "draft additional governance and inactive-account modalities",
+        "existing transfer obligations recalled separately"
+      ],
+      "does_not_support": [
+        "2026 final implementing rule adoption",
+        "suspension of prior obligations",
+        "institution-specific transfer approval"
+      ],
+      "new_in_checkpoint": false
+    }
+  ],
+  "source_pdf_binary_retained": false,
+  "sha256_calculated": false,
+  "issuer_certified_legal_text_acquired": false,
+  "official_bulletin_reference_verified": false,
+  "judicial_disposition_verified": false,
+  "policy_activation": "PROHIBITED",
+  "p0_gaps_closed": 0
+}
