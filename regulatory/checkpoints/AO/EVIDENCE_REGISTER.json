@@ -1,0 +1,54 @@
+[
+  {
+    "id": "AO-SRC-001",
+    "type": "primary regulator communication",
+    "issuer": "COBAC Secretariat General via BEAC",
+    "title": "Communiqué final consultation de la profession bancaire et financière, Libreville 22–24 juin 2026",
+    "date": "2026-06-24",
+    "url": "https://www.beac.int/wp-content/uploads/2016/10/Communiqu%C3%A9-final-consultation-de-la-profession_260624_183742.pdf",
+    "pages": 3,
+    "observed": "Page 3 describes COBAC draft implementing modalities for inactive accounts and unclaimed assets; states the obligation to transfer under rules in force and indicates modalities will be specified by proposed regulation. Draft is not proof of adoption.",
+    "classification": "PRIMARY_VERIFIED",
+    "usable_for": "Regulatory change watch, proof obligation exists as stated by supervisor; NOT a final operational instruction"
+  },
+  {
+    "id": "AO-SRC-002",
+    "type": "primary regulator catalogue",
+    "issuer": "BEAC/COBAC",
+    "title": "Règlements de la COBAC",
+    "accessed": "2026-11-01",
+    "url": "https://www.beac.int/supervision-bancaire/reglements-de-cobac/",
+    "observed": "Current catalogue reviewed; no issuer-complete Regulation 02/25 located in this review.",
+    "classification": "PRIMARY_CATALOGUE_NEGATIVE_SEARCH",
+    "usable_for": "Discovery only; absence does not establish repeal or suspension"
+  },
+  {
+    "id": "AO-SRC-003",
+    "type": "third-party hosted apparent signed regulation reproduction",
+    "issuer": "CEMAC/UMAC named on document; hosting not issuer",
+    "title": "Regulation 02/25 scanned PDF",
+    "url": "https://legecam.cm/wp-content/uploads/2025/08/Reglement-N%C2%B002_traitement-comptes-inactifs-des-avoirs-en-desherence.pdf",
+    "observed": "Text jumps from printed page 9 / unfinished Article 23 to printed page 11 / Article 27. Printed page 10 and Articles 24–26 not present.",
+    "classification": "SECONDARY_INCOMPLETE",
+    "usable_for": "Research only; cannot certify complete normative text"
+  },
+  {
+    "id": "AO-SRC-004",
+    "type": "independent academic-hosted reproduction",
+    "issuer": "Academic website, not regulator",
+    "title": "Regulation 02/25 alternative 10-page scan",
+    "url": "https://kalieu-elongo.com/wp-content/uploads/2025/07/Reglement-N%C2%B002_traitement-comptes-inactifs-des-avoirs-en-desherence.pdf",
+    "observed": "Independently opened 10-page PDF; last page is printed page 11 with Article 27 onward; Articles 24–26 not present. Does not cure missing printed page 10.",
+    "classification": "SECONDARY_INCOMPLETE",
+    "usable_for": "Corroborates missing-page defect; not proof of issuer completeness"
+  },
+  {
+    "id": "AO-SRC-005",
+    "type": "secondary press",
+    "title": "Cameroon's Deposit Fund Rejects COBAC Plan",
+    "url": "https://www.businessincameroon.com/public-management/1806-16342-cameroon-s-deposit-fund-rejects-cobac-plan-to-bring-consignments-under-banking-rules",
+    "observed": "June 2026 report alleges pending court challenges; underlying certified Court docket/order not obtained.",
+    "classification": "SECONDARY_UNCONFIRMED_LEGAL_STATUS",
+    "usable_for": "Lead only; cannot adjudicate legal effect"
+  }
+]
