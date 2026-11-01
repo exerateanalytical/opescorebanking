@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "checkpoint": "AR",
+  "review_date": "2026-11-01",
+  "primary_basis": {
+    "url": "https://cemac.int/wp-content/uploads/2024/12/traite-revise-de-la-CEMAC.pdf",
+    "articles": [
+      "40",
+      "41",
+      "43",
+      "44"
+    ],
+    "review_status": "primary text inspected; no instrument-specific certified publication evidence"
+  },
+  "instruments": [
+    {
+      "id": "REG-01-25",
+      "name": "01/25/CEMAC/UMAC/CM/COBAC",
+      "topic": "supervision of caisses des depots et consignations",
+      "adoption_date_claim": "2025-07-12",
+      "claim_source": "secondary and incomplete reproductions; not issuer certified",
+      "signed_full_text": "NOT_ACQUIRED_ISSUER_CERTIFIED",
+      "community_bulletin_issue": "UNKNOWN",
+      "community_bulletin_page": "UNKNOWN",
+      "national_journal_refs": [],
+      "specified_effective_date_verified": false,
+      "amendment_register": "UNKNOWN",
+      "court_case_id": "UNKNOWN",
+      "certified_order": "NOT_ACQUIRED",
+      "status": "PUBLICATION_AND_LEGAL_EFFECT_UNVERIFIED",
+      "financial_policy_activation": "PROHIBITED"
+    },
+    {
+      "id": "REG-02-25",
+      "name": "02/25/CEMAC/UMAC/CM/COBAC",
+      "topic": "inactive accounts and unclaimed assets",
+      "adoption_date_claim": "2025-07-12",
+      "claim_source": "incomplete third-party reproductions",
+      "signed_full_text": "NOT_ACQUIRED_ISSUER_CERTIFIED",
+      "missing_printed_page": "10 (Article 23 continuation and Articles 24–26)",
+      "community_bulletin_issue": "UNKNOWN",
+      "community_bulletin_page": "UNKNOWN",
+      "national_journal_refs": [],
+      "specified_effective_date_verified": false,
+      "amendment_register": "UNKNOWN",
+      "court_case_id": "UNKNOWN",
+      "certified_order": "NOT_ACQUIRED",
+      "status": "PUBLICATION_AND_LEGAL_EFFECT_UNVERIFIED",
+      "financial_policy_activation": "PROHIBITED"
+    }
+  ],
+  "rule": "UNKNOWN means evidence not obtained by programme; never assert invalidity, repeal, suspension or non-publication from absence."
+}
