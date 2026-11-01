@@ -1,0 +1,26 @@
+{
+  "checkpoint": "AQ",
+  "date": "2026-11-01",
+  "previous": "AP",
+  "phase": "Phase 4 — Accounting Core / Financial Integrity",
+  "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+  "active_work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "work_packages_attempted": 1,
+  "work_packages_completed": 0,
+  "work_packages_kept_open": 1,
+  "work_packages_blocked_from_closure": 1,
+  "dependent_packages_attempted": 0,
+  "banking_tests_executed": 0,
+  "production_code_written": 0,
+  "regulatory_requests_sent": 0,
+  "definition_of_ready": "FAIL",
+  "separate_workstream": "WP-PAY-GIMAC-001 OPEN NOT ATTEMPTED",
+  "new_findings": [
+    "Second independently hosted reproduction also skips printed page 10",
+    "Secondary partial quotation of Article 26 from alleged 2025 COBAC–MINFI correspondence",
+    "Secondary 5-year savings inactivity claim conflicts with reproduced Article 4 36-month text"
+  ],
+  "new_acceptance_scenarios_specified": 6,
+  "next_exact_task": "WP-ACC-005 — Checkpoint AR: obtain issuer-certified full Regulation 02/25 including printed page 10/Articles 23–26; authenticate original 2025-10-22 COBAC–MINFI letter; separately certify court status for 01/25 and 02/25; establish signed/published adoption status of June 2026 proposals and bank-specific PCEC/settlement approvals. Do not activate executable financial policy."
+}
