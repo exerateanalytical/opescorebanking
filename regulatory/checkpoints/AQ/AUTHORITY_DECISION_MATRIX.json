@@ -1,0 +1,50 @@
+[
+  {
+    "id": "AQ-DEC-001",
+    "issue": "Article 23–26 completeness",
+    "evidence": "Two hosted 10-page reproductions omit printed page 10",
+    "status": "BLOCKED",
+    "authority_required": "Issuer-certified complete 11-printed-page instrument, amendments and annexes",
+    "system_consequence": "No transitional rule activation, restitution timing override or bulk transfer instruction"
+  },
+  {
+    "id": "AQ-DEC-002",
+    "issue": "Article 26 transitional obligations",
+    "evidence": "2025-11-13 press article quotes only a fragment of alleged 2025-10-22 COBAC letter",
+    "status": "UNVERIFIED_SECONDARY_LEAD",
+    "authority_required": "Signed original COBAC–MINFI letter plus authenticated full Article 26 and legal review",
+    "system_consequence": "No backdated automatic eligibility, ledger derecognition or transfer"
+  },
+  {
+    "id": "AQ-DEC-003",
+    "issue": "Savings/vault inactivity period",
+    "evidence": "Reproduced Article 4 states 36 months; 2026-01-14 press article claims 5 years",
+    "status": "SECONDARY_CONFLICT",
+    "authority_required": "Issuer-authenticated current rule and amendment register",
+    "system_consequence": "Hold policy promotion; preserve source-specific candidate values without executable default"
+  },
+  {
+    "id": "AQ-DEC-004",
+    "issue": "Court challenges for 01/25 and 02/25",
+    "evidence": "Secondary allegations; no certified dispositive orders",
+    "status": "UNVERIFIED",
+    "authority_required": "Separate certified court records, orders, effect and counsel review",
+    "system_consequence": "No automatic suspended/annulled status"
+  },
+  {
+    "id": "AQ-DEC-005",
+    "issue": "2026 proposed implementing modalities",
+    "evidence": "Prior official COBAC communiqué described drafts; no adopted final located this run",
+    "status": "UNKNOWN_CURRENT_ADOPTION",
+    "authority_required": "Signed final published instrument or issuer confirmation of still-draft status",
+    "system_consequence": "No production settlement protocol inferred"
+  },
+  {
+    "id": "AQ-DEC-006",
+    "issue": "Accounting and transfer finality",
+    "evidence": "No approved bank-specific PCEC mapping or settlement protocol",
+    "status": "BLOCKED",
+    "authority_required": "Licensed-bank CFO, legal, compliance and operations approval",
+    "system_consequence": "No journal template, liability derecognition, payout or settlement-complete transition"
+  }
+]
