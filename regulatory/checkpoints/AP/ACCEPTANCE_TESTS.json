@@ -1,0 +1,56 @@
+[
+  {
+    "id": "AP-T01",
+    "scenario": "Case filing does not automatically suspend Regulation 01/25 or 02/25",
+    "status": "SPECIFIED_NOT_EXECUTED",
+    "automated_test_exists": false
+  },
+  {
+    "id": "AP-T02",
+    "scenario": "Certified stay on 01/25 alone does not change 02/25 policy state",
+    "status": "SPECIFIED_NOT_EXECUTED",
+    "automated_test_exists": false
+  },
+  {
+    "id": "AP-T03",
+    "scenario": "Unsigned or incomplete Regulation 02/25 cannot be approved for executable policy",
+    "status": "SPECIFIED_NOT_EXECUTED",
+    "automated_test_exists": false
+  },
+  {
+    "id": "AP-T04",
+    "scenario": "June 2026 draft implementing text cannot activate financial commands",
+    "status": "SPECIFIED_NOT_EXECUTED",
+    "automated_test_exists": false
+  },
+  {
+    "id": "AP-T05",
+    "scenario": "Inactive-account classification and notice create zero financial journal postings",
+    "status": "SPECIFIED_NOT_EXECUTED",
+    "automated_test_exists": false
+  },
+  {
+    "id": "AP-T06",
+    "scenario": "Unknown external transfer outcome blocks duplicate retries and remains reconcilable",
+    "status": "SPECIFIED_NOT_EXECUTED",
+    "automated_test_exists": false
+  },
+  {
+    "id": "AP-T07",
+    "scenario": "Recipient-account change requires out-of-band verification and maker-checker",
+    "status": "SPECIFIED_NOT_EXECUTED",
+    "automated_test_exists": false
+  },
+  {
+    "id": "AP-T08",
+    "scenario": "Ledger derecognition cannot occur on submission-only evidence",
+    "status": "SPECIFIED_NOT_EXECUTED",
+    "automated_test_exists": false
+  },
+  {
+    "id": "AP-T09",
+    "scenario": "Source conflict raises compliance exception and retains both provenance records",
+    "status": "SPECIFIED_NOT_EXECUTED",
+    "automated_test_exists": false
+  }
+]
