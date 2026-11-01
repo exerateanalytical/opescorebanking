@@ -1,0 +1,106 @@
+{
+  "checkpoint": "AY",
+  "date": "2026-11-01",
+  "status": "DESIGN_ONLY_NOT_EXECUTED",
+  "count": 14,
+  "scenarios": [
+    {
+      "id": "AY-T01",
+      "title": "2002-era 3211/3212/3213 classification",
+      "setup": "For a historical date in the 2002-era release, account 3211 means commercial discount, not the 2015 healthy short-term loan category.",
+      "expected": "Return versioned historical meaning and citation; do not remap a posted journal.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T02",
+      "title": "2015 short-term credit account re-use",
+      "setup": "For an institution-approved post-2015 chart, 321 is healthy short-term credit and 322 sensitive short-term credit.",
+      "expected": "Require approved release/effective date; never infer current 2026 approval from source alone.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T03",
+      "title": "2015 article 8(d) 312/322 inconsistency",
+      "setup": "A proposed sensitive short-term loan mapping relies on the printed 312 header but 322 child codes.",
+      "expected": "Quarantine mapping pending authoritative clarification; no posting.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T04",
+      "title": "2003 2651/2652 semantic collision",
+      "setup": "Two instruments assign conflicting public/private meanings to 2651 and 2652.",
+      "expected": "Require explicit effective-dated supersession and institution approval; preserve original evidence.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T05",
+      "title": "Legacy 459 branch clearing notification",
+      "setup": "An internal 'avis de sort' is received but independent external settlement evidence is absent.",
+      "expected": "Record internal resolution evidence only; prohibit SETTLED/FINAL external status and customer balance mutation.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T06",
+      "title": "Legacy 999 unmatched computer posting",
+      "setup": "An unmatched imported record is proposed for 999 off-balance suspense.",
+      "expected": "Quarantine operationally, log ownership and SLA; do not manufacture a balancing posting or treat 999 as settlement.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T07",
+      "title": "Replay of legacy branch transfer",
+      "setup": "Same branch clearing notice is ingested twice with same source key.",
+      "expected": "Deduplicate; no second posting or clearing release; preserve replay audit.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T08",
+      "title": "2002 correspondent rating attribute",
+      "setup": "Historical COBAC rating 1–4 is read as though it were the current rating taxonomy.",
+      "expected": "Require rating scheme/version/effective date and evidence; block unsupported current prudential inference.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T09",
+      "title": "Inventory accounting on non-authorized bank",
+      "setup": "A bank without verified authorization attempts to activate 473/640/740 merchandise workflows.",
+      "expected": "Deny; keep historical chart available only for research and licensed applicable profiles.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T10",
+      "title": "Historical report reconstruction",
+      "setup": "Produce a 2003 as-filed report after a 2015 chart update.",
+      "expected": "Reproduce original code meaning and posted journal IDs; do not rewrite immutable history.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T11",
+      "title": "Correction after period closure",
+      "setup": "Historical mapping error identified in a closed period.",
+      "expected": "Require formal approval and new correction/reversal entries and report versioning; never edit posted rows.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T12",
+      "title": "Incomplete source custody",
+      "setup": "A proposed chart release relies only on web screenshots, no retained source binary or signed institution interpretation.",
+      "expected": "Keep RESEARCH_ONLY and block activation; record evidence custody limitation.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T13",
+      "title": "Unknown external outcome",
+      "setup": "An outbound branch/correspondent operation times out after dispatch.",
+      "expected": "Remain UNKNOWN/RECONCILIATION_REQUIRED, not failed/succeeded by assumption; retry idempotently.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    },
+    {
+      "id": "AY-T14",
+      "title": "Independent regulatory reporting check",
+      "setup": "An account is reclassified between 2002 and 2015 versions.",
+      "expected": "Reconcile old/new account totals with signed bridge and independent review; zero unexplained residual.",
+      "status": "SPECIFIED_NOT_EXECUTED"
+    }
+  ]
+}

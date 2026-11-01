@@ -1,0 +1,122 @@
+{
+  "checkpoint": "AY",
+  "date": "2026-11-01",
+  "work_package": "WP-ACC-005",
+  "status": "RESEARCH_ONLY_OPEN_P0",
+  "sources": {
+    "i2002": "https://www.beac.int/wp-content/uploads/2016/10/cbI-2002_01.pdf",
+    "catalogue": "https://www.beac.int/supervision-bancaire/instructions-de-cobac/",
+    "i2003": "https://www.beac.int/wp-content/uploads/2016/10/Bulletin-COBAC-n%C2%B06.pdf",
+    "i2015": "https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015_01_pcec.pdf",
+    "r2018": "https://www.beac.int/wp-content/uploads/2016/10/reglement_cobac_r_2018-01_relatif_a_la_classification_a_la_comptabilisation_et_au_provisionnement_des_creances.pdf"
+  },
+  "original_scan": {
+    "instrument": "I-2002/01",
+    "issuer_hosted": true,
+    "scanned_pages_visually_inspected": 7,
+    "articles_seen": "1-20",
+    "document_date": "2002-03-20",
+    "stated_effective_date": "2002-07-01",
+    "binary_retained": false,
+    "sha256": null,
+    "cryptographic_signature_validated": false
+  },
+  "ax_conflict_c05_update": {
+    "prior": "FULL_TEXT_UNAVAILABLE",
+    "current": "ISSUER_HOSTED_7_PAGE_SCAN_LOCATED_VISUALLY_INSPECTED",
+    "source_discovery_closed": true,
+    "source_binary_custody_closed": false,
+    "regulatory_activation_authorized": false
+  },
+  "reconciliations": [
+    {
+      "id": "AY-A01",
+      "instrument": "COBAC I-2002/01",
+      "articles": "1-4",
+      "pages": "1",
+      "observed": "Creates/subdivides 1511/1512, 2671/2672 and 2721/2722. Historical PCEC only.",
+      "status": "HISTORICAL_EVIDENCE_OBSERVED"
+    },
+    {
+      "id": "AY-A02",
+      "instrument": "COBAC I-2002/01",
+      "articles": "5-6",
+      "pages": "2",
+      "observed": "321 Effets commerciaux subdivided into 3211 discount, 3212 factoring, 3213 documentary discount; 324 public contract credit split into 3241/3242.",
+      "status": "HISTORICAL_EVIDENCE_OBSERVED"
+    },
+    {
+      "id": "AY-A03",
+      "instrument": "COBAC I-2015/01",
+      "articles": "8(a)-(c)",
+      "pages": "5-6",
+      "observed": "Explicitly deletes the 2002-era 321/324 subdivisions and recreates 321 healthy short-term and 322 sensitive short-term; 3211 is now commercial paper under healthy credit and 32111 is discount.",
+      "status": "EXPLICIT_HISTORICAL_SUPERSESSION_OBSERVED"
+    },
+    {
+      "id": "AY-A04",
+      "instrument": "COBAC I-2015/01",
+      "articles": "8(d)",
+      "pages": "7",
+      "observed": "Printed 312 sensitive short-term header conflicts with all 322-prefixed child accounts; independently visually checked again.",
+      "status": "OPEN_P0_SOURCE_AMBIGUITY"
+    },
+    {
+      "id": "AY-A05",
+      "instrument": "COBAC I-2002/01",
+      "articles": "7",
+      "pages": "2",
+      "observed": "Introduces 459 Opérations dénouées and subdivisions 4591-4596, with internal initiating/receiving entity and avis de sort mechanics.",
+      "status": "HISTORICAL_ONLY_NO_EXTERNAL_FINALITY_INFERENCE"
+    },
+    {
+      "id": "AY-A06",
+      "instrument": "COBAC I-2002/01",
+      "articles": "8-13",
+      "pages": "2-5",
+      "observed": "Merchandise/inventory accounts 473, 497, 640, 740 and valuation commentary are restricted to institutions authorized for direct sale of movable goods.",
+      "status": "HISTORICAL_APPLICABILITY_REQUIRES_INSTITUTION_PROFILE"
+    },
+    {
+      "id": "AY-A07",
+      "instrument": "COBAC I-2002/01",
+      "articles": "14-18",
+      "pages": "6-7",
+      "observed": "Adds class-9 custody/commitment accounts 908, 928, 998 and unmatched computer off-balance 999, plus mortgage 931 subdivisions.",
+      "status": "HISTORICAL_ONLY_NO_SUSPENSE_AUTHORIZATION"
+    },
+    {
+      "id": "AY-A08",
+      "instrument": "COBAC I-2002/01",
+      "articles": "19-20",
+      "pages": "7",
+      "observed": "Adds correspondent rating-identification attributes and states effective date 1 July 2002; signed Yaoundé 20 March 2002.",
+      "status": "DATE_AND_CLAUSE_VISUALLY_VERIFIED_NOT_CUSTODY_AUTHENTICATED"
+    },
+    {
+      "id": "AY-A09",
+      "instrument": "COBAC I-2003/01",
+      "articles": "2",
+      "pages": "Bulletin COBAC 6 printed 187",
+      "observed": "2651/2652 public/private semantics conflict internally and against 2015; AX-C01 remains open.",
+      "status": "OPEN_P0"
+    },
+    {
+      "id": "AY-A10",
+      "instrument": "COBAC R-2018/01",
+      "articles": "32-33",
+      "pages": "12",
+      "observed": "2018 rule supersedes conflicting 2014 classification; pre-signature stated effect unresolved.",
+      "status": "OPEN_LEGAL_INTERPRETATION"
+    }
+  ],
+  "unchanged_blockers": [
+    "AX-C01 2651/2652 contradictory 2003 text and 2015 mapping",
+    "AX-C02 2015 Article 8(d) 312/322 printed inconsistency",
+    "AX-C03 R-2018/01 Article 33 legal interpretation",
+    "AX-C04 R-2014/01 supersession and 2015 PCEC commentary",
+    "AX-C06 current provisioning conditions and approved base",
+    "Regulations 01/25 and 02/25 complete authenticated texts, official publication, Court dispositions, COBAC-MINFI correspondence, implementing rules",
+    "Institution-approved PCEC mappings and settlement/reconciliation"
+  ]
+}
