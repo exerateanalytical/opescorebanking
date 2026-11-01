@@ -1,0 +1,137 @@
+{
+  "checkpoint": "BA",
+  "date": "2026-11-01",
+  "work_package": "WP-ACC-005",
+  "status": "RESEARCH_ONLY_OPEN_P0",
+  "predecessor": "AZ",
+  "source_binaries_retained": 0,
+  "sha256_computed": 0,
+  "activation": "PROHIBITED",
+  "sources": [
+    {
+      "id": "S03S",
+      "instrument": "COBAC R-2003/03",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/cbR-2003-03.pdf",
+      "scanned_pages": 10,
+      "scope": "securities accounting and prudential treatment",
+      "verified_scope": "Articles 20,22,24,30 on scanned pp.8–10",
+      "issuer_hosted": true
+    },
+    {
+      "id": "S10S",
+      "instrument": "COBAC R-2010/03",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/rcobac2010-N0300.pdf",
+      "scanned_pages": 2,
+      "scope": "amends R-2003/03 Article 24",
+      "verified_scope": "Articles 1 and 2, both pages",
+      "issuer_hosted": true
+    },
+    {
+      "id": "S15",
+      "instrument": "COBAC I-2015/01",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015_01_pcec.pdf",
+      "scanned_pages": 14,
+      "verified_scope": "Articles 2–4, 8, 14, 15",
+      "issuer_hosted": true
+    }
+  ],
+  "observations": [
+    {
+      "id": "BA-O01",
+      "source": "S03S Article 22",
+      "type": "OWNERSHIP_TIMING",
+      "observed": "Financial-statement securities accounting is linked to transfer of ownership; certain transactions before title transfer are treated off balance.",
+      "safe_interpretation": "Do not post securities asset ownership merely from trade execution; require approved ownership-event evidence and explicit settlement state.",
+      "legal_currentness": "NOT_VERIFIED"
+    },
+    {
+      "id": "BA-O02",
+      "source": "S03S Article 24",
+      "type": "SUPERSEDED_CLAUSE",
+      "observed": "Original prudential securities treatment appears in 2003 text.",
+      "successor": "S10S Article 1 replaces Article 24",
+      "safe_interpretation": "Original Article 24 cannot be treated as unchanged post-amendment.",
+      "legal_currentness": "NOT_VERIFIED"
+    },
+    {
+      "id": "BA-O03",
+      "source": "S10S Article 1",
+      "type": "ARTICLE_REPLACEMENT",
+      "observed": "Article 24 replaced; includes a six-month historical exception for certain public trading securities in specified prudential calculations.",
+      "safe_interpretation": "Do not apply any exception until current successor rules, institution profile, security classification and start/end date are legally validated.",
+      "legal_currentness": "NOT_VERIFIED",
+      "activation": "PROHIBITED"
+    },
+    {
+      "id": "BA-O04",
+      "source": "S10S Article 2",
+      "type": "EFFECTIVE_DATE_DEPENDENCY",
+      "observed": "Regulation enters into force on signature date; signature date on scan not reliably legible.",
+      "safe_interpretation": "No guessed effective date.",
+      "legal_currentness": "NOT_VERIFIED"
+    },
+    {
+      "id": "BA-O05",
+      "source": "S15 Article 15",
+      "type": "HISTORICAL_COMMENCEMENT",
+      "observed": "Instruction states effective from signature; signature block visibly dated 6 July 2015.",
+      "safe_interpretation": "Historical commencement candidate only; not evidence of current complete chart or rule activation.",
+      "legal_currentness": "NOT_VERIFIED"
+    },
+    {
+      "id": "BA-O06",
+      "source": "S15 Article 2",
+      "type": "PROVISION_SUPERSESSION_RISK",
+      "observed": "Historical general credit-risk provision text specifies annual minimum 0.5% and stock minimum 2%.",
+      "safe_interpretation": "Do not hard-code historical thresholds; require cross-check against R-2018/01 and later binding instruments and institutional approval.",
+      "legal_currentness": "NOT_VERIFIED"
+    },
+    {
+      "id": "BA-O07",
+      "source": "S15 Article 14",
+      "type": "CROSS_REFERENCE_SUPERSESSION",
+      "observed": "Historical annex points to COBAC R-2014/01 credit classification.",
+      "safe_interpretation": "Maintain clause-level supersession chain before assigning current classifications; R-2018/01 relationship requires approved interpretation.",
+      "legal_currentness": "NOT_VERIFIED"
+    }
+  ],
+  "carry_forward_conflicts": [
+    {
+      "source": "I-2003/01 Article 2",
+      "account_codes": [
+        "2651",
+        "2652"
+      ],
+      "state": "OPEN_P0",
+      "reason": "Enumeration/commentary conflict"
+    },
+    {
+      "source": "I-2015/01 Article 8(d)",
+      "account_codes": [
+        "312",
+        "322"
+      ],
+      "state": "OPEN_P0",
+      "reason": "Parent heading conflicts with child numbering"
+    },
+    {
+      "source": "I-2015/01 Articles 3–4",
+      "account_codes": [
+        "2651",
+        "2652",
+        "29651",
+        "29652"
+      ],
+      "state": "OPEN_MATERIAL_MAPPING",
+      "reason": "Investment asset and provision labels are non-parallel; no approved relationship"
+    }
+  ],
+  "external_approvals_required": [
+    "Issuer-binary custody and hash",
+    "Current prudential amendment/supersession legal opinion",
+    "Institution-approved PCEC asset/provision crosswalk",
+    "Formal COBAC clarification for conflicting clauses",
+    "Publication and judicial evidence for 01/25–02/25",
+    "Institution-specific settlement evidence"
+  ]
+}
