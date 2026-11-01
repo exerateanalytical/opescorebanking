@@ -1,0 +1,137 @@
+{
+  "checkpoint": "AZ",
+  "date": "2026-11-01",
+  "work_package": "WP-ACC-005",
+  "status": "RESEARCH_ONLY_OPEN_P0",
+  "previous_checkpoint": "AY",
+  "previous_verified_commit": "f085981c65378e110486ed22fe70fbec931e4106",
+  "provenance": [
+    {
+      "id": "S02",
+      "instrument": "COBAC I-2002/01",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/cbI-2002_01.pdf",
+      "issuer_hosted": true,
+      "pages": 7,
+      "observed": "visual pages 2 and 7 this run; prior AY reported all seven reviewed",
+      "binary_retained": false,
+      "sha256": null
+    },
+    {
+      "id": "S03",
+      "instrument": "COBAC I-2003/01",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Bulletin-COBAC-n%C2%B06.pdf",
+      "issuer_hosted": true,
+      "location": "Bulletin COBAC 6 printed pp.187–191, especially Article 7 pp.190–191",
+      "binary_retained": false,
+      "sha256": null
+    },
+    {
+      "id": "S15",
+      "instrument": "COBAC I-2015/01",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015_01_pcec.pdf",
+      "issuer_hosted": true,
+      "location": "Articles 3, 4 and 8",
+      "binary_retained": false,
+      "sha256": null
+    }
+  ],
+  "clauses": [
+    {
+      "id": "AZ-C01",
+      "code": "908",
+      "source": "S02 Article 14",
+      "historic_label": "Valeurs gérées pour compte des correspondants",
+      "successor": "918",
+      "amendment": "S03 Article 7(a)",
+      "effective_date_candidate": "2004-01-01",
+      "observation": "2003 instruction expressly replaces original 908 under account 90 with 918 under account 91; correspondent securities in custody require depositor/category subaccounts.",
+      "state": "PRIMARY_TEXT_REVIEWED_HISTORICAL_ONLY",
+      "activation": "PROHIBITED"
+    },
+    {
+      "id": "AZ-C02",
+      "code": "928",
+      "source": "S02 Article 16",
+      "historic_label": "Valeurs gérées pour compte de la clientèle",
+      "successor": "938",
+      "amendment": "S03 Article 7(b)",
+      "effective_date_candidate": "2004-01-01",
+      "observation": "2003 instruction expressly replaces original 928 under account 92 with 938 under account 93; depositor/category subaccounts for securities held for third parties.",
+      "state": "PRIMARY_TEXT_REVIEWED_HISTORICAL_ONLY",
+      "activation": "PROHIBITED"
+    },
+    {
+      "id": "AZ-C03",
+      "code": "2651/2652",
+      "source": "S03 Article 2",
+      "historic_label": "2651 private, 2652 public in enumeration",
+      "successor": "2651 public, 2652 private in S15 Article 3",
+      "observation": "2003 article's accompanying commentary calls 2651 public, conflicting with its own enumeration; 2015 explicitly lists public 2651/private 2652. Historical 2003 semantics remain ambiguous; 2015 text does not retrospectively resolve them.",
+      "state": "OPEN_P0_CONFLICT",
+      "activation": "PROHIBITED"
+    },
+    {
+      "id": "AZ-C04",
+      "code": "29651/29652",
+      "source": "S15 Article 4",
+      "observation": "2015 provision-related 29651 is labelled private and 29652 public while investment-asset 2651 is public and 2652 private. Whether suffix parity is expected is NOT established; forbid automated numeric-prefix correspondence and seek institution-approved account-to-provision mapping.",
+      "state": "OPEN_MAPPING_DEPENDENCY",
+      "activation": "PROHIBITED"
+    },
+    {
+      "id": "AZ-C05",
+      "code": "321/324",
+      "source": "S02 Articles 5-6",
+      "successor": "S15 Article 8(a)-(c)",
+      "observation": "2015 expressly deletes old 321 commercial-paper and 324 public-contract subdivisions and creates healthy/sensitive short-term classifications with reused codes. Historical journal codes must remain linked to original release.",
+      "state": "HISTORICAL_SUPERSESSION_OBSERVED",
+      "activation": "PROHIBITED"
+    },
+    {
+      "id": "AZ-C06",
+      "code": "312/322",
+      "source": "S15 Article 8(b),(d)",
+      "observation": "Article 8(b) creates 322 sensitive short-term credit, but Article 8(d) header prints 312 while children are 322*. Do not silently normalize or infer issuer erratum.",
+      "state": "OPEN_P0_SOURCE_AMBIGUITY",
+      "activation": "PROHIBITED"
+    },
+    {
+      "id": "AZ-C07",
+      "code": "459",
+      "source": "S02 Article 7",
+      "observation": "Internal branch/entity avis de sort and account 459 represent liaison processing; no inference of external payment clearing, settlement or finality.",
+      "state": "HISTORICAL_CONTEXT_REVIEWED",
+      "activation": "PROHIBITED"
+    },
+    {
+      "id": "AZ-C08",
+      "code": "999",
+      "source": "S02 Article 18",
+      "observation": "Historical unmatched computer-generated off-balance entries; cannot be treated as an approved live suspense ledger or as proof of settlement.",
+      "state": "HISTORICAL_CONTEXT_REVIEWED",
+      "activation": "PROHIBITED"
+    },
+    {
+      "id": "AZ-C09",
+      "code": "916/953/954/955/995",
+      "source": "S03 Articles 3-6",
+      "observation": "2003 instruction introduces/relabels off-balance counterguarantee and securities-subscription accounts; separate custody, commitment and cash-settlement evidence.",
+      "state": "HISTORICAL_CONTEXT_REVIEWED",
+      "activation": "PROHIBITED"
+    }
+  ],
+  "custody_attempt": {
+    "method": "issuer PDF download via container download and Python requests",
+    "outcome": "FAILED_NETWORK_ACCESS",
+    "binary_retained": false,
+    "sha256": null,
+    "claim": "No hash or cryptographic authenticity claim"
+  },
+  "exclusions": [
+    "Not a complete consolidated PCEC",
+    "No COBAC formal clarification obtained",
+    "No institution-specific chart approval",
+    "No legal opinion on R-2018/01 Article 33",
+    "No live financial posting/settlement authorization"
+  ]
+}
