@@ -1,0 +1,20 @@
+# BI — source/provenance and gap delta (2026-11-02)
+
+| ID | Primary source | Examination and new finding | Evidence limit |
+|---|---|---|---|
+| BI-SRC-001 | BEAC-hosted scanned **LC-COB/44/DCP/IHI**, dated 24 Nov 2009, https://www.beac.int/wp-content/uploads/2016/10/LC-044-20091124.pdf | One-page PDF screenshot inspected. Historical circular recalls R-2009/01 bank milestones of 5bn by June 2010, 7.5bn by June 2012, 10bn by June 2014; asks addressee for capital-raising plan by 30 June 2010 **formally approved by corporate bodies**. It mentions an addressee's reported 6bn, which is case-specific/template-like, not all banks. | Historical 2009 communication, not 2026 binding guidance, not bank-specific evidence for any prospective OPES tenant; scanned source image only, no original-byte custody/hash. |
+| BI-SRC-002 | Congo Ministry of Finance hosted R-2025/02, https://www.finances.gouv.cg/fr/download/file/fid/9490 | Re-read Articles 1–8. Article 5 requires **paid-up** minimum at creation for newly licensed institutions; Article 6 gives one-year transition to pre-existing institutions and a plan **submitted for COBAC SG approval by 30 June 2026** if unable to meet, with dated milestones; Article 7 continues R-2009/01 for pre-existing institutions until 31 Dec 2026. | No original bytes/hash, independent publication chain, later amendments or signed Article 4/6/7 interpretation. |
+| BI-SRC-003 | BEAC-hosted R-2009/01, https://www.beac.int/wp-content/uploads/2016/10/rgtcobacR_2009_01.pdf | Historical minimum 10bn banks / 2bn financial establishments; consistent with BI-SRC-001's bank historical milestones. | No current 2027 applicability; not a replacement for current legal approval. |
+| BI-SRC-004 | BEAC COBAC publications catalogue, https://www.beac.int/supervision-bancaire/publications/ | COBAC 2025 Annual Report listed as 18 MB; official PDF link resolves to https://www.beac.int/wp-content/uploads/2016/10/Rapport-annuel-de-la-COBAC-2025-PDF-648-Mo_compressed.pdf | Browser fetch refused because actual content length 19,385,240 bytes exceeds tool limit; **report body not inspected**. |
+| BI-SRC-005 | BEAC regulations catalogue, https://www.beac.int/supervision-bancaire/reglements-de-cobac/ | R-2009/01 and LC-COB/44 both listed independently. | Catalogue listing proves discoverability, not legal effectiveness or completeness of current amendment chain. |
+| BI-SRC-006 | Binary acquisition attempt, 2026-11-02 | Direct Python HTTPS to Congo host failed DNS resolution; separate supported downloader also failed. | **No PDF source binaries acquired, no SHA-256 computed**. |
+
+## New legal/operational distinctions
+1. **Internal corporate authorization**: board/shareholder/other competent organ may approve a plan internally; legal authority and meeting validity require institution-specific governance evidence.
+2. **Regulatory process**: Article 6 plan submission and approval by COBAC SG are distinct events. Timely submission is not approval; receipt is not approval; absence of evidence is not proof of refusal.
+3. **Capital realization**: subscribed, issued, paid-up and regulatory own funds are different measures. Do not create money on approval status change.
+4. **Temporal legal regime**: R-2025/02 Article 4 commencement, Article 6 transition, Article 7 older-rule continuation and individual plan milestones must be reconciled by qualified counsel/COBAC. A blanket maximum-of-thresholds rule would be legally speculative.
+5. **Case-vs-rule provenance**: LC-COB/44 contains a case-like 6bn figure and general recipients; it cannot become a universal 2009 or 2026 fact about banks.
+
+## Outstanding P0 evidence (not resolved)
+Authenticated complete 01/25–02/25, missing printed 02/25 page 10, separate certified court dispositions, original COBAC–MINFI correspondence, official publication/effective dates, signed implementing texts; institution-approved PCEC, capital, liability and settlement mappings; signed R-2021/01–02, current prudential amendment chain; 2025 COBAC report body; original binary custody and verified SHA-256. No requests transmitted.
