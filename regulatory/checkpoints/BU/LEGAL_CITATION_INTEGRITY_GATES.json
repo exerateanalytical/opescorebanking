@@ -1,0 +1,135 @@
+{
+  "checkpoint": "BU",
+  "status": "PROPOSED_NOT_IMPLEMENTED",
+  "binding_rule_activated": false,
+  "evidence_sources": [
+    {
+      "id": "S1",
+      "url": "https://www.beac.int/wp-content/uploads/2020/08/Lettre-de-la-Recherche-N%C2%B08.pdf",
+      "authority_class": "ISSUER_HOSTED_PUBLICATION",
+      "original_binary_verified": false
+    },
+    {
+      "id": "S2",
+      "url": "https://www.beac.int/wp-content/uploads/2021/04/RSF-AC_19_VF-publish-ok.pdf",
+      "authority_class": "ISSUER_HOSTED_PUBLICATION",
+      "original_binary_verified": false
+    },
+    {
+      "id": "S3",
+      "url": "https://www.beac.int/wp-content/uploads/2021/11/Rapport-sur-la-situation-des-services-de-paiement-%C3%A9lectronique-dans-la-CEMAC_compressed-1.pdf",
+      "authority_class": "ISSUER_HOSTED_PUBLICATION",
+      "original_binary_verified": false
+    },
+    {
+      "id": "S4",
+      "url": "https://www.beac.int/systemes-paiement/instructions-circulaires-reglements/",
+      "authority_class": "ISSUER_HOSTED_PUBLICATION",
+      "original_binary_verified": false
+    },
+    {
+      "id": "S5",
+      "url": "https://www.beac.int/supervision-bancaire/reglements-de-cobac/",
+      "authority_class": "ISSUER_HOSTED_PUBLICATION",
+      "original_binary_verified": false
+    }
+  ],
+  "cross_reference_conflicts": [
+    {
+      "id": "BU-C01",
+      "status": "OPEN_SOURCE_CITATION_ERROR",
+      "location": "BEAC Lettre de la Recherche N°8 (2020), printed p.9, footnote 7",
+      "observed": "R-2019/03 described as prudential rules for payment institutions",
+      "corroboration": "BEAC 2019 financial stability review printed pp.43–44: R-2019/02 prudential payment institutions; R-2019/03 monetary sanctions",
+      "disposition": "Treat 2020 footnote as inconsistent secondary explanatory citation; do not silently edit source or apply as law"
+    },
+    {
+      "id": "BU-C02",
+      "status": "OPEN_IDENTITY_COLLISION_RISK",
+      "location": "2019 legal references with short number 04/18",
+      "observed": "Number-only references risk conflating payment-services regulation with other 2018 sanctions regulations; full title/issuer/date needed",
+      "disposition": "Use structured instrument identity, subject and operative text; no automatic alias merge"
+    },
+    {
+      "id": "BU-C03",
+      "status": "OPEN_BINDING_SCOPE",
+      "location": "Regulation 04/18, COBAC R-2019/01–02, BEAC Circular 004/2023",
+      "observed": "Bank/product/channel applicability and current amendments not authenticated",
+      "disposition": "Do not activate restitution policies"
+    }
+  ],
+  "proposed_instrument_key": [
+    "issuer",
+    "instrument_type",
+    "full_number",
+    "jurisdiction",
+    "signature_date",
+    "subject",
+    "publication_reference",
+    "version_id"
+  ],
+  "proposed_clause_key": [
+    "instrument_version_id",
+    "article_or_section",
+    "paragraph",
+    "language",
+    "effective_from",
+    "effective_to",
+    "known_from",
+    "known_to"
+  ],
+  "proposed_decision_fields": [
+    "institution_id",
+    "licensed_category",
+    "payment_service_id",
+    "channel",
+    "rail",
+    "contract_version",
+    "authority_version_id",
+    "evidence_digest",
+    "maker_id",
+    "checker_id",
+    "decision",
+    "recorded_at"
+  ],
+  "permitted_decisions": [
+    "AUTHORITY_UNRESOLVED",
+    "SCOPE_UNRESOLVED",
+    "APPROVED_FOR_REVIEW_ONLY",
+    "REJECTED"
+  ],
+  "constraints": [
+    "Never promote explanatory BEAC research/report to binding regulation",
+    "Never infer a bank license or product authorization from a sector report",
+    "No accounting entries from legal-source updates",
+    "No automatic bank/rail activation",
+    "No source collision by number-only matching",
+    "Require signed legal review and maker-checker before rule approval",
+    "Retain original source wording and contradictory citations",
+    "Reject unverified regulatory effective dates"
+  ],
+  "inherited_p0": [
+    "Current issuer-authenticated operative 04/18, R-2019/01–02, Circular 004/2023 and amendment chain",
+    "Bank/product/channel-specific binding legal applicability and signed contracts",
+    "BEAC participation agreements, message profiles and settlement-finality evidence",
+    "SYGMA V10 and SYSTAC2 instant-production status",
+    "Approved PCEC mappings",
+    "COBAC 2020–21 amendments and D-2025/328 correction",
+    "Regulations 01/25–02/25 legal/judicial/settlement evidence"
+  ],
+  "negative_scenario_ids": [
+    "BU-T01",
+    "BU-T02",
+    "BU-T03",
+    "BU-T04",
+    "BU-T05",
+    "BU-T06",
+    "BU-T07",
+    "BU-T08",
+    "BU-T09",
+    "BU-T10",
+    "BU-T11",
+    "BU-T12"
+  ],
+  "negative_scenarios_executed": 0
+}
