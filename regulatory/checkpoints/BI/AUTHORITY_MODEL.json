@@ -1,0 +1,162 @@
+{
+  "checkpoint": "BI",
+  "status": "DESIGN_ONLY_NOT_IMPLEMENTED",
+  "regulatory_decision": "HOLD",
+  "source_classes": [
+    {
+      "id": "general_instrument",
+      "example": "COBAC R-2025/02",
+      "required": [
+        "issuer_original",
+        "official_publication",
+        "effective_date",
+        "amendment_chain",
+        "legal_approval"
+      ],
+      "cannot_substitute": [
+        "historical_circular",
+        "individual_bank_letter"
+      ]
+    },
+    {
+      "id": "historical_general_rule",
+      "example": "COBAC R-2009/01",
+      "required": [
+        "authenticated_source",
+        "applicability_window"
+      ],
+      "cannot_substitute": [
+        "2026_regime"
+      ]
+    },
+    {
+      "id": "historical_case_correspondence",
+      "example": "LC-COB/44 dated 2009-11-24",
+      "required": [
+        "recipient_identification",
+        "scope",
+        "document_provenance"
+      ],
+      "cannot_substitute": [
+        "current_regulation",
+        "institution_2026_approval"
+      ]
+    },
+    {
+      "id": "corporate_plan_approval",
+      "required": [
+        "tenant",
+        "competent_corporate_body",
+        "signed_resolution",
+        "approval_date",
+        "governance_validity"
+      ],
+      "cannot_substitute": [
+        "COBAC_approval",
+        "paid_up_capital"
+      ]
+    },
+    {
+      "id": "regulator_plan_approval",
+      "required": [
+        "tenant",
+        "regulator_reference",
+        "signed_decision",
+        "conditions",
+        "effective_dates"
+      ],
+      "cannot_substitute": [
+        "bank_internal_approval",
+        "actual_capital_payment"
+      ]
+    },
+    {
+      "id": "financial_capital_evidence",
+      "required": [
+        "bank_and_shareholder_records",
+        "cash_or_non_cash_valuation_evidence",
+        "CFO_approved_PCEC_mapping",
+        "independent_reconciliation"
+      ],
+      "cannot_substitute": [
+        "regulator_plan_approval",
+        "status_change"
+      ]
+    }
+  ],
+  "case_matrix": [
+    {
+      "case": "pre_2026_existing_bank_no_plan_evidence",
+      "outcome": "HOLD_LEGAL_REVIEW",
+      "reason": "unknown applicability and 2026 transition/plan decision"
+    },
+    {
+      "case": "pre_2026_existing_bank_internal_board_plan_only",
+      "outcome": "HOLD_REGULATOR_DECISION",
+      "reason": "corporate approval does not imply COBAC approval"
+    },
+    {
+      "case": "pre_2026_existing_bank_regulator_plan_signed",
+      "outcome": "HOLD_FINANCIAL_VERIFICATION",
+      "reason": "signed approval is not evidence of actual capital or settlement"
+    },
+    {
+      "case": "newly_licensed_after_2026_01_01",
+      "outcome": "VERIFY_ARTICLE_5_PAID_UP_AT_CREATION",
+      "reason": "no automatic Article 6 grandfathering"
+    },
+    {
+      "case": "2027_legacy_threshold_claim",
+      "outcome": "HOLD",
+      "reason": "Article 7 repeal and individual exceptions need verification"
+    }
+  ],
+  "proposed_states": {
+    "corporate_plan": [
+      "DRAFT",
+      "BOARD_REVIEW",
+      "APPROVED_INTERNAL",
+      "REJECTED_INTERNAL",
+      "REVOKED_INTERNAL"
+    ],
+    "regulator_plan": [
+      "NOT_SUBMITTED",
+      "SUBMITTED_UNACKNOWLEDGED",
+      "ACKNOWLEDGED_PENDING",
+      "APPROVED_CONDITIONAL",
+      "APPROVED",
+      "REJECTED",
+      "WITHDRAWN",
+      "REVOKED",
+      "EXPIRED",
+      "UNKNOWN"
+    ],
+    "financial_evidence": [
+      "MISSING",
+      "RECEIVED",
+      "RECONCILIATION_PENDING",
+      "RECONCILED",
+      "DISPUTED"
+    ],
+    "assessment": [
+      "EVIDENCE_INCOMPLETE",
+      "LEGAL_HOLD",
+      "FINANCE_HOLD",
+      "MAKER_CHECKER",
+      "ASSESSABLE",
+      "SUSPENDED"
+    ]
+  },
+  "critical_invariants": [
+    "no_internal_approval_implies_regulatory_approval",
+    "no_regulatory_approval_implies_paid_up_capital",
+    "no_compliance_status_posts_GL",
+    "no_cross_tenant_approval_reuse",
+    "unknown_external_outcome_requires_reconciliation",
+    "immutable_double_entry_posting_only_by_Accounting_Core"
+  ],
+  "source_urls": [
+    "https://www.beac.int/wp-content/uploads/2016/10/LC-044-20091124.pdf",
+    "https://www.finances.gouv.cg/fr/download/file/fid/9490"
+  ]
+}
