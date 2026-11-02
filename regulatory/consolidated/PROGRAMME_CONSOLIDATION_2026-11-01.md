@@ -1,8 +1,10 @@
 # OPES Core Banking — Consolidated programme record
+> **2026-11-02 BD update (verified canonical successor of BC):** The official COBAC 2024 annex was visually inspected across the Article 16 page break (physical/digital in-country availability), Article 41 specific *partial* repeals were mapped, Article 30 incident notification obligations were recorded, and R-2020/01 was added as an unverified secondary amendment lead. The official COBAC 2025 report is discoverable but its body could not be retrieved. See [BD checkpoint](../checkpoints/BD/README.md), [evidence](../checkpoints/BD/EVIDENCE_DELTA.md), and [continuation state](../checkpoints/BD/CONTINUATION_STATE.json). **No implementation, test execution, legal certification, source binary custody or P0 closure.**
+
 **Owner:** OPESWARE TECHNOLOGIES  
 **As-of:** 2026-11-01  
 **Status:** Research/design consolidation; not implementation or certification  
-**Canonical latest remotely inspected checkpoint:** BB (verified continuation through AS–BA; predecessors AO–AR and AN cumulative archive).  
+**Canonical latest remotely inspected checkpoint:** BD (successor BC; historical archive and earlier checkpoints preserved).
 **Current phase:** Phase 4 — Accounting Core / Financial Integrity  
 **Last reported completed work package:** WP-ACC-004 (inherited; not independently reaudited)  
 **Active:** WP-ACC-005 — PCEC Regulatory Accounting Extraction, OPEN / P0 BLOCKED.  
