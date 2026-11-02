@@ -1,0 +1,243 @@
+{
+  "checkpoint": "BV",
+  "predecessor": "BU",
+  "work_package": "WP-ACC-005",
+  "status": "DESIGN_ONLY_P0_OPEN",
+  "legal_execution_authorized": false,
+  "authority_hierarchy": [
+    "authenticated_current_operative_regulation",
+    "authenticated_amendment_and_binding_issuer_clarification",
+    "institution_specific_regulatory_decision",
+    "issuer_hosted_reproduction_or_explanatory_report",
+    "third_party_reproduction",
+    "third_party_ocr"
+  ],
+  "sources": [
+    {
+      "id": "BV-S1",
+      "instrument": "COBAC R-2019/02",
+      "source_url": "https://kalieu-elongo.com/wp-content/uploads/2019/11/reglement_cobac_r-201902_relatif_aux_normes_prudentielles_applicables_aux_etablissements_de_paiement.pdf",
+      "authority": "third_party_pdf_reproduction",
+      "pages_visually_inspected": 6,
+      "issuer_authenticated": false,
+      "current_amendments_verified": false
+    },
+    {
+      "id": "BV-S2",
+      "instrument": "COBAC R-2024/01",
+      "source_url": "https://www.beac.int/wp-content/uploads/2016/10/Rapport-annuel-de-la-COBAC-2024-PDF-14.8-Mo_compressed-1.pdf",
+      "authority": "issuer_hosted_operative_reproduction_in_annual_report",
+      "article_41_effective_date": "2025-01-01",
+      "report_explanatory_dates": [
+        "2026-01-01 credit/payment",
+        "2026-07-01 EMF"
+      ],
+      "date_interpretation": "LEGAL_REVIEW_REQUIRED"
+    },
+    {
+      "id": "BV-S3",
+      "instrument": "BEAC 2019 stability review",
+      "source_url": "https://www.beac.int/wp-content/uploads/2021/04/RSF-AC_19_VF-publish-ok.pdf",
+      "authority": "issuer_explanatory"
+    },
+    {
+      "id": "BV-S4",
+      "instrument": "COBAC R-2019/01",
+      "source_url": "https://www.scribd.com/document/1027603665/Reglement-COBAC-R2019-01-Relatif-a-l-Agrement-Et-Aux-Modifications-de-Situation-Des-Prestataires-de-Services-de-Paiement",
+      "authority": "third_party_ocr_unreliable"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "BV-REQ-01",
+      "owner": "LegalRegulatoryRegistry",
+      "rule": "typed issuer, number, title, instrument date, operative clause, amendment chain, institution class, effective date and transition deadline must be separate fields",
+      "gate": "FAIL_CLOSED"
+    },
+    {
+      "id": "BV-REQ-02",
+      "owner": "RegulatoryPolicyEngine",
+      "rule": "no historical R-2019/02 capital or prudential percentages executable without authenticated current text, institution profile, independent legal and finance approval",
+      "gate": "FAIL_CLOSED"
+    },
+    {
+      "id": "BV-REQ-03",
+      "owner": "Safeguarding",
+      "rule": "customer safeguarding balances segregated from provider funds and bank settlement positions; include distributors and external holding-bank evidence",
+      "gate": "DESIGN"
+    },
+    {
+      "id": "BV-REQ-04",
+      "owner": "Reconciliation",
+      "rule": "independent safeguarding reconciliation and discrepancy cases; preserve historical weekly requirement without asserting current universal frequency",
+      "gate": "DESIGN"
+    },
+    {
+      "id": "BV-REQ-05",
+      "owner": "IncidentManagement",
+      "rule": "versioned incident classification with multiple R-2024/01 Article 30 criteria; never rely solely on 2019 financial threshold",
+      "gate": "DESIGN"
+    },
+    {
+      "id": "BV-REQ-06",
+      "owner": "InstitutionEntitlements",
+      "rule": "credit institution, EMF, payment institution and holding must be distinct; licenses are institution- and product-specific",
+      "gate": "FAIL_CLOSED"
+    },
+    {
+      "id": "BV-REQ-07",
+      "owner": "AccountingCore",
+      "rule": "safeguarding or regulatory classification cannot directly mutate posted journal, customer balance, external settlement or liquidity",
+      "gate": "FAIL_CLOSED"
+    },
+    {
+      "id": "BV-REQ-08",
+      "owner": "SecurityOperations",
+      "rule": "incident notification and subsequent report due dates are separate legal workflow states with tamper-evident custody",
+      "gate": "DESIGN"
+    },
+    {
+      "id": "BV-REQ-09",
+      "owner": "OutsourcingAndAgents",
+      "rule": "contract, role, scope, tenancy, monitoring and termination controls required before distributor operation",
+      "gate": "DESIGN"
+    },
+    {
+      "id": "BV-REQ-10",
+      "owner": "RegulatoryReporting",
+      "rule": "reporting schemas, reporting basis, exemptions and frequency require institution-approved COBAC instructions, not inferred from Art 20",
+      "gate": "FAIL_CLOSED"
+    },
+    {
+      "id": "BV-REQ-11",
+      "owner": "Resilience",
+      "rule": "DR replay cannot duplicate safeguarding movements, postings, external settlement claims or regulatory notifications",
+      "gate": "DESIGN"
+    },
+    {
+      "id": "BV-REQ-12",
+      "owner": "AuditEvidence",
+      "rule": "retain exact conflicting legal wording and signed source hash when obtained; no silent correction of issuer text",
+      "gate": "DESIGN"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "BV-C01",
+      "issue": "R-2019/02 current operative text and amendment lineage unverified",
+      "severity": "P0",
+      "status": "OPEN"
+    },
+    {
+      "id": "BV-C02",
+      "issue": "R-2024/01 explanatory effective dates versus reproduced operative Article 41",
+      "severity": "P0_FOR_DATE_AUTOMATION",
+      "status": "OPEN"
+    },
+    {
+      "id": "BV-C03",
+      "issue": "2019 incident threshold not exhaustive against later 2024 multiple-trigger framework",
+      "severity": "P0_FOR_INCIDENT_POLICY",
+      "status": "OPEN"
+    },
+    {
+      "id": "BV-C04",
+      "issue": "2019/02 safeguarding and reporting cannot be made institution-specific without approval and PCEC",
+      "severity": "P0",
+      "status": "OPEN"
+    }
+  ],
+  "acceptance_scenarios": [
+    {
+      "id": "BV-T01",
+      "expected": "A credit institution is incorrectly subjected to the payment-institution-specific historical capital rule; institution-type gate must reject.",
+      "executed": false
+    },
+    {
+      "id": "BV-T02",
+      "expected": "A historical 2019 minimum-capital figure is activated without authenticated amendment lineage and legal sign-off; reject executable policy.",
+      "executed": false
+    },
+    {
+      "id": "BV-T03",
+      "expected": "Tiered prudential percentages are applied to entire volume instead of marginal tranches; detect using independently calculated boundary fixtures.",
+      "executed": false
+    },
+    {
+      "id": "BV-T04",
+      "expected": "Electronic-money float and payment-volume requirements are substituted for each other; reject mixed basis.",
+      "executed": false
+    },
+    {
+      "id": "BV-T05",
+      "expected": "Article 7 discretionary prudential uplift is applied without an institution-specific COBAC decision; reject.",
+      "executed": false
+    },
+    {
+      "id": "BV-T06",
+      "expected": "Customer safeguarding funds are recorded as the provider's unrestricted operating cash; reject accounting classification and alert.",
+      "executed": false
+    },
+    {
+      "id": "BV-T07",
+      "expected": "Daily outstanding-payment exposure omits distributor receipts; safeguarding completeness check fails.",
+      "executed": false
+    },
+    {
+      "id": "BV-T08",
+      "expected": "Safeguarding bank reconciliation is absent or stale; compliance evidence cannot be marked complete.",
+      "executed": false
+    },
+    {
+      "id": "BV-T09",
+      "expected": "A customer funds safeguarding discrepancy is auto-corrected by directly editing a posted journal; reject and require controlled correction.",
+      "executed": false
+    },
+    {
+      "id": "BV-T10",
+      "expected": "2019 Article 13 monetary-loss criterion is treated as the only 2026 significant-incident trigger; reject scope-incomplete policy.",
+      "executed": false
+    },
+    {
+      "id": "BV-T11",
+      "expected": "An incident affecting a critical function but below monetary thresholds is suppressed; trigger legal-review queue under R-2024/01 Article 30.",
+      "executed": false
+    },
+    {
+      "id": "BV-T12",
+      "expected": "An explanatory report's 2026 transition date is stored as the regulation's 2025 legal effective date; reject conflation.",
+      "executed": false
+    },
+    {
+      "id": "BV-T13",
+      "expected": "R-2019/01 licensing dossier from a secondary OCR source authorizes a payment product without the institution's actual approval; reject.",
+      "executed": false
+    },
+    {
+      "id": "BV-T14",
+      "expected": "An outsourced distributor is given direct posting permissions without contract, scope, maker-checker or per-tenant controls; reject.",
+      "executed": false
+    },
+    {
+      "id": "BV-T15",
+      "expected": "Disaster-recovery replay repeats safeguarding movement or reporting submission; idempotency and reconciliation prevent duplicates.",
+      "executed": false
+    },
+    {
+      "id": "BV-T16",
+      "expected": "R-2019/03 monetary-sanctions citation is misbound as R-2019/02 prudential authority; citation-integrity gate rejects.",
+      "executed": false
+    }
+  ],
+  "financial_invariants": [
+    "immutable_posted_journals",
+    "double_entry",
+    "exact_arithmetic",
+    "idempotent_financial_operations",
+    "independent_reconciliation",
+    "external_unknown_not_final",
+    "no_direct_balance_mutation",
+    "maker_checker"
+  ],
+  "next_exact_task": "WP-ACC-005 — Checkpoint BW: authenticate signed operative R-2019/01–02 and amendment chains; reconcile R-2024/01 Article 41 legal commencement versus report transitional dates; obtain current COBAC incident guidance, institution-approved safeguarding/PCEC/reporting and payment restitution/participation/finality evidence; maintain P0."
+}
