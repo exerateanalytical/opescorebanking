@@ -1,0 +1,28 @@
+{
+  "checkpoint": "BE",
+  "date": "2026-11-02",
+  "previous": "BD",
+  "phase": "Phase 4 — Accounting Core / Financial Integrity",
+  "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+  "active_work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "definition_of_ready": "FAIL",
+  "work_packages_attempted": 1,
+  "work_packages_completed": 0,
+  "work_packages_kept_open": 1,
+  "work_packages_blocked_from_closure": 1,
+  "dependent_packages_attempted": 0,
+  "acceptance_scenarios_specified": 12,
+  "banking_tests_executed": 0,
+  "production_code_written": 0,
+  "regulatory_requests_transmitted": 0,
+  "p0_gaps_closed": 0,
+  "original_pdf_binaries_acquired": 0,
+  "findings": [
+    "BEAC official 2025 COBAC annual report listing and filename/date provenance verified; body unread",
+    "Secondary R-2025/02 social-capital amendment found, distinct from net own funds and risk coverage",
+    "Secondary sources conflict on prior financial institution baseline and 2026 transition floor",
+    "Proposed category/effective-date/approval-aware policy gate; no executable threshold"
+  ],
+  "next_exact_task": "WP-ACC-005 — Checkpoint BF: obtain issuer-authenticated complete COBAC R-2025/02 and official publication/amendment/repeal chain, inspect original 2025 COBAC annual report, obtain signed R-2020/01 R-2021/01 R-2021/02, reconcile institution-specific capital transition and PCEC, and continue 01/25–02/25 legal/court/settlement evidence; maintain P0 hold."
+}
