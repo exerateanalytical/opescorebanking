@@ -1,0 +1,235 @@
+{
+  "checkpoint": "BP",
+  "date": "2026-11-02",
+  "work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "implementation_authorized": false,
+  "source_ids": [
+    "BP-S1",
+    "BP-S2",
+    "BP-S3",
+    "BP-S4",
+    "BP-S5"
+  ],
+  "source_evidence": [
+    {
+      "id": "BP-S1",
+      "authority": "BEAC signed instruction 001/GR/2025 dated 17 November 2025",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Instruction-N%C2%B0001-GR-2025_norme-ISO-20022.pdf",
+      "class": "issuer_hosted_scanned_primary_text",
+      "verified": "Articles 1-7 and annex visually inspected: ISO 20022 IAP, SYGMA/SYSTAC scope, BEAC-specific profiles, migration programme",
+      "limits": "Original PDF bytes/hash not acquired; implementation dates contradictory in annex; no verified live go-live"
+    },
+    {
+      "id": "BP-S2",
+      "authority": "BEAC circular 013/GR/2025 dated 19 November 2025",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Lettre-Circulaire-N%C2%B013-GR-2025_portail-dacc%C3%A8s-MyStandard.pdf",
+      "class": "issuer_hosted_scanned_primary_text",
+      "verified": "CEMAC-BANK closed MyStandards access, 29-message collection, testing facility and 1-month participant request",
+      "limits": "No account access, actual message definitions, approved onboarding or qualification evidence"
+    },
+    {
+      "id": "BP-S3",
+      "authority": "BEAC SYGMA official operational page",
+      "url": "https://www.beac.int/systemes-paiement/systemes-de-reglement-brut/",
+      "class": "issuer_operational_description",
+      "verified": "Central-bank-money individual settlement irrevocable/final if sufficient funds; participation technical prerequisites",
+      "limits": "No bank-specific agreement, message semantics, settlement confirmation contract or real transaction"
+    },
+    {
+      "id": "BP-S4",
+      "authority": "BEAC SYSTAC official operational page",
+      "url": "https://www.beac.int/systemes-paiement/systeme-de-telecompensation/",
+      "class": "issuer_operational_description",
+      "verified": "Net clearing via SYGMA; page describes 13:00-13:30 settlement window",
+      "limits": "No binding current participant SLA, operational calendar or real finality evidence"
+    },
+    {
+      "id": "BP-S5",
+      "authority": "BEAC payments system overview",
+      "url": "https://www.beac.int/systemes-paiement/presentation-generale/",
+      "class": "issuer_operational_description",
+      "verified": "Direct, indirect and subparticipation differentiated; agreements needed",
+      "limits": "Not proof of institution authorization"
+    }
+  ],
+  "binding_or_candidate": "Only issuer-hosted scanned instructions are source text; proposed system design is NOT an approved scheme contract or deployed implementation.",
+  "new_p0": [
+    "ISO 20022 migration annex chronology conflicts with signed Nov 2025 instruction (some rows Feb/Mar/Apr-May 2025, one Jan 2026)",
+    "BEAC proprietary profile and participant-specific agreement/certification unavailable",
+    "External settlement message finality mapping and signed evidence unverified"
+  ],
+  "candidate_domains": [
+    "PaymentInstruction",
+    "RailAdapter",
+    "ExternalSettlementEvidence",
+    "AccountingCore",
+    "IndependentReconciliation",
+    "PrudentialAssessment"
+  ],
+  "candidate_states": {
+    "payment": [
+      "CREATED",
+      "AUTHORIZED",
+      "SUBMITTED",
+      "RAIL_ACKNOWLEDGED",
+      "EXTERNAL_OUTCOME_UNKNOWN",
+      "SETTLEMENT_EVIDENCE_PENDING",
+      "EXTERNALLY_CONFIRMED",
+      "RECONCILIATION_EXCEPTION",
+      "RECONCILED",
+      "REJECTED",
+      "CANCELLATION_REQUESTED",
+      "RETURN_PENDING"
+    ],
+    "note": "State transitions informational; accounting posting is a separate controlled action, never status side-effect."
+  },
+  "candidate_events": [
+    "RailSubmissionRecorded",
+    "RailStatusObserved",
+    "ExternalOutcomeUnknown",
+    "SettlementEvidenceVerified",
+    "RailReturnObserved",
+    "ReconciliationExceptionOpened"
+  ],
+  "proposed_contracts": {
+    "inbound": [
+      "tenant_id",
+      "institution_id",
+      "rail",
+      "participant_id",
+      "external_reference",
+      "message_type",
+      "schema_version",
+      "profile_version",
+      "source_evidence_id",
+      "received_at",
+      "business_date",
+      "payload_digest",
+      "authentication_result"
+    ],
+    "outbound": [
+      "Idempotency-Key",
+      "maker_checker_approval_id",
+      "payment_instruction_id",
+      "participant_rail_profile_id",
+      "external_reference"
+    ],
+    "rule": "No production payload schema, REST endpoint, signature algorithm or finality field is approved until bank/BEAC profile and contracts are obtained."
+  },
+  "invariants": [
+    "A payment status is not money; no direct balance mutation",
+    "An instruction, priority, status inquiry, cancellation request or return message alone does not prove finality",
+    "Only independently authenticated external evidence and institution-approved accounting policy can trigger ledger consequences",
+    "No retry-driven duplicate posting; unknown outcomes persist through restart and DR",
+    "SYSTAC net settlement must not be conflated with individual instruction acceptance",
+    "Prudential zero-weighting independent of settlement and cashflow"
+  ],
+  "negative_test_specs": [
+    {
+      "id": "BP-T01",
+      "input": "pacs.002 accepted/status message arrives without authenticated settlement-account evidence",
+      "expected": "Keep EXTERNAL_OUTCOME_UNCONFIRMED; no settlement assertion or posting solely from status",
+      "executed": false
+    },
+    {
+      "id": "BP-T02",
+      "input": "camt.056 cancellation request sent but no authoritative outcome received",
+      "expected": "Remain CANCELLATION_REQUESTED / OUTCOME_UNKNOWN; no reversal or finality assertion",
+      "executed": false
+    },
+    {
+      "id": "BP-T03",
+      "input": "camt.029 reply has ambiguous/unsupported reason code",
+      "expected": "Do not infer successful cancellation; preserve investigation",
+      "executed": false
+    },
+    {
+      "id": "BP-T04",
+      "input": "pacs.004 return received for previously finalized payment",
+      "expected": "Treat as independently evidenced return flow with new idempotency scope; never mutate original posted journal",
+      "executed": false
+    },
+    {
+      "id": "BP-T05",
+      "input": "pacs.028 inquiry or replayed pacs.002 arrives twice",
+      "expected": "No duplicate posting or repeated outward payment; record duplicate evidence",
+      "executed": false
+    },
+    {
+      "id": "BP-T06",
+      "input": "camt.053 statement missing or does not reconcile to internal settlement ledger",
+      "expected": "Open reconciliation exception; no manufactured external cash",
+      "executed": false
+    },
+    {
+      "id": "BP-T07",
+      "input": "camt.054 credit/debit notification is unauthenticated or wrong participant",
+      "expected": "Quarantine; no authoritative settlement",
+      "executed": false
+    },
+    {
+      "id": "BP-T08",
+      "input": "valid ISO 20022 base XML does not satisfy BEAC community profile/version",
+      "expected": "Reject integration readiness; no live rail submission",
+      "executed": false
+    },
+    {
+      "id": "BP-T09",
+      "input": "unknown outcome during timeout, reconnect or DR replay",
+      "expected": "No blind resend; durable investigation with external reference and authorized resolution",
+      "executed": false
+    },
+    {
+      "id": "BP-T10",
+      "input": "bank has no BEAC-approved direct/indirect participation agreement",
+      "expected": "Reject claim of direct SYGMA connectivity and settlement",
+      "executed": false
+    },
+    {
+      "id": "BP-T11",
+      "input": "annex dates for ISO 20022 migration conflict with chronology",
+      "expected": "Do not infer actual go-live date or compliance from annex; seek BEAC clarification",
+      "executed": false
+    },
+    {
+      "id": "BP-T12",
+      "input": "SYSTAC nominal 13:00–13:30 window missed or net position not settled",
+      "expected": "Remain PENDING/UNKNOWN; never mark all net items final from calendar",
+      "executed": false
+    },
+    {
+      "id": "BP-T13",
+      "input": "prudential 0% sovereign weight selected based on payment rail or coupon notice",
+      "expected": "Reject; prudential instrument eligibility remains separately P0 gated",
+      "executed": false
+    },
+    {
+      "id": "BP-T14",
+      "input": "same operator uploads rail evidence, approves accounting and closes reconciliation",
+      "expected": "Reject segregation-of-duties violation",
+      "executed": false
+    },
+    {
+      "id": "BP-T15",
+      "input": "schema update changes interpretation of historic message",
+      "expected": "Preserve schema/profile version and raw signed evidence; explicit replay under controlled review",
+      "executed": false
+    },
+    {
+      "id": "BP-T16",
+      "input": "participant-specific ISO20022 formats or access are unavailable",
+      "expected": "Do not claim successful interface certification; retain blocked integration state",
+      "executed": false
+    }
+  ],
+  "p0_remaining": [
+    "COBAC 2020/2021 complete operative amendment chain",
+    "D-2025/328 correction and institution-specific prudential eligibility",
+    "approved PCEC mapping",
+    "01/25–02/25 judicial/publication/settlement evidence",
+    "bank-specific rail agreements and BEAC profile/certification",
+    "ISO migration effective deployment clarification"
+  ],
+  "next_exact_task": "WP-ACC-005 — Checkpoint BQ: obtain BEAC written migration timetable clarification and current SYGMA V10/SYSTAC2 production status; obtain bank-authorized CEMAC-BANK MyStandards profile, scheme agreement, settlement finality and signature/evidence contracts; continue authenticated COBAC 2020/2021 amendments, D-2025/328 corrigendum, institution-approved PCEC, and 01/25–02/25 legal/judicial/settlement evidence. Maintain P0 hold."
+}
