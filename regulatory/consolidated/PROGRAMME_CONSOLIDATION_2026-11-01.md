@@ -1,10 +1,12 @@
 # OPES Core Banking — Consolidated programme record
+> **2026-11-02 BE update (verified successor of BD):** BEAC official publication catalogue and server directory identify the COBAC 2025 annual report (18 MB, directory timestamp 2026-10-22), but its **body remains unread** due browser timeout/container DNS. Secondary partial reproduction of COBAC R-2025/02 suggests new minimum **social capital** and category-specific 2026–2029 transition, separate from regulatory own funds and risk coverage; secondary accounts conflict on financial-institution baseline/first stage. **No executable capital rule, signed source, approval, tests, code or P0 closure.** See [BE checkpoint](../checkpoints/BE/README.md), [evidence](../checkpoints/BE/EVIDENCE_DELTA.md), [proposed policy authority design](../checkpoints/BE/CAPITAL_POLICY_AUTHORITY_DESIGN.md), and [continuation](../checkpoints/BE/CONTINUATION_STATE.json). Canonical next checkpoint BF.
+
 > **2026-11-02 BD update (verified canonical successor of BC):** The official COBAC 2024 annex was visually inspected across the Article 16 page break (physical/digital in-country availability), Article 41 specific *partial* repeals were mapped, Article 30 incident notification obligations were recorded, and R-2020/01 was added as an unverified secondary amendment lead. The official COBAC 2025 report is discoverable but its body could not be retrieved. See [BD checkpoint](../checkpoints/BD/README.md), [evidence](../checkpoints/BD/EVIDENCE_DELTA.md), and [continuation state](../checkpoints/BD/CONTINUATION_STATE.json). **No implementation, test execution, legal certification, source binary custody or P0 closure.**
 
 **Owner:** OPESWARE TECHNOLOGIES  
 **As-of:** 2026-11-01  
 **Status:** Research/design consolidation; not implementation or certification  
-**Canonical latest remotely inspected checkpoint:** BD (successor BC; historical archive and earlier checkpoints preserved).
+**Canonical latest remotely inspected checkpoint:** BE (successor BC; historical archive and earlier checkpoints preserved).
 **Current phase:** Phase 4 — Accounting Core / Financial Integrity  
 **Last reported completed work package:** WP-ACC-004 (inherited; not independently reaudited)  
 **Active:** WP-ACC-005 — PCEC Regulatory Accounting Extraction, OPEN / P0 BLOCKED.  
