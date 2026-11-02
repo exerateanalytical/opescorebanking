@@ -1,0 +1,109 @@
+{
+  "checkpoint": "BK",
+  "as_of": "2026-11-02",
+  "work_package": "WP-ACC-005",
+  "status": "RESEARCH_ONLY_FAIL_CLOSED",
+  "lineage": {
+    "previous": "BJ",
+    "source": "remote GitHub BJ/CONTINUATION_STATE.json",
+    "last_completed_work_package": "WP-ACC-004 inherited, not independently reaudited"
+  },
+  "instruments": [
+    {
+      "id": "COBAC-R-2020-01",
+      "subject": "Amends R-2010/02 division of large exposures",
+      "source_url": "https://www.kalieu-elongo.com/wp-content/uploads/2021/02/reglement_cobac_r-2020_01-dovision-des-risques.pdf",
+      "source_grade": "issuer-formatted third-party-hosted reproduction",
+      "article_7": "COBAC discretionary reduction of certain quotities for listed enterprises; annual list; beneficiary bank must have COBAC-satisfactory financial situation",
+      "authenticated_issuer_original": false,
+      "sha256_verified": false
+    },
+    {
+      "id": "COBAC-R-2020-02",
+      "subject": "Procedure for appointment/remuneration of provisional administrators and liquidators",
+      "source_url": "https://kalieu-elongo.com/wp-content/uploads/2020/09/Re%CC%80glement-COBAC-R-2020-02-nomination-administrateurs-provisoires-et-liquidateurs.pdf",
+      "source_grade": "issuer-formatted third-party-hosted reproduction",
+      "article_7": "Liquidator selection procedure, unrelated to exposure relief",
+      "authenticated_issuer_original": false,
+      "sha256_verified": false
+    },
+    {
+      "id": "COBAC-D-2025-328",
+      "subject": "2026 annual prominent/nationally important enterprises list",
+      "source_url": "https://www.finances.gouv.cg/fr/download/file/fid/9493",
+      "source_grade": "government-hosted indexed PDF text",
+      "recital_regulation": "COBAC-R-2020-01",
+      "article_2_regulation": "COBAC-R-2020-02",
+      "recital_eligible_count": 37,
+      "article_1_enumerated_count": 36,
+      "per_country": {
+        "Cameroon": 11,
+        "Congo": 6,
+        "Gabon": 10,
+        "Equatorial Guinea": 2,
+        "Chad": 7
+      },
+      "signed_body_date": "2025-12-12",
+      "catalogue_date": "2025-12-02",
+      "issuer_correction_verified": false,
+      "original_binary_sha256_verified": false
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "BK-C01",
+      "severity": "P0_CANDIDATE",
+      "reason": "Operative citation to a real but different-topic R-2020/02",
+      "gate": "ISSUER_CROSS_REFERENCE_CORRECTION_REQUIRED"
+    },
+    {
+      "id": "BK-C02",
+      "severity": "P0_CANDIDATE",
+      "reason": "Bank-side satisfactory financial situation must be established by COBAC; no bank-specific evidence",
+      "gate": "BANK_ELIGIBILITY_AUTHORITY_REQUIRED"
+    },
+    {
+      "id": "BK-C03",
+      "severity": "P0_CANDIDATE",
+      "reason": "37 recital vs 36 enumerated; secondary 36 not a legal correction",
+      "gate": "ROSTER_CORRECTION_REQUIRED"
+    },
+    {
+      "id": "BK-C04",
+      "severity": "P0_CANDIDATE",
+      "reason": "Quotity reduction scope/formula and subsequent amendments not certified",
+      "gate": "EXPOSURE_FORMULA_AND_SCOPE_APPROVAL_REQUIRED"
+    },
+    {
+      "id": "BK-C05",
+      "severity": "P1_CANDIDATE",
+      "reason": "Catalogue date precedes decision date",
+      "gate": "PUBLICATION_NOTIFICATION_CHAIN_REQUIRED"
+    }
+  ],
+  "proposed_policy_gates": [
+    "SOURCE_AUTHENTICATED",
+    "AMENDMENT_CHAIN_CURRENT",
+    "LEGAL_CITATION_RECONCILED",
+    "ROSTER_COMPLETE",
+    "COUNTERPARTY_LEGAL_IDENTITY_VERIFIED",
+    "INSTITUTION_COBAC_ELIGIBILITY_CONFIRMED",
+    "EXPOSURE_SCOPE_AND_FORMULA_APPROVED",
+    "EFFECTIVE_DATES_VERIFIED",
+    "CFO_AND_LEGAL_MAKER_CHECKER_APPROVED",
+    "RECONCILIATION_AND_AUDIT_PROVENANCE_READY"
+  ],
+  "fail_closed_states": [
+    "UNVERIFIED",
+    "CONFLICTED",
+    "AWAITING_ISSUER_CORRECTION",
+    "AWAITING_BANK_ELIGIBILITY",
+    "AWAITING_LEGAL_APPROVAL",
+    "REVOKED",
+    "EXPIRED"
+  ],
+  "policy_activation_authorized": false,
+  "banking_code_written": 0,
+  "banking_tests_executed": 0,
+  "p0_gaps_closed": 0
+}
