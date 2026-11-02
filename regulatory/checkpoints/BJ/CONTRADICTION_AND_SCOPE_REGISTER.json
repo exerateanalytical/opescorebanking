@@ -1,0 +1,85 @@
+{
+  "checkpoint": "BJ",
+  "as_of": "2026-11-02",
+  "work_package": "WP-ACC-005",
+  "decision": "COBAC D-2025/328",
+  "status": "RESEARCH_ONLY_NO_EXECUTABLE_POLICY",
+  "source_url": "https://www.finances.gouv.cg/fr/download/file/fid/9493",
+  "source_custody": {
+    "web_text_read": true,
+    "pdf_screenshot_verified": false,
+    "original_pdf_bytes": false,
+    "sha256_verified": false,
+    "signature_verified": false,
+    "notification_verified": false
+  },
+  "document": {
+    "signed_body_date": "2025-12-12",
+    "government_catalogue_date": "2025-12-02",
+    "year_scoped": "2026",
+    "recital_submissions": 53,
+    "recital_eligible": 37,
+    "article_1_enumerated_counts": {
+      "Cameroon": 11,
+      "Congo": 6,
+      "Gabon": 10,
+      "Equatorial Guinea": 2,
+      "Chad": 7
+    },
+    "article_1_total": 36,
+    "recital_instrument": "COBAC R-2020/01",
+    "article_2_instrument": "COBAC R-2020/02"
+  },
+  "contradictions": [
+    {
+      "id": "BJ-C01",
+      "severity": "P0_CANDIDATE",
+      "issue": "37 claimed eligible vs 36 enumerated",
+      "required": "Issuer-confirmed corrected decision/complete list; no invented 37th legal entity",
+      "control": "ROSTER_MEMBERSHIP_HOLD"
+    },
+    {
+      "id": "BJ-C02",
+      "severity": "P0_CANDIDATE",
+      "issue": "Article 2 R-2020/02 vs recital R-2020/01",
+      "required": "Issuer-confirmed instrument and legal effect; authenticated operative text",
+      "control": "REGULATORY_REFERENCE_HOLD"
+    },
+    {
+      "id": "BJ-C03",
+      "severity": "P1_CANDIDATE",
+      "issue": "Government catalogue Dec 2 vs signed body Dec 12",
+      "required": "Certified decision date, notification/publication and effective interval",
+      "control": "TEMPORAL_AUTHORITY_HOLD"
+    },
+    {
+      "id": "BJ-C04",
+      "severity": "P1_CANDIDATE",
+      "issue": "COBAC 2024 report describes complaints under R-2020/01 while risk division text uses same number",
+      "required": "Obtain issuer-signed complaints regulation R-2020/06 and correct cross-reference provenance",
+      "control": "CROSS_DOMAIN_CITATION_HOLD"
+    }
+  ],
+  "rule_semantics": {
+    "proposed_reduction": "one quarter of applicable risk quotities",
+    "not_equivalent_to": [
+      "25% blanket sovereign risk weight",
+      "automatic change to ledger",
+      "automatic institution entitlement",
+      "automatic change to exposure principal"
+    ],
+    "validity": "2026 year only as labelled; dates require authority proof",
+    "decision_status": "NOT_APPROVED"
+  },
+  "outstanding": [
+    "issuer signed complete source",
+    "36 vs 37 correction",
+    "R-2020/01 vs R-2020/02 correction",
+    "legal entity identity resolution",
+    "institution-specific eligible exposures",
+    "current amendment chain",
+    "CFO/legal approval",
+    "PCEC mapping",
+    "01/25–02/25 source/judicial/settlement evidence"
+  ]
+}
