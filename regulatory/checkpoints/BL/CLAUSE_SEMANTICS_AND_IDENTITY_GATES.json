@@ -1,0 +1,101 @@
+{
+  "checkpoint": "BL",
+  "date": "2026-11-02",
+  "predecessor": "BK",
+  "work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "policy_activation_authorized": false,
+  "sources": [
+    {
+      "id": "D-2025/328",
+      "url": "https://www.finances.gouv.cg/fr/download/file/fid/9493",
+      "host": "Republic of Congo Ministry of Finance (government)",
+      "medium": "indexed PDF text",
+      "inspection": "browser indexed text, lines 0-93; screenshot HTTP 403",
+      "original_binary_sha256_verified": false,
+      "findings": [
+        "Recital says 53 submitted, 37 eligible; per-country counts 11+6+10+2+7=36; operative Article 1 enumerates 36",
+        "Recital cites R-2020/01, operative Article 2 cites R-2020/02",
+        "Recital describes reducing quotities 'au quart (25%)', operative Article 2 'réduction du quart'",
+        "Congo recital names Société Commune de Logistique (SCLOG), operative list names Société Commune de Logistique (SLOG)",
+        "Article 2 grants one year but does not itself state an exact starting day; title identifies exercise 2026",
+        "Catalogue date 2025-12-02 precedes signed-body date 2025-12-12"
+      ]
+    },
+    {
+      "id": "R-2020/01",
+      "url": "https://www.kalieu-elongo.com/wp-content/uploads/2021/02/reglement_cobac_r-2020_01-dovision-des-risques.pdf",
+      "host": "third-party legal archive; issuer-formatted scan, NOT issuer-authenticated",
+      "medium": "5-page scanned PDF; page 2 and 4 visually inspected",
+      "inspection": "web screenshot pages index 1 and 3",
+      "original_binary_sha256_verified": false,
+      "findings": [
+        "Article 1 historical phased single-beneficiary limit: 45% until 2020-12-31, 40% from 2021-01-01, 35% from 2022-01-01, 25% from 2023-01-01; later amendments/current validity not verified",
+        "Article 1 historical aggregate large-risk limit 800% of net own funds, with large-risk threshold 10% from 2023-01-01; later amendments not verified",
+        "Article 7 (new) uses 'réduire ... du quart (25%)' and conditions beneficiary institutions on financial situation satisfactory to COBAC",
+        "Article 2 (new) points to R-2016/03 net own funds, requiring effective-dated prudential dependency"
+      ]
+    }
+  ],
+  "open_conflicts": [
+    {
+      "id": "BL-C01",
+      "priority": "P0",
+      "description": "R-2020/01 Article 7 'du quart' vs D-2025/328 recital 'au quart' create by-25%-vs-to-25% ambiguity; no executable formula",
+      "required": "issuer written interpretation, current amendment and calculation examples"
+    },
+    {
+      "id": "BL-C02",
+      "priority": "P0",
+      "description": "37 recital vs 36 per-country and operative rows",
+      "required": "issuer corrigendum or certified final roster"
+    },
+    {
+      "id": "BL-C03",
+      "priority": "P0",
+      "description": "R-2020/01 recital vs R-2020/02 operative reference",
+      "required": "issuer corrigendum"
+    },
+    {
+      "id": "BL-C04",
+      "priority": "P0",
+      "description": "SCLOG recital vs SLOG operative list for Congo",
+      "required": "verified legal identity and issuer clarification; no fuzzy auto-approval"
+    },
+    {
+      "id": "BL-C05",
+      "priority": "P0",
+      "description": "Institution financial-condition gate and exposure scope cannot be inferred from counterparty roster",
+      "required": "COBAC-supported institution eligibility evidence, applicability and legal review"
+    },
+    {
+      "id": "BL-C06",
+      "priority": "P1",
+      "description": "Catalogue date predates decision; one-year duration without explicit Article 2 start date",
+      "required": "notification/publication and effective-date evidence"
+    },
+    {
+      "id": "BL-C07",
+      "priority": "P0",
+      "description": "2020 historical limits and R-2016/03 own funds may be amended later",
+      "required": "authenticated current consolidated amendment chain and bank-approved methodology"
+    }
+  ],
+  "negative_tests_specified": 12,
+  "negative_tests_executed": 0,
+  "source_download_attempt": {
+    "url": "https://www.finances.gouv.cg/fr/download/file/fid/9493",
+    "method": "container HTTPS requests",
+    "result": "DNS name resolution failure; no PDF bytes",
+    "screenshot": "HTTP 403",
+    "hash": null
+  },
+  "outstanding": [
+    "issuer-authenticated R-2020/01 and R-2020/02",
+    "signed D-2025/328 corrigendum and publication chain",
+    "bank-specific regulatory financial-situation evidence",
+    "current exposure/own-funds rules and approved methodology",
+    "institution-approved PCEC mapping",
+    "01/25–02/25 full legal/judicial/settlement evidence"
+  ]
+}
