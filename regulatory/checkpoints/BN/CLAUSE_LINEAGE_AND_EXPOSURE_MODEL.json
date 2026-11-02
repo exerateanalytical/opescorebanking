@@ -1,0 +1,169 @@
+{
+  "checkpoint": "BN",
+  "date": "2026-11-02",
+  "work_package": "WP-ACC-005",
+  "status": "PROPOSED_NOT_APPROVED",
+  "source_urls": {
+    "base": "https://www.beac.int/wp-content/uploads/2016/10/Reglement-_COBAC-_R_2010_02_divrisq.pdf",
+    "beac": "https://www.beac.int/supervision-bancaire/reglements-de-cobac/",
+    "rsf": "https://www.beac.int/wp-content/uploads/2022/08/RSF_AC_2021.pdf",
+    "decision": "https://www.finances.gouv.cg/fr/download/file/fid/9493",
+    "catalog": "https://www.finances.gouv.cg/fr/d%C3%A9cision-cobac-d-2025328-arr%C3%AAtant-la-liste-des-entreprises-de-grand-standing-et-dimportance"
+  },
+  "clauses": [
+    {
+      "instrument": "R-2010/02",
+      "clause": "1",
+      "subject": "historical exposure concentration, accounting basis",
+      "source": "BEAC original scan printed pp.1-2",
+      "status": "HISTORICAL_SUPERSEDED_OR_AMENDED",
+      "gate": "current ratios and scope require amendment chain"
+    },
+    {
+      "instrument": "R-2010/02",
+      "clause": "2",
+      "subject": "net own funds cross-reference",
+      "source": "BEAC original scan printed p.2",
+      "status": "HISTORICAL",
+      "gate": "current R-2016/03 and amendments needed"
+    },
+    {
+      "instrument": "R-2010/02",
+      "clause": "3",
+      "subject": "linked beneficiary/group presumptions and COBAC exception",
+      "source": "BEAC original scan printed p.3",
+      "status": "HISTORICAL_UNCONSOLIDATED",
+      "gate": "legal entity graph and supervisory exception proof"
+    },
+    {
+      "instrument": "R-2010/02",
+      "clause": "4",
+      "subject": "exposure families and conditional guarantees/deductions",
+      "source": "BEAC original scan printed pp.3-4",
+      "status": "HISTORICAL_UNCONSOLIDATED",
+      "gate": "no automatic collateral substitution"
+    },
+    {
+      "instrument": "R-2010/02",
+      "clause": "5",
+      "subject": "historical weights and BEAC classification adjustment",
+      "source": "BEAC original scan printed pp.4-5",
+      "status": "HISTORICAL_UNCONSOLIDATED",
+      "gate": "not current executable weights"
+    },
+    {
+      "instrument": "R-2010/02",
+      "clause": "7",
+      "subject": "original half reduction, annual roster, bank eligibility",
+      "source": "BEAC original scan printed p.7",
+      "status": "SUPERSEDED_BY_R-2020/01",
+      "gate": "never use half rate as current"
+    },
+    {
+      "instrument": "R-2010/02",
+      "clause": "8",
+      "subject": "centralized connected exposures and sector monitoring",
+      "source": "BEAC original scan printed p.7",
+      "status": "HISTORICAL_UNCONSOLIDATED",
+      "gate": "control requirement candidate"
+    },
+    {
+      "instrument": "R-2010/02",
+      "clause": "9",
+      "subject": "periodic reporting under instruction",
+      "source": "BEAC original scan printed p.7",
+      "status": "HISTORICAL_UNCONSOLIDATED",
+      "gate": "instruction and schema missing"
+    },
+    {
+      "instrument": "R-2010/02",
+      "clause": "11",
+      "subject": "temporary regulator-authorized derogation",
+      "source": "BEAC original scan printed p.8",
+      "status": "HISTORICAL_UNCONSOLIDATED",
+      "gate": "bank-specific document mandatory"
+    },
+    {
+      "instrument": "R-2010/02",
+      "clause": "final page",
+      "subject": "duplicate printed Article 9/10 after Article 11",
+      "source": "BEAC original scan printed p.8",
+      "status": "DOCUMENT_NUMBERING_ANOMALY",
+      "gate": "do not silently renumber"
+    },
+    {
+      "instrument": "R-2020/01",
+      "clause": "7 amended",
+      "subject": "exceptional 25% wording, bank financial condition",
+      "source": "third-party reproduction; D-2025/328 recital",
+      "status": "UNAUTHENTICATED_AMENDMENT",
+      "gate": "by/to semantic conflict"
+    },
+    {
+      "instrument": "R-2021/02",
+      "clause": "amendment unspecified",
+      "subject": "conditional sovereign-security zero weighting",
+      "source": "BEAC 2021 Financial Stability Review printed p.38",
+      "status": "OFFICIAL_SUMMARY_NOT_OPERATIVE_TEXT",
+      "gate": "original clauses and eligibility evidence missing"
+    },
+    {
+      "instrument": "D-2025/328",
+      "clause": "1-2",
+      "subject": "2026 roster and disputed quotity reduction",
+      "source": "Congo government-hosted extracted body",
+      "status": "CONFLICTED_UNCORRECTED",
+      "gate": "36/37; SCLOG/SLOG; R-2020/01 vs /02; dates"
+    }
+  ],
+  "model_proposal": {
+    "entities": [
+      "LegalEntity(id,registry_id,tenant_id)",
+      "BeneficiaryGroupVersion(id,as_of,known_at,members,evidence)",
+      "ControlRelationship(evidence,valid_from,valid_to)",
+      "RegulatorSeparationDecision(document,scope,effective_dates)",
+      "ExposureComponent(kind,amount,currency,ledger_or_offbalance_ref,as_of)",
+      "SecurityGuaranteeEvidence(issuer,amount,coverage,expiry,approval)",
+      "PrudentialAssessment(tenant_id,as_of,known_at,basis,method_version,status)",
+      "RegulatoryRuleVersion(clause,issuer_provenance,approval,effective_dates)"
+    ],
+    "gates": [
+      "ISSUER_AUTHENTICATED",
+      "CURRENT_AMENDMENTS_RECONCILED",
+      "LEGAL_ENTITY_AND_GROUP_VERIFIED",
+      "DEDUCTION_RULE_APPROVED",
+      "BANK_ELIGIBILITY_VERIFIED",
+      "BASIS_AND_DENOMINATOR_APPROVED",
+      "DUAL_AUTHORIZATION",
+      "NO_FINANCIAL_POSTING_SIDE_EFFECT"
+    ],
+    "statuses": [
+      "OBSERVED",
+      "AWAITING_SOURCE",
+      "CONFLICTED",
+      "LEGAL_REVIEW",
+      "AWAITING_BANK_EVIDENCE",
+      "READY_FOR_DUAL_REVIEW",
+      "APPROVED_FOR_PRUDENTIAL_ASSESSMENT",
+      "SUSPENDED",
+      "REVOKED"
+    ],
+    "default": "NO_COMPLIANCE_DETERMINATION"
+  },
+  "unresolved": [
+    "issuer-authenticated R-2020/01",
+    "issuer-authenticated R-2021/02",
+    "all subsequent amendments",
+    "D-2025/328 corrigendum",
+    "bank-specific COBAC financial condition",
+    "PCEC mapping",
+    "01/25–02/25 legal and settlement proof"
+  ],
+  "prohibitions": [
+    "do not use 2010 half reduction as current",
+    "do not infer sovereign 0% automatically",
+    "do not choose 0.75 vs 0.25",
+    "do not merge SCLOG/SLOG",
+    "do not post to GL from prudential status"
+  ]
+}
