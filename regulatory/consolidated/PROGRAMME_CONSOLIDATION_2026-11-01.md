@@ -1,3 +1,5 @@
+> **2026-11-02 BF update (verified successor of BE):** Republic of Congo Ministry of Finance hosts the complete eight-article COBAC R-2025/02 PDF text (10 December 2025): Articles 2–3 minimum social capital 25bn/4bn FCFA; Articles 4–7 effective date, new-vs-existing institution distinction, conditional approved transition milestones and R-2009/01 transitional repeal. Government-hosted readable text is **not** original-binary/signature/Official Bulletin/amendment authentication. No executable capital thresholds, accounting entries, production code, banking tests, legal certification or P0 closure. BEAC-hosted COBAC 2024 report also corroborates R-2020/01 complaints-management obligation. See [BF checkpoint](../checkpoints/BF/README.md), [evidence](../checkpoints/BF/EVIDENCE_DELTA.md), [rule matrix](../checkpoints/BF/REGULATORY_CAPITAL_RULES.json) and [continuation](../checkpoints/BF/CONTINUATION_STATE.json). Canonical next checkpoint BG.
+
 # OPES Core Banking — Consolidated programme record
 > **2026-11-02 BE update (verified successor of BD):** BEAC official publication catalogue and server directory identify the COBAC 2025 annual report (18 MB, directory timestamp 2026-10-22), but its **body remains unread** due browser timeout/container DNS. Secondary partial reproduction of COBAC R-2025/02 suggests new minimum **social capital** and category-specific 2026–2029 transition, separate from regulatory own funds and risk coverage; secondary accounts conflict on financial-institution baseline/first stage. **No executable capital rule, signed source, approval, tests, code or P0 closure.** See [BE checkpoint](../checkpoints/BE/README.md), [evidence](../checkpoints/BE/EVIDENCE_DELTA.md), [proposed policy authority design](../checkpoints/BE/CAPITAL_POLICY_AUTHORITY_DESIGN.md), and [continuation](../checkpoints/BE/CONTINUATION_STATE.json). Canonical next checkpoint BF.
 
@@ -6,7 +8,7 @@
 **Owner:** OPESWARE TECHNOLOGIES  
 **As-of:** 2026-11-01  
 **Status:** Research/design consolidation; not implementation or certification  
-**Canonical latest remotely inspected checkpoint:** BE (successor BC; historical archive and earlier checkpoints preserved).
+**Canonical latest remotely inspected checkpoint:** BF (successor BE; historical archive and earlier checkpoints preserved).
 **Current phase:** Phase 4 — Accounting Core / Financial Integrity  
 **Last reported completed work package:** WP-ACC-004 (inherited; not independently reaudited)  
 **Active:** WP-ACC-005 — PCEC Regulatory Accounting Extraction, OPEN / P0 BLOCKED.  
