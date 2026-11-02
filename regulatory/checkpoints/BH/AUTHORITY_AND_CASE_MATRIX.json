@@ -1,0 +1,138 @@
+{
+  "checkpoint": "BH",
+  "date": "2026-11-02",
+  "status": "NON_EXECUTABLE_LEGAL_REVIEW",
+  "sources": [
+    {
+      "id": "BH-SRC-001",
+      "instrument": "COBAC R-2025/02",
+      "url": "https://www.finances.gouv.cg/fr/download/file/fid/9490",
+      "official_host": true,
+      "full_web_text_read": true,
+      "original_bytes_acquired": false,
+      "sha256": null,
+      "publication_issue": null,
+      "amendment_chain_certified": false
+    },
+    {
+      "id": "BH-SRC-002",
+      "instrument": "COBAC R-2009/01",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Re%CC%80glement-COBAC-R-200901-portant-fixation-du-capital-social-minimum-des-e%CC%81tablissements-de-cre%CC%81dit.pdf",
+      "official_host": true,
+      "web_text_read": true,
+      "original_bytes_acquired": false,
+      "sha256": null,
+      "publication_issue": null
+    },
+    {
+      "id": "BH-SRC-003",
+      "instrument": "COBAC 2025 annual report",
+      "url": "https://www.beac.int/supervision-bancaire/publications/",
+      "listed": true,
+      "body_read": false
+    }
+  ],
+  "legal_decision_questions": [
+    {
+      "id": "BH-LQ-01",
+      "articles": [
+        "R-2025/02 Art.4",
+        "R-2025/02 Art.6",
+        "R-2025/02 Art.7"
+      ],
+      "question": "Precise applicability of one-year transition, old regulation continuation and approved-plan milestones to pre-2026 institutions at 2026-12-31.",
+      "required_decision": "Signed regulator clarification or institution counsel opinion based on authenticated operative texts",
+      "state": "OPEN_P0"
+    },
+    {
+      "id": "BH-LQ-02",
+      "articles": [
+        "R-2025/02 Art.6"
+      ],
+      "question": "Whether merely filed, pending, late, refused, conditional, amended or revoked plans affect transition eligibility.",
+      "required_decision": "Regulator-signed individual plan disposition and scope; legal opinion",
+      "state": "OPEN_P0"
+    },
+    {
+      "id": "BH-LQ-03",
+      "articles": [
+        "R-2025/02 Art.5",
+        "R-2025/02 Art.6"
+      ],
+      "question": "Evidence of paid-up capital for new institutions versus social capital for existing institutions, and treatment of subscriptions not settled.",
+      "required_decision": "Bank-approved capital accounting policy and independently reconciled paid-up evidence",
+      "state": "OPEN_P0"
+    },
+    {
+      "id": "BH-LQ-04",
+      "articles": [
+        "R-2025/02 Art.8"
+      ],
+      "question": "Publication, notification, amendment history and effective-dated policy activation.",
+      "required_decision": "Authenticated publication reference and issuer-signed source",
+      "state": "OPEN_P0"
+    }
+  ],
+  "case_classes": [
+    {
+      "id": "BH-C01",
+      "condition": "Licensed after 2026-01-01",
+      "result": "NO_EXECUTABLE_DECISION",
+      "review": "New institution capital social libéré under Art.5, evidence and authority required"
+    },
+    {
+      "id": "BH-C02",
+      "condition": "Operating before 2026-01-01, full new minimum evidenced",
+      "result": "NO_EXECUTABLE_DECISION",
+      "review": "Validate capital quality, source, approvals, amendments"
+    },
+    {
+      "id": "BH-C03",
+      "condition": "Operating before 2026-01-01, plan submitted before 2026-06-30 but approval missing",
+      "result": "HOLD_INDETERMINATE",
+      "review": "Submission not equivalent to approval"
+    },
+    {
+      "id": "BH-C04",
+      "condition": "Operating before 2026-01-01, signed plan approval evidenced",
+      "result": "HOLD_LEGAL_AND_ACCOUNTING",
+      "review": "Check institution scope, effective date, conditions, actual capital and milestones"
+    },
+    {
+      "id": "BH-C05",
+      "condition": "Operating before 2026-01-01, plan submitted after 2026-06-30",
+      "result": "HOLD_ESCALATE",
+      "review": "No automatic extension or legal violation determination"
+    },
+    {
+      "id": "BH-C06",
+      "condition": "2026-12-31 capital meets old 10bn but not 14bn bank milestone",
+      "result": "HOLD_ARTICLES_6_7_CONFLICT",
+      "review": "No automatic pass or fail"
+    },
+    {
+      "id": "BH-C07",
+      "condition": "2027-01-01 prior threshold carried forward",
+      "result": "REJECT_STALE_POLICY",
+      "review": "Article 7 repeal and approved plan must be reconciled"
+    },
+    {
+      "id": "BH-C08",
+      "condition": "Cross-institution plan approval or unverified funds",
+      "result": "REJECT",
+      "review": "Tenant isolation and reconciliation"
+    }
+  ],
+  "authority_gate": [
+    "source bytes and hash",
+    "publication and amendments",
+    "signed legal interpretation",
+    "institution profile",
+    "regulator approval when applicable",
+    "CFO PCEC mapping",
+    "independent capital evidence and reconciliation",
+    "maker-checker policy promotion"
+  ],
+  "automatic_posting_allowed": false,
+  "compliance_certification_allowed": false
+}
