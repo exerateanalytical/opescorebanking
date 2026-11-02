@@ -1,0 +1,194 @@
+{
+  "checkpoint": "CA",
+  "date": "2026-11-03",
+  "work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "mode": "DESIGN_ONLY_NOT_EXECUTABLE",
+  "preceding_checkpoint": "BZ",
+  "source_authorities": [
+    {
+      "id": "BEAC-001-GR-2025",
+      "type": "issuer_hosted_signed_text_visual",
+      "signed_date": "2025-11-17",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Instruction-N%C2%B0001-GR-2025_norme-ISO-20022.pdf",
+      "clauses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "annex"
+      ],
+      "binary_sha256": null,
+      "amendment_chain_verified": false
+    },
+    {
+      "id": "BEAC-LC-013-GR-2025",
+      "type": "issuer_hosted_signed_text_visual",
+      "signed_date": "2025-11-19",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Lettre-Circulaire-N%C2%B013-GR-2025_portail-dacc%C3%A8s-MyStandard.pdf",
+      "clauses": [
+        "1",
+        "2",
+        "3",
+        "MT-MX annex"
+      ],
+      "binary_sha256": null,
+      "amendment_chain_verified": false
+    }
+  ],
+  "unresolved_conflicts": [
+    {
+      "id": "CA-P0-01",
+      "description": "2025 instruction annex contains Jan–May 2025 schedule entries despite 17 November 2025 signature",
+      "action": "issuer corrected timeline and independent go-live proof",
+      "severity": "P0"
+    },
+    {
+      "id": "CA-P0-02",
+      "description": "2014 surveillance instruction signature May vs issuer reports March; charter 2013 vs 2014",
+      "action": "official correction/Bulletin Officiel",
+      "severity": "P0"
+    },
+    {
+      "id": "CA-P0-03",
+      "description": "2014 CRSP reporting forms and periodicity and 001/GR/2024 operative text unavailable",
+      "action": "issuer authenticated originals and amendment chain",
+      "severity": "P0"
+    }
+  ],
+  "policy_dimensions": [
+    "legal_instrument_full_id",
+    "legal_effective_from",
+    "legal_effective_to",
+    "institution_license_type",
+    "institution_id",
+    "rail",
+    "message_family",
+    "message_version",
+    "beac_profile_id",
+    "profile_version",
+    "profile_hash",
+    "participation_mode",
+    "participant_contract_id",
+    "environment",
+    "approval_evidence_id",
+    "conformance_receipt_id",
+    "external_settlement_evidence_id",
+    "operator",
+    "approver"
+  ],
+  "gate_states": [
+    "UNVERIFIED",
+    "ISSUER_RULE_AUTHENTICATED",
+    "INSTITUTION_ENTITLEMENT_CONFIRMED",
+    "PROFILE_VERSION_ACQUIRED",
+    "PROFILE_CONFORMANCE_VERIFIED",
+    "BANK_AND_ISSUER_APPROVED",
+    "PRODUCTION_ENABLED",
+    "SUSPENDED"
+  ],
+  "rules": [
+    {
+      "id": "CA-G01",
+      "predicate": "current signed instruction and amendment provenance validated",
+      "fail": "BLOCK_POLICY_ACTIVATION"
+    },
+    {
+      "id": "CA-G02",
+      "predicate": "institution has signed rail agreement and authorization",
+      "fail": "BLOCK_RAIL_CONNECTIVITY"
+    },
+    {
+      "id": "CA-G03",
+      "predicate": "profile version, collection, schema, code lists, signatures and transport contract issuer-approved",
+      "fail": "BLOCK_MESSAGE_TRANSMISSION"
+    },
+    {
+      "id": "CA-G04",
+      "predicate": "CEMAC-BANK access approved for institution, with least-privilege credentials",
+      "fail": "BLOCK_PROFILE_RETRIEVAL_AND_TEST"
+    },
+    {
+      "id": "CA-G05",
+      "predicate": "test result tied to exact profile hash, bank, rail and environment",
+      "fail": "BLOCK_PRODUCTION_ENABLEMENT"
+    },
+    {
+      "id": "CA-G06",
+      "predicate": "corrected issuer schedule and current live-service confirmation",
+      "fail": "BLOCK_GO_LIVE_ASSUMPTION"
+    },
+    {
+      "id": "CA-G07",
+      "predicate": "pacs.002 or camt.054 not treated as settlement finality without authenticated scheme/statement evidence",
+      "fail": "BLOCK_FINALITY_RECOGNITION"
+    },
+    {
+      "id": "CA-G08",
+      "predicate": "pacs.004 return uses independent maker-checker, idempotency, immutable journal and reconciliation",
+      "fail": "BLOCK_FINANCIAL_RETURN"
+    },
+    {
+      "id": "CA-G09",
+      "predicate": "external unknown outcome retained and investigated; no blind replay",
+      "fail": "BLOCK_RETRY"
+    },
+    {
+      "id": "CA-G10",
+      "predicate": "CBPR+, SYGMA and SYSTAC2 profiles never substituted across rails",
+      "fail": "BLOCK_CROSS_PROFILE"
+    },
+    {
+      "id": "CA-G11",
+      "predicate": "CRSP and COBAC notifications evaluated independently with confirmed channels",
+      "fail": "BLOCK_COMPLIANCE_CLAIM"
+    },
+    {
+      "id": "CA-G12",
+      "predicate": "approved PCEC accounting mapping, financial event invariant and settlement proof",
+      "fail": "BLOCK_LEDGER_IMPLEMENTATION"
+    }
+  ],
+  "message_families": {
+    "ADMI": [
+      "admi.002",
+      "admi.004"
+    ],
+    "PACS": [
+      "pacs.002",
+      "pacs.004",
+      "pacs.008",
+      "pacs.009",
+      "pacs.010",
+      "pacs.028"
+    ],
+    "CAMT": [
+      "camt.007",
+      "camt.009",
+      "camt.010",
+      "camt.011",
+      "camt.018",
+      "camt.019",
+      "camt.025",
+      "camt.029",
+      "camt.033",
+      "camt.034",
+      "camt.046",
+      "camt.047",
+      "camt.048",
+      "camt.050",
+      "camt.051",
+      "camt.052",
+      "camt.053",
+      "camt.054",
+      "camt.056",
+      "camt.060",
+      "camt.998"
+    ]
+  },
+  "not_implemented": true,
+  "not_certified": true
+}
