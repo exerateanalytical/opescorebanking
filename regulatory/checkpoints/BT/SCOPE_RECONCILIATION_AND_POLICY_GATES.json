@@ -1,0 +1,151 @@
+{
+  "checkpoint": "BT",
+  "date": "2026-11-02",
+  "work_package": "WP-ACC-005",
+  "status": "DESIGN_ONLY_OPEN_P0",
+  "predecessor": "BS",
+  "predecessor_commit": "58bb54e1cc96c4fea502d96b6fd18e2e5ba24be6",
+  "evidence": [
+    {
+      "id": "BT-S1",
+      "issuer": "BEAC",
+      "kind": "official explanatory report",
+      "period": "2024",
+      "url": "https://www.beac.int/wp-content/uploads/2019/02/RSF-AC-2024-15-Decembre2025-V01.pdf",
+      "location": "Encadré 3 printed p34",
+      "source_binary_sha256": null,
+      "proves": "BEAC explicitly distinguishes broad PSP eligibility (credit institutions, EMFs, EPs) from EP-only exclusive-service condition",
+      "does_not_prove": "Circular 004/2023 bank-specific applicability or 2026 legal amendment status"
+    },
+    {
+      "id": "BT-S2",
+      "issuer": "BEAC",
+      "kind": "official payment services report",
+      "period": "2024",
+      "url": "https://www.beac.int/wp-content/uploads/2026/04/RAPPORT-SUR-LES-SERVICES-DE-PAIEMENT-DANS-LA-CEMAC-2024-.pdf",
+      "source_binary_sha256": null,
+      "proves": "sector context and bank/EMF PSP activities; reimbursement of erroneous transfers discussed",
+      "does_not_prove": "binding legal interpretation or named bank authorization"
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "BS-C01",
+      "status": "NARROWED_NOT_CLOSED",
+      "explanatory_conclusion": "broad PSP includes credit institutions, EMFs and payment institutions; exclusive payment-service limitation describes payment institutions",
+      "unresolved": "whether and how 2023 circular applies to a specific bank/product/rail and customer contract",
+      "activation": "DISABLED"
+    },
+    {
+      "id": "BS-C02",
+      "status": "OPEN",
+      "unresolved": "Section I mobile erroneous transfer versus Section IV instant/merchant mobile-or-not; precise scope and timers",
+      "activation": "DISABLED"
+    },
+    {
+      "id": "BS-C03",
+      "status": "OPEN",
+      "unresolved": "actor-specific exceptions under 2018 Article 1; central-bank settlement leg not same as underlying customer payment"
+    },
+    {
+      "id": "BS-C04",
+      "status": "OPEN",
+      "unresolved": "payment-institution-only restrictions not applicable to banks by category alone"
+    }
+  ],
+  "legal_authority_levels": [
+    {
+      "level": "BINDING_OPERATIVE",
+      "examples": [
+        "authenticated effective regulation",
+        "applicable signed instruction or circular"
+      ],
+      "required": "clause text, effective/superseded status, issuer, applicability"
+    },
+    {
+      "level": "ISSUER_EXPLANATORY",
+      "examples": [
+        "BEAC stability review",
+        "BEAC payments report"
+      ],
+      "required": "citation and limitation; cannot override operative law"
+    },
+    {
+      "level": "INSTITUTION_SPECIFIC",
+      "examples": [
+        "license",
+        "approved product",
+        "signed participation convention",
+        "signed legal opinion",
+        "customer terms"
+      ],
+      "required": "authenticated issuer/contractor, dates, approvers"
+    },
+    {
+      "level": "SECONDARY",
+      "examples": [
+        "vendor news",
+        "commentary"
+      ],
+      "required": "corroboration only"
+    }
+  ],
+  "candidate_decision_fields": [
+    "tenant_id",
+    "institution_legal_id",
+    "institution_category",
+    "license_evidence_id",
+    "payment_service_id",
+    "product_id",
+    "channel",
+    "rail_id",
+    "transaction_type",
+    "merchant_or_p2p",
+    "payer_and_beneficiary_jurisdictions",
+    "contract_version",
+    "operative_instrument_version",
+    "applicability_clause_refs",
+    "legal_opinion_id",
+    "maker_id",
+    "checker_id",
+    "effective_at",
+    "known_at",
+    "source_digest",
+    "decision_status"
+  ],
+  "default_decision": "LEGAL_SCOPE_UNRESOLVED_NO_AUTOMATIC_FINANCIAL_ACTION",
+  "workflow": [
+    "CASE_RECEIVED",
+    "EVIDENCE_INCOMPLETE",
+    "LEGAL_SCOPE_UNRESOLVED",
+    "LEGAL_SCOPE_APPROVED",
+    "HOLD_ELIGIBILITY_REVIEW",
+    "HOLD_AUTHORIZED",
+    "RECIPIENT_NOTIFIED",
+    "CONSENT_OR_CONTESTATION_REVIEW",
+    "RETURN_AUTHORIZED",
+    "RETURN_SUBMITTED",
+    "EXTERNAL_OUTCOME_UNKNOWN",
+    "RETURN_CONFIRMED",
+    "INDEPENDENTLY_RECONCILED",
+    "CLOSED"
+  ],
+  "exception_states": [
+    "LEGAL_SCOPE_REJECTED",
+    "RECIPIENT_CONTESTED",
+    "JUDICIAL_HOLD",
+    "AML_FRAUD_HOLD",
+    "INSUFFICIENT_AVAILABLE_FUNDS",
+    "EXTERNAL_REJECTED",
+    "MANUAL_REVIEW"
+  ],
+  "financial_invariants": [
+    "scope approval never posts or mutates balances",
+    "original posted journals immutable",
+    "return is a distinct authorized idempotent financial operation",
+    "no settlement finality inferred from message ACK or case status",
+    "unknown external outcome must survive replay/DR",
+    "independent reconciliation before case closure"
+  ],
+  "next_exact_task": "WP-ACC-005 — Checkpoint BU: authenticate current 2018/2019/2023 amendment chain and obtain BEAC/COBAC legal scope opinion plus bank/product-specific agreements; continue COBAC/PCEC/01-25/02-25 P0."
+}
