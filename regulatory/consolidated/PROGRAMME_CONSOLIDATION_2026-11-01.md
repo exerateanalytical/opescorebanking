@@ -121,3 +121,17 @@ This consolidated narrative previously ended at BC; **the intervening BD, BE, BF
 BI files: `regulatory/checkpoints/BI/{README.md,EVIDENCE_DELTA.md,AUTHORITY_MODEL.json,CONTROL_AND_TEST_DESIGN.md,QUALITY_REVIEW.md,CONTINUATION_STATE.json,EXECUTION_REPORT.md}`. Fourteen **unexecuted** negative acceptance scenarios specified. WP-ACC-005 remains OPEN/P0 BLOCKED; DoR FAIL; zero production banking code, executed banking tests, regulator requests or P0 closures. No automatic compliance or posting.
 
 **Single current NEXT EXACT TASK:** `WP-ACC-005 — Checkpoint BJ`: authenticate issuer original/publication/hash for R-2009/01 and R-2025/02, obtain signed Article 4/6/7 legal interpretation and institution-specific COBAC/corporate approvals, inspect readable COBAC 2025 report and full R-2021/01–02, and obtain bank-approved PCEC/capital and outstanding 01/25–02/25 legal/judicial/settlement evidence. Preserve all P0 holds.
+
+
+## 2026-11-02 — Checkpoint BM (latest; supersedes historical NEXT EXACT TASK headings)
+The verified GitHub `main` predecessor was BL (`3936073bffc1e629c5fef97347a40f449bb33b5e`). This continuation adds a historical-comparator and reporting-basis evidence package, without reclassifying any third-party reproduction as official operative law.
+
+- Official Republic of Congo Ministry of Finance catalogue for D-2025/328 is discoverable, but fresh body retrieval failed (HTTP 403; container DNS failure). The 2026 decision's original PDF bytes, SHA-256 and issuer correction remain absent.
+- A **secondary** reproduction of predecessor D-2024/418 for exercise 2025 explicitly states one-year validity **from 1 January 2025** and enumerates 40 enterprises (11+8+14+3+4). This cannot establish D-2025/328's 2026 effective date or authorize carry-forward of 2025 eligibility.
+- A **third-party** transcription of R-2020/01 Article 1 references social/combined/consolidated accounting bases. The current legally approved exposure numerator, denominator, group aggregation, basis and amended limits remain unresolved.
+- Prepared but **did not transmit** an issuer/legal-counsel clarification docket; specified **10 unexecuted** negative acceptance scenarios for annual roster isolation, reporting-basis mixing, unknown approval, restatement and no GL mutation.
+- All BL P0 holds remain: by-25% vs to-25% semantics, 37 vs 36, R-2020/01 vs R-2020/02, SCLOG vs SLOG, institution eligibility and current amendments. PCEC mapping and 01/25–02/25 court/publication/settlement evidence remain missing.
+
+**WP-ACC-005 OPEN/P0 BLOCKED; DoR FAIL; 0 production banking code, 0 executed banking tests, 0 regulator requests, 0 P0 closures.** Detailed evidence and report: `regulatory/checkpoints/BM/`.
+
+**Single current NEXT EXACT TASK:** `WP-ACC-005 — Checkpoint BN`: acquire issuer-authenticated D-2025/328 original and corrigendum resolving percentage, count, reference, identity and 2026 dates; verify R-2010/02/R-2020/01 current amendment and exposure reporting-basis methodology and bank-specific eligibility; continue approved PCEC and 01/25–02/25 legal/judicial/settlement evidence. Preserve all P0 holds.
