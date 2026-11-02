@@ -22,6 +22,8 @@
   "publication_chain_verified": false,
   "report_2025_body_inspected": false,
   "new_acceptance_scenarios_specified": 12,
-  "remote_delivery": "PENDING_VERIFICATION",
-  "next_exact_task": "WP-ACC-005 — Checkpoint BH: authenticate and hash original R-2009/01 and R-2025/02 PDFs and publication chains; obtain written COBAC/institution-counsel interpretation of R-2025/02 Articles 4/6/7 overlap and 2026 plan-approval effect; inspect COBAC 2025 report and R-2021/01–02 originals; obtain bank-approved PCEC/capital accounting and outstanding 01/25–02/25 court/settlement evidence. Preserve P0 hold."
+  "remote_delivery": "VERIFIED_GITHUB_MAIN",
+  "next_exact_task": "WP-ACC-005 — Checkpoint BH: authenticate and hash original R-2009/01 and R-2025/02 PDFs and publication chains; obtain written COBAC/institution-counsel interpretation of R-2025/02 Articles 4/6/7 overlap and 2026 plan-approval effect; inspect COBAC 2025 report and R-2021/01–02 originals; obtain bank-approved PCEC/capital accounting and outstanding 01/25–02/25 court/settlement evidence. Preserve P0 hold.",
+  "checkpoint_files_verified": 7,
+  "checkpoint_last_file_commit": "bd2e495bdf4327758e68fc925742b692ccbbac58"
 }
