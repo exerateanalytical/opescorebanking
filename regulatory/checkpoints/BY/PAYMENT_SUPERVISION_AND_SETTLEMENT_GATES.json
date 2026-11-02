@@ -1,0 +1,270 @@
+{
+  "checkpoint": "BY",
+  "status": "PROPOSED_NOT_IMPLEMENTED",
+  "active_work_package": "WP-ACC-005",
+  "regulatory_policy_activation": "FAIL_CLOSED",
+  "source_authority": "HISTORICAL_ISSUER_HOSTED_CHARTER_AND_EXPLANATORY_REPORTS",
+  "controls": [
+    {
+      "id": "BY-C01",
+      "name": "Institution-specific charter adoption",
+      "gate": "Require signed participant charter and participation agreement; unknown means no rail entitlement",
+      "source": "BEAC charter Art 3",
+      "severity": "P0",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C02",
+      "name": "BEAC initiated debit detection",
+      "gate": "Treat a verified central-bank debit as an external financial fact requiring controlled Accounting Core posting and independent reconciliation; never simulate debit",
+      "source": "BEAC charter Art 56",
+      "severity": "P0",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C03",
+      "name": "Restitution/finality separation",
+      "gate": "Maintain original settlement immutable; any return or forced debit is a distinct externally evidenced movement",
+      "source": "BEAC charter Art 56; 2023 circular applicability pending",
+      "severity": "P0",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C04",
+      "name": "Dual-supervisor incident routing",
+      "gate": "Classify BEAC payment-system incidents separately from COBAC ICT incidents; distinct evidence, deadlines, receipts and obligations",
+      "source": "BEAC RSF 2024 p41; COBAC R-2024/01 Art 30 pending",
+      "severity": "P0",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C05",
+      "name": "SANGHA authority",
+      "gate": "Reporting adapter disabled without issuer-approved access, schemas, credentials and institution role",
+      "source": "BEAC RSF 2024 p41",
+      "severity": "P0",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C06",
+      "name": "Change notification",
+      "gate": "Material participant platform change triggers evidence-backed BEAC notification and controlled release workflow",
+      "source": "2014 charter Art 36, current applicability pending",
+      "severity": "P1",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C07",
+      "name": "Admin segregation",
+      "gate": "Technical and functional administrators distinct; enforced server-side, cross-tenant scoped",
+      "source": "2014 charter Art 38",
+      "severity": "P0",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C08",
+      "name": "Daily rail data processing",
+      "gate": "Daily reconciliation must identify missing/excess/duplicate/unmatched external movements",
+      "source": "2014 charter Art 42",
+      "severity": "P0",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C09",
+      "name": "Historical routing quarantine",
+      "gate": "2014 threshold/exception cannot activate modern routing without current rules and agreement",
+      "source": "2014 charter Art 43",
+      "severity": "P0",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C10",
+      "name": "Retention ownership",
+      "gate": "Separate BEAC archival undertaking from bank-specific retention obligations; no automatic ten-year bank-wide retention",
+      "source": "2014 charter Art 22",
+      "severity": "P1",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C11",
+      "name": "Signed instruction quarantine",
+      "gate": "001/GR/2024 cannot generate exact authentication/PIN requirements until operative text and amendments authenticated",
+      "source": "BEAC payment report",
+      "severity": "P0",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C12",
+      "name": "Liquidity and operational continuity",
+      "gate": "Prove participant continuity, operational cash forecasting, intraday liquidity and failover without fabricated BEAC credit",
+      "source": "2014 charter Arts 34,46,48",
+      "severity": "P0",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C13",
+      "name": "Legal provenance conflict",
+      "gate": "Track 2013/2014 preamble mismatch; do not use a guessed surveillance-instruction identity",
+      "source": "2014 charter preamble vs Art 1",
+      "severity": "P1",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    },
+    {
+      "id": "BY-C14",
+      "name": "GIMAC dispute authority",
+      "gate": "Do not claim GIMAC DISPUTES onboarding or access from public launch report",
+      "source": "BEAC RSF 2024 p41",
+      "severity": "P1",
+      "approval": "PENDING_AUTHENTICATION_AND_INSTITUTION_REVIEW"
+    }
+  ],
+  "proposed_models": {
+    "PaymentRailParticipation": {
+      "keys": [
+        "institution_id",
+        "rail_id",
+        "participation_mode",
+        "charter_version",
+        "charter_signed_evidence_id",
+        "agreement_id",
+        "valid_from",
+        "valid_to",
+        "authority_status"
+      ],
+      "rule": "no assumed eligibility"
+    },
+    "ExternalSettlementMovement": {
+      "keys": [
+        "movement_id",
+        "institution_id",
+        "settlement_account_ref",
+        "rail_id",
+        "issuer_statement_ref",
+        "external_effective_at",
+        "value_date",
+        "amount_minor",
+        "currency",
+        "movement_kind",
+        "verified_evidence_id",
+        "reconciliation_status"
+      ],
+      "rule": "never create a settlement fact from local status changes"
+    },
+    "RestitutionCase": {
+      "states": [
+        "RECEIVED",
+        "SCOPE_REVIEW",
+        "EVIDENCE_PENDING",
+        "CONTESTED",
+        "EXTERNAL_ACTION_PENDING",
+        "EXTERNAL_DEBIT_CONFIRMED",
+        "ACCOUNTING_POSTING_PENDING",
+        "RECONCILED",
+        "CLOSED",
+        "REJECTED"
+      ],
+      "rule": "external debit not inferred from request or notice; duplicate posting prohibited"
+    },
+    "SupervisorIncidentCase": {
+      "keys": [
+        "incident_id",
+        "institution_id",
+        "system_id",
+        "category",
+        "beac_reporting_applicability",
+        "cobac_reporting_applicability",
+        "evidence_set_id",
+        "notification_records",
+        "receipt_ids",
+        "status"
+      ],
+      "rule": "two separate reporting obligations may coexist; never infer delivery from local enqueue"
+    },
+    "ReportingReceipt": {
+      "states": [
+        "DRAFT",
+        "AUTHORIZED",
+        "SENT_UNCONFIRMED",
+        "ACKNOWLEDGED",
+        "REJECTED",
+        "UNKNOWN_OUTCOME",
+        "CLOSED"
+      ],
+      "rule": "unknown outcome must remain unresolved pending issuer receipt"
+    },
+    "LegalInstrumentVersion": {
+      "keys": [
+        "issuer",
+        "instrument_id",
+        "article",
+        "effective_from",
+        "transition_until",
+        "amendment_chain",
+        "source_url",
+        "original_sha256",
+        "authenticated",
+        "institution_scope",
+        "approved_by"
+      ],
+      "rule": "no auto activation from explanatory report"
+    }
+  },
+  "api_contract_proposals": [
+    {
+      "operation": "RegisterExternalSettlementEvidence",
+      "idempotency_key": "institution+rail+statement+movement",
+      "preconditions": [
+        "issuer evidence verified",
+        "segregated approval"
+      ],
+      "effect": "persist evidence only, no posting"
+    },
+    {
+      "operation": "PostRecognizedExternalMovement",
+      "idempotency_key": "institution+external_movement_id+posting_kind",
+      "preconditions": [
+        "Accounting Core approved PCEC mapping",
+        "external evidence",
+        "double-entry balanced journal",
+        "not previously posted"
+      ],
+      "effect": "new immutable journal"
+    },
+    {
+      "operation": "RecordSupervisorNotificationReceipt",
+      "idempotency_key": "institution+incident+supervisor+receipt",
+      "preconditions": [
+        "authorized role",
+        "receipt provenance"
+      ],
+      "effect": "audit record only"
+    },
+    {
+      "operation": "ChangePaymentRailEntitlement",
+      "idempotency_key": "institution+rail+agreement+version",
+      "preconditions": [
+        "signed agreement",
+        "maker-checker",
+        "effective date"
+      ],
+      "effect": "entitlement state only"
+    }
+  ],
+  "event_contract_proposals": [
+    "ExternalSettlementEvidenceRecorded.v1",
+    "ExternalSettlementDebitVerified.v1",
+    "ReconciliationExceptionOpened.v1",
+    "SupervisorNotificationAcknowledged.v1",
+    "RailParticipationChanged.v1"
+  ],
+  "cross_cutting_invariants": [
+    "posted_journals_immutable",
+    "debits_equal_credits_per_currency",
+    "no_direct_balance_mutation",
+    "no_automatic_settlement_finality_from_message_acceptance",
+    "no_duplicate_post_on_replay",
+    "no_cross_tenant_evidence_use",
+    "external_outcome_unknown_is_not_success",
+    "no_unverified_regulatory_deadline_or_threshold"
+  ]
+}
