@@ -1,0 +1,79 @@
+{
+  "checkpoint": "BE",
+  "status": "SPECIFIED_NOT_EXECUTED",
+  "tests_executed": 0,
+  "scenarios": [
+    {
+      "id": "BE-01",
+      "given": "secondary source only for R-2025/02",
+      "when": "capital minimum policy requested",
+      "then": "UNKNOWN_AUTHORITY; no executable threshold"
+    },
+    {
+      "id": "BE-02",
+      "given": "bank and financial institution categories",
+      "when": "policy selection",
+      "then": "category-scoped clauses; never share thresholds"
+    },
+    {
+      "id": "BE-03",
+      "given": "incumbent before 2026 versus newly licensed bank",
+      "when": "policy evaluation",
+      "then": "separate temporal eligibility; no inferred grandfathering"
+    },
+    {
+      "id": "BE-04",
+      "given": "unverified transitional plan submission",
+      "when": "compliance evaluation",
+      "then": "submission not treated as approval"
+    },
+    {
+      "id": "BE-05",
+      "given": "secondary sources disagree on 2026 financial-institution floor",
+      "when": "clause import",
+      "then": "CONFLICT; fail closed"
+    },
+    {
+      "id": "BE-06",
+      "given": "COBAC R-2025/02 and CEMAC 02/25 both mentioned",
+      "when": "document routing",
+      "then": "distinct issuer/instrument IDs and domains"
+    },
+    {
+      "id": "BE-07",
+      "given": "R-2009/01 delayed repeal alleged",
+      "when": "historical and future assessment dates",
+      "then": "effective-dated precedence not global replacement"
+    },
+    {
+      "id": "BE-08",
+      "given": "capital social is above alleged floor but net own funds inadequate",
+      "when": "risk coverage evaluation",
+      "then": "no false prudential compliance"
+    },
+    {
+      "id": "BE-09",
+      "given": "capital increase approved corporately but no funds settled",
+      "when": "accounting event",
+      "then": "no status-driven GL posting"
+    },
+    {
+      "id": "BE-10",
+      "given": "official annual report directory entry without readable body",
+      "when": "evidence promotion",
+      "then": "publication existence only; no report content claims"
+    },
+    {
+      "id": "BE-11",
+      "given": "missing official publication or issuer signature",
+      "when": "rule activation",
+      "then": "activation rejected and audit evidence retained"
+    },
+    {
+      "id": "BE-12",
+      "given": "a court filing without certified disposition",
+      "when": "legal effect evaluated",
+      "then": "no automatic suspension"
+    }
+  ]
+}
