@@ -1,0 +1,7 @@
+# BG — Execution report (2026-11-02)
+Predecessor BF continuation state and design fetched from GitHub; BG absent before this run. One work package (WP-ACC-005) continued. **Attempted 1; completed 0; kept open 1; blocked 1; dependent packages 0.**
+New official evidence: original issuer-hosted scanned R-2009/01, pages 1–2, confirming bank XAF 10bn, financial establishment XAF 2bn, 2009–2014 historic transition. Cross-checked against government-hosted R-2025/02 Articles 4–7. Identified specific temporal/legal collision requiring written interpretation, not a claimed contradiction or automatic supersession of the transition. Secondary 1bn baseline is contradicted by original 2009 text.
+Official COBAC 2025 annual report link inspected; browser fetch failed on 19,385,240-byte PDF. Original PDF binary acquisition failed with DNS resolution; no SHA-256 or signature claim.
+Updated non-executable authority/decision matrix and 12 additional specified acceptance scenarios; multidisciplinary review completed; P0 unresolved.
+**Banking tests 0; production code 0; regulatory requests sent 0; P0 closures 0; DoR FAIL.**
+**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint BH: authenticate and hash original R-2009/01 and R-2025/02 PDFs and publication chains; obtain written COBAC/institution-counsel interpretation of R-2025/02 Articles 4/6/7 overlap and 2026 plan-approval effect; inspect COBAC 2025 report and R-2021/01–02 originals; obtain bank-approved PCEC/capital accounting and outstanding 01/25–02/25 court/settlement evidence. Preserve P0 hold.
