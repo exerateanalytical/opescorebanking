@@ -1,0 +1,129 @@
+{
+  "checkpoint": "BG",
+  "status": "DESIGN_ONLY_LEGAL_REVIEW_REQUIRED",
+  "date": "2026-11-02",
+  "source_ids": [
+    {
+      "id": "BG-SRC-001",
+      "instrument": "COBAC R-2009/01",
+      "issuer": "COBAC",
+      "host": "BEAC",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/rgtcobacR_2009_01.pdf",
+      "pages_inspected": 2,
+      "original_bytes_hashed": false,
+      "publication_verified": false,
+      "notes": "Article 1 bank XAF 10bn; Article 2 financial establishment XAF 2bn; historic 2009–2014 transition."
+    },
+    {
+      "id": "BG-SRC-002",
+      "instrument": "COBAC R-2025/02",
+      "issuer": "COBAC",
+      "host": "Republic of Congo Ministry of Finance",
+      "url": "https://www.finances.gouv.cg/fr/download/file/fid/9490",
+      "articles_inspected": "1-8",
+      "original_bytes_hashed": false,
+      "publication_verified": false,
+      "notes": "Articles 4–7 overlap for existing institutions; legal interpretation unresolved."
+    }
+  ],
+  "unresolved_legal_questions": [
+    "Does Article 7 continued force of R-2009/01 for preexisting institutions in 2026 coexist with, qualify or otherwise interact with Article 6 staged threshold and general transition? Require written interpretation.",
+    "Does a submitted but not approved capital-raising plan confer any interim regulatory relief? No automatic relief assumed.",
+    "What if a bank submitted a plan after 2026-06-30, or approval arrived after 2026-12-31? Require regulator-specific decision.",
+    "What are effects of changes to institution category, merger, licence, head office or regulatory direction?",
+    "Which publication record and subsequent amendments govern each effective-dated decision?"
+  ],
+  "proposed_inputs": [
+    "institution_id",
+    "jurisdiction",
+    "headquarters_country",
+    "institution_category",
+    "licence_date",
+    "operating_before_2026_01_01",
+    "as_of_date",
+    "registered_share_capital",
+    "paid_up_share_capital",
+    "corporate_approval_evidence",
+    "capital_plan_submission_timestamp",
+    "capital_plan_acknowledgement",
+    "capital_plan_regulator_approval_id",
+    "capital_plan_approval_effective_from",
+    "capital_plan_approval_expiry",
+    "plan_institution_id",
+    "capital_increase_proof",
+    "source_of_funds_aml_review",
+    "settlement_reconciliation_proof",
+    "rule_version",
+    "publication_reference",
+    "legal_interpretation_approval"
+  ],
+  "decision_rows": [
+    {
+      "id": "BG-D01",
+      "scenario": "New bank licensed on or after 2026-01-01",
+      "threshold_reference": "R-2025/02 Article 2 + Article 5",
+      "action": "Require evidence of fully paid-up 25bn at creation, but policy remains non-executable pending publication and amendments",
+      "status": "HOLD"
+    },
+    {
+      "id": "BG-D02",
+      "scenario": "New financial establishment licensed on or after 2026-01-01",
+      "threshold_reference": "R-2025/02 Article 3 + Article 5",
+      "action": "Require evidence of fully paid-up 4bn at creation, subject to same authority gate",
+      "status": "HOLD"
+    },
+    {
+      "id": "BG-D03",
+      "scenario": "Existing institution as of 2026-06-30 with no capital plan",
+      "threshold_reference": "R-2025/02 Articles 4, 6, 7",
+      "action": "Do not infer unconditional compliance from old minimum; legal applicability decision required",
+      "status": "LEGAL_REVIEW"
+    },
+    {
+      "id": "BG-D04",
+      "scenario": "Existing institution with plan merely submitted before 2026-06-30",
+      "threshold_reference": "R-2025/02 Article 6",
+      "action": "Submission does not equal regulatory approval; staged compliance not automatically conferred",
+      "status": "INDETERMINATE"
+    },
+    {
+      "id": "BG-D05",
+      "scenario": "Existing institution with verified regulator-approved plan",
+      "threshold_reference": "R-2025/02 Article 6",
+      "action": "Evaluate only after signed applicability, approval scope and effective date verified; milestones are proposals until policy activation",
+      "status": "HOLD"
+    },
+    {
+      "id": "BG-D06",
+      "scenario": "Existing institution at 2026-12-31 with 10bn bank capital but below 14bn",
+      "threshold_reference": "R-2025/02 Articles 6 and 7",
+      "action": "Do not auto-pass on continued old regulation or auto-fail without legal decision on plan status and Article interaction",
+      "status": "LEGAL_REVIEW"
+    },
+    {
+      "id": "BG-D07",
+      "scenario": "Existing institution at 2027-01-01",
+      "threshold_reference": "R-2025/02 Article 7",
+      "action": "Do not silently carry forward repealed old threshold; require approved applicable transition and publication chain",
+      "status": "HOLD"
+    },
+    {
+      "id": "BG-D08",
+      "scenario": "Unsettled shareholder capital subscription",
+      "threshold_reference": "Capital accounting and proof",
+      "action": "Never count unsettled claims as paid-up; no synthetic journal",
+      "status": "EVIDENCE_REQUIRED"
+    },
+    {
+      "id": "BG-D09",
+      "scenario": "Plan approved for different tenant",
+      "threshold_reference": "Institution-specific approval",
+      "action": "Reject cross-tenant approval; preserve audit and maker-checker",
+      "status": "REJECT"
+    }
+  ],
+  "state_machine": "SOURCE_FOUND -> TEXT_READ -> PUBLICATION_PROVEN -> AMENDMENTS_RECONCILED -> LEGAL_INTERPRETATION_APPROVED -> INSTITUTION_PROFILE_APPROVED -> FINANCE_MAPPING_APPROVED -> POLICY_APPROVED -> ACTIVE; conflict or unknown -> HOLD",
+  "ledger_effect": "NONE; regulatory evaluation cannot create, alter, or reverse a posted journal",
+  "authorization": "No UI-only approval; dual legal and finance review, SoD, tamper-resistant audit, regulator decision evidence",
+  "implementation_authorized": false
+}
