@@ -1,0 +1,13 @@
+# BR — WP-ACC-005: payment restitution, participant and settlement evidence
+Date: 2026-11-02. Phase 4 Accounting Core / Financial Integrity. Predecessor: BQ, verified remote main c90073df9b79c92ad01b89e1ad83ddff5946ba9f. WP-ACC-005 remains OPEN / P0 BLOCKED. Last completed WP-ACC-004 is inherited and not reaudited.
+
+## Evidence advance
+1. Visually examined all 3 scanned pages of BEAC issuer-hosted Lettre Circulaire N°004/DGE/DSMP/2023, signed 24 November 2023. It addresses requests to restore **erroneous transfers by PSPs**, particularly mobile/instant services; includes beneficiary-error grounds, timing, temporary immobilization, consent/dispute, judicial route, contract updates and a 31 March 2024 implementation deadline. **Do not extend its provisions automatically to every SYSTAC2, SYGMA or bank rail.** Supersession, institutional applicability and contractual incorporation are unverified.
+2. Issuer-hosted BEAC SYGMA informational page describes irrevocable central-bank-money settlement conditioned on sufficient settlement-account funds, and lists historical SWIFT/private-line/RMA onboarding prerequisites. It does **not** establish SYGMA V10 go-live or current participant configuration.
+3. ProgressSoft (the platform vendor), dated 24 August 2026, reports a simultaneous migration of 71 SYSTAC2 participants (59+ banks, six national treasuries, six BEAC national directorates), ASP deployment, central/participant clearing, cheque clearing and dispute management. Vendor evidence is operational corroboration, **not BEAC conformance certification or bank-specific authorization**. It says instant payment infrastructure is forthcoming, not live as of its date.
+4. Searches through 2 November 2026 found no later issuer-authenticated SYGMA V10 production or SYSTAC2 instant module activation notice. Absence of a located notice is **UNKNOWN**, not evidence of non-deployment. Do not infer dates.
+
+## Safety conclusion
+The 2023 PSP restitution mechanism is a **new, distinct legal/workflow evidence stream**. An irrevocable settled transfer is not rewritten; a restitution request is handled as a controlled freeze/consent/return/judicial workflow with separate accounting authorization and exact available funds. A five-minute availability or 24/48-hour nonresponse rule is not automatically a SYSTAC2 scheme SLA. No production code, executable test or P0 closure.
+
+See EVIDENCE_DELTA.md, RESTITUTION_AND_FINALITY_GATES.json, CONTROL_AND_TEST_DESIGN.md, QUALITY_REVIEW.md and CONTINUATION_STATE.json. Single continuation: BS.

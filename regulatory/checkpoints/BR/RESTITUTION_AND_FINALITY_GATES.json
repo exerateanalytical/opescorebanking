@@ -1,0 +1,141 @@
+{
+  "checkpoint": "BR",
+  "date": "2026-11-02",
+  "work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "implementation_authorized": false,
+  "source_register": [
+    {
+      "id": "BR-S1",
+      "issuer": "BEAC",
+      "instrument": "Lettre Circulaire N°004/DGE/DSMP/2023",
+      "signed": "2023-11-24",
+      "url": "https://www.beac.int/wp-content/uploads/2023/12/Lettre-circulaire-N%C2%B0-004-DGE-DSMP-2023.pdf",
+      "evidence_level": "issuer_hosted_scan_visually_inspected_3_pages",
+      "sha256": null,
+      "current_applicability": "UNVERIFIED"
+    },
+    {
+      "id": "BR-S2",
+      "issuer": "BEAC",
+      "instrument": "SYGMA public information page",
+      "url": "https://www.beac.int/systemes-paiement/systemes-de-reglement-brut/",
+      "evidence_level": "issuer_information_historical_not_V10_certification"
+    },
+    {
+      "id": "BR-S3",
+      "issuer": "ProgressSoft",
+      "instrument": "vendor SYSTAC2 launch account",
+      "dated": "2026-08-24",
+      "url": "https://www.progressoft.com/fr/news/la-beac-et-progresssoft-franchissent-une-nouvelle-etape-dans-la-modernisation-des-paiements-dans-les-six-etats-membres-de-la-cemac",
+      "evidence_level": "vendor_claim_not_scheme_authorization"
+    }
+  ],
+  "authority_matrix": [
+    {
+      "rule": "erroneous_mobile_or_instant_transfer_restitution",
+      "scope": "PSP products described in 2023 circular; bank and scheme applicability unverified",
+      "activation": "LEGAL_SIGNOFF_REQUIRED",
+      "not_to_infer": "generic SYSTAC2 transfer recall, SYGMA settlement reversal, instant module live"
+    },
+    {
+      "rule": "five_minute_availability_and_initial_request",
+      "scope": "PSP workflow described in 2023 circular",
+      "activation": "LEGAL_SIGNOFF_REQUIRED",
+      "not_to_infer": "central-bank finality delay"
+    },
+    {
+      "rule": "later_request_balance_sufficiency",
+      "scope": "PSP erroneous beneficiary restitution",
+      "activation": "LEGAL_SIGNOFF_REQUIRED",
+      "not_to_infer": "overdraft or fabricated available balance"
+    },
+    {
+      "rule": "nonresponse_24h_merchant_48h_other",
+      "scope": "2023 PSP disputed transfer workflow",
+      "activation": "LEGAL_SIGNOFF_REQUIRED",
+      "not_to_infer": "all banking returns or clearing disputes"
+    },
+    {
+      "rule": "judicial_contestation",
+      "scope": "PSP recipient objection",
+      "activation": "LEGAL_SIGNOFF_REQUIRED",
+      "not_to_infer": "operator unilateral debit or cancellation of posted journals"
+    },
+    {
+      "rule": "SYGMA_finality",
+      "scope": "central-bank settlement upon sufficient provision per BEAC public legacy page",
+      "activation": "CURRENT_SCHEME_AND_BANK_CONTRACT_REQUIRED",
+      "not_to_infer": "V10 live or bank account settlement from a clearing ACK"
+    }
+  ],
+  "candidate_domain_ownership": [
+    {
+      "domain": "PaymentInstruction",
+      "owns": "payer instruction, original transaction reference, customer authorization and idempotency key"
+    },
+    {
+      "domain": "RailEvidence",
+      "owns": "authenticated messages, submission/acceptance and external unknown outcomes; no journal posting"
+    },
+    {
+      "domain": "RestitutionCase",
+      "owns": "claim reason, clocks, recipient notifications, consent/objection, evidence and judicial hold"
+    },
+    {
+      "domain": "FundsAvailability",
+      "owns": "authorized reservation/hold policy subject to exact spendable balance and legal scope; no balance mutation"
+    },
+    {
+      "domain": "AccountingCore",
+      "owns": "separate balanced journal for authorized return; immutable original journal"
+    },
+    {
+      "domain": "Reconciliation",
+      "owns": "independent external evidence to journals and open mismatches"
+    }
+  ],
+  "proposed_restitution_states": [
+    "NOT_APPLICABLE",
+    "CLAIM_RECEIVED",
+    "SCOPE_VERIFICATION_PENDING",
+    "CLAIM_ELIGIBLE",
+    "FREEZE_REQUESTED",
+    "FUNDS_FROZEN",
+    "FUNDS_INSUFFICIENT",
+    "RECIPIENT_NOTIFIED",
+    "RECIPIENT_ACCEPTED",
+    "NONRESPONSE_RULE_PENDING",
+    "RECIPIENT_CONTESTED",
+    "JUDICIAL_REVIEW",
+    "RETURN_AUTHORIZED",
+    "RETURN_SUBMITTED",
+    "RETURN_EXTERNAL_OUTCOME_UNKNOWN",
+    "RETURN_EXTERNALLY_CONFIRMED",
+    "RETURN_RECONCILED",
+    "REJECTED",
+    "CLOSED"
+  ],
+  "safety_invariants": [
+    "Scope/effective-date/issuer-currentness and product authorization checked before applying 2023 PSP timing rules",
+    "Receipt/notification timestamps are immutable and provenance-tagged; clocks from trusted services; no silent deadline recalculation",
+    "Freezing funds is not reversal of external finality; hold must not create negative available balance or new money",
+    "Recipient acceptance or legally applicable nonresponse is a separate authorization for new restitution transaction, not edit of original journal",
+    "Recipient objection retains disputed funds and preserves judicial evidence; no unauthorized forced transfer",
+    "Original transaction and any return have separate immutable double-entry postings with distinct idempotency identities",
+    "Unknown return outcome must survive retries and DR; no blind reissue or double credit",
+    "Bank/PSP entitlements, BEAC profile and external settlement evidence are independent from public platform launch",
+    "Cross-tenant cases, data retention, court order, fraud and AML holds require explicit institution rules and access controls"
+  ],
+  "open_p0": [
+    "current applicability of 2023 PSP circular",
+    "SYGMA V10 current issuer status",
+    "SYSTAC2 instant activation",
+    "bank participant and finality contracts",
+    "private message security/conformance",
+    "approved PCEC",
+    "COBAC operative amendments and D-2025/328 corrections",
+    "01/25-02/25 judicial and publication evidence"
+  ],
+  "next_exact_task": "WP-ACC-005 — Checkpoint BS: authenticate current applicability/amendments and institution-specific implementation of BEAC 004/DGE/DSMP/2023, obtain signed SYSTAC2/SYGMA participation and settlement evidence, current SYGMA V10 and instant status, private ISO 20022 profiles; continue COBAC/PCEC/01-25 P0 acquisition. Maintain implementation hold."
+}
