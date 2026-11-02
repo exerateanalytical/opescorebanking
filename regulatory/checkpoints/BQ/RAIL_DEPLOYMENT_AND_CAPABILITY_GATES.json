@@ -1,0 +1,172 @@
+{
+  "checkpoint": "BQ",
+  "date": "2026-11-02",
+  "work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "predecessor_commit": "8ab6aa2e757975a67d04954e44dbe59f8fe3cff2",
+  "implementation_authorized": false,
+  "source_register": [
+    {
+      "id": "BQ-S1",
+      "issuer": "BEAC",
+      "date": "2026-08-12",
+      "url": "https://www.beac.int/wp-content/uploads/2026/08/CP_MISE-EN-PROD-SYSTAC.pdf",
+      "source_type": "issuer_hosted_signed_press_release_visual_inspection",
+      "binary_sha256": null
+    },
+    {
+      "id": "BQ-S2",
+      "issuer": "BEAC",
+      "date": "2025-11-17",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Instruction-N%C2%B0001-GR-2025_norme-ISO-20022.pdf",
+      "source_type": "issuer_instruction_prior_checkpoint"
+    },
+    {
+      "id": "BQ-S3",
+      "issuer": "BEAC",
+      "date": "2025-11-19",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Lettre-Circulaire-N%C2%B013-GR-2025_portail-dacc%C3%A8s-MyStandard.pdf",
+      "source_type": "issuer_circular_prior_checkpoint"
+    }
+  ],
+  "issuer_platform_observations": [
+    {
+      "rail": "SYSTAC2",
+      "observed_status": "PRODUCTION_ANNOUNCED_BY_ISSUER",
+      "effective_date": "2026-08-03",
+      "observed_on": "2026-08-12",
+      "scope": [
+        "retail_transfer",
+        "direct_debit",
+        "cheque",
+        "card_clearing"
+      ],
+      "limitations": "Public platform-wide announcement only; not participant acceptance or settlement finality"
+    },
+    {
+      "rail": "SYSTAC2_INSTANT",
+      "observed_status": "NOT_YET_PRODUCTION_AS_OF_2026_08_12",
+      "effective_date": null,
+      "limitations": "No later issuer activation evidence verified; current status UNKNOWN after 2026-08-12"
+    },
+    {
+      "rail": "SYGMA_V10",
+      "observed_status": "FINALIZING_AS_OF_2026_08_12",
+      "effective_date": null,
+      "limitations": "Projected launch in weeks is not live confirmation; current status UNKNOWN"
+    }
+  ],
+  "candidate_domain_ownership": [
+    {
+      "domain": "RailRegistry",
+      "owns": "issuer-observed rail version, capability, effective interval, evidence provenance",
+      "cannot": "assert bank participation or settlement"
+    },
+    {
+      "domain": "InstitutionRailEntitlement",
+      "owns": "tenant-scoped direct/indirect participation, account/BIC, contract, approval, test status, effective interval",
+      "cannot": "infer rights from platform launch"
+    },
+    {
+      "domain": "RailAdapter",
+      "owns": "profile-version validation, authenticated inbox/outbox and replay quarantine",
+      "cannot": "post ledger or declare finality"
+    },
+    {
+      "domain": "ExternalSettlementEvidence",
+      "owns": "signed or independently authenticated scheme/account evidence and outcome uncertainty",
+      "cannot": "invent settlement"
+    },
+    {
+      "domain": "AccountingCore",
+      "owns": "double-entry posted journals, controlled corrections, PCEC mapping",
+      "cannot": "accept rail status as money"
+    },
+    {
+      "domain": "IndependentReconciliation",
+      "owns": "match statements, external settlement and posted journals, open exceptions",
+      "cannot": "approve its own discrepancies"
+    }
+  ],
+  "candidate_effective_dated_capability_record": {
+    "fields": [
+      "rail_id",
+      "rail_version",
+      "capability",
+      "issuer_status",
+      "issuer_effective_from",
+      "issuer_effective_to",
+      "issuer_evidence_id",
+      "issuer_observed_at",
+      "institution_id",
+      "tenant_id",
+      "participant_mode",
+      "participant_contract_id",
+      "participant_approval_id",
+      "profile_version",
+      "conformance_evidence_id",
+      "bank_effective_from",
+      "bank_effective_to",
+      "security_profile_id",
+      "finality_rule_id",
+      "operator_approval_id"
+    ],
+    "activation_rule": "issuer capability PRODUCTION + institution entitlement ACTIVE + exact profile approved + participant contract and authentication/finality mapping verified + DoR for bounded context; otherwise fail closed",
+    "unknown_status_policy": "UNKNOWN or stale evidence never automatically converts to ACTIVE"
+  },
+  "proposed_states": {
+    "platform": [
+      "UNKNOWN",
+      "PLANNED",
+      "ISSUER_CONFIRMED_LIVE",
+      "SUSPENDED",
+      "RETIRED"
+    ],
+    "institution": [
+      "NOT_AUTHORIZED",
+      "ONBOARDING",
+      "CONFORMANCE_PENDING",
+      "ACTIVE",
+      "SUSPENDED",
+      "REVOKED"
+    ],
+    "payment": [
+      "AUTHORIZED",
+      "SUBMITTED",
+      "RAIL_ACKNOWLEDGED",
+      "EXTERNAL_OUTCOME_UNKNOWN",
+      "CLEARING_CONFIRMED",
+      "SETTLEMENT_EVIDENCE_PENDING",
+      "EXTERNAL_SETTLEMENT_CONFIRMED",
+      "RECONCILIATION_EXCEPTION",
+      "RECONCILED",
+      "REJECTED",
+      "RETURN_PENDING"
+    ],
+    "instant_feature": [
+      "NOT_LIVE",
+      "UNKNOWN",
+      "ISSUER_CONFIRMED_LIVE"
+    ]
+  },
+  "security_and_financial_invariants": [
+    "No status update creates/destroys money or posts ledger",
+    "Platform live does not imply institution connected or authorized",
+    "Clearing confirmation does not imply net settlement finality",
+    "Instant payments disabled until separate issuer and institution evidence",
+    "SYGMA V10 live status cannot be inferred from a 2026-08-12 forecast",
+    "All money postings are exact arithmetic, immutable double-entry and idempotent",
+    "Unknown outcomes remain durable across retries, DR and operator handover",
+    "Untrusted/incorrect profile or signature is quarantined; maker-checker on privileged changes",
+    "Retain original evidence, hash when available, access logs and tenant scope; apply bank retention/legal hold"
+  ],
+  "open_p0": [
+    "SYGMA V10 current issuer production evidence",
+    "SYSTAC2 bank participant contract/conformance",
+    "CEMAC-BANK profile and message security/finality contracts",
+    "approved PCEC",
+    "COBAC amendment chain and D-2025/328 correction",
+    "01/25-02/25 legal/judicial/settlement evidence"
+  ],
+  "next_exact_task": "WP-ACC-005 — Checkpoint BR: authenticate current SYGMA V10 go-live/finality and bank-specific SYSTAC2/SYGMA rights and message profiles; verify instant feature separately; continue COBAC/PCEC/01-25 evidence. No production code."
+}
