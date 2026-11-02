@@ -1,0 +1,4 @@
+# Checkpoint BG — Source-authenticated baseline and transition-overlap hold
+**WP-ACC-005 remains OPEN/P0 BLOCKED.** Predecessor BF remotely verified. New work: BEAC issuer-hosted scanned R-2009/01 (2 pages) read and compared clause-by-clause with Republic of Congo government-hosted R-2025/02, with a structured 2026–2029 legal/applicability decision table. No banking code or tests; no P0 gap closure.
+See EVIDENCE_DELTA.md, CAPITAL_TRANSITION_DECISION_MATRIX.json, CONTROL_AND_TEST_DESIGN.md, QUALITY_REVIEW.md, CONTINUATION_STATE.json and EXECUTION_REPORT.md.
+**Next:** WP-ACC-005 — Checkpoint BH: authenticate and hash original R-2009/01 and R-2025/02 PDFs and publication chains; obtain written COBAC/institution-counsel interpretation of R-2025/02 Articles 4/6/7 overlap and 2026 plan-approval effect; inspect COBAC 2025 report and R-2021/01–02 originals; obtain bank-approved PCEC/capital accounting and outstanding 01/25–02/25 court/settlement evidence. Preserve P0 hold.
