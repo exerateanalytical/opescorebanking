@@ -1,0 +1,232 @@
+{
+  "checkpoint": "BX",
+  "predecessor": "BW",
+  "work_package": "WP-ACC-005",
+  "phase": "Phase 4 — Accounting Core / Financial Integrity",
+  "status": "OPEN_P0_BLOCKED",
+  "production_implementation_authorized": false,
+  "prior_checkpoint_verified_sha": "cca263fbd67994f98b517cf13e13e8caa7703b80",
+  "sources": [
+    {
+      "id": "BX-S1",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Rapport-annuel-de-la-COBAC-2024-PDF-14.8-Mo_compressed-1.pdf",
+      "issuer": "COBAC (reproduced in BEAC-hosted 2024 annual report)",
+      "type": "issuer-hosted reproduction of signed text",
+      "clauses": [
+        "R-2024/01:29",
+        "R-2024/01:34",
+        "R-2024/01:35",
+        "R-2024/01:36",
+        "R-2024/01:37",
+        "R-2024/01:38",
+        "R-2024/01:39",
+        "R-2024/01:40",
+        "R-2024/01:41"
+      ],
+      "standalone_signed_original_authenticated": false,
+      "source_binary_sha256": null,
+      "current_amendments_verified": false
+    },
+    {
+      "id": "BX-S2",
+      "url": "https://www.beac.int/wp-content/uploads/2026/04/RAPPORT-SUR-LES-SERVICES-DE-PAIEMENT-DANS-LA-CEMAC-2024-.pdf",
+      "issuer": "BEAC DSMP",
+      "type": "issuer explanatory payment services report for 2024, published on BEAC site in 2026",
+      "clauses": [
+        "section 2 regulatory evolution"
+      ],
+      "instrument_described": "BEAC Instruction 001/GR/2024 of 22 January 2024",
+      "signed_instruction_obtained": false,
+      "source_binary_sha256": null
+    }
+  ],
+  "controls": [
+    {
+      "id": "BX-C01",
+      "clause": "R-2024/01:34",
+      "subject": "Critical-service continuity objectives",
+      "proposal": "Maintain service-specific approved maximum tolerable interruption and maximum admissible data loss; map to ledger, payments, authorization, reconciliation and supporting infrastructure.",
+      "evidence": "Approved business impact analysis, service-to-asset map, continuity plan and tested RTO/RPO results",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "id": "BX-C02",
+      "clause": "R-2024/01:36",
+      "subject": "Real failover and failback evidence",
+      "proposal": "Exercise actual critical workload on standby for representative duration and restore primary without financial data loss; compare acknowledged transactions and immutable journals.",
+      "evidence": "Signed exercise log, timelines, restore checksums, replay ledger, independent reconciliation, exceptions and board/control report",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "id": "BX-C03",
+      "clause": "R-2024/01:29",
+      "subject": "Annual vulnerability and penetration testing",
+      "proposal": "Track testing coverage of essential/sensitive assets, findings, risk ownership, remediation and reporting; do not equate a scan with an executed penetration test.",
+      "evidence": "Dated executed test report, scope, findings, board summary and internal control submission",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "id": "BX-C04",
+      "clause": "R-2024/01:37-38",
+      "subject": "Change/release gate",
+      "proposal": "Require independent approvals, pre-production test results, controlled migration, rollback and data-restoration rehearsal before changes to financial components.",
+      "evidence": "Change ticket, reviewer signoffs, release artifact digests, migrations, rollback evidence",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "id": "BX-C05",
+      "clause": "R-2024/01:39-40",
+      "subject": "Authoritative data dictionary and integrity",
+      "proposal": "Version business/technical dictionary for money, account, posting, balance, value date, settlement, reversal, status, tenant and external identifiers; reject semantic drift.",
+      "evidence": "Versioned schema registry, data lineage, invariant/property tests, reconciliation reports",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "id": "BX-C06",
+      "clause": "R-2024/01:35;32",
+      "subject": "Critical outsourcing continuity",
+      "proposal": "Map third-party contracts and availability/DR obligations to each critical function; never infer compliance from vendor marketing.",
+      "evidence": "Signed contract, approved SLAs, provider recovery exercise and institution acceptance",
+      "state": "DESIGN_ONLY"
+    },
+    {
+      "id": "BX-C07",
+      "clause": "R-2024/01:41",
+      "subject": "Legal effective vs transition",
+      "proposal": "Represent 2025-01-01 commencement and 12/18 month transition separately; issuer-hosted narrative 2026 dates are not automatically commencement; require approved legal decision and current amendments.",
+      "evidence": "Signed current instrument, legal opinion, institution commencement profile and authority record",
+      "state": "QUARANTINED"
+    },
+    {
+      "id": "BX-C08",
+      "clause": "BEAC Instruction 001/GR/2024 described by DSMP",
+      "subject": "Electronic payment technical standards",
+      "proposal": "Create unresolved dependency for authentication, complaints/notifications, dashboards, security, archives and backup; do not implement summary as operative rules.",
+      "evidence": "Signed original instruction, amendments, scope and institution-specific approval",
+      "state": "BLOCKED_EXTERNAL_EVIDENCE"
+    }
+  ],
+  "authority_boundaries": {
+    "AccountingCore": "Only authoritative immutable balanced journals; no DR policy/incident status can mutate posted entries.",
+    "Recovery": "Rehydrate only from verifiable ledger/event history; idempotent replay; quarantined projections until reconciled.",
+    "RegulatoryCompliance": "Owns legal applicability and rule approval; no automatic activation from explanatory reports.",
+    "InformationSecurity": "Owns test/incident evidence, cannot self-certify banking balances.",
+    "IndependentReconciliation": "Signs recovery equality and external settlement proofs separately from operations."
+  },
+  "recovery_state_machine": [
+    "PLANNED",
+    "APPROVED",
+    "PRECHECK_COMPLETE",
+    "FAILOVER_IN_PROGRESS",
+    "STANDBY_OPERATING",
+    "FAILBACK_IN_PROGRESS",
+    "RECONCILING",
+    "PASSED_WITH_EVIDENCE",
+    "FAILED_OR_UNKNOWN"
+  ],
+  "forbidden_transitions": [
+    "FAILOVER_IN_PROGRESS -> PASSED_WITH_EVIDENCE",
+    "STANDBY_OPERATING -> PASSED_WITH_EVIDENCE",
+    "FAILBACK_IN_PROGRESS -> PASSED_WITH_EVIDENCE",
+    "FAILED_OR_UNKNOWN -> PASSED_WITH_EVIDENCE without new independently reviewed exercise"
+  ],
+  "data_contract_proposal": [
+    "institution_id",
+    "service_id",
+    "ledger_sequence_watermark",
+    "journal_hash_chain_anchor",
+    "outbox_sequence",
+    "inbox_dedupe_watermark",
+    "recovery_snapshot_id",
+    "replay_run_id",
+    "reconciliation_result_id",
+    "rpo_actual",
+    "rto_actual",
+    "dictionary_version",
+    "regulatory_evidence_id",
+    "reviewer_ids"
+  ],
+  "acceptance_scenarios": [
+    {
+      "id": "BX-T01",
+      "expected": "DR exercise switches to standby but does not execute production failback; mark exercise incomplete.",
+      "executed": false
+    },
+    {
+      "id": "BX-T02",
+      "expected": "Actual recovery exceeds approved critical-service maximum interruption or maximum data loss; fail evidence gate and escalate.",
+      "executed": false
+    },
+    {
+      "id": "BX-T03",
+      "expected": "A restored journal snapshot is older than durable transaction acknowledgements; reconcile against authoritative append-only events before any restart.",
+      "executed": false
+    },
+    {
+      "id": "BX-T04",
+      "expected": "A recovery replay retries a committed payment with the same idempotency key; exactly one authoritative financial posting is permitted.",
+      "executed": false
+    },
+    {
+      "id": "BX-T05",
+      "expected": "Standby exercise runs for a trivial non-representative interval; reject evidence of a complete critical-service continuity test.",
+      "executed": false
+    },
+    {
+      "id": "BX-T06",
+      "expected": "Cyberattack recovery scenario is omitted from the annual continuity exercise; do not report full Article 34/36 coverage.",
+      "executed": false
+    },
+    {
+      "id": "BX-T07",
+      "expected": "Annual penetration test excludes every essential or sensitive service; do not accept a generic perimeter-only report as complete.",
+      "executed": false
+    },
+    {
+      "id": "BX-T08",
+      "expected": "Penetration test findings lack remediation evidence, board-level summary or internal-control reporting trace; mark assurance evidence incomplete.",
+      "executed": false
+    },
+    {
+      "id": "BX-T09",
+      "expected": "A production release has no pre-deployment functional/security testing or safe rollback and data restoration plan; block deployment.",
+      "executed": false
+    },
+    {
+      "id": "BX-T10",
+      "expected": "A dictionary schema change silently changes account-status semantics or monetary field precision; reject until independently reviewed and versioned.",
+      "executed": false
+    },
+    {
+      "id": "BX-T11",
+      "expected": "Data transformation rounds, truncates or duplicates journal amounts; reject migration and require exact arithmetic and balancing evidence.",
+      "executed": false
+    },
+    {
+      "id": "BX-T12",
+      "expected": "Restored read-model balance differs from the ledger projection; quarantine the read model, preserve authoritative ledger and reconcile.",
+      "executed": false
+    },
+    {
+      "id": "BX-T13",
+      "expected": "An outsourced critical service lacks signed recovery and service-level obligations or actual test evidence; reject vendor readiness claim.",
+      "executed": false
+    },
+    {
+      "id": "BX-T14",
+      "expected": "A policy engine activates payment authentication or archival requirements based only on the BEAC report's description of Instruction 001/GR/2024; keep policy unapproved pending signed operative text.",
+      "executed": false
+    }
+  ],
+  "blockers": [
+    "Signed standalone current R-2024/01 and amendment chain",
+    "Binding Art 41/Art 30 interpretation and reporting channels",
+    "Signed BEAC Instruction 001/GR/2024 and amendments",
+    "Institution-specific approved BIA, recovery contracts and PCEC mapping",
+    "COBAC R-2019/01–02 signed operative texts",
+    "BEAC payment participation, finality and conformance",
+    "D-2025/328 correction and Regulations 01/25–02/25 legal evidence"
+  ],
+  "definition_of_ready": "FAIL",
+  "quality_review_status": "P0_OPEN"
+}
