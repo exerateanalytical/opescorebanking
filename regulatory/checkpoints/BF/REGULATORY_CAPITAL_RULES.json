@@ -1,0 +1,88 @@
+{
+  "checkpoint": "BF",
+  "date": "2026-11-02",
+  "status": "DESIGN_ONLY_NOT_APPROVED",
+  "source": {
+    "id": "BF-001",
+    "host": "Republic of Congo Ministry of Finance",
+    "url": "https://www.finances.gouv.cg/fr/download/file/fid/9490",
+    "grade": "government_hosted_full_text_no_binary_custody",
+    "bulletin_publication_verified": false,
+    "signature_verified": false,
+    "amendment_chain_complete": false
+  },
+  "rules": [
+    {
+      "article": 1,
+      "scope": "CEMAC-headquartered credit institutions"
+    },
+    {
+      "article": 2,
+      "category": "bank",
+      "minimum_fcfa": "25000000000"
+    },
+    {
+      "article": 3,
+      "category": "financial_establishment",
+      "minimum_fcfa": "4000000000"
+    },
+    {
+      "article": 4,
+      "stated_effective_date": "2026-01-01"
+    },
+    {
+      "article": 5,
+      "applies": "licensed_after_effective_date",
+      "paid_up_capital_required": true
+    },
+    {
+      "article": 6,
+      "applies": "active_before_effective_date",
+      "transitional_year_from": "2026-01-01",
+      "capital_increase_plan_submission_deadline": "2026-06-30",
+      "requires_secretary_general_approval": true,
+      "milestones": [
+        {
+          "due": "2026-12-31",
+          "bank_fcfa": "14000000000",
+          "financial_establishment_fcfa": "2500000000"
+        },
+        {
+          "due": "2027-12-31",
+          "bank_fcfa": "18000000000",
+          "financial_establishment_fcfa": "3000000000"
+        },
+        {
+          "due": "2028-12-31",
+          "bank_fcfa": "22000000000",
+          "financial_establishment_fcfa": "3500000000"
+        },
+        {
+          "due": "2029-12-31",
+          "bank_fcfa": "25000000000",
+          "financial_establishment_fcfa": "4000000000"
+        }
+      ]
+    },
+    {
+      "article": 7,
+      "old_regulation": "R-2009/01",
+      "continued_for": "preexisting_institutions",
+      "until": "2026-12-31",
+      "stated_repeal_from": "2027-01-01"
+    },
+    {
+      "article": 8,
+      "publication_notification_responsibility": "COBAC Secretary General"
+    }
+  ],
+  "interpretation_gates": [
+    "No automatic assumption that submitting a plan means approval",
+    "No inferred grandfathering for newly licensed institutions",
+    "Art 6 and Art 7 transitional interaction requires legal review",
+    "Separate paid-up share capital, nominal share capital, regulatory own funds and accounting balances",
+    "No regulatory alert or rule activation without authenticated publication and effective-date chain",
+    "No journal postings based solely on policy status"
+  ],
+  "execution_authorized": false
+}
