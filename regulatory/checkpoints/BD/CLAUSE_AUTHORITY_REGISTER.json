@@ -1,0 +1,63 @@
+{
+  "checkpoint": "BD",
+  "date": "2026-11-02",
+  "status": "RESEARCH_ONLY_NOT_APPROVED",
+  "source": {
+    "type": "official_cobac_report_annex_beac_hosted",
+    "url": "https://www.beac.int/wp-content/uploads/2016/10/Rapport-annuel-de-la-COBAC-2024-PDF-14.8-Mo_compressed-1.pdf",
+    "original_binary_retained": false,
+    "sha256": null
+  },
+  "clauses": [
+    {
+      "instrument": "COBAC R-2024/01",
+      "article": "16",
+      "topic": "data availability",
+      "observation": "All institution data available in State of principal CEMAC headquarters; physical dossiers and archives conserved accessible usable there; text spans printed pp113-114",
+      "authority": "OFFICIAL_ANNEX_TEXT_VISUALLY_CHECKED",
+      "policy_status": "NON_EXECUTABLE_REQUIRES_INSTITUTION_LEGAL_INTERPRETATION"
+    },
+    {
+      "instrument": "COBAC R-2024/01",
+      "article": "30",
+      "topic": "significant incident notification",
+      "observation": "Prompt written-trace notice; listed triggers include critical function, >=10% clients or operations, >24h outage, classified data leakage, specified gross financial impact, public reputational leak; interim 1 week and synthesis 1 month; instruction-adjustable",
+      "authority": "OFFICIAL_ANNEX_TEXT",
+      "policy_status": "NON_EXECUTABLE_CHECK_LATER_INSTRUCTIONS"
+    },
+    {
+      "instrument": "COBAC R-2024/01",
+      "article": "35",
+      "topic": "outsourced continuity",
+      "observation": "References COBAC R-2016/04 65(ii) and EMF R-2017/06 71(ii)",
+      "authority": "OFFICIAL_ANNEX_TEXT",
+      "policy_status": "DESIGN_DEPENDENCY"
+    },
+    {
+      "instrument": "COBAC R-2024/01",
+      "article": "41",
+      "topic": "commencement, transition, partial repeal",
+      "observation": "2025-01-01 commencement; 12-month credit/payment transition; 18-month EMF transition; explicit partial repeal of R-2008/01 Arts42-44, R-2016/04 Art65(iii), EMF R-2017/06 Art71(iii)",
+      "authority": "OFFICIAL_ANNEX_TEXT",
+      "policy_status": "HISTORICAL_AMENDMENT_EDGES_ONLY"
+    },
+    {
+      "instrument": "COBAC R-2020/01",
+      "article": "unknown_full_text",
+      "topic": "risk concentration amendment",
+      "observation": "Third-party lead identifies amendment of R-2010/02",
+      "authority": "SECONDARY_UNVERIFIED",
+      "policy_status": "NO_EXECUTION"
+    }
+  ],
+  "remaining_p0": [
+    "issuer complete CEMAC 02/25 including printed page 10",
+    "01/25 and 02/25 official publication and effective date",
+    "separate certified judicial dispositions",
+    "original COBAC-MINFI letter",
+    "bank approved PCEC and settlement mapping",
+    "current prudential amendment texts and applicability"
+  ],
+  "definition_of_ready": "FAIL",
+  "tests_executed": 0
+}
