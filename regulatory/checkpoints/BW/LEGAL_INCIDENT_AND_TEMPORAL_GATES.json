@@ -1,0 +1,202 @@
+{
+  "checkpoint": "BW",
+  "predecessor": "BV",
+  "work_package": "WP-ACC-005",
+  "status": "DESIGN_ONLY_OPEN_P0",
+  "production_policy_activation": false,
+  "source": {
+    "id": "BW-S1",
+    "url": "https://www.beac.int/wp-content/uploads/2016/10/Rapport-annuel-de-la-COBAC-2024-PDF-14.8-Mo_compressed-1.pdf",
+    "authority": "issuer_hosted_operative_reproduction",
+    "standalone_signed_original_verified": false,
+    "original_pdf_sha256": null,
+    "amendments_current_verified": false
+  },
+  "legal_temporal_model": {
+    "fields": [
+      "instrument_id",
+      "article_id",
+      "legal_effective_date",
+      "institution_active_at_commencement",
+      "institution_class",
+      "transition_months",
+      "transition_end_rule",
+      "as_of_date",
+      "amendment_version",
+      "legal_approval_id",
+      "evidence_hash"
+    ],
+    "article_41_source_effective_date": "2025-01-01",
+    "source_transition_months": {
+      "credit": 12,
+      "payment": 12,
+      "microfinance": 18
+    },
+    "narrative_dates": {
+      "credit_payment": "2026-01-01",
+      "microfinance": "2026-07-01"
+    },
+    "interpretation_status": "CONFLICT_REQUIRES_ISSUER_OR_APPROVED_LEGAL_RESOLUTION",
+    "automatic_enforcement": false
+  },
+  "institution_scope": {
+    "classes": [
+      "CREDIT_INSTITUTION",
+      "PAYMENT_INSTITUTION",
+      "EMF_CATEGORY_1_APEX",
+      "EMF_CATEGORY_1_AFFILIATE",
+      "EMF_CATEGORY_2",
+      "EMF_CATEGORY_3",
+      "SUPERVISED_HOLDING"
+    ],
+    "article_2_historical_condition": "EMF_CATEGORY_2_OR_3_DEPOSITS_OVER_10B_XAF_FOR_TWO_CONSECUTIVE_YEARS",
+    "full_scope_automatic_activation": false,
+    "missing_year_data_behavior": "UNKNOWN_ESCALATE",
+    "holding_transition_behavior": "LEGAL_REVIEW"
+  },
+  "incident_criteria": {
+    "article": "R-2024/01:30",
+    "authority": "historical_issuer_hosted_reproduction_only",
+    "policy_status": "QUARANTINED",
+    "evaluation": "DISJUNCTIVE_AND_POTENTIAL_HARM; never suppress UNKNOWN",
+    "criteria": [
+      "CRITICAL_FUNCTION_AFFECTED_OR_AT_RISK",
+      "AFFECTED_CUSTOMERS_OR_COUNTERPARTIES_RATIO",
+      "AFFECTED_OPERATIONS_RATIO",
+      "INFORMATION_SYSTEM_UNAVAILABILITY_DURATION",
+      "SENSITIVE_OR_CLASSIFIED_DATA_LOSS_OR_LEAKAGE",
+      "GROSS_FINANCIAL_GAIN_OR_LOSS_RELATIVE_TO_CORE_OWN_FUNDS_AND_FLOOR",
+      "PUBLIC_REPUTATIONAL_DISCLOSURE"
+    ],
+    "source_reference_values_not_executable": {
+      "customers_ratio": "10%",
+      "operations_ratio": "10%",
+      "outage": ">24h",
+      "financial_ratio": "0.5%",
+      "financial_floor_xaf": "5000000"
+    },
+    "legal_clock_source": "notification_date_for_followup_and_summary_per_source",
+    "notification": "WITHOUT_DELAY_WITH_TRACEABLE_EVIDENCE",
+    "followup_source": "one_week_after_declaration",
+    "summary_source": "one_month_after_declaration",
+    "later_instruction_override": "UNVERIFIED",
+    "denominator_and_gross_basis": "REQUIRES_LEGAL_FINANCE_APPROVAL"
+  },
+  "authority_and_separation": {
+    "owner": "RegulatoryCompliance/IncidentManagement",
+    "decision_approvers": [
+      "LEGAL",
+      "COMPLIANCE",
+      "CISO"
+    ],
+    "maker_checker": true,
+    "data_access": "TENANT_SCOPED_LEAST_PRIVILEGE",
+    "evidence": "TAMPER_EVIDENT_IMMUTABLE_EVENT_TRAIL",
+    "accounting_core": "READ_ONLY_NO_JOURNAL_MUTATION",
+    "external_settlement": "NO_INFERENCE",
+    "notification_delivery": "REQUIRES_ACTUAL_RECEIPT"
+  },
+  "blocked_dependencies": [
+    "AUTHENTICATED_SIGNED_STANDALONE_R_2024_01_AND_CURRENT_AMENDMENTS",
+    "ISSUER_ART_41_INTERPRETATION",
+    "CURRENT_ART_30_INSTRUCTIONS_AND_REPORTING_CHANNEL",
+    "SIGNED_R_2019_01_02_AND_AMENDMENTS",
+    "INSTITUTION_LICENSES",
+    "PCEC_APPROVED_MAPPING",
+    "BEAC_PAYMENT_PARTICIPATION_AND_SETTLEMENT_FINALITY",
+    "D_2025_328_CORRECTION",
+    "REGULATIONS_01_25_02_25_EVIDENCE"
+  ],
+  "acceptance_scenarios": [
+    {
+      "id": "BW-T01",
+      "expected": "An incident threatens a critical function but monetary loss is zero; classifier must not suppress legal review.",
+      "executed": false
+    },
+    {
+      "id": "BW-T02",
+      "expected": "Affected-customer fraction reaches the historical Article 30 criterion but transaction fraction is below it; disjunctive criterion must be preserved.",
+      "executed": false
+    },
+    {
+      "id": "BW-T03",
+      "expected": "Affected-transaction fraction reaches the criterion but customer fraction is below it; no AND-gate is permitted.",
+      "executed": false
+    },
+    {
+      "id": "BW-T04",
+      "expected": "Customer or transaction denominator is missing, zero, stale or from another institution; classification is UNKNOWN/ESCALATED, never NOT_SIGNIFICANT.",
+      "executed": false
+    },
+    {
+      "id": "BW-T05",
+      "expected": "Service outage duration is unknown and may exceed the Article 30 criterion; preserve potential significance and escalate.",
+      "executed": false
+    },
+    {
+      "id": "BW-T06",
+      "expected": "Sensitive/classified data is leaked with no measurable financial loss; monetary-only screening must fail.",
+      "executed": false
+    },
+    {
+      "id": "BW-T07",
+      "expected": "An incident may produce reputationally damaging public disclosure without proven monetary loss; preserve separate trigger.",
+      "executed": false
+    },
+    {
+      "id": "BW-T08",
+      "expected": "A gross financial gain is offset by a gross loss and netted to zero; criterion evaluation must use legally approved gross basis, not netting.",
+      "executed": false
+    },
+    {
+      "id": "BW-T09",
+      "expected": "An unapproved capital denominator or floor calculation is used to activate a monetary incident trigger; quarantine threshold policy.",
+      "executed": false
+    },
+    {
+      "id": "BW-T10",
+      "expected": "The 2026 transition deadline is stored as 2025 legal commencement or vice versa; reject temporal conflation.",
+      "executed": false
+    },
+    {
+      "id": "BW-T11",
+      "expected": "A new entrant after 2025-01-01 claims the transitional period intended for institutions active at commencement; require institution-specific legal review.",
+      "executed": false
+    },
+    {
+      "id": "BW-T12",
+      "expected": "An EMF 2/3 institution crosses a deposit threshold in only one year or has missing annual figures; do not silently activate or exempt full-scope rules.",
+      "executed": false
+    },
+    {
+      "id": "BW-T13",
+      "expected": "An EMF affiliate is treated identically to the apex entity without assessing differentiated Article 2 obligations; reject scope conflation.",
+      "executed": false
+    },
+    {
+      "id": "BW-T14",
+      "expected": "A regulator notification is recorded as sent without an actual traceable receipt; reject completion and preserve escalation.",
+      "executed": false
+    },
+    {
+      "id": "BW-T15",
+      "expected": "A one-week follow-up or one-month summary is measured from incident discovery instead of declaration without approved legal interpretation; flag due-date ambiguity.",
+      "executed": false
+    },
+    {
+      "id": "BW-T16",
+      "expected": "A legal rule activation or incident-status change attempts to mutate a posted journal, balance, settlement or liquidity; reject side effect.",
+      "executed": false
+    },
+    {
+      "id": "BW-T17",
+      "expected": "A cross-tenant analyst reads another institution's sensitive incident evidence; deny, audit and alert.",
+      "executed": false
+    },
+    {
+      "id": "BW-T18",
+      "expected": "Recovery replay generates duplicate regulator notifications or financial postings; enforce separate idempotency and independent reconciliation.",
+      "executed": false
+    }
+  ]
+}
