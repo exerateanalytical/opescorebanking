@@ -1,0 +1,6 @@
+# BF execution report — 2026-11-02
+Phase 4, WP-ACC-005. Predecessor BE continuation fetched from GitHub. **Work packages attempted 1; completed 0; kept open 1; blocked from closure 1; dependent packages attempted 0.**
+**New primary-source advancement:** Congo Ministry of Finance government-hosted complete COBAC R-2025/02 Articles 1–8 located and text read, including 25bn/4bn minimum, 2026 commencement, category and license-date scope, conditional plan process, 2026–2029 milestones, R-2009/01 transitional effect. Official PDF binary/signature/Bulletin chain and amendments **not** verified; no executable threshold activated.
+**Independent secondary advance:** BEAC-hosted COBAC 2024 Annual Report states R-2020/01 complaints mechanism obligation; operative R-2020/01 not acquired.
+**New design:** rule register, separate approval/transition state machines and 12 negative scenarios. **Production code 0; banking tests 0; security scans 0; regulatory requests sent 0; P0 gaps closed 0. DoR FAIL.**
+**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint BG: official R-2025/02 original binary hash/signature/Bulletin/amendments; reconcile Arts 6–7; read 2025 COBAC report; acquire R-2020/01 and R-2021/01/02; obtain institution capital/PCEC signoff and 01/25–02/25 legal/court/settlement proof.
