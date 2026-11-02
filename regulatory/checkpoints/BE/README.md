@@ -1,0 +1,15 @@
+# Checkpoint BE — WP-ACC-005 (research continuation; not work-package closure)
+Date: 2026-11-02. Canonical predecessor: BD, fetched from GitHub before this run. Phase 4 Accounting Core / Financial Integrity. Last inherited completed work package WP-ACC-004 (not reaudited).
+
+## Distinct BE contribution
+1. **Primary publication provenance advanced:** BEAC's official publications page lists COBAC Annual Report 2025; BEAC official server directory identifies `Rapport-annuel-de-la-COBAC-2025-PDF-648-Mo_compressed.pdf` (18 MB, directory timestamp 2026-10-22). The report body remains **unread**: browser PDF fetch timed out and container DNS failed. A different file named `Rapport-Annuel-2025-V-01-09-26.pdf` appears in the same directory, but **must not be equated** to the COBAC report without examination.
+2. **New regulatory-change lead:** Multiple secondary sources reproduce/discuss COBAC R-2025/02, adopted reportedly 2025-12-10, concerning minimum **social capital** for banks and financial establishments. This is distinct from COBAC R-2016/03 **net regulatory own funds** and R-2010/01 **risk coverage**. No issuer-certified R-2025/02 text, authenticated Official Bulletin, or institution-level applicability has been acquired.
+3. **Secondary-source discrepancies:** Some accounts disagree on the prior minimum for financial establishments and the 2026 transitional floor. The accessible nonofficial article reproduction shows 2.5 billion FCFA at end-2026, while one press account says 2 billion. **No executable threshold or deadline is approved.**
+4. **Temporal supersession:** The secondary reproduction describes a 2026 commencement for R-2025/02, a transition for existing institutions, and delayed repeal of R-2009/01 in 2027. This requires *institution-class-, authorization-date-, effective-date-, and transitional-approval-aware* rule resolution; it is not a global replacement of the old regulation.
+5. **R-2021/01 and /02:** BEAC's 2021 Financial Stability Review continues to verify amendment existence only. Signed operative articles and later changes remain missing. R-2020/01 remains a secondary lead.
+
+## Decision
+WP-ACC-005 OPEN / P0 BLOCKED; DoR FAIL. No capital threshold, risk weight, GL posting, dormant-account transfer or settlement rule activated. Do not confuse 2025 banking-capital regulation R-2025/02 with 2025 CEMAC/UMAC Regulations 01/25 and 02/25. Original checkpoint files and prior consolidation preserved.
+
+## NEXT EXACT TASK
+WP-ACC-005 — Checkpoint BF: obtain and authenticate full issuer COBAC R-2025/02 and Official Bulletin publication/commencement/repeal chain, inspect the actual 2025 COBAC annual-report body and annexes, and obtain signed R-2020/01, R-2021/01 and R-2021/02; resolve transitional capital baseline conflicts with issuer evidence; continue PCEC and 01/25–02/25 evidence gates. No financial implementation.
