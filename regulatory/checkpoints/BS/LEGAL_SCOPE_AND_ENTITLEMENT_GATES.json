@@ -1,0 +1,183 @@
+{
+  "checkpoint": "BS",
+  "work_package": "WP-ACC-005",
+  "status": "DESIGN_ONLY_P0_HOLD",
+  "sources": [
+    {
+      "id": "BS-S1",
+      "issuer": "CEMAC/UMAC ministerial committee",
+      "host": "BEAC",
+      "title": "Règlement N°04/18/CEMAC/UMAC/COBAC du 21 décembre 2018",
+      "url": "https://www.beac.int/wp-content/uploads/2019/07/REGLEMENT-N-04-18-CEMAC-UMAC-COBAC-du-21-d%C3%A9cembre-2018.pdf",
+      "evidence": "issuer-hosted scanned PDF; six selected pages visually inspected (printed 1,2,3,5,6,7); full 29-page operative text and current amendment chain NOT verified",
+      "sha256": null
+    },
+    {
+      "id": "BS-S2",
+      "issuer": "BEAC",
+      "title": "Lettre Circulaire 004/DGE/DSMP/2023 du 24 novembre 2023",
+      "url": "https://www.beac.int/wp-content/uploads/2023/12/Lettre-circulaire-N%C2%B0-004-DGE-DSMP-2023.pdf",
+      "evidence": "issuer-hosted 3-page signed scan visually rechecked; current amendments and institution applicability unverified",
+      "sha256": null
+    },
+    {
+      "id": "BS-S3",
+      "issuer": "BEAC",
+      "title": "Réforme des systèmes et moyens de paiement de la CEMAC",
+      "url": "https://www.beac.int/systemes-paiement/presentation-generale/",
+      "evidence": "issuer informational page, crawled 2026-11-02; not bank contract or current SYSTAC2/SYGMA V10 certification"
+    },
+    {
+      "id": "BS-S4",
+      "issuer": "BEAC",
+      "title": "Instructions, Circulaires et Règlements — payment systems public index",
+      "url": "https://www.beac.int/systemes-paiement/instructions-circulaires-reglements/",
+      "evidence": "issuer public index lists 2018 regulation and 2023 circular; no identified amendment on this index, NOT proof of absence of amendments"
+    }
+  ],
+  "scope_conflicts": [
+    {
+      "id": "BS-C01",
+      "issue": "2018 Art 5 eligible PSP includes banks/EMFs/EPs versus 2023 circular introduction PSP 'exclusively' provides payment services",
+      "classification": "apparent terminology/scope tension; not an adjudicated contradiction",
+      "action": "obtain issuer/counsel interpretation; distinguish institution type from authorized service/product; no categorical bank exemption or blanket inclusion"
+    },
+    {
+      "id": "BS-C02",
+      "issue": "2023 Section I erroneous mobile transfers versus Section IV instant transfers/merchant payments 'par téléphone mobile ou non'",
+      "classification": "cross-section product/channel scope ambiguity",
+      "action": "rule engine requires explicit service subtype, channel, transaction type and signed applicability decision; no generic mobile-only or all-rails rule"
+    },
+    {
+      "id": "BS-C03",
+      "issue": "2018 Art 1 exclusions include payments made by central bank/treasuries/postal financial services, while Art 5 covers eligible PSP categories",
+      "classification": "role-specific exclusion and institution/product applicability",
+      "action": "do not infer that all flows routed via central-bank infrastructure are excluded or included; legal assessment required"
+    },
+    {
+      "id": "BS-C04",
+      "issue": "2018 Art 6 payment institution distinct from Art 5 broad PSP, with separate Article 7/8 activity constraints",
+      "classification": "entity-category conflation risk",
+      "action": "never apply payment-institution deposit/account prohibitions mechanically to licensed banks; profile per entity"
+    }
+  ],
+  "candidate_rules": [
+    {
+      "id": "BS-R01",
+      "rule": "payment_restitution_applicability",
+      "key_fields": [
+        "jurisdiction",
+        "institution_type",
+        "institution_license",
+        "authorized_service",
+        "product_id",
+        "transaction_type",
+        "payment_channel",
+        "rail_id",
+        "customer_contract_version",
+        "issuer_instrument_version",
+        "effective_at",
+        "known_at"
+      ],
+      "default": "INACTIVE_LEGAL_REVIEW"
+    },
+    {
+      "id": "BS-R02",
+      "rule": "five_minute_availability_and_claim",
+      "key_fields": [
+        "beneficiary_notification_proof",
+        "payer_execution_notification_proof",
+        "trusted_timestamp",
+        "transfer_type",
+        "product_scope"
+      ],
+      "default": "NO_AUTO_TIMER"
+    },
+    {
+      "id": "BS-R03",
+      "rule": "nonresponse_24_48h",
+      "key_fields": [
+        "merchant_classification",
+        "verified_recipient_notification",
+        "court_or_fraud_hold",
+        "signed_contract_terms"
+      ],
+      "default": "NO_AUTO_CONSENT"
+    },
+    {
+      "id": "BS-R04",
+      "rule": "participant_entitlement",
+      "key_fields": [
+        "participant_mode",
+        "signed_convention_id",
+        "effective_from",
+        "effective_to",
+        "technical_conformance_evidence",
+        "settlement_account_authority",
+        "message_profile_version"
+      ],
+      "default": "NOT_AUTHORIZED"
+    }
+  ],
+  "participant_modes": [
+    {
+      "mode": "DIRECT",
+      "beac_description": "settlement account plus technical access",
+      "requirement": "bank-specific signed agreement, account authority, technical tests"
+    },
+    {
+      "mode": "INDIRECT",
+      "beac_description": "known to system, settlement account, no direct technical access",
+      "requirement": "documented intermediary and bank-specific settlement/technical responsibilities"
+    },
+    {
+      "mode": "SUB_PARTICIPANT",
+      "beac_description": "no own settlement account, not known to system",
+      "requirement": "no fabricated direct settlement account; correspondent contractual and reconciliation evidence"
+    }
+  ],
+  "candidate_domain_ownership": {
+    "RegulatoryPolicy": "legal instruments, provenance, bitemporal applicability, signed interpretations and approval workflow",
+    "InstitutionEntitlement": "bank authorization, product and participant-mode records, effective-dated contracts",
+    "PaymentInstruction": "original instruction, customer authorization, payment idempotency",
+    "RestitutionCase": "claim, notice, hold, consent/objection, legal escalation and evidence clocks",
+    "RailAdapter": "authenticated scheme messages, version and unknown external outcomes",
+    "AccountingCore": "only approved balanced immutable postings for separately authorized return",
+    "IndependentReconciliation": "scheme settlement evidence, journals, suspense and exceptions"
+  },
+  "workflow": [
+    "CLAIM_RECEIVED",
+    "SCOPE_UNRESOLVED",
+    "LEGAL_SCOPE_APPROVED",
+    "RECIPIENT_HOLD_PENDING",
+    "RECIPIENT_HOLD_CONFIRMED",
+    "RECIPIENT_NOTIFIED",
+    "CONSENT_OR_VALID_NONRESPONSE_PENDING",
+    "RECIPIENT_CONTESTED",
+    "COURT_REVIEW",
+    "RETURN_AUTHORIZED",
+    "RETURN_SUBMITTED",
+    "RETURN_OUTCOME_UNKNOWN",
+    "RETURN_EXTERNALLY_CONFIRMED",
+    "RETURN_RECONCILED",
+    "CLOSED"
+  ],
+  "invariants": [
+    "No activation based only on public index or regulator website",
+    "No automatic bank exclusion/inclusion without license/product scope",
+    "No unconditional 5-minute rule across all rails",
+    "No instant module or SYGMA V10 production claim without issuer evidence",
+    "No direct balance mutation, posted journal edit or settlement inferred from clearing ACK",
+    "Unknown external outcome persists across retries/DR and prohibits duplicate returns",
+    "No maker approving own exceptional hold/restitution, no cross-tenant evidence use"
+  ],
+  "open_p0": [
+    "issuer interpretation and full current amendments for 2018 regulation and 2023 circular",
+    "bank/product-specific applicability and contracts",
+    "bank-specific SYSTAC2/SYGMA participant conventions, current profile/conformance/finality",
+    "SYGMA V10 and SYSTAC2 instant issuer go-live",
+    "PCEC signed accounting mappings",
+    "COBAC R-2020/01/R-2021/01-02 operative amendments and D-2025/328 correction",
+    "Regulations 01/25 and 02/25 publication/judicial/settlement evidence"
+  ]
+}
