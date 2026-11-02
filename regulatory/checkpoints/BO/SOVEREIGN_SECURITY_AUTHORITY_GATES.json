@@ -1,0 +1,173 @@
+{
+  "checkpoint": "BO",
+  "as_of": "2026-11-02",
+  "work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "definition_of_ready": "FAIL",
+  "domains": [
+    "prudential_large_exposures",
+    "sovereign_security_custody",
+    "treasury_cashflows",
+    "external_settlement",
+    "accounting_core",
+    "reconciliation"
+  ],
+  "sources": [
+    {
+      "id": "BO-S1",
+      "authority": "BEAC official financial-stability review 2021",
+      "url": "https://www.beac.int/wp-content/uploads/2022/08/RSF_AC_2021.pdf",
+      "evidence_class": "official_secondary_summary",
+      "verified_scope": "existence of R-2021/01 and R-2021/02 and conditional sovereign-security zero-weighting",
+      "not_verified": [
+        "operative clauses",
+        "effective-dated amendment chain",
+        "bank-specific approval"
+      ]
+    },
+    {
+      "id": "BO-S2",
+      "authority": "Cameroon Treasury DGTCFM official operational webpage",
+      "url": "https://dgtcfm.cm/procedure-demission-et-de-remboursement-des-titres/",
+      "evidence_class": "official_operational_description",
+      "verified_scope": "signed securities instructions, CRCT schedule/notice, default notification and high-priority SYGMA instruction",
+      "not_verified": [
+        "participant-specific scheme contracts",
+        "actual settlement finality",
+        "regulatory zero-weight eligibility"
+      ]
+    },
+    {
+      "id": "BO-S3",
+      "authority": "BEAC COBAC regulations catalogue",
+      "url": "https://www.beac.int/supervision-bancaire/reglements-de-cobac/",
+      "evidence_class": "official_index",
+      "verified_scope": "historical R-2010/02 discoverable",
+      "not_verified": [
+        "complete 2020 and 2021 amendments",
+        "current consolidation"
+      ]
+    }
+  ],
+  "independent_gates": [
+    {
+      "id": "BO-G01",
+      "subject": "regulatory_rule",
+      "must_have": [
+        "authenticated operative R-2021/02 and R-2021/01",
+        "all later amendments",
+        "legal publication and effective dates",
+        "approved interpretation"
+      ],
+      "failure": "NO_COMPLIANCE_DETERMINATION"
+    },
+    {
+      "id": "BO-G02",
+      "subject": "instrument_eligibility",
+      "must_have": [
+        "verified issuer and ISIN",
+        "issue documentation",
+        "security or repayment mechanism proof",
+        "applicability to exact instrument and reporting date",
+        "bank-approved method"
+      ],
+      "failure": "NO_COMPLIANCE_DETERMINATION"
+    },
+    {
+      "id": "BO-G03",
+      "subject": "institution_authority",
+      "must_have": [
+        "institution category",
+        "applicable regulatory reporting basis",
+        "supervisory approval if required",
+        "approved signatories",
+        "revocation and expiry check"
+      ],
+      "failure": "NO_COMPLIANCE_DETERMINATION"
+    },
+    {
+      "id": "BO-G04",
+      "subject": "custody",
+      "must_have": [
+        "authorized instruction",
+        "independent custody statement",
+        "position reconciliation"
+      ],
+      "failure": "CUSTODY_UNRECONCILED"
+    },
+    {
+      "id": "BO-G05",
+      "subject": "cashflow",
+      "must_have": [
+        "contractual maturity/coupon schedule",
+        "issuer obligation",
+        "funding status independently verified"
+      ],
+      "failure": "PAYMENT_OUTCOME_UNKNOWN"
+    },
+    {
+      "id": "BO-G06",
+      "subject": "settlement",
+      "must_have": [
+        "authoritative external settlement acknowledgement",
+        "value date",
+        "amount/currency",
+        "participant identity",
+        "independent reconciliation"
+      ],
+      "failure": "PAYMENT_OUTCOME_UNKNOWN"
+    },
+    {
+      "id": "BO-G07",
+      "subject": "accounting",
+      "must_have": [
+        "institution-approved PCEC mappings",
+        "immutable balanced journals",
+        "separate accrual/impairment/reversal policy",
+        "settlement recognition rules"
+      ],
+      "failure": "NO_POSTING_AUTHORITY"
+    }
+  ],
+  "proposed_state_models": {
+    "regulatory_assessment": [
+      "DRAFT",
+      "EVIDENCE_INCOMPLETE",
+      "PENDING_LEGAL_REVIEW",
+      "PENDING_MAKER_CHECKER",
+      "APPROVED_EFFECTIVE",
+      "SUSPENDED",
+      "EXPIRED",
+      "REVOKED",
+      "NO_COMPLIANCE_DETERMINATION"
+    ],
+    "payment_outcome": [
+      "SCHEDULED",
+      "DUE",
+      "AWAITING_EXTERNAL_CONFIRMATION",
+      "EXTERNAL_OUTCOME_UNKNOWN",
+      "DEFAULT_NOTIFIED",
+      "CONFIRMED_SETTLED",
+      "RECONCILIATION_EXCEPTION",
+      "RECONCILED"
+    ],
+    "note": "State models are proposals only; statuses cannot themselves create or destroy money. Default notice and settlement confirmation must remain independently evidenced."
+  },
+  "invariants": [
+    "zero prudential weight does not imply zero credit risk, no impairment, or cash settlement",
+    "scheduled CRCT payment does not imply finality",
+    "high-priority SYGMA order does not imply executed payment",
+    "no direct balance mutation or posting on compliance-state change",
+    "missing issuer amendment or institution permission fails closed",
+    "replay and retry cannot duplicate accounting journals",
+    "historical filed assessments are immutable and restated explicitly"
+  ],
+  "p0_open": [
+    "issuer authenticated 2020/2021 amendment chain",
+    "D-2025/328 issuer correction",
+    "instrument-level secured repayment criteria",
+    "bank-specific eligibility and PCEC mappings",
+    "01/25–02/25 judicial/publication/settlement evidence"
+  ],
+  "policy_activation_authorized": false
+}
