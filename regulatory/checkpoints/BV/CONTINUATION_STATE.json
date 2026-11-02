@@ -1,0 +1,31 @@
+{
+  "checkpoint": "BV",
+  "date": "2026-11-02",
+  "predecessor": "BU",
+  "predecessor_verified_main_commit": "185eeecd42d725c7bc8d65bf930ac87c2269d145",
+  "phase": "Phase 4 — Accounting Core / Financial Integrity",
+  "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+  "active_work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "definition_of_ready": "FAIL",
+  "work_packages_attempted": 1,
+  "work_packages_completed": 0,
+  "work_packages_kept_open": 1,
+  "work_packages_blocked_from_closure": 1,
+  "dependent_packages_attempted": 0,
+  "new_negative_scenarios_specified": 16,
+  "banking_tests_executed": 0,
+  "production_code_written": 0,
+  "security_scans_executed": 0,
+  "regulatory_requests_transmitted": 0,
+  "p0_gaps_closed": 0,
+  "source_pdf_pages_visually_inspected": 6,
+  "original_pdf_binary_acquired": false,
+  "original_pdf_sha256_verified": false,
+  "new_findings": [
+    "Third-party reproduction of historical COBAC R-2019/02 inspected all six pages; 2019 capital/safeguarding/prudential/incident clauses mapped as NON_EXECUTABLE",
+    "BEAC-hosted COBAC 2024 report embeds R-2024/01: broader institution and incident scope; Article 41 effective 2025-01-01 plus 12/18-month transition while explanatory prose labels 2026 dates as entry into force"
+  ],
+  "remote_delivery_status": "PENDING_VERIFICATION_AT_DOCUMENT_CREATION",
+  "next_exact_task": "WP-ACC-005 — Checkpoint BW: authenticate signed operative R-2019/01–02 and amendment chains; reconcile R-2024/01 Article 41 legal commencement versus report transitional dates; obtain current COBAC incident guidance, institution-approved safeguarding/PCEC/reporting and payment restitution/participation/finality evidence; maintain P0."
+}
