@@ -1,0 +1,266 @@
+{
+  "checkpoint": "BZ",
+  "status": "PROPOSED_NOT_IMPLEMENTED",
+  "work_package": "WP-ACC-005",
+  "evidence_level": "ISSUER_HOSTED_HISTORICAL_PDF_RENDERING_NO_BINARY_HASH",
+  "controls": [
+    {
+      "id": "BZ-C01",
+      "name": "Instrument identity and legal-date conflict",
+      "gate": "01/GR/2014 March-vs-May signing date and charter 2013-vs-2014 citation quarantined until issuer/Bulletin Officiel correction",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C02",
+      "name": "Scoped surveillance classification",
+      "gate": "Differentiate BEAC-managed rails, SWIFT, historical exclusions and current institution/product scope; never blanket-exempt a current rail",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C03",
+      "name": "Participant admission",
+      "gate": "Require current CRSP/BEAC authorization, bank agreement, effective rail version and institution scoping before entitlement",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C04",
+      "name": "Supervisory report schedule",
+      "gate": "Require authenticated CRSP circular specifying schema, period, channel, receipt and effective date; historical Article 20 alone insufficient",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C05",
+      "name": "Four-domain evidence",
+      "gate": "Trace legal/technical/financial/operational surveillance to signed evidence, liquidity, nonrepudiation and independent reconciliation",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C06",
+      "name": "Independent supervisor obligations",
+      "gate": "BEAC rail reports and COBAC ICT incident reports are separately assessed; neither receipt substitutes for the other",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C07",
+      "name": "Corrective action case",
+      "gate": "Model findings, institution observations, response, corrective plan, evidence, supervisor follow-up and appeal separately",
+      "severity": "P1",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C08",
+      "name": "Sanction state authority",
+      "gate": "Do not mark a bank suspended/excluded without current issuer decision and effective-dated notice; prevent unauthorized rail activity if verified",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C09",
+      "name": "External financial fact isolation",
+      "gate": "Regulatory findings, sanctions, reporting or restitution requests never create money; only verified settlement movement with approved PCEC posts",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C10",
+      "name": "Historical deadline quarantine",
+      "gate": "Do not apply 2014 six-month transition, report cadence or legacy threshold as a current bank deadline without current law",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C11",
+      "name": "Evidence custody and privacy",
+      "gate": "Restrict supervisor data to approved lawful scope; preserve source provenance, hash when available, signed receipts, tamper-evident audit",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    },
+    {
+      "id": "BZ-C12",
+      "name": "Issuer interface disabled by default",
+      "gate": "No live SANGHA/SYSTAC2/SYGMA adapter, 001/GR/2024 auth policy or automatic submission absent authorized specs and contracts",
+      "severity": "P0",
+      "approval": "NOT_APPROVED_FOR_PRODUCTION"
+    }
+  ],
+  "models": {
+    "RegulatoryInstrumentVersion": {
+      "fields": [
+        "issuer",
+        "instrument_full_id",
+        "source_type",
+        "signed_date_claim",
+        "signed_date_visual",
+        "publication_date",
+        "effective_from",
+        "supersedes",
+        "amendment_chain",
+        "source_url",
+        "binary_sha256",
+        "authentication_status",
+        "legal_approval"
+      ],
+      "states": [
+        "DISCOVERED",
+        "CONFLICTED",
+        "ISSUER_AUTHENTICATED",
+        "LEGAL_APPROVED",
+        "SUPERSEDED"
+      ],
+      "rule": "CONFLICTED blocks normative activation"
+    },
+    "ParticipantRailEntitlement": {
+      "fields": [
+        "institution_id",
+        "rail_id",
+        "scheme_version",
+        "agreement_evidence_id",
+        "charter_signature_id",
+        "issuer_approval_id",
+        "participation_mode",
+        "effective_from",
+        "effective_to",
+        "status"
+      ],
+      "states": [
+        "UNVERIFIED",
+        "PENDING",
+        "ACTIVE_VERIFIED",
+        "SUSPENDED_VERIFIED",
+        "EXPIRED"
+      ],
+      "rule": "historical text never grants entitlement"
+    },
+    "SurveillanceReportingObligation": {
+      "fields": [
+        "institution_id",
+        "supervisor",
+        "rail_id",
+        "instrument_version_id",
+        "circular_id",
+        "report_schema_id",
+        "report_period",
+        "deadline_policy",
+        "channel",
+        "signoff_policy",
+        "receipt_proof"
+      ],
+      "states": [
+        "UNCONFIGURED",
+        "LEGAL_REVIEW",
+        "AUTHORIZED",
+        "RETIRED"
+      ],
+      "rule": "no assumed cadence or delivery"
+    },
+    "SurveillanceSubmission": {
+      "fields": [
+        "institution_id",
+        "obligation_id",
+        "period_key",
+        "payload_digest",
+        "maker_id",
+        "checker_id",
+        "external_submission_id",
+        "issuer_receipt_id",
+        "submitted_at"
+      ],
+      "states": [
+        "DRAFT",
+        "APPROVED",
+        "SENT_UNCONFIRMED",
+        "ACKNOWLEDGED",
+        "REJECTED",
+        "UNKNOWN_OUTCOME",
+        "CLOSED"
+      ],
+      "rule": "UNKNOWN_OUTCOME is not compliance"
+    },
+    "SupervisoryFinding": {
+      "fields": [
+        "institution_id",
+        "finding_id",
+        "supervisor",
+        "source_report_id",
+        "observations",
+        "action_plan_id",
+        "due_date_authority",
+        "issuer_decision_id",
+        "appeal_id"
+      ],
+      "states": [
+        "RECEIVED",
+        "UNDER_REVIEW",
+        "RESPONSE_PREPARED",
+        "RESPONSE_SUBMITTED",
+        "PLAN_ACTIVE",
+        "FOLLOWUP_PENDING",
+        "CLOSED_WITH_EVIDENCE"
+      ],
+      "rule": "never infer sanction from finding"
+    }
+  },
+  "api_contract_proposals": [
+    {
+      "operation": "RecordIssuerInstrumentEvidence",
+      "idempotency": "issuer+instrument+source_digest",
+      "effect": "evidence only; conflict detection; no rule activation"
+    },
+    {
+      "operation": "ApproveSurveillanceObligation",
+      "idempotency": "institution+supervisor+rail+circular_version",
+      "preconditions": [
+        "authenticated operative circular",
+        "legal maker-checker approval",
+        "approved channel/schema"
+      ],
+      "effect": "effective-dated obligation metadata only"
+    },
+    {
+      "operation": "SubmitSurveillanceReport",
+      "idempotency": "institution+obligation+period+payload_digest",
+      "preconditions": [
+        "signed agreement",
+        "approved schema",
+        "separated checker",
+        "authorized endpoint"
+      ],
+      "effect": "submission attempt and receipt tracking; no accounting"
+    },
+    {
+      "operation": "RecordSupervisorDecision",
+      "idempotency": "institution+decision_issuer+decision_ref",
+      "preconditions": [
+        "issuer evidence",
+        "effective date",
+        "segregated review"
+      ],
+      "effect": "entitlement/workflow update only"
+    }
+  ],
+  "events": [
+    "RegulatorySourceConflictDetected.v1",
+    "SurveillanceObligationApproved.v1",
+    "SurveillanceReportAcknowledged.v1",
+    "SupervisoryFindingRecorded.v1",
+    "RailParticipationSuspendedVerified.v1"
+  ],
+  "invariants": [
+    "double_entry_balanced",
+    "immutable_posted_journals",
+    "exact_money",
+    "no_direct_balance_mutation",
+    "idempotent_replay",
+    "external_settlement_evidence_required",
+    "no_supervisor_receipt_inference",
+    "no_cross_institution_evidence",
+    "no_2014_deadline_activation",
+    "no_unauthorized_rail_activation"
+  ]
+}
