@@ -1,0 +1,43 @@
+{
+  "batch": 37,
+  "id": "ARC-017",
+  "title": "Performance envelope and capacity validation plan",
+  "status": "DRAFT_REVIEW_PENDING",
+  "model": [
+    "workload_id:string:scenario ID",
+    "institution_profile_id:uuid:licensed scope",
+    "operation_class:enum:read/posting/transfer/report/batch",
+    "peak_tps:integer:approved modeled transactions per second",
+    "concurrency:integer:active sessions",
+    "p95_latency_ms:integer:measured target",
+    "error_budget:string:approved SLO policy",
+    "ledger_reconcile_seconds:integer:measured cutoff",
+    "queue_lag_ms:integer:outbox and inbox delay",
+    "dataset_profile:string:realistic anonymized dataset volume"
+  ],
+  "workflow": [
+    "Collect institutional branch/channel/batch and seasonality assumptions",
+    "Define separately steady, peak, stress, saturation and recovery scenarios",
+    "Generate approved anonymized workload fixtures with realistic account and event distribution",
+    "Measure request p50/p95/p99, queue lag, posting conservation and report consistency",
+    "Repeat under database failure, broker replay and delayed external network conditions",
+    "Publish hardware profile, reproducible results, bottlenecks and acceptance decisions"
+  ],
+  "requirements": [
+    "Do not infer capacity from a marketing target or an unexecuted synthetic benchmark",
+    "Correctness and end-of-day reconciliation outrank higher nominal TPS",
+    "Record external dependency constraints separately from internal application performance",
+    "Measure tenant isolation and authorization cost under concurrent workloads",
+    "Performance tests must ensure zero duplicate or unbalanced journal postings",
+    "Stress tests must preserve complete audit and traceability while redacting sensitive data"
+  ],
+  "tests": [
+    "Run peak posting workload and compare journal debits/credits",
+    "Measure read projection staleness during high event volume",
+    "Introduce broker lag and verify recovery without duplicate commands",
+    "Test per-institution resource limits under multitenant load",
+    "Benchmark restore and reconciliation before allowing production resume"
+  ],
+  "gate": "Signed workload assumptions, available benchmark environment, executed load/fault tests and independent Operations/CFO result review.",
+  "executed_tests": 0
+}
