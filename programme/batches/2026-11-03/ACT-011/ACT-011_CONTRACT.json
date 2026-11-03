@@ -1,0 +1,43 @@
+{
+  "id": "ACT-011",
+  "batch": 71,
+  "title": "Account-to-ledger contract and authoritative balance views",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "balance_query_id:uuid:traceable request",
+    "institution_id:uuid:legal entity",
+    "account_id:uuid:account contract",
+    "as_of:datetime:valuation cutoff",
+    "currency:string:currency code",
+    "ledger_snapshot_ref:string:source cursor",
+    "posted_balance:string:exact amount",
+    "pending_credits:string:non-final funds",
+    "pending_debits:string:reserved instructions",
+    "available_balance:string:policy-derived view"
+  ],
+  "workflow": [
+    "Authenticate actor and account membership/mandate scope",
+    "Resolve authoritative ledger snapshot and as-of time",
+    "Compute posted and available balances separately",
+    "Apply approved holds and pending obligations without manufacturing postings",
+    "Return freshness and reconciliation status with values",
+    "Escalate unbalanced or stale snapshots to financial controls"
+  ],
+  "invariants": [
+    "Account service cannot directly mutate ledger tables",
+    "Available balance is not necessarily posted balance",
+    "Pending inbound funds may not be spendable without approved settlement evidence",
+    "Cross-currency conversion requires explicit reviewed rate source",
+    "Balance snapshots must reconcile to exact journal history",
+    "Failures must not return misleading zero as a fallback"
+  ],
+  "planned_tests": [
+    "Stale projection visibly marked",
+    "Cross-tenant balance query denied",
+    "Pending credit does not automatically increase posted amount",
+    "Ledger replay yields same as-of balance",
+    "Direct balance-update path absent"
+  ],
+  "approval_gate": "CFO-approved balance semantics, verified accounting rules and ledger reconciliation tests.",
+  "executed_tests": 0
+}
