@@ -1,0 +1,44 @@
+{
+  "package": "OPS-013",
+  "batch": 93,
+  "title": "Core banking legacy migration and reconciliation protocol",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "migration_run_id:uuid:run identity",
+    "source_system_id:string:legacy origin",
+    "institution_id:uuid:target entity",
+    "source_snapshot_digest:string:measured data proof",
+    "mapping_version:string:approved transformation rules",
+    "record_count:integer:reconcilable total",
+    "debit_total:string:exact source debit sum",
+    "credit_total:string:exact source credit sum",
+    "exception_register_ref:uuid:unresolved cases",
+    "approver_ref:uuid:cutover authority"
+  ],
+  "workflow": [
+    "Acquire lawfully permitted source snapshot and lineage inventory",
+    "Define deterministic IDs, encoding, date, product and accounting crosswalks",
+    "Validate schema, identity links and effective rule versions in dry run",
+    "Compare source-to-target record counts and exact monetary control totals",
+    "Quarantine unmatched/ambiguous accounts and obtain independent remediation",
+    "Cut over only after authorized trial balance and operational sign-off"
+  ],
+  "invariants": [
+    "No guessed 312/322 PCEC mapping in conversion",
+    "Never overwrite historical posting to make totals balance",
+    "Record original source bytes/hashes when actually obtained",
+    "A duplicate migration attempt must not double-credit accounts",
+    "Source/target disagreement fails the affected cutover",
+    "Customer identity and legal mandates retain provenance",
+    "Cutover time and reversible technical operations are separately recorded"
+  ],
+  "acceptance_tests": [
+    "Duplicate source row cannot create duplicate funds",
+    "Unmapped account classification blocks cutover",
+    "Debit/credit totals exact within approved currency model",
+    "Orphan mandate triggers exception",
+    "Restored rehearsal preserves source-to-target audit references"
+  ],
+  "independent_gate": "Authentic source data access, reviewed PCEC mapping, CFO/accounting acceptance and executed dry-run reconciliation.",
+  "actual_tests_executed": 0
+}
