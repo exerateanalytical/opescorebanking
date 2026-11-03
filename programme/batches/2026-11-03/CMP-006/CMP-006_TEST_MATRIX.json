@@ -1,0 +1,36 @@
+{
+  "work_package": "CMP-006",
+  "executed": false,
+  "cases": [
+    {
+      "id": "CMP-006-TEST-1",
+      "description": "Unapproved signer blocked",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-006-TEST-2",
+      "description": "No authority endpoint configured prevents submission",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-006-TEST-3",
+      "description": "Transport timeout remains unknown receipt",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-006-TEST-4",
+      "description": "Case detail not visible to teller channel",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-006-TEST-5",
+      "description": "Corrected filing links to original submission",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}

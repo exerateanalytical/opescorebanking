@@ -1,0 +1,93 @@
+{
+  "id": "CMP-006",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "disclosure_case_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Restricted case"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Reporting entity"
+      },
+      "case_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Internal investigation"
+      },
+      "reporting_authority_ref": {
+        "type": "string",
+        "description": "Competent destination"
+      },
+      "legal_basis_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Applicable obligation"
+      },
+      "report_content_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Restricted evidence"
+      },
+      "maker_id": {
+        "type": "string",
+        "description": "Compliance preparer"
+      },
+      "checker_id": {
+        "type": "string",
+        "description": "Authorized reporting officer"
+      },
+      "submission_receipt_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Actual external proof"
+      },
+      "status": {
+        "type": "string",
+        "description": "Draft approved submitted acknowledged"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "DRAFT",
+      "to": "REVIEW",
+      "guard": "required evidence assembled"
+    },
+    {
+      "from": "REVIEW",
+      "to": "APPROVED",
+      "guard": "independent authorized signoff"
+    },
+    {
+      "from": "APPROVED",
+      "to": "SUBMITTED",
+      "guard": "secure transfer attempted"
+    },
+    {
+      "from": "SUBMITTED",
+      "to": "ACKNOWLEDGED",
+      "guard": "verifiable authority receipt"
+    },
+    {
+      "from": "ANY",
+      "to": "EXCEPTION",
+      "guard": "transmission uncertainty"
+    }
+  ],
+  "requirements": [
+    "Internal risk alert does not automatically create statutory report",
+    "No fabricated submission, authority acknowledgement or filing timeliness",
+    "Tipping-off restrictions require source-backed legal policy",
+    "Only named authorized reporting officers can submit restricted disclosures",
+    "Customer account posting is not modified to prepare a report",
+    "Retention and disclosure controls are effective-dated and legal reviewed"
+  ],
+  "release_gate": "Authenticated GABAC/national competent framework and current reporting instructions, compliance officer approval and secure delivery proof."
+}
