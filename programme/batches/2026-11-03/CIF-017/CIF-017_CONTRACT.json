@@ -1,0 +1,43 @@
+{
+  "package": "CIF-017",
+  "batch": 57,
+  "title": "Identity audit, retention and lawful evidence access",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema_fields": [
+    "audit_record_id:uuid:append-only evidence event",
+    "institution_id:uuid:legal controller",
+    "party_ref:uuid:subject of record",
+    "event_class:enum:created/verified/rejected/amended/restricted/accessed",
+    "actor_id:string:authorized origin",
+    "source_evidence_ref:uuid|null:restricted proof",
+    "decision_version:string:review status snapshot",
+    "retention_class:string:lawful policy",
+    "occurred_at:datetime:source observation",
+    "recorded_at:datetime:repository ingestion"
+  ],
+  "workflow": [
+    "Capture onboarding and identity change with actor, purpose and source identifier",
+    "Write immutable metadata audit under controlled access separate from raw evidence storage",
+    "Determine lawful retention period from institution/jurisdiction policy",
+    "Provide purpose-scoped retrieval to qualified auditors or authorized customers",
+    "Apply redaction, pseudonymization or lawful deletion when retention conditions permit",
+    "Document export, access request and destruction decisions with audit proof"
+  ],
+  "requirements": [
+    "Legal statutory retention and customer deletion requests require case-by-case qualified resolution",
+    "Do not store unredacted IDs or document images in general application logs",
+    "Metadata audit cannot be edited by routine CIF users",
+    "Regulated customer records cannot be exported across institutions without legal authorization",
+    "Archived evidence must be encrypted, access logged and cryptographically verifiable where policy requires",
+    "Period expiry alone does not authorize deletion under active legal hold or litigation preservation"
+  ],
+  "acceptance_cases": [
+    "Authorized audit reconstructs every identity approval version",
+    "Ordinary user cannot read protected evidence bytes",
+    "Deletion while legal hold active denied with reason",
+    "Audit export stays within subject/institution scope",
+    "Tampered audit event fails integrity verification"
+  ],
+  "approval_gate": "Legal retention schedule, privacy/records authority, key custody rules and audit-retrieval tests.",
+  "executed_tests": 0
+}
