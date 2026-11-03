@@ -1,0 +1,44 @@
+{
+  "id": "ACT-001",
+  "batch": 61,
+  "title": "Product factory and catalogue ownership",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "product_id:uuid:stable identifier",
+    "institution_id:uuid:licensed entity",
+    "product_family:enum:deposit/current/savings/credit",
+    "product_code:string:unique code",
+    "display_name:string:customer-facing label",
+    "status:enum:draft/review/approved/retired",
+    "version:string:immutable edition",
+    "effective_from:datetime:activation interval",
+    "eligibility_policy_id:string:policy link",
+    "approval_ref:uuid:maker-checker reference"
+  ],
+  "workflow": [
+    "Open a draft product owned by one institution",
+    "Define family, supported currencies and permitted customer segments",
+    "Link applicable jurisdiction and regulatory authority evidence",
+    "Attach pricing, accounting and lifecycle policy candidates",
+    "Route product to finance/risk/legal approvals",
+    "Publish only institution-approved immutable edition"
+  ],
+  "invariants": [
+    "Product definition does not itself create account or move funds",
+    "Product changes create versions rather than rewriting active customer contracts",
+    "Each product currency and institution combination is validated",
+    "Product approval cannot bypass unresolved PCEC mapping",
+    "Retired editions remain readable for historical calculation",
+    "Default product availability is disabled pending approvals",
+    "Product catalogue cannot assert a licensed offering without institution authorization"
+  ],
+  "planned_tests": [
+    "Draft product cannot open an account",
+    "Conflicting product code for same institution rejected",
+    "Prior contract remains pinned to prior terms",
+    "Cross-institution product ID rejected",
+    "Unapproved currency cannot be activated"
+  ],
+  "approval_gate": "Licensed institution profile, product owner, regulatory eligibility, CFO mapping and acceptance reviewer.",
+  "executed_tests": 0
+}
