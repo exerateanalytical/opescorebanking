@@ -1,0 +1,43 @@
+{
+  "id": "ACT-006",
+  "batch": 66,
+  "title": "Account opening workflow and customer binding",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "account_application_id:uuid:opening request",
+    "institution_id:uuid:legal scope",
+    "customer_party_id:uuid:verified customer",
+    "product_version:string:agreed terms",
+    "requested_currency:string:approved currency",
+    "branch_id:uuid:responsible branch",
+    "kyc_decision_ref:uuid:identity/risk clearance",
+    "mandate_refs:list:authorized signatories",
+    "status:enum:draft/review/approved/opened/rejected",
+    "opened_account_ref:uuid|null:created account"
+  ],
+  "workflow": [
+    "Create an idempotent account application with selected product",
+    "Validate CIF/KYB, required evidence and risk restrictions",
+    "Check license, country, customer and product eligibility",
+    "Obtain agreement and mandate approvals including dual control as needed",
+    "Allocate unique account ID only after approval",
+    "Publish AccountOpened event without posting initial monetary balance"
+  ],
+  "invariants": [
+    "Opening account does not create money or imply a deposit transaction",
+    "No KYC clearance or unapproved product means no opening",
+    "Customer controls cannot be bypassed through branch/API channel",
+    "Account numbers are unique per bank and format policy",
+    "Document approval and customer agreement version immutably",
+    "Cross-institution customer IDs cannot bind to foreign accounts"
+  ],
+  "planned_tests": [
+    "Repeated opening request yields one account",
+    "Rejected application cannot open account",
+    "Missing KYC keeps application pending",
+    "No ledger journal from opening alone",
+    "Unauthorized signatory rejected"
+  ],
+  "approval_gate": "Approved CIF profile, product eligibility, account agreement and bank-specific account-number policy.",
+  "executed_tests": 0
+}
