@@ -1,0 +1,79 @@
+{
+  "id": "ARC-012",
+  "batch": 32,
+  "title": "Institution scoping and data isolation",
+  "status": "DRAFT_DELIVERED_AWAITING_INDEPENDENT_ACCEPTANCE",
+  "fields": [
+    {
+      "name": "institution_id",
+      "type": "uuid",
+      "description": "immutable authorization partition"
+    },
+    {
+      "name": "legal_entity_id",
+      "type": "uuid",
+      "description": "regulated entity reference"
+    },
+    {
+      "name": "user_subject",
+      "type": "string",
+      "description": "OIDC authenticated actor"
+    },
+    {
+      "name": "acting_role_id",
+      "type": "string",
+      "description": "role asserted after server-side policy"
+    },
+    {
+      "name": "branch_scope",
+      "type": "list",
+      "description": "authorized operational branches"
+    },
+    {
+      "name": "resource_owner_id",
+      "type": "uuid",
+      "description": "record ownership"
+    },
+    {
+      "name": "operation",
+      "type": "string",
+      "description": "requested action"
+    },
+    {
+      "name": "policy_version",
+      "type": "string",
+      "description": "approved authorization version"
+    },
+    {
+      "name": "decision_id",
+      "type": "uuid",
+      "description": "audited policy decision"
+    }
+  ],
+  "workflow": [
+    "Authenticate subject and validate token issuer/audience",
+    "Resolve licensed institution from a trusted server-side context",
+    "Bind actor role, branch and purpose to one policy decision",
+    "Verify resource ownership and action entitlement before query/write",
+    "Apply institution filter in data access and event publication",
+    "Record denied access and alert on anomalous cross-scope attempts"
+  ],
+  "requirements": [
+    "Never trust client-supplied institution ID without server-side membership proof",
+    "Enforce authorization on individual objects and nested relationship references",
+    "Make role policies versioned, maker-checker controlled and independently auditable",
+    "Separate encryption keys, secrets, settlement credentials and production identities by approved trust scope",
+    "Prohibit default fallbacks from one institution's policy or accounts into another's workflow",
+    "Support explicit supervisory access only under recorded legal authority and least privilege"
+  ],
+  "acceptance_cases": [
+    "Cross-tenant customer ID fetch returns denied without data leakage",
+    "Cross-tenant mutation is rejected even for an authorized user of another institution",
+    "Token from wrong audience or revoked role cannot access records",
+    "Event consumer ignores payload with mismatched institution scope",
+    "Admin cannot approve their own institution-level privilege escalation"
+  ],
+  "approval_gate": "Institution profile, legal privacy review, IAM design approval and executable isolation test evidence.",
+  "code_status": "NOT_STARTED",
+  "tests_executed": 0
+}
