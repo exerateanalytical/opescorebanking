@@ -1,0 +1,44 @@
+{
+  "package": "CHN-005",
+  "batch": 105,
+  "title": "Channel user roles, account delegation and capability decisions",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "permission_decision_id:uuid:authorization result",
+    "institution_id:uuid:licensed scope",
+    "channel_id:string:client surface",
+    "principal_id:string:authenticated actor",
+    "account_id:uuid|null:affected object",
+    "action:string:read/prepare/approve/submit",
+    "mandate_ref:uuid|null:legal authorization",
+    "risk_state:string:applicable condition",
+    "policy_version:string:approved edition",
+    "result:enum:allow/deny/challenge"
+  ],
+  "workflow": [
+    "Validate identity token origin and intended audience",
+    "Resolve institution, channel and exact account/resource ownership",
+    "Apply relevant customer, joint mandate and corporate approval scope",
+    "Check account restrictions and allowed current product capabilities",
+    "Require step-up or additional signer where risk policy demands",
+    "Record decision ID without disclosing confidential screening results"
+  ],
+  "invariants": [
+    "Hidden UI control does not count as a permission check",
+    "Backend must reject cross-tenant object references and IDs",
+    "User/account/mandate approval evaluated at request time, not just login",
+    "An active role cannot override an expired corporate signing mandate",
+    "Policy version is reproducible for forensic audit",
+    "Read account scope does not automatically grant transfer authority",
+    "Delegation must be revocable and effective-dated"
+  ],
+  "acceptance_tests": [
+    "Read-only user cannot submit payment",
+    "Revoked signer fails next command",
+    "Wrong-tenant account selection denied",
+    "Stale role token cannot elevate privileges",
+    "Risk step-up challenge persists until satisfied"
+  ],
+  "independent_gate": "Legal mandate rules, IAM role/permission contract and executable IDOR and privilege-abuse tests.",
+  "actual_tests_executed": 0
+}
