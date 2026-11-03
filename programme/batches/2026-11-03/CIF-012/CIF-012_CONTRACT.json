@@ -1,0 +1,43 @@
+{
+  "id": "CIF-012",
+  "batch": 52,
+  "title": "Politically exposed person assessment and control",
+  "state": "DRAFT_REVIEW_OPEN",
+  "data_schema": [
+    "pep_case_id:uuid:review case",
+    "party_id:uuid:screened person",
+    "institution_id:uuid:regulated scope",
+    "list_source:string:approved evidence provider",
+    "source_edition:string:source version",
+    "pep_relationship_type:enum:self/family/close_associate/potential",
+    "office_or_role:string|null:observed public function",
+    "relevance_interval:date_range|null:time scope",
+    "matching_evidence:list:reason-coded source refs",
+    "pep_decision:enum:unresolved/confirmed/false_positive/expired_review"
+  ],
+  "workflow": [
+    "Identify applicable PEP and related-person policies per institution and product",
+    "Screen subject plus required connected parties using permitted sources",
+    "Review candidate role, relationship, jurisdiction and effective timeframe",
+    "Escalate uncertain matches for human disposition and reasoned evidence",
+    "Apply approved risk-appropriate diligence and monitoring controls",
+    "Set periodic/event-driven review with immutable version history"
+  ],
+  "controls": [
+    "Name similarity alone does not establish PEP status",
+    "PEP indication does not automatically establish criminality, sanctions or prohibition",
+    "Screening must distinguish current, former and related-person findings where policy requires",
+    "Do not hardcode a universal declassification period without applicable legal approval",
+    "Treat unavailable provider or disputed match as explicit pending case, not cleared",
+    "Protect restricted PEP investigation data and limit disclosures by role and purpose"
+  ],
+  "planned_test_cases": [
+    "False-positive match requires reviewed evidence and audit",
+    "Potential PEP with missing source cannot auto-clear",
+    "Former public-office record evaluated under effective-dated policy",
+    "Unauthorized staff cannot see restricted investigation notes",
+    "Source edition change triggers controlled reassessment"
+  ],
+  "review_gate": "Qualified AML interpretation, approved PEP sources and institution-specific screening and EDD policies.",
+  "tests_executed": 0
+}
