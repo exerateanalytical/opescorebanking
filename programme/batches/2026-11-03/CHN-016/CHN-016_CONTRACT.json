@@ -1,0 +1,44 @@
+{
+  "package": "CHN-016",
+  "batch": 116,
+  "title": "Digital-channel fraud, transaction risk and protective friction",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "risk_session_id:uuid:risk decision context",
+    "institution_id:uuid:licensed entity",
+    "subject_id:string:actor",
+    "device_binding_ref:uuid|null:trusted device",
+    "payment_draft_ref:uuid|null:proposed action",
+    "signal_codes:list:policy-allowed observations",
+    "risk_policy_version:string:approved model",
+    "risk_disposition:enum:allow/challenge/review/deny",
+    "review_ref:uuid|null:human case",
+    "audit_ref:uuid:traceable decision"
+  ],
+  "workflow": [
+    "Collect lawful security and behavioral signals with purpose restrictions",
+    "Evaluate approved transaction, account, device and customer controls",
+    "Present step-up, denial or review without leaking confidential fraud rules",
+    "Bind any approval to unchanged financial command digest",
+    "Escalate suspicious, uncertain or conflicting signals for human review",
+    "Preserve decision evidence and subsequent account/incident correlations"
+  ],
+  "invariants": [
+    "Fraud signal is not an independent declaration of legal guilt",
+    "Unapproved model or data inputs cannot decide regulated access",
+    "Risk denial must not silently mutate financial journals",
+    "Unknown risk result cannot be normalized to safe by default",
+    "Protected characteristics and proxies require fairness/privacy scrutiny",
+    "Cross-institution risk events never leak customer information",
+    "Fraud exception override requires accountable independent checker"
+  ],
+  "acceptance_tests": [
+    "Unverified high-risk signal triggers review state",
+    "Challenge on modified payment digest invalidated",
+    "Cross-tenant device evidence rejected",
+    "Repeated fraud event deduplicated",
+    "Privileged risk override logged and independently authorized"
+  ],
+  "independent_gate": "Bank fraud/AML policy, privacy fairness review, risk governance and actually executed adversarial tests.",
+  "actual_tests_executed": 0
+}
