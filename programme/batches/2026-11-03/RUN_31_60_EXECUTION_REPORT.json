@@ -1,0 +1,22 @@
+{
+  "run": "2",
+  "range": [
+    31,
+    60
+  ],
+  "planned": 30,
+  "documentation_drafts_delivered": 30,
+  "verified_wp_complete": 0,
+  "banking_tests_executed": 0,
+  "production_code_added": 0,
+  "blocked_historical_wp": [
+    "WP-ACC-005"
+  ],
+  "unresolved_recovery_wp": [
+    "GOV-REC-001"
+  ],
+  "repo": "exerateanalytical/opescorebanking",
+  "source_branch": "main",
+  "base_commit": "da6d5ce4a6044619241e6dff26de64f1faf14267",
+  "status": "PENDING_FINAL_REMOTE_VERIFICATION_AT_COMMIT_TIME"
+}

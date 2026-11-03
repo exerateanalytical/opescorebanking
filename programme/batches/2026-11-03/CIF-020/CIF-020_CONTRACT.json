@@ -1,0 +1,44 @@
+{
+  "id": "CIF-020",
+  "batch": 60,
+  "title": "CIF onboarding acceptance framework and handoff readiness",
+  "status": "DRAFT_REVIEW_OPEN",
+  "fields": [
+    "acceptance_pack_id:uuid:review dossier",
+    "institution_profile_id:uuid:deployment applicability",
+    "work_package_refs:list:CIF-001..CIF-019",
+    "requirement_count:integer:traceable documented controls",
+    "test_case_refs:list:actual executable cases",
+    "executed_result_refs:list:only genuine run artifacts",
+    "regulatory_source_refs:list:verified instrument evidence",
+    "open_findings:list:blocking and advisory items",
+    "reviewer_roles:list:legal/compliance/security/ops/QA",
+    "approval_state:enum:draft/review/blocked/accepted"
+  ],
+  "workflow": [
+    "Map CIF-001..019 candidate controls and schemas to source requirements",
+    "Review country/institution identity policies, privacy, KYC/KYB and risk sources",
+    "Agree state machines, access roles, APIs, event contracts and retention policies",
+    "Build and execute positive, negative, concurrency and cross-institution tests in controlled environment",
+    "Require qualified compliance, security, operations, legal and QA evidence-based reviews",
+    "Approve only bounded functions that satisfy their full 15-point Definition of Ready and specific acceptance evidence"
+  ],
+  "requirements": [
+    "Do not mark 20 CIF design checkpoints as 20 completed reviewed work packages",
+    "Onboarding API must enforce identity/risk/approval restrictions before customer activation",
+    "Account and payments contexts remain separate and retain their independent legal/accounting gates",
+    "Any missing binding local KYC rule or unauthorized source leaves dependent capability blocked",
+    "Final approval must cite exact Git revision, test logs, reviewer identity and institution profile",
+    "Document-only acceptance is different from tested implementation and go-live certification"
+  ],
+  "test_cases": [
+    "Audit every CIF package for assigned reviewer and accepted criteria",
+    "Demonstrate prohibited case approval fails all supported UI/API paths",
+    "Test cross-tenant access, stale mandates and disputed identity",
+    "Prove case replay does not create duplicate customer relationship",
+    "Produce final run evidence bundle with no synthetic pass claims"
+  ],
+  "closure_gate": "Full historic WBS crosswalk, approved local KYC/legal profile, executable evidence, assigned reviewers and separate release approval.",
+  "executed_tests": 0,
+  "production_code": false
+}
