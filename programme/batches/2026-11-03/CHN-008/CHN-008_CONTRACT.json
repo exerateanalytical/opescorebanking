@@ -1,0 +1,44 @@
+{
+  "package": "CHN-008",
+  "batch": 108,
+  "title": "Beneficiary enrolment, trust and validation controls",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "beneficiary_id:uuid:registered recipient",
+    "institution_id:uuid:bank context",
+    "customer_id:uuid:owner",
+    "destination_rail:string:approved destination system",
+    "account_reference:string:protected account token",
+    "display_label:string:customer nickname",
+    "validated_name_ref:string|null:source-evidenced name",
+    "verification_state:enum:unverified/pending/verified/blocked",
+    "activated_at:datetime|null:approved start",
+    "version:integer:revision control"
+  ],
+  "workflow": [
+    "Capture recipient details and permitted account identifiers",
+    "Normalize and validate syntax against target rail/profile",
+    "Perform authorized ownership/name verification where supported",
+    "Apply risk screening and step-up before high-risk activation",
+    "Store versioned beneficiary status with edit, pause and revoke actions",
+    "Revalidate status immediately before each payment"
+  ],
+  "invariants": [
+    "Successful syntax validation is not evidence of beneficiary ownership",
+    "No unverified recipient auto-activation where institution policy requires checks",
+    "Editing account reference revokes prior approval and confirmation",
+    "Do not expose full recipient account data in unrelated logs",
+    "Cross-customer beneficiary IDs cannot be reused without authorization",
+    "A blocked recipient cannot receive a new authorized instruction",
+    "Proof of identity and payment finality remain separate controls"
+  ],
+  "acceptance_tests": [
+    "Update recipient reference invalidates saved challenge",
+    "Cross-tenant beneficiary lookup denied",
+    "Expired verification forces review",
+    "Fraud-blocked beneficiary cannot be selected",
+    "Unverified name check cannot be shown as verified"
+  ],
+  "independent_gate": "Institution payments scheme rules, authorized validation sources, risk approval and secure API tests.",
+  "actual_tests_executed": 0
+}
