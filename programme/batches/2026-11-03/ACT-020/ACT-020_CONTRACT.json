@@ -1,0 +1,43 @@
+{
+  "id": "ACT-020",
+  "batch": 80,
+  "title": "Account and deposit phase design acceptance dossier",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "acceptance_pack_id:uuid:review dossier",
+    "institution_id:uuid:target profile",
+    "product_scope:list:affected offerings",
+    "account_control_refs:list:ACT document links",
+    "financial_invariant_refs:list:ledger rules",
+    "regulatory_evidence_refs:list:verified sources",
+    "tests_planned:list:acceptance scenarios",
+    "tests_executed:list:actual run evidence",
+    "open_p0:list:unresolved financial holds",
+    "decision_state:enum:draft/review/accepted/blocked"
+  ],
+  "workflow": [
+    "Cross-check proposed 20 ACT packages against historical source inventory",
+    "Validate legal products, CIF/KYC, ownership, fees and mandate dependencies",
+    "Review accounts/deposit flows for money conservation and reversal",
+    "Trace each requirement to API, data, audit and test cases",
+    "Execute future negative and reconciliation tests in real environment",
+    "Accept only bounded implementation slices with 15-point DoR"
+  ],
+  "invariants": [
+    "20 delivered ZIPs do not equal 20 completed product work packages",
+    "A documented deposit workflow is not a functioning financial system",
+    "Accounting PCEC 312/322 ambiguity blocks affected posting/migration",
+    "No rail finality without bank-specific evidence",
+    "Independent QA and CFO acceptance required for financial flows",
+    "Any unmet control must be assigned a blocker and owner"
+  ],
+  "planned_tests": [
+    "Audit all 19 predecessor draft artifacts and missing approvals",
+    "Trace sample deposit to authorized journal and source",
+    "Prove duplicate action cannot create two postings",
+    "Verify balance statement reconciliation",
+    "Reject unauthorized product release"
+  ],
+  "approval_gate": "Approved institution product/legal profile, real tests, reviewer signatures and reconciled historical WBS.",
+  "executed_tests": 0
+}
