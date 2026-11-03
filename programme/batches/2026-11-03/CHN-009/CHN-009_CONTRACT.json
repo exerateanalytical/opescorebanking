@@ -1,0 +1,44 @@
+{
+  "package": "CHN-009",
+  "batch": 109,
+  "title": "Customer authentication, risk-based step-up and recovery",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "auth_context_id:uuid:session proof",
+    "institution_id:uuid:licensed bank",
+    "subject_id:string:customer identity",
+    "session_id:uuid:current session",
+    "auth_method:string:institution-approved factor",
+    "assurance_level:string:verified strength",
+    "challenge_digest:string:bound transaction values",
+    "challenge_state:enum:pending/success/failed/expired",
+    "recovery_case_ref:uuid|null:account recovery",
+    "policy_version:string:approved risk policy"
+  ],
+  "workflow": [
+    "Authenticate customer under approved OIDC and device posture rules",
+    "Evaluate action risk, session age and product-specific controls",
+    "Issue short-lived challenge bound to account, recipient, amount and command identity",
+    "Verify challenge on trusted server against immutable transaction digest",
+    "Grant narrowly scoped one-use authorization and execute original request",
+    "On recovery, verify ownership and revoke compromised sessions/devices"
+  ],
+  "invariants": [
+    "One-time challenge cannot authorize changed transfer parameters",
+    "No SMS/biometric factor is universally mandated without risk and policy review",
+    "Credential reset does not silently remove financial restrictions",
+    "Account recovery cannot bypass independent high-risk approval",
+    "Browser/mobile clients cannot self-assert authentication strength",
+    "All challenge attempts and failures are rate limited and audited",
+    "Expired token or revoked device cannot approve a new payment"
+  ],
+  "acceptance_tests": [
+    "Changed amount invalidates challenge",
+    "Replayed challenge rejected",
+    "Recovered account revokes previous sessions",
+    "Insufficient factor leads to explicit challenge",
+    "Cross-bank session cannot authorize target account"
+  ],
+  "independent_gate": "Bank IAM and identity proofing policy, real strong-auth controls and approved security/UX testing.",
+  "actual_tests_executed": 0
+}
