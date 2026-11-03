@@ -1,0 +1,96 @@
+{
+  "id": "CMP-003",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "monitoring_run_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Evaluation batch"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank owner"
+      },
+      "transaction_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Authoritative event"
+      },
+      "customer_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Reviewed party"
+      },
+      "scenario_id": {
+        "type": "string",
+        "description": "Versioned approved rule"
+      },
+      "observation_window": {
+        "type": "string",
+        "description": "Source snapshot"
+      },
+      "signal_evidence_refs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Input provenance"
+      },
+      "alert_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Deduplicated indicator"
+      },
+      "case_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Escalation identity"
+      },
+      "outcome_state": {
+        "type": "string",
+        "description": "No_alert alert pending review"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "RECEIVED",
+      "to": "VALIDATED",
+      "guard": "source event checked"
+    },
+    {
+      "from": "VALIDATED",
+      "to": "EVALUATED",
+      "guard": "effective rules applied"
+    },
+    {
+      "from": "EVALUATED",
+      "to": "ALERTED",
+      "guard": "scenario trigger"
+    },
+    {
+      "from": "ALERTED",
+      "to": "REVIEWED",
+      "guard": "human analyst disposition"
+    },
+    {
+      "from": "ANY",
+      "to": "EXCEPTION",
+      "guard": "source data missing"
+    }
+  ],
+  "requirements": [
+    "Monitoring does not mutate posted journal or reverse funds",
+    "Event duplication cannot create duplicate enforcement actions",
+    "Alert status is not legal proof of suspicious conduct",
+    "Unapproved scenarios cannot be deployed silently",
+    "Cross-customer/cross-tenant comparisons require lawful purpose",
+    "Insufficient financial source data must be marked explicitly"
+  ],
+  "release_gate": "Legally approved monitoring rules and source provenance, AML owner approval and executed monitoring tests."
+}

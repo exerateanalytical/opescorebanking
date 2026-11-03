@@ -1,0 +1,36 @@
+{
+  "work_package": "CMP-003",
+  "executed": false,
+  "cases": [
+    {
+      "id": "CMP-003-TEST-1",
+      "description": "Duplicate transaction event raises one logical alert",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-003-TEST-2",
+      "description": "Unknown threshold edition blocked",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-003-TEST-3",
+      "description": "Wrong bank transaction ignored",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-003-TEST-4",
+      "description": "Stale source cursor flagged",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-003-TEST-5",
+      "description": "Analyst disposition preserves original signal",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
