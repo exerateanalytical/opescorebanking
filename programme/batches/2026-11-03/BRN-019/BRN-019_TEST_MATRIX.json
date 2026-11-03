@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-019",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-019-TEST-1",
+      "description": "Disconnect during posting yields unknown not success",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-019-TEST-2",
+      "description": "Reconnect retries use original command ID",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-019-TEST-3",
+      "description": "Offline cash withdrawal prevented by default",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-019-TEST-4",
+      "description": "Expired session requires new authentication",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-019-TEST-5",
+      "description": "Cash variance survives restart",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}

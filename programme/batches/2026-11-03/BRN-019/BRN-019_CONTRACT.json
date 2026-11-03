@@ -1,0 +1,92 @@
+{
+  "id": "BRN-019",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "outage_case_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Incident"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank owner"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Site"
+      },
+      "terminal_id": {
+        "type": "string",
+        "description": "Registered terminal"
+      },
+      "last_sync_cursor": {
+        "type": "string",
+        "description": "Source checkpoint"
+      },
+      "offline_draft_id": {
+        "type": "string",
+        "description": "Provisional request"
+      },
+      "network_state": {
+        "type": "string",
+        "description": "Connected degraded offline"
+      },
+      "authorization_state": {
+        "type": "string",
+        "description": "Unknown verified expired"
+      },
+      "reconnect_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Restoration"
+      },
+      "recovery_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Reconciliation evidence"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "ONLINE",
+      "to": "DEGRADED",
+      "guard": "intermittent service"
+    },
+    {
+      "from": "DEGRADED",
+      "to": "OFFLINE",
+      "guard": "no trusted connection"
+    },
+    {
+      "from": "OFFLINE",
+      "to": "RECONNECTING",
+      "guard": "service returns"
+    },
+    {
+      "from": "RECONNECTING",
+      "to": "ONLINE",
+      "guard": "session and source validated"
+    },
+    {
+      "from": "ANY",
+      "to": "QUARANTINED",
+      "guard": "unknown money outcome"
+    }
+  ],
+  "requirements": [
+    "Offline cash request cannot claim completed ledger posting",
+    "No blind replay of uncertain financial commands",
+    "Cached balance is not an authorization to pay cash",
+    "Teller credentials and customer PII must remain protected at terminal",
+    "Shift cutoff and cash custody exceptions survive restart",
+    "Offline operation type requires explicit bank risk approval"
+  ],
+  "release_gate": "Bank-approved offline scope, security risk assessment, fault injection and funds reconciliation."
+}
