@@ -1,0 +1,43 @@
+{
+  "id": "CIF-005",
+  "batch": 45,
+  "title": "Party relationships, mandates and lifecycle validity",
+  "status": "DRAFT_REVIEW_OPEN",
+  "data_fields": [
+    "relationship_id:uuid:stable link ID",
+    "source_party_id:uuid:grantor/related party",
+    "target_party_id:uuid:representative or related party",
+    "relationship_type:enum:director/employee/guardian/agent/signatory/associate",
+    "mandate_scope:list:allowed roles/actions",
+    "source_document_ref:uuid:legal evidence",
+    "starts_at:datetime:effective grant",
+    "ends_at:datetime|null:expiry",
+    "approval_status:enum:draft/active/suspended/revoked",
+    "checker_id:uuid|null:independent approval"
+  ],
+  "workflow": [
+    "Identify both parties and their institution-specific identity states",
+    "Select relationship type and permissible mandate scope",
+    "Collect supporting evidence and effective/expiry dates",
+    "Validate no contradictory or self-approval relationships are created",
+    "Obtain authorized mandate approval where policy requires",
+    "Revise, suspend or revoke with notifications and immutable history"
+  ],
+  "requirements": [
+    "A relationship does not automatically authorize account withdrawal or payment signing",
+    "Authority is evaluated per action, institution, time and explicit mandate scope",
+    "No revoked or expired mandate can approve a new financial instruction",
+    "Guardianship, beneficial ownership and corporate signing authority are independent statuses",
+    "Subject and object must be institution-authorized and existence-validated",
+    "Evidence must be retained even after a mandate is revoked where legally required"
+  ],
+  "acceptance_tests": [
+    "Expired mandate denied even with still-valid user login",
+    "Beneficial owner without mandate cannot authorize a transaction",
+    "Revocation takes effect for subsequent commands",
+    "Self-authorization blocked on controlled mandate creation",
+    "Historic mandate state reproducible at transaction date"
+  ],
+  "gate": "Institution mandate products, delegation policy and local legal/guardian evidence requirements.",
+  "executed_tests": 0
+}
