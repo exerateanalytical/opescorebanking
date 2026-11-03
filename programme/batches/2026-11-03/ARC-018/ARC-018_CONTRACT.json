@@ -1,0 +1,42 @@
+{
+  "batch": 38,
+  "id": "ARC-018",
+  "title": "Identity security and cryptographic trust boundaries",
+  "status": "DRAFT_REVIEW_PENDING",
+  "model": [
+    "subject_id:string:authenticated actor",
+    "institution_id:uuid:regulated entity",
+    "session_id:uuid:auditable session",
+    "authentication_strength:string:risk-appropriate factors",
+    "role_policy_version:string:approved RBAC/ABAC rules",
+    "operation_scope:string:authorized action",
+    "key_reference:string:KMS/HSM key alias, never key material",
+    "approval_ref:uuid|null:maker-checker evidence",
+    "decision_timestamp:datetime:authorization point"
+  ],
+  "workflow": [
+    "Authenticate actor with trusted OIDC federation and validated audience",
+    "Resolve institution, branch, role and risk of requested action server-side",
+    "Apply step-up authentication and maker-checker where transaction risk requires",
+    "Authorize object-level resource and domain command boundaries",
+    "Delegate signing/encryption to isolated cryptographic boundary with audited key alias",
+    "Record access, policy decision and privilege changes in restricted audit store"
+  ],
+  "requirements": [
+    "No frontend-only authorization or trust of user-supplied institution identifiers",
+    "Do not store raw secrets, private keys, passwords or bearer tokens in app logs or message bus",
+    "Separate developers, production operators, security approvers and key custodians",
+    "Use approved key rotation, revocation, recovery and compromise procedures",
+    "Require expiration and independent review of elevated/break-glass roles",
+    "Mask personal identifiers and account data according to approved privacy classification"
+  ],
+  "tests": [
+    "Wrong audience token cannot reach domain command",
+    "Approver and maker cannot be same subject for restricted operation",
+    "Cross-institution account object access rejected",
+    "Expired signing credential blocks production use",
+    "Security audit export omits secrets and unapproved personal details"
+  ],
+  "gate": "Threat model, institutional IAM/HSM policy, cryptographic review and executed security/access tests.",
+  "executed_tests": 0
+}
