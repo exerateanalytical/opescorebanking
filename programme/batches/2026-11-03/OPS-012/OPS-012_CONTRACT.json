@@ -1,0 +1,44 @@
+{
+  "package": "OPS-012",
+  "batch": 92,
+  "title": "Production change, release authorization and rollback",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "change_id:uuid:controlled request",
+    "institution_id:uuid:target entity",
+    "release_digest:string:immutable build identifier",
+    "change_class:enum:standard/major/emergency",
+    "risk_impact_ref:uuid:assessment",
+    "affected_domains:list:bounded contexts",
+    "deployment_window:string:approved schedule",
+    "maker_id:string:change proposer",
+    "checker_ids:list:independent approvals",
+    "rollback_plan_ref:uuid:recovery plan"
+  ],
+  "workflow": [
+    "Link scope change to approved requirement and ADR",
+    "Assess banking, privacy, security, reporting and integration impacts",
+    "Verify actual tests, migration compatibility and deployment artifact hash",
+    "Obtain independent risk-based approvals and production window",
+    "Deploy canary or staged rollout with reconciliation/health monitoring",
+    "Suspend or compensate safely and publish post-change evidence"
+  ],
+  "invariants": [
+    "No approval is inferred from merge or ZIP upload",
+    "Changing finance policy requires independent CFO acceptance",
+    "Rollback cannot erase a posted journal or settled external operation",
+    "Emergency changes have bounded privileges and retrospective review",
+    "Configuration and source changes carry exact effective date/version",
+    "Release cannot use untested binary or wrong institution credentials",
+    "Every material change has immutable before/after audit"
+  ],
+  "acceptance_tests": [
+    "Reject production change without signed role approvals",
+    "Wrong release digest blocked",
+    "Failed reconciliation prevents further promotion",
+    "Emergency role expires automatically",
+    "Post-deploy rollback does not mutate financial history"
+  ],
+  "independent_gate": "Approved change board, trusted build chain and executed release/recovery rehearsals.",
+  "actual_tests_executed": 0
+}
