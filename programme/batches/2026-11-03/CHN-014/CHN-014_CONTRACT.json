@@ -1,0 +1,44 @@
+{
+  "package": "CHN-014",
+  "batch": 114,
+  "title": "Partner developer portal, service credentials and API products",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "partner_id:uuid:approved organization",
+    "institution_id:uuid:bank sponsor",
+    "api_product_id:string:versioned service",
+    "client_id:string:OAuth client identity",
+    "approved_scopes:list:least privilege",
+    "contract_ref:uuid:legal integration agreement",
+    "environment:enum:sandbox/qualification/production",
+    "credential_ref:string:secret-store alias",
+    "quota_policy_id:string:request controls",
+    "conformance_ref:uuid|null:test result"
+  ],
+  "workflow": [
+    "Perform partner legal/KYB, security and commercial due diligence",
+    "Register appropriate API product and versioned OpenAPI contract",
+    "Issue environment-separated credentials via approved IAM",
+    "Enforce per-entity, scope, object, consent and purpose validation",
+    "Monitor rate limits, credential usage and failure/replay anomalies",
+    "Promote to production only after authorized contract and executed conformance"
+  ],
+  "invariants": [
+    "OAuth scopes do not override customer consent or legal bank entitlement",
+    "Sandbox credentials must not access production rail or real customer data",
+    "No embedded partner secret in client/mobile SDK",
+    "APIs must reject IDOR and tenant-confused requests at backend",
+    "Deprecation preserves published compatibility commitments",
+    "Production access requires evidence of independent bank approval",
+    "Partner API cannot bypass core ledger commands"
+  ],
+  "acceptance_tests": [
+    "Sandbox secret rejected in production",
+    "Uncontracted API scope denied",
+    "Partner cannot retrieve another bank's data",
+    "Rate limit blocks excessive calls without losing accepted commands",
+    "Revoked partner credential immediately invalid"
+  ],
+  "independent_gate": "Bank's partner programme and lawful API data sharing rules, signed agreement, security tests and institution production approval.",
+  "actual_tests_executed": 0
+}
