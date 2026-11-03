@@ -1,0 +1,36 @@
+{
+  "work_package": "CMP-005",
+  "executed": false,
+  "cases": [
+    {
+      "id": "CMP-005-TEST-1",
+      "description": "Source digest mismatch blocks approval",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-005-TEST-2",
+      "description": "Unavailable source yields review state",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-005-TEST-3",
+      "description": "Wrong institution watchlist denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-005-TEST-4",
+      "description": "False-positive match retains checker rationale",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-005-TEST-5",
+      "description": "Supersession preserves historic edition",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}

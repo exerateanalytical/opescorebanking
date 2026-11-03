@@ -1,0 +1,92 @@
+{
+  "id": "CMP-005",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "list_edition_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Retrieved source edition"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Applicable entity"
+      },
+      "issuer_ref": {
+        "type": "string",
+        "description": "Qualified authority"
+      },
+      "source_uri": {
+        "type": "string",
+        "description": "Official/procured source"
+      },
+      "edition_digest": {
+        "type": "string",
+        "description": "Measured content fingerprint"
+      },
+      "effective_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Authenticated start"
+      },
+      "retrieved_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Actual retrieval"
+      },
+      "candidate_match_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Possible alert"
+      },
+      "reviewer_id": {
+        "type": "string",
+        "description": "Qualified compliance"
+      },
+      "status": {
+        "type": "string",
+        "description": "Discovered verified approved suspended"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "DISCOVERED",
+      "to": "VALIDATING",
+      "guard": "provenance inspected"
+    },
+    {
+      "from": "VALIDATING",
+      "to": "APPROVED",
+      "guard": "authority and use rights reviewed"
+    },
+    {
+      "from": "VALIDATING",
+      "to": "REJECTED",
+      "guard": "source invalid"
+    },
+    {
+      "from": "APPROVED",
+      "to": "SUPERSEDED",
+      "guard": "new authenticated edition"
+    },
+    {
+      "from": "ANY",
+      "to": "SUSPENDED",
+      "guard": "integrity compromise"
+    }
+  ],
+  "requirements": [
+    "Name similarity is not final sanctions or PEP determination",
+    "Unavailable or invalid list source does not silently imply clearance",
+    "PEP status alone is not criminal conviction",
+    "List access is purpose restricted and institution scoped",
+    "No invented watchlist freshness guarantee",
+    "A new list edition must not erase prior screening evidence"
+  ],
+  "release_gate": "Authenticated applicable list subscriptions/legal sources, qualified AML reviewer and executed screening-quality tests."
+}
