@@ -1,0 +1,44 @@
+{
+  "package": "OPS-017",
+  "batch": 97,
+  "title": "Regulatory audit export and supervisory evidence delivery",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "export_request_id:uuid:auditor request",
+    "institution_id:uuid:regulated source",
+    "requesting_authority:string:validated requester",
+    "legal_basis_ref:uuid:authorized power",
+    "scope_filter:string:approved records",
+    "period_from:date:start",
+    "period_to:date:end",
+    "source_cursor:string:journal/report snapshot",
+    "export_digest:string:actual byte hash",
+    "approval_chain:list:maker-checker and legal review"
+  ],
+  "workflow": [
+    "Authenticate audit or supervisory evidence request and legal authority",
+    "Review proportional subject, date, jurisdiction and document scope",
+    "Freeze reproducible source snapshots and effective reporting policy",
+    "Generate secure evidence package with observed original data and provenance",
+    "Measure hash, export time, access expiry and chain of custody",
+    "Record delivery receipt and follow-up corrections without overwriting prior export"
+  ],
+  "invariants": [
+    "A generated supervisory report does not prove regulatory compliance",
+    "Audit export must not include unrelated institution customer data",
+    "Only qualified authorized reviewers can approve sensitive disclosures",
+    "Exported amounts must reconcile to authoritative journal and reporting policy",
+    "Document provenance must distinguish observed source from legal interpretation",
+    "No fabricated regulator receipt, audit pass or cryptographic signature",
+    "Correction requires distinct version and prior export reference"
+  ],
+  "acceptance_tests": [
+    "Unverified requester cannot export",
+    "Cross-institution records excluded",
+    "Changing exported bytes fails integrity check",
+    "Source cursor permits reproduction of report",
+    "Expired export access revoked"
+  ],
+  "independent_gate": "Competent authority verification, privacy/legal approval, signed evidence policy and actual export integrity tests.",
+  "actual_tests_executed": 0
+}
