@@ -1,0 +1,44 @@
+{
+  "package": "CHN-013",
+  "batch": 113,
+  "title": "Merchant banking portal and transaction reporting APIs",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "merchant_id:uuid:KYB-verified seller",
+    "institution_id:uuid:bank entity",
+    "merchant_account_id:uuid:authorized account",
+    "acquiring_profile_id:string|null:contract edition",
+    "settlement_report_ref:string:external source",
+    "sales_total:string:source-stated amount",
+    "fees_total:string:approved tariff amount",
+    "refund_request_id:uuid|null:request identity",
+    "settlement_state:enum:pending/evidenced/reconciled",
+    "report_cursor:string:as-of source"
+  ],
+  "workflow": [
+    "Validate merchant KYB, contract and linked account mandate",
+    "Fetch authorized transaction history with explicit rail/source provenance",
+    "Separate authorization, capture, settlement and reconciliation in interface",
+    "Present fees and net proceeds with exact source versions",
+    "Submit refund/chargeback requests to independent approved workflow",
+    "Record reconciliation discrepancies and escalation cases"
+  ],
+  "invariants": [
+    "Merchant dashboard totals do not create bank deposits",
+    "Authorization/capture is not equivalent to externally settled cash",
+    "Refund request cannot mutate original posted financial record",
+    "Report must show currency, cutoff and source reconciliation state",
+    "Merchant may not query another seller's statement or customer data",
+    "Acquiring/PSP partner connection requires actual participation credentials",
+    "Use stable idempotency keys for merchant financial requests"
+  ],
+  "acceptance_tests": [
+    "Cross-merchant report access denied",
+    "Pending settlement not added to posted balance",
+    "Refund request duplicate does not duplicate refund",
+    "Fee total reconciles to approved tariff",
+    "Missing acquiring contract blocks production transaction"
+  ],
+  "independent_gate": "Acquiring/payment institution participation evidence, merchant KYB policy, settlement reconciliations and CFO/security review.",
+  "actual_tests_executed": 0
+}
