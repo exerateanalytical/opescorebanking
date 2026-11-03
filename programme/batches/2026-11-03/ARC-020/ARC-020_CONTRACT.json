@@ -1,0 +1,43 @@
+{
+  "id": "ARC-020",
+  "batch": 40,
+  "title": "Architecture review and transition-to-implementation decision dossier",
+  "status": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "decision_id:uuid:review decision identity",
+    "architecture_version:string:proposal baseline version",
+    "bounded_context:string:affected domain",
+    "institution_profile_id:uuid|null:applicability",
+    "adr_refs:list:referenced decisions",
+    "requirement_coverage:string:reconciled source coverage",
+    "open_p0:list:blocking unresolved issues",
+    "reviewer_role:string:qualified approval position",
+    "evidence_refs:list:executed review artifacts",
+    "decision_status:enum:draft/accepted/rejected/blocked"
+  ],
+  "flow": [
+    "Reconcile ARC-001 through ARC-019 draft deliverables with original historical artifacts",
+    "Review each ADR, domain boundary, API/event contract, architecture security and test plan",
+    "Map unresolved regulatory and financial conflicts to dependent production slices",
+    "Collect legal, CFO, CISO, Operations and Architecture reviewer decisions separately",
+    "Accept only bounded portions with complete applicable Definition of Ready evidence",
+    "Version approved baseline and preserve rejected alternatives and open findings"
+  ],
+  "rules": [
+    "A pushed batch ZIP proves custody, not architectural acceptance",
+    "Do not advance disputed accounting, credit classification or settlement behavior to implementation",
+    "No single reviewer can override critical legal/financial/security rejection",
+    "Historical work package numbers cannot be silently mapped to new ARC identifiers",
+    "Implementation release must reference current effective institution profile and approved source instruments",
+    "Maintain immutable review evidence and a new review whenever material assumptions change"
+  ],
+  "acceptance_cases": [
+    "Audit 19 preceding architecture drafts for acceptance evidence",
+    "Try to approve without reviewer and expect rejection",
+    "Reject an implementation slice with P0 dependency",
+    "Verify independent unrelated context can pass only its own 15 DoR checks",
+    "Confirm approval decision preserves exact Git commit and evidence digests"
+  ],
+  "review_gate": "Named independent reviewers, completed historical reconciliation and signed per-slice DoR review.",
+  "executed_tests": 0
+}
