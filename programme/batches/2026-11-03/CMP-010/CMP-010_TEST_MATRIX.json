@@ -1,0 +1,36 @@
+{
+  "work_package": "CMP-010",
+  "executed": false,
+  "cases": [
+    {
+      "id": "CMP-010-TEST-1",
+      "description": "Incomplete source authority blocks acceptance",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-010-TEST-2",
+      "description": "Unsigned regulatory reporting dataset fails gate",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-010-TEST-3",
+      "description": "Unauthorized suspicious activity export rejected",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-010-TEST-4",
+      "description": "Mock scan results cannot count as live certification",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-010-TEST-5",
+      "description": "Acceptance pack identifies unresolved dependencies",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}

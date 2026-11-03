@@ -1,0 +1,28 @@
+{
+  "run": 5,
+  "date": "2026-11-03",
+  "range": [
+    121,
+    150
+  ],
+  "expected_batches": 30,
+  "github_repo": "exerateanalytical/opescorebanking",
+  "base_commit": "38c3551745a7d901e7de1cc930f7e344ba5453cf",
+  "artifact_format": [
+    "ZIP",
+    "SPEC.md",
+    "CONTRACT.json",
+    "TEST_MATRIX.json"
+  ],
+  "planned_zip_files": 30,
+  "actual_tests_executed": 0,
+  "production_code_added": 0,
+  "reviewed_work_packages_completed": 0,
+  "regulatory_approvals": 0,
+  "p0_blocked": [
+    "WP-ACC-005 COBAC I-2015/01 account 312/322",
+    "institution-specific rail participation"
+  ],
+  "historical_recovery": "GOV-REC-001 open",
+  "verification_state_at_creation": "FINAL_REMOTE_COMPARE_PENDING"
+}
