@@ -1,0 +1,43 @@
+{
+  "id": "ACT-010",
+  "batch": 70,
+  "title": "Savings interest accrual and application control",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "accrual_id:uuid:calculation batch",
+    "account_id:uuid:source account",
+    "product_terms_version:string:approved interest policy",
+    "rate_version:string:effective rate edition",
+    "interest_basis:string:approved day count",
+    "period_from:date:inclusive range",
+    "period_to:date:exclusive end",
+    "currency:string:account currency",
+    "calculated_amount:string:exact fixed decimal",
+    "posting_status:enum:calculated/reviewed/posted/blocked"
+  ],
+  "workflow": [
+    "Select approved terms and effective rate per historical period",
+    "Choose authorized calendar, day-count and eligibility method",
+    "Read verified historical accounting balances and exclusions",
+    "Compute exact accrual with reproducible intermediate calculations",
+    "Review exception cases and tax treatment under qualified policy",
+    "Request idempotent balanced posting and reconcile final credit"
+  ],
+  "invariants": [
+    "No floating-point interest computation",
+    "Backdated corrections must not overwrite earlier posted interest",
+    "Dormancy, restriction and tax impacts are policy-versioned, not guessed",
+    "Accrual calculation alone cannot create a customer balance",
+    "Rounding must be deterministic per approved currency rule",
+    "Unapproved PCEC mapping blocks operational interest posting"
+  ],
+  "planned_tests": [
+    "Leap-period interest reproducibility",
+    "Same batch cannot double-accrue",
+    "Rate change respects effective interval",
+    "Correction creates new accounting reference",
+    "Account closure excludes ineligible period"
+  ],
+  "approval_gate": "Bank-approved interest methodology, applicable law, CFO posting rules and property tests.",
+  "executed_tests": 0
+}
