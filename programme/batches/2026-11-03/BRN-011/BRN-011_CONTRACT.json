@@ -1,0 +1,92 @@
+{
+  "id": "BRN-011",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "approval_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Decision identity"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Licensed owner"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Scope"
+      },
+      "operation_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Requested action"
+      },
+      "maker_id": {
+        "type": "string",
+        "description": "Initiator"
+      },
+      "checker_id": {
+        "type": "string",
+        "description": "Separate approver"
+      },
+      "policy_version": {
+        "type": "string",
+        "description": "Approved delegation"
+      },
+      "approval_digest": {
+        "type": "string",
+        "description": "Immutable request fingerprint"
+      },
+      "expires_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Approval lifetime"
+      },
+      "status": {
+        "type": "string",
+        "description": "Pending approved denied expired"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "PROPOSED",
+      "to": "PENDING",
+      "guard": "maker requests"
+    },
+    {
+      "from": "PENDING",
+      "to": "APPROVED",
+      "guard": "qualified checker signs"
+    },
+    {
+      "from": "PENDING",
+      "to": "DENIED",
+      "guard": "checker declines"
+    },
+    {
+      "from": "PENDING",
+      "to": "EXPIRED",
+      "guard": "time window lapses"
+    },
+    {
+      "from": "APPROVED",
+      "to": "CONSUMED",
+      "guard": "single action executed"
+    }
+  ],
+  "requirements": [
+    "Self-approval always denied for dual-controlled operation",
+    "Supervisor role is scoped by branch and legal entity",
+    "Approval of one amount cannot authorize a changed amount",
+    "Expired mandate or approval cannot be reused",
+    "Break-glass grants need independent after-action review",
+    "Approvals are not a substitute for financial ledger controls"
+  ],
+  "release_gate": "Institution delegation schedule, RBAC/ABAC policy, signed reviewer roles and SoD access tests."
+}

@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-011",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-011-TEST-1",
+      "description": "Same maker/checker rejected",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-011-TEST-2",
+      "description": "Modified transaction digest rejected",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-011-TEST-3",
+      "description": "Expired approval denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-011-TEST-4",
+      "description": "Cross-branch supervisor denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-011-TEST-5",
+      "description": "Repeated approval consumption rejected",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
