@@ -1,0 +1,102 @@
+{
+  "schema_version": "draft-1",
+  "work_package_id": "BRN-003",
+  "batch": 123,
+  "domain": "BranchCash",
+  "title": "Cash drawer opening, custody and opening balance evidence",
+  "state": "DRAFT_REVIEW_PENDING",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "BRN-003",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "institution_id",
+      "branch_id"
+    ],
+    "properties": {
+      "drawer_session_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Cash custody period"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Regulated bank"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Cash location"
+      },
+      "drawer_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Registered equipment"
+      },
+      "custodian_id": {
+        "type": "string",
+        "description": "Assigned teller"
+      },
+      "opening_count_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Denomination count"
+      },
+      "opening_cash_total": {
+        "type": "string",
+        "description": "Exact cash units"
+      },
+      "handover_receipt_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Signed source"
+      },
+      "supervisor_id": {
+        "type": "string",
+        "description": "Independent checker"
+      },
+      "status": {
+        "type": "string",
+        "description": "Prepared counted accepted open"
+      }
+    }
+  },
+  "state_transitions": [
+    {
+      "from": "PREPARED",
+      "to": "COUNTED",
+      "guard": "physical denomination check"
+    },
+    {
+      "from": "COUNTED",
+      "to": "ACCEPTED",
+      "guard": "independent verified handover"
+    },
+    {
+      "from": "ACCEPTED",
+      "to": "OPEN",
+      "guard": "dual confirmation"
+    },
+    {
+      "from": "OPEN",
+      "to": "FROZEN",
+      "guard": "incident or shift closing"
+    },
+    {
+      "from": "FROZEN",
+      "to": "CLOSED",
+      "guard": "reconciliation"
+    }
+  ],
+  "control_requirements": [
+    "Cash drawer count is not a bank customer posting",
+    "Unverified handover cannot open drawer",
+    "Opening balance cannot be typed as arbitrary untraceable number",
+    "Currency/denomination totals use exact arithmetic",
+    "Mismatch creates an exception and prevents silent reconciliation"
+  ],
+  "approval_gate": "Approved cash custody procedures, denomination configuration, two-person count and reconciliation evidence.",
+  "production_mode": "DISABLED_PENDING_EVIDENCE"
+}

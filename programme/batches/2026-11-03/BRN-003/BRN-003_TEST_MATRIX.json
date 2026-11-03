@@ -1,0 +1,46 @@
+{
+  "suite_id": "BRN-003-ACCEPTANCE-DRAFT",
+  "execution_state": "NOT_RUN",
+  "tests": [
+    {
+      "case_id": "BRN-003-T01",
+      "scenario": "Opening count mismatch raises exception",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-003-T02",
+      "scenario": "Double acceptance yields one open session",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-003-T03",
+      "scenario": "Custodian cannot be both maker and checker",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-003-T04",
+      "scenario": "Foreign-branch drawer denied",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-003-T05",
+      "scenario": "Cash balance never changes customer balance",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    }
+  ]
+}
