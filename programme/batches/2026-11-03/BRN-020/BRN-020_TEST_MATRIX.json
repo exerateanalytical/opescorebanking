@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-020",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-020-TEST-1",
+      "description": "Trace each BRN package to concrete acceptance evidence",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-020-TEST-2",
+      "description": "Reject dossier without cash reconciliation proof",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-020-TEST-3",
+      "description": "Reject self-approval of vault transfer",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-020-TEST-4",
+      "description": "Reject ledger correction by direct balance mutation",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-020-TEST-5",
+      "description": "Reject missing bank policy as approved",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
