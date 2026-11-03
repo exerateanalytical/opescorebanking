@@ -1,0 +1,44 @@
+{
+  "id": "CIF-019",
+  "batch": 59,
+  "title": "Onboarding failure, exception and recovery controls",
+  "status": "DRAFT_REVIEW_OPEN",
+  "fields": [
+    "exception_id:uuid:failure case",
+    "onboarding_case_id:uuid:affected application",
+    "institution_id:uuid:authorized scope",
+    "failure_class:enum:source_unavailable/mismatch/duplicate/expired/permission/error",
+    "detected_at:datetime:failure observation",
+    "attempted_step:string:workflow stage",
+    "safe_resume_cursor:string|null:durable checkpoint",
+    "case_status:enum:pending/investigating/rejected/resolved",
+    "operator_owner:string:assigned reviewer",
+    "resolution_evidence_ref:uuid|null:closure basis"
+  ],
+  "workflow": [
+    "Capture typed failure with redacted context and immutable correlation ID",
+    "Determine transient technical issue versus document or legal disqualification",
+    "Suspend only affected step and retain case in safe pending/review state",
+    "Retry eligible technical operations with idempotency and bounded backoff",
+    "Escalate unknown results, contradictory evidence or suspected fraud to qualified owner",
+    "Resume after verified resolution using the original case and source provenance"
+  ],
+  "requirements": [
+    "Provider timeout never implies identity was verified",
+    "Do not automatically delete incomplete cases because a device disconnected",
+    "Retries must not create duplicate CIF/customer numbers",
+    "Regulated investigation and suspicious-case details must remain access restricted",
+    "Unknown source result cannot be normalized into negative or positive certainty",
+    "Error screens and API responses reveal no private information about another customer's candidate matches"
+  ],
+  "test_cases": [
+    "Simulated registry downtime leaves case pending rather than approved",
+    "Duplicated upload callback does not duplicate evidence record",
+    "Retry after crash resumes with same case ID",
+    "Unauthorized support agent cannot force-approve exception",
+    "Failed screening query retains unresolved review obligation"
+  ],
+  "closure_gate": "Institution case-handling SOP, exception reason taxonomy, secure operator roles and executed outage/replay tests.",
+  "executed_tests": 0,
+  "production_code": false
+}
