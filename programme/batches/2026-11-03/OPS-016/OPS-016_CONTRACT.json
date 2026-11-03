@@ -1,0 +1,44 @@
+{
+  "package": "OPS-016",
+  "batch": 96,
+  "title": "Service reliability engineering and maintenance policy",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "service_id:string:owned workload",
+    "institution_id:uuid:operating entity",
+    "criticality:enum:financial/regulated/supporting",
+    "availability_slo:string:approved objective",
+    "oncall_role:string:incident owner",
+    "dependency_refs:list:upstream services",
+    "degraded_modes:list:permitted safe functions",
+    "maintenance_window:string:approved interval",
+    "error_budget_policy:string:escalation threshold",
+    "postmortem_ref:uuid|null:incident follow-up"
+  ],
+  "workflow": [
+    "Classify services by financial and regulatory criticality",
+    "Establish accountable ownership, alerts and dependency call tree",
+    "Specify safe read-only and fail-closed degraded modes",
+    "Define maintenance approval and customer-channel notifications",
+    "Measure actual error rates and recovery indicators",
+    "Review service failures with recorded root cause and remediation"
+  ],
+  "invariants": [
+    "Banking traffic cannot silently switch from posting to speculative buffered money changes",
+    "Fail-open behavior for money-moving authorization is prohibited",
+    "Read-only status must be visible and consistent with source cursor",
+    "Maintenance events preserve durable idempotency and audit trail",
+    "No unapproved automatic rail resubmission on outage recovery",
+    "SLO violation is recorded as evidence rather than hidden by averages",
+    "Independent finance review controls reopening after ledger divergence"
+  ],
+  "acceptance_tests": [
+    "Loss of account database makes posting fail closed",
+    "Read-only degraded mode displays accurate freshness",
+    "Maintenance drain preserves accepted requests",
+    "Critical alert triggers accountable escalation",
+    "Recovery without reconciliation remains blocked"
+  ],
+  "independent_gate": "Approved error-budget and recovery policy, operational runbooks and executed chaos or maintenance simulations.",
+  "actual_tests_executed": 0
+}
