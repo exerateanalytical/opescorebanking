@@ -1,0 +1,43 @@
+{
+  "batch": 47,
+  "id": "CIF-007",
+  "title": "Individual identity evidence verification and document custody",
+  "status": "DRAFT_UNREVIEWED",
+  "fields": [
+    "evidence_id:uuid:immutable evidence identifier",
+    "party_id:uuid:individual subject",
+    "document_type_code:string:jurisdiction/profile-controlled category",
+    "issuing_country:string:declared competent jurisdiction",
+    "issuer_name:string|null:claimed issuer",
+    "issued_on:date|null:issue date",
+    "expires_on:date|null:expiry",
+    "encrypted_object_ref:string:restricted original if lawfully retained",
+    "verification_method:enum:manual/issuer/authorized-provider",
+    "verification_status:enum:captured/pending/mismatch/accepted/rejected"
+  ],
+  "workflow": [
+    "Capture applicant evidence through secure channel with explicit lawful basis",
+    "Validate allowed document type, quality, expiration and consistency",
+    "Record separate machine observation and authoritative issuer validation where available",
+    "Escalate authenticity mismatch, expired documents and identity collision",
+    "Store approved result and reviewer identity separately from protected source bytes",
+    "Reassess expired or revoked identity claims according to institution policy"
+  ],
+  "invariants": [
+    "OCR extraction is only an observation, not governmental authenticity proof",
+    "No third-party provider availability may be fabricated; verified method must be recorded",
+    "Never publish raw document bytes, biometric vectors or account IDs to general events",
+    "Reference document images through access-controlled encrypted storage and retention class",
+    "Verification of one document does not imply proof of residence, source of funds or sanction clearance",
+    "Expire/revoke evidence without deleting legally required historical verification decisions"
+  ],
+  "acceptance_tests": [
+    "Reject expired document under policy",
+    "Unverified OCR result cannot set official verification status",
+    "Unauthorized operator cannot download protected document",
+    "Different person's document detected as mismatch",
+    "Revoked evidence blocks new proof-dependent case approval"
+  ],
+  "gate": "Approved document list, permitted verifier/legal basis, issuer integration evidence and privacy/security review.",
+  "tests_executed": 0
+}
