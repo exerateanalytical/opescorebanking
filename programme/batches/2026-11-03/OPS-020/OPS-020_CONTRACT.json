@@ -1,0 +1,44 @@
+{
+  "package": "OPS-020",
+  "batch": 100,
+  "title": "Operations and security release readiness dossier",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "readiness_pack_id:uuid:review dossier",
+    "institution_id:uuid:target bank",
+    "package_refs:list:OPS-001..OPS-019",
+    "deployment_profile_ref:string:infrastructure scope",
+    "security_review_refs:list:CISO evidence",
+    "test_execution_refs:list:actual test logs",
+    "restore_evidence_ref:uuid|null:DR proof",
+    "finance_recon_ref:uuid|null:CFO signoff",
+    "open_p0:list:unresolved blockers",
+    "decision_state:enum:draft/blocked/review/accepted"
+  ],
+  "workflow": [
+    "Cross-index all operations draft packages and historical platform decisions",
+    "Request exact executed controls for CI/CD, secrets, network and backup",
+    "Review security threats, roles, tenancy and regulator/data residency applicability",
+    "Perform independent restore, outage, performance and reconciliation exercises",
+    "Attach signed reviewer decisions and unresolved exception register",
+    "Approve only safe bounded capabilities with complete DoR evidence"
+  ],
+  "invariants": [
+    "20 documented OPS checkpoints are not 20 accepted infrastructure work packages",
+    "Unexecuted test case cannot be marked passed",
+    "No invented HSM or penetration-test certification",
+    "Failure to reconcile financial balances blocks dependent go-live",
+    "Bank-specific external settlement keys and permissions require actual authority",
+    "Every acceptance refers to exact Git commit and real proof",
+    "P0 status must be retained until signed evidence resolves"
+  ],
+  "acceptance_tests": [
+    "Run index reconciles all OPS archive paths",
+    "Reject dossier missing reviewer identities",
+    "Reject test pass absent execution log",
+    "DR recovery must preserve journal and dedupe",
+    "Security exception cannot waive failed financial integrity"
+  ],
+  "independent_gate": "Independent legal/CFO/CISO/Operations/QA approval, current institution profile and genuine executed acceptance evidence.",
+  "actual_tests_executed": 0
+}
