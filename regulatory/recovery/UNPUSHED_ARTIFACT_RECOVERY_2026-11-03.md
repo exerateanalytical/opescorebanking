@@ -71,3 +71,29 @@ When a binary-transfer path is available:
 4. compare the downloaded bytes against the full SHA-256 above;
 5. update this record with the binary commit SHA.
 
+
+
+## 2026-11-03 binary recovery completion
+
+Checkpoint archives AE through AM were successfully committed unchanged to `main` under:
+
+`regulatory/recovery/archives/`
+
+Recovery commit:
+
+`dc956d2cf317f0123d4af3b57c5953fc917db2ed` — `archive: recover original core banking checkpoints AE-AM`
+
+Verification completed after the push:
+- all nine remote Git blob SHAs match the Git blob SHAs computed from the recovered local originals;
+- the one-time recovery workflow verified the full SHA-256 values before committing;
+- ZIP integrity checks passed;
+- the temporary workflow removed itself after success.
+
+Therefore AE, AF, AG, AH, AI, AJ, AK, AL and AM are no longer unpushed artifacts.
+
+Still unrecovered/unpushed from the original 14-item set:
+- OPES_Core_Banking_Checkpoint_AN_2026-10-09.zip
+- OPES_Core_Banking_Research_Delta_2026-11-01_R01.zip
+- OPES_Core_Banking_Consolidated_Research_2026-11-01.docx
+- OPES_Core_Banking_Consolidated_Research_2026-11-01.pdf
+- OPES_Core_Banking_Available_Batches_Consolidated_2026-11-03.zip
