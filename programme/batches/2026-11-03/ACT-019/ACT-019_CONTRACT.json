@@ -1,0 +1,43 @@
+{
+  "id": "ACT-019",
+  "batch": 79,
+  "title": "Account exceptions, correction and end-of-day dependencies",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "exception_case_id:uuid:operational case",
+    "account_id:uuid:affected contract",
+    "institution_id:uuid:owner",
+    "exception_type:enum:pending/mismatch/hold/conflict/reversal",
+    "source_command_ref:uuid:origin",
+    "ledger_journal_ref:uuid|null:posted evidence",
+    "external_state:string|null:payment status",
+    "assigned_owner:string:operations role",
+    "recovery_state:enum:investigating/reconciled/escalated/closed",
+    "resolution_ref:uuid|null:independent proof"
+  ],
+  "workflow": [
+    "Classify account/ledger/rail mismatch or failed workflow",
+    "Preserve source command, journal and external evidence",
+    "Quarantine uncertain debits or credits under safe restrictions",
+    "Reconcile independently with cash/ledger/rail records",
+    "Create authorized correction journal only where financial effect required",
+    "Close case with reviewer and immutable root-cause evidence"
+  ],
+  "invariants": [
+    "Never silently retry unknown external settlement outcome",
+    "Exception closure requires independent financial evidence",
+    "Technical timeout does not imply payment or deposit failed",
+    "Do not remove account hold solely to clear EOD backlog",
+    "Corrections are new balanced financial operations",
+    "End-of-day completion cannot conceal suspense or mismatch"
+  ],
+  "planned_tests": [
+    "Unknown outcome remains unresolved after restart",
+    "Correction cannot mutate original journal",
+    "Duplicate exception intake merges by source reference",
+    "EOD report includes unreconciled exceptions",
+    "Cross-institution exception read denied"
+  ],
+  "approval_gate": "Operations/CFO reconciliations, approved exception SOP and fault-test evidence.",
+  "executed_tests": 0
+}
