@@ -1,0 +1,190 @@
+{
+  "checkpoint": "CB",
+  "date": "2026-11-03",
+  "work_package": "WP-ACC-005",
+  "status": "OPEN_P0_BLOCKED",
+  "mode": "DESIGN_ONLY_NOT_EXECUTABLE",
+  "predecessor": "CA",
+  "predecessor_verified_sha": "ec68b3d02965b1f2c79d0ec0b13dffc89bec54d5",
+  "sources": [
+    {
+      "id": "BEAC-001-GR-2025",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Instruction-N%C2%B0001-GR-2025_norme-ISO-20022.pdf",
+      "authority": "ISSUER_SIGNED_VISUAL",
+      "annex_refs": [
+        "CMA-I 3005-21 PTD 002",
+        "CMA-I 3005-21 PTD 001",
+        "CMA-I 3005-21 MFR 003",
+        "BEAC_SYGMA_ISO20022_BEAC_IAP_TIA"
+      ],
+      "sha256": null,
+      "amendments_verified": false
+    },
+    {
+      "id": "BEAC-LC-013-GR-2025",
+      "url": "https://www.beac.int/wp-content/uploads/2016/10/Lettre-Circulaire-N%C2%B013-GR-2025_portail-dacc%C3%A8s-MyStandard.pdf",
+      "authority": "ISSUER_SIGNED_VISUAL",
+      "annex": "MT-MX functional equivalence only",
+      "sha256": null,
+      "amendments_verified": false
+    }
+  ],
+  "profile_identity": {
+    "instruction_label": "BEAC_SYGMA_ISO20022_BEAC_IAP_TIA",
+    "circular_label": "BEAC_SYGMA_ISO20022",
+    "relationship": "UNKNOWN_REQUIRES_ISSUER_CONFIRMATION",
+    "version_suffixes": "NOT_PUBLISHED_IN_PUBLIC_CIRCULAR",
+    "digest": "NOT_ACQUIRED"
+  },
+  "required_external_documents": [
+    {
+      "id": "CMA-I 3005-21 PTD 002",
+      "name": "SYGMA REST API (MT-MX)",
+      "status": "NOT_ACQUIRED"
+    },
+    {
+      "id": "CMA-I 3005-21 PTD 001",
+      "name": "SYGMA MX electronic-signature guide",
+      "status": "NOT_ACQUIRED"
+    },
+    {
+      "id": "CMA-I 3005-21 MFR 003",
+      "name": "SYGMA message formats",
+      "status": "NOT_ACQUIRED"
+    },
+    {
+      "id": "BEAC-2025-CORRECTED-ANNEX",
+      "name": "Corrected migration milestones",
+      "status": "NOT_ACQUIRED"
+    },
+    {
+      "id": "CEMAC-BANK-PROFILE",
+      "name": "Issuer-authorized exact XML profiles and validation rules",
+      "status": "NOT_ACQUIRED"
+    },
+    {
+      "id": "BANK-PARTICIPATION",
+      "name": "Signed bank-specific agreement, profile approvals and production entitlement",
+      "status": "NOT_ACQUIRED"
+    },
+    {
+      "id": "SETTLEMENT-EVIDENCE",
+      "name": "Authenticated settlement account statements and finality rules",
+      "status": "NOT_ACQUIRED"
+    }
+  ],
+  "proposed_gates": [
+    {
+      "id": "CB-G01",
+      "require": "issuer-approved exact rail+collection+profile version+hash+effective window",
+      "failure": "QUARANTINE_PROFILE_ACTIVATION"
+    },
+    {
+      "id": "CB-G02",
+      "require": "verified CMA REST API semantics, auth, retry and status correlation",
+      "failure": "BLOCK_REST_ADAPTER"
+    },
+    {
+      "id": "CB-G03",
+      "require": "issuer-approved MX signature algorithm, canonicalization, certificate chain, HSM key custody and rotation",
+      "failure": "BLOCK_SIGNED_MESSAGE_TRANSMISSION"
+    },
+    {
+      "id": "CB-G04",
+      "require": "functional MT-MX equivalence never accepted as field-level mapping or accounting authority",
+      "failure": "BLOCK_AUTO_TRANSLATION"
+    },
+    {
+      "id": "CB-G05",
+      "require": "per-rail message schema edition and bank-specific profile matched to test receipt",
+      "failure": "BLOCK_CONFORMANCE_CLAIM"
+    },
+    {
+      "id": "CB-G06",
+      "require": "corrected issuer milestone and independent rail activation evidence",
+      "failure": "BLOCK_GO_LIVE_INFERENCE"
+    },
+    {
+      "id": "CB-G07",
+      "require": "institution-specific legal/contract entitlement and environment approvals",
+      "failure": "BLOCK_PRODUCTION_ACCESS"
+    },
+    {
+      "id": "CB-G08",
+      "require": "message state, clearing state, settlement state and GL posting state independently tracked",
+      "failure": "BLOCK_FINALITY_OR_BALANCE_MUTATION"
+    },
+    {
+      "id": "CB-G09",
+      "require": "external outcome UNKNOWN quarantined; inquiry/reconciliation before retry",
+      "failure": "BLOCK_BLIND_REPLAY"
+    },
+    {
+      "id": "CB-G10",
+      "require": "camt.052/053/054 classified by contractual authority, statement identity and external evidence",
+      "failure": "BLOCK_LIQUIDITY_INFERENCE"
+    },
+    {
+      "id": "CB-G11",
+      "require": "camt.056 cancellation request and camt.029 answer never rewrite posted journals",
+      "failure": "BLOCK_REVERSAL_BY_STATUS"
+    },
+    {
+      "id": "CB-G12",
+      "require": "MT999 operational commands independently authorized; no unsafe generalized translator",
+      "failure": "BLOCK_PRIVILEGED_COMMAND"
+    },
+    {
+      "id": "CB-G13",
+      "require": "audit log retains source document ID, profile digest, transport receipt, signed payload digest, issuer statement and reviewer",
+      "failure": "BLOCK_AUDIT_CLOSURE"
+    },
+    {
+      "id": "CB-G14",
+      "require": "approved PCEC mapping and maker-checker for any independently authorized accounting event",
+      "failure": "BLOCK_FINANCIAL_IMPLEMENTATION"
+    }
+  ],
+  "proposed_state_machine": {
+    "profile": [
+      "SOURCE_IDENTIFIED",
+      "DOCUMENTS_REQUESTED",
+      "ISSUER_AUTHENTICATED",
+      "BANK_ENTITLEMENT_APPROVED",
+      "SCHEMA_AND_SIGNATURE_VALIDATED",
+      "CONFORMANCE_EVIDENCED",
+      "PRODUCTION_AUTHORIZED",
+      "SUSPENDED"
+    ],
+    "external_payment": [
+      "AUTHORIZED",
+      "OUTBOX_PENDING",
+      "TRANSMITTED",
+      "ACCEPTED_OR_REJECTED_OR_UNKNOWN",
+      "CLEARING_OR_SETTLEMENT_PENDING",
+      "EXTERNAL_SETTLEMENT_EVIDENCED",
+      "INDEPENDENTLY_RECONCILED"
+    ],
+    "cancellation": [
+      "REQUESTED",
+      "CORRELATION_VERIFIED",
+      "LEGAL_AND_CHECKER_APPROVED",
+      "SUBMITTED",
+      "EXTERNAL_RESULT_UNKNOWN_OR_ACCEPTED_OR_REJECTED",
+      "ACCOUNTING_CORRECTION_SEPARATELY_AUTHORIZED",
+      "RECONCILED"
+    ]
+  },
+  "api_event_drafts": [
+    "ProfileReleaseRequested(institutionId,rail,collection,edition,profileHash,contractId,issuerApprovalId,checkerId)",
+    "ExternalMxObserved(institutionId,rail,profileHash,messageType,messageVersion,externalId,payloadDigest,signatureVerificationResult,receivedAt)",
+    "StatementEntryVerified(institutionId,settlementAccountId,statementId,entryId,externalReference,amountMinor,currency,issuerProofDigest)",
+    "UnknownOutcomeCaseOpened(institutionId,paymentId,externalCorrelationId,reason,ownerId)"
+  ],
+  "retention": "UNVERIFIED; no executable retention period",
+  "accounting": "IMMUTABLE_DOUBLE_ENTRY_EXACT_ARITHMETIC_ONLY",
+  "test_execution": 0,
+  "production_code": 0,
+  "certification": false,
+  "definition_of_ready": "FAIL"
+}
