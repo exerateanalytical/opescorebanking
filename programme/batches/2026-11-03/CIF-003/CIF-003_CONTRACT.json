@@ -1,0 +1,43 @@
+{
+  "id": "CIF-003",
+  "batch": 43,
+  "title": "Legal entity identity and organization registry",
+  "status": "DRAFT_REVIEW_OPEN",
+  "data_fields": [
+    "organization_party_id:uuid:canonical party ID",
+    "legal_form_code:string:jurisdiction-specific legal form",
+    "registered_name:string:registered legal name",
+    "trade_names:list:commercial aliases",
+    "registration_number:string|null:issuer-specific identifier",
+    "registry_authority:string:competent registry reference",
+    "incorporation_date:date|null:validated formation date",
+    "registered_address_ref:uuid:registered premises",
+    "status_observed:string:declared source status",
+    "evidence_refs:list:restricted official documents"
+  ],
+  "workflow": [
+    "Open organization party case with jurisdiction and legal form",
+    "Collect legal name, registrations, address and operating purpose",
+    "Cross-check documents against authorized source or reviewer",
+    "Record source dates, expiry and mismatch evidence",
+    "Link authorized officers and beneficial owners through separate relationships",
+    "Approve/reject organization identity before eligible customer activation"
+  ],
+  "requirements": [
+    "An unverified registration number is never accepted as proof of legal existence",
+    "Trade name cannot replace legal entity name or legal entity identifier",
+    "Registry status is time-bounded evidence and may be stale",
+    "Authorized signatory status and beneficial ownership are distinct relationships",
+    "Licensing for regulated corporate sectors requires separate source evidence",
+    "Organization records must be partitioned by institution and protected by legal privacy requirements"
+  ],
+  "acceptance_tests": [
+    "Same registration number in two jurisdictions is not automatically same entity",
+    "Expired authority to represent blocks restricted onboarding actions",
+    "Suspended registry status triggers review",
+    "Cross-institution document disclosure is denied",
+    "Changing registered name leaves prior evidence and audit history"
+  ],
+  "gate": "Institution KYB policy, accepted registry evidence sources and qualified legal review.",
+  "executed_tests": 0
+}
