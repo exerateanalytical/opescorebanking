@@ -1,0 +1,43 @@
+{
+  "id": "OPS-006",
+  "batch": 86,
+  "title": "Data protection, encryption and controlled retention",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "dataset_id:string:classified collection",
+    "institution_id:uuid:controller",
+    "data_class:enum:public/internal/confidential/restricted",
+    "legal_basis_ref:uuid:lawful processing authority",
+    "encryption_policy_version:string:key rule",
+    "key_alias:string:approved KMS reference",
+    "residency_scope:list:allowed jurisdictions",
+    "retention_policy_ref:string:effective policy",
+    "legal_hold_ref:uuid|null:retention exception",
+    "access_audit_ref:uuid:access evidence"
+  ],
+  "workflow": [
+    "Inventory customer, ledger, credentials and audit datasets",
+    "Assign sensitivity, lawful purpose and residency obligations",
+    "Apply encryption at rest/in transit and bounded key scopes",
+    "Define minimized API/log/event payloads and pseudonymization",
+    "Enforce justified retention, archival and lawful deletion workflows",
+    "Audit data access and test backup/restore under confidentiality"
+  ],
+  "invariants": [
+    "Statutory retention must be verified by legal source, not guessed",
+    "Posted financial evidence is not deleted to satisfy a generic user request",
+    "Public object URLs cannot expose identity documents",
+    "Cross-jurisdiction replication requires approval",
+    "Sensitive backups require identical encryption and access controls",
+    "Secrets and raw customer identifiers excluded from general telemetry"
+  ],
+  "planned_tests": [
+    "Unauthorized backup access rejected",
+    "Sensitive fields redacted in logs",
+    "Retention job respects active legal hold",
+    "Cross-region replication policy denies unknown location",
+    "Data export includes actor and approved purpose"
+  ],
+  "approval_gate": "Institution privacy/residency policy, qualified legal retention review, key policy and recovery-security tests.",
+  "executed_tests": 0
+}
