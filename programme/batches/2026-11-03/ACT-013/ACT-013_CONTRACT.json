@@ -1,0 +1,43 @@
+{
+  "id": "ACT-013",
+  "batch": 73,
+  "title": "Dormancy, reactivation and unclaimed balance policy",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "dormancy_case_id:uuid:review case",
+    "account_id:uuid:target account",
+    "institution_id:uuid:legal profile",
+    "last_qualifying_activity_at:datetime:policy-qualified event",
+    "dormancy_rule_version:string:effective rule",
+    "classification_state:enum:active/candidate/dormant/restricted",
+    "customer_notice_ref:uuid|null:notice proof",
+    "reactivation_identity_ref:uuid|null:reviewed identity",
+    "decision_actor:string:authorized reviewer",
+    "effective_at:datetime:status decision"
+  ],
+  "workflow": [
+    "Load institution-approved dormancy policy and exclusions",
+    "Compute candidate inactivity from authoritative qualifying events",
+    "Notify and review account for restrictions/legal holds",
+    "Activate dormant state only after approved policy checks",
+    "Require identity, mandate and risk reevaluation before reactivation",
+    "Preserve financial obligations, balances and regulatory records"
+  ],
+  "invariants": [
+    "Dormancy does not confiscate funds",
+    "No universal inactivity duration is assumed",
+    "Reactivation requires effective mandate and risk checks",
+    "Dormancy state alone cannot produce balancing ledger entries",
+    "Legal unclaimed-property treatment is jurisdiction-qualified",
+    "Retain history of customer notices and decisions"
+  ],
+  "planned_tests": [
+    "Excluded transaction does not reset clock",
+    "Unapproved threshold cannot classify account",
+    "Dormant account cannot bypass restrictions through API",
+    "Reactivation without identity check fails",
+    "Balance unchanged on status-only transition"
+  ],
+  "approval_gate": "Bank dormancy and unclaimed-property policy, signed jurisdictional sources, compliance review.",
+  "executed_tests": 0
+}
