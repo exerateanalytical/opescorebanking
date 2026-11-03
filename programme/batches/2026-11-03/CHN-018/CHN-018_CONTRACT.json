@@ -1,0 +1,43 @@
+{
+  "package": "CHN-018",
+  "batch": 118,
+  "title": "Offline, intermittent network and retry-safe channel behavior",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "offline_session_id:uuid:device context",
+    "institution_id:uuid:bank scope",
+    "device_binding_ref:uuid:authorized installation",
+    "cached_snapshot_ref:string|null:last source cursor",
+    "snapshot_age_seconds:integer:freshness",
+    "draft_command_id:string:client provisional ID",
+    "sync_state:enum:offline/queued/validating/submitted/rejected",
+    "server_receipt_ref:uuid|null:authoritative ack",
+    "network_state:enum:available/degraded/unavailable"
+  ],
+  "workflow": [
+    "Detect connection loss and display source freshness explicitly",
+    "Protect or purge restricted cached data per risk and legal policy",
+    "Permit only approved local draft/nonfinancial operations",
+    "On reconnect, reauthenticate, reauthorize, reprice and revalidate drafts",
+    "Assign stable idempotency identity before server submission",
+    "Display confirmed server outcome separately from local queue or transport response"
+  ],
+  "invariants": [
+    "Offline draft never changes authoritative account balance",
+    "Cached transfer confirmation cannot bypass step-up after reconnect",
+    "A queued request is not an accepted bank payment",
+    "No automatic replay on unknown external settlement outcome",
+    "Sensitive storage and credentials remain under institution device controls",
+    "Resubmission must use one stable financial command ID",
+    "Stale exchange rates/fees require fresh approved quote before authorization"
+  ],
+  "acceptance_tests": [
+    "Offline draft not shown as completed transfer",
+    "Reconnect double-submit remains one request",
+    "Expired session forces renewed authentication",
+    "Stale fee quote cannot silently execute",
+    "Unresolved external response is not retried blindly"
+  ],
+  "independent_gate": "Bank offline/device policy, payment domain idempotency and executed network-fault tests.",
+  "actual_tests_executed": 0
+}
