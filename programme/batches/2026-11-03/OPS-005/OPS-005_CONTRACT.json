@@ -1,0 +1,43 @@
+{
+  "id": "OPS-005",
+  "batch": 85,
+  "title": "Privileged access management and session controls",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "privilege_grant_id:uuid:temporary authorization",
+    "institution_id:uuid:regulated scope",
+    "operator_id:string:authenticated actor",
+    "role_code:string:approved function",
+    "resource_scope:list:bounded systems",
+    "justification_ref:uuid:approved reason",
+    "approver_id:string:independent checker",
+    "valid_from:datetime:start",
+    "valid_until:datetime:end",
+    "session_record_ref:uuid:audit proof"
+  ],
+  "workflow": [
+    "Receive time-bounded access request with ticket",
+    "Check user identity, institution, scope and current policy",
+    "Require independent owner approval and strong authentication",
+    "Grant minimum privileges to specified systems",
+    "Monitor actions and preserve redacted privileged-session evidence",
+    "Revoke automatically at expiry and review emergency actions"
+  ],
+  "invariants": [
+    "Developers do not hold permanent production ledger-admin roles",
+    "Self-approval and standing break-glass grants are prohibited",
+    "Database superuser actions cannot bypass financial controls",
+    "Access to customer data requires lawful operational purpose",
+    "Every privileged session binds to accountable individual",
+    "Revocation must invalidate subsequent role decisions"
+  ],
+  "planned_tests": [
+    "Self-approved admin request denied",
+    "Expired grant cannot access production",
+    "Session transcript proves actor and action without secrets",
+    "Wrong institution scope denied",
+    "Disabled operator session revoked"
+  ],
+  "approval_gate": "CISO and regulated-institution access policy, real PAM/IAM integration and privileged-activity tests.",
+  "executed_tests": 0
+}
