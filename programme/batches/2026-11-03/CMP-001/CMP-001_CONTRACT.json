@@ -1,0 +1,87 @@
+{
+  "id": "CMP-001",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "rule_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Unique obligation"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Regulated applicability"
+      },
+      "issuer_code": {
+        "type": "string",
+        "description": "Authority identity"
+      },
+      "instrument_ref": {
+        "type": "string",
+        "description": "Primary-source reference"
+      },
+      "article_ref": {
+        "type": "string",
+        "description": "Precise clause"
+      },
+      "effective_from": {
+        "type": "string",
+        "format": "date",
+        "description": "Verified start"
+      },
+      "supersedes_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Controlled amendment"
+      },
+      "reviewer_id": {
+        "type": "string",
+        "description": "Qualified legal compliance"
+      },
+      "rule_state": {
+        "type": "string",
+        "description": "Discovered reviewed approved blocked"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "DISCOVERED",
+      "to": "UNDER_REVIEW",
+      "guard": "source acquired"
+    },
+    {
+      "from": "UNDER_REVIEW",
+      "to": "APPROVED",
+      "guard": "legal authentication"
+    },
+    {
+      "from": "UNDER_REVIEW",
+      "to": "CONFLICTED",
+      "guard": "ambiguous text"
+    },
+    {
+      "from": "APPROVED",
+      "to": "SUPERSEDED",
+      "guard": "verified amendment"
+    },
+    {
+      "from": "CONFLICTED",
+      "to": "APPROVED",
+      "guard": "competent clarification"
+    }
+  ],
+  "requirements": [
+    "An index snippet does not establish legal effective obligation",
+    "Conflicting primary text remains unresolved, never guessed",
+    "FATF/Basel/ISO guidance does not automatically become local law",
+    "Source digitization must preserve page, article and issuer attribution",
+    "Unverified or overlapping policy revisions fail closed",
+    "Historic transactions remain interpretable under earlier approved rules"
+  ],
+  "release_gate": "Authenticated primary legal documents, qualified local counsel and independent compliance signoff."
+}

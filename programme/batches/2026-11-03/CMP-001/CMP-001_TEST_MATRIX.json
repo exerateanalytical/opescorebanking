@@ -1,0 +1,36 @@
+{
+  "work_package": "CMP-001",
+  "executed": false,
+  "cases": [
+    {
+      "id": "CMP-001-TEST-1",
+      "description": "Conflicted source cannot activate rule",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-001-TEST-2",
+      "description": "Two overlapping effective versions rejected",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-001-TEST-3",
+      "description": "Unverified issuer provenance blocked",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-001-TEST-4",
+      "description": "Prior date reproduces original rule",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-001-TEST-5",
+      "description": "Wrong institution policy reference denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
