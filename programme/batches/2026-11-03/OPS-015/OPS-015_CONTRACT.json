@@ -1,0 +1,44 @@
+{
+  "package": "OPS-015",
+  "batch": 95,
+  "title": "Capacity planning and nonfunctional service objectives",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "capacity_profile_id:string:controlled scenario",
+    "institution_id:uuid:legal entity",
+    "workload_class:enum:account/read/posting/report/settlement",
+    "peak_rate:integer:assumed load until measured",
+    "concurrent_sessions:integer:assumed active users",
+    "p99_latency_ms:integer:proposed threshold",
+    "queue_backlog_max:integer:maximum event delay",
+    "reconciliation_window:string:finance approved period",
+    "resource_limits_ref:string:compute and storage constraints",
+    "test_evidence_ref:uuid|null:real benchmark results"
+  ],
+  "workflow": [
+    "Gather branch, channel, month-end and seasonal customer operation volumes",
+    "Define minimum service availability and business transaction safety objectives",
+    "Create isolated synthetic load fixtures with realistic account distributions",
+    "Measure response, queue lag, database locks and ledger reconciliation under load",
+    "Model safe throttling, graceful degradation and retry behavior",
+    "Approve capacity envelope only using reproducible measured evidence"
+  ],
+  "invariants": [
+    "Marketing TPS target is not a validated performance result",
+    "Correctness of journal and event idempotency is non-negotiable at peak load",
+    "Rate limiting must not lose accepted banking instructions",
+    "Do not mark a settlement backlog cleared without independent source reconciliation",
+    "Cross-institution contention and noisy-neighbor interference must be measured",
+    "Resource changes remain traceable through change control",
+    "Latency targets are bounded by approved institution risk appetites"
+  ],
+  "acceptance_tests": [
+    "Concurrent posting requests preserve balance integrity",
+    "Capacity rejection exposes explicit retry-safe state",
+    "Large backlogs recover without duplicate journal entries",
+    "Resource exhaustion cannot expose another institution's records",
+    "Reconciliation window honored under tested peak scenario"
+  ],
+  "independent_gate": "Operations/CFO signed workload assumptions, executed tests and independent performance acceptance.",
+  "actual_tests_executed": 0
+}
