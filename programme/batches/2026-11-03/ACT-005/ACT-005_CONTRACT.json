@@ -1,0 +1,43 @@
+{
+  "id": "ACT-005",
+  "batch": 65,
+  "title": "Product approval, release and suspension controls",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "product_change_id:uuid:request ID",
+    "institution_id:uuid:owner",
+    "product_id:uuid:catalogue identity",
+    "terms_version:string:review candidate",
+    "maker_id:string:proposer",
+    "reviewer_roles:list:review participants",
+    "financial_impact_ref:uuid:posting impact",
+    "approval_decision:enum:pending/approved/rejected",
+    "effective_at:datetime:authorized start",
+    "audit_evidence_refs:list:decision evidence"
+  ],
+  "workflow": [
+    "Submit reviewed product edition and risk assessment",
+    "Validate financial mapping and product eligibility dependencies",
+    "Collect legal/CFO/compliance approvals with non-self-approval checks",
+    "Prepare release rollback and change notification",
+    "Activate only approved effective-dated product edition",
+    "Suspend future intake if authority expires without modifying past contracts"
+  ],
+  "invariants": [
+    "Approval cannot be inferred from a ZIP checkpoint or deployment",
+    "Bank product regulation may differ by institution and license type",
+    "No single proposer can grant final financial product activation",
+    "Unreviewed fees/rates cannot post to ledger",
+    "Suspension stops new issuance without rewriting historical agreements",
+    "Every decision is reproducible from evidence and approved version"
+  ],
+  "planned_tests": [
+    "Self-approval denied",
+    "Missing CFO mapping blocks release",
+    "Old contract remains intact after suspension",
+    "Expired license disables new enrolment",
+    "Duplicate approval command cannot double activate"
+  ],
+  "approval_gate": "Actual institutional product committee, applicable regulatory evidence and finance/risk approval.",
+  "executed_tests": 0
+}
