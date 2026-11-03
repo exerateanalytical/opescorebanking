@@ -1,0 +1,44 @@
+{
+  "package": "CHN-006",
+  "batch": 106,
+  "title": "Account home, balances and transaction feed freshness",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "dashboard_request_id:uuid:view trace",
+    "institution_id:uuid:bank",
+    "account_scope:list:authorized account refs",
+    "source_ledger_cursor:string:source snapshot",
+    "projection_updated_at:datetime:last refresh",
+    "posted_balance:string:source-backed amount",
+    "available_balance:string:policy-derived amount",
+    "pending_activity_count:integer:unfinalized items",
+    "currency:string:account denomination",
+    "data_state:enum:current/stale/unavailable"
+  ],
+  "workflow": [
+    "Resolve authorized customer and selected account scopes",
+    "Fetch source-linked ledger balances and account restrictions",
+    "Separate posted movements, pending card/payment/deposit items and reservations",
+    "Show last-updated timestamp and explicit stale/unavailable errors",
+    "Offer filtered accessible history without merging currencies",
+    "Escalate source/reconciliation inconsistencies rather than displaying fabricated zero"
+  ],
+  "invariants": [
+    "Projection data is never a secondary system-of-record ledger",
+    "No account belonging to another institution appears in results",
+    "A pending incoming transfer cannot inflate posted balance without evidence",
+    "Account currency and decimal formatting are consistent and localized",
+    "Read caching declares freshness and obeys privacy/expiry policy",
+    "A reversed journal displays correction rather than vanishing",
+    "High-contrast, accessible text must remain readable at mobile sizes"
+  ],
+  "acceptance_tests": [
+    "Stale snapshot visibly marked",
+    "Cross-account filter does not leak private transactions",
+    "Pending credit not counted as posted",
+    "Original and reversal both visible",
+    "Unavailable source avoids false zero balance"
+  ],
+  "independent_gate": "Approved account/ledger read API, privacy review and actual usability/integration testing.",
+  "actual_tests_executed": 0
+}
