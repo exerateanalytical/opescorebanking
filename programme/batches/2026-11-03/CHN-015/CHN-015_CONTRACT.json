@@ -1,0 +1,44 @@
+{
+  "package": "CHN-015",
+  "batch": 115,
+  "title": "Consent-managed data sharing and open-banking permissions",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "consent_id:uuid:controlled grant",
+    "institution_id:uuid:bank controller",
+    "customer_id:uuid:authenticated owner",
+    "partner_id:uuid:validated recipient",
+    "scope_refs:list:per-account read/service permissions",
+    "purpose_code:string:stated use",
+    "granted_at:datetime:verified action",
+    "expires_at:datetime:bounded validity",
+    "consent_state:enum:pending/active/revoked/expired",
+    "policy_version:string:approved legal basis"
+  ],
+  "workflow": [
+    "Validate that data-sharing activity is legally and institutionally permitted",
+    "Authenticate customer and verify bank-account resource ownership",
+    "Display specific recipient, purpose, scope and expiry without dark patterns",
+    "Record versioned affirmative authorization with scoped token issuance",
+    "Enforce resource/action and consent validity on every data access",
+    "Revoke promptly and retain lawful evidence without allowing continued use"
+  ],
+  "invariants": [
+    "Possession of API client credentials is not customer authorization",
+    "Consent is optional where legally applicable and distinct from mandatory KYC processing",
+    "Partner access cannot exceed approved account and purpose scope",
+    "Revocation blocks future requests and downstream token usage",
+    "Data minimization and retention rules apply to recipients",
+    "Consent to view balances does not authorize initiating payment",
+    "Unconfirmed regulatory framework leaves production capability disabled"
+  ],
+  "acceptance_tests": [
+    "Revoked consent rejects next API call",
+    "Consent for one account cannot retrieve another",
+    "Expired scope rejected",
+    "Partner receives no excess personal data",
+    "Changed purpose requires new authorization"
+  ],
+  "independent_gate": "Verified current institution/jurisdiction data-sharing rules, partner agreements, privacy and security acceptance.",
+  "actual_tests_executed": 0
+}
