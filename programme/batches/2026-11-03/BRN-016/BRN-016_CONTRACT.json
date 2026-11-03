@@ -1,0 +1,95 @@
+{
+  "id": "BRN-016",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "exchange_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Unique conversion"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Licensed participant"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Cash desk"
+      },
+      "source_currency": {
+        "type": "string",
+        "description": "Currency received"
+      },
+      "target_currency": {
+        "type": "string",
+        "description": "Currency released"
+      },
+      "source_amount": {
+        "type": "string",
+        "description": "Exact input"
+      },
+      "rate_source_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Approved FX quote"
+      },
+      "target_amount": {
+        "type": "string",
+        "description": "Calculated exact output"
+      },
+      "cash_handover_refs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Two currency counts"
+      },
+      "posting_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Balanced financial journal"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "QUOTED",
+      "to": "CONFIRMED",
+      "guard": "customer accepts exact quote"
+    },
+    {
+      "from": "CONFIRMED",
+      "to": "AUTHORIZED",
+      "guard": "limits and legal checks"
+    },
+    {
+      "from": "AUTHORIZED",
+      "to": "POSTING_PENDING",
+      "guard": "approved accounting treatment"
+    },
+    {
+      "from": "POSTING_PENDING",
+      "to": "EXCHANGED",
+      "guard": "both cash receipts verified"
+    },
+    {
+      "from": "ANY",
+      "to": "BLOCKED",
+      "guard": "FX authority or mapping missing"
+    }
+  ],
+  "requirements": [
+    "Never use a cached unapproved rate for bank cash exchange",
+    "No cross-currency arithmetic without explicit quote and rounding rule",
+    "Physical handover requires two independent currency counts",
+    "Unverified FX entitlement or account classification blocks activation",
+    "Rate quote expiration requires renewal and customer reconfirmation",
+    "No implied real-time regulator exchange-rate source from a design document"
+  ],
+  "release_gate": "Competent FX licensing/BEAC and institution policy, verified quote source, CFO mapping and executed dual-currency tests."
+}

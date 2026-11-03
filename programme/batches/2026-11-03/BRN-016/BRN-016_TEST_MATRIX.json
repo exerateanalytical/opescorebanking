@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-016",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-016-TEST-1",
+      "description": "Expired quote cannot execute",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-016-TEST-2",
+      "description": "Missing target-currency inventory blocks payout",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-016-TEST-3",
+      "description": "Cross-institution rate source denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-016-TEST-4",
+      "description": "Duplicate exchange request does not double-convert",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-016-TEST-5",
+      "description": "Journal and two cash inventories reconcile",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
