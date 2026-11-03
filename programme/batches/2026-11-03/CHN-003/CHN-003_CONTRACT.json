@@ -1,0 +1,43 @@
+{
+  "package": "CHN-003",
+  "batch": 103,
+  "title": "Customer mobile banking and device-safe transaction workflows",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "device_binding_id:uuid:customer device reference",
+    "institution_id:uuid:bank scope",
+    "app_installation_id:string:mobile install",
+    "subject_id:string:authenticated user",
+    "device_attestation_state:enum:unknown/reviewed/approved",
+    "app_version:string:supported release",
+    "local_cache_policy:string:data minimization mode",
+    "session_ref:uuid:active context",
+    "push_channel_ref:string|null:notification handle"
+  ],
+  "workflow": [
+    "Onboard a device under institutional risk policy and customer identity checks",
+    "Authenticate session and fetch scoped customer accounts and abilities",
+    "Render single-task mobile flows with readable controls and assistive labels",
+    "Collect high-risk instructions with confirmation and risk-based step-up",
+    "Submit with idempotency and present pending/unknown/completed statuses distinctly",
+    "On lockout or offline state, protect private data and avoid duplicate money operations"
+  ],
+  "invariants": [
+    "Untrusted device cannot silently self-bind to customer payments",
+    "Offline cache never authorizes a monetary transfer or invents fresh balances",
+    "Sensitive fields and tokens are encrypted/minimized under reviewed policy",
+    "Display status comes from server evidence, not a push notification",
+    "Mobile design respects two-column maximum and responsive accessible screens",
+    "Repeated tap cannot create duplicate payment commands",
+    "Device unbinding revokes future device-bound tokens"
+  ],
+  "acceptance_tests": [
+    "Double tap sends one transaction identity",
+    "Offline initiation cannot claim completion",
+    "Revoked device loses privileged access",
+    "Accessibility labels and dynamic text do not overlap",
+    "Wrong institution device binding denied"
+  ],
+  "independent_gate": "Bank-approved device posture policy, mobile threat model and real device/API accessibility testing.",
+  "actual_tests_executed": 0
+}
