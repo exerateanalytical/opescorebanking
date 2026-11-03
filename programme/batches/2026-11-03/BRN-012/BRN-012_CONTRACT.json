@@ -1,0 +1,92 @@
+{
+  "id": "BRN-012",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "variance_case_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Investigation"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank owner"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Site"
+      },
+      "cash_session_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Shift or vault"
+      },
+      "expected_cash": {
+        "type": "string",
+        "description": "Exact custody total"
+      },
+      "observed_cash": {
+        "type": "string",
+        "description": "Physical count"
+      },
+      "variance_amount": {
+        "type": "string",
+        "description": "Signed difference"
+      },
+      "root_cause": {
+        "type": "string",
+        "description": "Evidence-based cause"
+      },
+      "resolution_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Approved treatment"
+      },
+      "status": {
+        "type": "string",
+        "description": "Open investigated resolved closed"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "DETECTED",
+      "to": "OPEN",
+      "guard": "count discrepancy"
+    },
+    {
+      "from": "OPEN",
+      "to": "INVESTIGATING",
+      "guard": "owner assigned"
+    },
+    {
+      "from": "INVESTIGATING",
+      "to": "REMEDIATION_REVIEW",
+      "guard": "documented evidence"
+    },
+    {
+      "from": "REMEDIATION_REVIEW",
+      "to": "RESOLVED",
+      "guard": "independent acceptance"
+    },
+    {
+      "from": "ANY",
+      "to": "ESCALATED",
+      "guard": "fraud or major loss"
+    }
+  ],
+  "requirements": [
+    "Variance cannot be cleared by replacing original physical count",
+    "No teller self-signoff for shortages",
+    "Financial correction uses new approved posting, not mutation",
+    "Unknown cash location remains on exception register",
+    "Evidence and actor attribution must survive closeout",
+    "Material fraud suspicions are restricted to authorized investigators"
+  ],
+  "release_gate": "CFO-approved shortage/overage treatment, actual cash count, security procedure and independent reviewer."
+}

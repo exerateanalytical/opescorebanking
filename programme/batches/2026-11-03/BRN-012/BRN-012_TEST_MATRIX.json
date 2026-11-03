@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-012",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-012-TEST-1",
+      "description": "Count mismatch creates open case",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-012-TEST-2",
+      "description": "Without checker resolution remains pending",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-012-TEST-3",
+      "description": "Direct journal mutation refused",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-012-TEST-4",
+      "description": "Duplicate variance notification not duplicated",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-012-TEST-5",
+      "description": "Audit history remains after case closes",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
