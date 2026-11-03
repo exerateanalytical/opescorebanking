@@ -1,0 +1,44 @@
+{
+  "package": "ARC-014",
+  "batch": 34,
+  "title": "External systems and anti-corruption integration boundaries",
+  "status": "DRAFT_REVIEW_OPEN",
+  "model": [
+    "connector_id:string:registered external system",
+    "institution_id:uuid:participant/entity boundary",
+    "counterparty_type:enum:registry/payment/credit/reporting/provider",
+    "adapter_version:string:reviewed translation edition",
+    "external_ref:string:foreign unique reference",
+    "internal_ref:uuid:owned domain record",
+    "payload_digest:string:retained original-message integrity marker",
+    "observed_at:timestamp:time evidence observed",
+    "source_status:enum:accepted/rejected/unknown",
+    "reconciliation_id:uuid|null:independent verification link"
+  ],
+  "flow": [
+    "Validate institution entitlement and external endpoint configuration",
+    "Send authorized request with stable correlation and idempotency identifiers",
+    "Retain safe request/response provenance under data minimization policy",
+    "Translate external statuses through versioned anti-corruption adapter",
+    "Mark ambiguous outcomes unresolved pending reconciliation",
+    "Escalate mismatches with operator review and full audit chain"
+  ],
+  "rules": [
+    "Never equate external message acknowledgement with settled funds",
+    "Do not embed an external provider's status model directly into core ledger posting rules",
+    "Version adapters and preserve the raw-response evidence needed for audit",
+    "Require secure mutual identity/signing policy from the actual participant contract",
+    "Only sanctioned external reference values may be retained in customer records",
+    "Keep remote outage from causing an automatic duplicated financial command"
+  ],
+  "test_cases": [
+    "Reject an adapter schema version not approved for that participant",
+    "External timeout creates explicit unknown outcome without reposting",
+    "Retry same external correlation does not create two internal effects",
+    "Cross-institution adapter credentials cannot be used",
+    "Malformed external status never passes as settlement evidence"
+  ],
+  "approval_gate": "Institution-specific contracts, message/profile versions, security credentials and qualified payments/legal review.",
+  "tests_executed": 0,
+  "production_code": false
+}
