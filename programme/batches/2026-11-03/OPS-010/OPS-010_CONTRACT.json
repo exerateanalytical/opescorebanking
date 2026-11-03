@@ -1,0 +1,43 @@
+{
+  "id": "OPS-010",
+  "batch": 90,
+  "title": "Backup, restore, DR and financial recovery acceptance model",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "recovery_plan_id:string:versioned recovery plan",
+    "institution_id:uuid:bank boundary",
+    "environment_id:string:target restoration scope",
+    "backup_snapshot_ref:string:source artifact",
+    "source_commit_ref:string:app version",
+    "journal_watermark:string:accounting checkpoint",
+    "outbox_watermark:string:event delivery cursor",
+    "external_outcomes:list:uncertain settlements",
+    "reconciliation_evidence_ref:uuid|null:control review",
+    "approval_status:enum:planned/tested/approved/blocked"
+  ],
+  "workflow": [
+    "Create institution-approved backup and recovery policy with RPO/RTO requirements",
+    "Take encrypted consistent backups with key recovery scope and source evidence",
+    "Restore in isolated recovery environment with validated data integrity",
+    "Resume outbox/inbox from trusted cursors and deduplicate messages",
+    "Reconcile journal, customer balances, cash positions and external outcome cases",
+    "Reopen production traffic only on independent operations/CFO approval"
+  ],
+  "invariants": [
+    "Unreconciled payment outcomes cannot be considered settled due to failover",
+    "Restore cannot skip posted journal entries or modify original posting history",
+    "Recovery objectives must be measured and institution-approved, not advertised without tests",
+    "Backup copies remain encrypted and isolated from routine application permissions",
+    "Duplicate event replay cannot create duplicate financial value",
+    "Disaster recovery approval is separate from ZIP delivery or programme document acceptance"
+  ],
+  "planned_tests": [
+    "Restore a measured snapshot and compare source totals",
+    "Crash after posting before event publish and recover once",
+    "Replay inbox events without duplication",
+    "Test unknown external settlement after outage",
+    "Reject resumption without CFO reconciliation approval"
+  ],
+  "approval_gate": "Approved bank RPO/RTO, encrypted backup custody, executed restoration/fault tests and independent financial security signoff.",
+  "executed_tests": 0
+}
