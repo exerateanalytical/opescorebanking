@@ -1,0 +1,4184 @@
+{
+  "title": "OPES Core Banking repository asset synchronization snapshot",
+  "captured_date": "2026-11-03",
+  "repository": "exerateanalytical/opescorebanking",
+  "branch": "main",
+  "baseline_commit_sha": "c85494e5122377ee795d39ba85fb29f36da3f11f",
+  "baseline_tree_sha": "b2eb104426892d9bc2d50d231a8184fcb98f134c",
+  "inventory_scope": "Every blob in the reachable main branch tree; not a proof of every file ever created in earlier conversations",
+  "statistics": {
+    "tracked_blob_paths": 811,
+    "tracked_zip_archives": 162,
+    "numbered_checkpoint_zip_archives": 150,
+    "numbered_checkpoint_span": [
+      1,
+      150
+    ],
+    "missing_numbered_checkpoint_ids": [],
+    "duplicate_numbered_checkpoint_ids": [],
+    "regulatory_checkpoint_blob_count": 317,
+    "original_historical_AE_AN_present": 10
+  },
+  "historical_archive_presence": [
+    {
+      "checkpoint": "AE",
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AE_2026-10-09.zip",
+      "exists": true,
+      "bytes": 546061,
+      "git_blob_sha1": "d41e16c7d77c5661d1b41a575ae5f37647c39cc6"
+    },
+    {
+      "checkpoint": "AF",
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AF_2026-10-09.zip",
+      "exists": true,
+      "bytes": 551363,
+      "git_blob_sha1": "ff19713a5b1a8aa4dbf085bec7d29cf642ef9185"
+    },
+    {
+      "checkpoint": "AG",
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AG_2026-10-09.zip",
+      "exists": true,
+      "bytes": 556408,
+      "git_blob_sha1": "d43060f35b3246f0aa128f1404ae61478f4f664e"
+    },
+    {
+      "checkpoint": "AH",
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AH_2026-10-09.zip",
+      "exists": true,
+      "bytes": 561357,
+      "git_blob_sha1": "8ba239716d55ce5deea32f95bdb74b897a64afde"
+    },
+    {
+      "checkpoint": "AI",
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AI_2026-10-09.zip",
+      "exists": true,
+      "bytes": 565959,
+      "git_blob_sha1": "edd45cb7661077643a172f808aa390fd36470ade"
+    },
+    {
+      "checkpoint": "AJ",
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AJ_2026-10-09.zip",
+      "exists": true,
+      "bytes": 571166,
+      "git_blob_sha1": "68029b171411ac14b2728b7b41accded016da115"
+    },
+    {
+      "checkpoint": "AK",
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AK_2026-10-09.zip",
+      "exists": true,
+      "bytes": 575544,
+      "git_blob_sha1": "62d44c342c3baef8a1f3bec7516a69251885c432"
+    },
+    {
+      "checkpoint": "AL",
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AL_2026-10-09.zip",
+      "exists": true,
+      "bytes": 579859,
+      "git_blob_sha1": "84c5dfc84859aa6c222d0336f4690a8f2e170def"
+    },
+    {
+      "checkpoint": "AM",
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AM_2026-10-09.zip",
+      "exists": true,
+      "bytes": 584358,
+      "git_blob_sha1": "33d0c506abddba5ba1dfc2d4905ec173f9f3edce"
+    },
+    {
+      "checkpoint": "AN",
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AN_2026-10-09.zip",
+      "exists": true,
+      "bytes": 589143,
+      "git_blob_sha1": "f32ffba2476df66f839deec722adaf063d697bbf"
+    }
+  ],
+  "four_priority_originals_not_recovered": [
+    {
+      "name": "OPES_Core_Banking_Research_Delta_2026-11-01_R01.zip",
+      "reported_bytes": 9247,
+      "expected_sha256_prefix": "5ff903be73e0d0d9",
+      "exact_basename_in_repo": false
+    },
+    {
+      "name": "OPES_Core_Banking_Consolidated_Research_2026-11-01.docx",
+      "reported_bytes": 68498,
+      "expected_sha256_prefix": "6e54583233168e6a",
+      "exact_basename_in_repo": false
+    },
+    {
+      "name": "OPES_Core_Banking_Consolidated_Research_2026-11-01.pdf",
+      "reported_bytes": 369271,
+      "expected_sha256_prefix": "bb81e5b38089a64a",
+      "exact_basename_in_repo": false
+    },
+    {
+      "name": "OPES_Core_Banking_Available_Batches_Consolidated_2026-11-03.zip",
+      "reported_bytes": 5939492,
+      "expected_sha256_prefix": "733298994715ddba",
+      "exact_basename_in_repo": false
+    }
+  ],
+  "limitations": [
+    "Historic AN archive has Git blob SHA and reported byte count, but original SHA-256 was not independently recomputed from downloaded remote binary during this audit.",
+    "Git blob SHA-1 is not a SHA-256 checksum.",
+    "Library and Google Drive search found no exact matches for four original November filenames; inaccessible prior-chat-only sources cannot be ruled out.",
+    "Do not reconstruct missing original binaries under the same names without byte-identification evidence.",
+    "No new banking production code, banking test execution or regulator certification was performed by this inventory."
+  ],
+  "tracked_blobs": [
+    {
+      "path": ".github/workflows/restore-checkpoint-an.yml",
+      "bytes": 1185,
+      "git_blob_sha1": "864aad9dd672639db2c627c614ac80c6c86377ee"
+    },
+    {
+      "path": "governance/checkpoints/GOV-REC-001/OPES_Core_Banking_GOV_REC_001_Checkpoint_2026-11-03.zip",
+      "bytes": 1335,
+      "git_blob_sha1": "a0cb5712f0627b5684d75443fd70edfd71a055b6"
+    },
+    {
+      "path": "governance/GOV_REC_001_SOURCE_CROSSWALK_DELTA_2026-11-03_2337.md",
+      "bytes": 3433,
+      "git_blob_sha1": "45dd84767930bd901ce8f2b86a3df4157b6665f4"
+    },
+    {
+      "path": "governance/GOV_REC_001_TREE_AUDIT_2026-11-03_2241.md",
+      "bytes": 1236,
+      "git_blob_sha1": "edfaf69854d184cfb62c7799f6e0f2d04e1bc05e"
+    },
+    {
+      "path": "governance/LOCAL_ARTIFACT_RECOVERY_INVENTORY_2026-11-03.md",
+      "bytes": 2485,
+      "git_blob_sha1": "23da8d269498647014c2a1008909adbec526b117"
+    },
+    {
+      "path": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md",
+      "bytes": 8095,
+      "git_blob_sha1": "73614b6788492ebdd38609b3fd5eaeb0b100324e"
+    },
+    {
+      "path": "governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md",
+      "bytes": 5995,
+      "git_blob_sha1": "c803b8bb4472e1f9cf88532633d2116447a80ecb"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-001/ACT-001_CONTRACT.json",
+      "bytes": 1968,
+      "git_blob_sha1": "eb737a4e49a3d5e727f6b6f467a21fc85b0ab708"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-001/ACT-001_SPEC.md",
+      "bytes": 2813,
+      "git_blob_sha1": "c0eae097ba9dcdd7050a64c573785611e36a935b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-001/OPES_Core_Banking_Batch_61_ACT-001_2026-11-03.zip",
+      "bytes": 5467,
+      "git_blob_sha1": "76dcf3081072246a90737e4855cf6e3205619570"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-002/ACT-002_CONTRACT.json",
+      "bytes": 1939,
+      "git_blob_sha1": "a7f252ac19000114ea9b0e07f1f224f8c880d736"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-002/ACT-002_SPEC.md",
+      "bytes": 2763,
+      "git_blob_sha1": "43cb242d9e0d38cb5f314bde403b1bfcce0c80bf"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-002/OPES_Core_Banking_Batch_62_ACT-002_2026-11-03.zip",
+      "bytes": 5388,
+      "git_blob_sha1": "3c327a37589d2b20117f3482e4d49d482df48882"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-003/ACT-003_CONTRACT.json",
+      "bytes": 1886,
+      "git_blob_sha1": "e6cb82fa327f4960e4039d22edd593e17deb1c57"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-003/ACT-003_SPEC.md",
+      "bytes": 2707,
+      "git_blob_sha1": "e2b85723cd781c16eba54268e1d738296e79ba9c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-003/OPES_Core_Banking_Batch_63_ACT-003_2026-11-03.zip",
+      "bytes": 5279,
+      "git_blob_sha1": "02d83a12d825b8818f18a99f6236f40069fbd135"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-004/ACT-004_CONTRACT.json",
+      "bytes": 1874,
+      "git_blob_sha1": "35f229a140d8a3c4421ff92c2c3fdbeee877ff0f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-004/ACT-004_SPEC.md",
+      "bytes": 2701,
+      "git_blob_sha1": "6ca07e34bf5e0cd316f9cd49b9fda1a56c7cab00"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-004/OPES_Core_Banking_Batch_64_ACT-004_2026-11-03.zip",
+      "bytes": 5261,
+      "git_blob_sha1": "99e7af5bebb37442941c70c64f9b45010ed20cb7"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-005/ACT-005_CONTRACT.json",
+      "bytes": 1850,
+      "git_blob_sha1": "0ebcb490ffd608b9f1af3be8e5f4d90508032056"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-005/ACT-005_SPEC.md",
+      "bytes": 2656,
+      "git_blob_sha1": "520bce5c7e40d879340bc552fe9f3f213ca4b500"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-005/OPES_Core_Banking_Batch_65_ACT-005_2026-11-03.zip",
+      "bytes": 5187,
+      "git_blob_sha1": "0ebe13d3543220192e82caf8d11468bc46759b7a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-006/ACT-006_CONTRACT.json",
+      "bytes": 1886,
+      "git_blob_sha1": "a3ab65f62a1fe89b6f042b45cd80bd2e3cf6ebd8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-006/ACT-006_SPEC.md",
+      "bytes": 2674,
+      "git_blob_sha1": "7b4252c963fce9fb5c523f2f58cf83388dc0c6fa"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-006/OPES_Core_Banking_Batch_66_ACT-006_2026-11-03.zip",
+      "bytes": 5241,
+      "git_blob_sha1": "d6787a07c63460716d4b1d45bf028b32c5854bc4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-007/ACT-007_CONTRACT.json",
+      "bytes": 1822,
+      "git_blob_sha1": "391816cd87bac077046c4e2a3b45b93884824b67"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-007/ACT-007_SPEC.md",
+      "bytes": 2592,
+      "git_blob_sha1": "448059394cfa4a79d5de1249a8336f58da40219e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-007/OPES_Core_Banking_Batch_67_ACT-007_2026-11-03.zip",
+      "bytes": 5095,
+      "git_blob_sha1": "213dbd7c64fbd923383c67d2b38255f991d5d76c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-008/ACT-008_CONTRACT.json",
+      "bytes": 1895,
+      "git_blob_sha1": "57176eb2660c4cab37d3987b9033922cc6d19f91"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-008/ACT-008_SPEC.md",
+      "bytes": 2678,
+      "git_blob_sha1": "4b368028aa3936f32b54799d8f4365804a3216b4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-008/OPES_Core_Banking_Batch_68_ACT-008_2026-11-03.zip",
+      "bytes": 5254,
+      "git_blob_sha1": "1c4416810db6f1c3e2abb26aee98b276f2d7495e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-009/ACT-009_CONTRACT.json",
+      "bytes": 1995,
+      "git_blob_sha1": "11a2a439a54d2807cdbb7b6f3bca341420d5a3f3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-009/ACT-009_SPEC.md",
+      "bytes": 2777,
+      "git_blob_sha1": "0ba86b46052edb8c319021775bebc1bf1ca997b6"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-009/OPES_Core_Banking_Batch_69_ACT-009_2026-11-03.zip",
+      "bytes": 5453,
+      "git_blob_sha1": "227486bb399bcd75ce695dc9f135fb15087ddeac"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-010/ACT-010_CONTRACT.json",
+      "bytes": 1865,
+      "git_blob_sha1": "9895363eea2287bf8269f1bd37d9b473ec77f904"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-010/ACT-010_SPEC.md",
+      "bytes": 2633,
+      "git_blob_sha1": "c9d83df1ad47201e192bb80cb5c03f8fd8ce2e98"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-010/OPES_Core_Banking_Batch_70_ACT-010_2026-11-03.zip",
+      "bytes": 5179,
+      "git_blob_sha1": "efe39eee02dd66505907ff676a2cd1eec456cf7b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-011/ACT-011_CONTRACT.json",
+      "bytes": 1838,
+      "git_blob_sha1": "ab6cb10956ca1314a3bdbe1a6c0b4b37e9b0b485"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-011/ACT-011_SPEC.md",
+      "bytes": 2626,
+      "git_blob_sha1": "1289082e0dc5c87bae1dcdad106d46f3d120ede8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-011/OPES_Core_Banking_Batch_71_ACT-011_2026-11-03.zip",
+      "bytes": 5145,
+      "git_blob_sha1": "37190554dad7afb40737ea89a61654f595502496"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-012/ACT-012_CONTRACT.json",
+      "bytes": 1819,
+      "git_blob_sha1": "698e8fad544bea980b33018ad76bd5c5dd50f4d1"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-012/ACT-012_SPEC.md",
+      "bytes": 2606,
+      "git_blob_sha1": "a6920aab323a685a84a2c197862d5e59e23d2616"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-012/OPES_Core_Banking_Batch_72_ACT-012_2026-11-03.zip",
+      "bytes": 5106,
+      "git_blob_sha1": "d9e8739bbefaa0a97ad09fa6a46e0c25a98ceb0a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-013/ACT-013_CONTRACT.json",
+      "bytes": 1892,
+      "git_blob_sha1": "784242cd1ef1b08d22fc8feffa9715e0d088ad6f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-013/ACT-013_SPEC.md",
+      "bytes": 2668,
+      "git_blob_sha1": "f0643ae7f36455064d977faae62c56a0ab0f6ab1"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-013/OPES_Core_Banking_Batch_73_ACT-013_2026-11-03.zip",
+      "bytes": 5241,
+      "git_blob_sha1": "01ad6ed827b76422713edf05a6773483e555272e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-014/ACT-014_CONTRACT.json",
+      "bytes": 1929,
+      "git_blob_sha1": "94919b39355a9082de8b05dc93ce9bbe90b17646"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-014/ACT-014_SPEC.md",
+      "bytes": 2696,
+      "git_blob_sha1": "ffde19f50937e390f0da1d30b12cfdab372726aa"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-014/OPES_Core_Banking_Batch_74_ACT-014_2026-11-03.zip",
+      "bytes": 5306,
+      "git_blob_sha1": "dcf2eea1c7de6c858571a1df5be0b0c249f2585b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-015/ACT-015_CONTRACT.json",
+      "bytes": 1784,
+      "git_blob_sha1": "5360631ff1a995e6b89a0e21f876789bd3e0ea8e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-015/ACT-015_SPEC.md",
+      "bytes": 2570,
+      "git_blob_sha1": "ccc3b9ed240b8a27a58ad39f1c0787a39970d769"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-015/OPES_Core_Banking_Batch_75_ACT-015_2026-11-03.zip",
+      "bytes": 5035,
+      "git_blob_sha1": "7bb78695d67b80b381d71dfff7f9c35cf61ce3f4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-016/ACT-016_CONTRACT.json",
+      "bytes": 1869,
+      "git_blob_sha1": "7a8e49edfff82e911282b2cb85253ce8a8e695be"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-016/ACT-016_SPEC.md",
+      "bytes": 2629,
+      "git_blob_sha1": "bf91421637459ef3e6d8751602de4e4a355220e3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-016/OPES_Core_Banking_Batch_76_ACT-016_2026-11-03.zip",
+      "bytes": 5179,
+      "git_blob_sha1": "1c37b335db16e54e3f516104288d519d96680904"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-017/ACT-017_CONTRACT.json",
+      "bytes": 1852,
+      "git_blob_sha1": "55c94112a47c5b0c5d8dba40c458d81e8ab79cd8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-017/ACT-017_SPEC.md",
+      "bytes": 2648,
+      "git_blob_sha1": "3e0f1405cd01eb0bf3677acc2dd58604c91f2e52"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-017/OPES_Core_Banking_Batch_77_ACT-017_2026-11-03.zip",
+      "bytes": 5181,
+      "git_blob_sha1": "ae989288a34f44b9a90a7ca425e3da183e6f6cda"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-018/ACT-018_CONTRACT.json",
+      "bytes": 1756,
+      "git_blob_sha1": "fd7d65fa1d4fe0f5020dac4990066e01c8202639"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-018/ACT-018_SPEC.md",
+      "bytes": 2526,
+      "git_blob_sha1": "54a643070205be1ebe91b628d3230d4cc7cd2022"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-018/OPES_Core_Banking_Batch_78_ACT-018_2026-11-03.zip",
+      "bytes": 4963,
+      "git_blob_sha1": "e16a9039c575c8323e7c19dc899aa506caced472"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-019/ACT-019_CONTRACT.json",
+      "bytes": 1890,
+      "git_blob_sha1": "a031b0d2c3f55dcde78b2f9f61600d75e6d5459a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-019/ACT-019_SPEC.md",
+      "bytes": 2667,
+      "git_blob_sha1": "129c37d91fd6f192e5801a24908f72d837997920"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-019/OPES_Core_Banking_Batch_79_ACT-019_2026-11-03.zip",
+      "bytes": 5238,
+      "git_blob_sha1": "287e9a85d5a28770386614c4b49c26b992fd834b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-020/ACT-020_CONTRACT.json",
+      "bytes": 1990,
+      "git_blob_sha1": "c63730fbffb24546340c9a8ca674bf6707202109"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-020/ACT-020_SPEC.md",
+      "bytes": 2786,
+      "git_blob_sha1": "fa45a45f05ff27222b0ee2bb46e75affe86f52f2"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ACT-020/OPES_Core_Banking_Batch_80_ACT-020_2026-11-03.zip",
+      "bytes": 5457,
+      "git_blob_sha1": "3f04965bdccc5a54b9f55f775f338989b54047ed"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-001/ARC-001_SPEC.md",
+      "bytes": 2310,
+      "git_blob_sha1": "c869bc8fd6ca06ead84e7e5740c9006f61f85658"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-001/OPES_Core_Banking_Batch_21_ARC-001_2026-11-03.zip",
+      "bytes": 2809,
+      "git_blob_sha1": "c724d095bedd0ceec60e074064df5bc6e258a871"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-002/ARC-002_SPEC.md",
+      "bytes": 2300,
+      "git_blob_sha1": "80bb2ceab30fe232e1a0ffc5955080018ddf5e58"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-002/OPES_Core_Banking_Batch_22_ARC-002_2026-11-03.zip",
+      "bytes": 2799,
+      "git_blob_sha1": "74e16a250007d250ad3177b1625a4a9bdf422555"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-003/ARC-003_SPEC.md",
+      "bytes": 2214,
+      "git_blob_sha1": "a982cf0b1c87ec5ab63ca27710ce33c6fdd8000d"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-003/OPES_Core_Banking_Batch_23_ARC-003_2026-11-03.zip",
+      "bytes": 2713,
+      "git_blob_sha1": "cb6ddf34c74af78f8f175c32175ddfc547056e3e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-004/ARC-004_SPEC.md",
+      "bytes": 2113,
+      "git_blob_sha1": "f070a27c4fb9338a38bb3ab58dfa3970d38ea361"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-004/OPES_Core_Banking_Batch_24_ARC-004_2026-11-03.zip",
+      "bytes": 2612,
+      "git_blob_sha1": "bd75044d77ff431f451b3386dde9df8649d64ac0"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-005/ARC-005_SPEC.md",
+      "bytes": 2358,
+      "git_blob_sha1": "c1f0cda85dd3ccffe2e0771437e4377d7c672f6f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-005/OPES_Core_Banking_Batch_25_ARC-005_2026-11-03.zip",
+      "bytes": 2857,
+      "git_blob_sha1": "fdcd8591058ee5891dcab42e45da3c434ce23d97"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-006/ARC-006_SPEC.md",
+      "bytes": 2489,
+      "git_blob_sha1": "c94d67a914c4aa99f84979ba22651a76b8b61da0"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-006/OPES_Core_Banking_Batch_26_ARC-006_2026-11-03.zip",
+      "bytes": 2988,
+      "git_blob_sha1": "d5802553956d0c9466586d30d045ffa020158aad"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-007/ARC-007_SPEC.md",
+      "bytes": 2389,
+      "git_blob_sha1": "0878d543a4ea8c97a825a949c87c727ad7a53bcc"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-007/OPES_Core_Banking_Batch_27_ARC-007_2026-11-03.zip",
+      "bytes": 2888,
+      "git_blob_sha1": "1bcb731a77c9d4d4febd2a2df86c23afd25284b5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-008/ARC-008_SPEC.md",
+      "bytes": 2348,
+      "git_blob_sha1": "89b683bb202f2386112a25229f7745b225cd00c4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-008/OPES_Core_Banking_Batch_28_ARC-008_2026-11-03.zip",
+      "bytes": 2847,
+      "git_blob_sha1": "91d53166f0383ba4c42c2c60ae1d61758601ae2c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-009/ARC-009_SPEC.md",
+      "bytes": 2583,
+      "git_blob_sha1": "edc3d65dfbf3114b2630900d3c7a5af5ac9b17f5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-009/OPES_Core_Banking_Batch_29_ARC-009_2026-11-03.zip",
+      "bytes": 3082,
+      "git_blob_sha1": "d723a618a122f5d1ffcf494f50adb62d28a212c2"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-010/ARC-010_SPEC.md",
+      "bytes": 2925,
+      "git_blob_sha1": "0f402c963b274939c8edd82a63aad164761017f1"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-010/OPES_Core_Banking_Batch_30_ARC-010_2026-11-03.zip",
+      "bytes": 3424,
+      "git_blob_sha1": "d5d5a26c64ae6933f6b38ec2831d1041dd8682b1"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-011/ARC-011_CONTRACT.json",
+      "bytes": 2832,
+      "git_blob_sha1": "ed821f0c1365aa5140840253003eb63ba13ede3e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-011/ARC-011_SPEC.md",
+      "bytes": 3788,
+      "git_blob_sha1": "2bc2eca6e29bb0cae306f9a0f739440e904cb155"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-011/OPES_Core_Banking_Batch_31_ARC-011_2026-11-03.zip",
+      "bytes": 7506,
+      "git_blob_sha1": "6428b9241bad23fdb6fba9677b22e17106675e7f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-012/ARC-012_CONTRACT.json",
+      "bytes": 2857,
+      "git_blob_sha1": "5bf0b028529b23aa7cd20178005750eab7d584ab"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-012/ARC-012_SPEC.md",
+      "bytes": 3805,
+      "git_blob_sha1": "b2a5e670ef03ca612683db43cb9d74839bf1585d"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-012/OPES_Core_Banking_Batch_32_ARC-012_2026-11-03.zip",
+      "bytes": 7548,
+      "git_blob_sha1": "0d0f5ed8188f40e9f7758ea83878df7e6f0396f0"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-013/ARC-013_CONTRACT.json",
+      "bytes": 2822,
+      "git_blob_sha1": "e2c5861352ffd9cf5a0598e7f3ed267644ef123d"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-013/ARC-013_SPEC.md",
+      "bytes": 3707,
+      "git_blob_sha1": "1e3714a93a386c30354b6b6292c9fdda04107caa"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-013/OPES_Core_Banking_Batch_33_ARC-013_2026-11-03.zip",
+      "bytes": 7415,
+      "git_blob_sha1": "b6fb04dd0e3805a512c8e85e4c9e0cdf26ac65f3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-014/ARC-014_CONTRACT.json",
+      "bytes": 2294,
+      "git_blob_sha1": "ca47a968129c1fafb401db9fba7336498a149f83"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-014/ARC-014_SPEC.md",
+      "bytes": 3080,
+      "git_blob_sha1": "8574f258531fffcb20177925d0024d6d1c660654"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-014/OPES_Core_Banking_Batch_34_ARC-014_2026-11-03.zip",
+      "bytes": 6192,
+      "git_blob_sha1": "0423b6d5e3272480bfa6ade36c1107619e5309a5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-015/ARC-015_CONTRACT.json",
+      "bytes": 2225,
+      "git_blob_sha1": "498feaba8c45ff813615a9ec665bcc1be383c788"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-015/ARC-015_SPEC.md",
+      "bytes": 3003,
+      "git_blob_sha1": "1dc8f3f915c99000e97e1e1de0d7425e9b155faf"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-015/OPES_Core_Banking_Batch_35_ARC-015_2026-11-03.zip",
+      "bytes": 6046,
+      "git_blob_sha1": "8fa595d70d688ac484e044241f819b8c3df35b8b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-016/ARC-016_CONTRACT.json",
+      "bytes": 2269,
+      "git_blob_sha1": "36e691040675c2411a4149f706b5a65cae77eda0"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-016/ARC-016_SPEC.md",
+      "bytes": 3035,
+      "git_blob_sha1": "c901da13869caed5a9860e0a673068050136e2a3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-016/OPES_Core_Banking_Batch_36_ARC-016_2026-11-03.zip",
+      "bytes": 6122,
+      "git_blob_sha1": "8fd6bae78eeab4b390ac1e4cf5ff0415ca763195"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-017/ARC-017_CONTRACT.json",
+      "bytes": 2320,
+      "git_blob_sha1": "81325f10fc3553fb1d02263bcd20cc890bf94df4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-017/ARC-017_SPEC.md",
+      "bytes": 3104,
+      "git_blob_sha1": "ee68daf0b77b4be0e0612cca9fad01057b7d0181"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-017/OPES_Core_Banking_Batch_37_ARC-017_2026-11-03.zip",
+      "bytes": 6250,
+      "git_blob_sha1": "912d905eff9173a403776e8b1cb207f48779a83c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-018/ARC-018_CONTRACT.json",
+      "bytes": 2171,
+      "git_blob_sha1": "8a285db4728c14c48e15b370f47e12fdfadc8076"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-018/ARC-018_SPEC.md",
+      "bytes": 2971,
+      "git_blob_sha1": "40f78f3edc45f9481667bdb4a601c755c78a9f26"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-018/OPES_Core_Banking_Batch_38_ARC-018_2026-11-03.zip",
+      "bytes": 5967,
+      "git_blob_sha1": "f8fb42060f30cadf2c23f0561129d9206c860b99"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-019/ARC-019_CONTRACT.json",
+      "bytes": 2198,
+      "git_blob_sha1": "78fd6f182e349d12faa6e84b8e1b7e38b27e0233"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-019/ARC-019_SPEC.md",
+      "bytes": 3002,
+      "git_blob_sha1": "f9400f190fffb4da1417522744ad73e3e70002d0"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-019/OPES_Core_Banking_Batch_39_ARC-019_2026-11-03.zip",
+      "bytes": 6026,
+      "git_blob_sha1": "9fc64ab5cadfb78fb1d2c463e663df89f018b705"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-020/ARC-020_CONTRACT.json",
+      "bytes": 2366,
+      "git_blob_sha1": "c04364f38664f7f8fad4fe42558d04cd3a311d01"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-020/ARC-020_SPEC.md",
+      "bytes": 3326,
+      "git_blob_sha1": "f7b03ab4badea9f7d7f06c321d9666f32bb3538a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/ARC-020/OPES_Core_Banking_Batch_40_ARC-020_2026-11-03.zip",
+      "bytes": 6514,
+      "git_blob_sha1": "e6b1062106e445ae12b79acd4b3d2e0237681870"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-001/BRN-001_CONTRACT.json",
+      "bytes": 2727,
+      "git_blob_sha1": "a8a9a373629d379779f1d25035ea1fe39090d958"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-001/BRN-001_SPEC.md",
+      "bytes": 3060,
+      "git_blob_sha1": "1c4c9e66b7228b26b792b8db220cb82d17a277bf"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-001/BRN-001_TEST_MATRIX.json",
+      "bytes": 1457,
+      "git_blob_sha1": "270f3b668c0544d9af6d895a2bd3b26549db7856"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-001/OPES_Core_Banking_Batch_121_BRN-001_2026-11-03.zip",
+      "bytes": 8450,
+      "git_blob_sha1": "15121b5740da087a1cb10421ee8b2d070c1795a6"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-002/BRN-002_CONTRACT.json",
+      "bytes": 2658,
+      "git_blob_sha1": "68d26ab9b9de72f66a533709c97d706949f874ba"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-002/BRN-002_SPEC.md",
+      "bytes": 2889,
+      "git_blob_sha1": "7baec4f2fc39a6c95525e38aee206e898cba509b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-002/BRN-002_TEST_MATRIX.json",
+      "bytes": 1444,
+      "git_blob_sha1": "d3ddbbeca0713d46633f4f28fcbc63a97c351245"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-002/OPES_Core_Banking_Batch_122_BRN-002_2026-11-03.zip",
+      "bytes": 8197,
+      "git_blob_sha1": "77fe6f051a2936041cbd52f60096f0240f9b060b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-003/BRN-003_CONTRACT.json",
+      "bytes": 2716,
+      "git_blob_sha1": "50e698e71decd446053f6b0f09e7e06747d38a6c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-003/BRN-003_SPEC.md",
+      "bytes": 2891,
+      "git_blob_sha1": "048d5780f0c9886cf0a481d39b09b6d593e7f100"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-003/BRN-003_TEST_MATRIX.json",
+      "bytes": 1446,
+      "git_blob_sha1": "8e46993dd5915493a42ffcb8f236f54d8a3851f0"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-003/OPES_Core_Banking_Batch_123_BRN-003_2026-11-03.zip",
+      "bytes": 8259,
+      "git_blob_sha1": "ba9eff45c75072d5a5bd17e613c4fd3d5bcd67ef"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-004/BRN-004_CONTRACT.json",
+      "bytes": 2788,
+      "git_blob_sha1": "fe43f584192a04317acdc1cd284984727de9210d"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-004/BRN-004_SPEC.md",
+      "bytes": 3098,
+      "git_blob_sha1": "76519f91d63e43d8bfd13d54f15f12fd267d2db4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-004/BRN-004_TEST_MATRIX.json",
+      "bytes": 1441,
+      "git_blob_sha1": "1a534712e1b8455b579f085203e76142224de5e1"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-004/OPES_Core_Banking_Batch_124_BRN-004_2026-11-03.zip",
+      "bytes": 8533,
+      "git_blob_sha1": "93e6f4c73ec70391d935291de3aeabfdd0018a32"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-005/BRN-005_CONTRACT.json",
+      "bytes": 2271,
+      "git_blob_sha1": "ee3a6cabe44f2f3902baf75505cb4db6f723edc3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-005/BRN-005_SPEC.md",
+      "bytes": 2360,
+      "git_blob_sha1": "380322c92662df70daae2d44ab2ab9effbc716d3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-005/BRN-005_TEST_MATRIX.json",
+      "bytes": 1049,
+      "git_blob_sha1": "753491f6d748c3d4c2a5d424cb39981eb64a6dc4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-005/OPES_Core_Banking_Batch_125_BRN-005_2026-11-03.zip",
+      "bytes": 6592,
+      "git_blob_sha1": "7c1f81517842194ed6f42c36c8ba69c8353caf60"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-006/BRN-006_CONTRACT.json",
+      "bytes": 2247,
+      "git_blob_sha1": "4b080fad7d18f4601fd921222246bc398456f14f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-006/BRN-006_SPEC.md",
+      "bytes": 2404,
+      "git_blob_sha1": "7526a6314378c621261e1d0c2f69551d71371509"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-006/BRN-006_TEST_MATRIX.json",
+      "bytes": 1014,
+      "git_blob_sha1": "fda32521b5bb614561c404d476eaf62e5c90ae58"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-006/OPES_Core_Banking_Batch_126_BRN-006_2026-11-03.zip",
+      "bytes": 6577,
+      "git_blob_sha1": "6f3e8c6bbdda53274339904f85a97b46d6d45d17"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-007/BRN-007_CONTRACT.json",
+      "bytes": 2280,
+      "git_blob_sha1": "ea36dfee62c2888210aac7d43989db21d7f094a2"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-007/BRN-007_SPEC.md",
+      "bytes": 2383,
+      "git_blob_sha1": "ce4684b70c48e1b73c1e0810f81fa67d921e4961"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-007/BRN-007_TEST_MATRIX.json",
+      "bytes": 1032,
+      "git_blob_sha1": "d9ca779b23fe6b2395e242c1bd3852f728a29323"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-007/OPES_Core_Banking_Batch_127_BRN-007_2026-11-03.zip",
+      "bytes": 6607,
+      "git_blob_sha1": "c17d4e2553cb941fec1a0d91e0cc9f70c96c00fa"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-008/BRN-008_CONTRACT.json",
+      "bytes": 2393,
+      "git_blob_sha1": "63d52251cb51c8abb11759c694568288b43dcacb"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-008/BRN-008_SPEC.md",
+      "bytes": 2365,
+      "git_blob_sha1": "cc76b8fb5137ef9babaa2c15f925ce46af23c393"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-008/BRN-008_TEST_MATRIX.json",
+      "bytes": 1023,
+      "git_blob_sha1": "cf4635e2ca888128dd3a784ad1f09f64002e618a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-008/OPES_Core_Banking_Batch_128_BRN-008_2026-11-03.zip",
+      "bytes": 6693,
+      "git_blob_sha1": "36206e8076ccbd660f5fb4c2344c10c275f1618f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-009/BRN-009_CONTRACT.json",
+      "bytes": 2392,
+      "git_blob_sha1": "4b95863046ca9e23475b504f42d09ed94e6f32ad"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-009/BRN-009_SPEC.md",
+      "bytes": 2348,
+      "git_blob_sha1": "effbaf564085cba94a5fe8d3ad41741fd5dc72ae"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-009/BRN-009_TEST_MATRIX.json",
+      "bytes": 1044,
+      "git_blob_sha1": "4116cafb67714b40091001075293c1c24a153e6f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-009/OPES_Core_Banking_Batch_129_BRN-009_2026-11-03.zip",
+      "bytes": 6658,
+      "git_blob_sha1": "76a1f6892e30bc1e586f5863394bdd48d1c39419"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-010/BRN-010_CONTRACT.json",
+      "bytes": 2380,
+      "git_blob_sha1": "6fd95fc2f30732d47d0b05ab7a4bec73dcfea026"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-010/BRN-010_SPEC.md",
+      "bytes": 2331,
+      "git_blob_sha1": "a9ba2c8a3c7cae799ee6352fc316dcc292ea7069"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-010/BRN-010_TEST_MATRIX.json",
+      "bytes": 1024,
+      "git_blob_sha1": "e3af1292e4422843938f2f0f3ae4e7fdcc12bfd1"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-010/OPES_Core_Banking_Batch_130_BRN-010_2026-11-03.zip",
+      "bytes": 6609,
+      "git_blob_sha1": "cea4052405da9178d420f0ca73fdf2e1a903ed2b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-011/BRN-011_CONTRACT.json",
+      "bytes": 2389,
+      "git_blob_sha1": "92e6b133f3524790983765918b783390dc48430a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-011/BRN-011_SPEC.md",
+      "bytes": 2371,
+      "git_blob_sha1": "68fd913b6bcf24b6d1ff5e7c363c663dc8e0d58c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-011/BRN-011_TEST_MATRIX.json",
+      "bytes": 1018,
+      "git_blob_sha1": "ddc750fc6cff468c593670df2c0938a85ae3d241"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-011/OPES_Core_Banking_Batch_131_BRN-011_2026-11-03.zip",
+      "bytes": 6652,
+      "git_blob_sha1": "0c8008de092a5618acf8b5a62829705ec284a0a8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-012/BRN-012_CONTRACT.json",
+      "bytes": 2427,
+      "git_blob_sha1": "851b785efbd9416001cf400372fcfe9749c121cc"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-012/BRN-012_SPEC.md",
+      "bytes": 2487,
+      "git_blob_sha1": "7827b326e428f678398a12cd9a3d314b2e753875"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-012/BRN-012_TEST_MATRIX.json",
+      "bytes": 1054,
+      "git_blob_sha1": "1434355df7f8230779053718ffbcb322b9f45177"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-012/OPES_Core_Banking_Batch_132_BRN-012_2026-11-03.zip",
+      "bytes": 6842,
+      "git_blob_sha1": "7d716033b8cb95f99ee16470796e075d853fa538"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-013/BRN-013_CONTRACT.json",
+      "bytes": 2423,
+      "git_blob_sha1": "8983420831166be154a411323d98e91693197e9b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-013/BRN-013_SPEC.md",
+      "bytes": 2501,
+      "git_blob_sha1": "b8219f1f5d92241fa7d3daca790dffc05d9337a5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-013/BRN-013_TEST_MATRIX.json",
+      "bytes": 1047,
+      "git_blob_sha1": "68956afc96ecf713ae7c1739876eb118f584aedd"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-013/OPES_Core_Banking_Batch_133_BRN-013_2026-11-03.zip",
+      "bytes": 6841,
+      "git_blob_sha1": "a5689c1fedb38cbdf1dd5d07f105b2cb3d00406c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-014/BRN-014_CONTRACT.json",
+      "bytes": 2559,
+      "git_blob_sha1": "48b42d430eab6224cd272312c7b3c8145879f396"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-014/BRN-014_SPEC.md",
+      "bytes": 2593,
+      "git_blob_sha1": "ff3b75b5fe9b9b4d4ed1864854e98b94d2429b35"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-014/BRN-014_TEST_MATRIX.json",
+      "bytes": 1050,
+      "git_blob_sha1": "a5a4df0f8c67013c0e94ebd1518ee70d85881fb8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-014/OPES_Core_Banking_Batch_134_BRN-014_2026-11-03.zip",
+      "bytes": 7072,
+      "git_blob_sha1": "47da160713e5fdd55d8bc3649cdff2a0247cc82d"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-015/BRN-015_CONTRACT.json",
+      "bytes": 2386,
+      "git_blob_sha1": "2c3ac781e6fe21ceaa6a96a7a68ead11b098d5ed"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-015/BRN-015_SPEC.md",
+      "bytes": 2548,
+      "git_blob_sha1": "6cb21f2770c63288074cd543bc4c3f4c4e25c6af"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-015/BRN-015_TEST_MATRIX.json",
+      "bytes": 1079,
+      "git_blob_sha1": "bb83b6ef433fc725d36b3b365a2e24f7e3603e36"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-015/OPES_Core_Banking_Batch_135_BRN-015_2026-11-03.zip",
+      "bytes": 6883,
+      "git_blob_sha1": "d0f921504a4b51e89beadeb059050dcb93a9f6bd"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-016/BRN-016_CONTRACT.json",
+      "bytes": 2626,
+      "git_blob_sha1": "7be6a7d6a3f07a12626ef3bbf03f9340717b4822"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-016/BRN-016_SPEC.md",
+      "bytes": 2691,
+      "git_blob_sha1": "479748946d397a91000fd7cf3f3e4d9d19d7eacb"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-016/BRN-016_TEST_MATRIX.json",
+      "bytes": 1067,
+      "git_blob_sha1": "22fb72b6a479c21cddac357605aaf59dbe188173"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-016/OPES_Core_Banking_Batch_136_BRN-016_2026-11-03.zip",
+      "bytes": 7254,
+      "git_blob_sha1": "f37aeaf40e3a15be307f12c597fdc7e4f1175f78"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-017/BRN-017_CONTRACT.json",
+      "bytes": 2389,
+      "git_blob_sha1": "bd17b409b48987c4c0444f870e90bab24411fb78"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-017/BRN-017_SPEC.md",
+      "bytes": 2465,
+      "git_blob_sha1": "21084c562024c9ad16ee4764255f9edf1b1bac23"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-017/BRN-017_TEST_MATRIX.json",
+      "bytes": 1022,
+      "git_blob_sha1": "1c8d3fb1f6440730c8c234cf8aa3bc1dd9081e2d"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-017/OPES_Core_Banking_Batch_137_BRN-017_2026-11-03.zip",
+      "bytes": 6746,
+      "git_blob_sha1": "85eed904276c46bff229e96e171fdcdf1f33127b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-018/BRN-018_CONTRACT.json",
+      "bytes": 2399,
+      "git_blob_sha1": "355367eacf2222479f9dac7fae65fb6eb39907ad"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-018/BRN-018_SPEC.md",
+      "bytes": 2511,
+      "git_blob_sha1": "942da25c6dab70f73ed06cb1fee90850c45e48ed"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-018/BRN-018_TEST_MATRIX.json",
+      "bytes": 1067,
+      "git_blob_sha1": "a66961c352288252fa445cc59280a6bea5068774"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-018/OPES_Core_Banking_Batch_138_BRN-018_2026-11-03.zip",
+      "bytes": 6847,
+      "git_blob_sha1": "931e3f6281c88244774b00b47a7dc6a7a628416c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-019/BRN-019_CONTRACT.json",
+      "bytes": 2438,
+      "git_blob_sha1": "924bfd57a0f172855f16d8f243e2d520ef638046"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-019/BRN-019_SPEC.md",
+      "bytes": 2599,
+      "git_blob_sha1": "37b185027ab3684cac22df1543999004de8ce283"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-019/BRN-019_TEST_MATRIX.json",
+      "bytes": 1074,
+      "git_blob_sha1": "75a18f1444e45d808ce89b54c52dd1bcf24985c5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-019/OPES_Core_Banking_Batch_139_BRN-019_2026-11-03.zip",
+      "bytes": 6981,
+      "git_blob_sha1": "2ada815aa1affbc5adcc784459c44f4dd42c480b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-020/BRN-020_CONTRACT.json",
+      "bytes": 2808,
+      "git_blob_sha1": "432f81469cef8646e254c7d1af1180c3a3cb3beb"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-020/BRN-020_SPEC.md",
+      "bytes": 2693,
+      "git_blob_sha1": "2df8dabd59670bfe7eb840e693523cf864b4190b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-020/BRN-020_TEST_MATRIX.json",
+      "bytes": 1093,
+      "git_blob_sha1": "b31b1c9926a9e485b3e748e400b43b09372b87fc"
+    },
+    {
+      "path": "programme/batches/2026-11-03/BRN-020/OPES_Core_Banking_Batch_140_BRN-020_2026-11-03.zip",
+      "bytes": 7464,
+      "git_blob_sha1": "bd2f5d99d7b3114377404b96aefe0730d71315d4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-001/CHN-001_CONTRACT.json",
+      "bytes": 2121,
+      "git_blob_sha1": "a1341ecb6a54381240b915bc3231b22f8a1b4d49"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-001/CHN-001_SPEC.md",
+      "bytes": 2968,
+      "git_blob_sha1": "c78e7e60073a549beebb729ac4fe0c0f526b28e4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-001/OPES_Core_Banking_Batch_101_CHN-001_2026-11-03.zip",
+      "bytes": 5788,
+      "git_blob_sha1": "650c0022acb06ebf9997f47b0cd49d54e2608a8b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-002/CHN-002_CONTRACT.json",
+      "bytes": 2025,
+      "git_blob_sha1": "2c724652c1ec8a753a4ad723e658a7c18620d847"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-002/CHN-002_SPEC.md",
+      "bytes": 2857,
+      "git_blob_sha1": "89a2853436fd145d65f33c6f12516f12f4167918"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-002/OPES_Core_Banking_Batch_102_CHN-002_2026-11-03.zip",
+      "bytes": 5581,
+      "git_blob_sha1": "56a93ad49c84500c6201e0fc91371a524157fd0a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-003/CHN-003_CONTRACT.json",
+      "bytes": 2120,
+      "git_blob_sha1": "3aa1cb3d6ac0d6b15bf13d7b3a360cc56164dcdf"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-003/CHN-003_SPEC.md",
+      "bytes": 2961,
+      "git_blob_sha1": "6763abcbf7c14f53e65df6f014a6bd0b427287e0"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-003/OPES_Core_Banking_Batch_103_CHN-003_2026-11-03.zip",
+      "bytes": 5780,
+      "git_blob_sha1": "e765732ac7394c312a56236d203dd2b43398b382"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-004/CHN-004_CONTRACT.json",
+      "bytes": 2088,
+      "git_blob_sha1": "fd9749f37d1b03c778ae428371716c1427d3fd74"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-004/CHN-004_SPEC.md",
+      "bytes": 2916,
+      "git_blob_sha1": "e9d5307aee950fe3dbd3ead5e3e356798dd59b9f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-004/OPES_Core_Banking_Batch_104_CHN-004_2026-11-03.zip",
+      "bytes": 5703,
+      "git_blob_sha1": "a04a8e2166ad131df5d766ca32ebb964c96f4c61"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-005/CHN-005_CONTRACT.json",
+      "bytes": 1994,
+      "git_blob_sha1": "bc16ecd68bbfb52a9d30fa0ccaaaa9b44eb2cf5a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-005/CHN-005_SPEC.md",
+      "bytes": 2851,
+      "git_blob_sha1": "7cc4492950d77ef6428db20fe8d9824fc39bf21e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-005/OPES_Core_Banking_Batch_105_CHN-005_2026-11-03.zip",
+      "bytes": 5544,
+      "git_blob_sha1": "17c1bee61387d19f99472a908459179b17456b7f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-006/CHN-006_CONTRACT.json",
+      "bytes": 2066,
+      "git_blob_sha1": "4422aeedc50d06003ef4256174b66911d9d5d9e3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-006/CHN-006_SPEC.md",
+      "bytes": 2902,
+      "git_blob_sha1": "a2f23d5c2c5efda4253be063cee0dce5d6b3f511"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-006/OPES_Core_Banking_Batch_106_CHN-006_2026-11-03.zip",
+      "bytes": 5667,
+      "git_blob_sha1": "4a34d014f0d2819a8d494e4a877f67b474558860"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-007/CHN-007_CONTRACT.json",
+      "bytes": 2193,
+      "git_blob_sha1": "958251425dc1a2edba24805ab6836b6d33e275a3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-007/CHN-007_SPEC.md",
+      "bytes": 3038,
+      "git_blob_sha1": "f2a509c86c43e11da8afbc4ba213c1bc1f5b78ca"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-007/OPES_Core_Banking_Batch_107_CHN-007_2026-11-03.zip",
+      "bytes": 5930,
+      "git_blob_sha1": "614eb3e9e61cc0b40a26d2c5421af09ab13fe3aa"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-008/CHN-008_CONTRACT.json",
+      "bytes": 2079,
+      "git_blob_sha1": "4c3d0eedd89ed4f5c0fc39b6bc9817ab23816f1d"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-008/CHN-008_SPEC.md",
+      "bytes": 2895,
+      "git_blob_sha1": "fe8190432b9efb69503335dabe436189d6eec091"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-008/OPES_Core_Banking_Batch_108_CHN-008_2026-11-03.zip",
+      "bytes": 5673,
+      "git_blob_sha1": "5c364b22bbb80bc8c34e5a8f02239a6b7daa96a0"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-009/CHN-009_CONTRACT.json",
+      "bytes": 2108,
+      "git_blob_sha1": "fd91b266548214e68924e8d4c9fa1a6a54ee3f93"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-009/CHN-009_SPEC.md",
+      "bytes": 2953,
+      "git_blob_sha1": "ffede7a667f0876cfdd7ebe333a9116d94757c5e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-009/OPES_Core_Banking_Batch_109_CHN-009_2026-11-03.zip",
+      "bytes": 5760,
+      "git_blob_sha1": "4e35f564eb008d4e19325d9c60a6e10664b3fb78"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-010/CHN-010_CONTRACT.json",
+      "bytes": 2113,
+      "git_blob_sha1": "4467e31dd78139adad6164b870e3a165c6beaffe"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-010/CHN-010_SPEC.md",
+      "bytes": 2947,
+      "git_blob_sha1": "20b70f4bfd79aebcdf907e1523760b9cb4d1d1ba"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-010/OPES_Core_Banking_Batch_110_CHN-010_2026-11-03.zip",
+      "bytes": 5759,
+      "git_blob_sha1": "8a4f819748df76da8585915a205b5890bf8a8e2c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-011/CHN-011_CONTRACT.json",
+      "bytes": 2131,
+      "git_blob_sha1": "2d7ee6cc22f1d029092b437d99127b9f17c978d6"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-011/CHN-011_SPEC.md",
+      "bytes": 2976,
+      "git_blob_sha1": "6b74e0f0d6be343572da53d07ea5f4b393dec629"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-011/OPES_Core_Banking_Batch_111_CHN-011_2026-11-03.zip",
+      "bytes": 5806,
+      "git_blob_sha1": "55dfdd65a392495c90ea8146ee932216e4bda43b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-012/CHN-012_CONTRACT.json",
+      "bytes": 2139,
+      "git_blob_sha1": "708a7c56cfbd80bedfaa2d672353cf4173d859c1"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-012/CHN-012_SPEC.md",
+      "bytes": 2958,
+      "git_blob_sha1": "eed01e9792edc744c0060c15a748265e97aecd3a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-012/OPES_Core_Banking_Batch_112_CHN-012_2026-11-03.zip",
+      "bytes": 5796,
+      "git_blob_sha1": "51b87526cbf187c42c6ea0ec99d12c3568685e57"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-013/CHN-013_CONTRACT.json",
+      "bytes": 2110,
+      "git_blob_sha1": "0e7fc541a6b58973c2501d3bfcf446ad6e98a826"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-013/CHN-013_SPEC.md",
+      "bytes": 2963,
+      "git_blob_sha1": "fe82497b53fd20fa26dc9f2d290225c8bdd803b1"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-013/OPES_Core_Banking_Batch_113_CHN-013_2026-11-03.zip",
+      "bytes": 5772,
+      "git_blob_sha1": "c2be0e5846fbae2f1ef86e3fd7194be510c68319"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-014/CHN-014_CONTRACT.json",
+      "bytes": 2081,
+      "git_blob_sha1": "524441d13e8a4ead241ce579810d00683b87deab"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-014/CHN-014_SPEC.md",
+      "bytes": 2911,
+      "git_blob_sha1": "1ff0e395c09503d2b873d4e3c9ca8252561aeeaf"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-014/OPES_Core_Banking_Batch_114_CHN-014_2026-11-03.zip",
+      "bytes": 5691,
+      "git_blob_sha1": "b61f814a2b112f16793bdab836e95d9b5a7a16aa"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-015/CHN-015_CONTRACT.json",
+      "bytes": 2095,
+      "git_blob_sha1": "cb20689e173d8495d300d0b80489a86166bdbd97"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-015/CHN-015_SPEC.md",
+      "bytes": 2926,
+      "git_blob_sha1": "f37fc0d753831c1d86d740d20396d93c7864acb7"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-015/OPES_Core_Banking_Batch_115_CHN-015_2026-11-03.zip",
+      "bytes": 5720,
+      "git_blob_sha1": "b4bef26dab05cf025d9567d1731dc3908a8a55df"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-016/CHN-016_CONTRACT.json",
+      "bytes": 2090,
+      "git_blob_sha1": "7af02a5ca962a148f890c69670054d06c22e36b3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-016/CHN-016_SPEC.md",
+      "bytes": 2928,
+      "git_blob_sha1": "7f742514c1eafcbc750b8d22222de9e4e2b5cce0"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-016/OPES_Core_Banking_Batch_116_CHN-016_2026-11-03.zip",
+      "bytes": 5717,
+      "git_blob_sha1": "df6ff7d682434965e6d5868f35b7469e7b35c233"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-017/CHN-017_CONTRACT.json",
+      "bytes": 2255,
+      "git_blob_sha1": "4a02104c4fef3d1f10f136f3d897b58b3432a3f5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-017/CHN-017_SPEC.md",
+      "bytes": 3111,
+      "git_blob_sha1": "c81b1751105f0c3a37b879cff6b5a7d75b56bc15"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-017/OPES_Core_Banking_Batch_117_CHN-017_2026-11-03.zip",
+      "bytes": 6065,
+      "git_blob_sha1": "f4af1243ed3abcb1ba12f0a9c5632ab3d9aa3fed"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-018/CHN-018_CONTRACT.json",
+      "bytes": 2061,
+      "git_blob_sha1": "962e9c476b503c2112f166bc4627dc9a263533e9"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-018/CHN-018_SPEC.md",
+      "bytes": 2895,
+      "git_blob_sha1": "cfd7a796de9e7ccf641852f4ae5ae8c800c8b522"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-018/OPES_Core_Banking_Batch_118_CHN-018_2026-11-03.zip",
+      "bytes": 5655,
+      "git_blob_sha1": "947db65ae8fb49f787aecc05d266f08bb67b3116"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-019/CHN-019_CONTRACT.json",
+      "bytes": 2263,
+      "git_blob_sha1": "594e2245bc5370db623afcd21ad1cea45618a506"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-019/CHN-019_SPEC.md",
+      "bytes": 3124,
+      "git_blob_sha1": "7b7cfb1f4071ffab9c3d430a13f9d2ee930b0d18"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-019/OPES_Core_Banking_Batch_119_CHN-019_2026-11-03.zip",
+      "bytes": 6086,
+      "git_blob_sha1": "727a1f1da3b587f8dc26146c3c38f1855aceae5a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-020/CHN-020_CONTRACT.json",
+      "bytes": 2492,
+      "git_blob_sha1": "fa9a43067983ed309aa74ad24dae65e9fdf55fb7"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-020/CHN-020_SPEC.md",
+      "bytes": 3368,
+      "git_blob_sha1": "c3156821b561b19257401cc874fc91fd7c5c7df3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CHN-020/OPES_Core_Banking_Batch_120_CHN-020_2026-11-03.zip",
+      "bytes": 6559,
+      "git_blob_sha1": "585b0b1326882a5081ebfdb92ac6ec80ccbc0fcd"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-001/CIF-001_CONTRACT.json",
+      "bytes": 2267,
+      "git_blob_sha1": "f836dc482bcb3903fd7bfc70ba3f1d6215378472"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-001/CIF-001_SPEC.md",
+      "bytes": 3227,
+      "git_blob_sha1": "c9952a67183edb66892e778be8e25ff3ca368beb"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-001/OPES_Core_Banking_Batch_41_CIF-001_2026-11-03.zip",
+      "bytes": 6316,
+      "git_blob_sha1": "f3cf37704ad235ddf7b1d5c30d70457f6490ffd4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-002/CIF-002_CONTRACT.json",
+      "bytes": 2297,
+      "git_blob_sha1": "d2760042df5a52ee4503bfbfa677f22441946ef8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-002/CIF-002_SPEC.md",
+      "bytes": 3267,
+      "git_blob_sha1": "753707d0cc3a9915cda51761e55310d2bec209fe"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-002/OPES_Core_Banking_Batch_42_CIF-002_2026-11-03.zip",
+      "bytes": 6386,
+      "git_blob_sha1": "64c8a9a0da4f8f4505e9d95335e1ce9ebc4d9aa2"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-003/CIF-003_CONTRACT.json",
+      "bytes": 2187,
+      "git_blob_sha1": "43b8e635060db237801f332d81484465387c637c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-003/CIF-003_SPEC.md",
+      "bytes": 3062,
+      "git_blob_sha1": "26735df6a31b00239d6648251e8b13fb87d8abac"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-003/OPES_Core_Banking_Batch_43_CIF-003_2026-11-03.zip",
+      "bytes": 6072,
+      "git_blob_sha1": "3b6dba88f33023dce27269dcfbf1fe3dd2ee75bc"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-004/CIF-004_CONTRACT.json",
+      "bytes": 2215,
+      "git_blob_sha1": "2846a9a85f705169209591b3a9a34dc491ccd9b6"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-004/CIF-004_SPEC.md",
+      "bytes": 3061,
+      "git_blob_sha1": "efbdb54d31c246413666db145f673fc5f82d043e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-004/OPES_Core_Banking_Batch_44_CIF-004_2026-11-03.zip",
+      "bytes": 6099,
+      "git_blob_sha1": "d47cd1e11f45779fcbcb41cc8cf45c38b67f6221"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-005/CIF-005_CONTRACT.json",
+      "bytes": 2136,
+      "git_blob_sha1": "11bc07531bd2e58e591d95756256ecee93a34c2f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-005/CIF-005_SPEC.md",
+      "bytes": 2953,
+      "git_blob_sha1": "25e2ce346b2a35c5fa5f425c0f5657ca2253bf81"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-005/OPES_Core_Banking_Batch_45_CIF-005_2026-11-03.zip",
+      "bytes": 5912,
+      "git_blob_sha1": "391b2c25838bd4115d90f9f856732b33948ce43b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-006/CIF-006_CONTRACT.json",
+      "bytes": 2308,
+      "git_blob_sha1": "474b293b29be227eb154b6f64d916d08f82dc97a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-006/CIF-006_SPEC.md",
+      "bytes": 3154,
+      "git_blob_sha1": "10103c5bfb359abce314b31181a4f515f5db1c4b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-006/OPES_Core_Banking_Batch_46_CIF-006_2026-11-03.zip",
+      "bytes": 6273,
+      "git_blob_sha1": "8f8c5ea45d28d7a9a8bff6d5e5f3057add1f04f6"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-007/CIF-007_CONTRACT.json",
+      "bytes": 2328,
+      "git_blob_sha1": "8fb03f51707081f6de31e95647cf666c5185c0ca"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-007/CIF-007_SPEC.md",
+      "bytes": 3148,
+      "git_blob_sha1": "528a6d1606bf9f1c9aeef89428fefc98e2f4d464"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-007/OPES_Core_Banking_Batch_47_CIF-007_2026-11-03.zip",
+      "bytes": 6287,
+      "git_blob_sha1": "e3541b0d662f23e3ffb1413e49b807a596db8843"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-008/CIF-008_CONTRACT.json",
+      "bytes": 2261,
+      "git_blob_sha1": "8998f44528319756cb189bb6499700f812089aef"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-008/CIF-008_SPEC.md",
+      "bytes": 3077,
+      "git_blob_sha1": "1776565144baf6408e51552b4ab2b7adcade2ffb"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-008/OPES_Core_Banking_Batch_48_CIF-008_2026-11-03.zip",
+      "bytes": 6149,
+      "git_blob_sha1": "423a3e3a09d287b0e36e939bc2d441a04e5cd48c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-009/CIF-009_CONTRACT.json",
+      "bytes": 2288,
+      "git_blob_sha1": "b28c2a195fa55e89896beb5b8cdc1b21e489cef6"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-009/CIF-009_SPEC.md",
+      "bytes": 3068,
+      "git_blob_sha1": "a38d378fbd2aa13f68a91d286b35a11efa473a01"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-009/OPES_Core_Banking_Batch_49_CIF-009_2026-11-03.zip",
+      "bytes": 6229,
+      "git_blob_sha1": "9054a2ad1dd668771d91802bf6d1e89768834b53"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-010/CIF-010_CONTRACT.json",
+      "bytes": 2286,
+      "git_blob_sha1": "f3b95fbe83eea974844a9189ca30eaf4302e3715"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-010/CIF-010_SPEC.md",
+      "bytes": 3077,
+      "git_blob_sha1": "92cba89b99c5c9e017b104c4a4b75318959884fd"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-010/OPES_Core_Banking_Batch_50_CIF-010_2026-11-03.zip",
+      "bytes": 6236,
+      "git_blob_sha1": "b9112e654fdfea0868e50174985c903405a52c0b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-011/CIF-011_CONTRACT.json",
+      "bytes": 2362,
+      "git_blob_sha1": "2b8e333242d9156051bc6fca6900b07a6b49139c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-011/CIF-011_SPEC.md",
+      "bytes": 3162,
+      "git_blob_sha1": "b7915c9080bce109e603d77bfe3a92c2413789f3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-011/OPES_Core_Banking_Batch_51_CIF-011_2026-11-03.zip",
+      "bytes": 6397,
+      "git_blob_sha1": "b264b52f6e2421f6ea4ca70bedd2970f95082605"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-012/CIF-012_CONTRACT.json",
+      "bytes": 2222,
+      "git_blob_sha1": "9a64b7773779f25a86d2da7b01375ce3d6f19532"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-012/CIF-012_SPEC.md",
+      "bytes": 3012,
+      "git_blob_sha1": "5b67ee3b6857bf2ee78c7e4dda8f02b91c437d42"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-012/OPES_Core_Banking_Batch_52_CIF-012_2026-11-03.zip",
+      "bytes": 6068,
+      "git_blob_sha1": "bedfa2b4209c2b27400158937ede978b1551c552"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-013/CIF-013_CONTRACT.json",
+      "bytes": 2386,
+      "git_blob_sha1": "d9a628a8a5fba3781d9a6dbcbd46bf1fcbdd40c5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-013/CIF-013_SPEC.md",
+      "bytes": 3159,
+      "git_blob_sha1": "730382ffb38b6ff25000003b609a9d4d8ff86c79"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-013/OPES_Core_Banking_Batch_53_CIF-013_2026-11-03.zip",
+      "bytes": 6379,
+      "git_blob_sha1": "0a3060726c173c3eb541ee0bf8832f6c6d889419"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-014/CIF-014_CONTRACT.json",
+      "bytes": 2275,
+      "git_blob_sha1": "9c3f459657c1d6a9dfb16ca1ab6a2d476b20e9e2"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-014/CIF-014_SPEC.md",
+      "bytes": 3087,
+      "git_blob_sha1": "8bc64693be02c242b4d7838209f162b7264a1c71"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-014/OPES_Core_Banking_Batch_54_CIF-014_2026-11-03.zip",
+      "bytes": 6196,
+      "git_blob_sha1": "7d28b66ae14d51255b489e04025df89474386d66"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-015/CIF-015_CONTRACT.json",
+      "bytes": 2385,
+      "git_blob_sha1": "d84cf7442a8c2246e3c34c5a222753983aeea802"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-015/CIF-015_SPEC.md",
+      "bytes": 3131,
+      "git_blob_sha1": "9adcfe586bb3b28d69971990cf27c7eb473cbaf9"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-015/OPES_Core_Banking_Batch_55_CIF-015_2026-11-03.zip",
+      "bytes": 6327,
+      "git_blob_sha1": "55e4c71e58dba62f5fcea2174f947b37b6fb5518"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-016/CIF-016_CONTRACT.json",
+      "bytes": 2120,
+      "git_blob_sha1": "4b6be3694b9ffba778b0873a523ac60ab8d92faf"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-016/CIF-016_SPEC.md",
+      "bytes": 2855,
+      "git_blob_sha1": "928e16af31f43bb9ddc00277826b058552d8a3d5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-016/OPES_Core_Banking_Batch_56_CIF-016_2026-11-03.zip",
+      "bytes": 5786,
+      "git_blob_sha1": "51cd933d853949d80795b3be593efd36cd76c57a"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-017/CIF-017_CONTRACT.json",
+      "bytes": 2281,
+      "git_blob_sha1": "bd9ad1bae8431686a27b40c1f0c6f0feec33aba7"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-017/CIF-017_SPEC.md",
+      "bytes": 3016,
+      "git_blob_sha1": "09d480a9d6e40a22114e8655673fe66382fb98ea"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-017/OPES_Core_Banking_Batch_57_CIF-017_2026-11-03.zip",
+      "bytes": 6108,
+      "git_blob_sha1": "9372fcfa81e209c29c1981f4c4f2ff22bfc1481b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-018/CIF-018_CONTRACT.json",
+      "bytes": 2171,
+      "git_blob_sha1": "291ee88b37406bc72662ba3b52adce7a80be1122"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-018/CIF-018_SPEC.md",
+      "bytes": 3041,
+      "git_blob_sha1": "47073ffbeb7fb5aec771e688bae9b9382d00c7bf"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-018/OPES_Core_Banking_Batch_58_CIF-018_2026-11-03.zip",
+      "bytes": 6046,
+      "git_blob_sha1": "cc02ea59a8e30c90cf5e5525ca4a67f8e7d19f06"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-019/CIF-019_CONTRACT.json",
+      "bytes": 2266,
+      "git_blob_sha1": "2b0d7031431078550697b649489d4ae86105c990"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-019/CIF-019_SPEC.md",
+      "bytes": 3145,
+      "git_blob_sha1": "9adbd663ff6443cb687f5d196e81bc7edcae8cf9"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-019/OPES_Core_Banking_Batch_59_CIF-019_2026-11-03.zip",
+      "bytes": 6245,
+      "git_blob_sha1": "792e1ce4030570b5b2e3624afa92f1e0a3063a10"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-020/CIF-020_CONTRACT.json",
+      "bytes": 2533,
+      "git_blob_sha1": "4b5fe171d40c95bb380ecb044590ab2bb1733b70"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-020/CIF-020_SPEC.md",
+      "bytes": 3445,
+      "git_blob_sha1": "14f139f37ae37679917ab0bf8ce24d6504d64fcc"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CIF-020/OPES_Core_Banking_Batch_60_CIF-020_2026-11-03.zip",
+      "bytes": 6812,
+      "git_blob_sha1": "a147ff34c094821217960034a29b67890a533643"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-001/CMP-001_CONTRACT.json",
+      "bytes": 2381,
+      "git_blob_sha1": "8edf20f257cbefc6e6c153988e371366b16fc1dc"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-001/CMP-001_SPEC.md",
+      "bytes": 2583,
+      "git_blob_sha1": "0eb9eeb74412d01e0d202cdf6d90351a30047fc9"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-001/CMP-001_TEST_MATRIX.json",
+      "bytes": 1057,
+      "git_blob_sha1": "f0089def5fe1a46a6e125e2ddd2724dae8c99005"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-001/OPES_Core_Banking_Batch_141_CMP-001_2026-11-03.zip",
+      "bytes": 6891,
+      "git_blob_sha1": "36e838af1f676d936e33d886a7d913eb23d499bb"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-002/CMP-002_CONTRACT.json",
+      "bytes": 2514,
+      "git_blob_sha1": "bf68e56b7205904a2247cda268ac1bca442db9b8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-002/CMP-002_SPEC.md",
+      "bytes": 2581,
+      "git_blob_sha1": "ed8115a0408ae47fec29b8591e71a001e7a31ae8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-002/CMP-002_TEST_MATRIX.json",
+      "bytes": 1040,
+      "git_blob_sha1": "7124372e748ba2109947b74d77abc0e34ae5a195"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-002/OPES_Core_Banking_Batch_142_CMP-002_2026-11-03.zip",
+      "bytes": 7005,
+      "git_blob_sha1": "cd52e7edf8e545dacf28d490101e131d830611d5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-003/CMP-003_CONTRACT.json",
+      "bytes": 2546,
+      "git_blob_sha1": "46863b03e5cd4f2572c9b8039f1c77409cf2b46c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-003/CMP-003_SPEC.md",
+      "bytes": 2616,
+      "git_blob_sha1": "72929043377a22f0727961343e57018497e641d3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-003/CMP-003_TEST_MATRIX.json",
+      "bytes": 1051,
+      "git_blob_sha1": "8c052e71e7863bd1f7b7e99352cc0a2af3458bbe"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-003/OPES_Core_Banking_Batch_143_CMP-003_2026-11-03.zip",
+      "bytes": 7083,
+      "git_blob_sha1": "9c071354620fc89f1c4e31bc371d3ed9b1693116"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-004/CMP-004_CONTRACT.json",
+      "bytes": 2579,
+      "git_blob_sha1": "7b58cc14e199dcecfeb30db2a7c7541f6a459e5e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-004/CMP-004_SPEC.md",
+      "bytes": 2645,
+      "git_blob_sha1": "cea3443e02abdf7c1504fc70af5e1dfdb738b3e6"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-004/CMP-004_TEST_MATRIX.json",
+      "bytes": 1040,
+      "git_blob_sha1": "098c62cee4c172b32c04cc9d9218b43e3dab185b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-004/OPES_Core_Banking_Batch_144_CMP-004_2026-11-03.zip",
+      "bytes": 7134,
+      "git_blob_sha1": "2d4a4cc954ee780ac0c8d17bfc10e2c7918978be"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-005/CMP-005_CONTRACT.json",
+      "bytes": 2510,
+      "git_blob_sha1": "51a30f794a58780acffe14850e5cd740d73f04a2"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-005/CMP-005_SPEC.md",
+      "bytes": 2634,
+      "git_blob_sha1": "a2771f90086f0a99bfe77fd5a3c8d60f65d5928d"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-005/CMP-005_TEST_MATRIX.json",
+      "bytes": 1059,
+      "git_blob_sha1": "4ac386f808fe0e57cf0ef81589633aec58cad799"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-005/OPES_Core_Banking_Batch_145_CMP-005_2026-11-03.zip",
+      "bytes": 7073,
+      "git_blob_sha1": "b749ab01c8ef4734ffac0148e8150a10cf9ba93c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-006/CMP-006_CONTRACT.json",
+      "bytes": 2654,
+      "git_blob_sha1": "b84789a864faecc17d5ceaca2e46c8a95b5a80e0"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-006/CMP-006_SPEC.md",
+      "bytes": 2871,
+      "git_blob_sha1": "d9dee8e504302e3ec9ff38ac6c607529a87286fb"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-006/CMP-006_TEST_MATRIX.json",
+      "bytes": 1068,
+      "git_blob_sha1": "f4391f053fe1de0334a787cb4066ae2c6216a154"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-006/OPES_Core_Banking_Batch_146_CMP-006_2026-11-03.zip",
+      "bytes": 7463,
+      "git_blob_sha1": "f78cae1569410f2d31eeee9736b79ad6d7488b53"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-007/CMP-007_CONTRACT.json",
+      "bytes": 2517,
+      "git_blob_sha1": "ec95523423b18aebc712f25ac51146669c589c3d"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-007/CMP-007_SPEC.md",
+      "bytes": 2791,
+      "git_blob_sha1": "797d55d0cf4193df98b20d25ff929cf15c40e2ff"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-007/CMP-007_TEST_MATRIX.json",
+      "bytes": 1082,
+      "git_blob_sha1": "f6b2a11ac4d145bcc4040a711928e128a3870feb"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-007/OPES_Core_Banking_Batch_147_CMP-007_2026-11-03.zip",
+      "bytes": 7260,
+      "git_blob_sha1": "cf832ed487a8f651e2f2648112c8730445f65eae"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-008/CMP-008_CONTRACT.json",
+      "bytes": 2500,
+      "git_blob_sha1": "bf0b3bf046c86042c8ecd9bd979d6549adbb8a82"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-008/CMP-008_SPEC.md",
+      "bytes": 2674,
+      "git_blob_sha1": "0dcd62b417b5485a4a65f4afc7fe4a9d1ffab8f8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-008/CMP-008_TEST_MATRIX.json",
+      "bytes": 1042,
+      "git_blob_sha1": "ac46024e2fa44031fd4de4fde616929b21829e9b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-008/OPES_Core_Banking_Batch_148_CMP-008_2026-11-03.zip",
+      "bytes": 7086,
+      "git_blob_sha1": "d3dc6b5856ff55fd4d6e7eff3215b554f7681c22"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-009/CMP-009_CONTRACT.json",
+      "bytes": 2612,
+      "git_blob_sha1": "8e44202129472b2208c6fc142a00883b5ba3a54e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-009/CMP-009_SPEC.md",
+      "bytes": 2774,
+      "git_blob_sha1": "9b5c50deb51066bea9acdc0e7242b160db716a81"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-009/CMP-009_TEST_MATRIX.json",
+      "bytes": 1050,
+      "git_blob_sha1": "40552960ff1a800912ccb9bbf00e0283cd2e9760"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-009/OPES_Core_Banking_Batch_149_CMP-009_2026-11-03.zip",
+      "bytes": 7306,
+      "git_blob_sha1": "5ac02de0b28c76ee45090c2356b065688a59f17f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-010/CMP-010_CONTRACT.json",
+      "bytes": 3041,
+      "git_blob_sha1": "13f4e0509391e3c7c647083526338d48254eb902"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-010/CMP-010_SPEC.md",
+      "bytes": 3046,
+      "git_blob_sha1": "961780c867649b365c2a892ab89557cbd9006126"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-010/CMP-010_TEST_MATRIX.json",
+      "bytes": 1107,
+      "git_blob_sha1": "b1a1f670dfa8de69e90ac4c474c24138d7147dfd"
+    },
+    {
+      "path": "programme/batches/2026-11-03/CMP-010/OPES_Core_Banking_Batch_150_CMP-010_2026-11-03.zip",
+      "bytes": 8064,
+      "git_blob_sha1": "68713d6f004795cce12396f2543d9f036ef9fe15"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-001/GOV-001_SPEC.md",
+      "bytes": 3731,
+      "git_blob_sha1": "bc055567bc689ab446a5e50833f1d27461e45f0f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-001/OPES_Core_Banking_Batch_01_GOV-001_2026-11-03.zip",
+      "bytes": 4471,
+      "git_blob_sha1": "44b331c3cddeccc4a5c8923dc02e40ab69de3cbb"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-002/GOV-002_SPEC.md",
+      "bytes": 3576,
+      "git_blob_sha1": "1655f5583240333759e598d58f735ce5244e37ff"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-002/OPES_Core_Banking_Batch_02_GOV-002_2026-11-03.zip",
+      "bytes": 4305,
+      "git_blob_sha1": "4ef9b9ec41d5ac270e29a94fec4150b34a6981df"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-003/GOV-003_SPEC.md",
+      "bytes": 3525,
+      "git_blob_sha1": "e8edb5e2aad007e7ed4152a6fbc0f99e0e639cf9"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-003/OPES_Core_Banking_Batch_03_GOV-003_2026-11-03.zip",
+      "bytes": 4242,
+      "git_blob_sha1": "45f3efaa44e3bc5fe7156304d6f4836c7e3bfdfd"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-004/GOV-004_SPEC.md",
+      "bytes": 3306,
+      "git_blob_sha1": "885c74e7743b87bf92a5936db058224312cbdf86"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-004/OPES_Core_Banking_Batch_04_GOV-004_2026-11-03.zip",
+      "bytes": 3993,
+      "git_blob_sha1": "b6e6200c557899fb0c33bb55d84e561cb7e76b37"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-005/GOV-005_SPEC.md",
+      "bytes": 2227,
+      "git_blob_sha1": "f70026992c3c510d8820df133b1b53399693e4b5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-005/OPES_Core_Banking_Batch_05_GOV-005_2026-11-03.zip",
+      "bytes": 2725,
+      "git_blob_sha1": "a4881c3938acaef782214bd037ef893b1f0659d2"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-006/GOV-006_SPEC.md",
+      "bytes": 2210,
+      "git_blob_sha1": "47f07ec4b4991538ade06683a22765a0fdcdbf51"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-006/OPES_Core_Banking_Batch_06_GOV-006_2026-11-03.zip",
+      "bytes": 2708,
+      "git_blob_sha1": "f04d5257443d98ac089f88ec5a85383163dd1baf"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-007/GOV-007_SPEC.md",
+      "bytes": 2122,
+      "git_blob_sha1": "ffa30fd7a451110856996b1e43076732cb38087e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-007/OPES_Core_Banking_Batch_07_GOV-007_2026-11-03.zip",
+      "bytes": 2620,
+      "git_blob_sha1": "51d59ad870d8aa8d3f2c5bf09a612875b69c488e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-008/GOV-008_SPEC.md",
+      "bytes": 2106,
+      "git_blob_sha1": "afc045dba252fdf7535d3a16060d29aff9233ace"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-008/OPES_Core_Banking_Batch_08_GOV-008_2026-11-03.zip",
+      "bytes": 2604,
+      "git_blob_sha1": "bd87b96d39bda1062867df379537a15e30b7c6e9"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-009/GOV-009_SPEC.md",
+      "bytes": 2603,
+      "git_blob_sha1": "b72a3dcf2715d83c6be5a43195593361fba59967"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-009/OPES_Core_Banking_Batch_09_GOV-009_2026-11-03.zip",
+      "bytes": 3101,
+      "git_blob_sha1": "9b47de74e6311575b1ee5ebbfab1a93b727d9332"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-010/GOV-010_SPEC.md",
+      "bytes": 2583,
+      "git_blob_sha1": "4577713a4f9e95e1e314b9dd33d9465624ef1a3b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-010/OPES_Core_Banking_Batch_10_GOV-010_2026-11-03.zip",
+      "bytes": 3082,
+      "git_blob_sha1": "f22e0f140ab3f06c94aca7b5b7fce6357a8d6746"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-011/GOV-011_SPEC.md",
+      "bytes": 2818,
+      "git_blob_sha1": "db3dfea873d450a6c5d99aa598cc667a2505d324"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-011/OPES_Core_Banking_Batch_11_GOV-011_2026-11-03.zip",
+      "bytes": 3317,
+      "git_blob_sha1": "cc38a44dd6054ab67c805b7c7903078dbedc2676"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-012/GOV-012_SPEC.md",
+      "bytes": 2540,
+      "git_blob_sha1": "4221f28ef1364ce11231f2b44665e7a1d4b9ce73"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-012/OPES_Core_Banking_Batch_12_GOV-012_2026-11-03.zip",
+      "bytes": 3039,
+      "git_blob_sha1": "b2801331d185d036ef915c7e98f2cdaf02c74f4e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-013/GOV-013_SPEC.md",
+      "bytes": 2731,
+      "git_blob_sha1": "54e0d945e0fc135b49282c88ee694b0deb1a46f9"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-013/OPES_Core_Banking_Batch_13_GOV-013_2026-11-03.zip",
+      "bytes": 3230,
+      "git_blob_sha1": "b248237cac3607f0302ff3f2ceba43a1a134379e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-014/GOV-014_SPEC.md",
+      "bytes": 2672,
+      "git_blob_sha1": "eccef0484952d88192a5a372febad796dc320512"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-014/OPES_Core_Banking_Batch_14_GOV-014_2026-11-03.zip",
+      "bytes": 3171,
+      "git_blob_sha1": "dd3aba1996fcedcd6ea3bb38e98ef6dce34e72df"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-015/GOV-015_SPEC.md",
+      "bytes": 2487,
+      "git_blob_sha1": "407c810cb7ded50d3112e6ac6ccb539f4b072bff"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-015/OPES_Core_Banking_Batch_15_GOV-015_2026-11-03.zip",
+      "bytes": 2986,
+      "git_blob_sha1": "69249f2bec76cc69b2b7cc869f0342d7fcbec2a5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-016/GOV-016_SPEC.md",
+      "bytes": 2837,
+      "git_blob_sha1": "1273c03e0a2091d5fcd9c9e8dc47ffb0d600cb67"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-016/OPES_Core_Banking_Batch_16_GOV-016_2026-11-03.zip",
+      "bytes": 3336,
+      "git_blob_sha1": "739640cbfa56249c22e930b3071d39093469fc96"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-017/GOV-017_SPEC.md",
+      "bytes": 2627,
+      "git_blob_sha1": "bba4c20c351e2360b2025d09cbd66f40b7ad3d74"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-017/OPES_Core_Banking_Batch_17_GOV-017_2026-11-03.zip",
+      "bytes": 3126,
+      "git_blob_sha1": "49a5e518458b6c57de3ee9957f19fa6cfe9ef9ad"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-018/GOV-018_SPEC.md",
+      "bytes": 2603,
+      "git_blob_sha1": "8bb4a6152e8001593cd4fe65a4da56cfab97ba50"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-018/OPES_Core_Banking_Batch_18_GOV-018_2026-11-03.zip",
+      "bytes": 3102,
+      "git_blob_sha1": "dc6b26a516f78a7df8c91ae2915bd3ab2bd1eaf6"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-019/GOV-019_SPEC.md",
+      "bytes": 2470,
+      "git_blob_sha1": "ce2c128ead8946466f9937e0eca176f7ee199133"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-019/OPES_Core_Banking_Batch_19_GOV-019_2026-11-03.zip",
+      "bytes": 2969,
+      "git_blob_sha1": "f35dc7c6e0437375bd3dbdcae5f0c6f66d273b5f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-020/GOV-020_SPEC.md",
+      "bytes": 2725,
+      "git_blob_sha1": "320f989eff5bf1e0818ad9f8d84421845c3497be"
+    },
+    {
+      "path": "programme/batches/2026-11-03/GOV-020/OPES_Core_Banking_Batch_20_GOV-020_2026-11-03.zip",
+      "bytes": 3224,
+      "git_blob_sha1": "b5e56b3dba4d15c83e02f845352c5bbe58561851"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-001/OPES_Core_Banking_Batch_81_OPS-001_2026-11-03.zip",
+      "bytes": 5258,
+      "git_blob_sha1": "8835973035eb9c8d3a74c02a22573bdfcdc389c3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-001/OPS-001_CONTRACT.json",
+      "bytes": 1904,
+      "git_blob_sha1": "17647cc84f76dc56a23c522af641f20ed13131a7"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-001/OPS-001_SPEC.md",
+      "bytes": 2673,
+      "git_blob_sha1": "c014238c74ea4b4a1833867f8c9905d2ef592516"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-002/OPES_Core_Banking_Batch_82_OPS-002_2026-11-03.zip",
+      "bytes": 5160,
+      "git_blob_sha1": "435ec6f3c4031e3bb578f4a44029465595dd4575"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-002/OPS-002_CONTRACT.json",
+      "bytes": 1873,
+      "git_blob_sha1": "be6dcd40591651e948e0b7b6648ae67642e3c726"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-002/OPS-002_SPEC.md",
+      "bytes": 2606,
+      "git_blob_sha1": "a139b4b6b1e073e2fc028ddd84a6987e238dd998"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-003/OPES_Core_Banking_Batch_83_OPS-003_2026-11-03.zip",
+      "bytes": 5360,
+      "git_blob_sha1": "cd70140c87c794920ad0bc6d5cb1c7a4a022b2e7"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-003/OPS-003_CONTRACT.json",
+      "bytes": 1955,
+      "git_blob_sha1": "2761a347a526e9ac26adcdac5f8244f6dcfd8025"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-003/OPS-003_SPEC.md",
+      "bytes": 2724,
+      "git_blob_sha1": "3155c458dd8d2f4a3572209b143bcc8d914b4682"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-004/OPES_Core_Banking_Batch_84_OPS-004_2026-11-03.zip",
+      "bytes": 5380,
+      "git_blob_sha1": "ce8389235fa626b25b8f44eca4bc218815f71f52"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-004/OPS-004_CONTRACT.json",
+      "bytes": 1972,
+      "git_blob_sha1": "6b671099034587a48ccd0d158c3351c89688400b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-004/OPS-004_SPEC.md",
+      "bytes": 2727,
+      "git_blob_sha1": "69cefff7c89fe770af3d64aff0bf10bf7c9a93ca"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-005/OPES_Core_Banking_Batch_85_OPS-005_2026-11-03.zip",
+      "bytes": 5025,
+      "git_blob_sha1": "4de5c95a3872da1f114ace93bb08dc3cca01b759"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-005/OPS-005_CONTRACT.json",
+      "bytes": 1805,
+      "git_blob_sha1": "db73178b70f010a0f8e5c91977c70f4611be7b81"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-005/OPS-005_SPEC.md",
+      "bytes": 2539,
+      "git_blob_sha1": "1308e6eafe2120ba6793077795aa141bdc4c1f77"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-006/OPES_Core_Banking_Batch_86_OPS-006_2026-11-03.zip",
+      "bytes": 5365,
+      "git_blob_sha1": "7ce8b6dff17bbe720ecbadce6c8ffc335b8b60ae"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-006/OPS-006_CONTRACT.json",
+      "bytes": 1961,
+      "git_blob_sha1": "c1595fc41b9ec913ac412bdd6fffde9a16917e05"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-006/OPS-006_SPEC.md",
+      "bytes": 2723,
+      "git_blob_sha1": "c92be293fa6d550cc3e25040d539bec28300a8fc"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-007/OPES_Core_Banking_Batch_87_OPS-007_2026-11-03.zip",
+      "bytes": 5114,
+      "git_blob_sha1": "134f05941eddb95f4b07bbdfc99795087b2b74d9"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-007/OPS-007_CONTRACT.json",
+      "bytes": 1840,
+      "git_blob_sha1": "7f1fa18626a2b0c411a6dd99e71f701d081ccf72"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-007/OPS-007_SPEC.md",
+      "bytes": 2593,
+      "git_blob_sha1": "70edd8c0c1ee0f822d6676b80b14a3b5dbdaa68c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-008/OPES_Core_Banking_Batch_88_OPS-008_2026-11-03.zip",
+      "bytes": 5208,
+      "git_blob_sha1": "fe6f7a2de86ece8f05f33a3fd280255dd785e5a8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-008/OPS-008_CONTRACT.json",
+      "bytes": 1879,
+      "git_blob_sha1": "c9135f247f0d0acb3eb6a544844012af51657fa9"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-008/OPS-008_SPEC.md",
+      "bytes": 2648,
+      "git_blob_sha1": "11c7a0b1e1573d3ad9cf0d4229b080d3736c72f5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-009/OPES_Core_Banking_Batch_89_OPS-009_2026-11-03.zip",
+      "bytes": 5480,
+      "git_blob_sha1": "a384ab83d5671dd84d664dc98537e2fc24e7db23"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-009/OPS-009_CONTRACT.json",
+      "bytes": 2001,
+      "git_blob_sha1": "0ea6d98290752e20c4e9c36b689c866bcbbaa3d7"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-009/OPS-009_SPEC.md",
+      "bytes": 2798,
+      "git_blob_sha1": "2afc99287ec1cc0ee142175d20bd0d53f1ffb91c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-010/OPES_Core_Banking_Batch_90_OPS-010_2026-11-03.zip",
+      "bytes": 5895,
+      "git_blob_sha1": "1a61aeaa0ef8e13831f7f498b36c2d08131431a9"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-010/OPS-010_CONTRACT.json",
+      "bytes": 2218,
+      "git_blob_sha1": "1746d0f0928b9bf72d9aaf00841952f93aea3add"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-010/OPS-010_SPEC.md",
+      "bytes": 2996,
+      "git_blob_sha1": "a27d69cab0ca89767f7263583f1a8ef6275851ce"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-011/OPES_Core_Banking_Batch_91_OPS-011_2026-11-03.zip",
+      "bytes": 5597,
+      "git_blob_sha1": "7436702a859357496759cffc900b2edad1b140ee"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-011/OPS-011_CONTRACT.json",
+      "bytes": 2035,
+      "git_blob_sha1": "7982d05adf25ed3c7edaa7092fcc43306e5935d3"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-011/OPS-011_SPEC.md",
+      "bytes": 2864,
+      "git_blob_sha1": "d45d6bf84cf338e26cfdb2e324871340dad1dd5e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-012/OPES_Core_Banking_Batch_92_OPS-012_2026-11-03.zip",
+      "bytes": 5520,
+      "git_blob_sha1": "fa9666b5f58b64dff96654168674547b6ae120ce"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-012/OPS-012_CONTRACT.json",
+      "bytes": 2005,
+      "git_blob_sha1": "cf8d74745b36ce4a1f5286e7fb62fc3167a8c85e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-012/OPS-012_SPEC.md",
+      "bytes": 2817,
+      "git_blob_sha1": "d726fc288278c6056ce4b50102bb8214c9681214"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-013/OPES_Core_Banking_Batch_93_OPS-013_2026-11-03.zip",
+      "bytes": 5764,
+      "git_blob_sha1": "0ac3608dd55fd6170df5038be2c2e357f4cf7828"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-013/OPS-013_CONTRACT.json",
+      "bytes": 2116,
+      "git_blob_sha1": "fcb1c6226077117e77255e37caf86f3842e8c02b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-013/OPS-013_SPEC.md",
+      "bytes": 2950,
+      "git_blob_sha1": "e39219d05ee8fbe2061fd3c7fd0a5fb38922ae94"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-014/OPES_Core_Banking_Batch_94_OPS-014_2026-11-03.zip",
+      "bytes": 5503,
+      "git_blob_sha1": "72baba6049262f43d8af5be904f8cfa9ef1a1d83"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-014/OPS-014_CONTRACT.json",
+      "bytes": 1986,
+      "git_blob_sha1": "fb2f7b799cd0f3508031c826419a6451f0d15886"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-014/OPS-014_SPEC.md",
+      "bytes": 2819,
+      "git_blob_sha1": "589cace1992e3cc2a57c43e8f75b710bc72f5634"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-015/OPES_Core_Banking_Batch_95_OPS-015_2026-11-03.zip",
+      "bytes": 6117,
+      "git_blob_sha1": "4d7347909dea8912c7c7df7b863f96ab3607a95c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-015/OPS-015_CONTRACT.json",
+      "bytes": 2281,
+      "git_blob_sha1": "f7fcaa5c9243787f75236e9bb2ee7cb4a8fb24e8"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-015/OPS-015_SPEC.md",
+      "bytes": 3138,
+      "git_blob_sha1": "1f59cf824671a97806082fd2a0d411c5c133e31c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-016/OPES_Core_Banking_Batch_96_OPS-016_2026-11-03.zip",
+      "bytes": 5738,
+      "git_blob_sha1": "91040f471b844ce40fec4f17dd448a13a04ec861"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-016/OPS-016_CONTRACT.json",
+      "bytes": 2102,
+      "git_blob_sha1": "304eda6332e7824b0d53bc04994ff6259466587b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-016/OPS-016_SPEC.md",
+      "bytes": 2938,
+      "git_blob_sha1": "3959948de8f90505a67d19a42878391c16c5be3d"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-017/OPES_Core_Banking_Batch_97_OPS-017_2026-11-03.zip",
+      "bytes": 5728,
+      "git_blob_sha1": "4c3951fa2b9a1390281bf5ab5cbbfa1951902c25"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-017/OPS-017_CONTRACT.json",
+      "bytes": 2099,
+      "git_blob_sha1": "53f5d1974a7a3d9e7a7f2063eaf4d1516888c8d5"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-017/OPS-017_SPEC.md",
+      "bytes": 2931,
+      "git_blob_sha1": "50202302fde99b5cf4c94e3dfc1040973b5bf915"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-018/OPES_Core_Banking_Batch_98_OPS-018_2026-11-03.zip",
+      "bytes": 5769,
+      "git_blob_sha1": "0ab904ed180ef46318b25aa114f04b77ca8d520f"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-018/OPS-018_CONTRACT.json",
+      "bytes": 2106,
+      "git_blob_sha1": "f0c21585b25cf755e1bdfd35f675df670f2188a4"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-018/OPS-018_SPEC.md",
+      "bytes": 2965,
+      "git_blob_sha1": "061754afc66937f61527ff72fa133763da8b6c43"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-019/OPES_Core_Banking_Batch_99_OPS-019_2026-11-03.zip",
+      "bytes": 5610,
+      "git_blob_sha1": "cbdfd54c541ae14cb3401a8dfd6a8715352aa11e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-019/OPS-019_CONTRACT.json",
+      "bytes": 2031,
+      "git_blob_sha1": "eeaef9e3b7ea158e7ea994b0ae3142c1b66b3392"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-019/OPS-019_SPEC.md",
+      "bytes": 2881,
+      "git_blob_sha1": "cd7e7b9ce0d89c1035150f241a079c5df96420ea"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-020/OPES_Core_Banking_Batch_100_OPS-020_2026-11-03.zip",
+      "bytes": 5761,
+      "git_blob_sha1": "bdb7836da870e023824270e4495089cf1ae87dae"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-020/OPS-020_CONTRACT.json",
+      "bytes": 2114,
+      "git_blob_sha1": "5676bb1c9fb51cf76b3a3ca9f4de9138acf27d5e"
+    },
+    {
+      "path": "programme/batches/2026-11-03/OPS-020/OPS-020_SPEC.md",
+      "bytes": 2948,
+      "git_blob_sha1": "77feb54052b20e525548a32fef984b119a61ca06"
+    },
+    {
+      "path": "programme/batches/2026-11-03/RUN_121_150_EXECUTION_REPORT.json",
+      "bytes": 701,
+      "git_blob_sha1": "a237fe6a99d3d6882137c9e00b33a9784d6f91b1"
+    },
+    {
+      "path": "programme/batches/2026-11-03/RUN_31_60_EXECUTION_REPORT.json",
+      "bytes": 499,
+      "git_blob_sha1": "e011c4e69031485178e6f6f2c261490d1923596c"
+    },
+    {
+      "path": "programme/batches/2026-11-03/RUN_61_90_EXECUTION_REPORT.json",
+      "bytes": 389,
+      "git_blob_sha1": "592bb8fc8a5527b19ae27c72bbd55c93856c7339"
+    },
+    {
+      "path": "programme/batches/2026-11-03/RUN_91_120_EXECUTION_REPORT.json",
+      "bytes": 604,
+      "git_blob_sha1": "64351c104fd1f84fc31a69b264d287a4a65ca1a1"
+    },
+    {
+      "path": "programme/batches/2026-11-03/RUN_INDEX_121_150.md",
+      "bytes": 5669,
+      "git_blob_sha1": "f5cf7b1e4c8d6b4e8802c7dc8554a097edaa7169"
+    },
+    {
+      "path": "programme/batches/2026-11-03/RUN_INDEX_30_BATCHES.md",
+      "bytes": 5417,
+      "git_blob_sha1": "c3aa631dd46e81d73cab61fbd96b943889e3ff5b"
+    },
+    {
+      "path": "programme/batches/2026-11-03/RUN_INDEX_31_60.md",
+      "bytes": 5952,
+      "git_blob_sha1": "ea2a55aebf9806ffacdad2faf854cb3d731bb817"
+    },
+    {
+      "path": "programme/batches/2026-11-03/RUN_INDEX_61_90.md",
+      "bytes": 5992,
+      "git_blob_sha1": "4de4432d1a1f04f73da6751d550434d96b548ace"
+    },
+    {
+      "path": "programme/batches/2026-11-03/RUN_INDEX_91_120.md",
+      "bytes": 6312,
+      "git_blob_sha1": "bde0710f05c8fbfaf8fbb8d0460ef3b6d85242f0"
+    },
+    {
+      "path": "regulatory/checkpoints/AN/ACCEPTANCE_TESTS.json",
+      "bytes": 879,
+      "git_blob_sha1": "201b47eb7144e580b71409b23ca558a0282e8729"
+    },
+    {
+      "path": "regulatory/checkpoints/AN/CONTINUATION_STATE.json",
+      "bytes": 822,
+      "git_blob_sha1": "e5e10140d795daecd760a170216c5128f50e22e1"
+    },
+    {
+      "path": "regulatory/checkpoints/AN/EVIDENCE_REQUEST_PLAN.md",
+      "bytes": 445,
+      "git_blob_sha1": "8d0a596e8f6873d448a415f5096067278e3ae60f"
+    },
+    {
+      "path": "regulatory/checkpoints/AN/GAP_UPDATE.md",
+      "bytes": 256,
+      "git_blob_sha1": "ab673ba47ca5e92ecae5dfb4b66ee754b073b234"
+    },
+    {
+      "path": "regulatory/checkpoints/AN/QUALITY_REVIEW.md",
+      "bytes": 1388,
+      "git_blob_sha1": "550e3b08674737b57577a9850838edc4ec49df95"
+    },
+    {
+      "path": "regulatory/checkpoints/AN/README.md",
+      "bytes": 782,
+      "git_blob_sha1": "84f1f3b545877579b30335781b8dbdcd93c2f2a7"
+    },
+    {
+      "path": "regulatory/checkpoints/AN/REQUIREMENTS.json",
+      "bytes": 1115,
+      "git_blob_sha1": "322604937f794be6ac15daaa7701e073cf83d2d4"
+    },
+    {
+      "path": "regulatory/checkpoints/AN/SOURCE_REGISTER.json",
+      "bytes": 1217,
+      "git_blob_sha1": "edd3dfb17563df8820b73f7176d69f18c732a6bb"
+    },
+    {
+      "path": "regulatory/checkpoints/AO/ACCEPTANCE_TESTS.json",
+      "bytes": 1812,
+      "git_blob_sha1": "99bd934c12ba44b774c3e2bf4080807052c11a6c"
+    },
+    {
+      "path": "regulatory/checkpoints/AO/CONTINUATION_STATE.json",
+      "bytes": 1405,
+      "git_blob_sha1": "e1b32517e76ebc548c6d93c3bb6cd8653bbafe95"
+    },
+    {
+      "path": "regulatory/checkpoints/AO/EVIDENCE_REGISTER.json",
+      "bytes": 3182,
+      "git_blob_sha1": "fd64ac65eade5b49bec66daebcee824aa12be170"
+    },
+    {
+      "path": "regulatory/checkpoints/AO/EXECUTION_REPORT.md",
+      "bytes": 1695,
+      "git_blob_sha1": "91841f0c74606bf1629f44c942814bb7317e52ce"
+    },
+    {
+      "path": "regulatory/checkpoints/AO/QUALITY_REVIEW.md",
+      "bytes": 1706,
+      "git_blob_sha1": "d60a46d2f924c075b2830b3534e6828871771322"
+    },
+    {
+      "path": "regulatory/checkpoints/AO/README.md",
+      "bytes": 975,
+      "git_blob_sha1": "28ab5839a30a5aa252f0f692f0abfa279955cf68"
+    },
+    {
+      "path": "regulatory/checkpoints/AO/REGULATORY_IMPACT.md",
+      "bytes": 3085,
+      "git_blob_sha1": "cd771b3ba5e899d126a7f90bddb22a12b60b21d0"
+    },
+    {
+      "path": "regulatory/checkpoints/AP/ACCEPTANCE_TESTS.json",
+      "bytes": 1779,
+      "git_blob_sha1": "ed03b2b3766e17841bd2a7f34685b211d89a939d"
+    },
+    {
+      "path": "regulatory/checkpoints/AP/CASE_PROVENANCE.md",
+      "bytes": 2810,
+      "git_blob_sha1": "20915e77c6fca576267715361166f86a23921e70"
+    },
+    {
+      "path": "regulatory/checkpoints/AP/CONTINUATION_STATE.json",
+      "bytes": 1449,
+      "git_blob_sha1": "55f1e4d691f5f50971a1f45ae793ffe0c34f1b84"
+    },
+    {
+      "path": "regulatory/checkpoints/AP/CONTROL_DESIGN.md",
+      "bytes": 3400,
+      "git_blob_sha1": "c118573d3e70ceab0673d9838661272408ef9285"
+    },
+    {
+      "path": "regulatory/checkpoints/AP/EVIDENCE_REGISTER.json",
+      "bytes": 3604,
+      "git_blob_sha1": "abc4124c192c772e41634994a5b63a5bc9a9963c"
+    },
+    {
+      "path": "regulatory/checkpoints/AP/EXECUTION_REPORT.md",
+      "bytes": 1538,
+      "git_blob_sha1": "a5c2a66133f778d2c0d6255f71caa66b197db7ba"
+    },
+    {
+      "path": "regulatory/checkpoints/AP/QUALITY_REVIEW.md",
+      "bytes": 1869,
+      "git_blob_sha1": "5dfea8cdde7fc002153bd5517ed5ea08f5c9594c"
+    },
+    {
+      "path": "regulatory/checkpoints/AP/README.md",
+      "bytes": 2045,
+      "git_blob_sha1": "eaa755255b3c741572e0f06459ebae7d788b957c"
+    },
+    {
+      "path": "regulatory/checkpoints/AQ/AUTHORITY_DECISION_MATRIX.json",
+      "bytes": 2426,
+      "git_blob_sha1": "f1286d8d1cf74268e4e03b6fd722f8a3d50c9c45"
+    },
+    {
+      "path": "regulatory/checkpoints/AQ/CONTINUATION_STATE.json",
+      "bytes": 1405,
+      "git_blob_sha1": "47a5bfa4e793a712bf8001b9a716ee6869909ce5"
+    },
+    {
+      "path": "regulatory/checkpoints/AQ/EVIDENCE_DELTA.md",
+      "bytes": 3804,
+      "git_blob_sha1": "59d5001013b0355c319bff8b8ce85ccb0fc09f51"
+    },
+    {
+      "path": "regulatory/checkpoints/AQ/EXECUTION_REPORT.md",
+      "bytes": 1317,
+      "git_blob_sha1": "d33dd05d4af09718390690e9a7d1c7a06c1de3e7"
+    },
+    {
+      "path": "regulatory/checkpoints/AQ/README.md",
+      "bytes": 746,
+      "git_blob_sha1": "00274e573676cbc99523a649ccf29db9fa82f852"
+    },
+    {
+      "path": "regulatory/checkpoints/AQ/REVIEW_AND_GATES.md",
+      "bytes": 2680,
+      "git_blob_sha1": "d20f3a2b88585c61be0fd78008fbeacacfdb09ff"
+    },
+    {
+      "path": "regulatory/checkpoints/AR/ACCEPTANCE_SCENARIOS.json",
+      "bytes": 3269,
+      "git_blob_sha1": "4356286924c833084c84fd74b11f026290a21b18"
+    },
+    {
+      "path": "regulatory/checkpoints/AR/CONTINUATION_STATE.json",
+      "bytes": 1373,
+      "git_blob_sha1": "927f60ea7bc5d4a8dd063a4a5501e00b8fee838c"
+    },
+    {
+      "path": "regulatory/checkpoints/AR/EVIDENCE_REQUESTS_FR.md",
+      "bytes": 3121,
+      "git_blob_sha1": "76b8609069e302ed296a97f2534188105ea5c853"
+    },
+    {
+      "path": "regulatory/checkpoints/AR/EXECUTION_REPORT.md",
+      "bytes": 1378,
+      "git_blob_sha1": "c24571fb7dbc2ce53de6c05ee169e46df8002a7c"
+    },
+    {
+      "path": "regulatory/checkpoints/AR/GAP_DELTA.md",
+      "bytes": 1761,
+      "git_blob_sha1": "0613661726e3462119b8c62357c3799bc6af5e82"
+    },
+    {
+      "path": "regulatory/checkpoints/AR/POLICY_AUTHORITY_GATE_SPEC.md",
+      "bytes": 4423,
+      "git_blob_sha1": "931a6e72807676e1553513d27f0304cf6ddfed17"
+    },
+    {
+      "path": "regulatory/checkpoints/AR/PRIMARY_LAW_ANALYSIS.md",
+      "bytes": 3116,
+      "git_blob_sha1": "66abbb08fde7f10b4c9cc99641eb8f641567cb23"
+    },
+    {
+      "path": "regulatory/checkpoints/AR/PUBLICATION_CHAIN_REGISTER.json",
+      "bytes": 2051,
+      "git_blob_sha1": "6fa8d21058957eedc65daffa90448eeade87d690"
+    },
+    {
+      "path": "regulatory/checkpoints/AR/QUALITY_REVIEW.md",
+      "bytes": 2110,
+      "git_blob_sha1": "b70c412d2555fdf6920d725cda4d828430b87aff"
+    },
+    {
+      "path": "regulatory/checkpoints/AR/README.md",
+      "bytes": 1860,
+      "git_blob_sha1": "2dc2473a7cc10e3c736a4c3440885151c7ac3ed1"
+    },
+    {
+      "path": "regulatory/checkpoints/AS/ACCEPTANCE_SCENARIOS.json",
+      "bytes": 2610,
+      "git_blob_sha1": "ea9078937a3195bb56036de20f67dff509e43a8f"
+    },
+    {
+      "path": "regulatory/checkpoints/AS/CONTINUATION_STATE.json",
+      "bytes": 1616,
+      "git_blob_sha1": "23fa8e3df37bd780954dddf49ed9a9ed0b84c9c2"
+    },
+    {
+      "path": "regulatory/checkpoints/AS/EVIDENCE_MATRIX.json",
+      "bytes": 4496,
+      "git_blob_sha1": "4c1de97b74c1d182fe57a2b64c26fb1aa744fd51"
+    },
+    {
+      "path": "regulatory/checkpoints/AS/EXECUTION_REPORT.md",
+      "bytes": 1707,
+      "git_blob_sha1": "4ff19a6788ba19c5e6ff19e9e98c379e3cb3cf62"
+    },
+    {
+      "path": "regulatory/checkpoints/AS/PRIMARY_EVIDENCE.md",
+      "bytes": 4762,
+      "git_blob_sha1": "9a93fa08f6057e1aaebefc0646bb9dc49fcc1751"
+    },
+    {
+      "path": "regulatory/checkpoints/AS/QUALITY_REVIEW.md",
+      "bytes": 2525,
+      "git_blob_sha1": "6815b9c240d590904c69c801851611e4da308a2a"
+    },
+    {
+      "path": "regulatory/checkpoints/AS/README.md",
+      "bytes": 1943,
+      "git_blob_sha1": "ed04760ac80237e985ffac6773a1f1630ad81cb2"
+    },
+    {
+      "path": "regulatory/checkpoints/AS/REQUIREMENTS_AND_CONTROLS.md",
+      "bytes": 4032,
+      "git_blob_sha1": "16551de967f626e72ea15ab5a7b1bd3416f173a4"
+    },
+    {
+      "path": "regulatory/checkpoints/AT/ACCEPTANCE_SCENARIOS.json",
+      "bytes": 2778,
+      "git_blob_sha1": "e68401375df71556f8ded4db0d2d978e9aae1093"
+    },
+    {
+      "path": "regulatory/checkpoints/AT/CONTINUATION_STATE.json",
+      "bytes": 1589,
+      "git_blob_sha1": "b90736039573c0ab6d8ee87264850a65f3800ca7"
+    },
+    {
+      "path": "regulatory/checkpoints/AT/EXECUTION_REPORT.md",
+      "bytes": 1789,
+      "git_blob_sha1": "88a1af17c61b80409626a9e67b327153d23b1576"
+    },
+    {
+      "path": "regulatory/checkpoints/AT/PUBLICATION_AUTHORITY_MATRIX.json",
+      "bytes": 2089,
+      "git_blob_sha1": "c47c7692b032d4c1e41f29b345ef69a625f2888c"
+    },
+    {
+      "path": "regulatory/checkpoints/AT/QUALITY_REVIEW.md",
+      "bytes": 2162,
+      "git_blob_sha1": "808efc2d8fcc4c673dad8d2c6d8cbce3884913b1"
+    },
+    {
+      "path": "regulatory/checkpoints/AT/README.md",
+      "bytes": 1890,
+      "git_blob_sha1": "9f2fc4571b3e6711f663b30f8602fdef77dcaec3"
+    },
+    {
+      "path": "regulatory/checkpoints/AT/REQUIREMENTS_AND_CONTROLS.md",
+      "bytes": 3629,
+      "git_blob_sha1": "2eb14025e9c7e807d36c008def27d04b0c427adc"
+    },
+    {
+      "path": "regulatory/checkpoints/AT/SOURCE_DELTA.md",
+      "bytes": 4279,
+      "git_blob_sha1": "eff032b4ec4d30217f005da79f5a3fe6a474967b"
+    },
+    {
+      "path": "regulatory/checkpoints/AU/ACCEPTANCE_SCENARIOS.json",
+      "bytes": 2659,
+      "git_blob_sha1": "2e98241c74370144f01e995fd7296cf5fb08d186"
+    },
+    {
+      "path": "regulatory/checkpoints/AU/CONTINUATION_STATE.json",
+      "bytes": 1179,
+      "git_blob_sha1": "731e578a79c00f6d406c6b8f33f702676ce39e9e"
+    },
+    {
+      "path": "regulatory/checkpoints/AU/DESIGN_GUARDS.md",
+      "bytes": 3520,
+      "git_blob_sha1": "23b83b20df6dbe8d11b6bf312622db0c51795f54"
+    },
+    {
+      "path": "regulatory/checkpoints/AU/EXECUTION_REPORT.md",
+      "bytes": 1835,
+      "git_blob_sha1": "a9a8ef982cb26b925e2746ee7ac3e2c413aad836"
+    },
+    {
+      "path": "regulatory/checkpoints/AU/PRIMARY_SOURCE_DELTA.md",
+      "bytes": 4122,
+      "git_blob_sha1": "e68a62af2764a752b6f2ae5dd323fd0e12fec4c8"
+    },
+    {
+      "path": "regulatory/checkpoints/AU/QUALITY_REVIEW.md",
+      "bytes": 2137,
+      "git_blob_sha1": "f681ae7f646ea66639e40863df8192e8c2687f01"
+    },
+    {
+      "path": "regulatory/checkpoints/AU/README.md",
+      "bytes": 1752,
+      "git_blob_sha1": "4d45dd3838153d213261c6b0976e964c8562ccbb"
+    },
+    {
+      "path": "regulatory/checkpoints/AU/REGULATORY_LINEAGE.json",
+      "bytes": 2927,
+      "git_blob_sha1": "8a433391e3f79ee163b0d2f88f7f98e4f473011f"
+    },
+    {
+      "path": "regulatory/checkpoints/AV/ACCEPTANCE_SCENARIOS.json",
+      "bytes": 4309,
+      "git_blob_sha1": "a8c7f8871a00c7743dd2bbedba942031644cf9bd"
+    },
+    {
+      "path": "regulatory/checkpoints/AV/ACCOUNTING_RULE_CANDIDATES.json",
+      "bytes": 4476,
+      "git_blob_sha1": "8c7e19b53792237bc3a343455655c5cd47073a56"
+    },
+    {
+      "path": "regulatory/checkpoints/AV/CONTINUATION_STATE.json",
+      "bytes": 1401,
+      "git_blob_sha1": "9a191439bb15c2522cb0d3e73885647fefc0fce6"
+    },
+    {
+      "path": "regulatory/checkpoints/AV/DOMAIN_DESIGN.md",
+      "bytes": 3942,
+      "git_blob_sha1": "7063c9efb68fb017f246377976e622183c046e43"
+    },
+    {
+      "path": "regulatory/checkpoints/AV/EXECUTION_REPORT.md",
+      "bytes": 2052,
+      "git_blob_sha1": "1b0f77c4fda45027a062677a776d510243e5ddea"
+    },
+    {
+      "path": "regulatory/checkpoints/AV/PRIMARY_EVIDENCE.md",
+      "bytes": 5097,
+      "git_blob_sha1": "18b74cb99d1f10e29e38b4a4d49583a51759ec2f"
+    },
+    {
+      "path": "regulatory/checkpoints/AV/QUALITY_REVIEW.md",
+      "bytes": 2380,
+      "git_blob_sha1": "de299cb2f704e42cb666b238e0963d2fe88dd9ef"
+    },
+    {
+      "path": "regulatory/checkpoints/AV/README.md",
+      "bytes": 1931,
+      "git_blob_sha1": "7f60fb82d9b911d3f15e02dcea514a6f5b9ee311"
+    },
+    {
+      "path": "regulatory/checkpoints/AW/ACCOUNTING_CONTROL_DESIGN.md",
+      "bytes": 4589,
+      "git_blob_sha1": "3d70c2adba4ed358dcf0ce6612d92fb1497a8fad"
+    },
+    {
+      "path": "regulatory/checkpoints/AW/CONTINUATION_STATE.json",
+      "bytes": 1278,
+      "git_blob_sha1": "96c478d6cc28f5065d68efdae6badd6ae68f52a5"
+    },
+    {
+      "path": "regulatory/checkpoints/AW/EXECUTION_REPORT.md",
+      "bytes": 1903,
+      "git_blob_sha1": "2cd9436cf3335d8a0993e72884c020d582220064"
+    },
+    {
+      "path": "regulatory/checkpoints/AW/PCEC_AUTHORITY_CHAIN.json",
+      "bytes": 3258,
+      "git_blob_sha1": "5ce9bd3d33da3fc43d839aa34f48b4f18f8e91f2"
+    },
+    {
+      "path": "regulatory/checkpoints/AW/PRIMARY_EVIDENCE_DELTA.md",
+      "bytes": 3729,
+      "git_blob_sha1": "32c6c53ab1f241a4f60876db1ab9bd4480b5c240"
+    },
+    {
+      "path": "regulatory/checkpoints/AW/QUALITY_REVIEW.md",
+      "bytes": 1827,
+      "git_blob_sha1": "2291a42520ee51409a1a7bb19ad37fdff0f734a9"
+    },
+    {
+      "path": "regulatory/checkpoints/AW/README.md",
+      "bytes": 1121,
+      "git_blob_sha1": "40818d5e0f9d4711aef952771402ebff2ab837e4"
+    },
+    {
+      "path": "regulatory/checkpoints/AW/REQUIREMENTS_AND_TESTS.json",
+      "bytes": 5533,
+      "git_blob_sha1": "8f7aba73bb4a087fe3ca635fba79612281911231"
+    },
+    {
+      "path": "regulatory/checkpoints/AX/ACCEPTANCE_SCENARIOS.json",
+      "bytes": 5403,
+      "git_blob_sha1": "ebdd5294f3044f7a5b3bab214a7ab8450d034a21"
+    },
+    {
+      "path": "regulatory/checkpoints/AX/CONFLICT_REGISTER.json",
+      "bytes": 5398,
+      "git_blob_sha1": "323dbb42ca4557daf1d4393afe44e9203dbb89f7"
+    },
+    {
+      "path": "regulatory/checkpoints/AX/CONTINUATION_STATE.json",
+      "bytes": 1243,
+      "git_blob_sha1": "46aa8125a48a48435f797ce79c6cd0ba7b2f9c37"
+    },
+    {
+      "path": "regulatory/checkpoints/AX/EXECUTION_REPORT.md",
+      "bytes": 1549,
+      "git_blob_sha1": "a670c0bf64712c72481771493cf7ee03818fed6a"
+    },
+    {
+      "path": "regulatory/checkpoints/AX/QUALITY_REVIEW.md",
+      "bytes": 2205,
+      "git_blob_sha1": "1d4b4ebb828f5e4f684c5776dd5330726523d632"
+    },
+    {
+      "path": "regulatory/checkpoints/AX/README.md",
+      "bytes": 1338,
+      "git_blob_sha1": "5a7147ed97ae19ba58b30ed94e54fc58e1bf2901"
+    },
+    {
+      "path": "regulatory/checkpoints/AX/REQUIREMENTS_AND_GATES.md",
+      "bytes": 3200,
+      "git_blob_sha1": "3261b7e1340a20041e650a54af5139964251793c"
+    },
+    {
+      "path": "regulatory/checkpoints/AX/SOURCE_EVIDENCE.md",
+      "bytes": 2832,
+      "git_blob_sha1": "af74586d8ab7a08c35fa5f637884e2624c5be1a6"
+    },
+    {
+      "path": "regulatory/checkpoints/AY/ACCEPTANCE_SCENARIOS.json",
+      "bytes": 5001,
+      "git_blob_sha1": "2d4c4ac906d66a8e32f41bfc5a06429ee0776821"
+    },
+    {
+      "path": "regulatory/checkpoints/AY/AMENDMENT_RECONCILIATION.json",
+      "bytes": 5118,
+      "git_blob_sha1": "86acc968c9fe03d130491fe3a3e4e14d7865be05"
+    },
+    {
+      "path": "regulatory/checkpoints/AY/CONTINUATION_STATE.json",
+      "bytes": 1386,
+      "git_blob_sha1": "3ced5f58838870c06b5e7a6e9f8fadb9bc29c7f0"
+    },
+    {
+      "path": "regulatory/checkpoints/AY/CONTROL_DESIGN.md",
+      "bytes": 4504,
+      "git_blob_sha1": "94f9ab42c12f98869060660a67969aa9d5b8e9e4"
+    },
+    {
+      "path": "regulatory/checkpoints/AY/EXECUTION_REPORT.md",
+      "bytes": 2000,
+      "git_blob_sha1": "1faa8cc048351b9d186bd8b54fcb5445804d65ad"
+    },
+    {
+      "path": "regulatory/checkpoints/AY/PRIMARY_EVIDENCE.md",
+      "bytes": 3330,
+      "git_blob_sha1": "78de1e46c29f600c7b13dcb85189ee186d6c4a38"
+    },
+    {
+      "path": "regulatory/checkpoints/AY/QUALITY_REVIEW.md",
+      "bytes": 2465,
+      "git_blob_sha1": "bdbbf5a38b938323275902f3034fbcc23ba90c24"
+    },
+    {
+      "path": "regulatory/checkpoints/AY/README.md",
+      "bytes": 1824,
+      "git_blob_sha1": "5dce5beec031787287b16aa11adb6d7c87b3b477"
+    },
+    {
+      "path": "regulatory/checkpoints/AZ/ACCEPTANCE_SCENARIOS.json",
+      "bytes": 4393,
+      "git_blob_sha1": "c32f272e5fb6bd891feaec5fd194911db0ad0e81"
+    },
+    {
+      "path": "regulatory/checkpoints/AZ/CLAUSE_CROSSWALK.json",
+      "bytes": 5791,
+      "git_blob_sha1": "5045980d15fdc4affd4e232b0dd07850f7e9bbad"
+    },
+    {
+      "path": "regulatory/checkpoints/AZ/CONTINUATION_STATE.json",
+      "bytes": 1397,
+      "git_blob_sha1": "55a04ac1d1e5d93656f1696c411bd3753c8b4e26"
+    },
+    {
+      "path": "regulatory/checkpoints/AZ/CONTROL_DESIGN.md",
+      "bytes": 3544,
+      "git_blob_sha1": "7d99bc56e4c0569f115d4d3b40301e4e7f97d4ad"
+    },
+    {
+      "path": "regulatory/checkpoints/AZ/EXECUTION_REPORT.md",
+      "bytes": 1686,
+      "git_blob_sha1": "5985b929e9f3862c6e698a215ed42a59230b2673"
+    },
+    {
+      "path": "regulatory/checkpoints/AZ/QUALITY_REVIEW.md",
+      "bytes": 2553,
+      "git_blob_sha1": "a15aa30151198948e01e710de08e461b4fde7ad3"
+    },
+    {
+      "path": "regulatory/checkpoints/AZ/README.md",
+      "bytes": 2592,
+      "git_blob_sha1": "0f5b9bd7d95ea07c739d4267e0cc1b96df07439d"
+    },
+    {
+      "path": "regulatory/checkpoints/BA/ACCEPTANCE_SCENARIOS.json",
+      "bytes": 6285,
+      "git_blob_sha1": "7bebf1542949bf8568ac657aa4240e851fd44272"
+    },
+    {
+      "path": "regulatory/checkpoints/BA/CONTINUATION_STATE.json",
+      "bytes": 1639,
+      "git_blob_sha1": "4c04f618e1f583954c83f47646963ffd9d74f127"
+    },
+    {
+      "path": "regulatory/checkpoints/BA/EXECUTION_REPORT.md",
+      "bytes": 2278,
+      "git_blob_sha1": "02a2403b250e007ded41e1cee1eaa2066aefea91"
+    },
+    {
+      "path": "regulatory/checkpoints/BA/FINANCIAL_INTEGRITY_DECISIONS.md",
+      "bytes": 4647,
+      "git_blob_sha1": "59cf2e2ad8e7b71c344712cae5c7a6a7e7c63b7b"
+    },
+    {
+      "path": "regulatory/checkpoints/BA/PRIMARY_EVIDENCE_AND_CUSTODY.md",
+      "bytes": 4191,
+      "git_blob_sha1": "103ed0802a9a3ca750b586e8704a7f4a066a8e63"
+    },
+    {
+      "path": "regulatory/checkpoints/BA/QUALITY_REVIEW.md",
+      "bytes": 3407,
+      "git_blob_sha1": "aa64a37d0a60e986569a2b050191495f1ea239d0"
+    },
+    {
+      "path": "regulatory/checkpoints/BA/README.md",
+      "bytes": 3176,
+      "git_blob_sha1": "8ae5bbaf534f6f3c5f598283d5859cf313deda78"
+    },
+    {
+      "path": "regulatory/checkpoints/BA/SECURITIES_AMENDMENT_GRAPH.json",
+      "bytes": 5269,
+      "git_blob_sha1": "1eb855d41f5e6ef27f7015b358db997d20c976f7"
+    },
+    {
+      "path": "regulatory/checkpoints/BB/AMENDMENT_GRAPH.json",
+      "bytes": 1839,
+      "git_blob_sha1": "5e98d800f44f670031003e2e1068a499dcb2e2ec"
+    },
+    {
+      "path": "regulatory/checkpoints/BB/CONTINUATION_STATE.json",
+      "bytes": 1517,
+      "git_blob_sha1": "a8d12dc087e03bd9bf063ba05c6726c0807a22a8"
+    },
+    {
+      "path": "regulatory/checkpoints/BB/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 2862,
+      "git_blob_sha1": "c8f912fc76a6712eb710135c8e3a09164e1c3d5e"
+    },
+    {
+      "path": "regulatory/checkpoints/BB/EXECUTION_REPORT.md",
+      "bytes": 1311,
+      "git_blob_sha1": "66714566d627d30418c72e1bc94e4d6ab255cb17"
+    },
+    {
+      "path": "regulatory/checkpoints/BB/PRIMARY_EVIDENCE.md",
+      "bytes": 3509,
+      "git_blob_sha1": "1d4ce3e85e3318bacbedb7482cdd11ceb0582b79"
+    },
+    {
+      "path": "regulatory/checkpoints/BB/QUALITY_REVIEW.md",
+      "bytes": 1927,
+      "git_blob_sha1": "fa4425b4061f2a7f2a2338f7aa7434005bb8432b"
+    },
+    {
+      "path": "regulatory/checkpoints/BB/README.md",
+      "bytes": 2987,
+      "git_blob_sha1": "2843e3aae8eb2d56c8a2ecf781cd6272a698569b"
+    },
+    {
+      "path": "regulatory/checkpoints/BC/AMENDMENT_AND_APPLICABILITY_GRAPH.json",
+      "bytes": 2682,
+      "git_blob_sha1": "e39b718c4c460e876d197282ab2cb6f2b5f343eb"
+    },
+    {
+      "path": "regulatory/checkpoints/BC/CONTINUATION_STATE.json",
+      "bytes": 1734,
+      "git_blob_sha1": "e0a2c6bd0a720e62670d4cbda8d38ac9d84e2d1e"
+    },
+    {
+      "path": "regulatory/checkpoints/BC/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 4374,
+      "git_blob_sha1": "1ca7524d72df29e5bb66b60b4abbce65f2e22121"
+    },
+    {
+      "path": "regulatory/checkpoints/BC/EXECUTION_REPORT.md",
+      "bytes": 1333,
+      "git_blob_sha1": "61d183be01e79e097628b3ee2ebb0e991b2fd82a"
+    },
+    {
+      "path": "regulatory/checkpoints/BC/PRIMARY_EVIDENCE.md",
+      "bytes": 3544,
+      "git_blob_sha1": "b89ad8ed8afa6cbc55b88ab1e7f649721431e1b2"
+    },
+    {
+      "path": "regulatory/checkpoints/BC/QUALITY_REVIEW.md",
+      "bytes": 2076,
+      "git_blob_sha1": "98faf98ba9f9a50bd241122e7a5deed1593f5bbc"
+    },
+    {
+      "path": "regulatory/checkpoints/BC/README.md",
+      "bytes": 3478,
+      "git_blob_sha1": "d112f5f635923e5cecb4afa1087fcb9360a636d7"
+    },
+    {
+      "path": "regulatory/checkpoints/BD/CLAUSE_AUTHORITY_REGISTER.json",
+      "bytes": 2736,
+      "git_blob_sha1": "ae6d4f15b0e8dca005b878407332a3a90f55f431"
+    },
+    {
+      "path": "regulatory/checkpoints/BD/CONTINUATION_STATE.json",
+      "bytes": 1725,
+      "git_blob_sha1": "ece7ed0176be332a8bf6d9189bd3efa544149a1c"
+    },
+    {
+      "path": "regulatory/checkpoints/BD/CONTROL_AND_ACCEPTANCE_DESIGN.md",
+      "bytes": 4724,
+      "git_blob_sha1": "f5ba211bef7c0c079afd72d12e9544ec0528faa5"
+    },
+    {
+      "path": "regulatory/checkpoints/BD/EVIDENCE_DELTA.md",
+      "bytes": 3328,
+      "git_blob_sha1": "f8a7e58c8187dc919bad1878e5f14fe10a395210"
+    },
+    {
+      "path": "regulatory/checkpoints/BD/EXECUTION_REPORT.md",
+      "bytes": 1324,
+      "git_blob_sha1": "35a87a69c5801f0f78602944a36db37820133a53"
+    },
+    {
+      "path": "regulatory/checkpoints/BD/QUALITY_REVIEW.md",
+      "bytes": 2067,
+      "git_blob_sha1": "660ae752f33c1b6b088594cd733be93fc923ddd4"
+    },
+    {
+      "path": "regulatory/checkpoints/BD/README.md",
+      "bytes": 3263,
+      "git_blob_sha1": "51dd84c29860976aff8e1d355904f3c821707fbc"
+    },
+    {
+      "path": "regulatory/checkpoints/BE/ACCEPTANCE_SCENARIOS.json",
+      "bytes": 2460,
+      "git_blob_sha1": "ca67f9734b592e3227052c07fdbafc9bf46f638e"
+    },
+    {
+      "path": "regulatory/checkpoints/BE/CAPITAL_POLICY_AUTHORITY_DESIGN.md",
+      "bytes": 3760,
+      "git_blob_sha1": "537f74e9ebaae832dc6b455c458936e3a0367007"
+    },
+    {
+      "path": "regulatory/checkpoints/BE/CONTINUATION_STATE.json",
+      "bytes": 1508,
+      "git_blob_sha1": "b88ef1787df2aee2e5882768d87b6e63c51dc6d5"
+    },
+    {
+      "path": "regulatory/checkpoints/BE/EVIDENCE_DELTA.md",
+      "bytes": 3897,
+      "git_blob_sha1": "977e738342a693fffcc52bb5e736990674aa833b"
+    },
+    {
+      "path": "regulatory/checkpoints/BE/EXECUTION_REPORT.md",
+      "bytes": 1388,
+      "git_blob_sha1": "bb2382bfe3c874f35a7351293855bb1d4dc14b62"
+    },
+    {
+      "path": "regulatory/checkpoints/BE/QUALITY_REVIEW.md",
+      "bytes": 2110,
+      "git_blob_sha1": "09cec2dfb19fbc03376a349543f46188bc79f60a"
+    },
+    {
+      "path": "regulatory/checkpoints/BE/README.md",
+      "bytes": 2878,
+      "git_blob_sha1": "1c3afe22d7a9c39ad5a836399fec0590052612ba"
+    },
+    {
+      "path": "regulatory/checkpoints/BF/CONTINUATION_STATE.json",
+      "bytes": 1235,
+      "git_blob_sha1": "2f52bf9298914f3377732b51d2d0a134db183e0c"
+    },
+    {
+      "path": "regulatory/checkpoints/BF/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 3264,
+      "git_blob_sha1": "afc22b19bc5009ddc144015ccf6d3606cbe855cb"
+    },
+    {
+      "path": "regulatory/checkpoints/BF/EVIDENCE_DELTA.md",
+      "bytes": 3138,
+      "git_blob_sha1": "316b909e25ec4f3ffc1084b7d05bd7335fe83ce5"
+    },
+    {
+      "path": "regulatory/checkpoints/BF/EXECUTION_REPORT.md",
+      "bytes": 1301,
+      "git_blob_sha1": "938e1384611c193a7a0b116abee5e1ab8ef3cba5"
+    },
+    {
+      "path": "regulatory/checkpoints/BF/QUALITY_REVIEW.md",
+      "bytes": 1749,
+      "git_blob_sha1": "08328d7bd0c9c12ed91abdcdd8d8766887a5a6a6"
+    },
+    {
+      "path": "regulatory/checkpoints/BF/README.md",
+      "bytes": 1725,
+      "git_blob_sha1": "33411d27df8f8b2b5109b908729ef1692ffac068"
+    },
+    {
+      "path": "regulatory/checkpoints/BF/REGULATORY_CAPITAL_RULES.json",
+      "bytes": 2632,
+      "git_blob_sha1": "6ad9f83f7aeaad103117ee1509df4caf5971046f"
+    },
+    {
+      "path": "regulatory/checkpoints/BG/CAPITAL_TRANSITION_DECISION_MATRIX.json",
+      "bytes": 5772,
+      "git_blob_sha1": "2efe09fa67d37b29ca19309ae34ccf2c21e45a3e"
+    },
+    {
+      "path": "regulatory/checkpoints/BG/CONTINUATION_STATE.json",
+      "bytes": 1606,
+      "git_blob_sha1": "1778adfae2ad90ca47a20af85105874068cb71ba"
+    },
+    {
+      "path": "regulatory/checkpoints/BG/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 3925,
+      "git_blob_sha1": "b0a87816f760540c0b1367f6ec3c2cbb35400234"
+    },
+    {
+      "path": "regulatory/checkpoints/BG/EVIDENCE_DELTA.md",
+      "bytes": 3987,
+      "git_blob_sha1": "910c886728e45f9ee59be8b80d001d9bf696546b"
+    },
+    {
+      "path": "regulatory/checkpoints/BG/EXECUTION_REPORT.md",
+      "bytes": 1562,
+      "git_blob_sha1": "cda27181476706d68667fc7133b6ec554d5541d7"
+    },
+    {
+      "path": "regulatory/checkpoints/BG/QUALITY_REVIEW.md",
+      "bytes": 1976,
+      "git_blob_sha1": "9ce2451b0961bc1f614a60c82005ceac8fae2f4a"
+    },
+    {
+      "path": "regulatory/checkpoints/BG/README.md",
+      "bytes": 990,
+      "git_blob_sha1": "ccb1bdb8f47e1defb18a781ee0af8bf1d230bb39"
+    },
+    {
+      "path": "regulatory/checkpoints/BH/AUTHORITY_AND_CASE_MATRIX.json",
+      "bytes": 4873,
+      "git_blob_sha1": "df84c3ab375a5b4d12b7fe3a733c58a73e5f6ba6"
+    },
+    {
+      "path": "regulatory/checkpoints/BH/CONTINUATION_STATE.json",
+      "bytes": 1440,
+      "git_blob_sha1": "d78637975c82525d096e7f23b9d6f697083453df"
+    },
+    {
+      "path": "regulatory/checkpoints/BH/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 5299,
+      "git_blob_sha1": "23f6055ea97d7a16aecfa1036e1d3f23fcd24ded"
+    },
+    {
+      "path": "regulatory/checkpoints/BH/EVIDENCE_DELTA.md",
+      "bytes": 4043,
+      "git_blob_sha1": "1d79457486f4cf59d36e27f7adfb5fda3b93161d"
+    },
+    {
+      "path": "regulatory/checkpoints/BH/EXECUTION_REPORT.md",
+      "bytes": 1425,
+      "git_blob_sha1": "6b734e292c5d95771387a682f5cf287f28e66dcd"
+    },
+    {
+      "path": "regulatory/checkpoints/BH/QUALITY_REVIEW.md",
+      "bytes": 1951,
+      "git_blob_sha1": "0002cc55a05e0a0759965117e93c237853720e1f"
+    },
+    {
+      "path": "regulatory/checkpoints/BH/README.md",
+      "bytes": 2581,
+      "git_blob_sha1": "64a80a3a8405dabfa992a1ee44213f5f3ec4abd3"
+    },
+    {
+      "path": "regulatory/checkpoints/BI/AUTHORITY_MODEL.json",
+      "bytes": 4150,
+      "git_blob_sha1": "6e5fc9ad2ad26c372563faa792e3929ba0506aa7"
+    },
+    {
+      "path": "regulatory/checkpoints/BI/CONTINUATION_STATE.json",
+      "bytes": 1433,
+      "git_blob_sha1": "49b8dea8d885f0e1c701635701582e2d755f8fc0"
+    },
+    {
+      "path": "regulatory/checkpoints/BI/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 5296,
+      "git_blob_sha1": "3760cdc2789d15a673e0e4aa398b0ed9fbe42684"
+    },
+    {
+      "path": "regulatory/checkpoints/BI/EVIDENCE_DELTA.md",
+      "bytes": 4110,
+      "git_blob_sha1": "e2a9b0cfa99ee006b29a172c4bab6bcc543e0711"
+    },
+    {
+      "path": "regulatory/checkpoints/BI/EXECUTION_REPORT.md",
+      "bytes": 1298,
+      "git_blob_sha1": "e4372e3aaa0cb3c1f84bf715a2ff0936dc554200"
+    },
+    {
+      "path": "regulatory/checkpoints/BI/QUALITY_REVIEW.md",
+      "bytes": 2082,
+      "git_blob_sha1": "c7280792da6f7b6d759fadcbc9e792116e217f7a"
+    },
+    {
+      "path": "regulatory/checkpoints/BI/README.md",
+      "bytes": 2507,
+      "git_blob_sha1": "e07eb9f7d3b2b4085d2042bb12c03882c48e1621"
+    },
+    {
+      "path": "regulatory/checkpoints/BJ/CONTINUATION_STATE.json",
+      "bytes": 1621,
+      "git_blob_sha1": "3929a57befeddea8d6407289002313e1083f7cab"
+    },
+    {
+      "path": "regulatory/checkpoints/BJ/CONTRADICTION_AND_SCOPE_REGISTER.json",
+      "bytes": 2865,
+      "git_blob_sha1": "e7f2711b84a404148cfcadec981b9ab3762e996f"
+    },
+    {
+      "path": "regulatory/checkpoints/BJ/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 4593,
+      "git_blob_sha1": "d67a09a3e5b04411c6599ad4c5f0e30ebe749bd9"
+    },
+    {
+      "path": "regulatory/checkpoints/BJ/EVIDENCE_DELTA.md",
+      "bytes": 3826,
+      "git_blob_sha1": "cae950fd25627173c6863b6dcff57ff782e20b22"
+    },
+    {
+      "path": "regulatory/checkpoints/BJ/EXECUTION_REPORT.md",
+      "bytes": 1628,
+      "git_blob_sha1": "84cda50338faf19240c46ec6eda0078988e700a2"
+    },
+    {
+      "path": "regulatory/checkpoints/BJ/QUALITY_REVIEW.md",
+      "bytes": 1987,
+      "git_blob_sha1": "7436868aa2b2341c988819c68e9f8f3e7d59fd20"
+    },
+    {
+      "path": "regulatory/checkpoints/BJ/README.md",
+      "bytes": 3196,
+      "git_blob_sha1": "0bedc0219ed4801b82333f3fb320b7656503d118"
+    },
+    {
+      "path": "regulatory/checkpoints/BK/CONTINUATION_STATE.json",
+      "bytes": 1691,
+      "git_blob_sha1": "aa4eb9de5c9c5435e9e0b22764cbcf5fb8e72b96"
+    },
+    {
+      "path": "regulatory/checkpoints/BK/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 5613,
+      "git_blob_sha1": "1b01e8aca95bb0a4df45aabc4a640180b7238286"
+    },
+    {
+      "path": "regulatory/checkpoints/BK/EXECUTION_REPORT.md",
+      "bytes": 1865,
+      "git_blob_sha1": "bc0433d85cead5c0f1c89b1bf2824e5019df668b"
+    },
+    {
+      "path": "regulatory/checkpoints/BK/QUALITY_REVIEW.md",
+      "bytes": 2464,
+      "git_blob_sha1": "70913c04e4c5777de9df112f9ff08f75513c1f28"
+    },
+    {
+      "path": "regulatory/checkpoints/BK/README.md",
+      "bytes": 4052,
+      "git_blob_sha1": "7a9680651621cc0195a94e7f93a96914db52a5da"
+    },
+    {
+      "path": "regulatory/checkpoints/BK/REGULATORY_CONFLICT_AND_GATE_REGISTER.json",
+      "bytes": 3995,
+      "git_blob_sha1": "2ba69187f06843f7d3c49b22f10ebf200c0cec5c"
+    },
+    {
+      "path": "regulatory/checkpoints/BK/SOURCE_AND_AUTHORITY_DELTA.md",
+      "bytes": 4868,
+      "git_blob_sha1": "2572cea391a0743fa9c551597d0a3c21261bc463"
+    },
+    {
+      "path": "regulatory/checkpoints/BL/CLAUSE_SEMANTICS_AND_IDENTITY_GATES.json",
+      "bytes": 4634,
+      "git_blob_sha1": "812f474472d14cfd2c9cf0d0aa2ccb6bca41a57a"
+    },
+    {
+      "path": "regulatory/checkpoints/BL/CONTINUATION_STATE.json",
+      "bytes": 1458,
+      "git_blob_sha1": "d9d5449198d426306b72b31366a6be1334b0bc7c"
+    },
+    {
+      "path": "regulatory/checkpoints/BL/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 6379,
+      "git_blob_sha1": "493a8855ce9264a88ab8a383bc7df8e1be76a453"
+    },
+    {
+      "path": "regulatory/checkpoints/BL/EXECUTION_REPORT.md",
+      "bytes": 1369,
+      "git_blob_sha1": "8122c2e111f4a2c71d4f182be0da573a8e65d481"
+    },
+    {
+      "path": "regulatory/checkpoints/BL/QUALITY_REVIEW.md",
+      "bytes": 2520,
+      "git_blob_sha1": "c3ae2cea141096cd3a9a453c0714bf5d2bf30c21"
+    },
+    {
+      "path": "regulatory/checkpoints/BL/README.md",
+      "bytes": 1657,
+      "git_blob_sha1": "137023d32abb1ba44eb35655343420aff8311f49"
+    },
+    {
+      "path": "regulatory/checkpoints/BL/SOURCE_AND_EVIDENCE_DELTA.md",
+      "bytes": 2761,
+      "git_blob_sha1": "8780b07da8fb2a08e08c90896e23af949ab1bb12"
+    },
+    {
+      "path": "regulatory/checkpoints/BM/CONTINUATION_STATE.json",
+      "bytes": 1910,
+      "git_blob_sha1": "de5d134b56396ee27269951dc3f61d90ecf78906"
+    },
+    {
+      "path": "regulatory/checkpoints/BM/EVIDENCE_DELTA.md",
+      "bytes": 3830,
+      "git_blob_sha1": "2177dd779d1682030db38ae80284366ec05f75c8"
+    },
+    {
+      "path": "regulatory/checkpoints/BM/EXECUTION_REPORT.md",
+      "bytes": 1759,
+      "git_blob_sha1": "3772ea24cfe9ab96407ade0d094f8bacacbb1d2f"
+    },
+    {
+      "path": "regulatory/checkpoints/BM/ISSUER_CLARIFICATION_DOCKET.md",
+      "bytes": 3422,
+      "git_blob_sha1": "21310c37d132c6c52e0a9abf6ea499316fbc4fc2"
+    },
+    {
+      "path": "regulatory/checkpoints/BM/POLICY_GATE_AND_TEST_DESIGN.md",
+      "bytes": 4425,
+      "git_blob_sha1": "4c84d63d95863bb9d7ca0765c7f876273be2b33d"
+    },
+    {
+      "path": "regulatory/checkpoints/BM/QUALITY_REVIEW.md",
+      "bytes": 2150,
+      "git_blob_sha1": "3b93f43fe3652d726cad356797142817580e4085"
+    },
+    {
+      "path": "regulatory/checkpoints/BM/README.md",
+      "bytes": 1921,
+      "git_blob_sha1": "c51bfea599f2d64cbcf4bfe6cc0b7dfecfd0d877"
+    },
+    {
+      "path": "regulatory/checkpoints/BN/CLAUSE_LINEAGE_AND_EXPOSURE_MODEL.json",
+      "bytes": 6141,
+      "git_blob_sha1": "cb69bbdbfaca46fc06bf51028f8887aa7d8338d0"
+    },
+    {
+      "path": "regulatory/checkpoints/BN/CONTINUATION_STATE.json",
+      "bytes": 2299,
+      "git_blob_sha1": "823beb36b2622c0a7a379ec0a2bae0293355ae8b"
+    },
+    {
+      "path": "regulatory/checkpoints/BN/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 5562,
+      "git_blob_sha1": "53139c88e0d4c5d40f262ff4d2236db7507d70b8"
+    },
+    {
+      "path": "regulatory/checkpoints/BN/EVIDENCE_DELTA.md",
+      "bytes": 4665,
+      "git_blob_sha1": "ca95cef4ad11fabe45c0f300afbdb81272c91e1b"
+    },
+    {
+      "path": "regulatory/checkpoints/BN/EXECUTION_REPORT.md",
+      "bytes": 2203,
+      "git_blob_sha1": "c59218d83d66e3fc3c6ecb1fbcadfa3b77d2104c"
+    },
+    {
+      "path": "regulatory/checkpoints/BN/QUALITY_REVIEW.md",
+      "bytes": 2306,
+      "git_blob_sha1": "dc370d784c515091334f17c5a0647e34cfd86f50"
+    },
+    {
+      "path": "regulatory/checkpoints/BN/README.md",
+      "bytes": 2623,
+      "git_blob_sha1": "fefb3b6057724d4a25f1adb0c7f24532098f4b5d"
+    },
+    {
+      "path": "regulatory/checkpoints/BO/CONTINUATION_STATE.json",
+      "bytes": 2037,
+      "git_blob_sha1": "7232c6b3efc1a77ee15f7eddc8a35e01cdbaac62"
+    },
+    {
+      "path": "regulatory/checkpoints/BO/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 6197,
+      "git_blob_sha1": "5e0899dfdcc2c101b50c9e76f9428b3159248896"
+    },
+    {
+      "path": "regulatory/checkpoints/BO/EXECUTION_REPORT.md",
+      "bytes": 1742,
+      "git_blob_sha1": "49075f190fce8ab3b9baba4586047fff8cbc556e"
+    },
+    {
+      "path": "regulatory/checkpoints/BO/QUALITY_REVIEW.md",
+      "bytes": 2168,
+      "git_blob_sha1": "868a1ae7fa3937641d0d43d589611cd3b0387024"
+    },
+    {
+      "path": "regulatory/checkpoints/BO/README.md",
+      "bytes": 2168,
+      "git_blob_sha1": "5d1371fb46b3a6551d1f877da30dc82f0aedc779"
+    },
+    {
+      "path": "regulatory/checkpoints/BO/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "bytes": 3540,
+      "git_blob_sha1": "61ffcd4fbd2d76127311ae43cec248c1bd0c226f"
+    },
+    {
+      "path": "regulatory/checkpoints/BO/SOVEREIGN_SECURITY_AUTHORITY_GATES.json",
+      "bytes": 5525,
+      "git_blob_sha1": "57ffb7a458716b5257b4906e1e1164be8d00e5c1"
+    },
+    {
+      "path": "regulatory/checkpoints/BP/CONTINUATION_STATE.json",
+      "bytes": 2111,
+      "git_blob_sha1": "dfa3d8230decb767d34eeebffc752da7cc7c44cf"
+    },
+    {
+      "path": "regulatory/checkpoints/BP/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 6683,
+      "git_blob_sha1": "715e07627fc34aff423bdaa7d47fb6816801ac43"
+    },
+    {
+      "path": "regulatory/checkpoints/BP/EXECUTION_REPORT.md",
+      "bytes": 1924,
+      "git_blob_sha1": "515d72e3204eb0fcab5303e62768d4ae4445b468"
+    },
+    {
+      "path": "regulatory/checkpoints/BP/QUALITY_REVIEW.md",
+      "bytes": 2104,
+      "git_blob_sha1": "067e3d5af0d60021bb26a04df1f3653493eaa43e"
+    },
+    {
+      "path": "regulatory/checkpoints/BP/RAIL_AUTHORITY_AND_MESSAGE_MODEL.json",
+      "bytes": 9979,
+      "git_blob_sha1": "9ddc7d834576c77f74c6cc809edd47da73a80152"
+    },
+    {
+      "path": "regulatory/checkpoints/BP/README.md",
+      "bytes": 1735,
+      "git_blob_sha1": "0d0412225d1bacba6b5d464becabcb0b7653f970"
+    },
+    {
+      "path": "regulatory/checkpoints/BP/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "bytes": 4356,
+      "git_blob_sha1": "c392cd4aa80968f37c991a7e36501ded9ac48f57"
+    },
+    {
+      "path": "regulatory/checkpoints/BQ/CONTINUATION_STATE.json",
+      "bytes": 2107,
+      "git_blob_sha1": "2fa82d7d635174b99cf74edd1b3b3f59ec717783"
+    },
+    {
+      "path": "regulatory/checkpoints/BQ/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 4269,
+      "git_blob_sha1": "ea838001210183d0572a5cc29e4fa64dfdb4548e"
+    },
+    {
+      "path": "regulatory/checkpoints/BQ/EXECUTION_REPORT.md",
+      "bytes": 1857,
+      "git_blob_sha1": "0cf6ee6c77b00fca2e9a3bb7528371bb9eb95535"
+    },
+    {
+      "path": "regulatory/checkpoints/BQ/QUALITY_REVIEW.md",
+      "bytes": 2083,
+      "git_blob_sha1": "09757d6ec1074f59ea4c3b915f444fa65c74d880"
+    },
+    {
+      "path": "regulatory/checkpoints/BQ/RAIL_DEPLOYMENT_AND_CAPABILITY_GATES.json",
+      "bytes": 6237,
+      "git_blob_sha1": "666de4ac99266d9eae8b3e3041a7c1f5e5c31be0"
+    },
+    {
+      "path": "regulatory/checkpoints/BQ/README.md",
+      "bytes": 2464,
+      "git_blob_sha1": "d2b3dd3ebd7019625d697443d53bacae635fe2f5"
+    },
+    {
+      "path": "regulatory/checkpoints/BQ/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "bytes": 2770,
+      "git_blob_sha1": "d94ae296f5e4fdd63a09e1e47a6c0c2bbdf5caaf"
+    },
+    {
+      "path": "regulatory/checkpoints/BR/CONTINUATION_STATE.json",
+      "bytes": 2048,
+      "git_blob_sha1": "6f95fa0a09c864462d19f26b83b44ef31da9d22b"
+    },
+    {
+      "path": "regulatory/checkpoints/BR/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 6087,
+      "git_blob_sha1": "2729f8cd91cefa3a30c0c100886553987c94bc08"
+    },
+    {
+      "path": "regulatory/checkpoints/BR/EVIDENCE_DELTA.md",
+      "bytes": 4141,
+      "git_blob_sha1": "d85f8cdb377fad54731279a62e683b838f65de43"
+    },
+    {
+      "path": "regulatory/checkpoints/BR/EXECUTION_REPORT.md",
+      "bytes": 1614,
+      "git_blob_sha1": "3192bcf7c822a89d58238f002c89cd002186ab7d"
+    },
+    {
+      "path": "regulatory/checkpoints/BR/QUALITY_REVIEW.md",
+      "bytes": 2175,
+      "git_blob_sha1": "383437509004316a710562ff34e6b345bad8bebe"
+    },
+    {
+      "path": "regulatory/checkpoints/BR/README.md",
+      "bytes": 2550,
+      "git_blob_sha1": "af63ac81b7c04ec3194e840314434aba561c3f39"
+    },
+    {
+      "path": "regulatory/checkpoints/BR/RESTITUTION_AND_FINALITY_GATES.json",
+      "bytes": 6162,
+      "git_blob_sha1": "7a17a4f4fd101f5c7c1887927c3bfb5d5c172e85"
+    },
+    {
+      "path": "regulatory/checkpoints/BS/CONTINUATION_STATE.json",
+      "bytes": 2564,
+      "git_blob_sha1": "37c995f66384e576ccfe3a6aa4a086f3758aa2ec"
+    },
+    {
+      "path": "regulatory/checkpoints/BS/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 5451,
+      "git_blob_sha1": "6319fc23946b70649b2ea2477ab1b5355163e4ad"
+    },
+    {
+      "path": "regulatory/checkpoints/BS/EVIDENCE_DELTA.md",
+      "bytes": 4281,
+      "git_blob_sha1": "e18143e81314bbf9ea7f5faaddbeb9e91eefc47f"
+    },
+    {
+      "path": "regulatory/checkpoints/BS/EXECUTION_REPORT.md",
+      "bytes": 1729,
+      "git_blob_sha1": "edd5df96ab5619caab83776ac1b445125af4b95c"
+    },
+    {
+      "path": "regulatory/checkpoints/BS/LEGAL_SCOPE_AND_ENTITLEMENT_GATES.json",
+      "bytes": 7885,
+      "git_blob_sha1": "7b7b39692a050f72046c4f5bc8c6ef2750841bc6"
+    },
+    {
+      "path": "regulatory/checkpoints/BS/QUALITY_REVIEW.md",
+      "bytes": 2238,
+      "git_blob_sha1": "c5a66b25cc0d198b7eac264a44e6ed80199f4362"
+    },
+    {
+      "path": "regulatory/checkpoints/BS/README.md",
+      "bytes": 1854,
+      "git_blob_sha1": "c174f83a62aee18110b16657478d8f3d09b20dcc"
+    },
+    {
+      "path": "regulatory/checkpoints/BT/CONTINUATION_STATE.json",
+      "bytes": 2063,
+      "git_blob_sha1": "27ea8c0f19dead22a886abe5144cc82e2fafe5d2"
+    },
+    {
+      "path": "regulatory/checkpoints/BT/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 5905,
+      "git_blob_sha1": "4338813c22d526a91698cf24ffb2ed5b2715ac99"
+    },
+    {
+      "path": "regulatory/checkpoints/BT/EXECUTION_REPORT.md",
+      "bytes": 2052,
+      "git_blob_sha1": "5545d43532293080de44114d77ad22b23e8fac16"
+    },
+    {
+      "path": "regulatory/checkpoints/BT/QUALITY_REVIEW.md",
+      "bytes": 2150,
+      "git_blob_sha1": "615de7a4a45dccbd37a19a4e5e901a755b21a8c0"
+    },
+    {
+      "path": "regulatory/checkpoints/BT/README.md",
+      "bytes": 2512,
+      "git_blob_sha1": "c21e569192b57e986bc116b5584420643a61a3d8"
+    },
+    {
+      "path": "regulatory/checkpoints/BT/SCOPE_RECONCILIATION_AND_POLICY_GATES.json",
+      "bytes": 5042,
+      "git_blob_sha1": "b00c516bc24939a4ea2809c0e34b20184954486b"
+    },
+    {
+      "path": "regulatory/checkpoints/BT/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "bytes": 3693,
+      "git_blob_sha1": "fc70bc500e3d481c92c8f78f6240e0d071629780"
+    },
+    {
+      "path": "regulatory/checkpoints/BU/CONTINUATION_STATE.json",
+      "bytes": 1626,
+      "git_blob_sha1": "9594d89c21d28504392b7a5a1bbf3abdc1bbb178"
+    },
+    {
+      "path": "regulatory/checkpoints/BU/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 5518,
+      "git_blob_sha1": "20a2dc281fbb314c73ee37d4fb793a0553ad9ff0"
+    },
+    {
+      "path": "regulatory/checkpoints/BU/EVIDENCE_DELTA.md",
+      "bytes": 3279,
+      "git_blob_sha1": "004ad56857c632d2b3e188dca95fc2be3eea0598"
+    },
+    {
+      "path": "regulatory/checkpoints/BU/EXECUTION_REPORT.md",
+      "bytes": 1812,
+      "git_blob_sha1": "f557e22d147f3cdf41ee0d97a4d36173c36de290"
+    },
+    {
+      "path": "regulatory/checkpoints/BU/LEGAL_CITATION_INTEGRITY_GATES.json",
+      "bytes": 4666,
+      "git_blob_sha1": "638dc2ac0ab3a170d0c2fda0c49e90b18bc70faf"
+    },
+    {
+      "path": "regulatory/checkpoints/BU/QUALITY_REVIEW.md",
+      "bytes": 2315,
+      "git_blob_sha1": "1ff56d7c62e0badb2f1e052e664db749ca58889b"
+    },
+    {
+      "path": "regulatory/checkpoints/BU/README.md",
+      "bytes": 1594,
+      "git_blob_sha1": "30e26851b56f39d444f0cbf90dd45940589993e8"
+    },
+    {
+      "path": "regulatory/checkpoints/BV/CONTINUATION_STATE.json",
+      "bytes": 1755,
+      "git_blob_sha1": "9fc2fcbebaa7fdf72b9d7f6a1d27d4adc43377ea"
+    },
+    {
+      "path": "regulatory/checkpoints/BV/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 5739,
+      "git_blob_sha1": "a67521bbf516f2975ff779be667791a9e1ecd901"
+    },
+    {
+      "path": "regulatory/checkpoints/BV/EVIDENCE_DELTA.md",
+      "bytes": 5405,
+      "git_blob_sha1": "1610ab58d66aee7fae9917acfd1b84d7841c9a71"
+    },
+    {
+      "path": "regulatory/checkpoints/BV/EXECUTION_REPORT.md",
+      "bytes": 1859,
+      "git_blob_sha1": "5d9c662773bf45040206db8575fa16153b1b45dc"
+    },
+    {
+      "path": "regulatory/checkpoints/BV/QUALITY_REVIEW.md",
+      "bytes": 2235,
+      "git_blob_sha1": "6040296c6cf0336dbb06372388aaa8695079c907"
+    },
+    {
+      "path": "regulatory/checkpoints/BV/README.md",
+      "bytes": 1636,
+      "git_blob_sha1": "09918069ea3fb419b1ecd253f462f362c2d7a1fd"
+    },
+    {
+      "path": "regulatory/checkpoints/BV/REGULATORY_CONTROL_GATES.json",
+      "bytes": 9692,
+      "git_blob_sha1": "6e58f5fa07207840ae6f7e96d517443366ed1cb9"
+    },
+    {
+      "path": "regulatory/checkpoints/BW/CONTINUATION_STATE.json",
+      "bytes": 1864,
+      "git_blob_sha1": "f3c30b790b1891fadf5c8aad6f2d992b307d6c02"
+    },
+    {
+      "path": "regulatory/checkpoints/BW/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 8271,
+      "git_blob_sha1": "588b80d3817e8268937bc21ecdc454674bf04ca5"
+    },
+    {
+      "path": "regulatory/checkpoints/BW/EVIDENCE_DELTA.md",
+      "bytes": 5003,
+      "git_blob_sha1": "12fa52390dd908b42e7fd2b87f4972db28856d2f"
+    },
+    {
+      "path": "regulatory/checkpoints/BW/EXECUTION_REPORT.md",
+      "bytes": 1819,
+      "git_blob_sha1": "64c722944f4a3bbef56ce09a4546d8f5ed9d8896"
+    },
+    {
+      "path": "regulatory/checkpoints/BW/LEGAL_INCIDENT_AND_TEMPORAL_GATES.json",
+      "bytes": 7687,
+      "git_blob_sha1": "297828b87062be402b0d34e5afc9424efa9f3dce"
+    },
+    {
+      "path": "regulatory/checkpoints/BW/QUALITY_REVIEW.md",
+      "bytes": 2353,
+      "git_blob_sha1": "0fab6c7e64320b48b5ad7e5410845b7a40a10578"
+    },
+    {
+      "path": "regulatory/checkpoints/BW/README.md",
+      "bytes": 1919,
+      "git_blob_sha1": "469cd05efa83a07aae32cf6df9a08c2895834455"
+    },
+    {
+      "path": "regulatory/checkpoints/BX/CONTINUATION_STATE.json",
+      "bytes": 1803,
+      "git_blob_sha1": "f7decb68517c288c2c8443bb1c5b49675ac6ab10"
+    },
+    {
+      "path": "regulatory/checkpoints/BX/CONTROL_MATRIX.json",
+      "bytes": 10429,
+      "git_blob_sha1": "ef3364d3a8915b2e72b4d9e537229488b78e3d5b"
+    },
+    {
+      "path": "regulatory/checkpoints/BX/EVIDENCE_DELTA.md",
+      "bytes": 3635,
+      "git_blob_sha1": "c52c1150b942226dbf14f66a651a6f0c55f7d48e"
+    },
+    {
+      "path": "regulatory/checkpoints/BX/EXECUTION_REPORT.md",
+      "bytes": 1771,
+      "git_blob_sha1": "c5dc7ab12fc4fb17d46114249f974ead819ee81d"
+    },
+    {
+      "path": "regulatory/checkpoints/BX/QUALITY_REVIEW.md",
+      "bytes": 2331,
+      "git_blob_sha1": "5a401f4623307cecc44fdde25927aa965657bde0"
+    },
+    {
+      "path": "regulatory/checkpoints/BX/README.md",
+      "bytes": 2181,
+      "git_blob_sha1": "c11c14cf06670ddafc8ba378850a22c9f1514c23"
+    },
+    {
+      "path": "regulatory/checkpoints/BX/TEST_DESIGN.md",
+      "bytes": 3165,
+      "git_blob_sha1": "d0a83893c6d76f38bd976d968452beebd05f5605"
+    },
+    {
+      "path": "regulatory/checkpoints/BY/CONTINUATION_STATE.json",
+      "bytes": 1989,
+      "git_blob_sha1": "dece04788b0771f92a2abe09cb23d8dc9968fec3"
+    },
+    {
+      "path": "regulatory/checkpoints/BY/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 4384,
+      "git_blob_sha1": "43c2ebb56aa6ad7af2e2cd8d2492929cc2d27a7e"
+    },
+    {
+      "path": "regulatory/checkpoints/BY/EVIDENCE_DELTA.md",
+      "bytes": 3911,
+      "git_blob_sha1": "8352a6ead66eab3a02085957739a3795ffaed88b"
+    },
+    {
+      "path": "regulatory/checkpoints/BY/EXECUTION_REPORT.md",
+      "bytes": 1921,
+      "git_blob_sha1": "415110b97ac3e4b0318966f6cfb0f570170d6fcc"
+    },
+    {
+      "path": "regulatory/checkpoints/BY/PAYMENT_SUPERVISION_AND_SETTLEMENT_GATES.json",
+      "bytes": 9254,
+      "git_blob_sha1": "cb18b91365d48afb678ebc6740d8acc453b3e339"
+    },
+    {
+      "path": "regulatory/checkpoints/BY/QUALITY_REVIEW.md",
+      "bytes": 2535,
+      "git_blob_sha1": "ed9603fc4c87d7b89811a842835d55852a302199"
+    },
+    {
+      "path": "regulatory/checkpoints/BY/README.md",
+      "bytes": 2376,
+      "git_blob_sha1": "6fff7508281d562817dc8c31ede07ecfbd53847c"
+    },
+    {
+      "path": "regulatory/checkpoints/BZ/CONTINUATION_STATE.json",
+      "bytes": 1937,
+      "git_blob_sha1": "1550cbc7be5ce6f14af3afa77a309721b0cec12e"
+    },
+    {
+      "path": "regulatory/checkpoints/BZ/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 4364,
+      "git_blob_sha1": "3a101868f2849c2f3a864f73bdf73efe3fbd0391"
+    },
+    {
+      "path": "regulatory/checkpoints/BZ/EVIDENCE_DELTA.md",
+      "bytes": 4661,
+      "git_blob_sha1": "c19f5b27961f100834430447a1bb4eb9817e93c7"
+    },
+    {
+      "path": "regulatory/checkpoints/BZ/EXECUTION_REPORT.md",
+      "bytes": 2047,
+      "git_blob_sha1": "47bce171cc20d606f1f67abd46e56e26f9f5576d"
+    },
+    {
+      "path": "regulatory/checkpoints/BZ/QUALITY_REVIEW.md",
+      "bytes": 2150,
+      "git_blob_sha1": "cf473235b992462547fa227a36d0a246f35214a1"
+    },
+    {
+      "path": "regulatory/checkpoints/BZ/README.md",
+      "bytes": 2607,
+      "git_blob_sha1": "64dac6d257807f286c93ce73a28ccff5ab978093"
+    },
+    {
+      "path": "regulatory/checkpoints/BZ/SURVEILLANCE_CONTROL_GATES.json",
+      "bytes": 8368,
+      "git_blob_sha1": "577dc7757a34326b27532ce7af6750dd49448722"
+    },
+    {
+      "path": "regulatory/checkpoints/CA/CONTINUATION_STATE.json",
+      "bytes": 2124,
+      "git_blob_sha1": "10d25ccb63adc324e2e6d1b4b3a62745f87f6ec3"
+    },
+    {
+      "path": "regulatory/checkpoints/CA/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 5262,
+      "git_blob_sha1": "3788b4cb3a86e153378e8a4818f9c81a8343228d"
+    },
+    {
+      "path": "regulatory/checkpoints/CA/EVIDENCE_DELTA.md",
+      "bytes": 5435,
+      "git_blob_sha1": "81821ea385b8437fdfeccd56f22b4aa4846bc9f3"
+    },
+    {
+      "path": "regulatory/checkpoints/CA/EXECUTION_REPORT.md",
+      "bytes": 1915,
+      "git_blob_sha1": "3171e1538d0aa0de3ea536879af495d911e2dee3"
+    },
+    {
+      "path": "regulatory/checkpoints/CA/ISO20022_AUTHORITY_GATES.json",
+      "bytes": 5371,
+      "git_blob_sha1": "9993454b43cab8bb9b1e1440a47e4621842f42d3"
+    },
+    {
+      "path": "regulatory/checkpoints/CA/QUALITY_REVIEW.md",
+      "bytes": 2277,
+      "git_blob_sha1": "79ba6c141f7ebbaf4556edd92517733b5373fa0b"
+    },
+    {
+      "path": "regulatory/checkpoints/CA/README.md",
+      "bytes": 3173,
+      "git_blob_sha1": "9672c4af6487a1e02c6068b49ad896612eb83a3b"
+    },
+    {
+      "path": "regulatory/checkpoints/CB/CONTINUATION_STATE.json",
+      "bytes": 2153,
+      "git_blob_sha1": "154ed9cc5a95ddec6a82a6efd762eae696c2816d"
+    },
+    {
+      "path": "regulatory/checkpoints/CB/CONTROL_AND_TEST_DESIGN.md",
+      "bytes": 4161,
+      "git_blob_sha1": "54d240a392d2542d99c0d5516d1c9fac6a28e9c6"
+    },
+    {
+      "path": "regulatory/checkpoints/CB/EVIDENCE_DELTA.md",
+      "bytes": 4892,
+      "git_blob_sha1": "cbe284f62c05359edf0fd1413998f68ebb3b1d4d"
+    },
+    {
+      "path": "regulatory/checkpoints/CB/EXECUTION_REPORT.md",
+      "bytes": 1842,
+      "git_blob_sha1": "a79fd7d17078f289908714cc4a52e37d30a69938"
+    },
+    {
+      "path": "regulatory/checkpoints/CB/PAYMENT_PROFILE_RELEASE_GATES.json",
+      "bytes": 6555,
+      "git_blob_sha1": "526ac489781049c50c9b6ac018d0296bda892cbb"
+    },
+    {
+      "path": "regulatory/checkpoints/CB/QUALITY_REVIEW.md",
+      "bytes": 2153,
+      "git_blob_sha1": "6934f2f1402ff90b318fac8114f0af4f066e8c9d"
+    },
+    {
+      "path": "regulatory/checkpoints/CB/README.md",
+      "bytes": 1022,
+      "git_blob_sha1": "d8423464018fce8551557182a2f00bf3e00f9d90"
+    },
+    {
+      "path": "regulatory/checkpoints/CC/README.md",
+      "bytes": 4994,
+      "git_blob_sha1": "00d7113578c6b5feb17898edd6278ebfc6294347"
+    },
+    {
+      "path": "regulatory/checkpoints/CD/README.md",
+      "bytes": 4780,
+      "git_blob_sha1": "8a3ccea24b6727773d2c11264d51aa22a71ed492"
+    },
+    {
+      "path": "regulatory/checkpoints/CE/README.md",
+      "bytes": 5606,
+      "git_blob_sha1": "9b406b7cc91a25589709cd52d92af453ba896251"
+    },
+    {
+      "path": "regulatory/checkpoints/CF/README.md",
+      "bytes": 5314,
+      "git_blob_sha1": "77b24ce4c53873373b207bf6c26df261398dfcab"
+    },
+    {
+      "path": "regulatory/checkpoints/CG/README.md",
+      "bytes": 5752,
+      "git_blob_sha1": "5b628493775bdb8c1a6b8894bf29fd9ce49bcbd4"
+    },
+    {
+      "path": "regulatory/checkpoints/CH/README.md",
+      "bytes": 6320,
+      "git_blob_sha1": "3b72fd718938d39e0baafbe6f5088fbfab76a605"
+    },
+    {
+      "path": "regulatory/checkpoints/CI/README.md",
+      "bytes": 7746,
+      "git_blob_sha1": "7f6bd88d99b2440f956ba8d82c49763eed029288"
+    },
+    {
+      "path": "regulatory/checkpoints/CJ/README.md",
+      "bytes": 8697,
+      "git_blob_sha1": "c7a8f048f62e12c653a1bb7d31577009ad9ce728"
+    },
+    {
+      "path": "regulatory/checkpoints/CK/README.md",
+      "bytes": 8762,
+      "git_blob_sha1": "51a236d468accf37eb811a185b04581bd0d9f11c"
+    },
+    {
+      "path": "regulatory/checkpoints/CL/README.md",
+      "bytes": 13012,
+      "git_blob_sha1": "5a6cd739f7618ca724fb908b9fe13ce980ffeaed"
+    },
+    {
+      "path": "regulatory/checkpoints/CM/README.md",
+      "bytes": 7747,
+      "git_blob_sha1": "37c1af4aa6744efcd95235f09b62cc0a5fc8d65c"
+    },
+    {
+      "path": "regulatory/checkpoints/CN/README.md",
+      "bytes": 5875,
+      "git_blob_sha1": "f171d4301e43d15cfac7e764953005ea4f0352a2"
+    },
+    {
+      "path": "regulatory/checkpoints/CO/README.md",
+      "bytes": 5036,
+      "git_blob_sha1": "9a7aeea680f56aa5892b62cb516c4bb79a4daa6b"
+    },
+    {
+      "path": "regulatory/checkpoints/CP/README.md",
+      "bytes": 6085,
+      "git_blob_sha1": "4a7463062e8c78229b98e33d2093a1db4dda55e8"
+    },
+    {
+      "path": "regulatory/checkpoints/CQ/README.md",
+      "bytes": 6003,
+      "git_blob_sha1": "7526f3df35aaef57af3acece2691451ab263b4ab"
+    },
+    {
+      "path": "regulatory/checkpoints/CR/README.md",
+      "bytes": 8869,
+      "git_blob_sha1": "4ab53d4db30aeb15f37d03847df812bd36f8e4a5"
+    },
+    {
+      "path": "regulatory/checkpoints/CS/README.md",
+      "bytes": 6232,
+      "git_blob_sha1": "2a4c584e8367cdbd58beac6049a3ea991f592b57"
+    },
+    {
+      "path": "regulatory/checkpoints/CT/README.md",
+      "bytes": 5383,
+      "git_blob_sha1": "cb43ca5d08831a1c96503c5d378e58ad3f5d4b89"
+    },
+    {
+      "path": "regulatory/consolidated/PROGRAMME_CONSOLIDATION_2026-11-01.md",
+      "bytes": 48910,
+      "git_blob_sha1": "49f0856f60fe86929e98e7fe9888c854813ecebf"
+    },
+    {
+      "path": "regulatory/HISTORICAL_ARCHIVE_INVENTORY.md",
+      "bytes": 1712,
+      "git_blob_sha1": "b6cbaffd70a8bbb328cb47ffff15c7ab79c55206"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AE_2026-10-09.zip",
+      "bytes": 546061,
+      "git_blob_sha1": "d41e16c7d77c5661d1b41a575ae5f37647c39cc6"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AF_2026-10-09.zip",
+      "bytes": 551363,
+      "git_blob_sha1": "ff19713a5b1a8aa4dbf085bec7d29cf642ef9185"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AG_2026-10-09.zip",
+      "bytes": 556408,
+      "git_blob_sha1": "d43060f35b3246f0aa128f1404ae61478f4f664e"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AH_2026-10-09.zip",
+      "bytes": 561357,
+      "git_blob_sha1": "8ba239716d55ce5deea32f95bdb74b897a64afde"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AI_2026-10-09.zip",
+      "bytes": 565959,
+      "git_blob_sha1": "edd45cb7661077643a172f808aa390fd36470ade"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AJ_2026-10-09.zip",
+      "bytes": 571166,
+      "git_blob_sha1": "68029b171411ac14b2728b7b41accded016da115"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AK_2026-10-09.zip",
+      "bytes": 575544,
+      "git_blob_sha1": "62d44c342c3baef8a1f3bec7516a69251885c432"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AL_2026-10-09.zip",
+      "bytes": 579859,
+      "git_blob_sha1": "84c5dfc84859aa6c222d0336f4690a8f2e170def"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AM_2026-10-09.zip",
+      "bytes": 584358,
+      "git_blob_sha1": "33d0c506abddba5ba1dfc2d4905ec173f9f3edce"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AN_2026-10-09.zip",
+      "bytes": 589143,
+      "git_blob_sha1": "f32ffba2476df66f839deec722adaf063d697bbf"
+    },
+    {
+      "path": "regulatory/recovery/archives/OPES_Core_Banking_WP_ACC_005_Checkpoint_R_2026-10-20.zip",
+      "bytes": 7343,
+      "git_blob_sha1": "e1b4b1fb86f7f1941ae7817b3bad60b1332d880e"
+    },
+    {
+      "path": "regulatory/recovery/archives/SHA256SUMS.txt",
+      "bytes": 1017,
+      "git_blob_sha1": "4d13e2153fe214f47803aaadd344d34749a6745c"
+    },
+    {
+      "path": "regulatory/recovery/HISTORICAL_RECOVERY_AUDIT_UPLOADED_REPORT_REGISTER_2026-11-03.md",
+      "bytes": 4605,
+      "git_blob_sha1": "c1608453d8810aef5796af2124b0c261558bb3da"
+    },
+    {
+      "path": "regulatory/recovery/RECOVERED_ARTIFACT_MANIFEST_2026-11-03.json",
+      "bytes": 3483,
+      "git_blob_sha1": "7a92fd8f366cd4d46d1630698dd8303564f009bd"
+    },
+    {
+      "path": "regulatory/recovery/RECOVERED_CHECKPOINTS_AE_AM_SHA256_2026-11-03.txt",
+      "bytes": 1017,
+      "git_blob_sha1": "4d13e2153fe214f47803aaadd344d34749a6745c"
+    },
+    {
+      "path": "regulatory/recovery/source/AN/ACCEPTANCE_TESTS.json",
+      "bytes": 878,
+      "git_blob_sha1": "4af0ca52454fb2606d625c8302ed0c3180ee7939"
+    },
+    {
+      "path": "regulatory/recovery/source/AN/CONTINUATION_STATE.json",
+      "bytes": 821,
+      "git_blob_sha1": "5d24e75667931d2934156a44575db1f2ea5c7fe0"
+    },
+    {
+      "path": "regulatory/recovery/source/AN/EVIDENCE_REQUEST_PLAN.md",
+      "bytes": 445,
+      "git_blob_sha1": "8d0a596e8f6873d448a415f5096067278e3ae60f"
+    },
+    {
+      "path": "regulatory/recovery/source/AN/GAP_UPDATE.md",
+      "bytes": 256,
+      "git_blob_sha1": "ab673ba47ca5e92ecae5dfb4b66ee754b073b234"
+    },
+    {
+      "path": "regulatory/recovery/source/AN/QUALITY_REVIEW.md",
+      "bytes": 1388,
+      "git_blob_sha1": "550e3b08674737b57577a9850838edc4ec49df95"
+    },
+    {
+      "path": "regulatory/recovery/source/AN/README.md",
+      "bytes": 159,
+      "git_blob_sha1": "1703ece3fbac15231c897cf3b64070a1773d1585"
+    },
+    {
+      "path": "regulatory/recovery/source/AN/REQUIREMENTS.json",
+      "bytes": 1117,
+      "git_blob_sha1": "2fbe7b7bb36023a9e1d8b3ba1d412bfa3328eb16"
+    },
+    {
+      "path": "regulatory/recovery/source/AN/SHA256SUMS.txt",
+      "bytes": 770,
+      "git_blob_sha1": "2466a5670fc1431ff54032d9d45f7d964adda38b"
+    },
+    {
+      "path": "regulatory/recovery/source/AN/SOURCE_REGISTER.json",
+      "bytes": 1216,
+      "git_blob_sha1": "ed8b103510aa6386e99a194b4d0a2651dd732c2e"
+    },
+    {
+      "path": "regulatory/recovery/UNPUSHED_ARTIFACT_RECOVERY_2026-11-03.md",
+      "bytes": 5707,
+      "git_blob_sha1": "5293987f8e25ffa3c5cb770e25145114f3b6d2b7"
+    },
+    {
+      "path": "tools/recovery/build_checkpoint_an.py",
+      "bytes": 2251,
+      "git_blob_sha1": "5574b15b09da973ab67a12874f24025eda033791"
+    }
+  ]
+}
