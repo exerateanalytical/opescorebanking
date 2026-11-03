@@ -1,0 +1,94 @@
+{
+  "id": "CMP-002",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "assessment_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Risk review"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank controller"
+      },
+      "party_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Customer identity"
+      },
+      "risk_policy_version": {
+        "type": "string",
+        "description": "Approved logic"
+      },
+      "risk_factor_refs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Observed evidence"
+      },
+      "risk_category": {
+        "type": "string",
+        "description": "Policy-defined tier"
+      },
+      "confidence_state": {
+        "type": "string",
+        "description": "Sufficient or pending"
+      },
+      "review_due_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Reassessment due"
+      },
+      "approved_by": {
+        "type": "string",
+        "description": "Compliance reviewer"
+      },
+      "decision_state": {
+        "type": "string",
+        "description": "Draft review approved blocked"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "DRAFT",
+      "to": "ASSESSING",
+      "guard": "evidence collected"
+    },
+    {
+      "from": "ASSESSING",
+      "to": "REVIEW",
+      "guard": "policy result obtained"
+    },
+    {
+      "from": "REVIEW",
+      "to": "APPROVED",
+      "guard": "qualified reviewer"
+    },
+    {
+      "from": "REVIEW",
+      "to": "INSUFFICIENT",
+      "guard": "missing mandatory source"
+    },
+    {
+      "from": "APPROVED",
+      "to": "REASSESSMENT",
+      "guard": "material changed circumstances"
+    }
+  ],
+  "requirements": [
+    "Missing important evidence cannot default to low risk",
+    "No legally unverified AML threshold is hardcoded",
+    "Customer risk status and sanctions list disposition remain separate",
+    "High-risk factors do not by themselves prove wrongdoing",
+    "Only authorized staff can override, with recorded justification",
+    "Personal/protected data use must respect purpose limits"
+  ],
+  "release_gate": "Approved bank AML policy, legal KYC obligations, independent Risk/Compliance reviewer and fairness/security tests."
+}

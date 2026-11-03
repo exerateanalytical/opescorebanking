@@ -1,0 +1,36 @@
+{
+  "work_package": "CMP-002",
+  "executed": false,
+  "cases": [
+    {
+      "id": "CMP-002-TEST-1",
+      "description": "No KYC cannot auto-approve",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-002-TEST-2",
+      "description": "New control owner triggers reassessment",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-002-TEST-3",
+      "description": "Risk decision version preserved",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-002-TEST-4",
+      "description": "Unauthorized staff cannot override",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-002-TEST-5",
+      "description": "Cross-institution customer risk lookup blocked",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
