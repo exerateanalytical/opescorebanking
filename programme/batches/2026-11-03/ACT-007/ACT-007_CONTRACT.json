@@ -1,0 +1,43 @@
+{
+  "id": "ACT-007",
+  "batch": 67,
+  "title": "Account lifecycle states, holds and closure authority",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "account_id:uuid:stable account",
+    "institution_id:uuid:owner",
+    "state:enum:proposed/active/restricted/dormant/closing/closed",
+    "state_version:integer:concurrency token",
+    "restriction_codes:list:holds",
+    "restriction_authority_ref:uuid:legal/operations basis",
+    "requested_by:string:maker",
+    "approved_by:string|null:checker",
+    "effective_at:datetime:state activation",
+    "history_ref:uuid:immutable prior state"
+  ],
+  "workflow": [
+    "Receive authenticated state change request",
+    "Check current state, version and legal/financial preconditions",
+    "Evaluate outstanding mandates, claims, lien, payments and balances",
+    "Route controlled actions to independent checker",
+    "Apply new state once and publish scoped event",
+    "Retain prior status and incident/appeal evidence"
+  ],
+  "invariants": [
+    "State change must not mutate posted ledger history",
+    "Account closure cannot erase positive or negative financial obligations",
+    "Unreconciled transfers or holds prevent unsafe closure",
+    "Expired holds require explicit legal release policy not timer guess",
+    "No self-approval for finance-sensitive state change",
+    "Historical statements use contemporaneous state and product version"
+  ],
+  "planned_tests": [
+    "Stale version rejects concurrent closure",
+    "Closed account rejects new payments",
+    "Closure with unsettled transaction blocked",
+    "Hold release without authority denied",
+    "No journal from status-only transition"
+  ],
+  "approval_gate": "Institution-approved lifecycle and dormant-account policy; ledger reconciliation and operator approval rules.",
+  "executed_tests": 0
+}
