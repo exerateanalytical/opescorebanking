@@ -1,0 +1,42 @@
+{
+  "package": "OPS-011",
+  "batch": 91,
+  "title": "High availability, failover and journal quorum assurance",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "failover_id:uuid:recovery decision",
+    "institution_id:uuid:bank entity",
+    "service_group_id:string:failure domain",
+    "fencing_epoch:integer:monotonic leader generation",
+    "authoritative_commit_ref:string:durable journal anchor",
+    "replay_cursor:string:outbox/inbox checkpoint",
+    "external_outcome_state:enum:known/unknown/reconciled",
+    "operator_approval_ref:uuid:independent authorization"
+  ],
+  "workflow": [
+    "Detect degradation and determine failed consistency boundary",
+    "Fence failed writer before promoting replacement",
+    "Validate candidate replica commit/watermark and audit consistency",
+    "Promote leader under documented quorum policy",
+    "Replay outstanding events with inbox deduplication and unknown-outcome quarantine",
+    "Reconcile journal and external obligations before restoring sensitive traffic"
+  ],
+  "invariants": [
+    "Prevent split-brain posting through fencing and unique writer ownership",
+    "Failover cannot alter historical posted journals",
+    "Replica freshness is measured, never inferred from availability",
+    "Unknown settlement remains unknown until source evidence exists",
+    "Bank-specific RPO/RTO values require approved measured exercises",
+    "HSM credentials and rail entitlements do not transfer implicitly",
+    "All failover decisions and promoted generations are audited"
+  ],
+  "acceptance_tests": [
+    "Simultaneous writer attempt rejects stale fencing epoch",
+    "Crash after journal commit preserves exactly one posting",
+    "Lagging replica cannot certify zero data loss",
+    "External payment timeout cannot trigger blind replay",
+    "Reconciliation gate blocks reopening on journal imbalance"
+  ],
+  "independent_gate": "Qualified CFO/Operations review, realistic failure environment and measured HA/DR acceptance evidence.",
+  "actual_tests_executed": 0
+}
