@@ -1,0 +1,93 @@
+{
+  "id": "CMP-009",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "audit_record_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Immutable entry"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank controller"
+      },
+      "case_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Related case"
+      },
+      "event_class": {
+        "type": "string",
+        "description": "Review decision disclosure"
+      },
+      "actor_id": {
+        "type": "string",
+        "description": "Accountable user"
+      },
+      "source_evidence_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Restricted original"
+      },
+      "occurred_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Business event"
+      },
+      "retention_policy_ref": {
+        "type": "string",
+        "description": "Approved period"
+      },
+      "legal_hold_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Preservation exception"
+      },
+      "access_scope": {
+        "type": "string",
+        "description": "Least-privilege grant"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "CAPTURED",
+      "to": "INDEXED",
+      "guard": "integrity verified"
+    },
+    {
+      "from": "INDEXED",
+      "to": "RETAINED",
+      "guard": "lawful classification"
+    },
+    {
+      "from": "RETAINED",
+      "to": "LEGAL_HOLD",
+      "guard": "competent preservation order"
+    },
+    {
+      "from": "RETAINED",
+      "to": "ELIGIBLE_DISPOSAL",
+      "guard": "approved retention expiry"
+    },
+    {
+      "from": "ELIGIBLE_DISPOSAL",
+      "to": "DISPOSED",
+      "guard": "controlled legal and audit approval"
+    }
+  ],
+  "requirements": [
+    "Statutory banking or AML evidence is not deleted on generic request",
+    "Compliance audit cannot be edited by ordinary application operator",
+    "Potentially restricted disclosure material is never exposed in customer channels",
+    "Unverified legal retention period cannot be assumed",
+    "All exports include source cursor, approval, evidence digest and recipient identity",
+    "Cross-institution case evidence access is denied and logged"
+  ],
+  "release_gate": "Qualified privacy counsel, applicable regulatory recordkeeping obligations, restricted audit access and actual integrity tests."
+}

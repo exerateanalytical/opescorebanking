@@ -1,0 +1,36 @@
+{
+  "work_package": "CMP-009",
+  "executed": false,
+  "cases": [
+    {
+      "id": "CMP-009-TEST-1",
+      "description": "Teller cannot retrieve restricted disclosure",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-009-TEST-2",
+      "description": "Legal hold prevents scheduled deletion",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-009-TEST-3",
+      "description": "Evidence manipulation fails integrity review",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-009-TEST-4",
+      "description": "Wrong-bank export denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-009-TEST-5",
+      "description": "Disposal requires qualified approval",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
