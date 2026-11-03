@@ -1,0 +1,63 @@
+name: One-time OPES Core Banking archive recovery
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/recover-core-banking-archives.yml
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Download recovered checkpoint archives
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p regulatory/recovery/archives
+          curl -fL --retry 3 'https://sdmntprnortheu.oaiusercontent.com/files/00000000-344c-81f4-a834-5e6f00f9d5ce/raw?se=2026-11-03T04%3A45%3A24Z&sp=r&sv=2026-02-06&sr=b&scid=13aa0cf4-9ffa-552d-97c4-9025e8454ba2&skoid=3804227d-1b52-417d-afd9-9ffbb50fa53e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-03T00%3A28%3A41Z&ske=2026-11-04T00%3A28%3A41Z&sks=b&skv=2026-02-06&sig=6HF7Bj/5z7CeOAdscpVO0itQE7JmPWEDNvjyjMcvq6Q%3D' -o regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AE_2026-10-09.zip
+          curl -fL --retry 3 'https://sdmntprnortheu.oaiusercontent.com/files/00000000-a284-81f4-a1e5-8753ca8b6dd5/raw?se=2026-11-03T04%3A45%3A26Z&sp=r&sv=2026-02-06&sr=b&scid=99f7559a-b4b3-5cde-b3a1-f0bd0a0e49e1&skoid=3804227d-1b52-417d-afd9-9ffbb50fa53e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-03T00%3A31%3A00Z&ske=2026-11-04T00%3A31%3A00Z&sks=b&skv=2026-02-06&sig=ZYtGnjL%2BZhIa1%2BSs0DmgYTcZYOwbzpWbE1tmN6hYF2E%3D' -o regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AF_2026-10-09.zip
+          curl -fL --retry 3 'https://sdmntprnortheu.oaiusercontent.com/files/00000000-b3dc-81f4-ae22-1adb144410b2/raw?se=2026-11-03T04%3A45%3A28Z&sp=r&sv=2026-02-06&sr=b&scid=ce4723d3-734c-52be-89b9-9c96211ccb97&skoid=3804227d-1b52-417d-afd9-9ffbb50fa53e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-02T22%3A50%3A51Z&ske=2026-11-03T22%3A50%3A51Z&sks=b&skv=2026-02-06&sig=z2RrWhvqlbHAYGAko3TkT1J1tMBa9hAyRMrdS0ev%2BHQ%3D' -o regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AG_2026-10-09.zip
+          curl -fL --retry 3 'https://sdmntprnortheu.oaiusercontent.com/files/00000000-45bc-81f4-a7e8-e557235ce8a4/raw?se=2026-11-03T04%3A45%3A31Z&sp=r&sv=2026-02-06&sr=b&scid=7f00e3d2-4808-513f-b391-1854f674fe34&skoid=3804227d-1b52-417d-afd9-9ffbb50fa53e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-03T00%3A19%3A26Z&ske=2026-11-04T00%3A19%3A26Z&sks=b&skv=2026-02-06&sig=VMdWf2IslYsLgmCnjRo94XAyR9BAKB1RKnlnrXIcMSQ%3D' -o regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AH_2026-10-09.zip
+          curl -fL --retry 3 'https://sdmntprnortheu.oaiusercontent.com/files/00000000-3e7c-81f4-a8e5-237dcdbe4c41/raw?se=2026-11-03T04%3A45%3A33Z&sp=r&sv=2026-02-06&sr=b&scid=76ded616-e4be-5a42-90e5-47b5ed0141d6&skoid=3804227d-1b52-417d-afd9-9ffbb50fa53e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-03T00%3A21%3A55Z&ske=2026-11-04T00%3A21%3A55Z&sks=b&skv=2026-02-06&sig=zsyVSZ%2BSgKZxKyb7j0QzZ3StzwoxWEOJ9O51RnNnDlc%3D' -o regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AI_2026-10-09.zip
+          curl -fL --retry 3 'https://sdmntprnortheu.oaiusercontent.com/files/00000000-fef4-81f4-bddb-5ebcdab6af0f/raw?se=2026-11-03T04%3A45%3A39Z&sp=r&sv=2026-02-06&sr=b&scid=3b2dd653-69a9-5893-a81c-36c1953c342d&skoid=3804227d-1b52-417d-afd9-9ffbb50fa53e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-03T00%3A35%3A35Z&ske=2026-11-04T00%3A35%3A35Z&sks=b&skv=2026-02-06&sig=jRY67RgERVSWKKjxupMsrLK9/0f8TCDez3wk8N8bJiY%3D' -o regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AJ_2026-10-09.zip
+          curl -fL --retry 3 'https://sdmntprnortheu.oaiusercontent.com/files/00000000-3bf8-81f4-9908-37005818a956/raw?se=2026-11-03T04%3A45%3A41Z&sp=r&sv=2026-02-06&sr=b&scid=91c35829-f9aa-59bc-91a4-e1bd9cba7240&skoid=3804227d-1b52-417d-afd9-9ffbb50fa53e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-02T22%3A50%3A51Z&ske=2026-11-03T22%3A50%3A51Z&sks=b&skv=2026-02-06&sig=R4TDREDSfjh0YCDnz%2B9Tng%2Bcw2M/6p7C/7Zkd3Gd/kA%3D' -o regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AK_2026-10-09.zip
+          curl -fL --retry 3 'https://sdmntprnortheu.oaiusercontent.com/files/00000000-5888-81f4-8080-9e0eb332d64a/raw?se=2026-11-03T04%3A45%3A44Z&sp=r&sv=2026-02-06&sr=b&scid=90d6c093-e19f-51dd-9080-e95d69300daa&skoid=3804227d-1b52-417d-afd9-9ffbb50fa53e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-03T04%3A28%3A01Z&ske=2026-11-04T04%3A28%3A01Z&sks=b&skv=2026-02-06&sig=jBuZQZTathzGMeETfvGGwEgwQCq44erVpTN/EZl169Q%3D' -o regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AL_2026-10-09.zip
+          curl -fL --retry 3 'https://sdmntprnortheu.oaiusercontent.com/files/00000000-040c-81f4-82ee-6d06d098b1b1/raw?se=2026-11-03T04%3A45%3A47Z&sp=r&sv=2026-02-06&sr=b&scid=dedab852-a805-52cd-8b72-effebe4c3c79&skoid=3804227d-1b52-417d-afd9-9ffbb50fa53e&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-03T00%3A19%3A26Z&ske=2026-11-04T00%3A19%3A26Z&sks=b&skv=2026-02-06&sig=yPZ9/aHO%2BZChds1hwCcfP20I3E5adBnrRBZxTZE9dj0%3D' -o regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AM_2026-10-09.zip
+
+      - name: Verify cryptographic identities and ZIP integrity
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd regulatory/recovery/archives
+          cat > SHA256SUMS.txt <<'SUMS'
+          4ac19ba584f09bed9223271536cc66482fc787b3f12c2e585a76c2a037e41dc5  OPES_Core_Banking_Checkpoint_AE_2026-10-09.zip
+          93142a5d5f43fd33c12f67a2c61debd6ce374be90d49360f86a19fd9a3690b3e  OPES_Core_Banking_Checkpoint_AF_2026-10-09.zip
+          2dc66f7ac1cd8570e48a2fe441e03830dd2beee0fdeaa2b9b9855fe189e978d4  OPES_Core_Banking_Checkpoint_AG_2026-10-09.zip
+          4ee6565bf4fa071477daf55fe4cf14290a2d28bbeb137685878552082ce4f546  OPES_Core_Banking_Checkpoint_AH_2026-10-09.zip
+          3f2489488610939b2b53046424a58d5ec9e4687103fe3b09843ff36420b31679  OPES_Core_Banking_Checkpoint_AI_2026-10-09.zip
+          9f7d2b81325d3ebaf04065a203cd2ed7218fa4a90f7595449e68335262642588  OPES_Core_Banking_Checkpoint_AJ_2026-10-09.zip
+          9f3d15833635b145e17416e55df007fe1dd16cecdc54dcf0b9091748151451cf  OPES_Core_Banking_Checkpoint_AK_2026-10-09.zip
+          f396b94e123c7b81a0f13fa0b8163af22f6c92189afbb609892267452536a023  OPES_Core_Banking_Checkpoint_AL_2026-10-09.zip
+          9d15b534696a3edc9eca4dd131b1b7c6f751c6820e571827f4f748df4a598e93  OPES_Core_Banking_Checkpoint_AM_2026-10-09.zip
+          SUMS
+          sha256sum -c SHA256SUMS.txt
+          for f in *.zip; do unzip -tq "$f" >/dev/null; done
+
+      - name: Commit recovered originals and remove one-time workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "OPES Core Banking Recovery"
+          git config user.email "developer@opesware.com"
+          git add regulatory/recovery/archives
+          git rm .github/workflows/recover-core-banking-archives.yml
+          git commit -m "archive: recover original core banking checkpoints AE-AM"
+          git push origin HEAD:main
