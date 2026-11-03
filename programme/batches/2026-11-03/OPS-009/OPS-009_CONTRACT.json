@@ -1,0 +1,43 @@
+{
+  "id": "OPS-009",
+  "batch": 89,
+  "title": "Security incident response and operational escalation",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "incident_id:uuid:security case",
+    "institution_id:uuid:affected entity",
+    "severity:enum:critical/high/medium/low",
+    "incident_type:enum:fraud/credential/data/integrity/outage",
+    "detected_at:datetime:initial observation",
+    "affected_services:list:systems",
+    "evidence_inventory:list:immutable refs",
+    "containment_action_refs:list:approved controls",
+    "decision_owner:string:incident commander",
+    "closure_status:enum:open/contained/recovered/reviewed"
+  ],
+  "workflow": [
+    "Detect event and create immutable time-stamped incident case",
+    "Assess financial-integrity, confidentiality and operational impact",
+    "Preserve logs, relevant service snapshots and chain of custody",
+    "Approve bounded containment actions under incident commander",
+    "Reconcile accounts, authorizations, credentials and external outcomes",
+    "Restore service only after independent security/finance operations review"
+  ],
+  "invariants": [
+    "Never edit bank journals to hide a compromise",
+    "Security containment cannot fabricate financial settlement or reconciliation",
+    "Evidence access must be restricted to authorized incident responders",
+    "Regulatory notification dates require applicable verified legal policy",
+    "Emergency privileges expire with independent after-action audit",
+    "Affected customers and legal entity must be scoped precisely"
+  ],
+  "planned_tests": [
+    "Unauthorized incident evidence export denied",
+    "Compromised key triggers managed revocation",
+    "Incident recovery verifies ledger invariants",
+    "Operator cannot erase initial incident event",
+    "No unreviewed reopening of affected payment route"
+  ],
+  "approval_gate": "CISO/operations incident playbook, institution notification/legal policies, tabletop and actual exercise evidence.",
+  "executed_tests": 0
+}
