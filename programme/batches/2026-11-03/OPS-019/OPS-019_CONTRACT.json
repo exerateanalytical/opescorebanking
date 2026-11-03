@@ -1,0 +1,43 @@
+{
+  "package": "OPS-019",
+  "batch": 99,
+  "title": "Bank operations runbooks and controlled daily processing",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "runbook_id:string:versioned procedure",
+    "institution_id:uuid:regulated operator",
+    "business_date:date:approved calendar",
+    "run_type:enum:open/eod/reconciliation/recovery",
+    "operation_owner:string:assigned role",
+    "precondition_refs:list:required upstream results",
+    "control_result:enum:not_run/pass/fail/exception",
+    "exception_ref:uuid|null:open case",
+    "reviewer_id:string:independent checker"
+  ],
+  "workflow": [
+    "Determine institution business date and approved calendar",
+    "Verify starting reconciliation and known open financial exceptions",
+    "Run only eligible controlled tasks in dependency order",
+    "Capture actual task logs, outputs, snapshots and exceptions",
+    "Require independent finance/operations review before closing monetary cycle",
+    "Publish signed handoff and next-business-day recovery state"
+  ],
+  "invariants": [
+    "Clock time cannot automatically certify end-of-day completion",
+    "Open suspense or unknown settlement remains visible in reconciliations",
+    "No direct alteration of posted journals during operational cleanup",
+    "Runbook revisions are effective dated and approval controlled",
+    "Interrupted task resumes idempotently from recorded cursor",
+    "Operator roles cannot self-certify sensitive finance controls",
+    "Customer facing reports must use source-confirmed business date"
+  ],
+  "acceptance_tests": [
+    "EOD refuses to pass with unreconciled trial balance",
+    "Interrupted process restart creates no duplicate charge",
+    "Unauthorized operator cannot sign financial closure",
+    "Holiday calendar mismatch triggers exception",
+    "Prior day's evidence remains independently retrievable"
+  ],
+  "independent_gate": "CFO/Operations endorsed bank calendar, real source reconciliation and executed EOD rehearsal.",
+  "actual_tests_executed": 0
+}
