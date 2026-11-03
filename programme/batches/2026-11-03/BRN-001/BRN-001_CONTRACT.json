@@ -1,0 +1,99 @@
+{
+  "schema_version": "draft-1",
+  "work_package_id": "BRN-001",
+  "batch": 121,
+  "domain": "BranchCash",
+  "title": "Branch hierarchy, licensing scope and service catalogue",
+  "state": "DRAFT_REVIEW_PENDING",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "BRN-001",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "branch_id",
+      "institution_id"
+    ],
+    "properties": {
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Stable internal branch"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Licensed operating entity"
+      },
+      "branch_code": {
+        "type": "string",
+        "description": "Unique within institution"
+      },
+      "parent_branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Optional supervisory branch"
+      },
+      "territory_code": {
+        "type": "string",
+        "description": "Jurisdiction region"
+      },
+      "service_capabilities": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Approved operations"
+      },
+      "operating_calendar_ref": {
+        "type": "string",
+        "description": "Effective business calendar"
+      },
+      "approval_evidence_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Competent institution review"
+      },
+      "status": {
+        "type": "string",
+        "description": "Draft active suspended retired"
+      }
+    }
+  },
+  "state_transitions": [
+    {
+      "from": "DRAFT",
+      "to": "REVIEW",
+      "guard": "complete entity scope"
+    },
+    {
+      "from": "REVIEW",
+      "to": "ACTIVE",
+      "guard": "independent institution approval"
+    },
+    {
+      "from": "ACTIVE",
+      "to": "SUSPENDED",
+      "guard": "license or operations hold"
+    },
+    {
+      "from": "SUSPENDED",
+      "to": "ACTIVE",
+      "guard": "renewed approval"
+    },
+    {
+      "from": "ACTIVE",
+      "to": "RETIRED",
+      "guard": "no open obligations"
+    }
+  ],
+  "control_requirements": [
+    "A branch cannot use another institution's accounts or settlement identity",
+    "Opening a branch record does not establish a government license",
+    "Branch closure requires custody, customer, cash and transaction reconciliation",
+    "Service catalog has explicit effective-dated authorization",
+    "A disabled branch rejects new money-moving commands"
+  ],
+  "approval_gate": "Institution-specific branch permissions, legal confirmation, operations approval.",
+  "production_mode": "DISABLED_PENDING_EVIDENCE"
+}

@@ -1,0 +1,46 @@
+{
+  "suite_id": "BRN-001-ACCEPTANCE-DRAFT",
+  "execution_state": "NOT_RUN",
+  "tests": [
+    {
+      "case_id": "BRN-001-T01",
+      "scenario": "Cross-bank branch scope rejected",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-001-T02",
+      "scenario": "Branch without approval remains inactive",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-001-T03",
+      "scenario": "Retirement with open cash session refused",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-001-T04",
+      "scenario": "Suspended branch teller request denied",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-001-T05",
+      "scenario": "Historic operations retain original branch identifier",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    }
+  ]
+}
