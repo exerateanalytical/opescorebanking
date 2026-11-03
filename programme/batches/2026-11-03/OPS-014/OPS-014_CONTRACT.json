@@ -1,0 +1,44 @@
+{
+  "package": "OPS-014",
+  "batch": 94,
+  "title": "Enterprise data governance and lineage controls",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "data_asset_id:string:registered dataset",
+    "institution_id:uuid:owner/controller",
+    "data_domain:string:bounded context",
+    "data_steward_role:string:accountability",
+    "classification:enum:public/internal/restricted",
+    "legal_basis_ref:uuid:lawful basis",
+    "schema_version:string:published model",
+    "lineage_sources:list:upstream refs",
+    "retention_policy_ref:string:approved lifecycle",
+    "quality_rule_refs:list:enforced checks"
+  ],
+  "workflow": [
+    "Inventory canonical customer, account, ledger, payments and audit data",
+    "Assign legal entity, domain owner, steward and access policy",
+    "Trace transformations between source, event and report projections",
+    "Define precision, completeness, uniqueness and timeliness controls",
+    "Approve retention/residency and permitted downstream uses",
+    "Audit all exceptional access and produce reproducible lineage exports"
+  ],
+  "invariants": [
+    "Reports must disclose source snapshot and rule version",
+    "A projection cannot become an alternate financial book",
+    "Cross-institution joins deny unauthorized data",
+    "Personal data usage limited to approved purpose",
+    "Lineage must survive source version and schema evolution",
+    "Data correction preserves financial and audit history",
+    "Unknown regulatory retention rules remain awaiting review"
+  ],
+  "acceptance_tests": [
+    "Report line traces to source journal and version",
+    "Cross-tenant lineage access denied",
+    "Unattributed derived KPI fails quality gate",
+    "Expired purpose suppresses optional analytics",
+    "Schema change invalidates incompatible projection until migration"
+  ],
+  "independent_gate": "Approved data ownership, local privacy/regulatory interpretation and executable lineage/access tests.",
+  "actual_tests_executed": 0
+}
