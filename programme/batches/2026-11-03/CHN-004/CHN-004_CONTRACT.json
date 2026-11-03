@@ -1,0 +1,43 @@
+{
+  "package": "CHN-004",
+  "batch": 104,
+  "title": "Corporate banking portal, organization roles and approval chains",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "organization_id:uuid:KYB-approved customer",
+    "institution_id:uuid:bank provider",
+    "corporate_user_id:string:authorized employee",
+    "entitlement_id:uuid:role policy",
+    "approval_group_id:uuid:maker-checker group",
+    "payment_batch_id:uuid|null:proposed payment set",
+    "limit_policy_id:string:daily/per-event limits",
+    "mandate_version:string:legal signing authority",
+    "case_status:enum:draft/pending/approved/rejected"
+  ],
+  "workflow": [
+    "Verify company KYB and authorized signatories",
+    "Configure roles, limits and scoped accounts with independent approval",
+    "Prepare a payment or file batch and validate beneficiaries and totals",
+    "Require configured multi-person authorization before submission",
+    "Submit unique payment instruction IDs and track each external outcome",
+    "Reconcile approved batch totals with executed ledger and statements"
+  ],
+  "invariants": [
+    "Organization beneficial ownership does not automatically confer account signing authority",
+    "Self-approval disallowed for restricted corporate payments",
+    "User roles cannot expand beyond signed organizational mandates",
+    "Batch approvals are bound to an immutable file digest and amount totals",
+    "Individual unknown external outcomes remain unresolved independently",
+    "Corporate admin cannot cross into another legal entity without verified grant",
+    "No corporate interface writes authoritative balances"
+  ],
+  "acceptance_tests": [
+    "Maker cannot approve own batch",
+    "Modified file after approval invalidates signatures",
+    "One failed payment does not falsely mark whole batch settled",
+    "Expired corporate mandate blocks submission",
+    "Cross-company account ID denied"
+  ],
+  "independent_gate": "Verified KYB/mandate evidence, institutional corporate product limits and executed maker-checker/financial tests.",
+  "actual_tests_executed": 0
+}
