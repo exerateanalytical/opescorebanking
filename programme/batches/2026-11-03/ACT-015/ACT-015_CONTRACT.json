@@ -1,0 +1,43 @@
+{
+  "id": "ACT-015",
+  "batch": 75,
+  "title": "Statements, transaction history and evidence-backed presentation",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "statement_id:uuid:export identity",
+    "account_id:uuid:contract",
+    "institution_id:uuid:scope",
+    "period_from:date:inclusive",
+    "period_to:date:exclusive",
+    "opening_balance:string:exact amount",
+    "closing_balance:string:exact amount",
+    "source_cursor:string:ledger checkpoint",
+    "entry_refs:list:posted transaction lines",
+    "generated_at:datetime:as-of timestamp"
+  ],
+  "workflow": [
+    "Authenticate requester and authorization to the account",
+    "Select approved statement period and ledger snapshot",
+    "Retrieve only posted and authorized entries with source references",
+    "Show original and reversing adjustments as distinct transactions",
+    "Reconcile opening, entries and closing totals",
+    "Render consistent accessible PDF/CSV/API export with audit reference"
+  ],
+  "invariants": [
+    "Statement history cannot be invented from UI cache",
+    "Reversal history must not overwrite original entry",
+    "Debit/credit labels match bank-approved accounting semantics",
+    "No cross-account information from another institution",
+    "Currency and value-date distinctions are explicit",
+    "Pending transfers are labeled separately from posted activity"
+  ],
+  "planned_tests": [
+    "Closing equals opening plus net posted movements",
+    "Reversed transaction remains visible",
+    "Export across institution denied",
+    "Repeated as-of export is reproducible",
+    "Interrupted export cannot fabricate partial totals"
+  ],
+  "approval_gate": "Approved statement format, finance/legal disclosures, ledger evidence and export security tests.",
+  "executed_tests": 0
+}
