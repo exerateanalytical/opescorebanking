@@ -1,0 +1,90 @@
+{
+  "id": "BRN-017",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "service_case_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Service request"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank owner"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Office"
+      },
+      "customer_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Authorized customer"
+      },
+      "service_code": {
+        "type": "string",
+        "description": "Approved request type"
+      },
+      "queue_ticket_id": {
+        "type": "string",
+        "description": "Branch queue"
+      },
+      "assigned_staff_id": {
+        "type": "string",
+        "description": "Responsible actor"
+      },
+      "evidence_refs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Restricted attachments"
+      },
+      "status": {
+        "type": "string",
+        "description": "Queued in_progress review fulfilled"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "QUEUED",
+      "to": "IN_PROGRESS",
+      "guard": "staff assigned"
+    },
+    {
+      "from": "IN_PROGRESS",
+      "to": "REVIEW",
+      "guard": "restricted action requires approval"
+    },
+    {
+      "from": "REVIEW",
+      "to": "FULFILLED",
+      "guard": "authorized change recorded"
+    },
+    {
+      "from": "IN_PROGRESS",
+      "to": "EXCEPTION",
+      "guard": "missing evidence"
+    },
+    {
+      "from": "ANY",
+      "to": "CANCELLED",
+      "guard": "customer or policy withdrawal"
+    }
+  ],
+  "requirements": [
+    "Queue ticket does not authorize account or identity changes",
+    "Sensitive customer data is not visible to other queued users",
+    "No teller can modify KYC evidence without controlled event",
+    "Branch staff scope is limited to allowed entity and service",
+    "Customer service fulfillment cannot post financial journal directly",
+    "SLA values are institution-approved and never guessed"
+  ],
+  "release_gate": "Institution branch services policy, CIF authorization and actual document/privacy testing."
+}

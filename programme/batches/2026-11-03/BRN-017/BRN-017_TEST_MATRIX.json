@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-017",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-017-TEST-1",
+      "description": "Cross-tenant service case denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-017-TEST-2",
+      "description": "Unauthorized identity change blocked",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-017-TEST-3",
+      "description": "Queue replay is idempotent",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-017-TEST-4",
+      "description": "Missing document creates review",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-017-TEST-5",
+      "description": "Closed case retains audit history",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
