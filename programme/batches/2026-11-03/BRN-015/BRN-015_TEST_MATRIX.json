@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-015",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-015-TEST-1",
+      "description": "Holiday blocks ordinary branch opening when configured",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-015-TEST-2",
+      "description": "Unbalanced shift prevents closed status",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-015-TEST-3",
+      "description": "Missing ledger recon creates exception",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-015-TEST-4",
+      "description": "Duplicate EOD invocation idempotent",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-015-TEST-5",
+      "description": "Late operation recorded in approved business date",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}

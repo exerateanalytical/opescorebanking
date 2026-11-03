@@ -1,0 +1,89 @@
+{
+  "id": "BRN-015",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "business_day_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Date instance"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank owner"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Location"
+      },
+      "business_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Approved calendar"
+      },
+      "opening_check_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Prior-day readiness"
+      },
+      "cash_shift_status": {
+        "type": "string",
+        "description": "Teller closure state"
+      },
+      "reconciliation_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Finance evidence"
+      },
+      "pending_exception_count": {
+        "type": "integer",
+        "description": "Unresolved cases"
+      },
+      "day_state": {
+        "type": "string",
+        "description": "Planned open closing closed"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "PLANNED",
+      "to": "OPEN",
+      "guard": "calendar and opening checks"
+    },
+    {
+      "from": "OPEN",
+      "to": "CLOSING",
+      "guard": "cutoff enforced"
+    },
+    {
+      "from": "CLOSING",
+      "to": "RECONCILING",
+      "guard": "all shift evidence"
+    },
+    {
+      "from": "RECONCILING",
+      "to": "CLOSED",
+      "guard": "qualified finance approval"
+    },
+    {
+      "from": "CLOSING",
+      "to": "EXCEPTION",
+      "guard": "unresolved cash or funds"
+    }
+  ],
+  "requirements": [
+    "Calendar midnight does not automatically certify financial EOD",
+    "Unreconciled transfer/cash variance remains on explicit exception ledger",
+    "Branch closing cannot change posted journal value date arbitrarily",
+    "Local holidays require approved institution calendar version",
+    "Pending actions use durable business-date attribution",
+    "No self-certified exception-free closing by single teller"
+  ],
+  "release_gate": "Approved institution calendars and cutoffs, CFO review and executed EOD scenarios."
+}
