@@ -1,0 +1,43 @@
+{
+  "id": "ACT-018",
+  "batch": 78,
+  "title": "Account service API contracts and event projections",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "request_id:uuid:correlation key",
+    "idempotency_key:string:deduplication",
+    "institution_id:uuid:server-scoped entity",
+    "account_id:uuid:resource",
+    "actor_id:string:authenticated subject",
+    "expected_version:integer:optimistic lock",
+    "command_type:string:requested action",
+    "result_state:enum:completed/pending/conflict/denied",
+    "account_event_id:uuid:outbox identity",
+    "ledger_ref:uuid|null:financial authority"
+  ],
+  "workflow": [
+    "Authenticate and resolve institution plus account mandate",
+    "Validate typed schema and expected aggregate version",
+    "Check approval and financial delegation boundaries",
+    "Apply account-domain state change atomically with outbox",
+    "Publish event with minimal PII and stable schema version",
+    "Return safe response with trace and status semantics"
+  ],
+  "invariants": [
+    "Account service cannot write ledger or settlement database directly",
+    "All command retries use stable idempotency keys",
+    "API responses must distinguish business success from accepted request",
+    "All queries scoped at backend resource level",
+    "Events cannot expose unrestricted KYC data",
+    "Read projections record freshness and source version"
+  ],
+  "planned_tests": [
+    "IDOR attempt denied",
+    "Duplicate account-opening command yields one account",
+    "Stale command version conflicts",
+    "Outbox replay is idempotent",
+    "No financial journal from status-only event"
+  ],
+  "approval_gate": "Approved API/role contracts, customer privacy review and executable integration tests.",
+  "executed_tests": 0
+}
