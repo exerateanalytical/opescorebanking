@@ -1,0 +1,43 @@
+{
+  "batch": 51,
+  "id": "CIF-011",
+  "title": "Sanctions screening evidence and escalation workflow",
+  "status": "DRAFT_NOT_SIGNED",
+  "fields": [
+    "screening_case_id:uuid:stable screening investigation",
+    "subject_party_id:uuid:person/entity",
+    "institution_id:uuid:regulated customer",
+    "list_provider_ref:string:approved source identity",
+    "source_edition:string:retrieval/update version",
+    "screened_at:datetime:observation time",
+    "candidate_hit_refs:list:restricted possible matches",
+    "match_disposition:enum:potential/false_positive/confirmed/unresolved",
+    "reviewer_ref:string|null:compliance decision owner",
+    "case_evidence_ids:list:reason and legal source"
+  ],
+  "workflow": [
+    "Select legally applicable active sanctions lists for institution profile",
+    "Screen verified aliases, identifiers and corporate control parties as policy requires",
+    "Record candidate match and exact source edition and matching feature class",
+    "Block prohibited or unresolved actions under applicable policy while protecting case confidentiality",
+    "Let authorized compliance examiner classify evidence and escalate real matches",
+    "Retain immutable disposition, legal action and rescreen obligations"
+  ],
+  "rules": [
+    "Fuzzy matching is a candidate alert and never a legally conclusive sanctions designation",
+    "Never suppress an unresolved potential match because a workflow timer expired",
+    "Screening provider availability is not assumed; unavailable sources trigger fail-safe risk controls",
+    "Keep list licensing, effective date, jurisdiction and evidence freshness individually traceable",
+    "Do not expose sensitive suspicion or list investigations to unauthorized customer-facing channels",
+    "Regulated account blocking/rejection follows reviewed legal rules, not a globally hardcoded threshold"
+  ],
+  "planned_test_cases": [
+    "Potential match cannot silently auto-clear",
+    "Unavailable source yields explicit pending screening state",
+    "Wrong list edition cannot support current approval",
+    "False-positive disposition records evidence and reviewer",
+    "Cross-institution review logs remain segregated"
+  ],
+  "acceptance_gate": "Applicable sanctions instrument inventory, authorized screening sources and qualified compliance escalation procedures.",
+  "executed_tests": 0
+}
