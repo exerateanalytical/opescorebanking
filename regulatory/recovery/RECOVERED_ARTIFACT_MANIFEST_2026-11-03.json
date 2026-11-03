@@ -1,0 +1,99 @@
+{
+  "generated_at": "2026-11-03",
+  "repository": "exerateanalytical/opescorebanking",
+  "recovery_status": "EVIDENCE_RECOVERED_ORIGINAL_BINARIES_NOT_RECOVERED",
+  "artifacts": [
+    {
+      "name": "OPES_Core_Banking_Checkpoint_AE_2026-10-09.zip",
+      "bytes": 546061,
+      "sha256_prefix": "4ac19ba584f09bed",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Checkpoint_AF_2026-10-09.zip",
+      "bytes": 551363,
+      "sha256_prefix": "93142a5d5f43fd33",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Checkpoint_AG_2026-10-09.zip",
+      "bytes": 556408,
+      "sha256_prefix": "2dc66f7ac1cd8570",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Checkpoint_AH_2026-10-09.zip",
+      "bytes": 561357,
+      "sha256_prefix": "4ee6565bf4fa0714",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Checkpoint_AI_2026-10-09.zip",
+      "bytes": 565959,
+      "sha256_prefix": "3f2489488610939b",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Checkpoint_AJ_2026-10-09.zip",
+      "bytes": 571166,
+      "sha256_prefix": "9f7d2b81325d3eba",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Checkpoint_AK_2026-10-09.zip",
+      "bytes": 575544,
+      "sha256_prefix": "9f3d15833635b145",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Checkpoint_AL_2026-10-09.zip",
+      "bytes": 579859,
+      "sha256_prefix": "f396b94e123c7b81",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Checkpoint_AM_2026-10-09.zip",
+      "bytes": 584358,
+      "sha256_prefix": "9d15b534696a3edc",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Checkpoint_AN_2026-10-09.zip",
+      "bytes": 589143,
+      "sha256_prefix": "9ee3193e10f9e00f",
+      "nested_zip_layers": 39,
+      "non_zip_entries_across_layers": 490,
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Research_Delta_2026-11-01_R01.zip",
+      "reported_size": "~9 KB",
+      "original_generation_path": "/mnt/data/OPES_Core_Banking_Research_Delta_2026-11-01_R01.zip",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Consolidated_Research_2026-11-01.docx",
+      "reported_size": "~68 KB",
+      "original_generation_path": "/mnt/data/OPES_Core_Banking_Consolidated_Research_2026-11-01.docx",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Consolidated_Research_2026-11-01.pdf",
+      "reported_size": "~369 KB",
+      "original_bytes_recovered": false
+    },
+    {
+      "name": "OPES_Core_Banking_Available_Batches_Consolidated_2026-11-03.zip",
+      "reported_size": "~5.94 MB",
+      "original_generation_path": "/mnt/data/OPES_Core_Banking_Available_Batches_Consolidated_2026-11-03.zip",
+      "reported_contents": "13 artifacts",
+      "original_bytes_recovered": false
+    }
+  ],
+  "provenance_commits": {
+    "checkpoint_an_status": "2472f98130427a523f0bb0613abc1585eea5f4da",
+    "historical_archive_inventory": "e8b9b10cf1bc3fcd60ad54bd789964994851a1a1",
+    "recovery_record": "6222ec776f041a4be3713a0ebbc24163e0a055e1"
+  },
+  "recovery_rule": "Never recreate an original binary under the same filename unless byte identity can be proven against known size/hash evidence."
+}
