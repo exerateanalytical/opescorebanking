@@ -1,0 +1,32 @@
+[
+  {
+    "id": "TEST-AN-01",
+    "execution": "SPECIFIED ONLY",
+    "expected": "Reject unnumbered draft as executable rule."
+  },
+  {
+    "id": "TEST-AN-02",
+    "execution": "SPECIFIED ONLY",
+    "expected": "Reject incomplete printed page sequence for financial activation."
+  },
+  {
+    "id": "TEST-AN-03",
+    "execution": "SPECIFIED ONLY",
+    "expected": "Do not infer repeal from catalogue absence."
+  },
+  {
+    "id": "TEST-AN-04",
+    "execution": "SPECIFIED ONLY",
+    "expected": "A court order on 01/25 must not change 02/25 status automatically."
+  },
+  {
+    "id": "TEST-AN-05",
+    "execution": "SPECIFIED ONLY",
+    "expected": "A supervisory inventory request cannot create a settlement posting."
+  },
+  {
+    "id": "TEST-AN-06",
+    "execution": "SPECIFIED ONLY",
+    "expected": "Unknown settlement outcome remains unresolved and reconciliation-open."
+  }
+]

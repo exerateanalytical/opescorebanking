@@ -1,0 +1,30 @@
+[
+  {
+    "id": "SRC-AN-01",
+    "url": "https://cemac.int/reglements-et-directives-2/",
+    "class": "issuer official catalogue",
+    "finding": "Catalogue does not provide authenticated complete 02/25 in this search",
+    "confidence": "verified catalogue; absence not evidence of repeal"
+  },
+  {
+    "id": "SRC-AN-02",
+    "url": "https://www.beac.int/supervision-bancaire/reglements-de-cobac/",
+    "class": "supervisor official catalogue",
+    "finding": "Public catalogue is not complete court or issuer evidence",
+    "confidence": "verified catalogue"
+  },
+  {
+    "id": "SRC-AN-03",
+    "url": "https://legecam.cm/wp-content/uploads/2025/08/Reglement-N%C2%B002_traitement-comptes-inactifs-des-avoirs-en-desherence.pdf",
+    "class": "third-party reproduction",
+    "finding": "Regulation 02/25 copy exists but inherited gap records missing printed page 10",
+    "confidence": "not issuer authenticated"
+  },
+  {
+    "id": "SRC-AN-04",
+    "url": "https://finances.gouv.cg/fr/download/file/fid/10178",
+    "class": "official ministry hosted draft",
+    "finding": "Draft regulation concerning loan default listing contains blank regulation number; not enacted evidence",
+    "confidence": "draft only"
+  }
+]

@@ -1,0 +1,34 @@
+name: Restore exact Checkpoint AN archive
+on:
+  push:
+    branches: [main]
+    paths:
+      - "regulatory/recovery/source/AN/**"
+      - "tools/recovery/build_checkpoint_an.py"
+      - ".github/workflows/restore-checkpoint-an.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  reconstruct-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Rebuild and verify original AN binary
+        run: python3 tools/recovery/build_checkpoint_an.py
+      - name: Commit verified AN ZIP to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AN_2026-10-09.zip
+          if git diff --cached --quiet; then
+            echo "Verified archive already tracked"
+            exit 0
+          fi
+          git commit -m "archive(regulatory): restore byte-exact original checkpoint AN"
+          git pull --rebase origin main
+          git push origin HEAD:main

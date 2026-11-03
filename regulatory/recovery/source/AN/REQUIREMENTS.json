@@ -1,0 +1,32 @@
+[
+  {
+    "id": "REQ-AN-01",
+    "status": "PROPOSED NON-EXECUTABLE",
+    "statement": "Instrument identity must bind issuing authority, full identifier, subject, signature and annex set."
+  },
+  {
+    "id": "REQ-AN-02",
+    "status": "PROPOSED NON-EXECUTABLE",
+    "statement": "Draft documents with blank numbering cannot activate financial policy."
+  },
+  {
+    "id": "REQ-AN-03",
+    "status": "PROPOSED NON-EXECUTABLE",
+    "statement": "A catalogue search miss cannot be interpreted as repeal or judicial suspension."
+  },
+  {
+    "id": "REQ-AN-04",
+    "status": "PROPOSED NON-EXECUTABLE",
+    "statement": "Regulations 01/25 and 02/25 must have independent effective-dated judicial disposition records."
+  },
+  {
+    "id": "REQ-AN-05",
+    "status": "PROPOSED NON-EXECUTABLE",
+    "statement": "Account-transfer policy must require complete authenticated Article 23\u201326 and approved interpretation."
+  },
+  {
+    "id": "REQ-AN-06",
+    "status": "PROPOSED NON-EXECUTABLE",
+    "statement": "External settlement evidence and liability derecognition must require independent accounting authorization."
+  }
+]
