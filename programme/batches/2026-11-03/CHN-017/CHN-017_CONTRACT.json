@@ -1,0 +1,44 @@
+{
+  "package": "CHN-017",
+  "batch": 117,
+  "title": "Accessibility, localization and low-vision inclusive banking UX",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "screen_id:string:canonical UI identity",
+    "channel_type:enum:web/mobile/corporate/agency",
+    "locale:string:language and regional formats",
+    "accessibility_profile:string:reviewed baseline",
+    "focus_order:list:keyboard sequence",
+    "font_scale:string:user preference",
+    "money_format_rule:string:currency number rendering",
+    "error_code:string:typed backend status",
+    "translation_version:string:approved copy",
+    "audit_ref:uuid|null:UX test evidence"
+  ],
+  "workflow": [
+    "Document task flows and financial confirmation screens on desktop/mobile",
+    "Specify responsive layout with no clipping, overlap, excessive glow or cramped controls",
+    "Support readable text scale, color contrast, keyboard and screen-reader semantics",
+    "Localize currency, dates, banking terms and error explanations without changing amounts",
+    "Design explicit pending/failed/unknown success states and accessible recovery",
+    "Test representative assistive-tech users and record actual results"
+  ],
+  "invariants": [
+    "Color is never sole indicator of account restriction or transaction status",
+    "A visual success animation cannot replace settled server evidence",
+    "Dynamic type resizing cannot hide amount, fee, recipient or confirmation details",
+    "Do not translate regulated product terminology without legal/content review",
+    "Focus order and error messages remain usable without mouse",
+    "Responsive mobile experience should behave like a coherent app, not a clipped desktop page",
+    "Customer authorization does not depend on inaccessible controls"
+  ],
+  "acceptance_tests": [
+    "200% text zoom without overlapping payment controls",
+    "Screen reader announces amount, currency and recipient",
+    "Keyboard-only transaction review works",
+    "High contrast shows status without color-only cues",
+    "Localization retains same exact monetary value"
+  ],
+  "independent_gate": "Approved institution design system, accessibility criteria and real desktop/mobile/assistive-tech test runs.",
+  "actual_tests_executed": 0
+}
