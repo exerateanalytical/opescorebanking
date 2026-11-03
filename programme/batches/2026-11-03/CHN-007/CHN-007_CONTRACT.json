@@ -1,0 +1,44 @@
+{
+  "package": "CHN-007",
+  "batch": 107,
+  "title": "Retail payment initiation and confirmation journey",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "payment_draft_id:uuid:prepared instruction",
+    "institution_id:uuid:customer bank",
+    "source_account_id:uuid:authorized debit account",
+    "beneficiary_ref:uuid:reviewed recipient",
+    "amount_minor:string:exact currency amount",
+    "purpose_code:string:approved transfer purpose",
+    "confirmation_digest:string:immutable authorization payload",
+    "challenge_ref:uuid|null:step-up evidence",
+    "command_id:string:idempotent send key",
+    "status:enum:draft/pending/unknown/settled/rejected"
+  ],
+  "workflow": [
+    "Select authorized source, recipient and amount with transparent fee quote",
+    "Validate account state, limits, mandate and beneficiary requirements server-side",
+    "Show complete recipient, currency, amount, estimated charges and transfer type",
+    "Collect authorized confirmation and step-up tied to the immutable request digest",
+    "Submit a single idempotent payment command through approved payments domain",
+    "Show distinct ACK, processing, outcome-unknown, settled and reconciled states"
+  ],
+  "invariants": [
+    "Client may not label transport ACK as settled funds",
+    "Repeated confirmation uses original command identity, never duplicates debit",
+    "Quoted fees and applied fees must reference approved schedule",
+    "Unknown external outcome cannot be blindly resubmitted",
+    "Disputed rail/participation evidence means capability disabled",
+    "Beneficiary modification invalidates prior confirmation",
+    "Original posted journal remains immutable even when returned/reversed"
+  ],
+  "acceptance_tests": [
+    "Two taps on confirmation cause one command",
+    "Changing recipient after challenge invalidates approval",
+    "Pending transfer not displayed as final settlement",
+    "Wrong tenant beneficiary ref denied",
+    "External timeout enters unknown outcome with trace"
+  ],
+  "independent_gate": "Institution-approved rail participation, payment APIs, CFO ledger mapping, customer mandate and actual transaction tests.",
+  "actual_tests_executed": 0
+}
