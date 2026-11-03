@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-018",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-018-TEST-1",
+      "description": "Simultaneous operations cannot evade daily cap",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-018-TEST-2",
+      "description": "Expired limit policy blocks new transaction",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-018-TEST-3",
+      "description": "Self-approved override rejected",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-018-TEST-4",
+      "description": "Wrong branch risk context denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-018-TEST-5",
+      "description": "Suspicious activity review leaves journal unchanged",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}

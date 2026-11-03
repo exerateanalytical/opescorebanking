@@ -1,0 +1,93 @@
+{
+  "id": "BRN-018",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "limit_decision_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Decision"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Legal entity"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Office"
+      },
+      "teller_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Staff actor"
+      },
+      "cash_operation_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Proposed transaction"
+      },
+      "currency": {
+        "type": "string",
+        "description": "Denomination"
+      },
+      "amount_minor": {
+        "type": "string",
+        "description": "Exact amount"
+      },
+      "limit_policy_ref": {
+        "type": "string",
+        "description": "Effective rule"
+      },
+      "risk_alert_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Case evidence"
+      },
+      "decision": {
+        "type": "string",
+        "description": "Allow challenge deny review"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "REQUESTED",
+      "to": "ALLOW",
+      "guard": "policy satisfied"
+    },
+    {
+      "from": "REQUESTED",
+      "to": "CHALLENGE",
+      "guard": "step-up needed"
+    },
+    {
+      "from": "REQUESTED",
+      "to": "REVIEW",
+      "guard": "fraud indicators"
+    },
+    {
+      "from": "CHALLENGE",
+      "to": "ALLOW",
+      "guard": "approved checker"
+    },
+    {
+      "from": "ANY",
+      "to": "DENY",
+      "guard": "restriction or risk rule"
+    }
+  ],
+  "requirements": [
+    "No universal cash threshold can be asserted without bank policy",
+    "Risk flag cannot directly edit posted journal or accuse a person",
+    "Override to a monetary limit requires independent checker",
+    "Limit evaluation must be concurrency-safe and scope-aware",
+    "Access to fraud cases is restricted and audited",
+    "Repeated request must not evade daily counts or perform double debit"
+  ],
+  "release_gate": "Qualified risk/AML, institution-specific limits and real concurrent enforcement testing."
+}
