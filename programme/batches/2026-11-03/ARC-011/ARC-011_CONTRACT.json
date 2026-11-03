@@ -1,0 +1,79 @@
+{
+  "id": "ARC-011",
+  "batch": 31,
+  "title": "Financial transaction and consistency boundaries",
+  "status": "DRAFT_DELIVERED_AWAITING_INDEPENDENT_ACCEPTANCE",
+  "fields": [
+    {
+      "name": "transaction_id",
+      "type": "uuid",
+      "description": "globally unique transaction reference"
+    },
+    {
+      "name": "institution_id",
+      "type": "uuid",
+      "description": "licensed entity scope"
+    },
+    {
+      "name": "command_id",
+      "type": "string",
+      "description": "idempotency reference"
+    },
+    {
+      "name": "journal_id",
+      "type": "uuid",
+      "description": "authoritative journal link"
+    },
+    {
+      "name": "business_date",
+      "type": "date",
+      "description": "approved business-day attribution"
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "description": "ISO currency code"
+    },
+    {
+      "name": "amount_minor",
+      "type": "string",
+      "description": "exact unit representation"
+    },
+    {
+      "name": "posting_status",
+      "type": "enum",
+      "description": "proposed/validated/posted/rejected"
+    },
+    {
+      "name": "reversal_of",
+      "type": "uuid|null",
+      "description": "explicit correction pointer"
+    }
+  ],
+  "workflow": [
+    "Caller submits authorized command with stable idempotency key",
+    "Owning domain validates entity, permissions, lifecycle and effective rules",
+    "Accounting command checks balancing, account mapping and unique command identity",
+    "Atomic commit persists approved journal and outbox record",
+    "External consumers update read models with inbox deduplication",
+    "Independent reconciliation compares journal totals and source obligation"
+  ],
+  "requirements": [
+    "No two services may independently mutate the authoritative financial state",
+    "A posted journal is immutable; correction uses a new balanced journal and original reference",
+    "Each posting is exactly balanced per currency and legal entity in exact arithmetic",
+    "Unknown external results require investigation, never a blind repost or artificial success",
+    "Reporting projections have explicit freshness and source checkpoint markers",
+    "Regulatory PCEC 312/322 mapping remains disabled until competent authority resolves ambiguity"
+  ],
+  "acceptance_cases": [
+    "Reject journal with unequal debit and credit totals",
+    "Repeat identical command and verify one authoritative posting",
+    "Simulate commit-before-outbox-publication and verify eventual delivery",
+    "Reject cross-institution posting lines",
+    "Replay a reversal and ensure no duplicate correction"
+  ],
+  "approval_gate": "Approved institution-specific chart mapping, CFO controls, reproducible financial tests and independently signed ledger invariants.",
+  "code_status": "NOT_STARTED",
+  "tests_executed": 0
+}
