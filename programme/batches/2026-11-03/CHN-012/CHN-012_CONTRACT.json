@@ -1,0 +1,44 @@
+{
+  "package": "CHN-012",
+  "batch": 112,
+  "title": "Agency banking terminal and field-operator safeguards",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "agent_id:uuid:licensed/contracted delegate",
+    "institution_id:uuid:principal bank",
+    "terminal_id:string:registered device",
+    "branch_or_network_id:uuid:supervisor scope",
+    "cash_session_ref:uuid:custody record",
+    "allowed_operations:list:bank-approved abilities",
+    "customer_auth_ref:uuid:consent/identity evidence",
+    "command_id:string:stable transaction ID",
+    "network_state:enum:online/degraded/offline",
+    "approval_policy_version:string:effective rules"
+  ],
+  "workflow": [
+    "Verify agent contract, device, cash limits and institution permission",
+    "Authenticate customer and validate action and allowed channel",
+    "Collect proposed deposit/withdrawal instruction with unique command ID",
+    "Record actual cash custody handover under approved dual controls",
+    "Commit only through authorized online financial domain and show true outcome",
+    "Reconcile teller cash, receipt and ledger before closing agent session"
+  ],
+  "invariants": [
+    "Offline terminal cannot fabricate completed financial posting",
+    "Agent cannot operate beyond contractual product and liquidity limits",
+    "Agent cash balance is a custody record distinct from customer deposit liability",
+    "Do not declare settlement from unconfirmed network response",
+    "Per-agent privilege expiry and suspension must be effective immediately",
+    "Receipts must identify customer operation status accurately",
+    "Duplicate retry cannot create duplicate customer balances"
+  ],
+  "acceptance_tests": [
+    "Offline deposit presented as pending not completed",
+    "Expired agent entitlement blocks transaction",
+    "Repeat terminal request uses one ledger command",
+    "Cash/ledger discrepancy blocks session closure",
+    "Cross-agent customer ID leakage denied"
+  ],
+  "independent_gate": "Bank agency licensing and contract requirements, approved cash custody policy and executed agent reconciliation tests.",
+  "actual_tests_executed": 0
+}
