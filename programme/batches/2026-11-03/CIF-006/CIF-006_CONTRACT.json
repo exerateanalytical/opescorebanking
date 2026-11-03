@@ -1,0 +1,43 @@
+{
+  "batch": 46,
+  "id": "CIF-006",
+  "title": "Customer onboarding case and progression state machine",
+  "status": "DRAFT_UNREVIEWED",
+  "fields": [
+    "case_id:uuid:onboarding case",
+    "institution_id:uuid:licensed entity",
+    "party_id:uuid:canonical identity link",
+    "onboarding_channel:enum:branch/web/mobile/agent/corporate",
+    "applicant_kind:enum:person/organization",
+    "case_status:enum:draft/submitted/evidence_pending/review/approved/rejected/withdrawn",
+    "assigned_reviewer:string|null:review queue actor",
+    "required_evidence:list:profile-dependent artifacts",
+    "risk_decision_ref:uuid|null:approved risk review",
+    "submitted_at:datetime|null:submission audit"
+  ],
+  "workflow": [
+    "Start institution-scoped case with selected product intent and privacy notice",
+    "Collect minimum party data plus requested services without activating an account",
+    "Validate documents, duplicate signals, mandates and identity declarations",
+    "Route incomplete, suspicious or mismatched cases to review with reasons",
+    "Obtain compliance and maker-checker approvals for applicable risk class",
+    "Create accepted customer relationship only after all mandatory case checks pass"
+  ],
+  "invariants": [
+    "A case approval must not itself post money or activate credit/payment services",
+    "Applicant cannot change submitted evidence without versioning and reviewer notification",
+    "All case status transitions must be explicitly authorized and logged",
+    "Never auto-approve cases with unresolved sanctions, identity mismatch or unauthorized representative",
+    "Return machine-readable reasons for missing documents without leaking sensitive screening results",
+    "Allow resumption after offline/network failure without duplicate cases via idempotency"
+  ],
+  "acceptance_tests": [
+    "Duplicate submit creates one case",
+    "Attempted approval with missing KYC requirements rejected",
+    "Reviewer approves own submitted case denied where maker-checker required",
+    "Case created in one institution cannot be read in another",
+    "Withdrawn case cannot be used to open an account"
+  ],
+  "gate": "Onboarding channel policy, institution mandatory evidence matrix, identity/risk requirements and independent reviewer workflow.",
+  "tests_executed": 0
+}
