@@ -1,0 +1,44 @@
+{
+  "id": "ACT-003",
+  "batch": 63,
+  "title": "Customer and institution product eligibility policy",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "eligibility_rule_id:uuid:policy ID",
+    "institution_id:uuid:issuer",
+    "product_version:string:policy target",
+    "party_kind:enum:individual/organization",
+    "risk_policy_version:string:KYC/AML input",
+    "resident_scope:list:jurisdiction conditions",
+    "age_guard:string|null:legal age policy",
+    "channel_scope:list:eligible channels",
+    "decision_state:enum:eligible/review/denied",
+    "reason_codes:list:auditable reasons"
+  ],
+  "workflow": [
+    "Resolve licensed institution and approved product edition",
+    "Retrieve versioned customer/KYC and account eligibility evidence",
+    "Evaluate approved residency, risk and legal conditions",
+    "Defer ambiguous or missing evidence to human review",
+    "Return minimal reasoned decision without leaking restricted screening",
+    "Store decision provenance and permit controlled reevaluation"
+  ],
+  "invariants": [
+    "Eligibility is not a substitute for customer identity verification",
+    "Missing mandatory evidence cannot default to eligible",
+    "Product permission must be scoped to licensed institution",
+    "Never hardcode universal legal-age or residency rules",
+    "Customer-facing explanations must not reveal confidential AML suspicion",
+    "Eligibility decisions are versioned and reproducible",
+    "Denied eligibility cannot be bypassed by another channel"
+  ],
+  "planned_tests": [
+    "Unknown KYC state cannot qualify",
+    "Channel mismatch rejected",
+    "Cross-entity risk decision not reused",
+    "Expired policy edition denied",
+    "Sensitive AML reason hidden from external applicant"
+  ],
+  "approval_gate": "Approved product/institution KYC rules, legal age and residency policy, compliance review.",
+  "executed_tests": 0
+}
