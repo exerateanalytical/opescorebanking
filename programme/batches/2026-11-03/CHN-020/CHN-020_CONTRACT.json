@@ -1,0 +1,44 @@
+{
+  "package": "CHN-020",
+  "batch": 120,
+  "title": "Digital channels acceptance dossier and implementation readiness gate",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "channel_acceptance_id:uuid:dossier",
+    "institution_id:uuid:target licensed bank",
+    "document_package_refs:list:CHN-001..CHN-019",
+    "channel_scope:list:web/mobile/corporate/agency/partner",
+    "api_contract_refs:list:versioned backend",
+    "identity_evidence_refs:list:IAM and mandate policy",
+    "actual_test_run_refs:list:executed test logs",
+    "open_p0:list:financial/regulatory blockers",
+    "reviewer_refs:list:finance/security/QA/legal/ops",
+    "decision_state:enum:draft/blocked/review/approved"
+  ],
+  "workflow": [
+    "Index each of 19 draft channel specifications and unresolved dependencies",
+    "Verify institutional authorization for enabled product/channel combinations",
+    "Review API contracts, roles, privacy, mobile UX and fraud/error states",
+    "Build and execute security, accessibility, replay and payment-state tests in proper environments",
+    "Collect independent finance/legal/operations/QA approvals with actual logs",
+    "Accept only qualified safe components and publish remaining gaps without fabricated readiness"
+  ],
+  "invariants": [
+    "20 created CHN archive checkpoints do not equal 20 accepted work packages",
+    "A mock transfer confirmation is not settlement evidence or banking code",
+    "Account/payment P0 holds remain operative despite channel presentation completion",
+    "No customer data is released to partners solely from OAuth app registration",
+    "Missing test or reviewer evidence must remain NOT_RUN or BLOCKED",
+    "Production go-live requires independent institution and regulator-specific approvals where applicable",
+    "Every approval is bound to exact revision, environment, legal entity and source evidence"
+  ],
+  "acceptance_tests": [
+    "Trace each planned screen flow to approved backend permissions",
+    "Cross-tenant IDOR, stale session and duplicate payment command tests",
+    "Unknown payment outcome never displayed as settled",
+    "Mobile accessibility keyboard/screen-reader audit",
+    "Acceptance pack rejects fabricated test pass or unapproved regulator interpretation"
+  ],
+  "independent_gate": "Approved institution channel scope, full 15-point implementation DoR, executed acceptance cases and independently signed security/finance/operations release criteria.",
+  "actual_tests_executed": 0
+}

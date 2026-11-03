@@ -1,0 +1,27 @@
+{
+  "run": 4,
+  "date": "2026-11-03",
+  "base_main_commit": "52107fffdb2dc1345107ad49559ddeacc6228742",
+  "range": [
+    91,
+    120
+  ],
+  "planned_batch_count": 30,
+  "expected_zip_checkpoints": 30,
+  "documented_workstreams": [
+    "OPS-011..020",
+    "CHN-001..020"
+  ],
+  "reviewed_work_packages_complete": 0,
+  "banking_tests_executed": 0,
+  "production_code_added": 0,
+  "regulatory_certifications_obtained": 0,
+  "p0_blocked": [
+    "WP-ACC-005",
+    "institution payment rail authorization"
+  ],
+  "reconciliation_incomplete": [
+    "GOV-REC-001"
+  ],
+  "status": "FINAL_REMOTE_CHECK_REQUIRED"
+}
