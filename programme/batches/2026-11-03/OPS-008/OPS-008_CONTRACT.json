@@ -1,0 +1,43 @@
+{
+  "id": "OPS-008",
+  "batch": 88,
+  "title": "Monitoring, SLOs and operational reconciliation alerts",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "signal_id:string:metric or alert identifier",
+    "institution_id:uuid:scoped owner",
+    "service_id:string:monitored application",
+    "signal_type:enum:latency/error/lag/reconciliation/security",
+    "objective_version:string:approved SLO",
+    "threshold:string:measured value",
+    "severity:enum:info/warning/critical",
+    "incident_ref:uuid|null:linked case",
+    "evidence_window:string:observed time range",
+    "owner_team:string:response function"
+  ],
+  "workflow": [
+    "Define risk-based service and reconciliation objectives",
+    "Instrument API, database, broker and reconciliation checkpoints",
+    "Detect late journal projections, duplicate events and unresolved payments",
+    "Classify severity separately for availability, confidentiality and finance",
+    "Route incidents to authorized operations and financial control",
+    "Measure actual recovery and review false positives/coverage"
+  ],
+  "invariants": [
+    "Green uptime chart cannot prove ledger correctness",
+    "Unreconciled settlement must trigger independent finance review",
+    "Metrics exclude secrets and unnecessary personal data",
+    "SLO values require tested bank-specific baselines",
+    "Alert delivery itself must be monitored and redundant",
+    "Critical fraud or ledger alert cannot be silently disabled"
+  ],
+  "planned_tests": [
+    "Simulate reconciliation mismatch triggers alert",
+    "Broker lag threshold escalates appropriately",
+    "Metrics preserve institution scoping",
+    "Down alert pipeline detected",
+    "No customer document content in trace"
+  ],
+  "approval_gate": "Operations/finance agreed SLOs, real telemetry instrumentation, alert tests and incident-runbook owners.",
+  "executed_tests": 0
+}
