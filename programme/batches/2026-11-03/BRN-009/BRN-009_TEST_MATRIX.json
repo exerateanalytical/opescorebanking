@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-009",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-009-TEST-1",
+      "description": "Duplicate receipt remains single movement",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-009-TEST-2",
+      "description": "Wrong bank destination rejected",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-009-TEST-3",
+      "description": "Missing carrier proof blocks dispatch",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-009-TEST-4",
+      "description": "Tampered manifest forces dispute",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-009-TEST-5",
+      "description": "Transit balance reconciles exact amount",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "BRN-009",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "shipment_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Unique trip"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Owner bank"
+      },
+      "source_branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Origin"
+      },
+      "destination_branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Destination"
+      },
+      "carrier_ref": {
+        "type": "string",
+        "description": "Contracted service"
+      },
+      "manifest_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Sealed denomination count"
+      },
+      "released_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Custody handoff"
+      },
+      "received_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Destination proof"
+      },
+      "variance_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Discrepancy case"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "PREPARED",
+      "to": "APPROVED",
+      "guard": "security and treasury approve"
+    },
+    {
+      "from": "APPROVED",
+      "to": "DISPATCHED",
+      "guard": "source count signed"
+    },
+    {
+      "from": "DISPATCHED",
+      "to": "IN_TRANSIT",
+      "guard": "carrier receives"
+    },
+    {
+      "from": "IN_TRANSIT",
+      "to": "RECEIVED",
+      "guard": "independent receipt"
+    },
+    {
+      "from": "IN_TRANSIT",
+      "to": "DISPUTED",
+      "guard": "missing or mismatched cargo"
+    }
+  ],
+  "requirements": [
+    "Departure is never equivalent to destination receipt",
+    "In-transit cash is separately visible until evidenced",
+    "Shipment does not directly alter customer deposits",
+    "Approved carriers and insurance limits are institution-specific",
+    "Repeated receipt must not increase vault holdings twice",
+    "Missing seal proof blocks clean reconciliation"
+  ],
+  "release_gate": "Security/carrier authority, insured transit policy and dual-count source/destination evidence."
+}
