@@ -1,0 +1,36 @@
+{
+  "suite": "BRN-005",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-005-T1",
+      "scenario": "Duplicate command yields one approved withdrawal",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-005-T2",
+      "scenario": "Cross-institution account ID denied",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-005-T3",
+      "scenario": "Suspended teller payout rejected",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-005-T4",
+      "scenario": "Unknown posting result keeps cash unreleased",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-005-T5",
+      "scenario": "Payout receipt count reconciles exact notes",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    }
+  ]
+}

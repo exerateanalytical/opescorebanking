@@ -1,0 +1,87 @@
+{
+  "id": "BRN-005",
+  "batch": 125,
+  "status": "DRAFT_UNAPPROVED",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "withdrawal_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Unique operation"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Legal owner"
+      },
+      "account_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Debit contract"
+      },
+      "drawer_session_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Cash custody"
+      },
+      "amount_minor": {
+        "type": "string",
+        "description": "Exact amount"
+      },
+      "mandate_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Withdrawal authority"
+      },
+      "posting_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Ledger proof"
+      },
+      "handover_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Cash recipient acknowledgment"
+      }
+    }
+  },
+  "states": [
+    {
+      "from": "REQUESTED",
+      "to": "APPROVED",
+      "guard": "authorized mandate and funds"
+    },
+    {
+      "from": "APPROVED",
+      "to": "POSTING_PENDING",
+      "guard": "approved ledger rule"
+    },
+    {
+      "from": "POSTING_PENDING",
+      "to": "PAYOUT_READY",
+      "guard": "journal proof exists"
+    },
+    {
+      "from": "PAYOUT_READY",
+      "to": "PAID",
+      "guard": "signed handover"
+    },
+    {
+      "from": "ANY",
+      "to": "EXCEPTION",
+      "guard": "uncertain funds or custody"
+    }
+  ],
+  "invariants": [
+    "No cash release based only on network acknowledgement",
+    "No direct modification of ledger balances by teller UI",
+    "Same command cannot produce duplicate cash payout",
+    "Expired customer signing mandate cannot authorize payout",
+    "Cash shortages require independent exception workflow",
+    "P0 mapping uncertainty blocks affected posting"
+  ],
+  "approval_gate": "CFO-approved posting rules, institution withdrawal policy and audited funds/custody tests."
+}
