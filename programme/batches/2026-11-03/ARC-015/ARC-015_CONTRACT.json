@@ -1,0 +1,44 @@
+{
+  "package": "ARC-015",
+  "batch": 35,
+  "title": "Observability, audit and operational evidence architecture",
+  "status": "DRAFT_REVIEW_OPEN",
+  "model": [
+    "trace_id:string:end-to-end trace link",
+    "correlation_id:string:business operation chain",
+    "institution_id:uuid:tenant/legal entity",
+    "actor_ref:string:pseudonymized actor reference",
+    "event_type:string:auditable action category",
+    "source_event_id:uuid:authoritative domain event reference",
+    "occurred_at:timestamp:trusted event time",
+    "recorded_at:timestamp:audit ingestion time",
+    "evidence_digest:string:content provenance",
+    "retention_class:string:effective policy identifier"
+  ],
+  "flow": [
+    "Generate trace and correlation context at authenticated entry",
+    "Propagate scoped context through API and asynchronous event links",
+    "Record domain and security audit decisions in append-only controlled storage",
+    "Emit redacted service logs, metrics and latency/queue gauges",
+    "Alert on reconciliation exception, unauthorized attempt and stale external outcome",
+    "Support authorized, reproducible event export with chain-of-custody record"
+  ],
+  "rules": [
+    "Audit evidence must identify actor, institution, action, object, outcome and time",
+    "Logs cannot contain passwords, HSM keys, unmasked tokens or unnecessary identity documents",
+    "Operational health indicators cannot substitute for financial reconciliation",
+    "Financial-journal source records, application events and telemetry retain separate provenance",
+    "Protect audit evidence from ordinary application update/delete paths",
+    "Define per-institution, lawful retention and secure export entitlements"
+  ],
+  "test_cases": [
+    "Sensitive token values never appear in captured logs",
+    "Audit export cannot cross institution boundary",
+    "Outbox publish delay creates distinct alert",
+    "Audit reconstruction links command, journal, external evidence and approval",
+    "Unauthorized audit deletion request is denied and recorded"
+  ],
+  "approval_gate": "Institution retention approval, security logging architecture and independent audit reviewer acceptance.",
+  "tests_executed": 0,
+  "production_code": false
+}
