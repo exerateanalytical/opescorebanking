@@ -1,0 +1,43 @@
+{
+  "id": "CIF-001",
+  "batch": 41,
+  "title": "Canonical party and customer identity model",
+  "status": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "party_id:uuid:stable internal party identity",
+    "party_kind:enum:person/organization",
+    "institution_id:uuid:authorized party tenancy scope",
+    "external_ids:list:source-specific identifiers",
+    "customer_number:string|null:institution-issued CIF number",
+    "legal_name:string:reviewed name representation",
+    "aliases:list:prior/alternate names with provenance",
+    "identity_state:enum:draft/under_review/verified/suspended/closed",
+    "source_evidence_ids:list:verified records",
+    "version:integer:optimistic concurrency version"
+  ],
+  "flow": [
+    "Create party shell with explicit institution and source provenance",
+    "Collect party-kind-specific identifying facts and evidence references",
+    "Check duplicates via controlled exact and fuzzy candidate search",
+    "Submit identity evidence to independent validation workflow",
+    "Approve customer relationship separately from identity observation",
+    "Publish versioned change notice while retaining immutable history"
+  ],
+  "rules": [
+    "Party_id never changes when a name, document or customer relationship changes",
+    "External identity-document values cannot be assumed unique or authoritative without source policy",
+    "Do not merge two parties automatically because names or phone numbers match",
+    "Keep person and organization lifecycle requirements distinct",
+    "Every party retrieval or mutation is scoped by licensed institution and actor permission",
+    "An account may refer to approved customer relationships but cannot create an unreviewed civil-identity assertion"
+  ],
+  "acceptance_cases": [
+    "Prevent cross-institution party read",
+    "Reject duplicate customer_number within the same institution where required",
+    "Concurrent changes produce version conflict rather than last-write-wins",
+    "Party merge request preserves aliases and original audit references",
+    "Identity not verified cannot be represented as verified"
+  ],
+  "review_gate": "CIF scope, applicable local identity rules, privacy/legal review and signed institution customer-number policy.",
+  "executed_tests": 0
+}
