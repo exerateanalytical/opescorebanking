@@ -1,0 +1,90 @@
+{
+  "id": "BRN-013",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "counter_session_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Service interaction"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank owner"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Location"
+      },
+      "teller_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Staff actor"
+      },
+      "party_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Customer identity"
+      },
+      "identity_evidence_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Verification proof"
+      },
+      "mandate_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Signer or guardian authority"
+      },
+      "requested_action": {
+        "type": "string",
+        "description": "Restricted operation"
+      },
+      "decision_state": {
+        "type": "string",
+        "description": "Allowed challenge denied"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "REQUESTED",
+      "to": "VERIFYING",
+      "guard": "identity check"
+    },
+    {
+      "from": "VERIFYING",
+      "to": "AUTHORIZED",
+      "guard": "role and identity match"
+    },
+    {
+      "from": "VERIFYING",
+      "to": "REVIEW",
+      "guard": "source mismatch"
+    },
+    {
+      "from": "AUTHORIZED",
+      "to": "CONSUMED",
+      "guard": "single service action"
+    },
+    {
+      "from": "ANY",
+      "to": "DENIED",
+      "guard": "legal or security restriction"
+    }
+  ],
+  "requirements": [
+    "Customer's presence does not automatically establish account mandate",
+    "Original government ID validity and source must not be inferred from OCR alone",
+    "CIF data is scoped to customer and institution",
+    "Teller cannot access protected AML investigation through generic search",
+    "Expired, revoked or unrelated authority denies a financial operation",
+    "Cash instruction remains separate from identity review"
+  ],
+  "release_gate": "Local identification/KYC rules, issuer evidence and bank teller consent/mandate policy."
+}

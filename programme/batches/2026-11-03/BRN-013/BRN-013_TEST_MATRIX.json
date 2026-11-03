@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-013",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-013-TEST-1",
+      "description": "Expired mandate denies withdrawal",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-013-TEST-2",
+      "description": "Wrong-bank CIF lookup denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-013-TEST-3",
+      "description": "Document mismatch triggers review",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-013-TEST-4",
+      "description": "Beneficial owner without signature authority denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-013-TEST-5",
+      "description": "Service decision has trace and version",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
