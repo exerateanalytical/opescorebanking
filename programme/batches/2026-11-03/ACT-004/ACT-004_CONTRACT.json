@@ -1,0 +1,44 @@
+{
+  "id": "ACT-004",
+  "batch": 64,
+  "title": "Fees, tariff schedules and precise monetary calculation",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "tariff_id:uuid:versioned price list",
+    "institution_id:uuid:legal owner",
+    "product_version:string:terms linkage",
+    "fee_type:string:business service",
+    "charge_basis:enum:flat/percentage/tier",
+    "currency:string:ISO code",
+    "rate_decimal:string:fixed precision",
+    "minimum_amount:string|null:lower bound",
+    "effective_at:datetime:approved activation",
+    "tax_policy_ref:string|null:verified tax rules"
+  ],
+  "workflow": [
+    "Define service and applicability against product terms",
+    "Select exact currency and decimal rounding conventions",
+    "Specify fee base, exemptions, tiers and caps",
+    "Assess tax, legal disclosure and accounting mapping dependencies",
+    "Obtain maker-checker and customer notice approvals",
+    "Produce auditable calculation, then authorized posting request"
+  ],
+  "invariants": [
+    "No floating-point money arithmetic",
+    "Fee computation does not directly modify account balance",
+    "Posted charges require authorized balanced journals",
+    "Exemptions and reversals are explicit versioned financial events",
+    "Tax calculation is disabled until jurisdictional source review",
+    "Fee plan changes cannot retroactively edit charged amounts",
+    "Disclosure and posting amount reconcile to same approved tariff version"
+  ],
+  "planned_tests": [
+    "Tier boundaries yield deterministic exact result",
+    "Repeated fee command cannot double-charge",
+    "Expired tariff not applied",
+    "Fee reversal creates separate correction",
+    "Tax without approved policy fails closed"
+  ],
+  "approval_gate": "CFO/treasury pricing review, verified tax obligations, account/ledger mappings and executable money tests.",
+  "executed_tests": 0
+}
