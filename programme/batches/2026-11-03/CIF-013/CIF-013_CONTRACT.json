@@ -1,0 +1,43 @@
+{
+  "id": "CIF-013",
+  "batch": 53,
+  "title": "Enhanced due diligence and escalated onboarding decisions",
+  "state": "DRAFT_REVIEW_OPEN",
+  "data_schema": [
+    "edd_case_id:uuid:enhanced diligence case",
+    "onboarding_case_id:uuid:original applicant case",
+    "risk_trigger_codes:list:approved rationale",
+    "source_of_funds_refs:list:protected source evidence",
+    "source_of_wealth_refs:list:where lawfully required",
+    "beneficial_owner_gap_refs:list:unknown controller cases",
+    "evidence_checklist_version:string:jurisdiction/profile edition",
+    "assigned_investigator:string:qualified reviewer",
+    "decision:enum:open/more_information/approved_with_controls/rejected",
+    "review_due_at:datetime|null:monitoring follow-up"
+  ],
+  "workflow": [
+    "Create EDD case from risk, PEP, beneficial-ownership or other approved triggers",
+    "Request proportionate additional information under lawful purpose",
+    "Validate source documents and record contradictory or missing evidence",
+    "Require independent compliance escalation and documented restrictions",
+    "Approve, conditionally defer or reject with precise controlled disposition",
+    "Set re-review triggers and additional monitoring obligations without bypassing sanctions controls"
+  ],
+  "controls": [
+    "High-risk onboarding cannot be approved by a single unreviewed automated score",
+    "Do not fabricate legal thresholds for source-of-funds or due diligence requirements",
+    "Conditional approvals must state which operations remain restricted",
+    "Sensitive evidence accessible only to assigned compliance roles with audit",
+    "EDD approval does not waive independent identity, sanctions, signing-authority or account eligibility checks",
+    "Evidence retention and customer notices must comply with institution's lawful confidentiality restrictions"
+  ],
+  "planned_test_cases": [
+    "EDD case unresolved blocks ordinary approval where policy requires",
+    "Conditional approval cannot activate prohibited payment capability",
+    "Investigator cannot self-approve under maker-checker policy",
+    "Missing source-of-funds document remains explicit open gap",
+    "Re-review trigger produces new immutable case version"
+  ],
+  "review_gate": "Reviewed applicable AML/EDD provisions, escalation authority, privacy rules and independent compliance sign-off.",
+  "tests_executed": 0
+}
