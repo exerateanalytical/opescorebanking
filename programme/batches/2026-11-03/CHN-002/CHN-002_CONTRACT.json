@@ -1,0 +1,43 @@
+{
+  "package": "CHN-002",
+  "batch": 102,
+  "title": "Retail web banking session and account navigation",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "session_id:uuid:browser session",
+    "institution_id:uuid:bank context",
+    "subject_id:string:authenticated customer",
+    "device_trust_state:enum:untrusted/trusted/review",
+    "session_age:integer:elapsed seconds",
+    "step_up_state:enum:not_required/pending/verified",
+    "authorized_account_refs:list:scope",
+    "last_server_activity_at:datetime:idle control",
+    "session_policy_version:string:approved rules"
+  ],
+  "workflow": [
+    "Authenticate with approved browser OIDC flow and validated redirect origin",
+    "Create protected session with institutional and customer scope",
+    "Load permitted accounts, balances and authorized actions from server",
+    "Show responsive navigation and transaction states without screen cramping",
+    "Require step-up for sensitive operations and revoke stale sessions",
+    "Terminate session safely and clear sensitive local caches"
+  ],
+  "invariants": [
+    "Never store reusable long-lived banking secrets in unprotected local storage",
+    "Session inactivity and lifetime limits are bank-policy defined",
+    "No browser-only transaction authorization",
+    "Account switch must revalidate mandate and institution boundary",
+    "Do not display cached balance as live when source unavailable",
+    "Responsive controls meet keyboard and screen reader requirements",
+    "Logout and token revocation prevent further privileged actions"
+  ],
+  "acceptance_tests": [
+    "Stolen stale session cannot initiate transaction",
+    "Cross-account selection without mandate denied",
+    "Session expiry clears sensitive screen state",
+    "Screen-reader order matches visual task flow",
+    "Replayed callback cannot forge authorization"
+  ],
+  "independent_gate": "Approved authentication policy, accessibility standard selection and real browser/security test evidence.",
+  "actual_tests_executed": 0
+}
