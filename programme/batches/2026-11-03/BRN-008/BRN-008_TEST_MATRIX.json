@@ -1,0 +1,36 @@
+{
+  "suite": "BRN-008",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-008-T1",
+      "scenario": "Two receipts cannot add twice",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-008-T2",
+      "scenario": "Mismatched denominations create dispute",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-008-T3",
+      "scenario": "Cross-bank target rejected",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-008-T4",
+      "scenario": "Missing recipient signature leaves in transit",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-008-T5",
+      "scenario": "Self-approval violates custody policy",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "BRN-008",
+  "batch": 128,
+  "status": "DRAFT_UNAPPROVED",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "handover_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Idempotent transfer"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank owner"
+      },
+      "source_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Vault or drawer"
+      },
+      "target_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "New custodian"
+      },
+      "currency": {
+        "type": "string",
+        "description": "Exact currency"
+      },
+      "denominations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Counted component list"
+      },
+      "released_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Source handoff"
+      },
+      "received_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Target handoff"
+      },
+      "exception_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Mismatch proof"
+      }
+    }
+  },
+  "states": [
+    {
+      "from": "REQUESTED",
+      "to": "AUTHORIZED",
+      "guard": "dual approval"
+    },
+    {
+      "from": "AUTHORIZED",
+      "to": "DISPATCHED",
+      "guard": "source manifest signed"
+    },
+    {
+      "from": "DISPATCHED",
+      "to": "RECEIVED",
+      "guard": "target count verified"
+    },
+    {
+      "from": "RECEIVED",
+      "to": "RECONCILED",
+      "guard": "totals equal"
+    },
+    {
+      "from": "ANY",
+      "to": "DISPUTED",
+      "guard": "loss or mismatch"
+    }
+  ],
+  "invariants": [
+    "Cash transit must remain explicit until receiving proof",
+    "Source release alone cannot credit destination inventory",
+    "Duplicate transfer command cannot double transfer custody",
+    "Sender may not self-sign sole receiver acceptance",
+    "Cash operations respect bank physical insurance and risk limits",
+    "Different legal entities require separate approved treatment"
+  ],
+  "approval_gate": "Dual-custody policy, physical count, security and variance evidence."
+}
