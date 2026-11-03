@@ -1,0 +1,43 @@
+{
+  "id": "CIF-004",
+  "batch": 44,
+  "title": "Ultimate beneficial ownership and control graph",
+  "status": "DRAFT_REVIEW_OPEN",
+  "data_fields": [
+    "ownership_edge_id:uuid:relationship evidence ID",
+    "subject_party_id:uuid:owner or controller",
+    "target_organization_id:uuid:entity controlled",
+    "relationship_kind:enum:equity/voting/control/nominee",
+    "direct_percentage:decimal|null:source-declared share",
+    "effective_from:date:relationship start",
+    "effective_to:date|null:end of validity",
+    "evidence_ref:uuid:corporate source",
+    "verification_state:enum:unverified/reviewed/confirmed/disputed",
+    "reviewer_ref:uuid|null:qualified KYB reviewer"
+  ],
+  "workflow": [
+    "Start with legally registered target entity and its owners",
+    "Collect source-backed direct ownership, voting and special control claims",
+    "Follow intermediate organizations while tracking cycles and uncertainty",
+    "Calculate candidate indirect control only under approved policy",
+    "Escalate nominees, inconsistencies, politically exposed owners and opaque chains",
+    "Approve reviewed graph version with legal/KYB audit references"
+  ],
+  "requirements": [
+    "No universal ownership threshold may be hardcoded without verified applicable jurisdiction policy",
+    "Graph traversal must detect loops and terminate deterministically",
+    "Indirect percentage is a derived candidate, not source-verified fact by default",
+    "Ownership, voting rights, and control via agreements must remain distinct dimensions",
+    "Unknown owner is an explicit state, not zero ownership",
+    "All graph and identity evidence access must be constrained to legitimate institution purpose"
+  ],
+  "acceptance_tests": [
+    "Detect cyclic corporate ownership without infinite recursion",
+    "Mixed voting and equity relationships do not get collapsed",
+    "Graph update preserves prior effective history",
+    "Missing evidence leaves beneficial owner unresolved",
+    "Cross-tenant relationship cannot expose another institution's customer"
+  ],
+  "gate": "Applicable beneficial-ownership obligations, verified policy thresholds, registries and independent AML/legal approval.",
+  "executed_tests": 0
+}
