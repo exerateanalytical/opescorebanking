@@ -1,0 +1,43 @@
+{
+  "id": "CIF-002",
+  "batch": 42,
+  "title": "Natural person identity data and verification boundaries",
+  "status": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "person_id:uuid:party reference",
+    "given_names:list:typed name fields",
+    "family_name:string:declared family name",
+    "date_of_birth:date|null:verified or declared date",
+    "nationality_codes:list:source-verified nationality",
+    "residency_country:string|null:effective residency",
+    "document_refs:list:restricted evidence metadata",
+    "contact_methods:list:verified phone/email claims",
+    "identity_evidence_state:enum:unverified/pending/verified/rejected",
+    "guardian_ref:uuid|null:if policy permits"
+  ],
+  "flow": [
+    "Create individual profile with consent/legal basis and data minimization",
+    "Validate local name/script/date conventions without invented mandatory IDs",
+    "Obtain evidence from permitted customer channel or official verifier",
+    "Check document validity, expiration and duplicate identity candidates",
+    "Escalate mismatch, vulnerability or minor/guardian cases to authorized review",
+    "Issue an evidence-backed identity state while preserving source attribution"
+  ],
+  "rules": [
+    "Declared identity and officially verified identity are distinct claim types",
+    "Do not store biometric templates, document scans or government IDs without explicit lawful policy",
+    "Store sensitive documents under separate encryption/access and retention controls",
+    "Verification success for one document cannot automatically verify all identity claims",
+    "Permit corrections through immutable reviewed events instead of overwriting the evidence trail",
+    "Do not infer nationality, legal residency or sanctions status from a phone number or name"
+  ],
+  "acceptance_cases": [
+    "Expired proof cannot satisfy current policy",
+    "Missing required consent/legal basis blocks optional sensitive processing",
+    "Mismatch between declared and evidenced birth date triggers review",
+    "Cross-tenant access to document metadata rejected",
+    "Correction creates immutable before/after audit record"
+  ],
+  "review_gate": "Institution KYC policy, local privacy advice, permitted identity verification source and accessible review workflow.",
+  "executed_tests": 0
+}
