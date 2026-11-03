@@ -1,0 +1,88 @@
+{
+  "id": "BRN-006",
+  "batch": 126,
+  "status": "DRAFT_UNAPPROVED",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "closeout_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Unique shift close"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank owner"
+      },
+      "drawer_session_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Active shift"
+      },
+      "opening_total": {
+        "type": "string",
+        "description": "Exact starting cash"
+      },
+      "inflows_total": {
+        "type": "string",
+        "description": "Cash receipts"
+      },
+      "outflows_total": {
+        "type": "string",
+        "description": "Cash payouts"
+      },
+      "physical_total": {
+        "type": "string",
+        "description": "Observed count"
+      },
+      "variance_total": {
+        "type": "string",
+        "description": "Difference"
+      },
+      "reviewer_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Independent checker"
+      }
+    }
+  },
+  "states": [
+    {
+      "from": "OPEN",
+      "to": "COUNTING",
+      "guard": "transactions frozen"
+    },
+    {
+      "from": "COUNTING",
+      "to": "RECONCILING",
+      "guard": "count signed"
+    },
+    {
+      "from": "RECONCILING",
+      "to": "CLOSED",
+      "guard": "verified equality"
+    },
+    {
+      "from": "RECONCILING",
+      "to": "EXCEPTION",
+      "guard": "variance identified"
+    },
+    {
+      "from": "EXCEPTION",
+      "to": "CLOSED",
+      "guard": "independent resolution"
+    }
+  ],
+  "invariants": [
+    "Closeout status cannot fabricate accounting reconciliation",
+    "Teller cannot self-certify a variance",
+    "Original posted journals remain immutable",
+    "Unresolved operations cannot disappear from shift totals",
+    "Count reports retain time and note denominations",
+    "Variance write-off is a separately approved financial operation"
+  ],
+  "approval_gate": "Bank cash count SOP, physical evidence and independent accounting/operations acceptance."
+}

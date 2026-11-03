@@ -1,0 +1,36 @@
+{
+  "suite": "BRN-006",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-006-T1",
+      "scenario": "Unbalanced shift refuses clean close",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-006-T2",
+      "scenario": "Duplicate closeout is idempotent",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-006-T3",
+      "scenario": "Self-checker rejected",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-006-T4",
+      "scenario": "Late event reported instead of concealed",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-006-T5",
+      "scenario": "Exact cash conservation equation holds",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    }
+  ]
+}
