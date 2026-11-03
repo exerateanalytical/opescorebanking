@@ -1,0 +1,43 @@
+{
+  "id": "ACT-017",
+  "batch": 77,
+  "title": "Account access, overdraft and funds-availability decision model",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "availability_decision_id:uuid:decision",
+    "account_id:uuid:source account",
+    "institution_id:uuid:scope",
+    "posted_balance:string:ledger-proven amount",
+    "pending_debits:string:authorized reservations",
+    "legal_holds:string:restricted amount",
+    "credit_limit_ref:uuid|null:approved facility",
+    "proposed_amount:string:debit request",
+    "available_amount:string:exact derived result",
+    "decision_state:enum:allow/deny/review"
+  ],
+  "workflow": [
+    "Validate customer mandate, account status and debit action",
+    "Read authoritative ledger checkpoint and effective holds",
+    "Include approved overdraft/facility terms only if binding",
+    "Calculate available amount using exact currency precision",
+    "Deny/hold when data stale, disputed or insufficient",
+    "Return decision version to posting service for atomic validation"
+  ],
+  "invariants": [
+    "Displayed availability is not an authoritative money balance",
+    "Unapproved overdraft cannot fund an instruction",
+    "Credit facility does not imply banking account permission",
+    "Concurrent funds requests require reservation/atomicity protection",
+    "Cross-currency balances require approved conversion method",
+    "A denied decision must not create accounting entries"
+  ],
+  "planned_tests": [
+    "Parallel debits cannot overspend approved funds",
+    "Stale snapshot must revalidate before commit",
+    "Closed account unavailable despite positive balance",
+    "Unapproved overdraft ignored",
+    "Cross-tenant available balance denied"
+  ],
+  "approval_gate": "CFO-approved funds policy, authorized loan facility semantics and concurrent posting tests.",
+  "executed_tests": 0
+}
