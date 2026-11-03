@@ -1,0 +1,43 @@
+{
+  "package": "ARC-016",
+  "batch": 36,
+  "title": "Resilience, failure states and disaster recovery",
+  "status": "DRAFT_REVIEW_OPEN",
+  "model": [
+    "recovery_case_id:uuid:failure incident identity",
+    "institution_id:uuid:affected legal entity",
+    "failure_class:enum:database/transport/broker/identity/rail",
+    "last_authoritative_commit:string:durable state anchor",
+    "outbox_watermark:string:publication cursor",
+    "inbox_watermark:string:consumer cursor",
+    "reconciliation_cutoff:timestamp:source comparison point",
+    "recovery_state:enum:detected/quarantined/replayed/reconciled/closed",
+    "approved_by:string:independent operations signatory"
+  ],
+  "flow": [
+    "Detect incident and suspend unsafe money-moving routes where needed",
+    "Protect committed journal, outbox and audit data from destructive replay",
+    "Restore validated backup or failover replica with known recovery cursor",
+    "Replay eligible unprocessed messages through consumer deduplication",
+    "Reconcile journal totals, external settlements, fees and outstanding outcomes",
+    "Obtain separate operations/CFO acceptance before resuming affected flows"
+  ],
+  "rules": [
+    "Recovery cannot edit an original posted journal or manufacture missing payment finality",
+    "Use institution-approved RPO/RTO values only after tested measurement",
+    "Unknown external payments remain quarantined until source statements or authority clarify",
+    "Backup consistency must include journal, outbox, keys and audit references",
+    "Runbooks must account for lost acknowledgements and duplicate deliveries",
+    "DR rehearsals must produce evidence, not only a plan or architectural drawing"
+  ],
+  "test_cases": [
+    "Kill publisher after DB commit and verify exactly one recovered business effect",
+    "Replay consumer batch twice without duplicate posting",
+    "Restore backup and reconcile source account totals",
+    "Simulate missing external statement and prevent finality declaration",
+    "Require dual authorization to reopen rail after a severe outage"
+  ],
+  "approval_gate": "Operational recovery environment, signed RPO/RTO, real fault-injection execution and independent CFO/Operations review.",
+  "tests_executed": 0,
+  "production_code": false
+}
