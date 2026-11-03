@@ -1,0 +1,90 @@
+{
+  "id": "CMP-007",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "report_run_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Unique calculation"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Licensed reporting entity"
+      },
+      "report_type": {
+        "type": "string",
+        "description": "Authorized template"
+      },
+      "reporting_period": {
+        "type": "string",
+        "description": "Financial cutoff"
+      },
+      "source_cursor": {
+        "type": "string",
+        "description": "Ledger/event watermark"
+      },
+      "mapping_version": {
+        "type": "string",
+        "description": "Approved chart taxonomy"
+      },
+      "calculation_version": {
+        "type": "string",
+        "description": "Rules and methods"
+      },
+      "control_totals_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Reconciliation proof"
+      },
+      "reviewer_id": {
+        "type": "string",
+        "description": "CFO/compliance approval"
+      },
+      "status": {
+        "type": "string",
+        "description": "Prepared reconciled reviewed submitted"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "PREPARED",
+      "to": "CALCULATED",
+      "guard": "inputs validated"
+    },
+    {
+      "from": "CALCULATED",
+      "to": "RECONCILED",
+      "guard": "control totals match"
+    },
+    {
+      "from": "RECONCILED",
+      "to": "REVIEWED",
+      "guard": "independent CFO approval"
+    },
+    {
+      "from": "REVIEWED",
+      "to": "SUBMITTED",
+      "guard": "authorized filing"
+    },
+    {
+      "from": "ANY",
+      "to": "BLOCKED",
+      "guard": "rule or data conflict"
+    }
+  ],
+  "requirements": [
+    "PCEC 312/322 conflict blocks affected prudential report classifications",
+    "An unapproved mapping cannot produce regulator-compliant figures",
+    "Reporting projections never become independent authoritative books",
+    "Every report metric traces to input, transformation and reviewer",
+    "Submission proof distinct from local file generation",
+    "Cross-institution financial figures cannot be included by implicit join"
+  ],
+  "release_gate": "Official reporting forms, authenticated mapping/corrigenda, qualified CFO/regulatory reviewers and actual reconciliation tests."
+}

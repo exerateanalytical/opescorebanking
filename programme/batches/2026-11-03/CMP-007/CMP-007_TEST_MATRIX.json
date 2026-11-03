@@ -1,0 +1,36 @@
+{
+  "work_package": "CMP-007",
+  "executed": false,
+  "cases": [
+    {
+      "id": "CMP-007-TEST-1",
+      "description": "Unmapped account code blocks report acceptance",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-007-TEST-2",
+      "description": "Trial balance disagreement creates exception",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-007-TEST-3",
+      "description": "Same cutoff and rule version reproduce totals",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-007-TEST-4",
+      "description": "CFO self-approval barred where SoD applies",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-007-TEST-5",
+      "description": "Unverified submission not marked accepted",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
