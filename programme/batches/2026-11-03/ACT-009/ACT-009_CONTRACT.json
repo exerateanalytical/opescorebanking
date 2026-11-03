@@ -1,0 +1,43 @@
+{
+  "id": "ACT-009",
+  "batch": 69,
+  "title": "Deposit initiation, booking and source reconciliation",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "deposit_request_id:uuid:stable command",
+    "account_id:uuid:destination contract",
+    "institution_id:uuid:legal owner",
+    "source_type:enum:branch_cash/cleared_transfer",
+    "amount_minor:string:exact monetary amount",
+    "currency:string:approved code",
+    "funds_evidence_ref:uuid|null:cash/rail proof",
+    "posting_command_id:string:unique ledger call",
+    "deposit_state:enum:initiated/confirmed/posting_pending/posted/exception",
+    "reconciliation_ref:uuid|null:independent match"
+  ],
+  "workflow": [
+    "Validate account eligibility, receiving branch and approved currency",
+    "Create idempotent deposit instruction",
+    "Obtain verifiable cash acceptance or external settlement evidence",
+    "Request balanced immutable ledger posting only under approved mapping",
+    "Reconcile receipt and authoritative journal with cash/rail source",
+    "Issue customer receipt referencing completed transaction and exceptions"
+  ],
+  "invariants": [
+    "Unverified incoming payment notification is not a funded deposit",
+    "No deposit should create money solely from an API response",
+    "Branch cash custody and bank accounting require independent reconciliation",
+    "Posted journal cannot be updated for a customer correction",
+    "Duplicate deposit receipt cannot create duplicate postings",
+    "Suspended or closed account follows approved acceptance/return rule"
+  ],
+  "planned_tests": [
+    "External transfer acknowledgement without settlement cannot post",
+    "Duplicate cash receipt results in one deposit",
+    "Failed ledger posting remains recoverable exception",
+    "Wrong institution destination denied",
+    "Reconciliation mismatch blocks false completion"
+  ],
+  "approval_gate": "Approved cash or external settlement source, PCEC mapping, CFO and operations acceptance.",
+  "executed_tests": 0
+}
