@@ -1,0 +1,43 @@
+{
+  "id": "CIF-014",
+  "batch": 54,
+  "title": "Consent, privacy notices and legal processing basis",
+  "state": "DRAFT_REVIEW_OPEN",
+  "data_schema": [
+    "processing_basis_id:uuid:legal processing decision",
+    "institution_id:uuid:legal controller",
+    "party_id:uuid:affected customer",
+    "purpose_code:string:defined processing purpose",
+    "lawful_basis_code:string:jurisdiction-qualified basis",
+    "notice_version:string:presented disclosure",
+    "consent_state:enum:not_required/explicit_granted/withdrawn/unknown",
+    "evidence_timestamp:datetime:observed action",
+    "channel:string:where notice was delivered",
+    "retention_policy_id:string:effective lifecycle"
+  ],
+  "workflow": [
+    "Select customer-processing purpose and applicable institution privacy policy",
+    "Determine qualified legal basis, and whether consent is actually necessary",
+    "Show a language-accessible versioned notice to the customer where required",
+    "Record signed or authenticated opt-in only for consent-based purposes",
+    "Enforce channel/marketing preferences separately from mandatory compliance processing",
+    "Handle withdrawal, correction and access requests with lawful retention exceptions"
+  ],
+  "controls": [
+    "Consent withdrawal cannot automatically delete mandatory AML and financial records",
+    "Marketing consent must not be bundled with required identity verification as one forced switch",
+    "Do not silently repurpose biometric or ID evidence for unrelated analytics",
+    "Track notices, languages, versions and accessible delivery channels",
+    "Keep purpose scope and downstream recipients bounded and auditable",
+    "Regulatory retention overrides must be source-backed, not guessed or globally hardcoded"
+  ],
+  "planned_test_cases": [
+    "Withdraw marketing permission while preserving mandatory retention",
+    "Unconsented optional purpose denied",
+    "Wrong notice version cannot be counted as accepted",
+    "Unauthorized bulk-export of customer personal data blocked",
+    "Right-to-access response applies institution and privacy permissions"
+  ],
+  "review_gate": "Qualified local data-protection review, current effective privacy rules, institution retention schedule and accessible notices.",
+  "tests_executed": 0
+}
