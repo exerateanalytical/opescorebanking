@@ -1,0 +1,46 @@
+{
+  "suite_id": "BRN-004-ACCEPTANCE-DRAFT",
+  "execution_state": "NOT_RUN",
+  "tests": [
+    {
+      "case_id": "BRN-004-T01",
+      "scenario": "Duplicate deposit command posts at most once",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-004-T02",
+      "scenario": "Account closed for deposits rejected",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-004-T03",
+      "scenario": "Ledger failure leaves cash custody exception",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-004-T04",
+      "scenario": "Count mismatch stops posting",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-004-T05",
+      "scenario": "Cross-institution destination denied",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    }
+  ]
+}

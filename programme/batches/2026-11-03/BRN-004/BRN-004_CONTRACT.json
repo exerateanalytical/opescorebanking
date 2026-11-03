@@ -1,0 +1,101 @@
+{
+  "schema_version": "draft-1",
+  "work_package_id": "BRN-004",
+  "batch": 124,
+  "domain": "BranchCash",
+  "title": "Teller cash deposit intake and controlled financial handoff",
+  "state": "DRAFT_REVIEW_PENDING",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "BRN-004",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "institution_id"
+    ],
+    "properties": {
+      "cash_deposit_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Idempotent counter operation"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank entity"
+      },
+      "drawer_session_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Accountable cash custody"
+      },
+      "customer_account_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Authorized deposit destination"
+      },
+      "declared_amount": {
+        "type": "string",
+        "description": "Exact expected units"
+      },
+      "counted_amount": {
+        "type": "string",
+        "description": "Observed units"
+      },
+      "count_evidence_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Denomination proof"
+      },
+      "receipt_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Customer receipt identifier"
+      },
+      "ledger_command_ref": {
+        "type": "string",
+        "description": "Idempotent posting request"
+      },
+      "status": {
+        "type": "string",
+        "description": "Draft counted posted exception"
+      }
+    }
+  },
+  "state_transitions": [
+    {
+      "from": "DRAFT",
+      "to": "COUNTED",
+      "guard": "physical cash accepted"
+    },
+    {
+      "from": "COUNTED",
+      "to": "VALIDATED",
+      "guard": "account and risk checks"
+    },
+    {
+      "from": "VALIDATED",
+      "to": "POSTING_PENDING",
+      "guard": "approved mapping exists"
+    },
+    {
+      "from": "POSTING_PENDING",
+      "to": "POSTED",
+      "guard": "ledger proof reconciled"
+    },
+    {
+      "from": "ANY",
+      "to": "EXCEPTION",
+      "guard": "mismatch or uncertain result"
+    }
+  ],
+  "control_requirements": [
+    "Cash receipt alone does not establish completed customer posting",
+    "No unbalanced or unapproved PCEC mapping may be used",
+    "A retry cannot create a second credit or cash movement",
+    "Cash custody and ledger evidence reconcile independently",
+    "Status-only correction cannot mutate posted journal"
+  ],
+  "approval_gate": "CFO-approved accounts, teller rules, PCEC resolution, actual cash/ledger integration tests.",
+  "production_mode": "DISABLED_PENDING_EVIDENCE"
+}
