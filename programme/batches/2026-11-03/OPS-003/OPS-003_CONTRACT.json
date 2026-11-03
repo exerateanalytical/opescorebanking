@@ -1,0 +1,43 @@
+{
+  "id": "OPS-003",
+  "batch": 83,
+  "title": "Build artifact provenance, SBOM and dependency integrity",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "build_id:string:unique pipeline",
+    "commit_sha:string:source revision",
+    "build_runner_id:string:trusted builder",
+    "artifact_digest:string:cryptographic output hash",
+    "dependency_lock_ref:string:locked versions",
+    "sbom_ref:string:component inventory",
+    "signature_ref:string|null:provenance attestation",
+    "scan_status:enum:not_run/passed/failed",
+    "promotion_stage:string:environment gate",
+    "approver_id:string:release reviewer"
+  ],
+  "workflow": [
+    "Resolve trusted source revision and immutable dependencies",
+    "Build reproducibly in isolated runner with limited secrets",
+    "Generate SBOM and artifact digest from actual build bytes",
+    "Run supported vulnerability, license and integrity checks",
+    "Quarantine issues requiring review and record exceptions",
+    "Sign and promote exact artifact digest after approval"
+  ],
+  "invariants": [
+    "Do not invent vulnerability scan passes or attestation signatures",
+    "Dependence on a package registry is subject to reproducibility and availability plan",
+    "Only digest-pinned candidate artifacts may enter controlled stages",
+    "Secrets must not be embedded in container layers or build logs",
+    "Critical financial service images require additional integrity acceptance",
+    "Past release artifacts remain retrievable for incident reconstruction"
+  ],
+  "planned_tests": [
+    "Modified binary fails digest verification",
+    "Unpinned dependency blocks protected build",
+    "Missing SBOM prevents release promotion",
+    "Scanner failure status remains NOT_RUN/FAILED rather than PASS",
+    "Signed release maps to exact Git SHA"
+  ],
+  "approval_gate": "Approved dependency policy, trusted build environment and actual reproducibility/security test outputs.",
+  "executed_tests": 0
+}
