@@ -1,0 +1,43 @@
+{
+  "package": "CIF-015",
+  "batch": 55,
+  "title": "Customer identity lifecycle, refresh and suspension",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema_fields": [
+    "identity_lifecycle_id:uuid:versioned lifecycle record",
+    "party_id:uuid:canonical person or organization",
+    "institution_id:uuid:regulated scope",
+    "current_status:enum:draft/under_review/verified/restricted/suspended/closed",
+    "reason_code:string:approved lifecycle trigger",
+    "verification_revision:string:evidence snapshot version",
+    "review_required_by:datetime|null:effective refresh date",
+    "linked_customer_state:string:customer relationship indicator",
+    "decision_actor:string:authorized reviewer",
+    "prior_state_ref:uuid|null:immutable transition link"
+  ],
+  "workflow": [
+    "Receive evidence-change, document-expiry, official notice or customer-submitted correction",
+    "Evaluate effective institution policy and associated product/mandate impact",
+    "Transition to review/suspension state with explicit reason and authorized actor",
+    "Request new identity proof or supporting source and run dependent risk checks",
+    "Approve new verified version only after applicable due diligence passes",
+    "Preserve historical identity and restriction decision used for old transactions"
+  ],
+  "requirements": [
+    "Identity suspension cannot retroactively mutate financial journals or void settled transfers",
+    "A new identity document supersedes the evidence claim, not the stable party ID",
+    "Changing a legal name requires historical alias and source retention",
+    "Closed customer identity must not erase records subject to statutory banking retention",
+    "Restriction changes must notify relevant account/payment domains through versioned events",
+    "Customer reactivation cannot bypass sanctions, risk, signatory or identity reviewer gates"
+  ],
+  "acceptance_cases": [
+    "Expired ID triggers state review without deleting party",
+    "Unverified correction cannot silently clear suspension",
+    "Replay status transition does not duplicate notifications",
+    "Closing CIF does not change posted journal balances",
+    "Old transaction still resolves historical identity revision"
+  ],
+  "approval_gate": "Institution status transitions, retention rules, cross-domain restrictions and independent compliance/operations approval.",
+  "executed_tests": 0
+}
