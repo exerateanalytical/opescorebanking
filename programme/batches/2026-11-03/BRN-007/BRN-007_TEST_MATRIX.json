@@ -1,0 +1,36 @@
+{
+  "suite": "BRN-007",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-007-T1",
+      "scenario": "Negative piece count invalid",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-007-T2",
+      "scenario": "Wrong vault identity denied",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-007-T3",
+      "scenario": "Duplicate inventory snapshot flagged",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-007-T4",
+      "scenario": "Count total exactly equals denomination sum",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    },
+    {
+      "id": "BRN-007-T5",
+      "scenario": "Missing independent checker prevents reconciliation",
+      "expected": "Business control enforced and audit evidence recorded",
+      "actual": null
+    }
+  ]
+}

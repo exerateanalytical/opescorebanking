@@ -1,0 +1,89 @@
+{
+  "id": "BRN-007",
+  "batch": 127,
+  "status": "DRAFT_UNAPPROVED",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "vault_inventory_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Inventory snapshot"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Owner"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Physical location"
+      },
+      "vault_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Registered safe"
+      },
+      "currency": {
+        "type": "string",
+        "description": "Denomination currency"
+      },
+      "denomination_code": {
+        "type": "string",
+        "description": "Physical note code"
+      },
+      "piece_count": {
+        "type": "integer",
+        "description": "Observed count"
+      },
+      "custodian_id": {
+        "type": "string",
+        "description": "Authorized officer"
+      },
+      "snapshot_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Audit cutoff"
+      }
+    }
+  },
+  "states": [
+    {
+      "from": "PREPARED",
+      "to": "COUNTING",
+      "guard": "dual custody opened"
+    },
+    {
+      "from": "COUNTING",
+      "to": "REVIEW",
+      "guard": "count complete"
+    },
+    {
+      "from": "REVIEW",
+      "to": "RECONCILED",
+      "guard": "checker accepts"
+    },
+    {
+      "from": "ANY",
+      "to": "RESTRICTED",
+      "guard": "security incident"
+    },
+    {
+      "from": "RESTRICTED",
+      "to": "ACTIVE",
+      "guard": "cleared by qualified security"
+    }
+  ],
+  "invariants": [
+    "Vault cash cannot be spent by editing account balances",
+    "Denomination count cannot be negative or fractional",
+    "No implicit conversion across currencies",
+    "Every inventory snapshot has immutable custody lineage",
+    "Bank staff without vault scope cannot approve count",
+    "Missing physical evidence does not count as zero inventory"
+  ],
+  "approval_gate": "Bank physical security, vault custody and denomination policies, independently observed count."
+}
