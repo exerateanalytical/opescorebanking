@@ -1,0 +1,44 @@
+{
+  "id": "CIF-018",
+  "batch": 58,
+  "title": "Customer information APIs and event contract boundaries",
+  "status": "DRAFT_REVIEW_OPEN",
+  "fields": [
+    "request_id:uuid:correlation/idempotency identifier",
+    "institution_id:uuid:trusted caller scope",
+    "party_id:uuid:owned identity resource",
+    "actor_subject:string:authenticated caller",
+    "action_code:string:authorized command",
+    "expected_version:integer:optimistic concurrency",
+    "response_status:enum:success/denied/conflict/pending",
+    "result_resource_ref:string:approved view reference",
+    "audit_ref:uuid:traceable decision record",
+    "api_edition:string:versioned contract"
+  ],
+  "workflow": [
+    "Authenticate API client and validate institution membership",
+    "Authorize specific customer record and requested action at server boundary",
+    "Validate typed request, command version, duplicate identity and purpose",
+    "Apply approved state transition in authoritative CIF store",
+    "Publish minimum-data domain event through reliable outbox",
+    "Return typed response and correlate access decision to audit record"
+  ],
+  "requirements": [
+    "Customer search must never allow IDOR or unscoped raw identifiers",
+    "CIF write commands cannot directly post financial journals or grant payment entitlement",
+    "Partner API fields exclude document images, restricted screening findings and identity secrets",
+    "Optimistic concurrency protects identity review decisions from silent overwrite",
+    "Public IDs and internal customer numbers have documented distinction and lifecycle",
+    "Command replay must return the original safe outcome without duplicating identity cases"
+  ],
+  "test_cases": [
+    "Unscoped cross-institution GET is rejected",
+    "Missing role denies candidate account linkage",
+    "Stale expected_version yields conflict",
+    "Duplicate create-case idempotency does not create second case",
+    "Event envelope excludes document byte payloads"
+  ],
+  "closure_gate": "Approved OpenAPI definitions, service identity/role matrix, retention privacy review and contract/integration tests.",
+  "executed_tests": 0,
+  "production_code": false
+}
