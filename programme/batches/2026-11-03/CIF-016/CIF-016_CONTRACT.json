@@ -1,0 +1,43 @@
+{
+  "package": "CIF-016",
+  "batch": 56,
+  "title": "Onboarding segregation of duties and maker-checker approval",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema_fields": [
+    "approval_case_id:uuid:controlled decision request",
+    "institution_id:uuid:regulated entity",
+    "party_id:uuid:affected identity",
+    "requested_change_type:string:approval scope",
+    "maker_subject:string:originating actor",
+    "checker_subject:string|null:independent reviewer",
+    "proposed_revision:string:controlled candidate version",
+    "approval_state:enum:pending/approved/rejected/expired",
+    "decision_reason:string:recorded evidence",
+    "policy_version:string:authorization rule edition"
+  ],
+  "workflow": [
+    "Record a proposed customer activation or high-impact change",
+    "Identify maker, legal entity, reviewer roles and SoD policy version",
+    "Freeze reviewed proposal revision and evidence digest",
+    "Route to authorized independent checker with conflict-of-interest validation",
+    "Apply approved transition once with stable command identity",
+    "Record immutable approval and notify dependent controls if decision changes risk/access"
+  ],
+  "requirements": [
+    "Maker cannot approve same application or risk override",
+    "Checker must have institution and approval-scope entitlement at decision time",
+    "Approval against stale proposal revision is rejected",
+    "Do not allow API/UI or scheduled job to bypass approval boundary",
+    "Emergency override requires separately approved temporary privilege and post-event review",
+    "Revoking checker authority cannot validate future requests based on old role"
+  ],
+  "acceptance_cases": [
+    "Same actor attempts submit and approve and gets denial",
+    "Approval after proposal change returns version conflict",
+    "Cross-institution checker cannot approve another entity's case",
+    "Expired approval request fails closed",
+    "Repeated approve command applies one transition"
+  ],
+  "approval_gate": "Institution policy delegation matrix, privileged access review, test identities and signed approval rules.",
+  "executed_tests": 0
+}
