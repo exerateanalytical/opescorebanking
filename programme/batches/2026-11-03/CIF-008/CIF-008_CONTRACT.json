@@ -1,0 +1,43 @@
+{
+  "batch": 48,
+  "id": "CIF-008",
+  "title": "Business identity, KYB evidence and authorized representative verification",
+  "status": "DRAFT_UNREVIEWED",
+  "fields": [
+    "kyb_case_id:uuid:business onboarding case",
+    "organization_party_id:uuid:legal party",
+    "registry_evidence_id:uuid:source verification",
+    "registration_state:enum:declared/pending/confirmed/disputed",
+    "legal_form_code:string:jurisdiction taxonomy",
+    "representation_mandate_ids:list:authority grants",
+    "ownership_graph_version:string:beneficial ownership snapshot",
+    "directors:list:linked natural persons",
+    "risk_assessment_ref:uuid|null:review decision",
+    "kyb_status:enum:open/conditional/approved/rejected"
+  ],
+  "workflow": [
+    "Identify registered organization and applicable legal-entity jurisdiction",
+    "Collect formation/registry evidence and required business documents",
+    "Validate status and authorized representatives through accepted sources",
+    "Construct ownership/control graph and flag unknown controlling parties",
+    "Screen relevant signatories and controllers under approved AML policy",
+    "Authorize KYB only when applicable evidence and independent review are satisfied"
+  ],
+  "invariants": [
+    "Registry evidence and business license are distinct proofs",
+    "Representative authority must be effective-dated and action-scoped",
+    "Unknown beneficial ownership must be treated as unresolved, not zero risk",
+    "Business status must be tied to a source observation date and registry authority",
+    "No unverified business may be silently promoted into credit/payment privileges",
+    "Preserve versioned KYB evidence for subsequent changes in directors/control"
+  ],
+  "acceptance_tests": [
+    "Representatives with expired mandates cannot submit corporate payment permissions",
+    "Missing required beneficial ownership evidence blocks normal approval",
+    "Conflicting registry states raise review",
+    "Cross-institution organization document reference denied",
+    "Change of controlling shareholder triggers review without rewriting old evidence"
+  ],
+  "gate": "Applicable KYB obligations, legally approved documentary matrix, registry and control-verification procedures.",
+  "tests_executed": 0
+}
