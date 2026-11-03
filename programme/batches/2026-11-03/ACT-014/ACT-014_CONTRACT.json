@@ -1,0 +1,43 @@
+{
+  "id": "ACT-014",
+  "batch": 74,
+  "title": "Account termination and final financial settlement workflow",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "closure_id:uuid:case identity",
+    "account_id:uuid:closing contract",
+    "institution_id:uuid:entity",
+    "requested_by:string:initiator",
+    "reason_code:string:approved reason",
+    "outstanding_claims:list:liens/fees/pending transfers",
+    "final_balance_ref:uuid:verified ledger snapshot",
+    "settlement_instruction_ref:uuid|null:authorized payout",
+    "checker_id:string|null:independent approver",
+    "closed_at:datetime|null:closure effective"
+  ],
+  "workflow": [
+    "Receive closure request and verify contract owner",
+    "Validate liens, holds, overdrafts, pending payments and tax obligations",
+    "Reconcile authoritative balance and financial transactions",
+    "Authorize final payout/transfer independently where required",
+    "Confirm settlement and closure prerequisites before changing state",
+    "Retain immutable customer statements, contract and decision history"
+  ],
+  "invariants": [
+    "No closure on unreconciled payment or unknown external outcome",
+    "Financial closure entries require approved balanced journal",
+    "Bank cannot treat account closure as cancellation of obligations",
+    "No silent deletion of customer records subject to retention",
+    "Customer termination rights and notices follow applicable legal policy",
+    "Maker-checker applies to high-impact close-out and payouts"
+  ],
+  "planned_tests": [
+    "Pending transfer blocks premature closure",
+    "Unreconciled balance blocks approval",
+    "Closing request duplicate is idempotent",
+    "Closed account rejects new authorized debit",
+    "Historical statement available post closure"
+  ],
+  "approval_gate": "Institution termination rules, settlement/accounting authority and executed financial reconciliation tests.",
+  "executed_tests": 0
+}
