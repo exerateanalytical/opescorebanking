@@ -1,0 +1,92 @@
+{
+  "id": "CMP-008",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "intervention_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Action case"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Regulated bank"
+      },
+      "subject_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Customer/account"
+      },
+      "trigger_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Alert or legal order"
+      },
+      "legal_authority_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Authenticated basis"
+      },
+      "intervention_type": {
+        "type": "string",
+        "description": "Review challenge hold freeze"
+      },
+      "scope": {
+        "type": "string",
+        "description": "Covered assets/operations"
+      },
+      "maker_id": {
+        "type": "string",
+        "description": "Requestor"
+      },
+      "checker_id": {
+        "type": "string",
+        "description": "Independent approver"
+      },
+      "state": {
+        "type": "string",
+        "description": "Proposed authorized active released"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "PROPOSED",
+      "to": "REVIEW",
+      "guard": "source checked"
+    },
+    {
+      "from": "REVIEW",
+      "to": "AUTHORIZED",
+      "guard": "lawful authority and checker"
+    },
+    {
+      "from": "AUTHORIZED",
+      "to": "ACTIVE",
+      "guard": "scoped intervention"
+    },
+    {
+      "from": "ACTIVE",
+      "to": "RELEASE_REVIEW",
+      "guard": "resolution evidence"
+    },
+    {
+      "from": "RELEASE_REVIEW",
+      "to": "RELEASED",
+      "guard": "independent authority"
+    }
+  ],
+  "requirements": [
+    "Fraud alert alone does not grant indefinite legal asset freeze",
+    "Account restrictions cannot rewrite posted journals",
+    "Protective action is time/evidence scoped and auditable",
+    "No unauthorized officer can remove an external lawful hold",
+    "Do not reveal restricted intelligence case details to general users",
+    "Money movement after an unknown external outcome is not blindly retried"
+  ],
+  "release_gate": "Qualified institutional fraud/legal and account policy approval, exact legal authority, authorization and replay tests."
+}

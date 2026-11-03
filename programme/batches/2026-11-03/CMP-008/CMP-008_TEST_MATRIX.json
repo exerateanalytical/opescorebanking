@@ -1,0 +1,36 @@
+{
+  "work_package": "CMP-008",
+  "executed": false,
+  "cases": [
+    {
+      "id": "CMP-008-TEST-1",
+      "description": "Freeze without legal authority denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-008-TEST-2",
+      "description": "Changed intervention scope requires reapproval",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-008-TEST-3",
+      "description": "Cross-bank restriction denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-008-TEST-4",
+      "description": "Released hold preserves history",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-008-TEST-5",
+      "description": "Risk alert leaves journal unchanged",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
