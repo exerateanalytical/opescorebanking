@@ -1,0 +1,44 @@
+{
+  "package": "CHN-010",
+  "batch": 110,
+  "title": "Customer notifications, receipts and communication provenance",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "notification_id:uuid:message event",
+    "institution_id:uuid:bank controller",
+    "customer_id:uuid:recipient",
+    "template_version:string:approved communication",
+    "event_ref:uuid:source business event",
+    "channel:enum:app/email/sms/inbox",
+    "delivery_state:enum:queued/sent/failed/unknown",
+    "delivery_attempt_id:uuid:retry identity",
+    "sensitivity_class:string:PII exposure control",
+    "receipt_ref:uuid|null:authoritative source proof"
+  ],
+  "workflow": [
+    "Consume authorized domain event with stable event ID",
+    "Resolve recipient preference, lawful purpose and approved localized template",
+    "Sanitize payload to minimum needed content for chosen channel",
+    "Dispatch through controlled provider without asserting delivery from request submission",
+    "Track provider acceptance, actual delivery evidence and failure separately",
+    "Link customer receipt to authoritative bank transaction and correction history"
+  ],
+  "invariants": [
+    "Push or SMS delivery does not prove funds have settled",
+    "Do not include passwords, full account numbers or identity scans in notifications",
+    "Notification retries cannot trigger financial transactions",
+    "Marketing messages require separate lawful preference controls",
+    "Sensitive events must not leak across users or institutions",
+    "Template and language versions remain audit reconstructable",
+    "Provider failure leaves financial source event unchanged"
+  ],
+  "acceptance_tests": [
+    "Duplicate event yields one logical notification",
+    "Provider ACK not treated as delivered",
+    "Cross-tenant recipient mapping denied",
+    "Revoked marketing preference suppresses optional message",
+    "Receipt reflects journal adjustment without altering original"
+  ],
+  "independent_gate": "Institution communication/privacy policy, event contracts, provider security and delivery/replay tests.",
+  "actual_tests_executed": 0
+}
