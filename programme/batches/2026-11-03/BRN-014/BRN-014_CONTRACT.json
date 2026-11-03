@@ -1,0 +1,95 @@
+{
+  "id": "BRN-014",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "receipt_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Logical receipt identity"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank owner"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Counter location"
+      },
+      "operation_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Original teller operation"
+      },
+      "customer_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Authorized recipient"
+      },
+      "cash_handover_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Physical custody"
+      },
+      "journal_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Ledger evidence if posted"
+      },
+      "receipt_status": {
+        "type": "string",
+        "description": "Pending confirmed corrected"
+      },
+      "issued_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Rendering timestamp"
+      },
+      "template_version": {
+        "type": "string",
+        "description": "Controlled format"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "PREPARED",
+      "to": "PENDING",
+      "guard": "cash recorded but posting pending"
+    },
+    {
+      "from": "PENDING",
+      "to": "CONFIRMED",
+      "guard": "ledger and cash reconciled"
+    },
+    {
+      "from": "PENDING",
+      "to": "EXCEPTION",
+      "guard": "posting uncertain"
+    },
+    {
+      "from": "CONFIRMED",
+      "to": "CORRECTED",
+      "guard": "new adjustment referenced"
+    },
+    {
+      "from": "ANY",
+      "to": "VOIDED",
+      "guard": "unissued draft only"
+    }
+  ],
+  "requirements": [
+    "A receipt from a printer is not proof of settled external funds",
+    "Pending deposit must never print as fully credited",
+    "Printing twice does not create a second payment or cash movement",
+    "Receipts must not expose full secret identity/account values",
+    "Original receipt is preserved when a correction occurs",
+    "Branch document template and numbering are controlled"
+  ],
+  "release_gate": "Bank receipt legal fields and localization, approved journal/custody link and print/security tests."
+}

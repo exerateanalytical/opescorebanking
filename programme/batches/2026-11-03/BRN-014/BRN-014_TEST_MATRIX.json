@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-014",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-014-TEST-1",
+      "description": "Duplicate print uses same receipt number",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-014-TEST-2",
+      "description": "Unposted transaction displays pending",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-014-TEST-3",
+      "description": "Correction receipt references original",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-014-TEST-4",
+      "description": "Wrong customer cannot retrieve receipt",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-014-TEST-5",
+      "description": "Exact money amount matches source",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
