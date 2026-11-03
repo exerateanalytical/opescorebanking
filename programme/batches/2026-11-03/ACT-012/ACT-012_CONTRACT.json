@@ -1,0 +1,43 @@
+{
+  "id": "ACT-012",
+  "batch": 72,
+  "title": "Standing orders and recurring account instructions",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "standing_order_id:uuid:instruction identity",
+    "account_id:uuid:debit account",
+    "beneficiary_ref:uuid:approved payee",
+    "institution_id:uuid:scope",
+    "schedule_rule:string:approved recurrence",
+    "next_due_at:datetime:next occurrence",
+    "authorized_amount:string:exact currency amount",
+    "mandate_ref:uuid:signing evidence",
+    "occurrence_id:uuid:unique run",
+    "state:enum:active/paused/cancelled"
+  ],
+  "workflow": [
+    "Authorize and record customer recurring mandate",
+    "Validate account, beneficiary and transaction limits",
+    "Derive deterministic occurrence ID from approved schedule",
+    "At due time revalidate mandate, restrictions and available funds",
+    "Submit one idempotent payment instruction and retain outcome evidence",
+    "Advance schedule only under approved recorded completion/exception semantics"
+  ],
+  "invariants": [
+    "Scheduler replay must not debit twice",
+    "Cancelled or expired mandate cannot execute new occurrence",
+    "Payment network acceptance is not finality",
+    "Unknown external outcome must remain investigable before retry",
+    "Insufficient funds policy is bank-configured and audited",
+    "Mandate revisions preserve past authorizations and executions"
+  ],
+  "planned_tests": [
+    "Timer fires twice and yields one occurrence",
+    "Cancelled order does not execute",
+    "Account hold blocks instruction",
+    "Unknown external result does not blindly resubmit",
+    "Schedule daylight savings/calendar edge reproducible"
+  ],
+  "approval_gate": "Bank recurring-payment policy, approved mandate and payment rail entitlement plus reliability tests.",
+  "executed_tests": 0
+}
