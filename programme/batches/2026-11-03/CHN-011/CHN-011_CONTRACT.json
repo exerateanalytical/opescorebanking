@@ -1,0 +1,44 @@
+{
+  "package": "CHN-011",
+  "batch": 111,
+  "title": "Customer support, complaints and payment dispute case management",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "case_id:uuid:stable complaint",
+    "institution_id:uuid:bank owner",
+    "customer_id:uuid:complainant",
+    "account_ref:uuid|null:scoped record",
+    "transaction_ref:uuid|null:claimed operation",
+    "category:enum:service/payment/fraud/fees",
+    "submitted_at:datetime:case creation",
+    "case_state:enum:open/investigating/escalated/resolved",
+    "evidence_refs:list:protected attachments",
+    "resolution_approval_ref:uuid|null:checker decision"
+  ],
+  "workflow": [
+    "Authenticate claimant or establish authorized assistance channel",
+    "Capture complaint without exposing private counterparty evidence",
+    "Classify severity, legal response window and bank-approved triage owner",
+    "Acquire authoritative journal, settlement and channel-authentication evidence",
+    "Escalate refund, reversal or dispute under independent finance/rail policy",
+    "Communicate resolution with traceable decision and appeal pathway"
+  ],
+  "invariants": [
+    "Customer support staff cannot directly edit posted journal",
+    "Dispute initiation does not itself prove unauthorized activity",
+    "Refund/return is a new authorized financial operation with reconciliation",
+    "Customer communication avoids disclosing AML investigation details",
+    "SLA deadlines require verified local legal/customer policy, not guesswork",
+    "Cross-tenant case access must be denied",
+    "Complaint evidence retained under lawful privacy and audit policies"
+  ],
+  "acceptance_tests": [
+    "Support actor cannot issue direct ledger debit",
+    "Refund without authorized finance approval denied",
+    "Claimant sees only their own case",
+    "Unknown external transfer remains under investigation",
+    "Duplicate complaint links prior case without losing evidence"
+  ],
+  "independent_gate": "Institution complaints policy, applicable dispute rules, payment rail agreements and independent operational/finance tests.",
+  "actual_tests_executed": 0
+}
