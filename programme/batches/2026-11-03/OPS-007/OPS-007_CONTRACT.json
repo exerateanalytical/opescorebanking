@@ -1,0 +1,43 @@
+{
+  "id": "OPS-007",
+  "batch": 87,
+  "title": "Network segmentation, API perimeter and zero-trust controls",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "zone_id:string:trust segment",
+    "environment_id:string:isolated environment",
+    "service_identity:string:workload principal",
+    "source_zone:string:origin",
+    "destination_zone:string:target",
+    "protocol:string:allowed transport",
+    "policy_version:string:network rules",
+    "authentication_mode:string:mTLS/OIDC as approved",
+    "authorization_ref:string:allowed operation",
+    "change_approval_ref:uuid:review evidence"
+  ],
+  "workflow": [
+    "Inventory inbound, east-west and outbound service dependencies",
+    "Assign trust zones and service identities by business domain",
+    "Allow only documented service-to-service traffic",
+    "Protect accounting, KMS, privileged admin and external rail paths",
+    "Log connection decisions without leaking payloads",
+    "Test deny-by-default and review exceptions for emergency channels"
+  ],
+  "invariants": [
+    "Public gateway cannot directly access core accounting database",
+    "Rail adapter requires approved signed protocol and participant network rules",
+    "Administrative access uses controlled bastion/PAM with trace",
+    "Cross-institution connectivity not implicitly allowed",
+    "Environment trust roots are not shared blindly",
+    "Network policy changes require approved documented impact"
+  ],
+  "planned_tests": [
+    "Deny direct internet-to-ledger DB",
+    "Reject unauthorized service identity",
+    "Block staging-to-production settlement route",
+    "Deny unauthorized lateral traffic",
+    "Record unexpected egress attempt"
+  ],
+  "approval_gate": "CISO network topology acceptance, institution-hosting policy and executed isolation/penetration testing.",
+  "executed_tests": 0
+}
