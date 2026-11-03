@@ -1,0 +1,98 @@
+{
+  "schema_version": "draft-1",
+  "work_package_id": "BRN-002",
+  "batch": 122,
+  "domain": "BranchCash",
+  "title": "Teller identities, shift assignment and entitlement lifecycle",
+  "state": "DRAFT_REVIEW_PENDING",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "BRN-002",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "institution_id",
+      "branch_id"
+    ],
+    "properties": {
+      "teller_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "User-to-teller stable identifier"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Tenant ownership"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Assigned branch"
+      },
+      "shift_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Active authorized shift"
+      },
+      "role_policy_version": {
+        "type": "string",
+        "description": "Effective teller role"
+      },
+      "cash_drawer_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Assigned physical custody"
+      },
+      "session_status": {
+        "type": "string",
+        "description": "Scheduled active suspended closed"
+      },
+      "start_at": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Shift activation"
+      },
+      "checker_id": {
+        "type": "string",
+        "description": "Independent supervisor"
+      }
+    }
+  },
+  "state_transitions": [
+    {
+      "from": "SCHEDULED",
+      "to": "AUTHORIZED",
+      "guard": "manager approval"
+    },
+    {
+      "from": "AUTHORIZED",
+      "to": "ACTIVE",
+      "guard": "login and drawer handover"
+    },
+    {
+      "from": "ACTIVE",
+      "to": "SUSPENDED",
+      "guard": "security or cash exception"
+    },
+    {
+      "from": "ACTIVE",
+      "to": "CLOSING",
+      "guard": "cash count starts"
+    },
+    {
+      "from": "CLOSING",
+      "to": "CLOSED",
+      "guard": "verified settlement"
+    }
+  ],
+  "control_requirements": [
+    "No teller self-approval for restricted cash operations",
+    "Shift token cannot authenticate a different branch",
+    "One physical drawer has one accountable custodian per interval",
+    "Expired shift cannot initiate further transactions",
+    "Staff role revocation prevents further actions despite prior login"
+  ],
+  "approval_gate": "Bank HR/IAM roster, teller delegation matrix, operations controls and executable access tests.",
+  "production_mode": "DISABLED_PENDING_EVIDENCE"
+}

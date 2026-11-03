@@ -1,0 +1,46 @@
+{
+  "suite_id": "BRN-002-ACCEPTANCE-DRAFT",
+  "execution_state": "NOT_RUN",
+  "tests": [
+    {
+      "case_id": "BRN-002-T01",
+      "scenario": "Cross-branch login action denied",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-002-T02",
+      "scenario": "Concurrent conflicting custodians rejected",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-002-T03",
+      "scenario": "Closed shift command denied",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-002-T04",
+      "scenario": "Supervisor cannot approve their own disputed cash count",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    },
+    {
+      "case_id": "BRN-002-T05",
+      "scenario": "Role revocation blocks next command",
+      "expected": "Control must enforce scenario and produce auditable decision",
+      "actual_result": null,
+      "environment": null,
+      "evidence_ref": null
+    }
+  ]
+}
