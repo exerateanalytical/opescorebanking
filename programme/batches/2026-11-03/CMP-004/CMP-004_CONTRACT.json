@@ -1,0 +1,94 @@
+{
+  "id": "CMP-004",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "compliance_case_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Investigation"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Regulated owner"
+      },
+      "subject_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Customer or transaction"
+      },
+      "trigger_refs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Alerts and documents"
+      },
+      "assigned_analyst_id": {
+        "type": "string",
+        "description": "Responsible investigator"
+      },
+      "confidentiality_level": {
+        "type": "string",
+        "description": "Access category"
+      },
+      "reviewer_ref": {
+        "type": "string",
+        "description": "Independent checker"
+      },
+      "disposition": {
+        "type": "string",
+        "description": "Investigate clear escalate hold"
+      },
+      "closure_evidence_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Reasoned proof"
+      },
+      "case_state": {
+        "type": "string",
+        "description": "Open investigating review closed"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "OPEN",
+      "to": "INVESTIGATING",
+      "guard": "analyst assigned"
+    },
+    {
+      "from": "INVESTIGATING",
+      "to": "REVIEW",
+      "guard": "documented proposed finding"
+    },
+    {
+      "from": "REVIEW",
+      "to": "ESCALATED",
+      "guard": "qualified supervisory decision"
+    },
+    {
+      "from": "REVIEW",
+      "to": "CLOSED",
+      "guard": "reasoned approval"
+    },
+    {
+      "from": "CLOSED",
+      "to": "REOPENED",
+      "guard": "new material source evidence"
+    }
+  ],
+  "requirements": [
+    "Analyst cannot self-approve legally sensitive case outcome",
+    "A risk alert cannot independently freeze assets without lawful authority",
+    "Customer notifications must not reveal confidential AML reporting",
+    "Case evidence changes are append-only/versioned",
+    "Closure does not delete statutory banking records",
+    "Unresolved cases remain visible in oversight and performance reporting"
+  ],
+  "release_gate": "Qualified compliance authority, institutional case SOP, applicable AML confidentiality provisions and access-control tests."
+}

@@ -1,0 +1,36 @@
+{
+  "work_package": "CMP-004",
+  "executed": false,
+  "cases": [
+    {
+      "id": "CMP-004-TEST-1",
+      "description": "Unauthorized teller cannot view case",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-004-TEST-2",
+      "description": "Same maker/checker rejected",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-004-TEST-3",
+      "description": "Missing legal hold authority blocks freeze",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-004-TEST-4",
+      "description": "New evidence reopens with history intact",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "CMP-004-TEST-5",
+      "description": "Cross-bank case evidence denied",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}
