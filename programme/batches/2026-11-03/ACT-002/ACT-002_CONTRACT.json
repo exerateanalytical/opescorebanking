@@ -1,0 +1,44 @@
+{
+  "id": "ACT-002",
+  "batch": 62,
+  "title": "Product terms versioning and approved change lifecycle",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "terms_id:uuid:versioned terms",
+    "product_id:uuid:parent product",
+    "institution_id:uuid:regulated owner",
+    "version:string:immutable revision",
+    "effective_from:datetime:applicability start",
+    "effective_to:datetime|null:end interval",
+    "rate_plan_id:string:pricing reference",
+    "fee_schedule_id:string:approved fees",
+    "applicability:enum:new_only/consented_existing",
+    "approval_status:enum:draft/approved/suspended"
+  ],
+  "workflow": [
+    "Propose terms change with business justification",
+    "Classify whether new contracts or existing agreements are affected",
+    "Analyze fee, interest, reporting and ledger consequences",
+    "Collect approvals and customer notice/consent where legally required",
+    "Validate effective dates without overlapping conflicting editions",
+    "Activate approved version and preserve historical audit"
+  ],
+  "invariants": [
+    "No retroactive overwrite of customer contract terms",
+    "Contract migration requires contractual and legal authority",
+    "Effective dates distinguish legal approval from deployment time",
+    "Rates and fees must be represented by exact arithmetic policies",
+    "Do not compute customer interest using unapproved accounting mappings",
+    "Every term revision has traceable approver and source documents",
+    "Old versions remain available for statements and disputes"
+  ],
+  "planned_tests": [
+    "Overlapping active versions rejected",
+    "Historic accrual reference retains original version",
+    "Unsigned migration not applied",
+    "Changing terms cannot edit posted journal",
+    "Out-of-window version unavailable to new account"
+  ],
+  "approval_gate": "Product committee and legal/CFO approval, customer notice rules and migration tests.",
+  "executed_tests": 0
+}
