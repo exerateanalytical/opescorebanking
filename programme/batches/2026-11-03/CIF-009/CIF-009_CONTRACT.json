@@ -1,0 +1,43 @@
+{
+  "batch": 49,
+  "id": "CIF-009",
+  "title": "Duplicate party detection and supervised resolution",
+  "status": "DRAFT_NOT_SIGNED",
+  "fields": [
+    "dedupe_case_id:uuid:review case",
+    "institution_id:uuid:search boundary",
+    "source_party_id:uuid:incoming party",
+    "candidate_party_ids:list:potential matches",
+    "match_feature_summary:list:minimized comparison evidence",
+    "confidence_band:enum:low/medium/high/undetermined",
+    "review_state:enum:open/not_same/possible_same/approved_merge",
+    "decision_reason:string:human justification",
+    "approved_by:string|null:independent checker",
+    "merge_version:string|null:authorized revision"
+  ],
+  "workflow": [
+    "Normalize permissible names and identifiers under local data policy",
+    "Run exact checks and privacy-safe similarity candidate discovery",
+    "Present evidence features and uncertainty to authorized reviewer",
+    "Confirm shared or different identity without disclosing unrelated institution data",
+    "If approved, consolidate references under versioned merge with complete audit and reversibility plan",
+    "Notify impacted relationship/account owners and verify reference integrity"
+  ],
+  "rules": [
+    "A matching phone number or name is insufficient for automatic merge",
+    "Never merge two legal entities solely because their trade names are identical",
+    "Duplicate flags cannot trigger unilateral account closure or balance movement",
+    "Do not perform cross-institution biometric or PII matching without explicitly authorized legal basis",
+    "Preserve historical identifiers and original source provenance after approved resolution",
+    "Merges require maker-checker and planned reconciliation for affected external references"
+  ],
+  "planned_test_cases": [
+    "Two customers with shared phone remain separate pending review",
+    "Different legal registries with equal local IDs are not auto-merged",
+    "Merge without independent approval is blocked",
+    "All prior audit references remain resolvable after merge",
+    "Cross-institution duplicate search does not leak candidate identities"
+  ],
+  "acceptance_gate": "Approved deduplication policy, privacy impact review, reference migration safeguards and supervised reviewer identities.",
+  "executed_tests": 0
+}
