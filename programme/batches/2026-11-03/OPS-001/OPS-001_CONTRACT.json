@@ -1,0 +1,43 @@
+{
+  "id": "OPS-001",
+  "batch": 81,
+  "title": "Infrastructure environment taxonomy and separation",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "environment_id:string:stable name",
+    "environment_class:enum:dev/test/qualification/preprod/prod/dr",
+    "institution_id:uuid:deployer scope",
+    "jurisdiction:string:data-location context",
+    "resource_owner:string:operations team",
+    "network_zone:string:approved trust zone",
+    "identity_realm:string:isolated IAM",
+    "key_scope:string:KMS/HSM boundary",
+    "approval_state:enum:draft/approved/active",
+    "change_record_ref:uuid:deployment evidence"
+  ],
+  "workflow": [
+    "Select regulated institution and jurisdiction constraints",
+    "Classify each proposed environment and its processing purpose",
+    "Design segregated network, identity, key and data boundaries",
+    "Define data masking and synthetic fixture restrictions",
+    "Assign operations/security owners and provisioning approval",
+    "Verify isolation and record environment inventory"
+  ],
+  "invariants": [
+    "No production customer records in unapproved test environment",
+    "Production signing keys cannot be reused in development",
+    "DR environment must preserve controlled accounting recovery semantics",
+    "Production external rail credentials are barred from nonproduction",
+    "Tenant scope enforced at service and network boundaries",
+    "Environment activation requires qualified legal and security authorization"
+  ],
+  "planned_tests": [
+    "Production token rejected by staging",
+    "Development secrets unavailable in production",
+    "Sandbox endpoint cannot send production settlement",
+    "Cross-environment audit events remain attributable",
+    "Unapproved PII copy triggers denial"
+  ],
+  "approval_gate": "Institution hosting and sovereignty policy, network/IAM signoff and isolation test evidence.",
+  "executed_tests": 0
+}
