@@ -1,0 +1,44 @@
+{
+  "package": "CHN-019",
+  "batch": 119,
+  "title": "Channel device lifecycle, compatibility and end-to-end testing",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "device_id:uuid:registered installation",
+    "institution_id:uuid:bank owner",
+    "customer_id:uuid:authenticated subject",
+    "device_type:enum:mobile/browser/agent_terminal",
+    "registration_evidence_ref:uuid:proof of binding",
+    "app_version:string:supported version",
+    "integrity_state:enum:unknown/approved/blocked",
+    "last_seen_at:datetime:session event",
+    "revocation_state:enum:active/suspended/revoked",
+    "e2e_test_run_ref:uuid|null:real evidence"
+  ],
+  "workflow": [
+    "Register a supported device only after risk-appropriate customer authentication",
+    "Record device permissions, platform compatibility and version support",
+    "Authorize key banking journeys with institution and account object checks",
+    "Apply revoked-device and expired-session policies to subsequent commands",
+    "Test interrupted, duplicated and delayed channel callbacks in controlled environments",
+    "Review actual end-to-end results for money, privacy, accessibility and error recovery"
+  ],
+  "invariants": [
+    "A trusted device is not permanent authentication or payment authorization",
+    "Invalid app version may be restricted without changing customer account state",
+    "Device deregistration must revoke device-bound sessions",
+    "No production transaction is labeled passed from mocked test fixtures alone",
+    "End-to-end tests include backend permission and bank financial invariants",
+    "Client telemetry may not collect raw banking secrets or personal documents",
+    "A failed compatibility check must never silently bypass security controls"
+  ],
+  "acceptance_tests": [
+    "Revoked mobile session cannot initiate debit",
+    "Unsupported client receives safe upgrade response",
+    "Device switch triggers required step-up",
+    "Web/mobile retry same command does not duplicate posting",
+    "Accessibility and error-recovery flows verified on actual supported devices"
+  ],
+  "independent_gate": "Approved device and versioning policy, qualified security/QA test environment and real end-to-end evidence.",
+  "actual_tests_executed": 0
+}
