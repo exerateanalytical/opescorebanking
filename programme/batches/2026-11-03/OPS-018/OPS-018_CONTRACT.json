@@ -1,0 +1,44 @@
+{
+  "package": "OPS-018",
+  "batch": 98,
+  "title": "Vulnerability management and adversarial testing gates",
+  "state": "DRAFT_DELIVERED_REVIEW_OPEN",
+  "fields": [
+    "finding_id:string:unique detection",
+    "institution_id:uuid:affected deployment",
+    "component_ref:string:source/container/dependency",
+    "severity:enum:critical/high/medium/low",
+    "finding_source:string:scanner or validated tester",
+    "first_observed_at:datetime:actual observation",
+    "affected_version:string:digest/revision",
+    "remediation_owner:string:assigned team",
+    "exception_approval_ref:uuid|null:qualified waiver",
+    "verification_run_ref:uuid|null:confirmed retest"
+  ],
+  "workflow": [
+    "Inventory exposed services, dependencies, APIs and infrastructure",
+    "Schedule authorized secure code review, SAST/DAST and penetration testing",
+    "Validate finding reproducibility and rate actual business impact",
+    "Apply remediation or qualified time-bound risk exception",
+    "Rerun relevant tests and capture real tool outputs",
+    "Block release when critical unresolved risks violate risk threshold"
+  ],
+  "invariants": [
+    "Do not publish false zero-vulnerability claims from an unexecuted scan",
+    "Penetration testing must be authorized and isolated from real customer funds",
+    "Prioritize cross-tenant IDOR, privilege bypass, session replay and money-flow manipulation",
+    "A waived P0 financial regulatory block cannot be treated as security exception",
+    "Supply-chain versions and fixes must be traceable",
+    "Sensitive report access is scoped and logged",
+    "Findings stay open until independently verified closure"
+  ],
+  "acceptance_tests": [
+    "Wrong-tenant object ID denied",
+    "Sensitive API rejects privilege elevation",
+    "Replay token fails after revocation",
+    "Mock financial command cannot be forged by channel client",
+    "Fixed vulnerable dependency shows verified new version"
+  ],
+  "independent_gate": "CISO authorization, actual scanner/testing infrastructure, recorded findings and qualified retest evidence.",
+  "actual_tests_executed": 0
+}
