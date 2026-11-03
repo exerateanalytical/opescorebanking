@@ -1,0 +1,36 @@
+{
+  "work_package": "BRN-010",
+  "executed": false,
+  "cases": [
+    {
+      "id": "BRN-010-TEST-1",
+      "description": "Unapproved order blocked",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-010-TEST-2",
+      "description": "Over-capacity request escalated",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-010-TEST-3",
+      "description": "Provider ACK not recognized as receipt",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-010-TEST-4",
+      "description": "Wrong-currency count rejected",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    },
+    {
+      "id": "BRN-010-TEST-5",
+      "description": "Missing underlying demand data flagged",
+      "expected": "Correct rule enforcement with traceable evidence",
+      "actual": null
+    }
+  ]
+}

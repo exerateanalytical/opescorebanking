@@ -1,0 +1,92 @@
+{
+  "id": "BRN-010",
+  "version": "draft-1",
+  "json_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "replenishment_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Request identity"
+      },
+      "institution_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Bank"
+      },
+      "branch_id": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Stock location"
+      },
+      "currency": {
+        "type": "string",
+        "description": "Cash unit"
+      },
+      "forecast_horizon": {
+        "type": "string",
+        "description": "Period"
+      },
+      "minimum_stock": {
+        "type": "string",
+        "description": "Approved floor"
+      },
+      "maximum_stock": {
+        "type": "string",
+        "description": "Approved ceiling"
+      },
+      "requested_amount": {
+        "type": "string",
+        "description": "Exact request"
+      },
+      "approved_order_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Independent authority"
+      },
+      "received_manifest_ref": {
+        "type": "string",
+        "format": "uuid",
+        "description": "Actual arrival"
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "FORECAST",
+      "to": "REVIEW",
+      "guard": "source evidence validated"
+    },
+    {
+      "from": "REVIEW",
+      "to": "AUTHORIZED",
+      "guard": "treasury security approval"
+    },
+    {
+      "from": "AUTHORIZED",
+      "to": "ORDERED",
+      "guard": "provider request"
+    },
+    {
+      "from": "ORDERED",
+      "to": "RECEIVED",
+      "guard": "physical count"
+    },
+    {
+      "from": "ANY",
+      "to": "EXCEPTION",
+      "guard": "delay or mismatch"
+    }
+  ],
+  "requirements": [
+    "Forecast projection does not create physical funds",
+    "Supplier acknowledgment cannot count as cash received",
+    "Procurement caps must be approved by legal bank entity",
+    "Do not convert currency without approved FX source",
+    "Duplicate order response does not duplicate stock",
+    "Data quality gaps lead to an explicit uncertain forecast"
+  ],
+  "release_gate": "Institutional cash liquidity plan, procurement controls, verified supply contract and physical receipt tests."
+}
