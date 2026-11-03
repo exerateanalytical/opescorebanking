@@ -1,0 +1,42 @@
+[
+  {
+    "id": "GIMAC-AT-001",
+    "scenario": "Timeout after network acceptance must remain UNKNOWN and query/reconcile, not re-post.",
+    "execution": "not_run"
+  },
+  {
+    "id": "GIMAC-AT-002",
+    "scenario": "Duplicate webhook and client retry produce no duplicate ledger posting.",
+    "execution": "not_run"
+  },
+  {
+    "id": "GIMAC-AT-003",
+    "scenario": "Out-of-order settled/rejected messages cannot silently reverse a finalized journal.",
+    "execution": "not_run"
+  },
+  {
+    "id": "GIMAC-AT-004",
+    "scenario": "Settlement discrepancy creates case and blocks automatic finality.",
+    "execution": "not_run"
+  },
+  {
+    "id": "GIMAC-AT-005",
+    "scenario": "Forged callback and expired certificate are rejected and audited.",
+    "execution": "not_run"
+  },
+  {
+    "id": "GIMAC-AT-006",
+    "scenario": "Insufficient funds or limit failure creates no external instruction.",
+    "execution": "not_run"
+  },
+  {
+    "id": "GIMAC-AT-007",
+    "scenario": "Merchant QR payload is validated under verified scheme specifications.",
+    "execution": "not_run"
+  },
+  {
+    "id": "GIMAC-AT-008",
+    "scenario": "Disaster recovery replay preserves deduplication and journal balances.",
+    "execution": "not_run"
+  }
+]

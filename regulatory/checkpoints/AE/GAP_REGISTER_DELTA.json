@@ -1,0 +1,27 @@
+[
+  {
+    "id": "GAP-GIMAC-001",
+    "severity": "P0",
+    "description": "No institution-specific participation and certification status or scheme agreement"
+  },
+  {
+    "id": "GAP-GIMAC-002",
+    "severity": "P0",
+    "description": "No authenticated technical protocol, message schemas, certificates or sandbox credentials"
+  },
+  {
+    "id": "GAP-GIMAC-003",
+    "severity": "P0",
+    "description": "No approved settlement, clearing, fee, chargeback and GL mapping"
+  },
+  {
+    "id": "GAP-GIMAC-004",
+    "severity": "P1",
+    "description": "Current amendment register for BEAC 001/GR/2018 and 04/18 not verified"
+  },
+  {
+    "id": "GAP-GIMAC-005",
+    "severity": "P1",
+    "description": "CEMAC QR payload specification, certification and disputes manual not obtained"
+  }
+]

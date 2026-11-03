@@ -1,0 +1,52 @@
+[
+  {
+    "id": "GIMAC-REQ-001",
+    "requirement": "External GIMAC network status must never directly mutate balances.",
+    "status": "proposed"
+  },
+  {
+    "id": "GIMAC-REQ-002",
+    "requirement": "Represent initiation, accepted, pending, rejected, unknown, cleared, settled, reversed and disputed with separate provenance.",
+    "status": "proposed"
+  },
+  {
+    "id": "GIMAC-REQ-003",
+    "requirement": "Persist immutable idempotency identity and network correlation keys; never retry unknown financial outcomes as fresh payments.",
+    "status": "proposed"
+  },
+  {
+    "id": "GIMAC-REQ-004",
+    "requirement": "Use independently verified settlement evidence before marking settlement final.",
+    "status": "proposed"
+  },
+  {
+    "id": "GIMAC-REQ-005",
+    "requirement": "Reconcile network transaction, clearing, settlement, nostro and GL records with exception queues.",
+    "status": "proposed"
+  },
+  {
+    "id": "GIMAC-REQ-006",
+    "requirement": "Require risk-based authorization, limits, AML/sanctions screening and maker-checker where applicable.",
+    "status": "proposed"
+  },
+  {
+    "id": "GIMAC-REQ-007",
+    "requirement": "Isolate network credentials, certificates and keys; log privileged actions without sensitive payload leakage.",
+    "status": "proposed"
+  },
+  {
+    "id": "GIMAC-REQ-008",
+    "requirement": "Support QR, bank-wallet, wallet-bank, card and merchant capabilities only after each scheme contract is authenticated.",
+    "status": "proposed"
+  },
+  {
+    "id": "GIMAC-REQ-009",
+    "requirement": "Version and effective-date fee, dispute, settlement and message rules per participating institution.",
+    "status": "proposed"
+  },
+  {
+    "id": "GIMAC-REQ-010",
+    "requirement": "Do not claim certified or connected until GIMAC issues evidence of completed approval and testing.",
+    "status": "proposed"
+  }
+]

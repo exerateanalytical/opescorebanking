@@ -1,0 +1,30 @@
+[
+  {
+    "id": "GIMAC-001",
+    "issuer": "BEAC",
+    "url": "https://www.beac.int/systemes-paiement/systeme-de-monetique-interbancaire/",
+    "claim": "GIMACPAY convergent card/mobile/transfer ecosystem",
+    "status": "official_public_page_not_contract"
+  },
+  {
+    "id": "GIMAC-002",
+    "issuer": "BEAC",
+    "url": "https://www.beac.int/wp-content/uploads/2016/10/Instruction_du_GR_001_GR_2018-1.pdf",
+    "claim": "Instruction 001/GR/2018 on interoperability",
+    "status": "official_pdf_needs_effective_date_and_amendment_review"
+  },
+  {
+    "id": "GIMAC-003",
+    "issuer": "GIMAC",
+    "url": "https://gimac-afr.com/2026/08/07/lancement-officiel-du-qr-code-communautaire/",
+    "claim": "CEMAC QR launched July 29 2026",
+    "status": "issuer_announcement_not_interface_contract"
+  },
+  {
+    "id": "GIMAC-004",
+    "issuer": "BEAC",
+    "url": "https://www.beac.int/systemes-paiement/instructions-circulaires-reglements/",
+    "claim": "Payment services and interoperability regulatory catalogue",
+    "status": "official_catalogue_check_current_amendments"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "checkpoint": "AE",
+  "date": "2026-10-09",
+  "inherited_checkpoint": "AD",
+  "last_completed_work_package": "WP-ACC-004 (inherited)",
+  "active_accounting_work_package": "WP-ACC-005 OPEN P0 BLOCKED (unchanged)",
+  "independent_workstream": "WP-PAY-GIMAC-001 GIMACPAY discovery and boundary specification OPEN",
+  "work_packages_attempted": 1,
+  "work_packages_completed": 0,
+  "work_packages_kept_open": 1,
+  "work_packages_blocked_from_closure": 1,
+  "dependent_work_packages_attempted": 0,
+  "production_code_written": false,
+  "banking_tests_executed": 0,
+  "next_exact_task": "WP-ACC-005 / Checkpoint AF — acquire issuer-complete Regulation 02/25 and certified Court dispositions; keep GIMACPAY as separate open evidence-gated workstream",
+  "regulatory_requests_sent": 0
+}
