@@ -1,0 +1,84 @@
+{
+  "id": "ARC-013",
+  "batch": 33,
+  "title": "Versioned configuration and capability activation",
+  "status": "DRAFT_DELIVERED_AWAITING_INDEPENDENT_ACCEPTANCE",
+  "fields": [
+    {
+      "name": "configuration_id",
+      "type": "uuid",
+      "description": "policy identifier"
+    },
+    {
+      "name": "institution_id",
+      "type": "uuid",
+      "description": "licensed tenant"
+    },
+    {
+      "name": "capability_code",
+      "type": "string",
+      "description": "controlled capability name"
+    },
+    {
+      "name": "rule_version",
+      "type": "string",
+      "description": "immutable policy version"
+    },
+    {
+      "name": "effective_from",
+      "type": "datetime",
+      "description": "legal/operational start"
+    },
+    {
+      "name": "effective_to",
+      "type": "datetime|null",
+      "description": "close of interval"
+    },
+    {
+      "name": "authority_evidence_id",
+      "type": "uuid",
+      "description": "issuer/institution provenance"
+    },
+    {
+      "name": "maker_subject",
+      "type": "string",
+      "description": "change author"
+    },
+    {
+      "name": "checker_subject",
+      "type": "string",
+      "description": "independent approver"
+    },
+    {
+      "name": "activation_state",
+      "type": "enum",
+      "description": "draft/review/approved/active/suspended"
+    }
+  ],
+  "workflow": [
+    "Open a new versioned capability change proposal",
+    "Attach applicable regulatory and institutional authority evidence",
+    "Compute dependencies and effective-date overlap checks",
+    "Perform independent legal/finance/security review when appropriate",
+    "Activate only approved versions for the approved legal entity and interval",
+    "Record rollback/suspension without changing historical applied rules"
+  ],
+  "requirements": [
+    "A discovered publication does not itself activate a capability",
+    "Conflicting effective rules for the same institution/scope must stop activation",
+    "All bank-specific settlement and accounting capabilities default to disabled",
+    "Maintain immutable historical versions so reports reproduce prior calculations",
+    "Require maker-checker for all money-impacting configuration changes",
+    "Reject rate or reporting policy changes that would silently modify a posted journal"
+  ],
+  "acceptance_cases": [
+    "Unreviewed capability remains inactive",
+    "Reject overlapping active configuration intervals",
+    "Reproduce old account calculation with original version after an amendment",
+    "Deny capability with expired participation evidence",
+    "Ensure suspended rail cannot accept new outbound messages"
+  ],
+  "approval_gate": "Signed source provenance, approver roles, accepted institution profile and configuration transition tests.",
+  "code_status": "NOT_STARTED",
+  "tests_executed": 0
+}
