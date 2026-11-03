@@ -1,0 +1,43 @@
+{
+  "id": "OPS-002",
+  "batch": 82,
+  "title": "Source control, branch protection and secure SDLC",
+  "status": "DRAFT_REVIEW_OPEN",
+  "schema": [
+    "repository_id:string:canonical source project",
+    "protected_branch:string:controlled branch",
+    "change_id:uuid:tracked request",
+    "author_id:string:code author",
+    "reviewer_ids:list:independent peers",
+    "commit_sha:string:exact revision",
+    "test_report_ref:uuid|null:executed CI evidence",
+    "security_scan_ref:uuid|null:real scan output",
+    "release_candidate_id:string:immutable build",
+    "approval_status:enum:pending/accepted/rejected"
+  ],
+  "workflow": [
+    "Link engineering issue to approved scope and requirements",
+    "Develop in isolated branch with controlled dependency versions",
+    "Run code tests, static checking and secret scans",
+    "Require independent review and protected-branch gates",
+    "Create signed/provenance-attested release artifact where supported",
+    "Promote only with accountable release authorization"
+  ],
+  "invariants": [
+    "A generated design ZIP is not a tested software release",
+    "No direct unreviewed production patch under routine permissions",
+    "Secrets, private credentials and customer data cannot enter Git history",
+    "Financial changes require extra CFO/test gate where applicable",
+    "All release artifacts identify exact source commit and build environment",
+    "Failed CI checks must block merge rather than be suppressed"
+  ],
+  "planned_tests": [
+    "Unreviewed PR cannot merge",
+    "Secret pattern detected and rejected",
+    "Failed tests block protected ref",
+    "Release digest links to source commit",
+    "Unapproved user cannot bypass reviewer requirement"
+  ],
+  "approval_gate": "Organization repository policy, actual CI runtime, independent maintainers and executed check evidence.",
+  "executed_tests": 0
+}
