@@ -1071,5 +1071,5 @@ regulatory/recovery/source/AN/README.md,f2128a6c354d4f8042e5f5dd06688b69f16cba16
 regulatory/recovery/source/AN/REQUIREMENTS.json,729e580f5955def608b083b6ebda1ccc76384441b16ef7f5222802c8a3ae89ab,1117,,YES,NO,NO
 regulatory/recovery/source/AN/SHA256SUMS.txt,f72440358200f491628371743b2fda9832bf33e61843b7a63f8b640d5e34b03e,770,,NO,NO,NO
 regulatory/recovery/source/AN/SOURCE_REGISTER.json,e5e7156873f2510f0060a36758b6eb9aa5a0eeaaae39c8e6731e73606ecd8755,1216,,YES,NO,NO
-tools/reconcile_core_banking.py,7e3f36b5a06aae13d0a667d00122c1ace3467be7e3c8007242deaad280220f59,16918,"Canonical state v0.3 corrections trigger a fresh, reproducible audited source archive.",YES,YES,YES
+tools/reconcile_core_banking.py,7eb099132ae6280c43bbb8818a9911d952fe6bc94f900355a28d236bc921c5a4,18589,"Canonical state v0.3 corrections trigger a fresh, reproducible audited source archive.",YES,YES,YES
 tools/recovery/build_checkpoint_an.py,440694f3f0f30eb2223cc15096299bdc629932250f2d89708159c6f09ee4b847,2251,,NO,NO,NO

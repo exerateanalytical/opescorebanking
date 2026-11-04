@@ -1,0 +1,550 @@
+[
+  {
+    "expected_contract": "programme/batches/2026-11-03/ARC-001/ARC-001_CONTRACT.json",
+    "id": "ARC-001",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "ARC-001 — Enterprise context map",
+      "Domain requirements and control design",
+      "Deliverables for acceptance",
+      "Acceptance tests to prepare (NOT RUN)",
+      "Evidence and approval gaps",
+      "Completion boundary"
+    ],
+    "source_spec": "programme/batches/2026-11-03/ARC-001/ARC-001_SPEC.md",
+    "source_spec_sha256": "c57d9444947b6cdfd1d3c8f424800382d29097354c846046ca063406522786a5",
+    "source_text_preserved": "# ARC-001 — Enterprise context map\n\nOPES Core Banking | 2026-11-03 | Batch 21/30 | Status: ARCHITECTURE DRAFT DELIVERED; ACCEPTANCE OPEN\nBased on prior governance and CT/CP checkpoint documents already verified in exerateanalytical/opescorebanking. This is a candidate technical specification, not code or a claim of regulatory approval.\n\n## Domain requirements and control design\n1. **ARC-001-R01:** Define contexts Customer Information, Product Catalogue, Accounts, Accounting, Branch Cash, Payment Orchestration, Credit, Treasury, Compliance, Reporting and Digital Channels.\n2. **ARC-001-R02:** Customer Information is authoritative for identity and customer relationships; Accounts owns account lifecycle, mandates and restrictions.\n3. **ARC-001-R03:** Product Catalogue owns product definitions and effective-dated approved terms; Accounting owns financial journals and reporting reconciliation.\n4. **ARC-001-R04:** Payment Orchestration owns external instruction status and evidence links, while bank accounting remains an independent responsibility.\n5. **ARC-001-R05:** Credit owns contracts, schedules and collections; Treasury owns positions, forecasts and policies; neither overwrites Accounting source records.\n6. **ARC-001-R06:** Define supported interactions as documented APIs, events or approved read-only projections instead of undocumented shared database access.\n7. **ARC-001-R07:** Require every cross-context flow to identify authority, responsible team, audit correlation, error outcome and reconciliation dependency.\n8. **ARC-001-R08:** Maintain a context ownership register and unresolved interface decisions for legal, operations and finance review.\n\n## Deliverables for acceptance\n- Context ownership register\n- Interaction diagram specification\n- Authority/responsibility mapping\n\n## Acceptance tests to prepare (NOT RUN)\n- [ ] AC-1: Every key entity has one authoritative owner\n- [ ] AC-2: No two contexts independently own same journal\n- [ ] AC-3: Each flow has an error and recovery owner\n\n## Evidence and approval gaps\n- Domain owner approvals and institution scope pending\n\n## Completion boundary\nDelivered design draft only. No tests executed, no production code, no certified financial configuration. Implement only after domain DoR, source authority and institution review.\n",
+    "source_title": "ARC-001 — Enterprise context map",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/ARC-002/ARC-002_CONTRACT.json",
+    "id": "ARC-002",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "ARC-002 — Domain boundaries and invariants",
+      "Domain requirements and control design",
+      "Deliverables for acceptance",
+      "Acceptance tests to prepare (NOT RUN)",
+      "Evidence and approval gaps",
+      "Completion boundary"
+    ],
+    "source_spec": "programme/batches/2026-11-03/ARC-002/ARC-002_SPEC.md",
+    "source_spec_sha256": "206e70546691fa69a2802c4c61410c3419e5d373334335209b39fd9e14407b8d",
+    "source_text_preserved": "# ARC-002 — Domain boundaries and invariants\n\nOPES Core Banking | 2026-11-03 | Batch 22/30 | Status: ARCHITECTURE DRAFT DELIVERED; ACCEPTANCE OPEN\nBased on prior governance and CT/CP checkpoint documents already verified in exerateanalytical/opescorebanking. This is a candidate technical specification, not code or a claim of regulatory approval.\n\n## Domain requirements and control design\n1. **ARC-002-R01:** Classify customer identity, account agreement, product version, accounting journal, payment instruction, branch cash session and loan agreement as separate candidate aggregates.\n2. **ARC-002-R02:** Define unique identifiers, command authorization, lifecycle states, optimistic concurrency and audit trace on each candidate aggregate.\n3. **ARC-002-R03:** Accounting journal posting must preserve currency-specific balancing and immutable posted history; adjustments use explicit controlled correction records.\n4. **ARC-002-R04:** Money values require deterministic exact representation and explicit currency/rounding configuration approved for the institution.\n5. **ARC-002-R05:** Payment lifecycle distinguishes initiated, approved, externally submitted, status-unknown, evidenced completion and reconciliation milestones.\n6. **ARC-002-R06:** Retries of the same customer operation must return or reconcile the original outcome instead of duplicating a transaction.\n7. **ARC-002-R07:** Cross-domain state propagation is asynchronous where appropriate, with explicit source ownership and reconciliation checks.\n8. **ARC-002-R08:** Reject implementation of account mapping or settlement transitions while their regulatory evidence remains disputed.\n\n## Deliverables for acceptance\n- Aggregate candidate catalogue\n- Invariant catalogue\n- Lifecycle acceptance scenarios\n\n## Acceptance tests to prepare (NOT RUN)\n- [ ] AC-1: No money movement without authorized financial record\n- [ ] AC-2: Repeated request cannot double apply\n- [ ] AC-3: Unresolved external outcome is not treated as success\n\n## Evidence and approval gaps\n- Exact institution-specific ledger/rail approvals outstanding\n\n## Completion boundary\nDelivered design draft only. No tests executed, no production code, no certified financial configuration. Implement only after domain DoR, source authority and institution review.\n",
+    "source_title": "ARC-002 — Domain boundaries and invariants",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/ARC-003/ARC-003_CONTRACT.json",
+    "id": "ARC-003",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "ARC-003 — Deployment and continuity option assessment",
+      "Domain requirements and control design",
+      "Deliverables for acceptance",
+      "Acceptance tests to prepare (NOT RUN)",
+      "Evidence and approval gaps",
+      "Completion boundary"
+    ],
+    "source_spec": "programme/batches/2026-11-03/ARC-003/ARC-003_SPEC.md",
+    "source_spec_sha256": "8269eba6f2fc7814d4725669c80b0e3951ddafa2f3bce84a585022c0169be13d",
+    "source_text_preserved": "# ARC-003 — Deployment and continuity option assessment\n\nOPES Core Banking | 2026-11-03 | Batch 23/30 | Status: ARCHITECTURE DRAFT DELIVERED; ACCEPTANCE OPEN\nBased on prior governance and CT/CP checkpoint documents already verified in exerateanalytical/opescorebanking. This is a candidate technical specification, not code or a claim of regulatory approval.\n\n## Domain requirements and control design\n1. **ARC-003-R01:** Compare approved-institution on-premises, hosted-private and carefully scoped hybrid deployment options without selecting technology prematurely.\n2. **ARC-003-R02:** Document legal entity, site, jurisdiction, data residency and regulator requirements for each option.\n3. **ARC-003-R03:** Separate development, qualification and production datasets, access rights and operational approvals.\n4. **ARC-003-R04:** Design for redundant runtime services, resilient persistence, monitored integrations and tested disaster recovery; select numeric targets with institution evidence.\n5. **ARC-003-R05:** Define operational response to database failover, interrupted processing, unavailable external rails and delayed reconciliation feeds.\n6. **ARC-003-R06:** Use auditable deployment manifests, change approvals, reversible non-financial changes and controlled financial corrections.\n7. **ARC-003-R07:** Require performance sizing from expected peak workload and measured load tests, not arbitrary throughput declarations.\n8. **ARC-003-R08:** Record technology choices as ADR proposals evaluated against supportability, cost, safety and operational skills.\n\n## Deliverables for acceptance\n- Deployment comparison matrix\n- Continuity and data-residency review form\n- Capacity evidence requirements\n\n## Acceptance tests to prepare (NOT RUN)\n- [ ] AC-1: Hosting selected only after legal/ops review\n- [ ] AC-2: Recovery maintains accounting consistency\n- [ ] AC-3: No unverified SLA advertised\n\n## Evidence and approval gaps\n- Approved hosting jurisdiction, workload envelope and RPO/RTO undefined\n\n## Completion boundary\nDelivered design draft only. No tests executed, no production code, no certified financial configuration. Implement only after domain DoR, source authority and institution review.\n",
+    "source_title": "ARC-003 — Deployment and continuity option assessment",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/ARC-004/ARC-004_CONTRACT.json",
+    "id": "ARC-004",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "ARC-004 — Architecture principles and quality constraints",
+      "Domain requirements and control design",
+      "Deliverables for acceptance",
+      "Acceptance tests to prepare (NOT RUN)",
+      "Evidence and approval gaps",
+      "Completion boundary"
+    ],
+    "source_spec": "programme/batches/2026-11-03/ARC-004/ARC-004_SPEC.md",
+    "source_spec_sha256": "b2a02758d20b159fa9ee9dc9a55917ba3c0c5deb82b96f260d033c8a93718cc0",
+    "source_text_preserved": "# ARC-004 — Architecture principles and quality constraints\n\nOPES Core Banking | 2026-11-03 | Batch 24/30 | Status: ARCHITECTURE DRAFT DELIVERED; ACCEPTANCE OPEN\nBased on prior governance and CT/CP checkpoint documents already verified in exerateanalytical/opescorebanking. This is a candidate technical specification, not code or a claim of regulatory approval.\n\n## Domain requirements and control design\n1. **ARC-004-R01:** All channel and partner operations use versioned, authenticated service interfaces; no direct database access from frontends.\n2. **ARC-004-R02:** Define authoritative domain ownership and typed interfaces; prevent competing writes to accounting records.\n3. **ARC-004-R03:** Require explicit access decisions for tenant, role, legal entity, transaction and maker-checker where applicable.\n4. **ARC-004-R04:** Use reliable event publication and consumer deduplication so documented workflows survive retries and restarts.\n5. **ARC-004-R05:** Keep reporting projections rebuildable from authoritative sources and subject to independent reconciliation.\n6. **ARC-004-R06:** Design for effective-dated configuration, source provenance, reviewable changes and backward-compatible integration.\n7. **ARC-004-R07:** Expose operational health, correlation identifiers, redacted errors, support diagnostics and explicit recovery playbooks.\n8. **ARC-004-R08:** Treat code readiness, operational readiness and legal authorization as separate evidence-backed approval gates.\n\n## Deliverables for acceptance\n- Architecture principle register\n- Design review checklist\n- Anti-pattern examples\n\n## Acceptance tests to prepare (NOT RUN)\n- [ ] AC-1: Each principle has an owner and acceptance evidence\n- [ ] AC-2: No UI-only permission control\n- [ ] AC-3: Design review blocks disputed finance activation\n\n## Evidence and approval gaps\n- Cross-disciplinary review and solution ADR signoff outstanding\n\n## Completion boundary\nDelivered design draft only. No tests executed, no production code, no certified financial configuration. Implement only after domain DoR, source authority and institution review.\n",
+    "source_title": "ARC-004 — Architecture principles and quality constraints",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/ARC-005/ARC-005_CONTRACT.json",
+    "id": "ARC-005",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "ARC-005 — Architecture decision register and ADR templates",
+      "Proposed requirements / policy",
+      "Design deliverables",
+      "Acceptance scenarios (unexecuted)",
+      "Pending decisions and constraints",
+      "Evidence status"
+    ],
+    "source_spec": "programme/batches/2026-11-03/ARC-005/ARC-005_SPEC.md",
+    "source_spec_sha256": "b259b65b1e7828187899808964812a14dc880140e24d7af04531dba7499f07c7",
+    "source_text_preserved": "# ARC-005 — Architecture decision register and ADR templates\n\nOPES Core Banking | 2026-11-03 | Batch 25/30 | Status: DESIGN DRAFT DELIVERED; APPROVAL OPEN\nProvenance: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md. This proposes technical governance, not executable code or a certified regulatory conclusion.\n\n## Proposed requirements / policy\n1. **ARC-005-R01:** ADR-001 PROPOSED: accounting journal authority remains a single Ledger domain; other contexts request postings via authorized domain contracts.\n2. **ARC-005-R02:** ADR-002 PROPOSED: distribute business changes through durable recorded events rather than relying on best-effort callbacks.\n3. **ARC-005-R03:** ADR-003 PROPOSED: money-moving commands carry stable idempotency identifiers scoped to institution, operation and requesting actor.\n4. **ARC-005-R04:** ADR-004 PROPOSED: institution profile, regulator evidence and permitted capability form a gated deployment configuration, not a runtime guess.\n5. **ARC-005-R05:** ADR-005 PROPOSED: query/read projections may lag writes but must expose freshness and reconciliation status for critical screens.\n6. **ARC-005-R06:** An ADR records context, decision, alternatives, acceptance criteria, rejected risks, reviewers, date, effective release and supersession ID.\n7. **ARC-005-R07:** Require legal, finance, security and operations signoff for ADRs crossing their authority boundaries; document a dissent path.\n8. **ARC-005-R08:** Use DRAFT, PROPOSED, ACCEPTED, SUPERSEDED and REJECTED states; current ADR candidates are not accepted architecture mandates.\n\n## Design deliverables\n- ADR-001 to ADR-005 candidates\n- Decision log schema\n- Architecture board review queue\n\n## Acceptance scenarios (unexecuted)\n- [ ] AC-1: All accepted ADRs have named reviewers\n- [ ] AC-2: Alternatives and rollback consequences documented\n- [ ] AC-3: No draft ADR passed as accepted\n\n## Pending decisions and constraints\n- Architecture council and institution signatories not appointed\n\n## Evidence status\nDelivered only a documented technical draft. Work-package completion is not asserted. Tests executed: 0. Production code: 0. Institute-specific and disputed regulatory controls remain blocked until signed authority and review are established.\n",
+    "source_title": "ARC-005 — Architecture decision register and ADR templates",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/ARC-006/ARC-006_CONTRACT.json",
+    "id": "ARC-006",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "ARC-006 — API contract conventions and service ownership",
+      "Proposed requirements / policy",
+      "Design deliverables",
+      "Acceptance scenarios (unexecuted)",
+      "Pending decisions and constraints",
+      "Evidence status"
+    ],
+    "source_spec": "programme/batches/2026-11-03/ARC-006/ARC-006_SPEC.md",
+    "source_spec_sha256": "2566f1facacb7e0b7e8ad0684e32dc98c921b45a87d61dbb78c427ddf3303cc4",
+    "source_text_preserved": "# ARC-006 — API contract conventions and service ownership\n\nOPES Core Banking | 2026-11-03 | Batch 26/30 | Status: DESIGN DRAFT DELIVERED; APPROVAL OPEN\nProvenance: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md. This proposes technical governance, not executable code or a certified regulatory conclusion.\n\n## Proposed requirements / policy\n1. **ARC-006-R01:** Document endpoints with OpenAPI versions, owner, institution scope, caller entitlement, request schema, response schema and typed error cases.\n2. **ARC-006-R02:** Use explicit idempotency key on financial command operations with clear retry and stored-result semantics; reject ambiguous replays.\n3. **ARC-006-R03:** Use request correlation IDs, causation IDs, actor ID and institution ID in auditable request metadata without exposing private data in logs.\n4. **ARC-006-R04:** Separate command interfaces from read endpoints where financial consistency or query latency warrants it; do not imply all reads are immediately consistent.\n5. **ARC-006-R05:** Return stable machine-readable error categories for denied access, invalid state, stale version, conflict, unavailable authority and unknown external outcome.\n6. **ARC-006-R06:** Support pagination, filtering and total/continuation semantics for read lists while enforcing institution and branch access at server side.\n7. **ARC-006-R07:** Define backward compatibility policy and deprecation windows; disallow silent mutation of active contract fields that clients rely upon.\n8. **ARC-006-R08:** Specify authentication, fine-grained authorization, rate controls and operational monitoring as interface requirements without assuming a vendor implementation.\n\n## Design deliverables\n- OpenAPI style guide draft\n- Command and query error taxonomy\n- Idempotency header and response contract\n\n## Acceptance scenarios (unexecuted)\n- [ ] AC-1: Every command declares actor and institution scope\n- [ ] AC-2: Client retries are unambiguous\n- [ ] AC-3: Cross-entity record references denied\n\n## Pending decisions and constraints\n- Initial API consumers and authenticated permissions model require approval\n\n## Evidence status\nDelivered only a documented technical draft. Work-package completion is not asserted. Tests executed: 0. Production code: 0. Institute-specific and disputed regulatory controls remain blocked until signed authority and review are established.\n",
+    "source_title": "ARC-006 — API contract conventions and service ownership",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/ARC-007/ARC-007_CONTRACT.json",
+    "id": "ARC-007",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "ARC-007 — Domain event envelope and schema governance",
+      "Proposed requirements / policy",
+      "Design deliverables",
+      "Acceptance scenarios (unexecuted)",
+      "Pending decisions and constraints",
+      "Evidence status"
+    ],
+    "source_spec": "programme/batches/2026-11-03/ARC-007/ARC-007_SPEC.md",
+    "source_spec_sha256": "591ba77f93b2410828f28457b9aaf7dc4f6ce04e722adf6822752d720e1f7b5d",
+    "source_text_preserved": "# ARC-007 — Domain event envelope and schema governance\n\nOPES Core Banking | 2026-11-03 | Batch 27/30 | Status: DESIGN DRAFT DELIVERED; APPROVAL OPEN\nProvenance: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md. This proposes technical governance, not executable code or a certified regulatory conclusion.\n\n## Proposed requirements / policy\n1. **ARC-007-R01:** Propose event envelope fields event_id, event_type, schema_version, tenant_id, aggregate_id, aggregate_version, occurred_at, recorded_at and correlation_id.\n2. **ARC-007-R02:** Distinguish business fact events from commands, requests and projection notifications; a received message alone is not a bank accounting posting.\n3. **ARC-007-R03:** Document producer owner, consumer roster, field-level data classification, retention and compatibility rules for each event.\n4. **ARC-007-R04:** Require immutable event identifiers and typed aggregate version to detect duplicate delivery and stale/out-of-order processing.\n5. **ARC-007-R05:** Build backward-compatible schema evolution with explicit breaking-change migration plan and consumer confirmation.\n6. **ARC-007-R06:** Minimize personal details in general-purpose event buses; use references and access-controlled retrieval when possible.\n7. **ARC-007-R07:** Document replay semantics, side-effect safeguards, consumer recovery and poison-message escalation; event handling must be observable.\n8. **ARC-007-R08:** Define proposed examples CustomerVerified, AccountOpened, JournalPosted, PaymentSubmissionRecorded, SettlementEvidenceAttached and ReconciliationCompleted.\n\n## Design deliverables\n- Event catalogue candidate\n- Envelope JSON schema draft\n- Consumer compatibility checklist\n\n## Acceptance scenarios (unexecuted)\n- [ ] AC-1: Every event has one accountable producer\n- [ ] AC-2: No event implies finality without supporting evidence\n- [ ] AC-3: Replay cannot duplicate financial consequences\n\n## Pending decisions and constraints\n- Event transport and schema registry selection not ratified\n\n## Evidence status\nDelivered only a documented technical draft. Work-package completion is not asserted. Tests executed: 0. Production code: 0. Institute-specific and disputed regulatory controls remain blocked until signed authority and review are established.\n",
+    "source_title": "ARC-007 — Domain event envelope and schema governance",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/ARC-008/ARC-008_CONTRACT.json",
+    "id": "ARC-008",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "ARC-008 — Transactional outbox/inbox and durable delivery policy",
+      "Proposed requirements / policy",
+      "Design deliverables",
+      "Acceptance scenarios (unexecuted)",
+      "Pending decisions and constraints",
+      "Evidence status"
+    ],
+    "source_spec": "programme/batches/2026-11-03/ARC-008/ARC-008_SPEC.md",
+    "source_spec_sha256": "cfda45ef52f0ca270d4fd77cda5f82171b3464c6fa4752bf51e2892ac2f3d196",
+    "source_text_preserved": "# ARC-008 — Transactional outbox/inbox and durable delivery policy\n\nOPES Core Banking | 2026-11-03 | Batch 28/30 | Status: DESIGN DRAFT DELIVERED; APPROVAL OPEN\nProvenance: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md. This proposes technical governance, not executable code or a certified regulatory conclusion.\n\n## Proposed requirements / policy\n1. **ARC-008-R01:** Write authoritative domain change and outbound event record atomically in the owning database transaction.\n2. **ARC-008-R02:** Publish outbox records asynchronously and record delivery attempts; treat broker acknowledgement as message delivery, not business completion.\n3. **ARC-008-R03:** Consumer inbox stores event identity and processing disposition so repeated deliveries do not repeat business side effects.\n4. **ARC-008-R04:** Document retry class per failure: transient, validation, authorization, version conflict and unknown business outcome.\n5. **ARC-008-R05:** Escalate non-processable messages for monitored operations review; never discard money-relevant messages silently.\n6. **ARC-008-R06:** Explicitly handle restarts between database commit, outbox transmission, consumer receipt and acknowledgement.\n7. **ARC-008-R07:** Include event version and producer signature/authorization metadata where warranted by security review; do not assume any one broker is mandatory.\n8. **ARC-008-R08:** Track publication lag, inbox duplicate rate, poison count, reconciliation errors and recovery time with measurable acceptance thresholds chosen after load and fault tests.\n\n## Design deliverables\n- Outbox/inbox state model\n- Retry and error classification matrix\n- Fault-injection scenario list\n\n## Acceptance scenarios (unexecuted)\n- [ ] AC-1: Committed event survives publish failure\n- [ ] AC-2: Duplicate event does not duplicate side effect\n- [ ] AC-3: Failed messages remain observable\n\n## Pending decisions and constraints\n- Broker, data transaction model and test harness not established\n\n## Evidence status\nDelivered only a documented technical draft. Work-package completion is not asserted. Tests executed: 0. Production code: 0. Institute-specific and disputed regulatory controls remain blocked until signed authority and review are established.\n",
+    "source_title": "ARC-008 — Transactional outbox/inbox and durable delivery policy",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/ARC-009/ARC-009_CONTRACT.json",
+    "id": "ARC-009",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "ARC-009 — Idempotency, replay and uncertain-outcome contract",
+      "Requirements, invariants and recovery behavior",
+      "Required acceptance artifacts",
+      "Acceptance scenarios — PLANNED, NOT RUN",
+      "Open evidence and approval gaps",
+      "Delivery classification"
+    ],
+    "source_spec": "programme/batches/2026-11-03/ARC-009/ARC-009_SPEC.md",
+    "source_spec_sha256": "39f189cbdbfe7e6a6080312596929c03ae2d81d35bb0736ad580ffb16d95d05e",
+    "source_text_preserved": "# ARC-009 — Idempotency, replay and uncertain-outcome contract\n\nOPES Core Banking | 2026-11-03 | Batch 29/30 | Status: DESIGN DRAFT DELIVERED; REVIEW AND TESTS OPEN\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md. These requirements are proposed engineering controls, not implemented functionality.\n\n## Requirements, invariants and recovery behavior\n1. **ARC-009-R01:** Introduce one business operation identifier for each authorized financial command, unique per tenant, context and operation type.\n2. **ARC-009-R02:** Retain an idempotency record that records request fingerprint, authorization context, processing state, final recorded outcome and correlation identifiers.\n3. **ARC-009-R03:** A repeated identical request returns the existing safe outcome or explicit unknown state; a conflicting payload with reused key is rejected.\n4. **ARC-009-R04:** Distinguish local command completion from external submission, network acknowledgement, settlement evidence and independent reconciliation.\n5. **ARC-009-R05:** Retry transport failures with bounded policy, but never repeat an uncertain money-moving side effect simply because a response timed out.\n6. **ARC-009-R06:** Queue unresolved external outcomes for investigation and source reconciliation rather than marking success, failure or reversal without evidence.\n7. **ARC-009-R07:** Preserve deterministic replay across service restart, message redelivery and disaster recovery with event identity and audit references.\n8. **ARC-009-R08:** Design negative test cases for double-submit, concurrent requests, expired key, cross-tenant key collision, external timeout and late duplicate callback.\n9. **ARC-009-R09:** Do not mark this specification implemented until actual fault injection and ledger conservation tests prove it under failure.\n\n## Required acceptance artifacts\n- Idempotency state machine\n- Command key namespace policy\n- Negative test specifications\n\n## Acceptance scenarios — PLANNED, NOT RUN\n- [ ] AC-1: Identical retry does not double apply\n- [ ] AC-2: Unknown outcome remains investigable\n- [ ] AC-3: Cross-tenant replay denied\n\n## Open evidence and approval gaps\n- Implementation API and journal reconciliation test evidence pending\n\n## Delivery classification\nDesign document completed and uploaded; WP acceptance remains open. Production code: 0; tests executed: 0; regulatory approval claimed: 0. Accounting mapping 312/322 and external rail entitlements remain P0-gated.\n",
+    "source_title": "ARC-009 — Idempotency, replay and uncertain-outcome contract",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/ARC-010/ARC-010_CONTRACT.json",
+    "id": "ARC-010",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "ARC-010 — Data architecture, classification and lifecycle blueprint",
+      "Requirements, invariants and recovery behavior",
+      "Required acceptance artifacts",
+      "Acceptance scenarios — PLANNED, NOT RUN",
+      "Open evidence and approval gaps",
+      "Delivery classification"
+    ],
+    "source_spec": "programme/batches/2026-11-03/ARC-010/ARC-010_SPEC.md",
+    "source_spec_sha256": "11e558651938b2844fec9214a3e27bdaecc01bd9fb329c054d5824894c7eff71",
+    "source_text_preserved": "# ARC-010 — Data architecture, classification and lifecycle blueprint\n\nOPES Core Banking | 2026-11-03 | Batch 30/30 | Status: DESIGN DRAFT DELIVERED; REVIEW AND TESTS OPEN\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md. These requirements are proposed engineering controls, not implemented functionality.\n\n## Requirements, invariants and recovery behavior\n1. **ARC-010-R01:** Define authoritative stores for customer master data, account lifecycle, financial journals, payment orchestration and approved reference data, with one write owner each.\n2. **ARC-010-R02:** Use explicit primary identifiers, legal entity, institution scope, creation version, source provenance, effective dates and audit record references.\n3. **ARC-010-R03:** Model exact currency and monetary units using a deterministic representation; enforce referential integrity for journals, lines and approved chart mappings.\n4. **ARC-010-R04:** Maintain immutable posted journal and correction reference chain; never delete or overwrite posting history to change an account balance.\n5. **ARC-010-R05:** Use versioned configuration for products, fees, rates and regulatory reporting rules with reviewed effective intervals.\n6. **ARC-010-R06:** Separate sensitive customer data from audit/event payloads where possible; enforce retention, access logging, encryption and deletion restrictions under applicable legal profile.\n7. **ARC-010-R07:** Define outbox/inbox tables and projection checkpoints so eventual-consistency read stores are rebuildable and traceable to source commits.\n8. **ARC-010-R08:** Reconcile data migrations with source/target record counts, balance totals, exception inventory, dual approval and signed rollback/correction plan.\n9. **ARC-010-R09:** Establish data-quality controls for duplicate customers, orphaned account references, late messages, inconsistent dates and mismatched accounting partitions.\n10. **ARC-010-R10:** Document backup, restore, archival and data-sovereignty requirements for institution signoff before choosing a DB/hosting product.\n\n## Required acceptance artifacts\n- Conceptual data ownership and classification matrix\n- Migration reconciliation and lineage checklist\n- Data lifecycle acceptance scenarios\n\n## Acceptance scenarios — PLANNED, NOT RUN\n- [ ] AC-1: Journal and line conservation under migration\n- [ ] AC-2: No cross-tenant data exposure\n- [ ] AC-3: Regulatory history reproducible by effective date\n\n## Open evidence and approval gaps\n- First institution's data-protection, retention and infrastructure acceptance pending\n\n## Delivery classification\nDesign document completed and uploaded; WP acceptance remains open. Production code: 0; tests executed: 0; regulatory approval claimed: 0. Accounting mapping 312/322 and external rail entitlements remain P0-gated.\n",
+    "source_title": "ARC-010 — Data architecture, classification and lifecycle blueprint",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-001/GOV-001_CONTRACT.json",
+    "id": "GOV-001",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-001 — Programme charter and non-negotiable outcomes",
+      "Objective",
+      "Proposed requirements and enforceable controls",
+      "Required deliverables",
+      "Acceptance criteria (NOT YET PASSED)",
+      "Open dependencies and named blockers",
+      "Quality and test declaration",
+      "Next dependency-correct task"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-001/GOV-001_SPEC.md",
+    "source_spec_sha256": "31696da27607c201597cffa4b6626d44ebbeafbd239185dcb3b93de67b1eceb8",
+    "source_text_preserved": "# GOV-001 — Programme charter and non-negotiable outcomes\n\nDate: 2026-11-03 | Programme: OPES Core Banking | Execution batch: 1 of 30\nStatus: DRAFT DELIVERABLE; REVIEW / SIGN-OFF OUTSTANDING. No production implementation, tests, audit certification or regulatory approval is claimed.\nSource baseline: governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md (inspected at f1e095e4bdf5a6fb15ad469f2441e3661ce0b5a0).\n\n## Objective\nEstablish a durable authorization boundary for a multi-institution CEMAC-configurable core banking platform; charter is a draft for sponsor ratification, not a regulatory endorsement.\n\n## Proposed requirements and enforceable controls\n1. **GOV-001-R01:** Define the product as configurable banking infrastructure, not a licensed bank or a substitute for an institution's legal authorizations.\n2. **GOV-001-R02:** Scope system-of-record services: customer/CIF, products, accounts, double-entry ledger, teller/vault, clearing, lending, treasury, compliance, reporting, channels, operations and integration.\n3. **GOV-001-R03:** Require every deployer to select a legally reviewed institution and jurisdiction profile before activating regulated features.\n4. **GOV-001-R04:** Success is evidenced by financial invariants, independently reproduced reconciliation, enforceable permissions, recovery exercises, and institution-specific approvals—not lines of code or checkpoint counts.\n5. **GOV-001-R05:** Adopt DDD boundaries, API-first integrations, traceable ADRs, a transactional outbox/inbox and asynchronous projections where fit; forbid mutable posted journals.\n6. **GOV-001-R06:** Separate document completion, implementation completion, security/regulatory review, pilot acceptance and production authorization as different gates.\n7. **GOV-001-R07:** Prohibit invented certification, central-bank access, payments entitlement, account classifications or operational cutover dates.\n8. **GOV-001-R08:** Publish release boundary: design drafts and demonstrations may exist without activating disputed PCEC mappings or unverified settlement behavior.\n\n## Required deliverables\n- Signed charter with legal entity, sponsor, scope exclusions and accountable owner\n- Definition of success with measurable balance/reconciliation/recovery controls\n- Scope-to-phase mapping across provisional P00–P12\n- Escalation owner for safety-critical disagreement\n\n## Acceptance criteria (NOT YET PASSED)\n- [ ] AC-01: Sponsor and regulated-institution representatives approve charter version\n- [ ] AC-02: Legal/CFO/CISO/Operations acknowledge release exclusions and their independent vetoes\n- [ ] AC-03: Every stated success criterion maps to an evidence artifact and reviewer\n\n## Open dependencies and named blockers\n- Sponsor signatory not established from inspected sources\n- Target bank institution profiles and regulators' applicable editions not approved\n\n## Quality and test declaration\n- Regulatory and legal validity: requires independently authenticated authority and qualified review.\n- Finance and ledger controls: any release must preserve immutable journals, double entry, exact decimal arithmetic, controlled reversal and independent reconciliation.\n- Security: cross-tenant access, maker-checker and least privilege must be tested where applicable.\n- Evidence: all acceptance results require file paths, reviewer, date, environment and actual execution result.\n- This batch writes a design/control document only. Executed tests: 0. Verified WP closures: 0.\n\n## Next dependency-correct task\nObtain independent reviewer assignments and evidence for listed acceptance criteria; do not activate financial or payment functions using unverified assumptions.\n",
+    "source_title": "GOV-001 — Programme charter and non-negotiable outcomes",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-002/GOV-002_CONTRACT.json",
+    "id": "GOV-002",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-002 — Institution and regulatory deployment profiles",
+      "Objective",
+      "Proposed requirements and enforceable controls",
+      "Required deliverables",
+      "Acceptance criteria (NOT YET PASSED)",
+      "Open dependencies and named blockers",
+      "Quality and test declaration",
+      "Next dependency-correct task"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-002/GOV-002_SPEC.md",
+    "source_spec_sha256": "90a78b6b79bc87e0738efce8159c9cb6780eae4de162bc6682cfd3e078b9a09b",
+    "source_text_preserved": "# GOV-002 — Institution and regulatory deployment profiles\n\nDate: 2026-11-03 | Programme: OPES Core Banking | Execution batch: 2 of 30\nStatus: DRAFT DELIVERABLE; REVIEW / SIGN-OFF OUTSTANDING. No production implementation, tests, audit certification or regulatory approval is claimed.\nSource baseline: governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md (inspected at f1e095e4bdf5a6fb15ad469f2441e3661ce0b5a0).\n\n## Objective\nPrevent a generic application configuration from implicitly claiming entitlement to operate as a bank, microfinance institution, payment institution or rail participant.\n\n## Proposed requirements and enforceable controls\n1. **GOV-002-R01:** Model institution_profile_id, licensed_entity_id, regulator_set, legal_jurisdiction, permissioned_products and active_effective_interval as separate dimensions.\n2. **GOV-002-R02:** Set a DENY default for products, settlement rails, FX, credit and prudential reports without institution-authorized profile evidence.\n3. **GOV-002-R03:** Use immutable profile-version identifiers; require approvals and compatibility review before migrating profiles or effective dates.\n4. **GOV-002-R04:** Distinguish institution license, product authorization, BEAC/COBAC participation or reporting requirements, rail contract and technical conformance; none implies the others.\n5. **GOV-002-R05:** Maintain per-profile currency, calendar, branch, product, fee, rate, tax, chart-of-accounts and retention configuration with cited authority.\n6. **GOV-002-R06:** Require maker-checker and dual control for any profile change affecting monetary treatment, legal reporting or access to a rail.\n7. **GOV-002-R07:** Never permit global default fallback to a different institution's credentials, ledger mappings, customer data or payments entitlement.\n8. **GOV-002-R08:** Represent regulator-specific modules as configurable capabilities behind feature gates; avoid unsupported uniform 'CEMAC-compliant' claims.\n\n## Required deliverables\n- InstitutionProfile schema proposal\n- Evidence checklist for license, product entitlements, rail participation and settlements\n- Profile activation state machine DRAFT→REVIEW→APPROVED→ACTIVE→SUSPENDED→RETIRED\n\n## Acceptance criteria (NOT YET PASSED)\n- [ ] AC-01: No regulator-dependent capability becomes active with missing institutional evidence\n- [ ] AC-02: Cross-institution profile or entitlement references fail authorization checks in future executable tests\n- [ ] AC-03: All effective-dated changes retain prior versions and reviewer identity\n\n## Open dependencies and named blockers\n- Initial licensed customer profile unknown\n- Current regulatory applicability requires qualified review and primary-source tracing\n\n## Quality and test declaration\n- Regulatory and legal validity: requires independently authenticated authority and qualified review.\n- Finance and ledger controls: any release must preserve immutable journals, double entry, exact decimal arithmetic, controlled reversal and independent reconciliation.\n- Security: cross-tenant access, maker-checker and least privilege must be tested where applicable.\n- Evidence: all acceptance results require file paths, reviewer, date, environment and actual execution result.\n- This batch writes a design/control document only. Executed tests: 0. Verified WP closures: 0.\n\n## Next dependency-correct task\nObtain independent reviewer assignments and evidence for listed acceptance criteria; do not activate financial or payment functions using unverified assumptions.\n",
+    "source_title": "GOV-002 — Institution and regulatory deployment profiles",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-003/GOV-003_CONTRACT.json",
+    "id": "GOV-003",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-003 — Stakeholder and independent assurance roster",
+      "Objective",
+      "Proposed requirements and enforceable controls",
+      "Required deliverables",
+      "Acceptance criteria (NOT YET PASSED)",
+      "Open dependencies and named blockers",
+      "Quality and test declaration",
+      "Next dependency-correct task"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-003/GOV-003_SPEC.md",
+    "source_spec_sha256": "75b95fd04a620eb9eca96696d29fd464150708eb9aadfe235c6cf08922438231",
+    "source_text_preserved": "# GOV-003 — Stakeholder and independent assurance roster\n\nDate: 2026-11-03 | Programme: OPES Core Banking | Execution batch: 3 of 30\nStatus: DRAFT DELIVERABLE; REVIEW / SIGN-OFF OUTSTANDING. No production implementation, tests, audit certification or regulatory approval is claimed.\nSource baseline: governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md (inspected at f1e095e4bdf5a6fb15ad469f2441e3661ce0b5a0).\n\n## Objective\nDefine real decision rights for finance, legal, risk, technical and operating assurance without inventing named owners.\n\n## Proposed requirements and enforceable controls\n1. **GOV-003-R01:** Accountable sponsor owns commercial scope and budget but cannot waive accounting, legal or security P0 gates.\n2. **GOV-003-R02:** CFO/financial-control authority approves accounting invariants, posting rule design, reconciliation, chart mappings and impairment consequences.\n3. **GOV-003-R03:** Qualified legal/regulatory authority reviews instrument provenance, amendment chain, effective dates and disputed interpretations.\n4. **GOV-003-R04:** CISO/security assurance authority controls identity, secrets, cryptography, privileged actions, PCI boundaries and incident-response gates.\n5. **GOV-003-R05:** Head of Payments owns rail rules, participant contracts, external-finality evidence and reconciliation interfaces; does not infer settlement from message ACK.\n6. **GOV-003-R06:** Head of Risk/Compliance owns AML/KYC, fraud monitoring, case controls, regulatory reporting and risk-classification policy.\n7. **GOV-003-R07:** Architecture authority approves bounded-context ownership, event contracts, versioning and dependency isolation; must not override regulatory veto.\n8. **GOV-003-R08:** Operations/BCP authority approves disaster recovery exercises, observability, runbooks, capacity and change-window readiness.\n9. **GOV-003-R09:** Independent QA and internal/external audit require read-only evidence access, exact execution logs and non-repudiable reviewer decisions.\n\n## Required deliverables\n- Role register with named-position placeholders, deputies and separation constraints\n- Approval-by-control-domain matrix\n- Conflict-of-interest constraints and evidence-read permissions\n\n## Acceptance criteria (NOT YET PASSED)\n- [ ] AC-01: Each P0 gate has an explicit accountable decision-making role\n- [ ] AC-02: No single role can create and approve its own finance-sensitive configuration\n- [ ] AC-03: Review assignments are recorded before any WP is marked VERIFIED_COMPLETE\n\n## Open dependencies and named blockers\n- Actual individuals and institutional accountable signatories unassigned\n- Independent audit organization not selected\n\n## Quality and test declaration\n- Regulatory and legal validity: requires independently authenticated authority and qualified review.\n- Finance and ledger controls: any release must preserve immutable journals, double entry, exact decimal arithmetic, controlled reversal and independent reconciliation.\n- Security: cross-tenant access, maker-checker and least privilege must be tested where applicable.\n- Evidence: all acceptance results require file paths, reviewer, date, environment and actual execution result.\n- This batch writes a design/control document only. Executed tests: 0. Verified WP closures: 0.\n\n## Next dependency-correct task\nObtain independent reviewer assignments and evidence for listed acceptance criteria; do not activate financial or payment functions using unverified assumptions.\n",
+    "source_title": "GOV-003 — Stakeholder and independent assurance roster",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-004/GOV-004_CONTRACT.json",
+    "id": "GOV-004",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-004 — Governance ceremonies and stop/go decision controls",
+      "Objective",
+      "Proposed requirements and enforceable controls",
+      "Required deliverables",
+      "Acceptance criteria (NOT YET PASSED)",
+      "Open dependencies and named blockers",
+      "Quality and test declaration",
+      "Next dependency-correct task"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-004/GOV-004_SPEC.md",
+    "source_spec_sha256": "e57434ba91bc2e98ebd1ce658e404eb5459e8eea3d23c4f18c1c2549d3f66716",
+    "source_text_preserved": "# GOV-004 — Governance ceremonies and stop/go decision controls\n\nDate: 2026-11-03 | Programme: OPES Core Banking | Execution batch: 4 of 30\nStatus: DRAFT DELIVERABLE; REVIEW / SIGN-OFF OUTSTANDING. No production implementation, tests, audit certification or regulatory approval is claimed.\nSource baseline: governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md (inspected at f1e095e4bdf5a6fb15ad469f2441e3661ce0b5a0).\n\n## Objective\nMake phase and release progression evidence-based instead of time-based or checkpoint-count-based.\n\n## Proposed requirements and enforceable controls\n1. **GOV-004-R01:** Establish architecture review on ADR changes, accounting review on mapping/posting changes, security review on identity or cryptographic changes and regulatory review on legal applicability changes.\n2. **GOV-004-R02:** Record decisions as immutable signed or otherwise accountable entries with decision ID, version, proposer, reviewer, vote, dissent, evidence list and timestamp.\n3. **GOV-004-R03:** Treat severe unresolved accounting/regulatory/security ambiguities as FAIL_CLOSED; allow only independent domains to progress with documented isolation.\n4. **GOV-004-R04:** Require a change impact analysis when an assumption moves from draft to approved or a primary authority changes.\n5. **GOV-004-R05:** Define per-WP gate states NOT_STARTED, IN_PROGRESS, BLOCKED, REVIEW_READY and VERIFIED_COMPLETE; no auto-promotion from a pushed ZIP.\n6. **GOV-004-R06:** Require review of negative acceptance scenarios: reversal, duplicates, retry, boundary access, unknown external outcome, outage and migration rollback.\n7. **GOV-004-R07:** Require a verified continuation point and explicit blocker register after every execution run.\n8. **GOV-004-R08:** Require a remote source-control checkpoint with archival provenance and content digest before counting a batch as DELIVERED.\n\n## Required deliverables\n- Decision-record schema and agenda\n- P0 escalation and independent-work bypass prohibition\n- DoR/DoD and phase stop/go checklist\n\n## Acceptance criteria (NOT YET PASSED)\n- [ ] AC-01: No unreviewed draft is represented as approved policy\n- [ ] AC-02: Status reconciliation sums across registered packages without duplicate identifiers\n- [ ] AC-03: P0 exceptions have a signed escalation rather than silent override\n\n## Open dependencies and named blockers\n- Board/forum members not appointed\n- Review cadence and quorum need sponsor ratification\n\n## Quality and test declaration\n- Regulatory and legal validity: requires independently authenticated authority and qualified review.\n- Finance and ledger controls: any release must preserve immutable journals, double entry, exact decimal arithmetic, controlled reversal and independent reconciliation.\n- Security: cross-tenant access, maker-checker and least privilege must be tested where applicable.\n- Evidence: all acceptance results require file paths, reviewer, date, environment and actual execution result.\n- This batch writes a design/control document only. Executed tests: 0. Verified WP closures: 0.\n\n## Next dependency-correct task\nObtain independent reviewer assignments and evidence for listed acceptance criteria; do not activate financial or payment functions using unverified assumptions.\n",
+    "source_title": "GOV-004 — Governance ceremonies and stop/go decision controls",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-005/GOV-005_CONTRACT.json",
+    "id": "GOV-005",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-005 — Delegation, conflict escalation and maker-checker policy",
+      "Scope and control requirements",
+      "Artifacts required for full WP acceptance",
+      "Acceptance criteria — open until review",
+      "Evidence and approval blockers",
+      "Assurance constraints"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-005/GOV-005_SPEC.md",
+    "source_spec_sha256": "66accddb1c7e89e325e69566ad194446e3f8f26d3bc0b2a8ab1decdaf022498b",
+    "source_text_preserved": "# GOV-005 — Delegation, conflict escalation and maker-checker policy\n\nOPES Core Banking | 2026-11-03 | Batch 5/30 | Status: DRAFT DELIVERED; WP ACCEPTANCE PENDING\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md. No fresh regulatory certification claimed.\n\n## Scope and control requirements\n1. **GOV-005-R01:** Separate requestor, preparer, checker, approver and executor for controls affecting money, identity, regulatory reports and settlement.\n2. **GOV-005-R02:** Prevent self-approval in any posting rule, account mapping, product-interest, migration cutover or privileged-access decision.\n3. **GOV-005-R03:** Escalate contradictory regulations with literal page citations, issuer identity, effective dates, affected flows and independent legal/CFO signoff.\n4. **GOV-005-R04:** Retain COBAC I-2015/01 Article 8(d) 312/322 P0 hold pending competent-authority clarification; never normalize guessed text.\n5. **GOV-005-R05:** Treat break-glass privileges as temporary, monitored, independently reviewed and incapable of silently authorizing money movement.\n6. **GOV-005-R06:** Preserve immutable decision logs, comments, dissent, approval identities and revocation events.\n7. **GOV-005-R07:** Require explicit waiver expiry and compensating controls for non-P0 exceptions; prohibit waivers of core-ledger or entitlement invariants.\n\n## Artifacts required for full WP acceptance\n- Delegation-of-authority matrix\n- P0 conflict-escalation dossier\n- Maker-checker authorization conditions\n\n## Acceptance criteria — open until review\n- [ ] AC-1: No requestor can approve same sensitive change\n- [ ] AC-2: Every exception has reviewer and expiry\n- [ ] AC-3: P0 accounting uncertainty cannot be bypassed\n\n## Evidence and approval blockers\n- Actual delegations and authority letter unavailable\n\n## Assurance constraints\nPreserve immutable posted journals, exact monetary arithmetic, double entry, evidence-based settlement, least privilege, maker-checker and independent reconciliation where implicated. No production code, execution tests, approval or certification is claimed. Next: assign reviewers and validate acceptance evidence.\n",
+    "source_title": "GOV-005 — Delegation, conflict escalation and maker-checker policy",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-006/GOV-006_CONTRACT.json",
+    "id": "GOV-006",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-006 — Regulatory source inventory and controlled taxonomy",
+      "Scope and control requirements",
+      "Artifacts required for full WP acceptance",
+      "Acceptance criteria — open until review",
+      "Evidence and approval blockers",
+      "Assurance constraints"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-006/GOV-006_SPEC.md",
+    "source_spec_sha256": "e0b93e086b51169e53c901b20da5aa30277f5710a498b95a3105f0b04b2222d5",
+    "source_text_preserved": "# GOV-006 — Regulatory source inventory and controlled taxonomy\n\nOPES Core Banking | 2026-11-03 | Batch 6/30 | Status: DRAFT DELIVERED; WP ACCEPTANCE PENDING\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md. No fresh regulatory certification claimed.\n\n## Scope and control requirements\n1. **GOV-006-R01:** Index applicable authorities by issuer, instrument type, identifier, article, official URL, language, signature, date, effective interval and scope.\n2. **GOV-006-R02:** Create issuer classes for BEAC, COBAC, CEMAC/UMAC, GABAC, national authorities and OHADA without asserting universal applicability.\n3. **GOV-006-R03:** Tag FATF, Basel, PCI, ISO, NIST and OWASP by normative versus guidance status; guidance does not automatically become binding law.\n4. **GOV-006-R04:** Keep retrieved-source observations, human interpretations, issuer corrections and institution policy decisions as distinct evidence classes.\n5. **GOV-006-R05:** Record supersession edges at article level; a later publication or index entry does not itself prove repeal.\n6. **GOV-006-R06:** Require source-file hash only when original bytes were retained; never manufacture PDF digests from web snippets.\n7. **GOV-006-R07:** Set acquisition states DISCOVERED, PAGE_INSPECTED, ORIGINAL_BYTES_HELD, AUTHORITY_VERIFIED, LEGAL_REVIEWED, SUPERSEDED.\n\n## Artifacts required for full WP acceptance\n- Regulatory source schema\n- Authority inventory categories\n- Evidence status rubric\n\n## Acceptance criteria — open until review\n- [ ] AC-1: Every operational rule links to authority\n- [ ] AC-2: Unverified effective dates never activate rules\n- [ ] AC-3: No standards-guidance-to-law promotion\n\n## Evidence and approval blockers\n- Current primary-source coverage incomplete; signed corrections pending\n\n## Assurance constraints\nPreserve immutable posted journals, exact monetary arithmetic, double entry, evidence-based settlement, least privilege, maker-checker and independent reconciliation where implicated. No production code, execution tests, approval or certification is claimed. Next: assign reviewers and validate acceptance evidence.\n",
+    "source_title": "GOV-006 — Regulatory source inventory and controlled taxonomy",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-007/GOV-007_CONTRACT.json",
+    "id": "GOV-007",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-007 — Regulatory authority and contradiction precedence",
+      "Scope and control requirements",
+      "Artifacts required for full WP acceptance",
+      "Acceptance criteria — open until review",
+      "Evidence and approval blockers",
+      "Assurance constraints"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-007/GOV-007_SPEC.md",
+    "source_spec_sha256": "48f47aa5ad434bf0940fedccec927a826d8d05be2a11d02f4ecc0693564c2db5",
+    "source_text_preserved": "# GOV-007 — Regulatory authority and contradiction precedence\n\nOPES Core Banking | 2026-11-03 | Batch 7/30 | Status: DRAFT DELIVERED; WP ACCEPTANCE PENDING\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md. No fresh regulatory certification claimed.\n\n## Scope and control requirements\n1. **GOV-007-R01:** Document legal hierarchy per jurisdiction and institution type subject to qualified legal review, not a globally fixed guessed precedence.\n2. **GOV-007-R02:** Preserve verbatim conflicting terms instead of auto-correcting article numbers, years or account codes.\n3. **GOV-007-R03:** Capture side-by-side source texts, observed pages, interpretations and impacted features within one conflict group.\n4. **GOV-007-R04:** Require review of authority, amendments, judicial effects, transitional provisions and authentic corrigenda before operational interpretation.\n5. **GOV-007-R05:** An issuer-index entry is discovery evidence; signed text may still have been amended or superseded.\n6. **GOV-007-R06:** Separate legally operative obligation from rail technical specification and customer's participation entitlement.\n7. **GOV-007-R07:** Block activation on unresolved P0 contradictions and permit only independently scoped safe work.\n\n## Artifacts required for full WP acceptance\n- Legal-source precedence decision tree\n- Conflict-group schema\n- Interpretation approval rules\n\n## Acceptance criteria — open until review\n- [ ] AC-1: Conflicted source cannot create production policy\n- [ ] AC-2: Overrides cite authority and reviewer\n- [ ] AC-3: Expired interpretation cannot remain active\n\n## Evidence and approval blockers\n- Qualified counsel and banking authority review needed\n\n## Assurance constraints\nPreserve immutable posted journals, exact monetary arithmetic, double entry, evidence-based settlement, least privilege, maker-checker and independent reconciliation where implicated. No production code, execution tests, approval or certification is claimed. Next: assign reviewers and validate acceptance evidence.\n",
+    "source_title": "GOV-007 — Regulatory authority and contradiction precedence",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-008/GOV-008_CONTRACT.json",
+    "id": "GOV-008",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-008 — Jurisdiction, licensing and capability matrix",
+      "Scope and control requirements",
+      "Artifacts required for full WP acceptance",
+      "Acceptance criteria — open until review",
+      "Evidence and approval blockers",
+      "Assurance constraints"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-008/GOV-008_SPEC.md",
+    "source_spec_sha256": "ac2daadd4f3783697961c523ae8984312baaa85b2afd38e05f585459c02ecf4e",
+    "source_text_preserved": "# GOV-008 — Jurisdiction, licensing and capability matrix\n\nOPES Core Banking | 2026-11-03 | Batch 8/30 | Status: DRAFT DELIVERED; WP ACCEPTANCE PENDING\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md. No fresh regulatory certification claimed.\n\n## Scope and control requirements\n1. **GOV-008-R01:** Model jurisdiction, branch territory, licensed entity, institution class and product authorization independently.\n2. **GOV-008-R02:** Attach feature permission to a named legal entity and approved interval, not merely country or regional brand.\n3. **GOV-008-R03:** Represent privacy, data hosting, reporting, payments participation and complaints requirements independently per deployment.\n4. **GOV-008-R04:** Express bank, MFI and payment institution capabilities as candidate configurations requiring legal review before activation.\n5. **GOV-008-R05:** Prevent one institution's regulatory report from consuming another's balances, metadata or entitlement tokens.\n6. **GOV-008-R06:** Track cross-border payments and customer transfers as separate legal and rail permissions rather than generic enabled APIs.\n7. **GOV-008-R07:** Require explicit go-live decisions for entity × jurisdiction × product × channel × rail combinations.\n\n## Artifacts required for full WP acceptance\n- Applicability matrix\n- Deployment approval key design\n- Institution isolation scenarios\n\n## Acceptance criteria — open until review\n- [ ] AC-1: Unapproved entity cannot transact\n- [ ] AC-2: Cross-jurisdiction permissions deny by default\n- [ ] AC-3: Capabilities are effective dated\n\n## Evidence and approval blockers\n- Initial deployer's licensed entity and entitlement unavailable\n\n## Assurance constraints\nPreserve immutable posted journals, exact monetary arithmetic, double entry, evidence-based settlement, least privilege, maker-checker and independent reconciliation where implicated. No production code, execution tests, approval or certification is claimed. Next: assign reviewers and validate acceptance evidence.\n",
+    "source_title": "GOV-008 — Jurisdiction, licensing and capability matrix",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-009/GOV-009_CONTRACT.json",
+    "id": "GOV-009",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-009 — Effective dating, amendments and regulatory version control",
+      "Scope and proposed control requirements",
+      "Deliverables for formal acceptance",
+      "Acceptance criteria — NOT YET PASSED",
+      "Unresolved evidence and sign-offs",
+      "Quality and test declaration"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-009/GOV-009_SPEC.md",
+    "source_spec_sha256": "cf26188e262e40f325ca9b5630959f579c5c3f5c9c277e363aa6c041f1033af9",
+    "source_text_preserved": "# GOV-009 — Effective dating, amendments and regulatory version control\n\nOPES Core Banking | 2026-11-03 | Batch 9/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md. No renewed primary-law verification performed in this batch.\n\n## Scope and proposed control requirements\n1. **GOV-009-R01:** RegulatoryRule must include authority_id, document_version, clause_ref, jurisdiction, institution_class, effective_from/to, verification_status and source_digest where measured.\n2. **GOV-009-R02:** Never overwrite an approved historical rule; amend by new version with legal-effective date and transaction-processing cutover date as separate fields.\n3. **GOV-009-R03:** Distinguish publication date, signature date, legal commencement, technical migration milestone and actual institution activation.\n4. **GOV-009-R04:** A signed instrument with an inconsistent calendar must retain original dates and CONFLICTED status pending issuer correction.\n5. **GOV-009-R05:** Reprocess historical balances only under an explicitly approved correction/migration event; prohibit retroactive silent journal edits.\n6. **GOV-009-R06:** At rule evaluation, select a unique authorized version; multiple overlapping active rules fail closed and create a review case.\n7. **GOV-009-R07:** Store amendment and supersession edges at clause level with reviewer, before/after scope and reason; no assumption that a new regulation replaces all prior parts.\n8. **GOV-009-R08:** Record rule change impacts on reporting, product pricing, risk classification, alerts, ledger posting and audit retrieval.\n\n## Deliverables for formal acceptance\n- Versioned rule schema\n- Conflict resolution state diagram\n- Migration cutover acceptance design\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: No active overlap for same authority/profile interval\n- [ ] AC-2: Historical postings reproducible using prior rules\n- [ ] AC-3: Disputed year cannot enable production\n\n## Unresolved evidence and sign-offs\n- BEAC 2025 annex inconsistencies unresolved; competent amendment sources pending\n\n## Quality and test declaration\nDesign-stage document. Executable test cases specified by related registers but no tests run here (0). Production code added: 0. Audited WP completions: 0. Regulatory source contradictions remain fail-closed. A verified push establishes only artifact custody, not design approval or regulatory compliance.\n",
+    "source_title": "GOV-009 — Effective dating, amendments and regulatory version control",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-010/GOV-010_CONTRACT.json",
+    "id": "GOV-010",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-010 — Legal-to-engineering requirement traceability contract",
+      "Scope and proposed control requirements",
+      "Deliverables for formal acceptance",
+      "Acceptance criteria — NOT YET PASSED",
+      "Unresolved evidence and sign-offs",
+      "Quality and test declaration"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-010/GOV-010_SPEC.md",
+    "source_spec_sha256": "0a5e51522638912252af8b001c53bc37d8143e97660eead3acedee3dd4c0539b",
+    "source_text_preserved": "# GOV-010 — Legal-to-engineering requirement traceability contract\n\nOPES Core Banking | 2026-11-03 | Batch 10/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md. No renewed primary-law verification performed in this batch.\n\n## Scope and proposed control requirements\n1. **GOV-010-R01:** Assign stable requirement_id, control_id and version independent of Git file path, checkpoint label or phase naming.\n2. **GOV-010-R02:** Link each operative obligation to issuer, instrument, clause/page, effective interval, legal interpretation, jurisdiction and institution profile.\n3. **GOV-010-R03:** Record downstream bounded context, state machine, role/action permission, data entity, API/event contract, financial effect, test case and run evidence.\n4. **GOV-010-R04:** Preserve separate statuses OBSERVED_SOURCE, LEGAL_REVIEW_PENDING, APPROVED_REQUIREMENT, IMPLEMENTED, TESTED and OPERATIONALLY_ACCEPTED.\n5. **GOV-010-R05:** Disallow a requirement from being declared TESTED without test case identifier, environment, actual execution date, logs and result.\n6. **GOV-010-R06:** Require negative test traceability for authorization bypass, duplicate payment, posted-journal mutation, unknown outcome and inconsistent rule versions.\n7. **GOV-010-R07:** Use change impact links to invalidate previously accepted test evidence when material business rules, schemas or permissions change.\n8. **GOV-010-R08:** Require reviewers for legal, CFO, security and operations where a requirement affects their respective regulated controls.\n\n## Deliverables for formal acceptance\n- Requirement traceability canonical schema\n- Source-to-test coverage rubric\n- Invalidation/change-impact rules\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: Every requirement links to justified source or explicitly identified business policy\n- [ ] AC-2: No code marked compliant from draft alone\n- [ ] AC-3: Acceptance evidence is immutable and reproducible\n\n## Unresolved evidence and sign-offs\n- No comprehensive legal instrument audit in this execution\n\n## Quality and test declaration\nDesign-stage document. Executable test cases specified by related registers but no tests run here (0). Production code added: 0. Audited WP completions: 0. Regulatory source contradictions remain fail-closed. A verified push establishes only artifact custody, not design approval or regulatory compliance.\n",
+    "source_title": "GOV-010 — Legal-to-engineering requirement traceability contract",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-011/GOV-011_CONTRACT.json",
+    "id": "GOV-011",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-011 — 260-package planning envelope and baseline reconciliation",
+      "Scope and proposed control requirements",
+      "Deliverables for formal acceptance",
+      "Acceptance criteria — NOT YET PASSED",
+      "Unresolved evidence and sign-offs",
+      "Quality and test declaration"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-011/GOV-011_SPEC.md",
+    "source_spec_sha256": "88dba145a23588ad64e4db551ba641656d6b16245e7423c93468efe54466399f",
+    "source_text_preserved": "# GOV-011 — 260-package planning envelope and baseline reconciliation\n\nOPES Core Banking | 2026-11-03 | Batch 11/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md. No renewed primary-law verification performed in this batch.\n\n## Scope and proposed control requirements\n1. **GOV-011-R01:** Adopt P00–P12 as proposed workstream categories; do not claim they reproduce historical phase numbering.\n2. **GOV-011-R02:** Allocate 20 planning slots per proposed phase, 260 slots total, only as a provisional denominator subject to decomposition and sponsor approval.\n3. **GOV-011-R03:** Use GOV-001 through GOV-020, ARC-001 through ARC-020, CIF-001 through CIF-020, ACT-001 through ACT-020, ACC-001 through ACC-020 and BRN-001 through BRN-020.\n4. **GOV-011-R04:** Continue PAY-001 through PAY-020, CRD-001 through CRD-020, TRY-001 through TRY-020, CMP-001 through CMP-020, CHN-001 through CHN-020, OPS-001 through OPS-020 and REL-001 through REL-020.\n5. **GOV-011-R05:** Retain historic WP-ACC-004, WP-ACC-005 and WP-PAY-GIMAC-001 as separate source identifiers until crosswalk resolves overlap; avoid falsely completing proposed ACC-004 because history reports WP-ACC-004.\n6. **GOV-011-R06:** Each slot requires bounded context, scope, accountable owner, dependencies, deliverables, DoR, DoD, acceptance, source evidence, estimation class and risk status.\n7. **GOV-011-R07:** Only a signed baseline with source reconciliations authorizes actual completed/remaining denominator; historic 59 checkpoint README records do not equal completed packages.\n8. **GOV-011-R08:** Version scope additions/deletions through change control and maintain arithmetic total = verified complete + review-ready + in progress + blocked + not started, with disjoint status categories.\n\n## Deliverables for formal acceptance\n- Provisional 13×20 slot register\n- Historical-to-proposed ID crosswalk fields\n- Controlled denominator acceptance rules\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: Every of 260 slots uniquely identified\n- [ ] AC-2: No historical completion silently copied to proposed slot\n- [ ] AC-3: Approved total withheld until reconciliation\n\n## Unresolved evidence and sign-offs\n- Source archives and historical commit ancestry not exhaustively cross-referenced\n\n## Quality and test declaration\nDesign-stage document. Executable test cases specified by related registers but no tests run here (0). Production code added: 0. Audited WP completions: 0. Regulatory source contradictions remain fail-closed. A verified push establishes only artifact custody, not design approval or regulatory compliance.\n",
+    "source_title": "GOV-011 — 260-package planning envelope and baseline reconciliation",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-012/GOV-012_CONTRACT.json",
+    "id": "GOV-012",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-012 — Dependency graph and critical-path gate model",
+      "Scope and proposed control requirements",
+      "Deliverables for formal acceptance",
+      "Acceptance criteria — NOT YET PASSED",
+      "Unresolved evidence and sign-offs",
+      "Quality and test declaration"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-012/GOV-012_SPEC.md",
+    "source_spec_sha256": "bf0caafa885508be3851cd10a001d3656dca970ecc9d1fb78c4a497068f9216c",
+    "source_text_preserved": "# GOV-012 — Dependency graph and critical-path gate model\n\nOPES Core Banking | 2026-11-03 | Batch 12/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md. No renewed primary-law verification performed in this batch.\n\n## Scope and proposed control requirements\n1. **GOV-012-R01:** Encode directed dependency edges between work packages with hard gate, soft advisory and evidence-only semantics.\n2. **GOV-012-R02:** Classify dependencies as regulatory authority, accounting mapping, institution entitlement, security design, API contract, data model, approval or acceptance evidence.\n3. **GOV-012-R03:** Prevent cycles in mandatory hard-gate edges; validate graph upon baseline approval and every scope change.\n4. **GOV-012-R04:** Keep accounting mapping WP-ACC-005 blocked P0; do not run downstream ledger, prudential posting or migration activation from speculative 312/322 interpretation.\n5. **GOV-012-R05:** Permit independent security, governance and API design work with explicit no-production-activation boundary where separate evidence is mature.\n6. **GOV-012-R06:** Keep external payments integration blocked behind signed participation, approved schema edition, keys, settlement-account entitlement, and finality/reconciliation policy.\n7. **GOV-012-R07:** Track each blocker with affected downstream nodes and named remediation evidence, not a fabricated completion date.\n8. **GOV-012-R08:** After each run choose a dependency-correct next package; report attempted, draft delivered, accepted, open and blocked separately.\n\n## Deliverables for formal acceptance\n- Dependency edge schema and gate types\n- P0 impact cascade map\n- Safe-work scheduling algorithm\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: No blocked hard edge is bypassed\n- [ ] AC-2: Every critical-path task has explicit closure evidence\n- [ ] AC-3: Safe independent work does not claim regulatory readiness\n\n## Unresolved evidence and sign-offs\n- Graph requires full 260-slot dependency decomposition\n\n## Quality and test declaration\nDesign-stage document. Executable test cases specified by related registers but no tests run here (0). Production code added: 0. Audited WP completions: 0. Regulatory source contradictions remain fail-closed. A verified push establishes only artifact custody, not design approval or regulatory compliance.\n",
+    "source_title": "GOV-012 — Dependency graph and critical-path gate model",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-013/GOV-013_CONTRACT.json",
+    "id": "GOV-013",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-013 — Definition of Ready, Done and evidence acceptance matrix",
+      "Scope, findings and proposed control requirements",
+      "Deliverables to be accepted",
+      "Acceptance criteria — NOT YET PASSED",
+      "Outstanding evidence",
+      "Review statement"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-013/GOV-013_SPEC.md",
+    "source_spec_sha256": "b28e24f6280d10319053a6b9f84d34c8f1b7da094554bc2c69025f50b083dd1d",
+    "source_text_preserved": "# GOV-013 — Definition of Ready, Done and evidence acceptance matrix\n\nOPES Core Banking | 2026-11-03 | Batch 13/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nInspected context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/AN/README.md; regulatory/checkpoints/BA/README.md; regulatory/checkpoints/BP/README.md; regulatory/checkpoints/CA/README.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md.\n\n## Scope, findings and proposed control requirements\n1. **GOV-013-R01:** Apply 15 domain implementation DoR gates: scope, institutional profile, primary sources, invariants, workflows, roles, accounting, security, API/events, data, tests, operations, dependencies, no P0 and durable repository.\n2. **GOV-013-R02:** Distinguish documentation DRAFT_DELIVERED, PEER_REVIEWED, OWNER_APPROVED and ACCEPTED; publishing a GitHub commit is not completion.\n3. **GOV-013-R03:** Domain DoD includes functional specification, approved API/data contracts, all error paths, negative cases, test run evidence, security review and operational runbook.\n4. **GOV-013-R04:** Financial DoD requires double-entry proof, immutable journals, exact money arithmetic, reversal procedures, daily reconciliation and failure recovery cases.\n5. **GOV-013-R05:** Payment DoD requires authenticated participant entitlement, schema edition, safe retry, unknown-outcome handling, finality evidence and transaction-to-statement reconciliation.\n6. **GOV-013-R06:** Operations DoD requires monitoring, capacity, backup restore, RPO/RTO validation, incident response and independent change signoff.\n7. **GOV-013-R07:** Certification DoD requires qualified external evidence, institution-specific approval and signed acceptance; do not self-issue regulator certification.\n8. **GOV-013-R08:** Use status BLOCKED when critical evidence is absent; no pressure from hourly quota may override this status.\n\n## Deliverables to be accepted\n- Machine-readable DoR/DoD checklist\n- Evidence acceptance rubric\n- Cross-domain release gate matrix\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: No package moves to VERIFIED_COMPLETE without all mandatory evidence\n- [ ] AC-2: No code on unsatisfied DoR\n- [ ] AC-3: Checkpoints remain distinct from accepted WPs\n\n## Outstanding evidence\n- Reviewers, test environment and institution approval still unassigned\n\n## Review statement\nThis is documentary progress, not production code or regulated acceptance. Tests actually executed in this batch: 0. No new legal assertion independently reverified against primary PDFs in this batch. Accounting and payments remain fail-closed at their P0 gates.\n",
+    "source_title": "GOV-013 — Definition of Ready, Done and evidence acceptance matrix",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-014/GOV-014_CONTRACT.json",
+    "id": "GOV-014",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-014 — Initial programme risk and P0 blocker register",
+      "Scope, findings and proposed control requirements",
+      "Deliverables to be accepted",
+      "Acceptance criteria — NOT YET PASSED",
+      "Outstanding evidence",
+      "Review statement"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-014/GOV-014_SPEC.md",
+    "source_spec_sha256": "86c8ed3a60f240c79ae014ba2e4b29d8e373bc343ada0bb9f9b0f173bdf37e90",
+    "source_text_preserved": "# GOV-014 — Initial programme risk and P0 blocker register\n\nOPES Core Banking | 2026-11-03 | Batch 14/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nInspected context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/AN/README.md; regulatory/checkpoints/BA/README.md; regulatory/checkpoints/BP/README.md; regulatory/checkpoints/CA/README.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md.\n\n## Scope, findings and proposed control requirements\n1. **GOV-014-R01:** RISK-P0-001: contradictory COBAC I-2015/01 312/322 parent reference; block disputed chart mapping, posting and migration until competent authenticated correction and legal/CFO signoff.\n2. **GOV-014-R02:** RISK-P0-002: signed BEAC ISO 20022 migration annex inconsistent with other dated schedule rows; do not infer go-live dates or production migration.\n3. **GOV-014-R03:** RISK-P0-003: institution-specific rail entitlement, settlement account, technical profile edition and conformance not evidenced; default deny external rail activation.\n4. **GOV-014-R04:** RISK-P0-004: unclear current prudential/reporting amendment chain; no claims of current regulatory conformity for unreviewed rules.\n5. **GOV-014-R05:** RISK-P1-005: historical 59 checkpoint README files are not a reconciled WP denominator; risk of false progress reporting and duplicate work.\n6. **GOV-014-R06:** RISK-P1-006: historical archive metadata contains upload claims inconsistent with present repository state; reconcile actual binaries, checksums, file equivalence and ancestry.\n7. **GOV-014-R07:** RISK-P1-007: incomplete owners and reviewers; cannot accept regulated finance/security WPs without signed role authority.\n8. **GOV-014-R08:** All risks need evidence, owner role, severity, trigger, impacted packages, compensating controls, closure conditions and immutable history.\n\n## Deliverables to be accepted\n- Seven-item risk register candidate\n- Risk-to-package cascade\n- P0 closure evidence requests\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: No P0 closed by inference\n- [ ] AC-2: Risk severity changes require evidence/reviewer\n- [ ] AC-3: Independent safe work does not hide blocked domains\n\n## Outstanding evidence\n- Regulator correspondence, credentials, primary document bytes remain unavailable\n\n## Review statement\nThis is documentary progress, not production code or regulated acceptance. Tests actually executed in this batch: 0. No new legal assertion independently reverified against primary PDFs in this batch. Accounting and payments remain fail-closed at their P0 gates.\n",
+    "source_title": "GOV-014 — Initial programme risk and P0 blocker register",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-015/GOV-015_CONTRACT.json",
+    "id": "GOV-015",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-015 — Controlled scope, version and architectural change procedure",
+      "Scope, findings and proposed control requirements",
+      "Deliverables to be accepted",
+      "Acceptance criteria — NOT YET PASSED",
+      "Outstanding evidence",
+      "Review statement"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-015/GOV-015_SPEC.md",
+    "source_spec_sha256": "cfbc3c50e787a6b123d4c540a3668cfb1dc2eee1f708489dce50b236fe8f302b",
+    "source_text_preserved": "# GOV-015 — Controlled scope, version and architectural change procedure\n\nOPES Core Banking | 2026-11-03 | Batch 15/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nInspected context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/AN/README.md; regulatory/checkpoints/BA/README.md; regulatory/checkpoints/BP/README.md; regulatory/checkpoints/CA/README.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md.\n\n## Scope, findings and proposed control requirements\n1. **GOV-015-R01:** Require change request with origin, reason, affected package IDs, legal/cost/security impact, alternatives, rollback and reviewer list.\n2. **GOV-015-R02:** Freeze an approved WBS version per release and create new WBS revision for scope addition/removal; preserve old identifiers.\n3. **GOV-015-R03:** Use semver or equivalent explicit revisions for APIs/events; prohibit breaking changes without compatibility and client-transition proof.\n4. **GOV-015-R04:** Account for financial policy change effective dates and journal behavior; never mutate posted entries to emulate a policy update.\n5. **GOV-015-R05:** Review security impact for auth scope changes, secrets management, IAM roles, cryptography and data residency changes.\n6. **GOV-015-R06:** Use dual approval for changes to settlement rules, account mappings, fees, credit impairment policy and compliance reporting.\n7. **GOV-015-R07:** Require regression test evidence and independent reconciliation for changed monetary processing; rollback must not reverse settled money by unsafe local status editing.\n8. **GOV-015-R08:** Record Git commit SHA, source artifact digest, issue ID, reviewers and approved deployment window.\n\n## Deliverables to be accepted\n- Change request template\n- Impact analysis checklist\n- Version and rollback control matrix\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: No undocumented scope drift\n- [ ] AC-2: Backward-incompatible API/event changes reviewed\n- [ ] AC-3: Financial policy changes have authorized effective date\n\n## Outstanding evidence\n- No signed change board or accepted baseline yet\n\n## Review statement\nThis is documentary progress, not production code or regulated acceptance. Tests actually executed in this batch: 0. No new legal assertion independently reverified against primary PDFs in this batch. Accounting and payments remain fail-closed at their P0 gates.\n",
+    "source_title": "GOV-015 — Controlled scope, version and architectural change procedure",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-016/GOV-016_CONTRACT.json",
+    "id": "GOV-016",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-016 — Historical checkpoint lineage and evidence crosswalk",
+      "Scope, findings and proposed control requirements",
+      "Deliverables to be accepted",
+      "Acceptance criteria — NOT YET PASSED",
+      "Outstanding evidence",
+      "Review statement"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-016/GOV-016_SPEC.md",
+    "source_spec_sha256": "8c7949661061486b53fc2cf0e0ea0ea641229c7c77fc47659c7444fdafedf521",
+    "source_text_preserved": "# GOV-016 — Historical checkpoint lineage and evidence crosswalk\n\nOPES Core Banking | 2026-11-03 | Batch 16/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nInspected context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/AN/README.md; regulatory/checkpoints/BA/README.md; regulatory/checkpoints/BP/README.md; regulatory/checkpoints/CA/README.md; regulatory/checkpoints/CP/README.md; regulatory/checkpoints/CT/README.md.\n\n## Scope, findings and proposed control requirements\n1. **GOV-016-R01:** Current inspected GitHub tree contains 59 checkpoint README paths in the visible AN–CT sequence; these represent recorded documents, not 59 accepted work packages.\n2. **GOV-016-R02:** AN continuation identifies WP-ACC-004 as inherited last complete, WP-ACC-005 OPEN/BLOCKED, and WP-PAY-GIMAC-001 OPEN/NOT ATTEMPTED; inherited complete claim remains unverified.\n3. **GOV-016-R03:** Checkpoint BA documents securities-accounting issuer research and P0 conflict retention; no production implementation or tests were claimed.\n4. **GOV-016-R04:** Checkpoint BP documents BEAC 2025 ISO 20022 instruction and circular examination, negative scenarios as specifications only, and missing participant evidence.\n5. **GOV-016-R05:** Checkpoint CA records explicit migration calendar chronology conflicts and distinguishes message/profile conformance from actual settlement and entitlement.\n6. **GOV-016-R06:** Checkpoint CP documents issuer-hosted image inspection of COBAC I-2015/01 printed Article 8(d) 312 parent versus 322 child codes; this is not a signed correction.\n7. **GOV-016-R07:** Checkpoint CT states Bulletin COBAC 6 page analysis not yet completed and requests signed post-2015 authority; next historical continuation CU remains independent of new proposed governance batches.\n8. **GOV-016-R08:** Maintain per-checkpoint path, predecessor, historic phase/WP identifiers, claims of completion, source evidence level, Git lineage and explicit duplicate/revised-status flags.\n\n## Deliverables to be accepted\n- Historical checkpoint sample crosswalk AN/BA/BP/CA/CP/CT\n- 59-README coverage statement (not full 317-file audit)\n- Lineage review backlog\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: Do not equate checkpoint to WP completion\n- [ ] AC-2: Carry P0 forward unmodified\n- [ ] AC-3: Uninspected checkpoint files remain UNKNOWN\n\n## Outstanding evidence\n- Full 317-file content extraction and complete commit ancestry still outstanding\n\n## Review statement\nThis is documentary progress, not production code or regulated acceptance. Tests actually executed in this batch: 0. No new legal assertion independently reverified against primary PDFs in this batch. Accounting and payments remain fail-closed at their P0 gates.\n",
+    "source_title": "GOV-016 — Historical checkpoint lineage and evidence crosswalk",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-017/GOV-017_CONTRACT.json",
+    "id": "GOV-017",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-017 — Historical archive provenance and binary custody programme",
+      "Proposed operational requirements",
+      "Deliverables for review",
+      "Acceptance criteria — NOT YET PASSED",
+      "Open evidence and next reviewers",
+      "Quality declaration"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-017/GOV-017_SPEC.md",
+    "source_spec_sha256": "1e4f46ecbf736d4ba56801a4858dd12905738a34049b87333830bb0f1852ab4e",
+    "source_text_preserved": "# GOV-017 — Historical archive provenance and binary custody programme\n\nOPES Core Banking | 2026-11-03 | Batch 17/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/LOCAL_ARTIFACT_RECOVERY_INVENTORY_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md. Source claims distinguished from proposed design requirements.\n\n## Proposed operational requirements\n1. **GOV-017-R01:** Inventory actual archive objects independently of manifests, filenames or historical prose asserting files were or were not uploaded.\n2. **GOV-017-R02:** Preserve source path, byte size, Git blob SHA, optional independently computed SHA-256, purported creation date, uploader, source conversation and parent checkpoint.\n3. **GOV-017-R03:** Existing repository paths under regulatory/recovery/archives must be compared with governance/LOCAL_ARTIFACT_RECOVERY_INVENTORY_2026-11-03.md rather than accepting older upload claims.\n4. **GOV-017-R04:** Treat cumulative ZIPs and nested layers as possible duplicates or supersets; compare normalized per-entry path and content digest before merging.\n5. **GOV-017-R05:** Reject ZIP slip paths, absolute paths, symlink escapes, decompression bombs and executable scripts before archive extraction.\n6. **GOV-017-R06:** Maintain raw historical bytes as immutable evidence; extracted code or documents belong in a separately reviewed canonical tree.\n7. **GOV-017-R07:** Distinguish available in remote Git, local-only, named-but-not-found and content-unverified statuses; file existence is not source completeness.\n8. **GOV-017-R08:** Generate an archive reconciliation report with exact evidence counts, inaccessible artifacts and unmatched checksums; never infer missing source from an empty search result.\n\n## Deliverables for review\n- Archive custody schema and validation checklist\n- Historical inventory conflict log\n- Safe archive extraction protocol\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: Remote binary verified from its own blob bytes\n- [ ] AC-2: Hash claims only when computed\n- [ ] AC-3: No presumed equivalence from matching filenames\n\n## Open evidence and next reviewers\n- Complete historical local-vs-remote archive byte comparison not executed\n\n## Quality declaration\nThis document is a substantive first-pass design artifact, not reviewed production policy. Work-package status remains pending acceptance. Executed tests: 0. Code introduced: 0. Certification/approval claimed: none. Keep unresolved P0-dependent functions disabled.\n",
+    "source_title": "GOV-017 — Historical archive provenance and binary custody programme",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-018/GOV-018_CONTRACT.json",
+    "id": "GOV-018",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-018 — Cross-disciplinary quality assurance review framework",
+      "Proposed operational requirements",
+      "Deliverables for review",
+      "Acceptance criteria — NOT YET PASSED",
+      "Open evidence and next reviewers",
+      "Quality declaration"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-018/GOV-018_SPEC.md",
+    "source_spec_sha256": "32844625ce2b2f4ca9f9240967edc888ce90c87c7d668a211f97e87eac7ccc46",
+    "source_text_preserved": "# GOV-018 — Cross-disciplinary quality assurance review framework\n\nOPES Core Banking | 2026-11-03 | Batch 18/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/LOCAL_ARTIFACT_RECOVERY_INVENTORY_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md. Source claims distinguished from proposed design requirements.\n\n## Proposed operational requirements\n1. **GOV-018-R01:** Assign legal/regulatory reviewer to effective dates, instrument scope, conflicting articles, licensure and finality authority.\n2. **GOV-018-R02:** Assign CFO/ledger reviewer to monetary precision, double entry, postings, reversals, value dates, chart mappings, suspense and independent reconciliation.\n3. **GOV-018-R03:** Assign security reviewer to least privilege, maker-checker, cryptographic/key custody, secrets, insider threat and tenant isolation.\n4. **GOV-018-R04:** Assign AML/fraud reviewer to screening, monitoring, audit, immutable evidence and risk exception governance.\n5. **GOV-018-R05:** Assign payments reviewer to participant entitlement, ISO 20022 profile, external state machines, unknown outcomes and settlement receipts.\n6. **GOV-018-R06:** Assign operations reviewer to observability, capacity, backup-restore rehearsal, continuity, incident response and end-of-day cutover.\n7. **GOV-018-R07:** Assign architecture reviewer to bounded-context ownership, API compatibility, event durability, data consistency and dependency graph.\n8. **GOV-018-R08:** Assign accessibility and customer-operations reviewers to browser/mobile usability, localization, error clarity and recoverable staff workflows.\n9. **GOV-018-R09:** Require evidence-based PASS/FAIL/NOT_RUN/NOT_APPLICABLE with reviewer and artifact link; forbid fabricated executed tests.\n\n## Deliverables for review\n- Discipline-specific review form\n- Evidence grading rubric\n- Gate failure escalation process\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: Critical discipline veto cannot be overridden silently\n- [ ] AC-2: Every pass links to executed evidence\n- [ ] AC-3: Open P0 fails the affected gate\n\n## Open evidence and next reviewers\n- Qualified reviewers and actual test evidence not yet commissioned\n\n## Quality declaration\nThis document is a substantive first-pass design artifact, not reviewed production policy. Work-package status remains pending acceptance. Executed tests: 0. Code introduced: 0. Certification/approval claimed: none. Keep unresolved P0-dependent functions disabled.\n",
+    "source_title": "GOV-018 — Cross-disciplinary quality assurance review framework",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-019/GOV-019_CONTRACT.json",
+    "id": "GOV-019",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-019 — Formal master-plan ratification and acceptance dossier",
+      "Proposed operational requirements",
+      "Deliverables for review",
+      "Acceptance criteria — NOT YET PASSED",
+      "Open evidence and next reviewers",
+      "Quality declaration"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-019/GOV-019_SPEC.md",
+    "source_spec_sha256": "7c36cbc73d44353c01051e63f20f6c936e96f6c598e2aa434e2442acb128df92",
+    "source_text_preserved": "# GOV-019 — Formal master-plan ratification and acceptance dossier\n\nOPES Core Banking | 2026-11-03 | Batch 19/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/LOCAL_ARTIFACT_RECOVERY_INVENTORY_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md. Source claims distinguished from proposed design requirements.\n\n## Proposed operational requirements\n1. **GOV-019-R01:** Publish draft scope baseline with proposed P00–P12 phases, 260 planning slots and separately preserved historical WP IDs; avoid presenting this as historically verified.\n2. **GOV-019-R02:** Attach known historical records WP-ACC-004 inherited reported complete, WP-ACC-005 P0 blocked, and WP-PAY-GIMAC-001 open/unattempted.\n3. **GOV-019-R03:** Include recovery exceptions for incomplete archive and checkpoint reconciliation; these forbid audited completion percentages.\n4. **GOV-019-R04:** Request sponsor approval of charter, planned institution classes, architecture boundary, budget envelope and change board.\n5. **GOV-019-R05:** Require legal/CFO/CISO/Operations review of explicit independent domains and P0-affected dependencies before architecture signoff.\n6. **GOV-019-R06:** Specify that plan approval authorizes prioritized design work only; production code and go-live remain separate DoR/release decisions.\n7. **GOV-019-R07:** Record approval evidence by named role, date, version, signed decision, dissent, open exceptions and planned re-review trigger.\n8. **GOV-019-R08:** Reject implicit consent, chat responses, GitHub pushes or timer completion as a substitute for institutional approval.\n\n## Deliverables for review\n- Master-plan approval dossier index\n- Review and signatory roster\n- Baseline freeze criteria\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: Signed approval exists before using 260 as approved denominator\n- [ ] AC-2: P0 conditions disclosed to signatories\n- [ ] AC-3: Unapproved items retained as DRAFT\n\n## Open evidence and next reviewers\n- Named institutional signatories and exhaustive WP recovery outstanding\n\n## Quality declaration\nThis document is a substantive first-pass design artifact, not reviewed production policy. Work-package status remains pending acceptance. Executed tests: 0. Code introduced: 0. Certification/approval claimed: none. Keep unresolved P0-dependent functions disabled.\n",
+    "source_title": "GOV-019 — Formal master-plan ratification and acceptance dossier",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  },
+  {
+    "expected_contract": "programme/batches/2026-11-03/GOV-020/GOV-020_CONTRACT.json",
+    "id": "GOV-020",
+    "independent_acceptance": "NOT_VERIFIED",
+    "source_headings": [
+      "GOV-020 — Audit readiness, evidence retention and independent reconstruction",
+      "Proposed operational requirements",
+      "Deliverables for review",
+      "Acceptance criteria — NOT YET PASSED",
+      "Open evidence and next reviewers",
+      "Quality declaration"
+    ],
+    "source_spec": "programme/batches/2026-11-03/GOV-020/GOV-020_SPEC.md",
+    "source_spec_sha256": "5f1b9c27c52d00debccafc84e37d84334162af2f056b951627fd57fa4a8f1b2d",
+    "source_text_preserved": "# GOV-020 — Audit readiness, evidence retention and independent reconstruction\n\nOPES Core Banking | 2026-11-03 | Batch 20/30 | Status: DRAFT DELIVERED; INDEPENDENT REVIEW OPEN\nSource context: governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md; governance/LOCAL_ARTIFACT_RECOVERY_INVENTORY_2026-11-03.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md; regulatory/checkpoints/CT/README.md. Source claims distinguished from proposed design requirements.\n\n## Proposed operational requirements\n1. **GOV-020-R01:** Design evidence packs so an independent examiner can reconstruct requirements, legal authority, change approvals, code commit, deployment, posted journals and reconciliations.\n2. **GOV-020-R02:** Use stable evidence IDs, capture source custody, effective date, reviewer signature, execution environment, hash algorithm and explicit result.\n3. **GOV-020-R03:** Enforce append-only audit for ledger events and controlled corrections; an event status change must not create or destroy money.\n4. **GOV-020-R04:** Distinguish financial audit logs, application access logs, security events, regulatory decision records and regulator communications.\n5. **GOV-020-R05:** Record maker-checker evidence on sensitive operations with original author, approver, objective, before/after state and correlation ID.\n6. **GOV-020-R06:** Ensure data retention/deletion controls do not destroy legally required audit trails or expose customer/health-style sensitive personal data.\n7. **GOV-020-R07:** Build reproducibility scenarios for duplicate commands, outage, DR replay, regulatory change, cross-tenant access denial and reversal/return flows.\n8. **GOV-020-R08:** Require access-controlled audit export with pagination, integrity checks, restricted PII and documented chain of custody.\n9. **GOV-020-R09:** An audit evidence bundle remains NOT CERTIFIED until independently reviewed; self-generated labels do not establish regulatory certification.\n\n## Deliverables for review\n- Audit evidence packet format\n- Retention and access matrix\n- Reconstruction scenario catalogue\n\n## Acceptance criteria — NOT YET PASSED\n- [ ] AC-1: Independent reviewer can trace journal-to-source-to-approval\n- [ ] AC-2: Missing critical artifacts are explicit FAIL\n- [ ] AC-3: Evidence retains complete provenance\n\n## Open evidence and next reviewers\n- Independent auditor, retention schedule and production evidence not yet available\n\n## Quality declaration\nThis document is a substantive first-pass design artifact, not reviewed production policy. Work-package status remains pending acceptance. Executed tests: 0. Code introduced: 0. Certification/approval claimed: none. Keep unresolved P0-dependent functions disabled.\n",
+    "source_title": "GOV-020 — Audit readiness, evidence retention and independent reconstruction",
+    "status": "DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT"
+  }
+]

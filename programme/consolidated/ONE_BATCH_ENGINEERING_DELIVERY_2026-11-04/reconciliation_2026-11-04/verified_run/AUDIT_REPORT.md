@@ -1,5 +1,5 @@
 # OPES Core Banking — Exhaustive repository machine audit
-Source commit: 98df1716fed03a9c2ff0d6fcc78413ad574422c8. Source snapshot is git-tracked content; no approved historical WBS denominator.
+Source commit: 3d08971dc0b751710f18c4fd8ab2d23a940cc1b5. Source snapshot is git-tracked content; no approved historical WBS denominator.
 Tracked: 1295 files; text bodies read 1074; ZIPs CRC-tested 221 (failures: 146).
 Parsed 2026-11-03 contracts: 120; regulatory checkpoint README bodies: 59.
 Domain slots missing: 0; proposed SQL without RLS: 25; generic API payload gaps: 25.
