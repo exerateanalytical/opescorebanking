@@ -1,0 +1,169 @@
+{
+  "version": "2026-11-04-one-batch-draft",
+  "baseline_commit": "35e42c291fb2d1ecc32a88957509c6be6d070693",
+  "status": "DRAFT_NOT_ACCEPTED",
+  "domains": [
+    {
+      "id": "GOV",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/GOV_SPEC.md",
+      "entity_count": 5,
+      "command_count": 3
+    },
+    {
+      "id": "ARC",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/ARC_SPEC.md",
+      "entity_count": 5,
+      "command_count": 3
+    },
+    {
+      "id": "CIF",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/CIF_SPEC.md",
+      "entity_count": 6,
+      "command_count": 4
+    },
+    {
+      "id": "PRD",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/PRD_SPEC.md",
+      "entity_count": 6,
+      "command_count": 3
+    },
+    {
+      "id": "ACT",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/ACT_SPEC.md",
+      "entity_count": 7,
+      "command_count": 4
+    },
+    {
+      "id": "LED",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/LED_SPEC.md",
+      "entity_count": 6,
+      "command_count": 4
+    },
+    {
+      "id": "BRN",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/BRN_SPEC.md",
+      "entity_count": 6,
+      "command_count": 4
+    },
+    {
+      "id": "PAY",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/PAY_SPEC.md",
+      "entity_count": 6,
+      "command_count": 4
+    },
+    {
+      "id": "CRD",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/CRD_SPEC.md",
+      "entity_count": 6,
+      "command_count": 5
+    },
+    {
+      "id": "TRE",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/TRE_SPEC.md",
+      "entity_count": 6,
+      "command_count": 4
+    },
+    {
+      "id": "AML",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/AML_SPEC.md",
+      "entity_count": 5,
+      "command_count": 4
+    },
+    {
+      "id": "REP",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/REP_SPEC.md",
+      "entity_count": 6,
+      "command_count": 4
+    },
+    {
+      "id": "CHN",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/CHN_SPEC.md",
+      "entity_count": 6,
+      "command_count": 3
+    },
+    {
+      "id": "CARD",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/CARD_SPEC.md",
+      "entity_count": 6,
+      "command_count": 4
+    },
+    {
+      "id": "CRM",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/CRM_SPEC.md",
+      "entity_count": 5,
+      "command_count": 4
+    },
+    {
+      "id": "FEE",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/FEE_SPEC.md",
+      "entity_count": 6,
+      "command_count": 5
+    },
+    {
+      "id": "REC",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/REC_SPEC.md",
+      "entity_count": 5,
+      "command_count": 4
+    },
+    {
+      "id": "SEC",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/SEC_SPEC.md",
+      "entity_count": 6,
+      "command_count": 4
+    },
+    {
+      "id": "DAT",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/DAT_SPEC.md",
+      "entity_count": 5,
+      "command_count": 5
+    },
+    {
+      "id": "API",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/API_SPEC.md",
+      "entity_count": 5,
+      "command_count": 4
+    },
+    {
+      "id": "INF",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/INF_SPEC.md",
+      "entity_count": 5,
+      "command_count": 4
+    },
+    {
+      "id": "DR",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/DR_SPEC.md",
+      "entity_count": 5,
+      "command_count": 4
+    },
+    {
+      "id": "ADM",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/ADM_SPEC.md",
+      "entity_count": 4,
+      "command_count": 3
+    },
+    {
+      "id": "TST",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/TST_SPEC.md",
+      "entity_count": 5,
+      "command_count": 3
+    },
+    {
+      "id": "REL",
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/REL_SPEC.md",
+      "entity_count": 5,
+      "command_count": 4
+    }
+  ],
+  "existing_repo_blob_count": 1086,
+  "existing_zip_count": 221,
+  "exhaustive_wbs_approved": false,
+  "programme_accepted_wp_denominator": "UNKNOWN",
+  "blockers": [
+    "WP-ACC-005 PCEC 312/322",
+    "GOV-REC-001 archival provenance",
+    "GOV-WBS-RECON-001 exhaustive acceptance crosswalk",
+    "institutional payment rail entitlements"
+  ],
+  "banking_tests_executed": 0,
+  "production_code_generated": 0
+}
