@@ -1,0 +1,308 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 171,
+  "checkpoint": "BI",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BI/AUTHORITY_MODEL.json",
+      "git_blob_sha": "6e5fc9ad2ad26c372563faa792e3929ba0506aa7",
+      "sha256": "de9b793d71f66f4777dfeb941138c4c451af46709f84f7cf88ff3e5d8e0d59d2",
+      "bytes": 4150,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_decision\": \"HOLD\","
+        },
+        {
+          "line": 135,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"MISSING\","
+        },
+        {
+          "line": 142,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"EVIDENCE_INCOMPLETE\","
+        },
+        {
+          "line": 151,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"no_internal_approval_implies_regulatory_approval\","
+        },
+        {
+          "line": 152,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"no_regulatory_approval_implies_paid_up_capital\","
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BI/CONTINUATION_STATE.json",
+      "git_blob_sha": "49b8dea8d885f0e1c701635701582e2d755f8fc0",
+      "sha256": "22ca6a6936882a679f2cdcdfdb4a25b716f0b32b25b5d3baba4f33f1446d07d8",
+      "bytes": 1433,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited; not independently reaudited)\","
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 17,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BI/CONTROL_AND_TEST_DESIGN.md",
+      "git_blob_sha": "3760cdc2789d15a673e0e4aa398b0ed9fbe42684",
+      "sha256": "a595c1e41fb00fe6b4a9880236a6da7d4c4387f858fb71bed6d454f87e5aa03d",
+      "bytes": 5296,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| BI-REQ-01 | Classify correspondence by recipient, period, legal status and normative vs case scope | Regulatory Authority | LC-COB/44 image; R-2025/02 | DESIGN |"
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| BI-REQ-02 | Distinguish corporate approval from COBAC submission, receipt and signed decision | Institution Governance + Regulatory Compliance | 2009 circular vs 2025 Article 6 | DESIGN; 2026 approval absent |"
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| BI-REQ-03 | Distinguish subscribed, paid-up, own funds, settlement and compliance status | Capital Evidence + Accounting Core | R-2025/02 Article 5, financial invariants | DESIGN; bank PCEC missing |"
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| BI-REQ-04 | Version-pin legal interpretation and instrument amendments by as-of date and institution | Regulatory Authority | Article 4/6/7 conflict | HOLD |"
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| BI-REQ-05 | Reject automated compliance conclusions where regulator/corporate evidence is missing | Compliance Review | P0 evidence gap | DESIGN |"
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Proposed contract boundaries (not approved API)"
+        },
+        {
+          "line": 25,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## New negative acceptance scenarios (specified, not executed)"
+        },
+        {
+          "line": 44,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Missing authority store -> fail closed for rule promotion; regulator communication outcome UNKNOWN -> investigate without inferred approval; audit must reconstruct each document/version/actor/approval and distinguish historical case correspondence from normative rule. No direct balance mutation, no retry-driven duplicate posting, no invented cash, liquidity "
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BI/EVIDENCE_DELTA.md",
+      "git_blob_sha": "e2a9b0cfa99ee006b29a172c4bab6bcc543e0711",
+      "sha256": "3a185f56969012af2227fe223eb80788dee246b2c13fe1eadd7dfa1f7f74765a",
+      "bytes": 4110,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| BI-SRC-005 | BEAC regulations catalogue, https://www.beac.int/supervision-bancaire/reglements-de-cobac/ | R-2009/01 and LC-COB/44 both listed independently. | Catalogue listing proves discoverability, not legal effectiveness or completeness of current amendment chain. |"
+        },
+        {
+          "line": 14,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "2. **Regulatory process**: Article 6 plan submission and approval by COBAC SG are distinct events. Timely submission is not approval; receipt is not approval; absence of evidence is not proof of refusal."
+        },
+        {
+          "line": 15,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "3. **Capital realization**: subscribed, issued, paid-up and regulatory own funds are different measures. Do not create money on approval status change."
+        },
+        {
+          "line": 20,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Authenticated complete 01/25–02/25, missing printed 02/25 page 10, separate certified court dispositions, original COBAC–MINFI correspondence, official publication/effective dates, signed implementing texts; institution-approved PCEC, capital, liability and settlement mappings; signed R-2021/01–02, current prudential amendment chain; 2025 COBAC report body; "
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BI/EXECUTION_REPORT.md",
+      "git_blob_sha": "e4372e3aaa0cb3c1f84bf715a2ff0936dc554200",
+      "sha256": "850cce385810dc1cd93b186ffa6a6fc7f0220ac4fb1bbdf9154fe397febaa2e5",
+      "bytes": 1298,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "**Canonical predecessor:** BH remotely fetched; BI did not duplicate BH's case matrix. **Current:** Phase 4, WP-ACC-005 OPEN/P0 BLOCKED."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Canonical predecessor:** BH remotely fetched; BI did not duplicate BH's case matrix. **Current:** Phase 4, WP-ACC-005 OPEN/P0 BLOCKED."
+        },
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Work packages attempted 1; completed 0; kept open 1; blocked from closure 1; dependent attempted 0.** New source examined: signed/scanned BEAC-hosted historical LC-COB/44 (2009-11-24), establishing a distinct historical corporate-approval layer; current 2025 Article 6 COBAC approval remains separate. Official R-2025/02 rechecked. Official 2025 COBAC annual"
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Engineering:** authority classification, dual corporate/regulator approval model, 8 requirements, proposed events/contracts, 14 new unexecuted negative acceptance scenarios, 13-perspective quality review. No production code, banking tests, security scans, regulatory requests, or P0 closures. DoR FAIL. No new compliance claim."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BI/QUALITY_REVIEW.md",
+      "git_blob_sha": "c7280792da6f7b6d759fadcbc9e792116e217f7a",
+      "sha256": "6c9a890ed78b0b26e38ab248f73ff99910bad63570fb089230697e25ee38cfa5",
+      "bytes": 2082,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Regulatory/legal | FAIL/P0 | 2025 Article 4/6/7 institution-specific interpretation, official publication and amendments missing; 2009 circular is historical |"
+        },
+        {
+          "line": 20,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "No new P0 closure. WP-ACC-005 OPEN/P0 BLOCKED, DoR FAIL. Production code 0; executed banking tests 0; regulator requests 0; original source hashes 0. Continue research; no dependent work package advanced."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BI/README.md",
+      "git_blob_sha": "e07eb9f7d3b2b4085d2042bb12c03882c48e1621",
+      "sha256": "4dc97ac773316785bfc40e57c374ca98fe4fb3150588b94a6101a7b03e746ba0",
+      "bytes": 2507,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-02. Verified predecessor: BH, remotely retrieved. Phase 4 Accounting Core / Financial Integrity. Last reported completed WP: WP-ACC-004 (inherited; not independently reaudited). Active W"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Date: 2026-11-02. Verified predecessor: BH, remotely retrieved. Phase 4 Accounting Core / Financial Integrity. Last reported completed WP: WP-ACC-004 (inherited; not independently reaudited). Active WP-ACC-005 OPEN / P0 BLOCKED."
+        },
+        {
+          "line": 7,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "The full issuer-hosted R-2025/02 text was rechecked for Article 6 (submission by 2026-06-30; 2026–2029 milestones) and Article 7 (R-2009/01 continuing through 2026 for existing institutions). The legal interaction is still unresolved. A BEAC 2025 COBAC annual report link was verified but body fetch failed due to 19,385,240-byte size; no report findings inven"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BI",
+    "date": "2026-11-02",
+    "previous": "BH",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited; not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "production_code_written": 0,
+    "banking_tests_executed": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "new_acceptance_scenarios_specified": 14,
+    "original_pdf_binary_acquired": false,
+    "original_sha256_verified": false,
+    "official_publication_chain_verified": false,
+    "cobac_2025_report_body_inspected": false,
+    "new_primary_evidence": "BEAC-hosted historical signed LC-COB/44 dated 2009-11-24; corporate-body approval requirement in historical capital plan communication, separate from 2025 Article 6 COBAC SG approval",
+    "next_exact_task": "WP-ACC-005 — Checkpoint BJ: acquire authenticated issuer originals/publication and hashes for R-2009/01 and R-2025/02; signed COBAC interpretation of Articles 4/6/7 and bank-specific approvals; inspect COBAC 2025 report and signed R-2021/01–02; bank-approved PCEC/capital mapping and 01/25–02/25 legal/judicial/settlement evidence. Preserve P0 hold."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 172"
+}

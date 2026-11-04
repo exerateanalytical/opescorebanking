@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 171,
+  "checkpoint": "BI",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "5ece5b350fffde272cf29a771a63a11bdd9f9d02ee572444f6541089ede88577",
+      "crc32": "dc205d2e",
+      "bytes": 7299
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "91821cd05a4b4ba0a3163c9a12080bed98ab28d08a578044258b312e16f7c933",
+      "crc32": "aed940c3",
+      "bytes": 13454
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BI/AUTHORITY_MODEL.json",
+      "sha256": "de9b793d71f66f4777dfeb941138c4c451af46709f84f7cf88ff3e5d8e0d59d2",
+      "crc32": "f8b4ef31",
+      "bytes": 4150
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BI/CONTINUATION_STATE.json",
+      "sha256": "22ca6a6936882a679f2cdcdfdb4a25b716f0b32b25b5d3baba4f33f1446d07d8",
+      "crc32": "86845e65",
+      "bytes": 1433
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BI/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "a595c1e41fb00fe6b4a9880236a6da7d4c4387f858fb71bed6d454f87e5aa03d",
+      "crc32": "6dbfef9b",
+      "bytes": 5296
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BI/EVIDENCE_DELTA.md",
+      "sha256": "3a185f56969012af2227fe223eb80788dee246b2c13fe1eadd7dfa1f7f74765a",
+      "crc32": "78912753",
+      "bytes": 4110
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BI/EXECUTION_REPORT.md",
+      "sha256": "850cce385810dc1cd93b186ffa6a6fc7f0220ac4fb1bbdf9154fe397febaa2e5",
+      "crc32": "52c75b96",
+      "bytes": 1298
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BI/QUALITY_REVIEW.md",
+      "sha256": "6c9a890ed78b0b26e38ab248f73ff99910bad63570fb089230697e25ee38cfa5",
+      "crc32": "c587bf29",
+      "bytes": 2082
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BI/README.md",
+      "sha256": "4dc97ac773316785bfc40e57c374ca98fe4fb3150588b94a6101a7b03e746ba0",
+      "crc32": "dab08a18",
+      "bytes": 2507
+    }
+  ]
+}
