@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-04",
+  "classification": "GITHUB_BINARY_FETCH_AND_HASH_VERIFIED",
+  "records": [
+    {
+      "checkpoint": "AM",
+      "repository_path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AM_2026-10-09.zip",
+      "git_blob_sha": "33d0c506abddba5ba1dfc2d4905ec173f9f3edce",
+      "sha256": "9d15b534696a3edc9eca4dd131b1b7c6f751c6820e571827f4f748df4a598e93",
+      "bytes": 584358,
+      "crc32": "d1848071",
+      "entries": 8,
+      "central_valid": true,
+      "predecessor": {
+        "name": "prior_checkpoint_AL.zip",
+        "method": 8,
+        "uncompressed_bytes": 579859,
+        "crc32": "b243c69b"
+      }
+    },
+    {
+      "checkpoint": "AN",
+      "repository_path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AN_2026-10-09.zip",
+      "git_blob_sha": "f32ffba2476df66f839deec722adaf063d697bbf",
+      "sha256": "9ee3193e10f9e00f125f9cb29161563278ab5fa8698461bc6cbfcffeebbb44c5",
+      "bytes": 589143,
+      "crc32": "c4e8983f",
+      "entries": 10,
+      "central_valid": true,
+      "predecessor": {
+        "name": "prior_checkpoint_AM.zip",
+        "method": 8,
+        "uncompressed_bytes": 584358,
+        "crc32": "d1848071"
+      }
+    }
+  ]
+}
