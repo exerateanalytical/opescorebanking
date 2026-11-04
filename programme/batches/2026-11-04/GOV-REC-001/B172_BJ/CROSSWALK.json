@@ -1,0 +1,312 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 172,
+  "checkpoint": "BJ",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BJ/CONTINUATION_STATE.json",
+      "git_blob_sha": "3929a57befeddea8d6407289002313e1083f7cab",
+      "sha256": "9bd2a6bd2b8b061512eeecd515949e1e04d7c30f11e801d746d8808def537b75",
+      "bytes": 1621,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited; not independently reaudited)\","
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BJ/CONTRADICTION_AND_SCOPE_REGISTER.json",
+      "git_blob_sha": "e7f2711b84a404148cfcadec981b9ab3762e996f",
+      "sha256": "672f9eb86321d861c6f51048af9c2b78a299324b2e68aeb2e5df11aa7fa9529d",
+      "bytes": 2865,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 38,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"required\": \"Issuer-confirmed corrected decision/complete list; no invented 37th legal entity\","
+        },
+        {
+          "line": 46,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"control\": \"REGULATORY_REFERENCE_HOLD\""
+        },
+        {
+          "line": 75,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"issuer signed complete source\","
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BJ/CONTROL_AND_TEST_DESIGN.md",
+      "git_blob_sha": "d67a09a3e5b04411c6599ad4c5f0e30ebe749bd9",
+      "sha256": "c0c510339c207f1079d614b809a963af0b91759b32e087fd848471d43c66738e",
+      "bytes": 4593,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "# BJ — Regulatory decision provenance, domain design and acceptance scenarios (NOT IMPLEMENTED)"
+        },
+        {
+          "line": 14,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "`DISCOVERED -> TEXT_VERIFIED -> PROVENANCE_RECONCILED -> LEGAL_REVIEWED -> CFO_REVIEWED -> REGULATOR_APPROVED_IF_REQUIRED -> ACTIVATED`. Any unresolved P0 -> `ON_HOLD`; conflicting amendment -> `SUPERSEDED_REVIEW`; revocation -> `SUSPENDED`. `ON_HOLD` must not fall back to a favorable risk reduction. Unknown outcome -> `MANUAL_REVIEW`, not implicit approval."
+        },
+        {
+          "line": 23,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Negative acceptance scenarios — specified, NOT executed"
+        },
+        {
+          "line": 24,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "BJ-T01: 37 claimed vs 36 enumerated -> reject roster completeness."
+        },
+        {
+          "line": 25,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "BJ-T02: Missing 37th name -> never create guessed entity."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BJ/EVIDENCE_DELTA.md",
+      "git_blob_sha": "cae950fd25627173c6863b6dcff57ff782e20b22",
+      "sha256": "9a68794ccfc0078ac226b7aaa6b51df374c02e68cbf9e2bf7b222f6b4b46c71f",
+      "bytes": 3826,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| BJ-SRC-005 | Academic 2021 legal commentary, https://www.labase-lextenso.fr/l-essentiel-droits-africains-des-affaires/2021-n5/reglement-amiable-des-litiges-bancaires-la-reclamation-et-la-mediation-consacrees-et-organisees-DAA200a8 | Identifies COBAC R-2020/06 dated 2020-07-30 for consumer complaints and mediation. | Secondary corroboration; full issuer tex"
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| BJ-SRC-006 | BEAC 2021 financial stability review, https://www.beac.int/wp-content/uploads/2022/08/RSF_AC_2021.pdf | Prior checkpoint evidence of R-2021/01–02 amendments on sovereign exposure; complete operative text remains unavailable. | Context only, not substituted for amendments. |"
+        },
+        {
+          "line": 11,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| BJ-SRC-007 | Government-hosted R-2025/02, https://www.finances.gouv.cg/fr/download/file/fid/9490 | Prior BI verified Article 4/6/7 transitional interaction; still unresolved. | Rechecked source discoverability; no new certified interpretation or original bytes. |"
+        },
+        {
+          "line": 17,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- P0 candidate: D-2025/328 contradictory 37 vs 36 roster; never create missing entity."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BJ/EXECUTION_REPORT.md",
+      "git_blob_sha": "84cda50338faf19240c46ec6eda0078988e700a2",
+      "sha256": "bda3e8fad4b3464a00eeea81e96f237dbf69e76e865c57c9fce467ac1ab2c58d",
+      "bytes": 1628,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "**Canonical predecessor BI** remotely fetched and read; BJ did not reopen or rewrite BI. Phase 4; active WP-ACC-005 OPEN/P0 BLOCKED. Last completed WP-ACC-004 inherited, not reaudited."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Canonical predecessor BI** remotely fetched and read; BJ did not reopen or rewrite BI. Phase 4; active WP-ACC-005 OPEN/P0 BLOCKED. Last completed WP-ACC-004 inherited, not reaudited."
+        },
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Work packages attempted: 1; completed: 0; kept open: 1; blocked from closure: 1; dependent packages attempted: 0.**"
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Banking tests executed 0; production code 0; security scans 0; regulator requests sent 0; original PDF SHA-256 verified 0. DoR FAIL.** Independent source acquisition failed DNS and screenshot 403; 2025 annual report body still uninspected. New checkpoint documentation does not certify regulatory compliance."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BJ/QUALITY_REVIEW.md",
+      "git_blob_sha": "7436868aa2b2341c988819c68e9f8f3e7d59fd20",
+      "sha256": "8b483847baecfeadb3e27e54e961d07809e1feb70eb89271e1a350a6b332739a",
+      "bytes": 1987,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Perspective | Result | Unresolved condition |"
+        },
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Regulatory/legal | FAIL/P0 | D-2025/328 37 vs 36 and R-2020/01 vs R-2020/02; official correction, signature, effect and annual applicability absent |"
+        },
+        {
+          "line": 16,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Regulator/auditor evidence | FAIL/P0 | No issuer correction or original PDF byte custody; 2025 report and R-2021 amendments missing |"
+        },
+        {
+          "line": 20,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**DoR FAIL. WP-ACC-005 OPEN/P0 BLOCKED.** No banking code, tests, scans, outbound requests or certification. Only one active WP attempted; no dependent package advanced."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BJ/README.md",
+      "git_blob_sha": "0bedc0219ed4801b82333f3fb320b7656503d118",
+      "sha256": "88e01967c6e1e6a61241ad6cc0b67833f4d070a49902bca85a49ed95f3ca56b7",
+      "bytes": 3196,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Predecessor: BI (remote continuation and quality review fetched). Phase 4 Accounting Core / Financial Integrity. WP-ACC-005 OPEN/P0 BLOCKED. Last completed WP-ACC-004 is inherited and not independentl"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Predecessor: BI (remote continuation and quality review fetched). Phase 4 Accounting Core / Financial Integrity. WP-ACC-005 OPEN/P0 BLOCKED. Last completed WP-ACC-004 is inherited and not independently reaudited."
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Material contradictions discovered within a government-hosted decision"
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "1. Recital says **53 submitted / 37 eligible**. Article 1's named list has **36** entries: Cameroon 11, Congo 6, Gabon 10, Equatorial Guinea 2, Chad 7. The arithmetic 11+6+10+2+7=36 contradicts 37. **Never infer a 37th entity** or treat the recital as an authoritative complete membership count."
+        },
+        {
+          "line": 13,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Regulatory effect and containment"
+        },
+        {
+          "line": 17,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Signed R-2021/01–02, issuer authenticated R-2025/02 and R-2009/01, capital-plan interpretation, 2025 COBAC annual report body, current PCEC bank-approved mapping, 01/25–02/25 complete texts (missing printed page 10), publication/court/settlement evidence. No P0 closed."
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BJ",
+    "date": "2026-11-02",
+    "previous": "BI",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited; not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "production_code_written": 0,
+    "banking_tests_executed": 0,
+    "security_scans_executed": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "new_acceptance_scenarios_specified": 16,
+    "original_pdf_binary_acquired": false,
+    "original_sha256_verified": false,
+    "official_publication_chain_verified": false,
+    "cobac_2025_report_body_inspected": false,
+    "new_primary_evidence": "Republic of Congo government-hosted COBAC D-2025/328 for exercise 2026; 37 claimed vs 36 enumerated, recital R-2020/01 vs Article 2 R-2020/02, signed-body date vs catalogue metadata; 2024 official COBAC annual report complaints R-2020/01 cross-reference conflict",
+    "next_exact_task": "WP-ACC-005 — Checkpoint BK: obtain issuer-authenticated correction/interpretation of D-2025/328's 37-vs-36 roster and R-2020/01-vs-R-2020/02 Article 2 citation; confirm annual effect, exact exposure quotity semantics and legal-entity scope; obtain original bytes/hashes/publication/notification and signed R-2020/01, R-2020/06, R-2021/01–02; continue R-2025/02 Articles 4/6/7, PCEC and 01/25–02/25 evidence. Preserve P0 hold."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 173"
+}
