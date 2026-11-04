@@ -4,6 +4,7 @@ on:
     paths:
       - '.github/workflows/reconcile-core-banking.yml'
       - 'tools/reconcile_core_banking.py'
+      - 'tools/reconcile_core_banking_batch210.py'
   workflow_dispatch:
 permissions:
   contents: write
@@ -13,15 +14,22 @@ concurrency:
 jobs:
   reconcile:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: true
-      - name: Audit all tracked content, validate ZIPs, package source
+      - name: Independently inspect source audit batches 151-209 and create registered B210 once
+        run: python3 tools/reconcile_core_banking_batch210.py
+      - name: Stage canonical state and B210 to include in cumulative source archive
+        run: |
+          git add governance/CANONICAL_PROGRAMME_STATE.json
+          git add governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.4_2026-11-04.md
+          git add programme/batches/2026-11-04/GOV-REC-001/B210_ALL/
+      - name: Rebuild audited cumulative source archive
         run: python3 tools/reconcile_core_banking.py
-      - name: Commit immutable audit artifacts and checksummed archive
+      - name: Commit B210 and comprehensive evidence then push
         shell: bash
         run: |
           set -euo pipefail
@@ -29,6 +37,6 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/reconciliation_2026-11-04/verified_run/
           if ! git diff --cached --quiet; then
-            git commit -m "audit: verified full tracked-source reconciliation and archive"
+            git commit -m "audit: reconcile batch 210 and whole repository; preserve source custody and P0 holds"
             git push origin HEAD:main
           fi
