@@ -17,7 +17,23 @@ def add(z,p,data):
     i=zipfile.ZipInfo(p,date_time=(2026,11,4,0,0,0));i.compress_type=zipfile.ZIP_DEFLATED;i.external_attr=(0o100644<<16);z.writestr(i,data)
 def digestrec(path,data):
     return {"path":path,"bytes":len(data),"sha256":sha(data),"crc32":format(zlib.crc32(data)&0xffffffff,"08x"),"git_blob_sha1":blob(data)}
-if OUT.exists():raise RuntimeError("B210 already exists; preserve history and avoid duplicate deliveries")
+if OUT.exists():
+    # Idempotent continuation: check existing original B210 bytes; NEVER overwrite it.
+    zips=list(OUT.glob("OPES_Core_Banking_Batch_210_*.zip"))
+    if len(zips)!=1:raise RuntimeError("Existing B210 ZIP missing/ambiguous")
+    data=zips[0].read_bytes()
+    expected=(OUT/"ZIP_SHA256SUMS.txt").read_text().split()[0]
+    if sha(data)!=expected:raise RuntimeError("Existing B210 SHA-256 differs from manifest")
+    with zipfile.ZipFile(io.BytesIO(data)) as oldzip:
+        if oldzip.testzip():raise RuntimeError("Existing B210 ZIP CRC invalid")
+        oldmanifest=json.loads(oldzip.read("MANIFEST.json"))
+        for ent in oldmanifest["entries"]:
+            body=oldzip.read(ent["path"])
+            if sha(body)!=ent["sha256"] or len(body)!=ent["bytes"]:
+                raise RuntimeError("Existing B210 payload altered "+ent["path"])
+    print(json.dumps({"batch":210,"status":"ALREADY_DELIVERED_REVERIFIED_NO_DUPLICATE",
+      "sha256":expected,"bytes":len(data),"manifest_entries":len(oldmanifest["entries"])}))
+    raise SystemExit(0)
 cpdirs=sorted(p for p in SRC.iterdir() if p.is_dir())
 sources=sorted(p for d in cpdirs for p in d.iterdir() if p.is_file())
 if len(cpdirs)!=59 or len(sources)!=317:raise RuntimeError("Source census differs from canonical 59 dirs, 317 blobs")
