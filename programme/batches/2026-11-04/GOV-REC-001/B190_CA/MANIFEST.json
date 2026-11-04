@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 190,
+  "checkpoint": "CA",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "1edb12fe90dcec962d0d6c0dcfa36a56779fcb7e9498c05bc2d270022cdf546a",
+      "crc32": "c9854691",
+      "bytes": 7728
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "15ee7fd875108655e48eface2d9c3d302626709d0aca952544db5988748132ee",
+      "crc32": "65274576",
+      "bytes": 13782
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/CA/CONTINUATION_STATE.json",
+      "sha256": "f2cee1322d564c4f92d9969f9d822bd6a9d350d332f2584b24a06e0ee581228c",
+      "crc32": "b1f0b6d0",
+      "bytes": 2124
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/CA/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "ea21719481151cd6e8e0e0cad6446ec7750798dc51462c294df6b16cad61bbac",
+      "crc32": "e2730a51",
+      "bytes": 5262
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/CA/EVIDENCE_DELTA.md",
+      "sha256": "980020cc81e536234edb8101a8520a24f5007d8639863c9c204117a0db508b4c",
+      "crc32": "26c0d391",
+      "bytes": 5435
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/CA/EXECUTION_REPORT.md",
+      "sha256": "9d0baf09c760cd9254ead83f78778041e089c098d70fbacf8c8eb1c3a0f97511",
+      "crc32": "a6c88395",
+      "bytes": 1915
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/CA/ISO20022_AUTHORITY_GATES.json",
+      "sha256": "6f109098422504b8c1a32b27b2feedbcf348e8319242717355a07b7071a54af9",
+      "crc32": "bcf488be",
+      "bytes": 5371
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/CA/QUALITY_REVIEW.md",
+      "sha256": "077e2e2a4c52b7b1ec1b5ecc79bde787fcd6c2f426b8c49fde0e678e8f5fc0cf",
+      "crc32": "6d3a07ec",
+      "bytes": 2277
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/CA/README.md",
+      "sha256": "839e0819d619a5ecbf3eeb11a9eb2dcbf409b4ed1194063a1a7d720b8f8d5177",
+      "crc32": "7358520b",
+      "bytes": 3173
+    }
+  ]
+}
