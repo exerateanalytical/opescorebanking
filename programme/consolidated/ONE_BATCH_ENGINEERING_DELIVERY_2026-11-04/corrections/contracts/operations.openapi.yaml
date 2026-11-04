@@ -1,0 +1,90 @@
+openapi: 3.1.0
+info:
+  title: OPES Core Banking - Institution-scoped operations (proposed)
+  version: 0.1.0-draft
+  description: Design contract; not production-certified. No external rail entitlement implied.
+servers:
+  - url: https://api.example.invalid
+paths:
+  /v1/institutions/{institutionId}/operations:
+    post:
+      operationId: submitOperation
+      parameters:
+        - $ref: '#/components/parameters/InstitutionId'
+        - name: Idempotency-Key
+          in: header
+          required: true
+          schema: {type: string, minLength: 16, maxLength: 128}
+        - name: X-Correlation-ID
+          in: header
+          required: true
+          schema: {type: string, format: uuid}
+      security: [{oidc: [banking.operations.write]}]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/OperationRequest'}
+      responses:
+        '202':
+          description: Accepted; not necessarily settled
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/OperationResult'}
+        '403': {description: Forbidden or institution mismatch}
+        '409': {description: Stale version or idempotency payload conflict}
+        '422': {description: Invalid transition or policy}
+        '503': {description: Fail closed}
+  /v1/institutions/{institutionId}/operations/{operationId}:
+    get:
+      operationId: getOperation
+      parameters:
+        - $ref: '#/components/parameters/InstitutionId'
+        - name: operationId
+          in: path
+          required: true
+          schema: {type: string, format: uuid}
+      security: [{oidc: [banking.operations.read]}]
+      responses:
+        '200':
+          description: Current authoritative internal state
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/OperationResult'}
+        '403': {description: Forbidden}
+        '404': {description: Not found}
+components:
+  parameters:
+    InstitutionId:
+      name: institutionId
+      in: path
+      required: true
+      schema: {type: string, format: uuid}
+  schemas:
+    OperationRequest:
+      type: object
+      additionalProperties: false
+      required: [operation_type, aggregate_id, expected_version, policy_version, payload]
+      properties:
+        operation_type: {type: string, minLength: 1}
+        aggregate_id: {type: string, format: uuid}
+        expected_version: {type: integer, minimum: 0}
+        policy_version: {type: string}
+        reason: {type: string, maxLength: 2000}
+        payload: {type: object}
+    OperationResult:
+      type: object
+      additionalProperties: false
+      required: [operation_id, state, version, correlation_id]
+      properties:
+        operation_id: {type: string, format: uuid}
+        state:
+          type: string
+          enum: [PENDING_APPROVAL, AUTHORIZED, PROCESSING, UNKNOWN_PENDING_RECONCILIATION, COMPLETED, REJECTED, REVERSED]
+        version: {type: integer, minimum: 0}
+        correlation_id: {type: string, format: uuid}
+        external_finality_verified: {type: boolean, default: false}
+  securitySchemes:
+    oidc:
+      type: openIdConnect
+      openIdConnectUrl: https://identity.example.invalid/.well-known/openid-configuration

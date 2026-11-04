@@ -1,0 +1,26 @@
+domain,actor,operation,requires_distinct_approver,financial_effect,primary_control,review_status
+GOV,institution-scoped operator,"Institution provisioning",YES,NO,"institution must be approved before any financial configuration activation",DRAFT
+ARC,institution-scoped operator,"Contract governance",POLICY_DEPENDENT,NO,"incompatible contract requires new major version and migration plan",DRAFT
+CIF,institution-scoped operator,"KYC approval",POLICY_DEPENDENT,NO,"no active regulated account without required verified KYC evidence",DRAFT
+PRD,institution-scoped operator,"Product version approval",YES,DELEGATED_TO_LED,"no retroactive product-version mutation",DRAFT
+ACT,institution-scoped operator,"Deposit account opening",POLICY_DEPENDENT,DELEGATED_TO_LED,"account available balance is derived from ledger and holds",DRAFT
+LED,institution-scoped operator,"Journal posting",YES,DELEGATED_TO_LED,"sum debits equals credits in each currency and ledger entity; posted immutable",DRAFT
+BRN,institution-scoped operator,"Cash drawer close",YES,DELEGATED_TO_LED,"opening plus movements minus disbursements equals counted cash plus signed variance",DRAFT
+PAY,institution-scoped operator,"Interbank transfer",YES,DELEGATED_TO_LED,"unknown rail outcome never retried as new payment",DRAFT
+CRD,institution-scoped operator,"Loan disbursement",YES,DELEGATED_TO_LED,"disbursement requires approved credit decision and undrawn limit",DRAFT
+TRE,institution-scoped operator,"FX settlement",YES,DELEGATED_TO_LED,"no position marked settled without counterparty/nostro evidence",DRAFT
+AML,institution-scoped operator,"Sanctions alert disposition",POLICY_DEPENDENT,NO,"alert closure must retain evidence and distinct reviewer when required",DRAFT
+REP,institution-scoped operator,"Regulatory return submission",POLICY_DEPENDENT,NO,"every reported figure must trace to frozen ledger/source snapshot",DRAFT
+CHN,institution-scoped operator,"Corporate payment approval",POLICY_DEPENDENT,NO,"channel approval cannot override core payment authorization",DRAFT
+CARD,institution-scoped operator,"Card authorization",POLICY_DEPENDENT,DELEGATED_TO_LED,"card data isolation and scheme-specific finality",DRAFT
+CRM,institution-scoped operator,"Complaint handling",POLICY_DEPENDENT,NO,"case staff cannot edit ledger entries",DRAFT
+FEE,institution-scoped operator,"Fee assessment",YES,DELEGATED_TO_LED,"assessed fees use effective-dated rule and cannot post twice",DRAFT
+REC,institution-scoped operator,"External statement matching",POLICY_DEPENDENT,DELEGATED_TO_LED,"unmatched difference cannot be silently cleared",DRAFT
+SEC,institution-scoped operator,"Privileged role grant",YES,NO,"requestor and approver must differ for privileged access",DRAFT
+DAT,institution-scoped operator,"Migration rehearsal",YES,DELEGATED_TO_LED,"opening balances must reconcile exactly to approved source and ledger",DRAFT
+API,institution-scoped operator,"External adapter onboarding",POLICY_DEPENDENT,DELEGATED_TO_LED,"no live rail call until bank-specific entitlement verified",DRAFT
+INF,institution-scoped operator,"Signed release promotion",POLICY_DEPENDENT,NO,"no unsigned artifact or unapproved migration in production",DRAFT
+DR,institution-scoped operator,"Ledger restore exercise",POLICY_DEPENDENT,DELEGATED_TO_LED,"restore must prove journal and outbox consistency and recovery-point boundaries",DRAFT
+ADM,institution-scoped operator,"Institution limit change",YES,NO,"no self-approved limit increase and no retroactive policy rewrite",DRAFT
+TST,institution-scoped operator,"Evidence acceptance",POLICY_DEPENDENT,DELEGATED_TO_LED,"no passed result without executed test evidence",DRAFT
+REL,institution-scoped operator,"Release authorization",YES,NO,"all required gates pass before production activation",DRAFT
