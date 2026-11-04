@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 184,
+  "checkpoint": "BU",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "2143d93c05cfc2e30a1c4ecf3509eb38ae14ba1a0ddbde8e783a4b91a3871284",
+      "crc32": "638d8ba3",
+      "bytes": 6722
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "9548a1ed4e96d5d2252ae3e752634bc75168f07df1e0b81fd1e1b63411a5e564",
+      "crc32": "57540df3",
+      "bytes": 15078
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BU/CONTINUATION_STATE.json",
+      "sha256": "de9e737968672fbd9bd96594e8af1d49e71a88dd17094c15aa0d77b7fcef4022",
+      "crc32": "6bcba03c",
+      "bytes": 1626
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BU/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "5da4ec5f21605648a1ad3d76d6633ebcde1f62907b88eef152da1a5d037a2280",
+      "crc32": "83ce0f77",
+      "bytes": 5518
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BU/EVIDENCE_DELTA.md",
+      "sha256": "eba102fd1e4c62b7b559ea62a10fbd8e724d7cd45d9d677fd9c5d5926f094967",
+      "crc32": "b425baf3",
+      "bytes": 3279
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BU/EXECUTION_REPORT.md",
+      "sha256": "057de05fcd7e545c8023ca3e58d9fc9cceb7dcee55c96aee5acc6a17b7d8c498",
+      "crc32": "9826527f",
+      "bytes": 1812
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BU/LEGAL_CITATION_INTEGRITY_GATES.json",
+      "sha256": "3e78e874e1bc65eed7c6ec162fdd139f9e42e3893542a84086bc67beb81b29ec",
+      "crc32": "c1ac965b",
+      "bytes": 4666
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BU/QUALITY_REVIEW.md",
+      "sha256": "b75a9d4f0f56a14f353867d7ba337e93aa5b4a3f5a6a40f4e4df793b7694e1db",
+      "crc32": "bf9731cd",
+      "bytes": 2315
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BU/README.md",
+      "sha256": "a55c7f624e816c7ed2ddcd02b39e19ad0448c1bea3d23cc10a9a7faca9b83d24",
+      "crc32": "93868922",
+      "bytes": 1594
+    }
+  ]
+}
