@@ -1,0 +1,300 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 179,
+  "checkpoint": "BQ",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BQ/CONTINUATION_STATE.json",
+      "git_blob_sha": "2fa82d7d635174b99cf74edd1b3b3f59ec717783",
+      "sha256": "ca999e516d92578934a759a4bee89dcfc346bb63891f850ecd4225e5991df4cb",
+      "bytes": 2107,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 6,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 14,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BQ/CONTROL_AND_TEST_DESIGN.md",
+      "git_blob_sha": "ea838001210183d0572a5cc29e4fa64dfdb4548e",
+      "sha256": "8dd8e99482749d8855c1c0c7830c933aca00598f266a1319e24f06e653d1b80a",
+      "bytes": 4269,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "`INSTRUCTION_AUTHORIZED → SUBMITTED → RAIL_ACKNOWLEDGED → CLEARING_CONFIRMED → SETTLEMENT_EVIDENCE_PENDING → EXTERNAL_SETTLEMENT_CONFIRMED → RECONCILED`. On missing/contradictory evidence enter `EXTERNAL_OUTCOME_UNKNOWN` or `RECONCILIATION_EXCEPTION`. Returns and cancellations are distinct workflows, not rewrites of immutable postings."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BQ/EXECUTION_REPORT.md",
+      "git_blob_sha": "0cf6ee6c77b00fca2e9a3bb7528371bb9eb95535",
+      "sha256": "3368147f1673307992a13f2f080e6e0f009c0f3bc629fb7dc27a28aeaa8a3011",
+      "bytes": 1857,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Predecessor:** BP remote main verified at `8ab6aa2e757975a67d04954e44dbe59f8fe3cff2` before writing. **Work package:** WP-ACC-005 OPEN / P0 BLOCKED. Last reported completed WP-ACC-004 (not reaudited)."
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Completed | 0 |"
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Blocked from closure | 1 |"
+        },
+        {
+          "line": 15,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Regulatory requests transmitted | 0 |"
+        },
+        {
+          "line": 20,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Quality gate:** DoR FAIL. Institution participant contracts, exact message profiles/security, external finality mapping, approved PCEC and COBAC legal chain still missing. No actual payment execution or integration. BQ is a documentation checkpoint only; work package not complete."
+        },
+        {
+          "line": 24,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint BR: verify SYGMA V10 actual live/finality with issuer evidence; acquire bank-specific SYSTAC2/SYGMA participation, CEMAC-BANK profiles, message authentication, conformance and settlement evidence; verify instant module separately; continue COBAC/PCEC/01-25 unresolved P0 evidence."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BQ/QUALITY_REVIEW.md",
+      "git_blob_sha": "09757d6ec1074f59ea4c3b915f444fa65c74d880",
+      "sha256": "2b4524165aa9994d3464e8fdad7dcd55c5a0bcf8cbe7eaaf0c04dd321cffecbe",
+      "bytes": 2083,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Regulatory/legal | Issuer signed 12 Aug 2026 press release gives actual SYSTAC2 go-live 3 Aug; no institution agreement or corrected migration annex | Partial evidence advance; P0 OPEN |"
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Architecture/domain boundaries | Issuer capability, bank entitlement, rail adapter, settlement evidence, accounting and recon separately owned | Proposed, not approved ADR |"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Review outcome:** No P0 closure, no DoR pass, no code, no banking tests, no regulatory request, no certification. WP-ACC-005 remains OPEN/P0. No dependent package attempted. Retain unresolved COBAC/PCEC/01-25 legal issues unchanged."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BQ/RAIL_DEPLOYMENT_AND_CAPABILITY_GATES.json",
+      "git_blob_sha": "666de4ac99266d9eae8b3e3041a7c1f5e5c31be0",
+      "sha256": "ecf3e978c8cde688a69b9aeda008fbc0e3a171f25f16b83d1f8ac313461f4f7d",
+      "bytes": 6237,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 77,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"owns\": \"signed or independently authenticated scheme/account evidence and outcome uncertainty\","
+        },
+        {
+          "line": 88,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"cannot\": \"approve its own discrepancies\""
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BQ/README.md",
+      "git_blob_sha": "d2b3dd3ebd7019625d697443d53bacae635fe2f5",
+      "sha256": "289761f96b42fe257cb21e86d84ea8c2b2fa2bb739953f98a9444c3e48e223ec",
+      "bytes": 2464,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "**2 November 2026 | WP-ACC-005 | Phase 4 Accounting Core / Financial Integrity | OPEN — P0 BLOCKED**"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**2 November 2026 | WP-ACC-005 | Phase 4 Accounting Core / Financial Integrity | OPEN — P0 BLOCKED**"
+        },
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Predecessor: BP, verified main at `8ab6aa2e757975a67d04954e44dbe59f8fe3cff2` before this checkpoint. No dependency advance; WP-ACC-004 remains last reported completed (not reaudited)."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Material delta (not a repeat of BP)"
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "This is a **narrow P0 evidence advance**: the historical BP migration annex is superseded **for SYSTAC2 actual platform launch only**, not for bank-specific onboarding, SYGMA V10 live status, instant payments, message certification, settlement-finality contracts or accounting readiness. Retain the annex chronology discrepancy as a documentary issue."
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Added two-axis rail capability model (issuer platform live state vs institution's actual participation), version/feature/effective-date gates, dispute and instant-service isolation, and 12 negative acceptance specifications. No code, banking tests, signatures, participant schemas or institution agreements obtained. No ledger posting or regulatory policy acti"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BQ/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "git_blob_sha": "d94ae296f5e4fdd63a09e1e47a6c0c2bbdf5caaf",
+      "sha256": "c69ce816adf568acada677c2c6db0a32dd6f9e09412ec29d6cfa2df91d9f1a93",
+      "bytes": 2770,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Source BQ-S2 (predecessor, issuer scanned primary):** BEAC Instruction 001/GR/2025 dated 17 November 2025, https://www.beac.int/wp-content/uploads/2016/10/Instruction-N%C2%B0001-GR-2025_norme-ISO-20022.pdf. Annex has chronologically inconsistent milestone labels. BQ-S1 supersedes planned dates **only as to SYSTAC2's observed 3 August 2026 production**. The"
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Verification limitation:** Browser retrieved and displayed both pages of BQ-S1. Container `curl` download failed with DNS error 6 (could not resolve www.beac.int); original PDF binary, SHA-256 and chain-of-custody hash **not obtained**. A signed-looking scan on issuer domain is not equivalent to verified digital signature or institution-specific legal acce"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BQ",
+    "date": "2026-11-02",
+    "previous": "BP",
+    "previous_verified_commit": "8ab6aa2e757975a67d04954e44dbe59f8fe3cff2",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "new_negative_acceptance_scenarios_specified": 12,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "security_scans_executed": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "issuer_press_release_pages_visually_inspected": 2,
+    "issuer_confirmed_SYSTAC2_live_since": "2026-08-03",
+    "SYGMA_V10_live_confirmed": false,
+    "SYSTAC2_instant_live_confirmed": false,
+    "original_pdf_binary_acquired": false,
+    "original_pdf_sha256_verified": false,
+    "BEAC_CEMAC_BANK_access": false,
+    "scheme_contract_authenticated": false,
+    "policy_activation_authorized": false,
+    "remote_delivery_status": "PENDING_REMOTE_VERIFICATION_AT_DOCUMENT_CREATION",
+    "evidence_delta": [
+      "BEAC signed 12 Aug 2026 press release confirms SYSTAC2 live 3 Aug 2026",
+      "SYSTAC2 retail clearing and disputes supported in issuer description; instant module for future launch",
+      "SYGMA V10 finalizing as of 12 Aug, later live status unverified",
+      "Container original-PDF curl failed DNS error 6; no SHA-256",
+      "12 additional negative acceptance specifications, 0 executed"
+    ],
+    "next_exact_task": "WP-ACC-005 — Checkpoint BR: obtain issuer-authenticated later SYGMA V10 live/finality announcement (or retain UNKNOWN), bank-specific SYSTAC2/SYGMA agreements, approved CEMAC-BANK message/security profiles and conformance evidence, independently verify instant module activation, and continue COBAC 2020/2021, D-2025/328, approved PCEC and 01/25–02/25 legal/judicial/settlement evidence. Maintain P0 hold."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 180"
+}
