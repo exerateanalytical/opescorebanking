@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-04",
+  "programme": "OPES Core Banking",
+  "work_package": "GOV-REC-001",
+  "registered_plan": "governance/GOV_REC_001_SUBBATCH_PLAN_151_180_2026-11-04.md",
+  "baseline": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "subbatches": [
+    {
+      "number": 151,
+      "checkpoint": "AO",
+      "commit": "0aa920040611e0d7b38b6fcaf7be38461cb14d6c",
+      "zip_git_blob": "aaa28e0a056b5cc7ff8679fe0d305d1e8064d83c",
+      "zip_sha256": "8d698accda646677899cdc676b347cb9c2874ddeb39ab115e65f3b822d7738de",
+      "source_blobs": 7,
+      "status": "DRAFT_EVIDENCE_DELIVERED"
+    },
+    {
+      "number": 152,
+      "checkpoint": "AP",
+      "commit": "39bcaa264ffda6528a96316031971b8d48ddea4a",
+      "zip_git_blob": "d9ecff0e4ea0cdde42f8580a06c4410dd8f7ef5a",
+      "zip_sha256": "bf126c2f411d5abc66470d763f8dfe0fc2fa6750aa113532118eb3767e6f8c59",
+      "source_blobs": 8,
+      "status": "DRAFT_EVIDENCE_DELIVERED"
+    }
+  ],
+  "registered_subbatch_attempts": 2,
+  "subbatches_remotely_delivered": 2,
+  "subbatches_not_attempted": 28,
+  "work_packages_attempted": 1,
+  "work_packages_verified_complete": 0,
+  "work_packages_open": 1,
+  "existing_p0_blockers": [
+    "WP-ACC-005 COBAC 312/322"
+  ],
+  "banking_tests_executed": 0,
+  "production_code_written": 0,
+  "regulatory_approval_claimed": false,
+  "denominator": "UNKNOWN",
+  "next_exact_task": "GOV-REC-001 batch 153 (AQ): fetch and analyze all checkpoint AQ source blobs, produce individual ZIP, manifest, crosswalk and extracted audit, push and verify; separately reconcile original AN archive and Git ancestry.",
+  "note": "Batches 151-152 are evidence-recovery sub-batches within the same open GOV-REC-001 WP. Their archival delivery does not constitute verified completion of two independent banking work packages."
+}
