@@ -1,0 +1,42 @@
+{
+  "baseline": "7ea5a0e9cc274269fcfc7cdf7bf51e6e411359e2",
+  "acceptance_wp_denominator": "UNKNOWN",
+  "accepted_wp_total": "UNKNOWN",
+  "blockers": [
+    {
+      "id": "WP-ACC-005",
+      "status": "BLOCKED_P0",
+      "evidence": "regulatory/checkpoints/CT/README.md; governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.2_2026-11-04.md",
+      "reason": "Unresolved authoritative PCEC 312/322 account identity and effective-dated interpretation",
+      "required": "Issuer-authenticated primary instruments and legal/CFO signoff",
+      "impact": "Affected financial posting maps fail closed"
+    },
+    {
+      "id": "WP-PAY-GIMAC-001",
+      "status": "BANK_SPECIFIC_ENTITLEMENT_UNVERIFIED",
+      "evidence": "regulatory/checkpoints/AN/CONTINUATION_STATE.json",
+      "reason": "No participation/settlement agreement for customer bank",
+      "required": "Bank contract, authorized scheme profiles and settlement participation",
+      "impact": "No live rail activation"
+    },
+    {
+      "id": "GOV-REC-001",
+      "status": "OPEN",
+      "evidence": "governance/GOV_REC_001_AN_ARCHIVE_PROVENANCE_GATE_2026-11-04.md",
+      "reason": "Original archive custody, full nested archive integrity and source acceptance not established",
+      "required": "Independently verified original bytes, source hierarchy and external reviewer",
+      "impact": "Historic audit acceptance blocked"
+    },
+    {
+      "id": "GOV-WBS-RECON-001",
+      "status": "OPEN",
+      "evidence": "governance/GOV_WBS_RECON_001_ACCEPTANCE_AND_ARTIFACT_CROSSWALK_PROTOCOL_2026-11-04.md",
+      "reason": "Exhaustive approved leaf-WP denominator is absent",
+      "required": "Owner-approved exhaustive scope, reviewed actual content crosswalk",
+      "impact": "Programme completion rate UNKNOWN"
+    }
+  ],
+  "implementation_dor_15_gates": "NOT_VERIFIED",
+  "banking_tests_executed": 0,
+  "certifications": "NONE_CLAIMED"
+}

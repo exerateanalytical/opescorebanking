@@ -1,0 +1,34 @@
+[
+  {
+    "git_blob_sha1": "8d0a596e8f6873d448a415f5096067278e3ae60f",
+    "paths": [
+      "regulatory/checkpoints/AN/EVIDENCE_REQUEST_PLAN.md",
+      "regulatory/recovery/source/AN/EVIDENCE_REQUEST_PLAN.md"
+    ],
+    "action": "RETAIN_HISTORICAL_COPIES"
+  },
+  {
+    "git_blob_sha1": "ab673ba47ca5e92ecae5dfb4b66ee754b073b234",
+    "paths": [
+      "regulatory/checkpoints/AN/GAP_UPDATE.md",
+      "regulatory/recovery/source/AN/GAP_UPDATE.md"
+    ],
+    "action": "RETAIN_HISTORICAL_COPIES"
+  },
+  {
+    "git_blob_sha1": "550e3b08674737b57577a9850838edc4ec49df95",
+    "paths": [
+      "regulatory/checkpoints/AN/QUALITY_REVIEW.md",
+      "regulatory/recovery/source/AN/QUALITY_REVIEW.md"
+    ],
+    "action": "RETAIN_HISTORICAL_COPIES"
+  },
+  {
+    "git_blob_sha1": "4d13e2153fe214f47803aaadd344d34749a6745c",
+    "paths": [
+      "regulatory/recovery/archives/SHA256SUMS.txt",
+      "regulatory/recovery/RECOVERED_CHECKPOINTS_AE_AM_SHA256_2026-11-03.txt"
+    ],
+    "action": "RETAIN_HISTORICAL_COPIES"
+  }
+]
