@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 175,
+  "checkpoint": "BM",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "694883a3f6a5045246d6221c81f9cf4be4364bc7d28bcbe8317b00988326dabe",
+      "crc32": "e06e1d81",
+      "bytes": 8331
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "c24490c5edb691a4c6aa2ec1282ac3c8fc488f6457cb5a9819fb39d5975f2d07",
+      "crc32": "3a932031",
+      "bytes": 14995
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BM/CONTINUATION_STATE.json",
+      "sha256": "e678538d781bc24a2ec1629f668ef479c43e51af9722999ce17d11a57174d6ff",
+      "crc32": "afccc448",
+      "bytes": 1910
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BM/EVIDENCE_DELTA.md",
+      "sha256": "44726ca218c140ede42c8a859b28a1f352e989c7ecf7003459d0ea9a8105c974",
+      "crc32": "e274aff4",
+      "bytes": 3830
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BM/EXECUTION_REPORT.md",
+      "sha256": "98d30e169e8ff6d5c988924868cc44827baebeae21cefbbff1860876cceb1a0a",
+      "crc32": "9a1e0e66",
+      "bytes": 1759
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BM/ISSUER_CLARIFICATION_DOCKET.md",
+      "sha256": "0a869eb076f201c201e08a470e36ffb326125539673a77202c73c7f914850ecc",
+      "crc32": "82884a5e",
+      "bytes": 3422
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BM/POLICY_GATE_AND_TEST_DESIGN.md",
+      "sha256": "e1218e6a3845f2bdd6a2aaa88653ef75c37517d0169fc1fe88ca15affa6c06a5",
+      "crc32": "2ae40aaa",
+      "bytes": 4425
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BM/QUALITY_REVIEW.md",
+      "sha256": "5ec80e3f3cc0a413064d6dc49b2bcfdc6a2f9ea92f3d5e0780025a8e889c52d8",
+      "crc32": "b5eb8394",
+      "bytes": 2150
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BM/README.md",
+      "sha256": "983f66e24e9e70dc9c46a2925f6c5323db12751c248947b85904e934f44d5160",
+      "crc32": "c2c65788",
+      "bytes": 1921
+    }
+  ]
+}
