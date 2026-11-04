@@ -1,0 +1,383 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 187,
+  "checkpoint": "BX",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BX/CONTINUATION_STATE.json",
+      "git_blob_sha": "f7decb68517c288c2c8443bb1c5b49675ac6ab10",
+      "sha256": "be44b9ee43645dca89abeb6d16af6152d6702abcc99cebb39bf14102e09f794d",
+      "bytes": 1803,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 6,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 14,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        },
+        {
+          "line": 29,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"BEAC DSMP report identifies signed Instruction 001/GR/2024; operative text missing\""
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BX/CONTROL_MATRIX.json",
+      "git_blob_sha": "ef3364d3a8915b2e72b4d9e537229488b78e3d5b",
+      "sha256": "aaaf4e213a9b06d9f99047aab2a1b2edad799a11b0592cc513bc896c00b8cf8c",
+      "bytes": 10429,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 36,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"section 2 regulatory evolution\""
+        },
+        {
+          "line": 104,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"proposal\": \"Create unresolved dependency for authentication, complaints/notifications, dashboards, security, archives and backup; do not implement summary as operative rules.\","
+        },
+        {
+          "line": 106,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"state\": \"BLOCKED_EXTERNAL_EVIDENCE\""
+        },
+        {
+          "line": 112,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"RegulatoryCompliance\": \"Owns legal applicability and rule approval; no automatic activation from explanatory reports.\","
+        },
+        {
+          "line": 119,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"PRECHECK_COMPLETE\","
+        },
+        {
+          "line": 146,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_evidence_id\","
+        },
+        {
+          "line": 152,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"expected\": \"DR exercise switches to standby but does not execute production failback; mark exercise incomplete.\","
+        },
+        {
+          "line": 172,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"expected\": \"Standby exercise runs for a trivial non-representative interval; reject evidence of a complete critical-service continuity test.\","
+        },
+        {
+          "line": 182,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"expected\": \"Annual penetration test excludes every essential or sensitive service; do not accept a generic perimeter-only report as complete.\","
+        },
+        {
+          "line": 187,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"expected\": \"Penetration test findings lack remediation evidence, board-level summary or internal-control reporting trace; mark assurance evidence incomplete.\","
+        },
+        {
+          "line": 230,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BX/EVIDENCE_DELTA.md",
+      "git_blob_sha": "c52c1150b942226dbf14f66a651a6f0c55f7d48e",
+      "sha256": "9a9c81892da047d04ee3c7c25ff91152134cc5d1226fc01fdb3a2de9fc464e7b",
+      "bytes": 3635,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "# BX — Evidence, provenance and unresolved interpretation"
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **Articles 39–40 (printed p.121):** Data integrity, classification, independent consistency controls and normalized enterprise data dictionary. For a bank, this is directly material to immutable journals, monetary arithmetic, account state and settlement semantics."
+        },
+        {
+          "line": 13,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Authority classification: **issuer-hosted reproduction of signed operative text**, not separately acquired signed standalone file; current amendment history not authenticated. Original PDF download attempted 2026-11-02; container DNS lookup failed; **no SHA-256**. Regulatory interpretation remains pending legal/issuer confirmation."
+        },
+        {
+          "line": 27,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "A recovery exercise, regulatory incident notice, penetration-test result or dictionary revision must never create or reverse a journal. Financial finality and balance restoration require independent proof of durable postings and external settlement, with idempotent replay and separate reconciliation. All design proposals remain non-executable."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BX/EXECUTION_REPORT.md",
+      "git_blob_sha": "c5dc7ab12fc4fb17d46114249f974ead819ee81d",
+      "sha256": "c92e6ee742178de2b9cc8f2228491d53ae109bcc2a2d435186b1285b1dd4c763",
+      "bytes": 1771,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Canonical predecessor:** BW verified remote main `cca263fbd67994f98b517cf13e13e8caa7703b80`. **Phase:** 4. **Active:** WP-ACC-005 OPEN/P0. **Last completed:** WP-ACC-004 inherited, not independently reaudited."
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Work packages completed | 0 |"
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Work packages blocked from closure | 1 |"
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Regulatory requests transmitted | 0 |"
+        },
+        {
+          "line": 26,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**NEXT EXACT TASK:** `WP-ACC-005 — Checkpoint BY`: obtain current signed operative texts and legal interpretation; acquire approved institutional recovery, payment, PCEC and regulatory evidence; maintain P0 hold."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BX/QUALITY_REVIEW.md",
+      "git_blob_sha": "5a401f4623307cecc44fdde25927aa965657bde0",
+      "sha256": "11e4ef9c9bb6c6a02e7a4874a4e01519c9f51f026dfa0c1948eca1495e130e92",
+      "bytes": 2331,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Regulatory/legal | Reproduced Arts 29,34–41 directly relevant; standalone signed current text, amendment chain, Art 41 legal opinion and BEAC 001/GR/2024 operative text missing. | P0 OPEN |"
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Architecture/domain | Recovery orchestrator, Accounting Core, Regulatory Compliance, data dictionary and external payment rails separated. | DESIGN ONLY |"
+        },
+        {
+          "line": 12,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Payments/settlement | Restored internal posting cannot imply SYGMA/SYSTAC settlement; external confirmation and participant contracts missing. | P0 OPEN |"
+        },
+        {
+          "line": 19,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Quality decision:** WP-ACC-005 remains OPEN/P0-BLOCKED. Definition of Ready FAIL. No P0 closed. Do not start production financial code or mark regulatory readiness."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BX/README.md",
+      "git_blob_sha": "c11c14cf06670ddafc8ba378850a22c9f1514c23",
+      "sha256": "bc606ad391968161baec3981c9ed43d903c5b8d972a5d93fd824bcbb622ffea6",
+      "bytes": 2181,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "# BX — Accounting Core / financial integrity regulatory continuation"
+        },
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Date:** 2026-11-02. **Predecessor:** BW, remote main `cca263fbd67994f98b517cf13e13e8caa7703b80`. **Active WP:** WP-ACC-005 (OPEN/P0). **Last completed WP:** WP-ACC-004 (inherited, not independently reaudited). **DoR:** FAIL."
+        },
+        {
+          "line": 7,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "1. Re-examined issuer-hosted reproduced COBAC R-2024/01 **Articles 29 and 34–40** to establish an operational evidence chain missing from prior incident-classification checkpoints: annual security testing, real failover/failback, pre-release tests, independent data consistency and mandatory data dictionary. See [source analysis](EVIDENCE_DELTA.md)."
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Regulatory caution"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Article 41 in the issuer-hosted reproduction gives 1 January 2025 commencement and transitional periods for existing institutions, while explanatory narrative labels 2026 dates as entry into force. This remains **unresolved for production legal activation**. Article 30 incident thresholds and channels remain subject to current amendment/instruction verificat"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BX/TEST_DESIGN.md",
+      "git_blob_sha": "d0a83893c6d76f38bd976d968452beebd05f5605",
+      "sha256": "26e74e8508e32ff6392e10f2e9a36e1cb2c15f0173065715334e4255e832b4b9",
+      "bytes": 3165,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "# BX — Proposed negative acceptance tests (NOT EXECUTED)"
+        },
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "These scenarios are **new design specifications**, not executed tests, not compliance certification, and not a denominator for overall readiness. Each requires an approved test fixture, traceable expected ledger state, evidence collection and independent review before execution."
+        },
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **BX-T01:** DR exercise switches to standby but does not execute production failback; mark exercise incomplete."
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **BX-T05:** Standby exercise runs for a trivial non-representative interval; reject evidence of a complete critical-service continuity test."
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **BX-T07:** Annual penetration test excludes every essential or sensitive service; do not accept a generic perimeter-only report as complete."
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **BX-T08:** Penetration test findings lack remediation evidence, board-level summary or internal-control reporting trace; mark assurance evidence incomplete."
+        },
+        {
+          "line": 24,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Release and recovery controls must fail closed on missing data dictionary versions, unverified settlement outcomes, incomplete failback or unknown journal replay status. The incident policy in BW remains quarantined and is not redefined here."
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BX",
+    "date": "2026-11-02",
+    "predecessor": "BW",
+    "predecessor_verified_main_commit": "cca263fbd67994f98b517cf13e13e8caa7703b80",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "new_negative_scenarios_specified": 14,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "security_scans_executed": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "original_pdf_binary_acquired": false,
+    "original_pdf_sha256_verified": false,
+    "source_authority": "BEAC_ISSUER_HOSTED_REPRODUCTION_AND_DSMP_REPORT_NOT_SIGNED_STANDALONE_INSTRUMENTS",
+    "evidence_findings": [
+      "R-2024/01 Arts 34-36 actual annual critical-service failover, representative operation and failback plus maximum outage/data-loss objectives",
+      "R-2024/01 Art 29 annual vulnerability and penetration testing and governance reporting",
+      "R-2024/01 Arts 37-40 controlled release, restoration, data quality and enterprise dictionary",
+      "BEAC DSMP report identifies signed Instruction 001/GR/2024; operative text missing"
+    ],
+    "remote_delivery_status": "PENDING_REMOTE_VERIFICATION_AT_DOCUMENT_CREATION",
+    "next_exact_task": "WP-ACC-005 — Checkpoint BY: authenticate current standalone R-2024/01, Art 30/41 guidance and BEAC Instruction 001/GR/2024; acquire institution-approved DR/data dictionary, PCEC, payment/finality and remaining COBAC/D-2025/328/01-25-02-25 evidence; preserve P0."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 188"
+}
