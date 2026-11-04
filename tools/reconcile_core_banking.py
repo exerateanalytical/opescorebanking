@@ -44,7 +44,7 @@ def writecsv(path,header,rows):
         w=csv.writer(f);w.writerow(header);w.writerows(rows)
 def writejson(path,value):path.write_text(json.dumps(value,indent=2,ensure_ascii=False,sort_keys=True)+"\n",encoding="utf8")
 
-files=tracked();base_sha=gitsha();file_rows=[];text_rows=[];contracts=[];checkpoints=[];duplicate=defaultdict(list);errors=[];zip_results=[];content_counts=Counter();manifest_conflicts=[];spec_gap=[];test_ids=[]
+files=[p for p in tracked() if not p.startswith(str(OUT.relative_to(ROOT)).replace(os.sep,"/")+"/")];base_sha=gitsha();file_rows=[];text_rows=[];contracts=[];checkpoints=[];duplicate=defaultdict(list);errors=[];zip_results=[];content_counts=Counter();manifest_conflicts=[];spec_gap=[];test_ids=[]
 for p in files:
     b=(ROOT/p).read_bytes();sha=digest(b);size=len(b);duplicate[sha].append(p);ext=pathlib.Path(p).suffix.lower()
     title="";document_status="SOURCE_METADATA_ONLY"
@@ -157,12 +157,57 @@ Banking implementation, tests, 15 DoR gates and independent professional reviews
 - Full regulatory applicability requires primary source verification at article, version and effective-date level.
 """
 (OUT/"AUDIT_REPORT.md").write_text(md,encoding="utf8")
+# Preserve invalid historical ZIP bytes; reconstruct clearly labelled usable
+# draft-evidence ZIPs ONLY from sibling source files, never impersonating originals.
+repair_path=OUT/"RECONSTRUCTED_INVALID_HISTORICAL_ZIPS_2026-11-04.zip"
+repair_records=[]
+with zipfile.ZipFile(repair_path,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=6) as repair_outer:
+    for broken in [z for z in zip_results if not z.get("crc_valid")]:
+        original=broken["path"]
+        source_dir=str(pathlib.PurePosixPath(original).parent)+"/"
+        evidence_paths=[p for p in files if p.startswith(source_dir) and
+            "/" not in p[len(source_dir):] and not p.lower().endswith(".zip")]
+        rec={"original_path":original,"original_sha256":broken["sha256"],
+             "original_failure":broken.get("error") or broken.get("bad_entry"),
+             "source_paths":evidence_paths,
+             "status":"RECONSTRUCTED_FROM_EXTRACTED_SIBLING_SOURCES" if evidence_paths else "NO_SIBLING_SOURCES"}
+        if evidence_paths:
+            mem=io.BytesIO()
+            with zipfile.ZipFile(mem,"w",compression=zipfile.ZIP_DEFLATED) as inner:
+                inner.writestr("NOT_ORIGINAL_ARCHIVE.txt",
+                    "This is a NEW RECONSTRUCTION from the tracked sibling text files. "
+                    "It is not the original historical ZIP and does not establish original custody, "
+                    "work-package acceptance, executable code or regulatory approval.\n"
+                    "Original path: "+original+"\nOriginal SHA256: "+broken["sha256"]+"\n")
+                for p in evidence_paths:inner.writestr(pathlib.PurePosixPath(p).name,(ROOT/p).read_bytes())
+            b=mem.getvalue()
+            with zipfile.ZipFile(io.BytesIO(b)) as inner:
+                if inner.testzip() is not None:raise RuntimeError("Reconstructed archive invalid: "+original)
+            name="RECONSTRUCTED/"+pathlib.PurePosixPath(source_dir).name+".zip"
+            repair_outer.writestr(name,b)
+            rec["reconstructed_zip_path"]=name
+            rec["reconstructed_sha256"]=digest(b)
+            rec["reconstructed_bytes"]=len(b)
+        repair_records.append(rec)
+    repair_outer.writestr("RECONSTRUCTION_REGISTER.json",json.dumps(repair_records,indent=2)+"\n")
+with zipfile.ZipFile(repair_path) as z:
+    if z.testzip() is not None:raise RuntimeError("Aggregate reconstruction ZIP CRC failure")
+writejson(OUT/"RECONSTRUCTED_ARCHIVE_MANIFEST.json",repair_records)
+summary["invalid_historical_zip_reconstruction"]={
+  "invalid_archive_count":len(repair_records),
+  "archives_rebuilt_from_sibling_sources":sum(bool(x["source_paths"]) for x in repair_records),
+  "unrecoverable_missing_sibling_sources":sum(not x["source_paths"] for x in repair_records),
+  "repair_package":str(repair_path.relative_to(ROOT)),
+  "repair_package_sha256":digest(repair_path.read_bytes()),
+  "original_bytes_preserved":True,
+  "original_archive_authenticity_verified":False}
+
 # Create one cumulative archive; retain every original tracked source including historical ZIPs.
 archive=OUT/"OPES_Core_Banking_Full_Reconciled_Source_2026-11-04.zip"
 audit_paths=sorted([x for x in OUT.iterdir() if x.is_file() and x!=archive and x.name!="ARCHIVE_SHA256SUMS.txt"])
 with zipfile.ZipFile(archive,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=6,allowZip64=True) as z:
     for p in files:
-        if p.startswith(str(OUT.relative_to(ROOT)).replace(os.sep,"/")+"/verified_run/"):continue
+        if p.startswith(str(OUT.relative_to(ROOT)).replace(os.sep,"/")+"/"):continue
         z.write(ROOT/p,arcname=p)
     for p in audit_paths:z.write(p,arcname=str(p.relative_to(ROOT)))
 with zipfile.ZipFile(archive) as z:
