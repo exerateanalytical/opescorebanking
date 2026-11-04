@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 183,
+  "checkpoint": "BT",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "caa41a22286cbd8e283a52fedab3dc6c3c1cdb819f8cfe8e1ff8ae1750d5bafa",
+      "crc32": "19b4c62c",
+      "bytes": 7234
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "403d3539f11dd2091b5b4f389e64b660d9ee1afc3a71092c8f4ba4e723c5e9b0",
+      "crc32": "62ced0c9",
+      "bytes": 14673
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BT/CONTINUATION_STATE.json",
+      "sha256": "1af376d7000ec71db17200010bf506ce56689247ab7bc2ccdb12e14276d1a319",
+      "crc32": "8d0e4fdc",
+      "bytes": 2063
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BT/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "30aa0794123fb10d84488692e75afa913f1a314bf10d9963af2e6a9f5d81a83e",
+      "crc32": "99361e45",
+      "bytes": 5905
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BT/EXECUTION_REPORT.md",
+      "sha256": "5432febec9d55682e7d81fd33928e16d0cd5b18b99da780d13926ed5357995a5",
+      "crc32": "3ac5d2f5",
+      "bytes": 2052
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BT/QUALITY_REVIEW.md",
+      "sha256": "10378111b51421471868b825cb05216bcbd7dd9dfe3e2ce8e1781a8ffd55e36c",
+      "crc32": "9719036c",
+      "bytes": 2150
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BT/README.md",
+      "sha256": "3da5d3ab764e8c33298bcb3ebe58be862b5a37a6d1bf92c0e3d14524796590a3",
+      "crc32": "efb1ea12",
+      "bytes": 2512
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BT/SCOPE_RECONCILIATION_AND_POLICY_GATES.json",
+      "sha256": "3a081becacf177d4b28db0740d280106bef373c1978be49cf62a9eab501ab3da",
+      "crc32": "74670019",
+      "bytes": 5042
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BT/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "sha256": "b1bf95d82c43aac804aa51f48f50669e39398302d58e86ffac8baaa935bfd36d",
+      "crc32": "b554b5fc",
+      "bytes": 3693
+    }
+  ]
+}
