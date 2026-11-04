@@ -1,0 +1,316 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 182,
+  "checkpoint": "BS",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BS/CONTINUATION_STATE.json",
+      "git_blob_sha": "37c995f66384e576ccfe3a6aa4a086f3758aa2ec",
+      "sha256": "cb665c2308e4531be4f7b5eea1a5307ab6969199d9e0b2af111cdf25ea77e7a7",
+      "bytes": 2564,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 6,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 14,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BS/CONTROL_AND_TEST_DESIGN.md",
+      "git_blob_sha": "6319fc23946b70649b2ea2477ab1b5355163e4ad",
+      "sha256": "4f8639a6a92846d0b63a96e6466841fc40150142e0faf2adc74cc35e127f6c1a",
+      "bytes": 5451,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "5. Only after legal and operational authorization may a restitution claim transition from SCOPE_UNRESOLVED to LEGAL_SCOPE_APPROVED; no automatic freeze, debit, release or timer otherwise."
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "6. Apply separate maker-checker, recipient notice/consent or valid nonresponse, fraud/AML/court precedence, trusted timestamps and recipient funds availability; return is a **new** authorized transaction, not an edit of original final settlement."
+        },
+        {
+          "line": 26,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| BS-T05 | Payment-institution Article 8 deposit prohibition mechanically imposed on licensed credit institution | Reject institution-category conflation |"
+        },
+        {
+          "line": 28,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| BS-T07 | 2023 circular indexed on BEAC site treated as proof of no later amendments | Keep issuer-currentness unresolved and activation disabled |"
+        },
+        {
+          "line": 32,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| BS-T11 | Customer/merchant contractual terms not verified but automated five-minute hold/release scheduled | Keep case SCOPE_UNRESOLVED; no automatic action |"
+        },
+        {
+          "line": 36,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Authenticated current legal texts and amendments; issuer/legal opinion; institution license, product approvals and signed terms; BEAC participation agreement, CEMAC-BANK schemas and signature/security profiles; sandbox statements, hold/restitution and finality messages; approved PCEC entries; fault injection for clock skew, delayed notifications, replay and "
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BS/EVIDENCE_DELTA.md",
+      "git_blob_sha": "e18143e81314bbf9ea7f5faaddbeb9e91eefc47f",
+      "sha256": "cd20f5cbd6810b1d24143c96a24d6dbb5fc97a86708d5970a92b45c750d5f682",
+      "bytes": 4281,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 29,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "No issuer/COBAC opinion resolving broad PSP versus payment institution wording; no confirmed current amendment chain; no institution/product authorization, signed terms or technical participant convention; no issuer-confirmed SYGMA V10 or SYSTAC2 instant activation; no signed BEAC ISO 20022 CEMAC-BANK profiles, settlement finality or PCEC mappings; no D-2025"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BS/EXECUTION_REPORT.md",
+      "git_blob_sha": "edd5df96ab5619caab83776ac1b445125af4b95c",
+      "sha256": "326e6c96134b209675f1b96961118c388c63b226278df17f81b92bf64a590e2f",
+      "bytes": 1729,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "**Phase:** Phase 4 — Accounting Core and Financial Integrity. **Predecessor:** BR GitHub main `2e57766beaa6d7dc5abfdc68801a98e4be31d18d` independently read. **WP:** WP-ACC-005 OPEN/P0 BLOCKED. Last co"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Phase:** Phase 4 — Accounting Core and Financial Integrity. **Predecessor:** BR GitHub main `2e57766beaa6d7dc5abfdc68801a98e4be31d18d` independently read. **WP:** WP-ACC-005 OPEN/P0 BLOCKED. Last completed WP-ACC-004 inherited, not independently reaudited."
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Completed | 0 |"
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Blocked from closure | 1 |"
+        },
+        {
+          "line": 15,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Regulatory requests transmitted | 0 |"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**New evidence:** issuer-hosted R-04/18 Articles 1, 2, 5–8 selectively inspected; rechecked all three pages of 2023 BEAC restitution circular; public BEAC participant modes and membership agreement requirements checked. Material scope-definition tension and mobile/non-mobile Section IV clarified as unresolved interpretation, not settled law. No issuer correc"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BS/LEGAL_SCOPE_AND_ENTITLEMENT_GATES.json",
+      "git_blob_sha": "7b7b39692a050f72046c4f5bc8c6ef2750841bc6",
+      "sha256": "e450be3dc33d4c04f3590072b6d5be98fe37b6f577895d70cb143d46ba53c6bc",
+      "bytes": 7885,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 12,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"evidence\": \"issuer-hosted scanned PDF; six selected pages visually inspected (printed 1,2,3,5,6,7); full 29-page operative text and current amendment chain NOT verified\","
+        },
+        {
+          "line": 102,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"court_or_fraud_hold\","
+        },
+        {
+          "line": 140,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"RegulatoryPolicy\": \"legal instruments, provenance, bitemporal applicability, signed interpretations and approval workflow\","
+        },
+        {
+          "line": 150,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"SCOPE_UNRESOLVED\","
+        },
+        {
+          "line": 157,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"COURT_REVIEW\","
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BS/QUALITY_REVIEW.md",
+      "git_blob_sha": "c5a66b25cc0d198b7eac264a44e6ed80199f4362",
+      "sha256": "db57ea08335ad28deca50848998733328f19e4dd14de3548be3ae28bf0d2bf3a",
+      "bytes": 2238,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Regulatory/legal | R-04/18 Articles 1, 5–6 and 2023 Circular Sections I/IV expose apparent institution/category and mobile/non-mobile scope tensions; no authoritative interpretation | P0 OPEN |"
+        },
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Accounting/CFO | No journal or balance mutation from case scope, holds, acknowledgements or entitlement changes; PCEC not approved | P0 OPEN |"
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Workflow/state | SCOPE_UNRESOLVED fail-closed; distinct hold, notice, contestation, external unknown and reconciliation | Proposal only |"
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Data/privacy/retention | Versioned license, terms, notices, court evidence and minimal personal data; retention legal basis missing | OPEN |"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Testing/audit | 12 negative scenarios specified, zero executed; selected 2018 pages inspected, original binaries/hashes missing | OPEN |"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BS/README.md",
+      "git_blob_sha": "c174f83a62aee18110b16657478d8f3d09b20dcc",
+      "sha256": "1921a2c8ec75fa28808958ae43e12991a87746983001c553e39073506201aae6",
+      "bytes": 1854,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Canonical predecessor:** BR at `2e57766beaa6d7dc5abfdc68801a98e4be31d18d` verified from GitHub `main` before this work. **Active:** WP-ACC-005, OPEN / P0 BLOCKED. **Last reported completed:** WP-ACC-004 (inherited, not reaudited). **DoR:** FAIL. **No banking code or executed tests.**"
+        },
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "The previous BR checkpoint described BEAC 004/DGE/DSMP/2023 as a PSP erroneous-transfer circular with unresolved banking applicability. BS cross-checks it against the issuer-hosted **Règlement 04/18/CEMAC/UMAC/COBAC** and identifies a material **entity/category and product/channel interpretation problem**: 2018 Article 5 expressly lists credit institutions a"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BS",
+    "date": "2026-11-02",
+    "predecessor": "BR",
+    "predecessor_verified_main_commit": "2e57766beaa6d7dc5abfdc68801a98e4be31d18d",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "negative_scenarios_new_specified": 12,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "security_scans_executed": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "original_pdf_binary_acquired": false,
+    "original_pdf_sha256_verified": false,
+    "beac_sygma_v10_production_verified": false,
+    "systac2_instant_activation_verified": false,
+    "bank_contracts_verified": false,
+    "new_findings": [
+      "Issuer-hosted R-04/18 Art 5 explicitly includes credit institutions, microfinance institutions and payment institutions among eligible PSP categories; 2023 circular introductory PSP 'exclusively' wording resembles Art 6 payment-institution definition. Do not automatically exclude banks or automatically include all bank products.",
+      "2023 circular Section I refers to erroneous mobile-phone transfers; Section IV explicitly includes instant transfers or merchant payments 'par téléphone mobile ou non'. Product/channel scope is not uniformly mobile-only; legal interpretation needed.",
+      "BEAC participation page distinguishes direct, indirect and sub-participation, and says membership is formalized by signed conventions; informational site is not an institution-specific agreement.",
+      "Issuer 2018 payment regulation scanned PDF selected pages inspected; current amendments and full text not yet verified; PDF download failed DNS; no hash.",
+      "No later issuer confirmation located for SYGMA V10 or SYSTAC2 instant module; status UNKNOWN."
+    ],
+    "remote_delivery_status": "PENDING_REMOTE_VERIFICATION_AT_DOCUMENT_CREATION",
+    "next_exact_task": "WP-ACC-005 — Checkpoint BT: obtain authoritative BEAC/COBAC legal interpretation reconciling R-04/18 Art 5/6 with 004/DGE/DSMP/2023 PSP wording and its mobile/non-mobile scope, verify amendments and institution/product entitlements, acquire signed participant conventions and current rail conformance/finality evidence, continue PCEC/COBAC/01-25/02-25 P0. Do not implement."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 183"
+}
