@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 188,
+  "checkpoint": "BY",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "a6a724d8c763b47461531815471427bcb90b248f40f3171b95df62024895a5ab",
+      "crc32": "215028b7",
+      "bytes": 7896
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "22594dc377cabf5733a22942eb245d8c749a925e75509fca200e69139b32266c",
+      "crc32": "6225abc4",
+      "bytes": 14453
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BY/CONTINUATION_STATE.json",
+      "sha256": "40898c11746b07b84641d3b99523475fa12c3f5e5b1cc5093db868975cae6505",
+      "crc32": "997d9e78",
+      "bytes": 1989
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BY/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "1364c006dc58369859c34bfdb751cf5358f3716890ca6b1ca76e105beb3adf28",
+      "crc32": "d723f028",
+      "bytes": 4384
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BY/EVIDENCE_DELTA.md",
+      "sha256": "70bc1a71c5a0fb49e2b1c0c276890133cff8ec1215e126bc1fc0f98fcb86bb5b",
+      "crc32": "d4a1621e",
+      "bytes": 3911
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BY/EXECUTION_REPORT.md",
+      "sha256": "283cf9e2bd5bf1df1b65a88fa9bd52ad53d3f57ba962fc65227fcf7793471f71",
+      "crc32": "7c292ffa",
+      "bytes": 1921
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BY/PAYMENT_SUPERVISION_AND_SETTLEMENT_GATES.json",
+      "sha256": "298ebba3a4613c997229e9521585a80bb441deb3c7ad4bcc9a5aac3e445c36c6",
+      "crc32": "92d5e1a4",
+      "bytes": 9254
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BY/QUALITY_REVIEW.md",
+      "sha256": "2697e5456886fabec256cbce1bf5717e1e78f903a30eefe3fa348a827db3d9ff",
+      "crc32": "50a6fcb2",
+      "bytes": 2535
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BY/README.md",
+      "sha256": "c6103b74e3d12788c18927842d4dcf49c755c427f9f35f044664581e8a0d7ac4",
+      "crc32": "8a0c15a8",
+      "bytes": 2376
+    }
+  ]
+}
