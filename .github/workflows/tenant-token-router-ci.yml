@@ -1,0 +1,19 @@
+name: OPES Core Banking Pinned JWKS Tenant Routing
+on:
+  push:
+    paths:
+      - 'engineering/security/token-router/**'
+      - '.github/workflows/tenant-token-router-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-authz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tested JWT signature verification
+        run: python3 -m pip install --disable-pip-version-check 'PyJWT[crypto]>=2.9,<3'
+      - name: Execute strict cryptographic routing, tenant and spoofing tests
+        run: cd engineering/security/token-router && python3 -m unittest discover -s tests -p 'test_*.py' -v
