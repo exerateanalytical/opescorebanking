@@ -74,7 +74,7 @@ for num,cp,d in runs:
     record["integrity"]="PASS" if not record["errors"] else "FAIL"
     rows.append(record)
 missing=sorted(set(srcmap)-set(linked))
-if missing:raise RuntimeError("Source-to-batch coverage incomplete "+repr(missing[:10]))
+if missing:raise RuntimeError("Source-to-batch coverage incomplete "+repr(missing[:10])+" example batch errors: "+repr(rows[:2]))
 base=git("rev-parse","HEAD")[1].decode().strip()
 wpdirs=sorted(p for p in (R/"programme/batches/2026-11-03").iterdir() if p.is_dir())
 wplist=[]
