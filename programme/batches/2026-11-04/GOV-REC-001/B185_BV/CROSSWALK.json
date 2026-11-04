@@ -1,0 +1,369 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 185,
+  "checkpoint": "BV",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BV/CONTINUATION_STATE.json",
+      "git_blob_sha": "9fc2fcbebaa7fdf72b9d7f6a1d27d4adc43377ea",
+      "sha256": "3f443103fac3fd9352d88b95b92cbdc6b832f5bc63faaec1ba972a56f4d4c610",
+      "bytes": 1755,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 6,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 14,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BV/CONTROL_AND_TEST_DESIGN.md",
+      "git_blob_sha": "a67521bbf516f2975ff779be667791a9e1ecd901",
+      "sha256": "1461889e107ceae735240c2761c5f289669607a8ec693687d8c22dc48acd8a10",
+      "bytes": 5739,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Safeguarding:** FUNDS_RECEIVED -> PAYMENT_PENDING -> SEGREGATION_REQUIRED -> HOLDING_BANK_EVIDENCE_PENDING -> RECONCILED or DISCREPANCY_OPEN -> INVESTIGATION -> CONTROLLED_CORRECTION -> RECONCILED. External bank evidence, not status updates, establishes funding; posted journals are never edited."
+        },
+        {
+          "line": 15,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- `POST /safeguarding-reconciliations` accepts signed bank statement reference, time window, exact integer minor units, tenant, idempotency key; generates a discrepancy case, not automatic balance repair."
+        },
+        {
+          "line": 17,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Events: `RegulatoryPolicyQuarantined`, `SafeguardingDiscrepancyDetected`, `IncidentNotificationEvidenceRecorded`. Outbox/inbox and replay keys mandatory; no event is itself a journal entry."
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Separate tables/entities: RegulatoryInstrument, ClauseVersion, LegalEffectiveWindow, TransitionWindow, InstitutionLicense, ProductAuthorization, SafeguardingAccount, DistributorReceipt, ExternalBankStatement, SafeguardingReconciliation, IncidentCriterion, IncidentNotificationReceipt and ApprovalDecision. Restrict sensitive evidence; immutable history, retent"
+        },
+        {
+          "line": 22,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Proposed negative acceptance scenarios — NOT EXECUTED"
+        },
+        {
+          "line": 29,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **BV-T07** — Daily outstanding-payment exposure omits distributor receipts; safeguarding completeness check fails."
+        },
+        {
+          "line": 30,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **BV-T08** — Safeguarding bank reconciliation is absent or stale; compliance evidence cannot be marked complete."
+        },
+        {
+          "line": 31,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- **BV-T09** — A customer funds safeguarding discrepancy is auto-corrected by directly editing a posted journal; reject and require controlled correction."
+        },
+        {
+          "line": 32,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **BV-T10** — 2019 Article 13 monetary-loss criterion is treated as the only 2026 significant-incident trigger; reject scope-incomplete policy."
+        },
+        {
+          "line": 41,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "No actual API contract, executable test fixture, signed institution approval, payment integration, bank statement or COBAC rule has been supplied. All numeric examples in historical reproduction remain quarantined. P0 not closed. Definition of Ready fails."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BV/EVIDENCE_DELTA.md",
+      "git_blob_sha": "1610ab58d66aee7fae9917acfd1b84d7841c9a71",
+      "sha256": "0ff00b2fc0b047319980c7aeb522eee8bfbedc9c1c4d9b89b30bd6836268ace2",
+      "bytes": 5405,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Arts 3–8 define historical net-funds requirements, activity-based tranches, e-money float component, discretionary supervisory uplift and deferred-debit/credit coverage. The historical rates and amounts are **not approved as current executable thresholds**; amendment chain, institution category, approved denominator and methodology unresolved."
+        },
+        {
+          "line": 13,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Arts 15–16 address outsourcing/distributors; Arts 17–18 traceability and payment-account positions; Art 19 refers to credit-institution accounting plan; Art 20 regulatory reporting and potential exemptions/instructions; Art 21 states historical effective date 1 October 2019."
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Terminology discrepancy:** the SAME report's explanatory discussion around printed p.79 calls **1 January 2026** (credit/payment) and **1 July 2026** (EMFs) 'entrée en vigueur', whereas reproduced operative Art 41 says 1 January 2025 plus transition. These dates may reflect *end of transition* rather than legal commencement; record both verbatim and seek a"
+        },
+        {
+          "line": 29,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Direct container HTTPS fetch of BV-S1 failed DNS resolution; original issuer PDF, hash, signed current amendment chain, institution-specific authorization, PCEC mapping, signed rail participation/finality, BEAC restitution applicability, D-2025/328 correction and 01/25–02/25 evidence remain outstanding. No regulatory inquiry was transmitted. No historical nu"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BV/EXECUTION_REPORT.md",
+      "git_blob_sha": "5d9c662773bf45040206db8575fa16153b1b45dc",
+      "sha256": "b7bc8e499a189cb04a7fda3f5cb23d42d86752f11a87356ead90a09a95727642",
+      "bytes": 1859,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Predecessor:** BU, verified main 185eeecd42d725c7bc8d65bf930ac87c2269d145. **Phase:** 4, Accounting Core and Financial Integrity. **Active:** WP-ACC-005 OPEN/P0; inherited last completed WP-ACC-004 not independently reaudited."
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Completed | 0 |"
+        },
+        {
+          "line": 14,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Blocked from closure | 1 |"
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Regulatory requests transmitted | 0 |"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BV/QUALITY_REVIEW.md",
+      "git_blob_sha": "6040296c6cf0336dbb06372388aaa8695079c907",
+      "sha256": "e0d6f1e5116bfd639c32a3831aac5b4cb971195ab2bf350d8430b0c9e715295e",
+      "bytes": 2235,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Regulatory/legal | Historical signed-looking R-2019/02 on third-party host inspected, but issuer authentication/current amendments absent; R-2024/01 effective-date/transition wording discrepancy isolated. | P0 OPEN |"
+        },
+        {
+          "line": 12,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Payments/settlement | Safeguarding position not external finality; bank participation/BEAC private message profiles still missing. | P0 OPEN |"
+        },
+        {
+          "line": 15,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Usability/accessibility | Explicit legal ambiguity and discrepancy statuses proposed; no UI or accessibility test. | OPEN |"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BV/README.md",
+      "git_blob_sha": "09918069ea3fb419b1ecd253f462f362c2d7a1fd",
+      "sha256": "14592b888cb0e96d1a1188f569ecd6346d5ed8dbf8bfc10f137390968398c858",
+      "bytes": 1636,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Date:** 2 November 2026. **Predecessor:** verified BU commit `185eeecd42d725c7bc8d65bf930ac87c2269d145`. **Status:** research/design checkpoint only; WP-ACC-005 remains OPEN/P0 and Definition of Ready FAIL."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "A complete six-page **third-party** PDF reproduction of COBAC R-2019/02 (23 September 2019) was visually inspected. Historical capital, payment-volume, safeguarding, incident, outsourcing and accounting clauses were mapped without authorizing executable thresholds. BEAC's official 2024 COBAC report reproduces **R-2024/01** in full, which covers banks, EMFs a"
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- [Regulatory gates](REGULATORY_CONTROL_GATES.json) — typed authority/requirements/conflicts and 16 unexecuted cases."
+        },
+        {
+          "line": 15,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**No banking code or tests; no P0 closed; original PDF binaries/hashes and current legal/institution approvals remain missing.** Single next checkpoint: **BW**."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BV/REGULATORY_CONTROL_GATES.json",
+      "git_blob_sha": "6e58f5fa07207840ae6f7e96d517443366ed1cb9",
+      "sha256": "aa641fe37ed81af8abdb5d9e22fc89db82f6c02dbbf4512902ec5763654dbee4",
+      "bytes": 9692,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"institution_specific_regulatory_decision\","
+        },
+        {
+          "line": 53,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"owner\": \"LegalRegulatoryRegistry\","
+        },
+        {
+          "line": 59,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"owner\": \"RegulatoryPolicyEngine\","
+        },
+        {
+          "line": 72,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"rule\": \"independent safeguarding reconciliation and discrepancy cases; preserve historical weekly requirement without asserting current universal frequency\","
+        },
+        {
+          "line": 90,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"rule\": \"safeguarding or regulatory classification cannot directly mutate posted journal, customer balance, external settlement or liquidity\","
+        },
+        {
+          "line": 107,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"owner\": \"RegulatoryReporting\","
+        },
+        {
+          "line": 114,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"rule\": \"DR replay cannot duplicate safeguarding movements, postings, external settlement claims or regulatory notifications\","
+        },
+        {
+          "line": 183,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"expected\": \"Daily outstanding-payment exposure omits distributor receipts; safeguarding completeness check fails.\","
+        },
+        {
+          "line": 188,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"expected\": \"Safeguarding bank reconciliation is absent or stale; compliance evidence cannot be marked complete.\","
+        },
+        {
+          "line": 193,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"expected\": \"A customer funds safeguarding discrepancy is auto-corrected by directly editing a posted journal; reject and require controlled correction.\","
+        },
+        {
+          "line": 198,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"expected\": \"2019 Article 13 monetary-loss criterion is treated as the only 2026 significant-incident trigger; reject scope-incomplete policy.\","
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BV",
+    "date": "2026-11-02",
+    "predecessor": "BU",
+    "predecessor_verified_main_commit": "185eeecd42d725c7bc8d65bf930ac87c2269d145",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "new_negative_scenarios_specified": 16,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "security_scans_executed": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "source_pdf_pages_visually_inspected": 6,
+    "original_pdf_binary_acquired": false,
+    "original_pdf_sha256_verified": false,
+    "new_findings": [
+      "Third-party reproduction of historical COBAC R-2019/02 inspected all six pages; 2019 capital/safeguarding/prudential/incident clauses mapped as NON_EXECUTABLE",
+      "BEAC-hosted COBAC 2024 report embeds R-2024/01: broader institution and incident scope; Article 41 effective 2025-01-01 plus 12/18-month transition while explanatory prose labels 2026 dates as entry into force"
+    ],
+    "remote_delivery_status": "PENDING_VERIFICATION_AT_DOCUMENT_CREATION",
+    "next_exact_task": "WP-ACC-005 — Checkpoint BW: authenticate signed operative R-2019/01–02 and amendment chains; reconcile R-2024/01 Article 41 legal commencement versus report transitional dates; obtain current COBAC incident guidance, institution-approved safeguarding/PCEC/reporting and payment restitution/participation/finality evidence; maintain P0."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 186"
+}

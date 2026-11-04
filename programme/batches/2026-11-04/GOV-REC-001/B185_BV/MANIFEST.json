@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 185,
+  "checkpoint": "BV",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "693f68b7c2bafdac1eb742f00cdccdda9ea4b848f30f07ca89d8658f99360651",
+      "crc32": "836cb46a",
+      "bytes": 7482
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "26ea4ad04fa9cf05529757ac39edb11914c7281b5aa7bcfc624075c61cabf004",
+      "crc32": "e4788777",
+      "bytes": 16440
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BV/CONTINUATION_STATE.json",
+      "sha256": "3f443103fac3fd9352d88b95b92cbdc6b832f5bc63faaec1ba972a56f4d4c610",
+      "crc32": "e2078d9e",
+      "bytes": 1755
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BV/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "1461889e107ceae735240c2761c5f289669607a8ec693687d8c22dc48acd8a10",
+      "crc32": "3a4553b1",
+      "bytes": 5739
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BV/EVIDENCE_DELTA.md",
+      "sha256": "0ff00b2fc0b047319980c7aeb522eee8bfbedc9c1c4d9b89b30bd6836268ace2",
+      "crc32": "832e96e3",
+      "bytes": 5405
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BV/EXECUTION_REPORT.md",
+      "sha256": "b7bc8e499a189cb04a7fda3f5cb23d42d86752f11a87356ead90a09a95727642",
+      "crc32": "2f0065a8",
+      "bytes": 1859
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BV/QUALITY_REVIEW.md",
+      "sha256": "e0d6f1e5116bfd639c32a3831aac5b4cb971195ab2bf350d8430b0c9e715295e",
+      "crc32": "5734cc45",
+      "bytes": 2235
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BV/README.md",
+      "sha256": "14592b888cb0e96d1a1188f569ecd6346d5ed8dbf8bfc10f137390968398c858",
+      "crc32": "f3c75da5",
+      "bytes": 1636
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BV/REGULATORY_CONTROL_GATES.json",
+      "sha256": "aa641fe37ed81af8abdb5d9e22fc89db82f6c02dbbf4512902ec5763654dbee4",
+      "crc32": "04fb4854",
+      "bytes": 9692
+    }
+  ]
+}
