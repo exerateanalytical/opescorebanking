@@ -1,0 +1,43 @@
+name: OPES Core Banking Tenant Foundation Checks
+on:
+  push:
+    paths:
+      - 'engineering/foundation/tenant/**'
+      - '.github/workflows/tenant-foundation-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contract-and-tenant-isolation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: opes_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d opes_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install contract test dependencies
+        run: python3 -m pip install --disable-pip-version-check 'pyyaml>=6,<7' 'jsonschema>=4,<5'
+      - name: Execute OpenAPI strict contract tests
+        run: python3 -m unittest discover -s engineering/foundation/tenant/tests -p 'test_*.py' -v
+      - name: Bootstrap a non-privileged tenant runtime database role
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -f engineering/foundation/tenant/000_test_role.sql
+      - name: Apply isolated tenant laboratory schema and RLS
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -f engineering/foundation/tenant/001_schema.sql
+      - name: Execute live PostgreSQL tenant isolation and policy tests
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -f engineering/foundation/tenant/tests/isolation.sql

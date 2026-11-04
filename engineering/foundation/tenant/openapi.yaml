@@ -1,0 +1,275 @@
+openapi: 3.1.0
+info:
+  title: OPES Enterprise Banking — Tenant Control-Plane Contract
+  version: 0.1.0-laboratory
+  description: >
+    Strictly scoped institution and regulatory-mapping operations.
+    Contract and schema tests only. No production permission, customer balances,
+    payment-network connection, or real banking posting is implied.
+servers:
+  - url: https://api.example.invalid
+tags:
+  - name: VendorProvisioning
+  - name: InstitutionContext
+  - name: RegulatoryMappings
+paths:
+  /v1/vendor/institution-provisioning-requests:
+    post:
+      tags: [VendorProvisioning]
+      operationId: createInstitutionProvisioningRequest
+      security: [{oidc: [opes.vendor.provision]}]
+      x-required-permission: vendor.institution.request
+      description: >
+        Vendor-only operation. Identity is derived from a verified token, not
+        request-supplied principal headers. No creation of a regulated bank.
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/CreateProvisioningRequest'}
+      responses:
+        '201': {description: Recorded draft request, content: {application/json: {schema: {$ref: '#/components/schemas/ProvisioningRequest'}}}}
+        '400': {$ref: '#/components/responses/Problem'}
+        '401': {$ref: '#/components/responses/Problem'}
+        '403': {$ref: '#/components/responses/Problem'}
+        '409': {$ref: '#/components/responses/Problem'}
+        '422': {$ref: '#/components/responses/Problem'}
+  /v1/vendor/institution-provisioning-requests/{requestId}/authorize:
+    post:
+      tags: [VendorProvisioning]
+      operationId: authorizeInstitutionProvisioning
+      security: [{oidc: [opes.vendor.approve]}]
+      x-required-permission: vendor.institution.approve
+      description: >
+        Approval principal must be different from request initiator.
+        Authorization does not itself issue any banking or payment licence.
+      parameters:
+        - $ref: '#/components/parameters/RequestId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/AuthorizeProvisioningRequest'}
+      responses:
+        '200': {description: Provisioning state, content: {application/json: {schema: {$ref: '#/components/schemas/ProvisioningRequest'}}}}
+        '400': {$ref: '#/components/responses/Problem'}
+        '401': {$ref: '#/components/responses/Problem'}
+        '403': {$ref: '#/components/responses/Problem'}
+        '404': {$ref: '#/components/responses/Problem'}
+        '409': {$ref: '#/components/responses/Problem'}
+        '422': {$ref: '#/components/responses/Problem'}
+  /v1/institutions/{institutionId}/context:
+    get:
+      tags: [InstitutionContext]
+      operationId: readInstitutionContext
+      security: [{oidc: [opes.institution.read]}]
+      x-required-permission: institution.context.read
+      description: >
+        The institutionId path MUST equal an institution authorized for the
+        verified token subject. Never trust the path alone as authority.
+        Return 404/403 for out-of-tenant objects, with no foreign data.
+      parameters:
+        - $ref: '#/components/parameters/InstitutionId'
+        - $ref: '#/components/parameters/CorrelationId'
+      responses:
+        '200': {description: Scoped institution context, content: {application/json: {schema: {$ref: '#/components/schemas/InstitutionContext'}}}}
+        '401': {$ref: '#/components/responses/Problem'}
+        '403': {$ref: '#/components/responses/Problem'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /v1/institutions/{institutionId}/regulatory-mappings:
+    post:
+      tags: [RegulatoryMappings]
+      operationId: proposeRegulatoryMapping
+      security: [{oidc: [opes.regulatory.write]}]
+      x-required-permission: regulatory.mapping.propose
+      description: >
+        Always creates a DRAFT. The external code is untrusted classification
+        data, never used as a ledger account identifier. Ambiguous COBAC
+        312/322 source references remain unresolved unless evidenced.
+      parameters:
+        - $ref: '#/components/parameters/InstitutionId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ProposeRegulatoryMapping'}
+      responses:
+        '201': {description: Mapping draft created, content: {application/json: {schema: {$ref: '#/components/schemas/RegulatoryMapping'}}}}
+        '400': {$ref: '#/components/responses/Problem'}
+        '401': {$ref: '#/components/responses/Problem'}
+        '403': {$ref: '#/components/responses/Problem'}
+        '409': {$ref: '#/components/responses/Problem'}
+        '422': {$ref: '#/components/responses/Problem'}
+  /v1/institutions/{institutionId}/regulatory-mappings/{mappingId}/activate:
+    post:
+      tags: [RegulatoryMappings]
+      operationId: activateRegulatoryMapping
+      security: [{oidc: [opes.regulatory.approve]}]
+      x-required-permission: regulatory.mapping.approve
+      description: >
+        Enforce different maker/checker identity, effective date, verified
+        source digest, immutable revision, and explicit rejection of disputed
+        312 short-term interpretation. Binding classifications need applicable
+        source authority, not a fallback industry convention.
+      parameters:
+        - $ref: '#/components/parameters/InstitutionId'
+        - $ref: '#/components/parameters/MappingId'
+        - $ref: '#/components/parameters/IdempotencyKey'
+        - $ref: '#/components/parameters/CorrelationId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/ActivateRegulatoryMapping'}
+      responses:
+        '200': {description: Resulting mapping state, content: {application/json: {schema: {$ref: '#/components/schemas/RegulatoryMapping'}}}}
+        '400': {$ref: '#/components/responses/Problem'}
+        '401': {$ref: '#/components/responses/Problem'}
+        '403': {$ref: '#/components/responses/Problem'}
+        '404': {$ref: '#/components/responses/Problem'}
+        '409': {$ref: '#/components/responses/Problem'}
+        '422': {$ref: '#/components/responses/Problem'}
+components:
+  parameters:
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      description: Unique per institution plus operation type; same key with different body is a conflict.
+      schema: {type: string, minLength: 16, maxLength: 128, pattern: '^[A-Za-z0-9._:-]+$'}
+    CorrelationId:
+      name: X-Correlation-ID
+      in: header
+      required: true
+      schema: {type: string, format: uuid}
+    InstitutionId:
+      name: institutionId
+      in: path
+      required: true
+      schema: {type: string, format: uuid}
+    RequestId:
+      name: requestId
+      in: path
+      required: true
+      schema: {type: string, format: uuid}
+    MappingId:
+      name: mappingId
+      in: path
+      required: true
+      schema: {type: string, format: uuid}
+  responses:
+    Problem:
+      description: RFC 9457 problem details; no sensitive resource data disclosed.
+      content:
+        application/problem+json:
+          schema: {$ref: '#/components/schemas/Problem'}
+  schemas:
+    CreateProvisioningRequest:
+      type: object
+      additionalProperties: false
+      required: [institutionCode, legalName, countryCode, deploymentModel]
+      properties:
+        institutionCode: {type: string, pattern: '^[A-Z0-9][A-Z0-9_-]{1,23}$'}
+        legalName: {type: string, minLength: 2, maxLength: 240}
+        countryCode: {type: string, pattern: '^[A-Z]{2}$'}
+        deploymentModel: {type: string, enum: [DEDICATED_BANK_PRODUCTION, DEDICATED_BANK_NONPRODUCTION]}
+        dataResidencyCountryCode: {type: string, pattern: '^[A-Z]{2}$'}
+        requestedModules:
+          type: array
+          uniqueItems: true
+          maxItems: 50
+          items: {type: string, pattern: '^[A-Z][A-Z0-9_]{1,31}$'}
+        businessReason: {type: string, minLength: 10, maxLength: 1500}
+    AuthorizeProvisioningRequest:
+      type: object
+      additionalProperties: false
+      required: [expectedVersion, decision, rationale]
+      properties:
+        expectedVersion: {type: integer, minimum: 0}
+        decision: {type: string, enum: [APPROVE, REJECT]}
+        rationale: {type: string, minLength: 10, maxLength: 2000}
+    ProvisioningRequest:
+      type: object
+      additionalProperties: false
+      required: [requestId, institutionCode, state, version, requestedAt]
+      properties:
+        requestId: {type: string, format: uuid}
+        institutionId: {type: string, format: uuid}
+        institutionCode: {type: string}
+        state: {type: string, enum: [DRAFT, PENDING_REVIEW, APPROVED, REJECTED, PROVISIONING, READY]}
+        version: {type: integer, minimum: 0}
+        requestedAt: {type: string, format: date-time}
+        reviewedAt: {type: string, format: date-time}
+        correlationId: {type: string, format: uuid}
+    InstitutionContext:
+      type: object
+      additionalProperties: false
+      required: [institutionId, institutionCode, countryCode, lifecycleState, deploymentModel, grantedPermissions]
+      properties:
+        institutionId: {type: string, format: uuid}
+        institutionCode: {type: string}
+        countryCode: {type: string, pattern: '^[A-Z]{2}$'}
+        lifecycleState: {type: string, enum: [PROVISIONING, ACTIVE, SUSPENDED, RETIRED]}
+        deploymentModel: {type: string, enum: [DEDICATED_BANK_PRODUCTION, DEDICATED_BANK_NONPRODUCTION]}
+        grantedPermissions:
+          type: array
+          uniqueItems: true
+          items: {type: string, minLength: 3, maxLength: 128}
+        policyVersion: {type: integer, minimum: 1}
+    ProposeRegulatoryMapping:
+      type: object
+      additionalProperties: false
+      required: [semanticKey, regulatorCode, externalAccountCode, interpretationStatus, sourceRef]
+      properties:
+        semanticKey: {type: string, pattern: '^[A-Z][A-Z0-9_]{2,95}$'}
+        regulatorCode: {type: string, pattern: '^[A-Z][A-Z0-9_-]{1,31}$'}
+        externalAccountCode: {type: [string, 'null'], maxLength: 32}
+        interpretationStatus: {type: string, enum: [UNRESOLVED, SOURCE_OBSERVED]}
+        sourceRef: {type: string, minLength: 12, maxLength: 1200}
+        sourceSha256: {type: [string, 'null'], pattern: '^[0-9a-f]{64}$'}
+        note: {type: string, minLength: 4, maxLength: 2000}
+    ActivateRegulatoryMapping:
+      type: object
+      additionalProperties: false
+      required: [expectedVersion, effectiveFrom, sourceSha256, rationale]
+      properties:
+        expectedVersion: {type: integer, minimum: 0}
+        effectiveFrom: {type: string, format: date-time}
+        sourceSha256: {type: string, pattern: '^[0-9a-f]{64}$'}
+        rationale: {type: string, minLength: 10, maxLength: 2000}
+    RegulatoryMapping:
+      type: object
+      additionalProperties: false
+      required: [institutionId, mappingId, semanticKey, regulatorCode, interpretationStatus, state, revision]
+      properties:
+        institutionId: {type: string, format: uuid}
+        mappingId: {type: string, format: uuid}
+        semanticKey: {type: string}
+        regulatorCode: {type: string}
+        externalAccountCode: {type: [string, 'null']}
+        interpretationStatus: {type: string, enum: [UNRESOLVED, SOURCE_OBSERVED, DOCUMENTED_INTERPRETATION]}
+        state: {type: string, enum: [DRAFT, ACTIVE, RETIRED]}
+        revision: {type: integer, minimum: 1}
+        effectiveFrom: {type: string, format: date-time}
+        sourceSha256: {type: string, pattern: '^[0-9a-f]{64}$'}
+    Problem:
+      type: object
+      additionalProperties: false
+      required: [type, title, status]
+      properties:
+        type: {type: string, format: uri}
+        title: {type: string, minLength: 1}
+        status: {type: integer, minimum: 400, maximum: 599}
+        detail: {type: string, maxLength: 1000}
+        correlationId: {type: string, format: uuid}
+  securitySchemes:
+    oidc:
+      type: openIdConnect
+      openIdConnectUrl: https://identity.example.invalid/.well-known/openid-configuration
