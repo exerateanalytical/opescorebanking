@@ -1,0 +1,102 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 194,
+  "checkpoint": "CE",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/CE/README.md",
+      "git_blob_sha": "9b406b7cc91a25589709cd52d92af453ba896251",
+      "sha256": "77eda3e6b84487105718947f5a5da16171dd17b0bddc81f188407141402db101",
+      "bytes": 5606,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-03. Predecessor: CD. Phase 4 Accounting Core and Financial Integrity."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "# Checkpoint CE — WP-ACC-005 (OPEN / P0 BLOCKED)"
+        },
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "This checkpoint is a primary-source revalidation and an evidence-boundary refinement, NOT a completed work package, a production authorization or a test result."
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Institution-specific approved profile version | Private approved MyStandards artefact | MISSING | No message-schema production gate |"
+        },
+        {
+          "line": 19,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| SYGMA V10 live | Signed issuer activation bulletin | NOT VERIFIED | Rail disabled in product model |"
+        },
+        {
+          "line": 20,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Participant authorized to settle | Signed institution-specific contract/entitlement | NOT VERIFIED | No payment submission |"
+        },
+        {
+          "line": 21,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| CMA-I 3005-21 PTD 001, PTD 002, MFR 003 | Issuer technical documentation | NOT OBTAINED | No cryptographic/API assumptions |"
+        },
+        {
+          "line": 22,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| PCEC and bank-approved mappings | Current operative texts and CFO approval | NOT OBTAINED | No financial posting implementation |"
+        },
+        {
+          "line": 27,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Negative test specifications — NOT EXECUTED"
+        },
+        {
+          "line": 32,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "CE-N05 missing/expired signing profile cannot be bypassed by fallback algorithm."
+        },
+        {
+          "line": 43,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "AML/privacy/audit: institution-level approvals and retention unresolved."
+        },
+        {
+          "line": 46,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "DoR: FAIL (material gaps in criteria 2,3,7,8,9,11,12,13,14). No production code or tests."
+        },
+        {
+          "line": 49,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Work packages attempted: 1 (WP-ACC-005 continuation); completed: 0; kept open: 1; blocked from closure: 1. Dependent packages attempted: 0. P0 closures: 0. Production code: 0. Tests executed: 0. No verified total-phase or remaining-WP denominator."
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": null,
+  "unique_historical_wp_mentions": [
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 1,
+    "read": 1,
+    "sha_matched": 1
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 195"
+}
