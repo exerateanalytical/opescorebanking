@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 174,
+  "checkpoint": "BL",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "e9f5be3241e7606104503dcc16fcd7be0b20ef89f3a957ef20fb30a017b5f8aa",
+      "crc32": "0ee8688f",
+      "bytes": 7431
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "989091042f9c9236c72eaebc3f81fece9071e5b0239fca39cf2476ae2a4f52d7",
+      "crc32": "e243138b",
+      "bytes": 14217
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BL/CLAUSE_SEMANTICS_AND_IDENTITY_GATES.json",
+      "sha256": "90eeac7b431a8369c745297d97d29bb865b9f59ac14fce20e40e96655b62ca12",
+      "crc32": "5f820ca5",
+      "bytes": 4634
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BL/CONTINUATION_STATE.json",
+      "sha256": "3a80500bc1c5a03c9e9fc9ff9a83a4d74d35960a122d72c27f9259d476f3d2f7",
+      "crc32": "74bc8a09",
+      "bytes": 1458
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BL/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "cd32af538354d6be3daaf78b10e85263d4f114a7caab4718ffa3c2cd9cbc6945",
+      "crc32": "7d18c38a",
+      "bytes": 6379
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BL/EXECUTION_REPORT.md",
+      "sha256": "4722aff27be5e8e8927382bdf155905c40b14600ce56de0c1f885fe45555b8ac",
+      "crc32": "e050f8ab",
+      "bytes": 1369
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BL/QUALITY_REVIEW.md",
+      "sha256": "17f00298504c444b87dcb73f882d0dd24ab9835f7edd40d27ad6d09a88f226b4",
+      "crc32": "efaa8d77",
+      "bytes": 2520
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BL/README.md",
+      "sha256": "230a2bb392223af98c9168252670fb213470f910156eeb61b7a5860d17bdf343",
+      "crc32": "13ebcfc7",
+      "bytes": 1657
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BL/SOURCE_AND_EVIDENCE_DELTA.md",
+      "sha256": "271dd4f06fa823e2fe114b270a25ce8d85e4b14396e23046f8712b8ea35f50a4",
+      "crc32": "f853d62b",
+      "bytes": 2761
+    }
+  ]
+}
