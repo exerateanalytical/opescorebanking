@@ -1,0 +1,112 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 204,
+  "checkpoint": "CO",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/CO/README.md",
+      "git_blob_sha": "9a7aeea680f56aa5892b62cb516c4bb79a4daa6b",
+      "sha256": "65c614d56cb45b16002afdc2cf34ba4f1b7f8a5a3cabb6be40a1bbb46f1a92a4",
+      "bytes": 5036,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 3,
+          "excerpt": "Date: 2026-11-03. Predecessor: CN. Phase 4 Accounting Core and Financial Integrity. **SAFE PARTIAL RESEARCH CHECKPOINT; WP-ACC-005 OPEN / P0 BLOCKED.** No production implementation authorized."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Date: 2026-11-03. Predecessor: CN. Phase 4 Accounting Core and Financial Integrity. **SAFE PARTIAL RESEARCH CHECKPOINT; WP-ACC-005 OPEN / P0 BLOCKED.** No production implementation authorized."
+        },
+        {
+          "line": 7,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "1. Official BEAC COBAC instructions index remains discoverable: https://www.beac.int/supervision-bancaire/instructions-de-cobac/ ; lists \"Instruction COBAC I-2015 01 PCEC\" as a 2015 approximately 6 MB document. Index listing confirms discoverability, **not verified article text**."
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "2. Direct official PDF retrieval at https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015_01_pcec.pdf timed out again. No Article 8 page image or signed source bytes were obtained."
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "3. An independently hosted secondary transcription was newly located at https://app.maathis.com/droit/cemac/circulaire/i-2015-01-instruction-n-instruction-cobac-i-201501-instruction-cobac-i-2015-01-p . Its publicly accessible portion contains the title, preamble, Article 1, Articles 2–3 and part of Article 4. It gates the rest behind login, so **Article 8 is"
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "5. Fresh web search for the literal combinations I-2015/01, 312, 322 and PCEC found no authoritative correction. This does **not** establish no corrigendum exists."
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Official I-2015/01 Article 8 | UNAVAILABLE THIS RUN | None for account mapping |"
+        },
+        {
+          "line": 20,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Article 8(d) printed 312 vs surrounding 322 | PREVIOUS-CHECKPOINT REPORT; NOT REVERIFIED | Preserve discrepancy as open P0 |"
+        },
+        {
+          "line": 21,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Official PCEC letter/corrigendum resolving 312/322 | NOT LOCATED | No substitution allowed |"
+        },
+        {
+          "line": 22,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| R-2018/01 transition/retroactivity legal advice | NOT OBTAINED | No backdated migration or restatement |"
+        },
+        {
+          "line": 29,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- For Article 8(d), independently transcribe **both** the printed source account and the neighboring account hierarchy, with two-person review and explicit discrepancy field; do not normalize 312 to 322."
+        },
+        {
+          "line": 31,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Do not activate account migration, provision rates, reporting taxonomy, retroactive adjustment, or ledger posting until legal, regulatory, CFO and reconciliation approvals are evidenced."
+        },
+        {
+          "line": 36,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Regulatory: authoritative Article 8 and corrigendum missing (P0). Finance: no verified account semantics or trial-balance crosswalk (P0). Architecture: semantic ID/version contract remains proposed. Security: maker-checker and immutable evidence are requirements only. Risk/AML: no rule changes. Workflow/operations: fail closed; reconciliation and rollback no"
+        },
+        {
+          "line": 40,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Attempted 1 work package (WP-ACC-005 continuation); completed 0; kept open 1; blocked from closure 1. One **partial research checkpoint CO** documented; P0 resolved 0; production code 0; executable tests 0. No dependent package attempted. Definition of Ready: FAILED."
+        },
+        {
+          "line": 44,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**WP-ACC-005 — Checkpoint CP:** Acquire authenticated Article 8 source pages via the official COBAC/BEAC index or an independently authenticated archival copy; verify page/article/account-level 312/322 wording, then search issuer PCEC clarification letters and signed subsequent amendments for correction. If no authenticated pages are available, preserve the "
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": null,
+  "unique_historical_wp_mentions": [
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 1,
+    "read": 1,
+    "sha_matched": 1
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 205"
+}
