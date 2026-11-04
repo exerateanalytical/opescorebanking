@@ -1,0 +1,97 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 200,
+  "checkpoint": "CK",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/CK/README.md",
+      "git_blob_sha": "51a236d468accf37eb811a185b04581bd0d9f11c",
+      "sha256": "41b0b3e2d77cfbef7e0dd8f502736588d0ab7f7a7d9062d63dc10df79c9ec08e",
+      "bytes": 8762,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 3,
+          "excerpt": "Date: 2026-11-03. Predecessor: CJ. Phase 4 — Accounting Core and Financial Integrity. **SAFE RESEARCH CHECKPOINT ONLY; WP-ACC-005 OPEN / P0 BLOCKED.** No implementation, executable tests, certificatio"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "# Checkpoint CK — WP-ACC-005: R-2018/01 primary-text classification/provisioning gate and incomplete 2015 amendment review"
+        },
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Date: 2026-11-03. Predecessor: CJ. Phase 4 — Accounting Core and Financial Integrity. **SAFE RESEARCH CHECKPOINT ONLY; WP-ACC-005 OPEN / P0 BLOCKED.** No implementation, executable tests, certification, or approved regulatory parameters."
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Canonical CJ reviewed before proceeding: `regulatory/checkpoints/CJ/README.md`."
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- I-2015/01 source URL: https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015_01_pcec.pdf . **Access blocked in this run** (web PDF fetch timeout; local runtime network DNS unavailable). Therefore the mandated full visual review of Articles 2–13 **was not completed**. CJ's selected-page observations remain historical partial evidence; do n"
+        },
+        {
+          "line": 29,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Critical regulatory reconciliation finding"
+        },
+        {
+          "line": 39,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "`RegulatoryInstrument(id,issuer,document_hash,article,publication_date,effective_from,effective_to,verification_status,applicability_profile,supersedes,approved_by)`."
+        },
+        {
+          "line": 43,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Proposed lifecycle: `OBSERVED -> EVIDENCE_PENDING -> REVIEW_PENDING -> APPROVED -> EFFECTIVE`; rejected, contested, superseded and regulatory-override paths remain separate and immutable."
+        },
+        {
+          "line": 45,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Security, operations and acceptance cases — specified, NOT executed"
+        },
+        {
+          "line": 51,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Detect guarantee expiry, missing legal perfection and out-of-date collateral valuations."
+        },
+        {
+          "line": 58,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Regulatory: **partial**; R-2018/01 text inspected, I-2015/01 full page inspection blocked, later chain not established. Financial: journal controls remain conceptual; CFO approval absent. Architecture: proposed separations recorded, not implemented. Security/AML/risk: authorization and group contagion proposed, not certified. Data/retention: provenance propo"
+        },
+        {
+          "line": 62,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Work packages attempted: 1 (WP-ACC-005 continuation); completed: 0; open: 1; blocked from closure: 1. Safe research checkpoints: 1 (CK). P0 blockers resolved: 0. Production code: 0. Tests executed: 0. No dependent work package attempted."
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": null,
+  "unique_historical_wp_mentions": [
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 1,
+    "read": 1,
+    "sha_matched": 1
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 201"
+}
