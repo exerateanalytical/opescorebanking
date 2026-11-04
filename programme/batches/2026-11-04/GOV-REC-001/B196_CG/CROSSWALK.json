@@ -1,0 +1,72 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 196,
+  "checkpoint": "CG",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/CG/README.md",
+      "git_blob_sha": "5b628493775bdb8c1a6b8894bf29fd9ce49bcbd4",
+      "sha256": "803ab7693f53163db61d95fff28e26b635397b72ac34c11b82ca4cbae6d2bdf7",
+      "bytes": 5752,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-03. Predecessor: CF (verified main commit 7fdf8032171b35768abbee65996bb775ac5a9998). Phase 4 — Accounting Core and Financial Integrity."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Status: SAFE DOCUMENTATION CHECKPOINT; WP-ACC-005 OPEN / P0 BLOCKED. No code, bank authorization, certification, or executed tests."
+        },
+        {
+          "line": 16,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Required fields for a future RailActivationEvidence record: evidence_id; institution_id; rail_id; version; environment; issuer; issuer_document_reference; issuer_document_digest_if_measured; issuer_authenticity_verification; verified_by; verified_at; effective_from; effective_until; revoked_at; participant_entitlement_reference; settlement_account_authority_"
+        },
+        {
+          "line": 26,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "P0-CG-06 institution identity and regulatory profile for implementation: OPEN."
+        },
+        {
+          "line": 27,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Design-only tests (NOT EXECUTED): reject legacy-SYGMA-as-V10 authority; reject cross-institution approval; reject revoked RMA/key; reject schema-version mismatch; reject ACK-as-finality; hold outcome-unknown; reject missing liquidity evidence; prevent duplicate financial journal on retries; allow reconciliation under rail suspension without new transmissions"
+        },
+        {
+          "line": 30,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Regulatory: issuer evidence insufficient; legal applicability and amendment chain unresolved. Accounting: chart mapping and recognition unresolved. Payments: finality and institution-scoped activation not authorized. Security: key/RMA trust boundary not authenticated. AML/fraud/privacy: institution-specific policy and retention unresolved. Architecture: sepa"
+        },
+        {
+          "line": 33,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Work packages attempted: 1 (WP-ACC-005 continuation); completed: 0; kept open: 1; blocked from closure: 1. Dependent packages attempted: 0. P0 closures: 0. Production code: 0. Executed tests: 0. Safe checkpoint documentation: CG. No claimed implementation readiness."
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": null,
+  "unique_historical_wp_mentions": [
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 1,
+    "read": 1,
+    "sha_matched": 1
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 197"
+}
