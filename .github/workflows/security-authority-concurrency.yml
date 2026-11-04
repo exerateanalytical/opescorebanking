@@ -1,0 +1,35 @@
+name: OPES Core Banking Security Authority Concurrency
+on:
+  push:
+    paths:
+      - 'engineering/security/tenant-routing/**'
+      - '.github/workflows/security-authority-concurrency.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  serial-authority-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: opes_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U postgres -d opes_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      OPES_AUTHORITY_LAB_DSN: 'host=127.0.0.1 port=5432 dbname=opes_test user=postgres password=postgres'
+      PGPASSWORD: postgres
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PostgreSQL Python driver
+        run: python3 -m pip install --disable-pip-version-check 'psycopg[binary]>=3.2,<4'
+      - name: Create synthetic authority schema
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -f engineering/security/tenant-routing/schema.sql
+      - name: Execute deterministic T43 and T47 concurrency checks
+        run: cd engineering/security/tenant-routing && python3 -m unittest discover -s tests -p 'test_*.py' -v
