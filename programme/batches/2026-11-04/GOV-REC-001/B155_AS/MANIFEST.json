@@ -1,0 +1,71 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 155,
+  "checkpoint": "AS",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "80102963d34c65f873cb7ebca74109ab629f0b5aee1bb89fc76c414693cfd92b",
+      "crc32": "00734de7",
+      "bytes": 7114
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "46b744912b62b88c38d04230eb87f35b990082af3b28fa5a29db28816f77708c",
+      "crc32": "9c9eec13",
+      "bytes": 19176
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AS/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "0c402329fc7aec590612e5b9fc74dd0da9ff0b6bf710a63c47986b1c06d9774d",
+      "crc32": "8bc54ff3",
+      "bytes": 2610
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AS/CONTINUATION_STATE.json",
+      "sha256": "c260b8f985e00db7332a9f3d17f0cb1e961af184fad25eaa97b1d316fc2cdf39",
+      "crc32": "7877fcbf",
+      "bytes": 1616
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AS/EVIDENCE_MATRIX.json",
+      "sha256": "f7bc4595a1564631764a307ae7a308657bc5736850bbcd374d03801c318290d3",
+      "crc32": "8164ca48",
+      "bytes": 4496
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AS/EXECUTION_REPORT.md",
+      "sha256": "29a9f105b0af8dd302223f64a04eb08715c6c2669e245505145c0d1617942cdf",
+      "crc32": "fee6b955",
+      "bytes": 1707
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AS/PRIMARY_EVIDENCE.md",
+      "sha256": "c981337c835c9f4495bf8791a9bb31b5ee0f090e0962cc981674d9c2f9c0f9f7",
+      "crc32": "1184e75f",
+      "bytes": 4762
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AS/QUALITY_REVIEW.md",
+      "sha256": "b58072553f59077a12824190d19ab61c3ee4556726feb4f01d7fc7429be7e517",
+      "crc32": "c7555b27",
+      "bytes": 2525
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AS/README.md",
+      "sha256": "22cc1ad3c11140adbdde7ecc398842c20520aee4b483d82b3447b3bf1398ffaa",
+      "crc32": "c75bc781",
+      "bytes": 1943
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AS/REQUIREMENTS_AND_CONTROLS.md",
+      "sha256": "7d7690379698f936d951c86d595701569e4511e94dc00d8b0a2644f83d141655",
+      "crc32": "3e29a1e7",
+      "bytes": 4032
+    }
+  ]
+}
