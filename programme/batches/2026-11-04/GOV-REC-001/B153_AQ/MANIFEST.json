@@ -1,0 +1,59 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 153,
+  "checkpoint": "AQ",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "4adb0886f32b81e105d8b5facc9cfe8c2ba067bb5604f340777f90b47c16b9ea",
+      "crc32": "feac3577",
+      "bytes": 6129
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "bc799a86b46e499a0cac641f5fe7a87ede8dcd85c94d2ea2eef9ce243030e024",
+      "crc32": "daed0239",
+      "bytes": 12540
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AQ/AUTHORITY_DECISION_MATRIX.json",
+      "sha256": "b3dc754c275235323a259cf3728a6969425dee8ca95c13657e36127ae61332f1",
+      "crc32": "54c77366",
+      "bytes": 2426
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AQ/CONTINUATION_STATE.json",
+      "sha256": "cc61ec8c114dd84bc500718bb5fec4ffb9d6ad83a104656418b2e7350270c345",
+      "crc32": "c8aa4f24",
+      "bytes": 1405
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AQ/EVIDENCE_DELTA.md",
+      "sha256": "1ff418d967c45364b1882b69dedfd3c012e2f0a1a55c35544581ec5419483f32",
+      "crc32": "d5d93fa5",
+      "bytes": 3804
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AQ/EXECUTION_REPORT.md",
+      "sha256": "2107c111af835bec6b99a55fad099a188596fc806671b501470343b28f7e29fd",
+      "crc32": "eb98337b",
+      "bytes": 1317
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AQ/README.md",
+      "sha256": "c17e45cf79b3a05b252805ad666abe54bb1a1ffd869a5bd3d113ae9410e1068a",
+      "crc32": "e8829845",
+      "bytes": 746
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AQ/REVIEW_AND_GATES.md",
+      "sha256": "737e814fa15f065985c45ac5cac3bda14d2f5537cadab418f33952fddef8ed69",
+      "crc32": "fae85fe2",
+      "bytes": 2680
+    }
+  ]
+}

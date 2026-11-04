@@ -1,0 +1,304 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 153,
+  "checkpoint": "AQ",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/AQ/AUTHORITY_DECISION_MATRIX.json",
+      "git_blob_sha": "f1286d8d1cf74268e4e03b6fd722f8a3d50c9c45",
+      "sha256": "b3dc754c275235323a259cf3728a6969425dee8ca95c13657e36127ae61332f1",
+      "bytes": 2426,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"issue\": \"Article 23–26 completeness\","
+        },
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"BLOCKED\","
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"authority_required\": \"Issuer-certified complete 11-printed-page instrument, amendments and annexes\","
+        },
+        {
+          "line": 28,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"issue\": \"Court challenges for 01/25 and 02/25\","
+        },
+        {
+          "line": 31,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"authority_required\": \"Separate certified court records, orders, effect and counsel review\","
+        },
+        {
+          "line": 46,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"BLOCKED\","
+        },
+        {
+          "line": 48,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"system_consequence\": \"No journal template, liability derecognition, payout or settlement-complete transition\""
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AQ/CONTINUATION_STATE.json",
+      "git_blob_sha": "47a5bfa4e793a712bf8001b9a716ee6869909ce5",
+      "sha256": "cc61ec8c114dd84bc500718bb5fec4ffb9d6ad83a104656418b2e7350270c345",
+      "bytes": 1405,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005",
+        "WP-PAY-GIMAC-001"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 12,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_sent\": 0,"
+        },
+        {
+          "line": 17,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"separate_workstream\": \"WP-PAY-GIMAC-001 OPEN NOT ATTEMPTED\","
+        },
+        {
+          "line": 25,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"next_exact_task\": \"WP-ACC-005 — Checkpoint AR: obtain issuer-certified full Regulation 02/25 including printed page 10/Articles 23–26; authenticate original 2025-10-22 COBAC–MINFI letter; separately certify court status for 01/25 and 02/25; establish signed/published adoption status of June 2026 proposals and bank-specific PCEC/settlement approvals. Do not "
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AQ/EVIDENCE_DELTA.md",
+      "git_blob_sha": "59d5001013b0355c319bff8b8ce85ccb0fc09f51",
+      "sha256": "1ff418d967c45364b1882b69dedfd3c012e2f0a1a55c35544581ec5419483f32",
+      "bytes": 3804,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "# AQ — evidence provenance, discrepancy and missing-page assessment"
+        },
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Reproduction B: https://kalieu-elongo.com/wp-content/uploads/2025/07/Reglement-N%C2%B002_traitement-comptes-inactifs-des-avoirs-en-desherence.pdf . An independently hosted 10-PDF-page scan, but **also jumps from printed page 9 / Article 23 to printed page 11 / Article 27**. Its independent hosting does not cure the missing printed page 10. The missing page"
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Neither reproduction supports approval of the transitional transfer rule, court-status-dependent behavior, or journal templates."
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "2. Certified court registry case identifiers, procedural status and any enforceable orders for **01/25 and 02/25 separately**."
+        },
+        {
+          "line": 25,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "No regulatory requests were sent and no evidence above was acquired in issuer-certified form during AQ."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AQ/EXECUTION_REPORT.md",
+      "git_blob_sha": "d33dd05d4af09718390690e9a7d1c7a06c1de3e7",
+      "sha256": "2107c111af835bec6b99a55fad099a188596fc806671b501470343b28f7e29fd",
+      "bytes": 1317,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-01. Phase 4 Accounting Core / Financial Integrity. Canonical predecessor AP remotely read and verified before work; local R01 treated as supplemental. WP-ACC-004 remains last inherited c"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Date: 2026-11-01. Phase 4 Accounting Core / Financial Integrity. Canonical predecessor AP remotely read and verified before work; local R01 treated as supplemental. WP-ACC-004 remains last inherited completed WP; WP-ACC-005 OPEN P0 BLOCKED."
+        },
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Work packages attempted 1; completed 0; kept open 1; blocked from closure 1; dependent packages attempted 0.**"
+        },
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Research: independently examined two hosted copies of 02/25 (both missing printed page 10), identified a secondary fragment of Article 26 from an alleged COBAC–MINFI letter, and recorded conflicting secondary inactivity thresholds. None resolves issuer completeness or certified legal effect."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Production code written 0; banking tests executed 0; security scans 0; regulatory requests transmitted 0. Definition of Ready FAIL."
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint AR: obtain issuer-certified full Regulation 02/25 (printed page 10, Articles 23–26); authenticate original 2025-10-22 COBAC–MINFI letter; separately certify 01/25 and 02/25 court dispositions; verify final June 2026 modalities and bank-specific PCEC/settlement approvals."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AQ/README.md",
+      "git_blob_sha": "00274e573676cbc99523a649ccf29db9fa82f852",
+      "sha256": "c17e45cf79b3a05b252805ad666abe54bb1a1ffd869a5bd3d113ae9410e1068a",
+      "bytes": 746,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-01. Phase 4 — Accounting Core / Financial Integrity."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Active: WP-ACC-005 — PCEC Regulatory Accounting Extraction. Last completed WP: WP-ACC-004 (inherited, not independently reaudited)."
+        },
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Scope of AQ: independent search for the missing 02/25 text, reconcile contradictory public descriptions, and specify exact source-acceptance conditions. AP documents remain authoritative as historical records; R01 local research is supplemental, not a substitute for AP."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AQ/REVIEW_AND_GATES.md",
+      "git_blob_sha": "d20f3a2b88585c61be0fd78008fbeacacfdb09ff",
+      "sha256": "737e814fa15f065985c45ac5cac3bda14d2f5537cadab418f33952fddef8ed69",
+      "bytes": 2680,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Regulatory/legal: FAIL — two copies share missing printed page 10; certified court status and original COBAC–MINFI letter absent. Press Article 26 fragment is a lead only."
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Regulator/auditor evidence: FAIL — authenticated completeness and certified legal status unavailable."
+        },
+        {
+          "line": 19,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "AQ-T01: Reproductions that both omit printed page 10 must not satisfy completeness by source count."
+        },
+        {
+          "line": 25,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "All scenarios **specified only, not executed**. No implementation permitted until full 15-point Definition of Ready is evidenced."
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "AQ",
+    "date": "2026-11-01",
+    "previous": "AP",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "regulatory_requests_sent": 0,
+    "definition_of_ready": "FAIL",
+    "separate_workstream": "WP-PAY-GIMAC-001 OPEN NOT ATTEMPTED",
+    "new_findings": [
+      "Second independently hosted reproduction also skips printed page 10",
+      "Secondary partial quotation of Article 26 from alleged 2025 COBAC–MINFI correspondence",
+      "Secondary 5-year savings inactivity claim conflicts with reproduced Article 4 36-month text"
+    ],
+    "new_acceptance_scenarios_specified": 6,
+    "next_exact_task": "WP-ACC-005 — Checkpoint AR: obtain issuer-certified full Regulation 02/25 including printed page 10/Articles 23–26; authenticate original 2025-10-22 COBAC–MINFI letter; separately certify court status for 01/25 and 02/25; establish signed/published adoption status of June 2026 proposals and bank-specific PCEC/settlement approvals. Do not activate executable financial policy."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005",
+    "WP-PAY-GIMAC-001"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 6,
+    "read": 6,
+    "sha_matched": 6
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 154"
+}
