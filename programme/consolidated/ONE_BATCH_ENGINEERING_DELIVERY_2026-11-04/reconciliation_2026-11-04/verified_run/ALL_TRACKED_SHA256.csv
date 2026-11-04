@@ -1,7 +1,7 @@
 path,bytes,sha256,extension,source_group,candidate_owner,inspection,title
 .github/workflows/reconcile-core-banking.yml,1720,5be68796b81379f67949ec85e6fd5b41f6e89aa64b4f49634b792a95f7c3a1b4,.yml,other,UNMAPPED,UTF8_READ,
 .github/workflows/restore-checkpoint-an.yml,1185,0d5d0685a8261d7c62bb3735dd82dc1bd19016014ab195f03fce65895fff6b7f,.yml,other,UNMAPPED,UTF8_READ,
-governance/CANONICAL_PROGRAMME_STATE.json,2933,87fce51c34fdf8d1b2f22d176a1f1f1db987787e006e77fb215ec0e80b42555c,.json,governance,UNMAPPED,UTF8_READ,
+governance/CANONICAL_PROGRAMME_STATE.json,3531,5e6dc344b982d5eb0d5ba21274ea770f625ce35512ab91bf24ef927678bdcda6,.json,governance,UNMAPPED,UTF8_READ,
 governance/GOV_REC_001_AN_ARCHIVE_EXISTENCE_RECONCILIATION_2026-11-04.md,3252,cfc3de37e747d84965dd35c85e928f7775f06b7064554c74029784b9b204942c,.md,governance,UNMAPPED,UTF8_READ,GOV-REC-001 — AN archive existence reconciliation (2026-11-04)
 governance/GOV_REC_001_AN_ARCHIVE_PROVENANCE_GATE_2026-11-04.md,3833,6ce5934761eb56376ffcb14720daafb49f75585f8ca3504517fd46f46754ceef,.md,governance,UNMAPPED,UTF8_READ,GOV-REC-001 — AN original-archive provenance and acceptance gate
 governance/GOV_REC_001_AN_BINARY_ZIP_CENTRAL_DIRECTORY_VERIFICATION_2026-11-04.md,3073,717c2edff2f1ab52e9c1fc7e6df3398e6394495886ce1d04df5f954f1d6f341e,.md,governance,UNMAPPED,UTF8_READ,GOV-REC-001 — AN binary retrieval and ZIP central-directory verification
@@ -1308,5 +1308,5 @@ regulatory/recovery/source/AN/REQUIREMENTS.json,1117,729e580f5955def608b083b6ebd
 regulatory/recovery/source/AN/SHA256SUMS.txt,770,f72440358200f491628371743b2fda9832bf33e61843b7a63f8b640d5e34b03e,.txt,recovered_source,UNMAPPED,UTF8_READ,
 regulatory/recovery/source/AN/SOURCE_REGISTER.json,1216,e5e7156873f2510f0060a36758b6eb9aa5a0eeaaae39c8e6731e73606ecd8755,.json,recovered_source,UNMAPPED,UTF8_READ,
 tools/reconcile_core_banking.py,18589,7eb099132ae6280c43bbb8818a9911d952fe6bc94f900355a28d236bc921c5a4,.py,other,UNMAPPED,UTF8_READ,"Canonical state v0.3 corrections trigger a fresh, reproducible audited source archive."
-tools/reconcile_core_banking_batch210.py,13428,767eafe2ed330f806c605d94e7223d5d9e7fd4acfa1b9aa654915f0afec9dfed,.py,other,UNMAPPED,UTF8_READ,
+tools/reconcile_core_banking_batch210.py,14383,e0f7a1f540285af02672bf201a9681613d19b9be717dba0345c90a894a43baa4,.py,other,UNMAPPED,UTF8_READ,Idempotent continuation: check existing original B210 bytes; NEVER overwrite it.
 tools/recovery/build_checkpoint_an.py,2251,440694f3f0f30eb2223cc15096299bdc629932250f2d89708159c6f09ee4b847,.py,other,UNMAPPED,UTF8_READ,
