@@ -11,6 +11,13 @@ OPESWARE develops, licenses and tests its banking software independently. No par
 - Composite primary keys and composite foreign keys prevent cross-institution attachment. DDL enforces allowed lifecycle values and distinct review identities, but does not yet implement complete authorization, quorum, consent, retention, cryptographic audit, or regulatory effective-date transitions.
 - Avoid promotion into production until risk/DoR reviews have verified all controls. SQL default privileges, migration roles, KMS, backups and PostgreSQL tenant role isolation still require integration engineering.
 
+## Hardened authenticated-login isolation added after the original lab
+`002_authenticated_principal_binding.sql` replaces the mutable tenant GUC as the RLS trust source with a sealed mapping from PostgreSQL `SESSION_USER` to institution ID. A narrowly scoped SECURITY DEFINER lookup reads the mapping; application roles cannot modify it. Distinct bank-specific authenticated database logins cannot `SET ROLE` into another institution. A third unbound login sees no bank data.
+
+GitHub Actions run [41858116656](https://github.com/exerateanalytical/opescorebanking/actions/runs/41858116656) **passed** the original SQL isolation suite, eight field-typed OpenAPI tests, database-role hardening, Bank A/Bank B impersonation attempts and unbound-login denial tests.
+
+This is a synthetic bank-lab proof, NOT a complete production gateway. The remaining boundary is application OIDC issuer/JWKS/audience validation, token-to-bank routing and safe connection-pool credential management, including secret rotation and adversarial tests. Production must never use the CI passwords.
+
 ## Reproduce tests
 The GitHub workflow spins up PostgreSQL 16 and runs:
 ```

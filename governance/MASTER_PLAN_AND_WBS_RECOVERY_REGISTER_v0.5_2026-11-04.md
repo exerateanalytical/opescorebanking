@@ -16,6 +16,9 @@ Source: https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015
 ## Executed first software-foundation slice
 Commit 860fecdbb1d88c0dabc7590f87a2647d31ebe012 introduced non-monetary PostgreSQL institution tables, strict composite tenancy keys, force-enabled RLS, mapping constraints, typed OpenAPI 3.1 endpoints and tests. GitHub Actions 41857001213 **PASSED** eight Python contract tests and PostgreSQL-backed tenant-isolation/security SQL checks. This is a synthetic laboratory, NOT an approved production release.
 
+## Additional executed security hardening
+Commit `4975d2be0d2d88c4d21b26a54172a69a2c3dc0fe` added PostgreSQL authenticated SESSION_USER-to-institution bindings and tests for bank A, bank B, and unbound bank principals. The service/database principal cannot gain another bank's data by modifying the mutable custom tenant GUC. GitHub Actions [41858116656](https://github.com/exerateanalytical/opescorebanking/actions/runs/41858116656) passed. Gateway OIDC security and credential routing are **still open**.
+
 ## Remaining material engineering gaps
 1. Trusted OIDC token-to-institution authorization and bank-specific database credentials; a mutable PostgreSQL custom GUC is NOT independent proof of a bank's identity.
 2. Complete precision-typed domain-specific contracts for 25 domain groups; older payload objects are generic drafts, not accepted interfaces.

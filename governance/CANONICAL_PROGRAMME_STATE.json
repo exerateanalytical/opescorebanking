@@ -40,7 +40,7 @@
   "last_local_archive_integrity_validated_batch_id": 210,
   "last_observed_delivery_batch_id": 210,
   "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
-  "next_exact_task": "Establish verified JWT token-derived tenant and subject binding to dedicated institution database principals and deny cross-bank impersonation; then complete specific CIF/PRD/ACT/LED domain contracts and SQL constraints.",
+  "next_exact_task": "Integrate OIDC issuer/JWKS/audience/subject authorization at API gateway with the tested authenticated bank-specific database roles; negative-test credential routing, authorization and key separation. Then finish strictly typed CIF/PRD/ACT/LED contracts and database models.",
   "next_exact_task_id": "FOUNDATION-TENANT-CONTRACTS-001",
   "original_archive_custody_status": "NOT_VERIFIED",
   "original_archive_custody_verified": false,
@@ -74,11 +74,16 @@
   "domain_ownership_register": "governance/OWNER_APPROVED_DOMAIN_OWNERSHIP_REGISTER_2026-11-04.json",
   "tenant_foundation_test_ci": {
     "status": "PASSED",
-    "run_id": 41857001213,
-    "url": "https://github.com/exerateanalytical/opescorebanking/actions/runs/41857001213",
+    "latest_run_id": 41858116656,
+    "latest_commit": "4975d2be0d2d88c4d21b26a54172a69a2c3dc0fe",
+    "url": "https://github.com/exerateanalytical/opescorebanking/actions/runs/41858116656",
     "python_unittests_passed": 8,
-    "postgres_sql_integration": "PASSED",
+    "postgres_schema_and_original_isolation": "PASSED",
+    "bank_a_authenticated_role_spoofing": "DENIED",
+    "bank_b_authenticated_role_spoofing": "DENIED",
+    "unbound_database_login": "NO_DATA_VISIBLE",
     "production_ready": false
   },
-  "last_verified_coding_commit": "860fecdbb1d88c0dabc7590f87a2647d31ebe012"
+  "last_verified_coding_commit": "860fecdbb1d88c0dabc7590f87a2647d31ebe012",
+  "tenant_data_isolation_level": "POSTGRESQL_LAB_TESTED_WITH_AUTHENTICATED_DB_SESSION_USER_BINDING; PRODUCTION_TENANT_ROUTER_NOT_YET_IMPLEMENTED"
 }
