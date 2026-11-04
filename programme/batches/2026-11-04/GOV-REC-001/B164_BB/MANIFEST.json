@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 164,
+  "checkpoint": "BB",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "cb174cd122ca5ecb512ee871c364b5dfeba2e4bbe13faf44fd7d1d20721a9e74",
+      "crc32": "4dd39da0",
+      "bytes": 7134
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "3f16c5d45a0a0920bebe66153e567b1ada7217e743e89d0c2ebaacc8b90229b4",
+      "crc32": "77c86838",
+      "bytes": 13623
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BB/AMENDMENT_GRAPH.json",
+      "sha256": "5a6ac1a05a2c3ccab8b8225c954dfc9cf490bfe6a405100bb67992db9a51a6b7",
+      "crc32": "af44e477",
+      "bytes": 1839
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BB/CONTINUATION_STATE.json",
+      "sha256": "573a155fdd6906c9eff368c7b44c03454b4edf449183138908ad2eb2b8b9de2b",
+      "crc32": "4537fe2f",
+      "bytes": 1517
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BB/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "f6a63a9300a45c41ba2390ad201be990284dcea97ac76fd4e9f48fb4db2b0de3",
+      "crc32": "df00a5a0",
+      "bytes": 2862
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BB/EXECUTION_REPORT.md",
+      "sha256": "7f3e6f45dcca6f4eb3373be4d9ee5b7aaeefa54d650ded47618cf217906ef123",
+      "crc32": "f9455678",
+      "bytes": 1311
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BB/PRIMARY_EVIDENCE.md",
+      "sha256": "a25d15001783ae5efccd39b61ec10b630d75b57c61e3439e9444578589a13eef",
+      "crc32": "a5251788",
+      "bytes": 3509
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BB/QUALITY_REVIEW.md",
+      "sha256": "c18cd0adc0029693ba62ccaebba55377983468210658ea549a356c38eb9f0194",
+      "crc32": "2087207f",
+      "bytes": 1927
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BB/README.md",
+      "sha256": "27b926246ab0c9f30d64161e31f59e9547672c790e5fe511cb30b74311e6f8ff",
+      "crc32": "dbfc1381",
+      "bytes": 2987
+    }
+  ]
+}
