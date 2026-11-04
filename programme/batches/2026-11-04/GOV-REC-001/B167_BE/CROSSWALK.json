@@ -1,0 +1,345 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 167,
+  "checkpoint": "BE",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BE/ACCEPTANCE_SCENARIOS.json",
+      "git_blob_sha": "ca67f9734b592e3227052c07fdbafc9bf46f638e",
+      "sha256": "4eb1a3da4c48afcf769461f7ae63857b19876464860f48eca0dc0048863d81de",
+      "bytes": 2460,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 68,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"given\": \"missing official publication or issuer signature\","
+        },
+        {
+          "line": 74,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"given\": \"a court filing without certified disposition\","
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BE/CAPITAL_POLICY_AUTHORITY_DESIGN.md",
+      "git_blob_sha": "537f74e9ebaae832dc6b455c458936e3a0367007",
+      "sha256": "84c2cab04f03d2e5a47fdcabf7c0c33f95a622998494881a64d659a671239c2a",
+      "bytes": 3760,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "# BE — proposed non-executable regulatory capital authority model"
+        },
+        {
+          "line": 2,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Design status: PROPOSED / NOT APPROVED / NOT IMPLEMENTED.**"
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "2. `RegulatoryInstrument`: issuer, number, type, official bulletin, complete signed binary digest, clause identity, effective/repeal dates, amendments, authority quality."
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "3. `RegulatoryCapitalPolicy`: category and effective-dated minimum **social capital**; transition eligibility and approved bank-specific remediation plan. Never confuse paid-up capital with **net regulatory own funds** or capital adequacy ratios."
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "`DISCOVERED_SECONDARY → PRIMARY_OBTAINED → AUTHENTICATED → CLAUSE_MAPPED → LEGAL_REVIEWED → CFO_RISK_REVIEWED → APPROVED → EFFECTIVE`; `CONFLICTED`, `SUSPENDED_BY_CERTIFIED_ORDER`, `REPEALED`, `EXPIRED` are separately supported states. Any missing complete issuer text, publication, later amendment, institution profile or approval leaves rule NON_EXECUTABLE. "
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "At minimum, every future evaluation requires institution class, authorization date, assessment date, verified applicable clause, approved transitional plan (if any), publication/effective date, and amendment/suspension state. Return `UNKNOWN_AUTHORITY` when evidence is incomplete. No auto-posting or false compliance flag."
+        },
+        {
+          "line": 22,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- A change in regulatory effective date cannot mutate historical journals; corrections require new authorized events/journals."
+        },
+        {
+          "line": 25,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Multiple applicable rules with unresolved priority yield `CONFLICT` and block automated compliance decisions."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BE/CONTINUATION_STATE.json",
+      "git_blob_sha": "b88ef1787df2aee2e5882768d87b6e63c51dc6d5",
+      "sha256": "664ed96d1922cb2d53b4409f6ae5efc1c791a28d71ef1f8c2ec66aab9bea589b",
+      "bytes": 1508,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        },
+        {
+          "line": 27,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"next_exact_task\": \"WP-ACC-005 — Checkpoint BF: obtain issuer-authenticated complete COBAC R-2025/02 and official publication/amendment/repeal chain, inspect original 2025 COBAC annual report, obtain signed R-2020/01 R-2021/01 R-2021/02, reconcile institution-specific capital transition and PCEC, and continue 01/25–02/25 legal/court/settlement evidence; main"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BE/EVIDENCE_DELTA.md",
+      "git_blob_sha": "977e738342a693fffcc52bb5e736990674aa833b",
+      "sha256": "69ca9525c494d90b8309d16522b4e4e4c7444b083fc264066491215b7b808772",
+      "bytes": 3897,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| COBAC 2025 Annual Report listing | BEAC official publications catalogue | Listing states 2025 report, approximately 18 MB | Contents, annexes, regulatory clauses, original hash, exact publication/legal effect |"
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| COBAC R-2025/02 minimum capital | Nonofficial legal-text reproduction (Maathis) | Visible Articles 1–6 (partial), including scope, 25bn bank / 4bn financial category, commencement 2026-01-01, transition and 2026/2027/2028/2029 proposed bank stages; accessible financial 2026 stage 2.5bn | No authenticated signed original, official publication, complete Arts"
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| CEMAC Regulations 01/25, 02/25 | Prior AO–BD | No new authenticated complete primary text | 02/25 printed p10/Arts 23–26, official publication, separate certified court outcomes, original COBAC–MINFI correspondence |"
+        },
+        {
+          "line": 24,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Acquire original from BEAC/COBAC authorized channel; record source URL, retrieval UTC, content length, SHA-256, MIME, filename, page count, signatures/issuer metadata, chain-of-custody and immutable storage reference; compare duplicate variants by byte hash and text; authenticate Bulletin Officiel issue/page and corrections; obtain independent legal signoff."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BE/EXECUTION_REPORT.md",
+      "git_blob_sha": "bb2382bfe3c874f35a7351293855bb1d4dc14b62",
+      "sha256": "ca241977db4f180050a53d9b31587c6bddd97e0e5ef2d83b6b96deb3eb29edbe",
+      "bytes": 1388,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Canonical predecessor BD verified from remote GitHub. **Work packages attempted: 1; completed: 0; kept open: 1; blocked from closure: 1; dependent packages attempted: 0.**"
+        },
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Primary evidence: BEAC official publication catalogue and BEAC directory identify 2025 COBAC annual report. **No report-body inspection**: web PDF fetch timeout; container DNS resolution failure. Secondary R-2025/02 capital-minimum legal-text excerpt located; discrepancies and unverified commencement/repeal/transition recorded; no legally executable threshol"
+        },
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Engineering: separate minimum social capital vs regulatory own funds vs risk coverage vs accounting; proposed effective-dated authority and transition-plan gates; 12 negative acceptance scenarios specified, none executed; 13-lens quality review retained P0 hold."
+        },
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Banking code 0; banking tests 0; security scans 0; regulatory requests sent 0; issuer source binaries/hash 0; P0 gaps closed 0; DoR FAIL.**"
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint BF: issuer-certified R-2025/02 and Official Bulletin, original COBAC 2025 annual report, signed R-2020/01 R-2021/01 R-2021/02, institution capital/PCEC approvals and CEMAC 01/25–02/25 complete legal/court/settlement evidence; no financial implementation."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BE/QUALITY_REVIEW.md",
+      "git_blob_sha": "09cec2dfb19fbc03376a349543f46188bc79f60a",
+      "sha256": "7f2335340e246b87249f1798a5c0b14d04438621b0990f4d81b35b8cece76225",
+      "bytes": 2110,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Regulatory/legal | Official 2025 COBAC report listing found; report body unread. R-2025/02 only secondary reproduction, no authenticated publication/complete text. | BLOCKED |"
+        },
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| CFO/accounting | Social capital distinct from paid-up funds, net own funds and GL; institution PCEC and approval missing. | P0 BLOCKED |"
+        },
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Prudential/risk | R-2020/01 and R-2021/01-/02 signed amendments missing; capital thresholds must not drive coverage calculations. | BLOCKED |"
+        },
+        {
+          "line": 12,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Payments/settlement | No fictitious cash or status posting; independent settlement evidence required. | P0 BLOCKED |"
+        },
+        {
+          "line": 15,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Usability | No UI screens produced; human-readable provenance and uncertainty proposed. | NOT APPLICABLE |"
+        },
+        {
+          "line": 17,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Regulator evidence | Signed R-2025/02, report body, official bulletin, certified judicial decisions, bank CFO approvals absent. | BLOCKED |"
+        },
+        {
+          "line": 19,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Disposition:** WP-ACC-005 OPEN/P0 BLOCKED, DoR FAIL. No work-package closure, banking code, tests, regulatory certification, financial transfers or P0 gap closure. Research-only checkpoint BE is safe for BF continuation."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BE/README.md",
+      "git_blob_sha": "1c3afe22d7a9c39ad5a836399fec0590052612ba",
+      "sha256": "3c7fc37be6424a250d069664899330fd04f51eda4870661cf353a1946d38b808",
+      "bytes": 2878,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-02. Canonical predecessor: BD, fetched from GitHub before this run. Phase 4 Accounting Core / Financial Integrity. Last inherited completed work package WP-ACC-004 (not reaudited)."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Date: 2026-11-02. Canonical predecessor: BD, fetched from GitHub before this run. Phase 4 Accounting Core / Financial Integrity. Last inherited completed work package WP-ACC-004 (not reaudited)."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "2. **New regulatory-change lead:** Multiple secondary sources reproduce/discuss COBAC R-2025/02, adopted reportedly 2025-12-10, concerning minimum **social capital** for banks and financial establishments. This is distinct from COBAC R-2016/03 **net regulatory own funds** and R-2010/01 **risk coverage**. No issuer-certified R-2025/02 text, authenticated Offi"
+        },
+        {
+          "line": 7,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "3. **Secondary-source discrepancies:** Some accounts disagree on the prior minimum for financial establishments and the 2026 transitional floor. The accessible nonofficial article reproduction shows 2.5 billion FCFA at end-2026, while one press account says 2 billion. **No executable threshold or deadline is approved.**"
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "5. **R-2021/01 and /02:** BEAC's 2021 Financial Stability Review continues to verify amendment existence only. Signed operative articles and later changes remain missing. R-2020/01 remains a secondary lead."
+        },
+        {
+          "line": 12,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "WP-ACC-005 OPEN / P0 BLOCKED; DoR FAIL. No capital threshold, risk weight, GL posting, dormant-account transfer or settlement rule activated. Do not confuse 2025 banking-capital regulation R-2025/02 with 2025 CEMAC/UMAC Regulations 01/25 and 02/25. Original checkpoint files and prior consolidation preserved."
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BE",
+    "date": "2026-11-02",
+    "previous": "BD",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "acceptance_scenarios_specified": 12,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "original_pdf_binaries_acquired": 0,
+    "findings": [
+      "BEAC official 2025 COBAC annual report listing and filename/date provenance verified; body unread",
+      "Secondary R-2025/02 social-capital amendment found, distinct from net own funds and risk coverage",
+      "Secondary sources conflict on prior financial institution baseline and 2026 transition floor",
+      "Proposed category/effective-date/approval-aware policy gate; no executable threshold"
+    ],
+    "next_exact_task": "WP-ACC-005 — Checkpoint BF: obtain issuer-authenticated complete COBAC R-2025/02 and official publication/amendment/repeal chain, inspect original 2025 COBAC annual report, obtain signed R-2020/01 R-2021/01 R-2021/02, reconcile institution-specific capital transition and PCEC, and continue 01/25–02/25 legal/court/settlement evidence; maintain P0 hold."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 168"
+}
