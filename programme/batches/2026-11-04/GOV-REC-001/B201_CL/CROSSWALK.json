@@ -1,0 +1,127 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 201,
+  "checkpoint": "CL",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/CL/README.md",
+      "git_blob_sha": "5a6cd739f7618ca724fb908b9fe13ce980ffeaed",
+      "sha256": "dd84e5b04451a72a6bfdb7d60ded13c1d16938672b5062b70761f1d389a712ed",
+      "bytes": 13012,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 3,
+          "excerpt": "Date: 2026-11-03. Predecessor: CK. Phase 4 — Accounting Core and Financial Integrity. **SAFE REGULATORY RESEARCH CHECKPOINT ONLY. WP-ACC-005 OPEN / P0 BLOCKED.** No production implementation, executed"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Date: 2026-11-03. Predecessor: CK. Phase 4 — Accounting Core and Financial Integrity. **SAFE REGULATORY RESEARCH CHECKPOINT ONLY. WP-ACC-005 OPEN / P0 BLOCKED.** No production implementation, executed tests, regulatory certification or CFO-approved posting map."
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Previous canonical checkpoint: `regulatory/checkpoints/CK/README.md`."
+        },
+        {
+          "line": 23,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| 7 | 4–5 | Account 31 medium-term loans: old **311–317** deleted/replaced by **311 performing** and **312 sensitive**; product subaccounts and restructuring leaves **31171–31173**, **31271–31273**. | Old 311 property loans versus new 311 performing medium-term loans is another incompatible semantic reuse. |"
+        },
+        {
+          "line": 24,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| 8 | 5–7 | Account 32 short-term loans: old **320–325,327** product divisions deleted/replaced by **321 performing**, **322 sensitive**; detailed product leaves **3210–3217**, **3220–3227** with subleaves e.g. **32111–32113**, **32211–32213**, **32171–32173**, **32271–32273**. | **Source drafting anomaly:** printed page 7 Article 8(d) calls the sensitive sh"
+        },
+        {
+          "line": 36,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- The R-2018/01 source text contains classification, provisioning and collateral rules. This matrix does not assert the entire later amendment chain is complete."
+        },
+        {
+          "line": 42,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "3. `ExposureClassification`: separate risk state, collateral legal evidence, counterparty-group contagion, review, regulatory override and effective-date version. No classification state change directly posts money."
+        },
+        {
+          "line": 43,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "4. `RegulatoryEvidence`: source URI, page/article, verification timestamp, scanned-source hash when acquired, issuer, signed effective date, amendments, supersession and reviewer approval."
+        },
+        {
+          "line": 45,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "6. `RegulatoryPolicyActivation`: DRAFT -> LEGAL_REVIEW -> CFO_REVIEW -> DUAL_APPROVED -> SCHEDULED -> ACTIVE; any missing primary evidence, unresolved semantic collision, institution profile or P0 causes FAIL_CLOSED."
+        },
+        {
+          "line": 53,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| 2015 general provisioning rates versus R-2018/01 Article 17 | 2015 page 2 and 2018 printed page 8 | Historically aligned in displayed figures; **not certified currently operative** absent later amendments. |"
+        },
+        {
+          "line": 55,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Article 8(d) account 312/322 inconsistency | I-2015/01 printed page 7 | **OPEN SOURCE AMBIGUITY:** seek COBAC correction or authoritative interpretation. |"
+        },
+        {
+          "line": 57,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| PCEC vs PCEMF | Distinct licensed-institution frameworks | **OPEN:** obtain target institution's actual licence and approved regulatory profile. |"
+        },
+        {
+          "line": 58,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| CERBER reporting taxonomy | R-99/01 reporting clarification mechanisms | **OPEN:** issuer instructions, schemas, effective dates and mappings missing. |"
+        },
+        {
+          "line": 64,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Regulatory: articles 2–13 visually examined; source drafting inconsistency and subsequent chain open. Financial: semantic account collisions detected; no mapping authorized. Architecture: versioned account semantics specified. Security: maker-checker and fail-closed policy design, not implemented. AML/fraud: related-party approval controls remain design. Pay"
+        },
+        {
+          "line": 66,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "### Proposed acceptance tests — NOT EXECUTED"
+        },
+        {
+          "line": 68,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Ambiguous 312/322 account mapping rejected pending signed legal resolution."
+        },
+        {
+          "line": 77,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Work packages attempted: **1** (WP-ACC-005 continuation); completed: **0**; remaining open: **1**; blocked from closure: **1**. Research checkpoints safely delivered: **1 (CL)**. P0 blockers resolved: **0**. Production code: **0**. Executable tests: **0**. No dependent package started."
+        },
+        {
+          "line": 81,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**WP-ACC-005 — Checkpoint CM:** Obtain official clarification or later issuer amendment addressing I-2015/01 Article 8(d) “312” versus “322”, then build a full, independently reviewed leaf-account crosswalk (2015 versus original PCEC and later amendments) with source-page provenance. Reconcile the R-2018/01 Article 33 retroactive-effective-date implications "
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": null,
+  "unique_historical_wp_mentions": [
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 1,
+    "read": 1,
+    "sha_matched": 1
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 202"
+}
