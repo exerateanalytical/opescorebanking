@@ -2,7 +2,7 @@
   "accepted_wp_total": "UNKNOWN",
   "approved_programme_wp_denominator": "UNKNOWN",
   "banking_tests_executed_by_this_audit": 0,
-  "baseline_git_commit": "c9712843155705b0b61ea9d447d2aa085ab3b69b",
+  "baseline_git_commit": "57bc88c014c40c3f8534d94c8a96b55d9fcdae35",
   "database_rls_design_gaps": 25,
   "duplicate_test_ids": [],
   "engineering_contracts_parsed": 120,
@@ -37,15 +37,24 @@
     }
   ],
   "generated_archive": {
-    "bytes": 8867634,
+    "bytes": 9308535,
     "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/reconciliation_2026-11-04/verified_run/OPES_Core_Banking_Full_Reconciled_Source_2026-11-04.zip",
-    "sha256": "343f596e7e861579a00da87cada27f995b3dd5009952ded5041d2b534e81021b",
+    "sha256": "422aeee369a349c58d4544e1788380e7c23c583006edaf9658968063d935b20f",
     "zip_crc_valid": true
   },
   "generic_api_schema_gaps": 25,
   "historical_original_archive_custody": "NOT_VERIFIED",
   "historical_wp_ids_observed": 80,
   "identical_sha256_groups": 4,
+  "invalid_historical_zip_reconstruction": {
+    "archives_rebuilt_from_sibling_sources": 146,
+    "invalid_archive_count": 146,
+    "original_archive_authenticity_verified": false,
+    "original_bytes_preserved": true,
+    "repair_package": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/reconciliation_2026-11-04/verified_run/RECONSTRUCTED_INVALID_HISTORICAL_ZIPS_2026-11-04.zip",
+    "repair_package_sha256": "ffba0033b1adc5518a8bcf1bd2ef07371594d140a4134e28bae612427ac6823a",
+    "unrecoverable_missing_sibling_sources": 0
+  },
   "known_blockers": [
     "WP-ACC-005 PCEC 312/322 source and legal/CFO authority",
     "bank-specific payment network entitlement",
@@ -71,7 +80,7 @@
   "regulatory_certification": "NOT_VERIFIED",
   "regulatory_checkpoint_directories": 59,
   "regulatory_readmes_read": 59,
-  "repository_bytes": 14007921,
+  "repository_bytes": 14010948,
   "run_date": "2026-11-04",
   "scope": "All git-tracked files, text parse, all top-level ZIP CRC tests, draft coverage; not independent regulatory approval",
   "source_contract_executed_test_claim_sum": 0,
