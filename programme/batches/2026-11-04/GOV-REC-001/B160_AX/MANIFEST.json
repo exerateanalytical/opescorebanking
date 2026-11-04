@@ -1,0 +1,71 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 160,
+  "checkpoint": "AX",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "e50fa06238fc52556155c0ae5025adb32e5cd43b671b75d31e2a3be5917c99e6",
+      "crc32": "863b29a2",
+      "bytes": 8934
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "e8f7a8b3311925db051c69358cab60a2cb725365198eb104828f6aece10a022f",
+      "crc32": "36f655ca",
+      "bytes": 17962
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AX/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "bc9853891eb0edf53b2bfd94a5370c00583fe001b566b85a1758a2058233032e",
+      "crc32": "2af1ed99",
+      "bytes": 5403
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AX/CONFLICT_REGISTER.json",
+      "sha256": "75bbedaa9b3c381809a564ff1cbbd95e8a40564bee52cdb04d3d8e1307600ca8",
+      "crc32": "ee2b1696",
+      "bytes": 5398
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AX/CONTINUATION_STATE.json",
+      "sha256": "50d0bcbc17e0cd16eb4022577664581b06bb7999f4a61f46f2c216f470473e20",
+      "crc32": "6fb27445",
+      "bytes": 1243
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AX/EXECUTION_REPORT.md",
+      "sha256": "732b8368ca5738f0122db502ac5efeae1af560ec6e52d6e46e62e74411865f08",
+      "crc32": "49a032d8",
+      "bytes": 1549
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AX/QUALITY_REVIEW.md",
+      "sha256": "e634606cb960dcbc345111253165dff26eba3acb6e24bedd083113a4bea8a72d",
+      "crc32": "b09cc549",
+      "bytes": 2205
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AX/README.md",
+      "sha256": "d733f723df92cad76c6ca317402b96bce40da2df73be881c2dca080a179104ce",
+      "crc32": "385b8a09",
+      "bytes": 1338
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AX/REQUIREMENTS_AND_GATES.md",
+      "sha256": "ed223f1d0d0b18fe8b7170cf94b6b95841e1d0b7e9b0b13eed0989994b523154",
+      "crc32": "c566df5f",
+      "bytes": 3200
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AX/SOURCE_EVIDENCE.md",
+      "sha256": "21f7a7eda584dbde79a182d3be1f0efb9e058ab385b13575e77c1472a37e7968",
+      "crc32": "bd92231b",
+      "bytes": 2832
+    }
+  ]
+}
