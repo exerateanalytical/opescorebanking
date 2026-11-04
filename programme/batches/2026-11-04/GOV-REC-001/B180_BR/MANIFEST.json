@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 180,
+  "checkpoint": "BR",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "18cf89cc7c7928e6feb112f695b7fb618561c1e23f582a708edb1472e824d31f",
+      "crc32": "5c6e9aa1",
+      "bytes": 5577
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "bf2c6b0480a821ac9b4595db57e828ca1429ae6882dc393b01aacf97c84ab554",
+      "crc32": "8c512e56",
+      "bytes": 12886
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BR/CONTINUATION_STATE.json",
+      "sha256": "50a136494493753e939df58864b7e3c247806ae3217a14597c638a1c9bbd34d3",
+      "crc32": "89e67998",
+      "bytes": 2048
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BR/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "d6961e63b3347d07a0e542375ceac2023f4aa450eef19c841a1b0393b481ad0b",
+      "crc32": "94c11111",
+      "bytes": 6087
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BR/EVIDENCE_DELTA.md",
+      "sha256": "0065ab98e43d6c92338929304c41487010851e3baf510e8efd66daa69a3dbca9",
+      "crc32": "d6a5a32f",
+      "bytes": 4141
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BR/EXECUTION_REPORT.md",
+      "sha256": "f896c9fd1e57ec31cb4bc60e118b8917c166344c79b92849644ac025b141af1d",
+      "crc32": "e0bd24ed",
+      "bytes": 1614
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BR/QUALITY_REVIEW.md",
+      "sha256": "31e30ee698620c60dcb446fe8245cf8565eddd334132bf9a86f456f5c4677e08",
+      "crc32": "ae412658",
+      "bytes": 2175
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BR/README.md",
+      "sha256": "4854921ab5038fc499b3e58773e530799bc2b873a689cb08f40167272f82cc5d",
+      "crc32": "0c81b598",
+      "bytes": 2550
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BR/RESTITUTION_AND_FINALITY_GATES.json",
+      "sha256": "3c9c6b8e823c7e3aceca0d721748adb8d6259a5b5d219f2398fad0b843521b77",
+      "crc32": "145df48d",
+      "bytes": 6162
+    }
+  ]
+}

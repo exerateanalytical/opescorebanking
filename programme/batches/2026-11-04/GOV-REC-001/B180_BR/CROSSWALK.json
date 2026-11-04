@@ -1,0 +1,306 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 180,
+  "checkpoint": "BR",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BR/CONTINUATION_STATE.json",
+      "git_blob_sha": "6f95fa0a09c864462d19f26b83b44ef31da9d22b",
+      "sha256": "50a136494493753e939df58864b7e3c247806ae3217a14597c638a1c9bbd34d3",
+      "bytes": 2048,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 6,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 14,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BR/CONTROL_AND_TEST_DESIGN.md",
+      "git_blob_sha": "2729f8cd91cefa3a30c0c100886553987c94bc08",
+      "sha256": "d6961e63b3347d07a0e542375ceac2023f4aa450eef19c841a1b0393b481ad0b",
+      "bytes": 6087,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- BEAC circular 004/DGE/DSMP/2023 governs the described PSP erroneous-transfer process. Verify product, institution, licence, contract, effective-dated amendments and court-order interactions before encoding any deadline or automatic release."
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Proposed bitemporal case contract (not approved API)"
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "`RestitutionCase`: tenant_id, institution_id, case_id, original_payment_id, rail_id, product_id, legal_rule_version, rule_source_evidence_id, applicable_from/to, observed_at, payer_notification_at, recipient_notification_at, claim_received_at, requested_amount_minor, currency, reason_code, recipient_consent_evidence, recipient_objection_evidence, freeze_requ"
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Every change must be authenticated, scoped, versioned and auditable. Monetary amounts are exact integers in currency minor units where appropriate; never binary float. Legal clocks and expiry must be derived from independently recorded, trustworthy timestamps. Proposed events: `RestitutionClaimRecorded`, `LegalScopeVerified`, `FundsHoldRequested`, `FundsHold"
+        },
+        {
+          "line": 22,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## 16 NEW negative acceptance scenarios — specifications, NOT executed"
+        },
+        {
+          "line": 38,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| BR-T14 | Court order or fraud hold conflicts with nonresponse auto-return | Suspend automation; escalate under legal precedence |"
+        },
+        {
+          "line": 42,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "## Meaningful executable tests still missing"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BR/EVIDENCE_DELTA.md",
+      "git_blob_sha": "d85f8cdb377fad54731279a62e683b838f65de43",
+      "sha256": "0065ab98e43d6c92338929304c41487010851e3baf510e8efd66daa69a3dbca9",
+      "bytes": 4141,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Interpretation limitations: historical 2023 instrument; applicability to a specific licensed bank, EMF or PSP, later supersession, court orders, data retention and interaction with 2026 SYSTAC2/instant rails require issuer counsel/institution sign-off. Do not implement timing as universal policy."
+        },
+        {
+          "line": 27,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "## Unresolved primary evidence"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BR/EXECUTION_REPORT.md",
+      "git_blob_sha": "3192bcf7c822a89d58238f002c89cd002186ab7d",
+      "sha256": "f896c9fd1e57ec31cb4bc60e118b8917c166344c79b92849644ac025b141af1d",
+      "bytes": 1614,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Predecessor:** BQ remote main c90073df9b79c92ad01b89e1ad83ddff5946ba9f independently checked before writing. **WP:** WP-ACC-005 OPEN/P0 BLOCKED. Last completed WP-ACC-004 inherited, not reaudited."
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Completed | 0 |"
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Blocked from closure | 1 |"
+        },
+        {
+          "line": 15,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Regulatory requests transmitted | 0 |"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Evidence:** 3-page BEAC 004/DGE/DSMP/2023 PSP erroneous-transfer circular visually inspected; vendor ProgressSoft 24 Aug SYSTAC2 migration report and issuer legacy SYGMA page examined. No current issuer SYGMA V10 or instant module go-live confirmed; bank contracts/profiles absent. Original PDF binary download unsuccessful, no SHA-256. PSP circular applicab"
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Quality gate:** DoR FAIL. No production authorization. This checkpoint is evidence/design progress, not completion of WP-ACC-005."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BR/QUALITY_REVIEW.md",
+      "git_blob_sha": "383437509004316a710562ff34e6b345bad8bebe",
+      "sha256": "31e30ee698620c60dcb446fe8245cf8565eddd334132bf9a86f456f5c4677e08",
+      "bytes": 2175,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "# BR — multidisciplinary review and unresolved P0 (2 November 2026)"
+        },
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Regulatory/legal | Three-page signed 2023 BEAC circular inspected; PSP scope and potential later supersession not established; no automatic cross-rail adoption | P0 OPEN |"
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Data/privacy/retention | Evidence minimization, timestamps, retention and court order requirements need institution policy | OPEN |"
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Review decision:** WP-ACC-005 NOT READY. No dependent package, production code, financial test, regulatory request, security scan or P0 closure. Do not silently assume PSP circular applies to every bank product. Preserve all BQ, COBAC, PCEC, 01/25–02/25 holds. Single next checkpoint BS."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BR/README.md",
+      "git_blob_sha": "af63ac81b7c04ec3194e840314434aba561c3f39",
+      "sha256": "4854921ab5038fc499b3e58773e530799bc2b873a689cb08f40167272f82cc5d",
+      "bytes": 2550,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-02. Phase 4 Accounting Core / Financial Integrity. Predecessor: BQ, verified remote main c90073df9b79c92ad01b89e1ad83ddff5946ba9f. WP-ACC-005 remains OPEN / P0 BLOCKED. Last completed WP"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Date: 2026-11-02. Phase 4 Accounting Core / Financial Integrity. Predecessor: BQ, verified remote main c90073df9b79c92ad01b89e1ad83ddff5946ba9f. WP-ACC-005 remains OPEN / P0 BLOCKED. Last completed WP-ACC-004 is inherited and not reaudited."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BR/RESTITUTION_AND_FINALITY_GATES.json",
+      "git_blob_sha": "7a17a4f4fd101f5c7c1887927c3bfb5d5c172e85",
+      "sha256": "3c9c6b8e823c7e3aceca0d721748adb8d6259a5b5d219f2398fad0b843521b77",
+      "bytes": 6162,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 128,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"Cross-tenant cases, data retention, court order, fraud and AML holds require explicit institution rules and access controls\""
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BR",
+    "date": "2026-11-02",
+    "previous": "BQ",
+    "previous_verified_commit": "c90073df9b79c92ad01b89e1ad83ddff5946ba9f",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "new_negative_acceptance_scenarios_specified": 16,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "security_scans_executed": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "new_issuer_scanned_pages_visually_inspected": 3,
+    "issuer_original_pdf_binary_acquired": false,
+    "issuer_original_pdf_sha256_verified": false,
+    "SYGMA_V10_live_confirmed": false,
+    "SYSTAC2_instant_live_confirmed": false,
+    "bank_participant_conformance_verified": false,
+    "evidence_delta": [
+      "BEAC signed 2023 PSP erroneous-transfer restitution circular inspected across 3 pages; five-minute and 24/48-hour mechanisms scoped to described PSP process, current applicability unverified",
+      "BEAC legacy SYGMA page confirms historical settlement/prerequisites but not V10 live status",
+      "ProgressSoft vendor 24 Aug 2026 announcement claims 71 simultaneous SYSTAC2 migrations and ASP architecture, not individual bank certification",
+      "No later issuer-authenticated SYGMA V10 or instant module go-live found; status UNKNOWN"
+    ],
+    "remote_delivery_status": "PENDING_REMOTE_VERIFICATION_AT_DOCUMENT_CREATION",
+    "next_exact_task": "WP-ACC-005 — Checkpoint BS: verify current legal applicability and amendments to BEAC 004/DGE/DSMP/2023 and institution contracts, authenticate bank-specific SYSTAC2/SYGMA finality and message profiles, obtain issuer-confirmed SYGMA V10 and instant status, continue COBAC/PCEC/01-25 P0 evidence. Maintain hold."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 181"
+}
