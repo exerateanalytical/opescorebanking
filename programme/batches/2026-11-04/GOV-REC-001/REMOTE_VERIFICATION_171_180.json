@@ -1,0 +1,117 @@
+{
+  "schema": "opes.corebanking.recovery.remote-census.v1",
+  "verified_on": "2026-11-04",
+  "remote_head_at_verification": "68d1210aceb92f5c5c9bf435e70f4b4fd65e874c",
+  "records": [
+    {
+      "batch": 171,
+      "checkpoint": "BI",
+      "archive_path": "programme/batches/2026-11-04/GOV-REC-001/B171_BI/OPES_Core_Banking_Batch_171_GOV_REC_001_BI_2026-11-04.zip",
+      "archive_git_blob": "798c0967534d7804c7ca5e5fcb34aff7a0ae2232",
+      "archive_sha256": "35dea730af48b6bddcce900ce9f602206baada1998aa9c100ecfd059af80aade",
+      "archive_bytes": 45330,
+      "source_blob_count": 7,
+      "zip_entry_count": 10,
+      "remote_verification": "PASS"
+    },
+    {
+      "batch": 172,
+      "checkpoint": "BJ",
+      "archive_path": "programme/batches/2026-11-04/GOV-REC-001/B172_BJ/OPES_Core_Banking_Batch_172_GOV_REC_001_BJ_2026-11-04.zip",
+      "archive_git_blob": "e2505ed2226b8690fdb9517747e63d76f9b019e7",
+      "archive_sha256": "868cbfebeb00b58800210187e30317a475f07c3e33496ebf1f4d3481284dfaf2",
+      "archive_bytes": 43920,
+      "source_blob_count": 7,
+      "zip_entry_count": 10,
+      "remote_verification": "PASS"
+    },
+    {
+      "batch": 173,
+      "checkpoint": "BK",
+      "archive_path": "programme/batches/2026-11-04/GOV-REC-001/B173_BK/OPES_Core_Banking_Batch_173_GOV_REC_001_BK_2026-11-04.zip",
+      "archive_git_blob": "d55ac36eea453ad5f6c57f7f97955e139f018d0d",
+      "archive_sha256": "269dc56bfcb213d1e55df8907399a9438387d4ddd44035730ba3bb8b78c11aa5",
+      "archive_bytes": 53454,
+      "source_blob_count": 7,
+      "zip_entry_count": 10,
+      "remote_verification": "PASS"
+    },
+    {
+      "batch": 174,
+      "checkpoint": "BL",
+      "archive_path": "programme/batches/2026-11-04/GOV-REC-001/B174_BL/OPES_Core_Banking_Batch_174_GOV_REC_001_BL_2026-11-04.zip",
+      "archive_git_blob": "5684b2c1512a62851b8f3117268daa50db62f032",
+      "archive_sha256": "f0924940d233f3857367013073d8af6f6e64bc277557bcab87c4945ed452d259",
+      "archive_bytes": 46220,
+      "source_blob_count": 7,
+      "zip_entry_count": 10,
+      "remote_verification": "PASS"
+    },
+    {
+      "batch": 175,
+      "checkpoint": "BM",
+      "archive_path": "programme/batches/2026-11-04/GOV-REC-001/B175_BM/OPES_Core_Banking_Batch_175_GOV_REC_001_BM_2026-11-04.zip",
+      "archive_git_blob": "ec74b11659d9e02753ac809d1bd465b43926f9c2",
+      "archive_sha256": "1523d09b97336f16fe23b451887ebb0ee591c598424613578023a7e97dfc6a8a",
+      "archive_bytes": 46486,
+      "source_blob_count": 7,
+      "zip_entry_count": 10,
+      "remote_verification": "PASS"
+    },
+    {
+      "batch": 176,
+      "checkpoint": "BN",
+      "archive_path": "programme/batches/2026-11-04/GOV-REC-001/B176_BN/OPES_Core_Banking_Batch_176_GOV_REC_001_BN_2026-11-04.zip",
+      "archive_git_blob": "1ca338898dd73df9f9a1ec4ed519795f2d75fc97",
+      "archive_sha256": "0f0a372a7ef3f7d40e0aff45f591a8327fff7bfe1f4520a4da66bec30a0522a9",
+      "archive_bytes": 52446,
+      "source_blob_count": 7,
+      "zip_entry_count": 10,
+      "remote_verification": "PASS"
+    },
+    {
+      "batch": 177,
+      "checkpoint": "BO",
+      "archive_path": "programme/batches/2026-11-04/GOV-REC-001/B177_BO/OPES_Core_Banking_Batch_177_GOV_REC_001_BO_2026-11-04.zip",
+      "archive_git_blob": "30aa68a388d5639ac7457e09604199012f5a11e4",
+      "archive_sha256": "ec975e571a2e43a0e410f412dc244c939face8356d71f829e96dc66b13b83f6a",
+      "archive_bytes": 51214,
+      "source_blob_count": 7,
+      "zip_entry_count": 10,
+      "remote_verification": "PASS"
+    },
+    {
+      "batch": 178,
+      "checkpoint": "BP",
+      "archive_path": "programme/batches/2026-11-04/GOV-REC-001/B178_BP/OPES_Core_Banking_Batch_178_GOV_REC_001_BP_2026-11-04.zip",
+      "archive_git_blob": "447ff3eb4bc3197d610a2328c34f84616f2f8666",
+      "archive_sha256": "2496de0fe19a7f51d9d20ed95f180b9ba800a4295da1903eeea269565e92fd40",
+      "archive_bytes": 52412,
+      "source_blob_count": 7,
+      "zip_entry_count": 10,
+      "remote_verification": "PASS"
+    },
+    {
+      "batch": 179,
+      "checkpoint": "BQ",
+      "archive_path": "programme/batches/2026-11-04/GOV-REC-001/B179_BQ/OPES_Core_Banking_Batch_179_GOV_REC_001_BQ_2026-11-04.zip",
+      "archive_git_blob": "bc8cf144c53726e7d4f42c53c359348aefaa4b4c",
+      "archive_sha256": "e988c52361ad7938a6f1f15bc9cb1bb6e5dafb8b65494fb343aa99aa81e64206",
+      "archive_bytes": 46382,
+      "source_blob_count": 7,
+      "zip_entry_count": 10,
+      "remote_verification": "PASS"
+    },
+    {
+      "batch": 180,
+      "checkpoint": "BR",
+      "archive_path": "programme/batches/2026-11-04/GOV-REC-001/B180_BR/OPES_Core_Banking_Batch_180_GOV_REC_001_BR_2026-11-04.zip",
+      "archive_git_blob": "2a916137a15ade190d8cd79bf6465c26ca156dce",
+      "archive_sha256": "f68ecc652037895509bc23faf28c57cfe52de347c17fdc008f68b72937d5abdb",
+      "archive_bytes": 46986,
+      "source_blob_count": 7,
+      "zip_entry_count": 10,
+      "remote_verification": "PASS"
+    }
+  ]
+}
