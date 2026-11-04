@@ -9,7 +9,7 @@ OUT=BATCH/"B210_ALL"
 def sha(x):return hashlib.sha256(x).hexdigest()
 def blob(x):return hashlib.sha1(b"blob "+str(len(x)).encode()+b"\0"+x).hexdigest()
 def enc(x):return (json.dumps(x,ensure_ascii=False,sort_keys=True,indent=2)+"\n").encode()
-def text(p):return p.read_text(encoding="utf8-sig")
+def text(p):return p.read_text(encoding="utf-8-sig")
 def git(*args):
     x=subprocess.run(["git",*args],cwd=R,capture_output=True)
     return (x.returncode,x.stdout)
