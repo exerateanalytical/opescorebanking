@@ -1,0 +1,18 @@
+{
+  "NEXT_EXACT_TASK": "GOV-WBS-RECON-001: independent approval of source/WP crosswalk, source custody, target WBS and PCEC authority.",
+  "P0": [
+    "WP-ACC-005"
+  ],
+  "accepted_wp_count": null,
+  "approved_wp_denominator": null,
+  "banking_tests_executed": 0,
+  "batch": 210,
+  "checkpoint_count": 59,
+  "failed": 0,
+  "original_archive_custody": "NOT_VERIFIED",
+  "passed": 59,
+  "payment_rail_entitlement": "NOT_VERIFIED",
+  "source_count": 317,
+  "status": "SOURCE_CONTENT_RECONCILED_NOT_WP_ACCEPTED",
+  "subbatches_inspected": 59
+}

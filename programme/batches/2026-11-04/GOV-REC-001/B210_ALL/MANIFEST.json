@@ -1,0 +1,2282 @@
+{
+  "baseline": "a540f9f8c94682a5947dbf6edc4f3041ea1e9e9b",
+  "batch": 210,
+  "classification": "SOURCE_AUDIT_NOT_INDEPENDENT_WP_ACCEPTANCE",
+  "entries": [
+    {
+      "bytes": 19178,
+      "crc32": "e7403db3",
+      "git_blob_sha1": "e2d00b236941ca054404573f98d9c251fe3ad1a5",
+      "path": "ARCHIVE_151_209_AUDIT.json",
+      "sha256": "ef0200f8a8f649b36e6f6299f49a3c108ae8d7b66c359f9d42fb62ed2a1e76b6"
+    },
+    {
+      "bytes": 822,
+      "crc32": "b9f56665",
+      "git_blob_sha1": "d64d1c61cb1505bd1f40fa0d91fbc2e843b013b8",
+      "path": "AUDIT.md",
+      "sha256": "34a9de9ed7475412aeca75f1fd17441597aa9262b8ed5c03152600c3f2cc3a81"
+    },
+    {
+      "bytes": 540,
+      "crc32": "fb713db2",
+      "git_blob_sha1": "d59fe061c09ea0d90c04f7077fa7982f34042d8d",
+      "path": "CONTINUATION_STATE.json",
+      "sha256": "5f78ed3d4983e8856c2ee7d34078a989e1a7b0a8da63ca870178801f48ef1cc6"
+    },
+    {
+      "bytes": 312283,
+      "crc32": "0ba3ae61",
+      "git_blob_sha1": "047985f755ad10a01d2516625cdda805b0af6d2e",
+      "path": "FILE_TO_WP_CROSSWALK.csv",
+      "sha256": "d95505ea83a9daa257fb4404ed562522d8cbd7c959004136b74163d144c9d213"
+    },
+    {
+      "bytes": 76584,
+      "crc32": "606292b4",
+      "git_blob_sha1": "77e21649ec11856fcfc0b537bfc1528ad86ff554",
+      "path": "HISTORICAL_WORK_PACKAGES.json",
+      "sha256": "4037b36f79eb0a10559398dac9806c214bc7eff825a85cf9b0369c00b9b5b429"
+    },
+    {
+      "bytes": 18742,
+      "crc32": "4864b0e2",
+      "git_blob_sha1": "eb11561c0673d2362c38cbae06cf57d4f9c343a8",
+      "path": "PROPOSED_DOMAIN_GROUPS.json",
+      "sha256": "c4269126c14e1bfc842dfe3cc5da548638e3230f535194d152a0f9de3276f443"
+    },
+    {
+      "bytes": 879,
+      "crc32": "ccb87cbc",
+      "git_blob_sha1": "201b47eb7144e580b71409b23ca558a0282e8729",
+      "path": "SOURCE/regulatory/checkpoints/AN/ACCEPTANCE_TESTS.json",
+      "sha256": "558556d19c931f5e0db9951868c0840f707fc820749bd129e67b89a139c75857"
+    },
+    {
+      "bytes": 822,
+      "crc32": "fa7ea4f0",
+      "git_blob_sha1": "e5e10140d795daecd760a170216c5128f50e22e1",
+      "path": "SOURCE/regulatory/checkpoints/AN/CONTINUATION_STATE.json",
+      "sha256": "2592562c073f93c86ae3f05b580c869d2827c3556ea32ddf2b54cbeb7fce7866"
+    },
+    {
+      "bytes": 445,
+      "crc32": "34771bd7",
+      "git_blob_sha1": "8d0a596e8f6873d448a415f5096067278e3ae60f",
+      "path": "SOURCE/regulatory/checkpoints/AN/EVIDENCE_REQUEST_PLAN.md",
+      "sha256": "c0eb99efe0e1ab81725de4276fb034df40c9d570862c463c8b12eb3b2333486c"
+    },
+    {
+      "bytes": 256,
+      "crc32": "09615fe4",
+      "git_blob_sha1": "ab673ba47ca5e92ecae5dfb4b66ee754b073b234",
+      "path": "SOURCE/regulatory/checkpoints/AN/GAP_UPDATE.md",
+      "sha256": "d1358168c21aa4bc7e69ddda1c7cf380c02042d6b9245fd0383bdbc3f6c31e8b"
+    },
+    {
+      "bytes": 1388,
+      "crc32": "12f258b8",
+      "git_blob_sha1": "550e3b08674737b57577a9850838edc4ec49df95",
+      "path": "SOURCE/regulatory/checkpoints/AN/QUALITY_REVIEW.md",
+      "sha256": "a16c7281f3fbd84de9ffec8b4837c7e74403f1c34ba4faad7fa248d8835f2719"
+    },
+    {
+      "bytes": 782,
+      "crc32": "d1a371d5",
+      "git_blob_sha1": "84f1f3b545877579b30335781b8dbdcd93c2f2a7",
+      "path": "SOURCE/regulatory/checkpoints/AN/README.md",
+      "sha256": "f71efd08a3a350ab1dc754cebd31ce1377add44f929c930d4612dd03c952211b"
+    },
+    {
+      "bytes": 1115,
+      "crc32": "3b1362ff",
+      "git_blob_sha1": "322604937f794be6ac15daaa7701e073cf83d2d4",
+      "path": "SOURCE/regulatory/checkpoints/AN/REQUIREMENTS.json",
+      "sha256": "b3fbb5844e1fc3ef6f355c01c3789b08152550f1ef9ef82479b2449cc4610f2d"
+    },
+    {
+      "bytes": 1217,
+      "crc32": "3cab40c2",
+      "git_blob_sha1": "edd3dfb17563df8820b73f7176d69f18c732a6bb",
+      "path": "SOURCE/regulatory/checkpoints/AN/SOURCE_REGISTER.json",
+      "sha256": "a13235d198cb55f40d61e8f1ff0d4204a5482231fcb0d7c432b61a1e330532d5"
+    },
+    {
+      "bytes": 1812,
+      "crc32": "c05c2782",
+      "git_blob_sha1": "99bd934c12ba44b774c3e2bf4080807052c11a6c",
+      "path": "SOURCE/regulatory/checkpoints/AO/ACCEPTANCE_TESTS.json",
+      "sha256": "ce59d0064c0ea2afd3479669f72f215ac7840024c4b6a00036ac958915513165"
+    },
+    {
+      "bytes": 1405,
+      "crc32": "2d68c1d5",
+      "git_blob_sha1": "e1b32517e76ebc548c6d93c3bb6cd8653bbafe95",
+      "path": "SOURCE/regulatory/checkpoints/AO/CONTINUATION_STATE.json",
+      "sha256": "d5092f992347649ac8d4994479738b3d3df15d35481ee6c46e25cd1148915820"
+    },
+    {
+      "bytes": 3182,
+      "crc32": "f29a8888",
+      "git_blob_sha1": "fd64ac65eade5b49bec66daebcee824aa12be170",
+      "path": "SOURCE/regulatory/checkpoints/AO/EVIDENCE_REGISTER.json",
+      "sha256": "f85e78cef14b37e963008cce446970469790ca90bd1959b109c365cf6231fdcf"
+    },
+    {
+      "bytes": 1695,
+      "crc32": "cad50211",
+      "git_blob_sha1": "91841f0c74606bf1629f44c942814bb7317e52ce",
+      "path": "SOURCE/regulatory/checkpoints/AO/EXECUTION_REPORT.md",
+      "sha256": "d85faded9abfb0c428724431b5301bf1d89724e3c58632f0c56de4a600638cfc"
+    },
+    {
+      "bytes": 1706,
+      "crc32": "fab1d2f5",
+      "git_blob_sha1": "d60a46d2f924c075b2830b3534e6828871771322",
+      "path": "SOURCE/regulatory/checkpoints/AO/QUALITY_REVIEW.md",
+      "sha256": "44b319b4e614e510ceb5cce2fae82d4b02e022227600f69b879c04c578e213d9"
+    },
+    {
+      "bytes": 975,
+      "crc32": "a70eec23",
+      "git_blob_sha1": "28ab5839a30a5aa252f0f692f0abfa279955cf68",
+      "path": "SOURCE/regulatory/checkpoints/AO/README.md",
+      "sha256": "515b86204da178c5801096d6aa399e9f46b010d3248a6ba1358737bbbf9047b6"
+    },
+    {
+      "bytes": 3085,
+      "crc32": "885d2464",
+      "git_blob_sha1": "cd771b3ba5e899d126a7f90bddb22a12b60b21d0",
+      "path": "SOURCE/regulatory/checkpoints/AO/REGULATORY_IMPACT.md",
+      "sha256": "9dedd9546ca4d9436235a59ff62f09c480539abd9e64e7617f4142889e52ca91"
+    },
+    {
+      "bytes": 1779,
+      "crc32": "6d4655cd",
+      "git_blob_sha1": "ed03b2b3766e17841bd2a7f34685b211d89a939d",
+      "path": "SOURCE/regulatory/checkpoints/AP/ACCEPTANCE_TESTS.json",
+      "sha256": "86bd875103fe0237e0c57f927f96b8fa69f25647c9c100f98151e2d893997e8f"
+    },
+    {
+      "bytes": 2810,
+      "crc32": "56bb49d9",
+      "git_blob_sha1": "20915e77c6fca576267715361166f86a23921e70",
+      "path": "SOURCE/regulatory/checkpoints/AP/CASE_PROVENANCE.md",
+      "sha256": "124011322c5759a50d07230c8e0fe85caaecc4168529b5e1d388cb97bb3a2105"
+    },
+    {
+      "bytes": 1449,
+      "crc32": "a0b56f52",
+      "git_blob_sha1": "55f1e4d691f5f50971a1f45ae793ffe0c34f1b84",
+      "path": "SOURCE/regulatory/checkpoints/AP/CONTINUATION_STATE.json",
+      "sha256": "e4efbf5cd72da0a3d51045788cc34e8042642d817d9b2ced9726a829d003ef92"
+    },
+    {
+      "bytes": 3400,
+      "crc32": "f29ef511",
+      "git_blob_sha1": "c118573d3e70ceab0673d9838661272408ef9285",
+      "path": "SOURCE/regulatory/checkpoints/AP/CONTROL_DESIGN.md",
+      "sha256": "8b839b732b2860c8161f8ee23da1279b460e01bb81753fd3a1baa7d7bb560b1d"
+    },
+    {
+      "bytes": 3604,
+      "crc32": "07489765",
+      "git_blob_sha1": "abc4124c192c772e41634994a5b63a5bc9a9963c",
+      "path": "SOURCE/regulatory/checkpoints/AP/EVIDENCE_REGISTER.json",
+      "sha256": "3b032062dc0caa74689d0d97ef69e4de51cadd568aacd289ad3f1d67aa43d93e"
+    },
+    {
+      "bytes": 1538,
+      "crc32": "3193f4a5",
+      "git_blob_sha1": "a5c2a66133f778d2c0d6255f71caa66b197db7ba",
+      "path": "SOURCE/regulatory/checkpoints/AP/EXECUTION_REPORT.md",
+      "sha256": "80fdea30c4bb111ef084cf454ec13c1898e82c27ce115be7f3f47cdca0306baa"
+    },
+    {
+      "bytes": 1869,
+      "crc32": "1d805f34",
+      "git_blob_sha1": "5dfea8cdde7fc002153bd5517ed5ea08f5c9594c",
+      "path": "SOURCE/regulatory/checkpoints/AP/QUALITY_REVIEW.md",
+      "sha256": "a349bd77ec9fda7a52dda3cc0da26e6c4bffa8569995c7f6a697168a1b6bc98f"
+    },
+    {
+      "bytes": 2045,
+      "crc32": "537e0a77",
+      "git_blob_sha1": "eaa755255b3c741572e0f06459ebae7d788b957c",
+      "path": "SOURCE/regulatory/checkpoints/AP/README.md",
+      "sha256": "82b48801b695a1f55ccee05bbe384d612065990baa1f39d5356bcddf2c61777d"
+    },
+    {
+      "bytes": 2426,
+      "crc32": "54c77366",
+      "git_blob_sha1": "f1286d8d1cf74268e4e03b6fd722f8a3d50c9c45",
+      "path": "SOURCE/regulatory/checkpoints/AQ/AUTHORITY_DECISION_MATRIX.json",
+      "sha256": "b3dc754c275235323a259cf3728a6969425dee8ca95c13657e36127ae61332f1"
+    },
+    {
+      "bytes": 1405,
+      "crc32": "c8aa4f24",
+      "git_blob_sha1": "47a5bfa4e793a712bf8001b9a716ee6869909ce5",
+      "path": "SOURCE/regulatory/checkpoints/AQ/CONTINUATION_STATE.json",
+      "sha256": "cc61ec8c114dd84bc500718bb5fec4ffb9d6ad83a104656418b2e7350270c345"
+    },
+    {
+      "bytes": 3804,
+      "crc32": "d5d93fa5",
+      "git_blob_sha1": "59d5001013b0355c319bff8b8ce85ccb0fc09f51",
+      "path": "SOURCE/regulatory/checkpoints/AQ/EVIDENCE_DELTA.md",
+      "sha256": "1ff418d967c45364b1882b69dedfd3c012e2f0a1a55c35544581ec5419483f32"
+    },
+    {
+      "bytes": 1317,
+      "crc32": "eb98337b",
+      "git_blob_sha1": "d33dd05d4af09718390690e9a7d1c7a06c1de3e7",
+      "path": "SOURCE/regulatory/checkpoints/AQ/EXECUTION_REPORT.md",
+      "sha256": "2107c111af835bec6b99a55fad099a188596fc806671b501470343b28f7e29fd"
+    },
+    {
+      "bytes": 746,
+      "crc32": "e8829845",
+      "git_blob_sha1": "00274e573676cbc99523a649ccf29db9fa82f852",
+      "path": "SOURCE/regulatory/checkpoints/AQ/README.md",
+      "sha256": "c17e45cf79b3a05b252805ad666abe54bb1a1ffd869a5bd3d113ae9410e1068a"
+    },
+    {
+      "bytes": 2680,
+      "crc32": "fae85fe2",
+      "git_blob_sha1": "d20f3a2b88585c61be0fd78008fbeacacfdb09ff",
+      "path": "SOURCE/regulatory/checkpoints/AQ/REVIEW_AND_GATES.md",
+      "sha256": "737e814fa15f065985c45ac5cac3bda14d2f5537cadab418f33952fddef8ed69"
+    },
+    {
+      "bytes": 3269,
+      "crc32": "7fd967ad",
+      "git_blob_sha1": "4356286924c833084c84fd74b11f026290a21b18",
+      "path": "SOURCE/regulatory/checkpoints/AR/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "4e38979d30b27a36576938f99d86ab4902c0edb34915d7d460e1b31f1520f7a0"
+    },
+    {
+      "bytes": 1373,
+      "crc32": "968d3bba",
+      "git_blob_sha1": "927f60ea7bc5d4a8dd063a4a5501e00b8fee838c",
+      "path": "SOURCE/regulatory/checkpoints/AR/CONTINUATION_STATE.json",
+      "sha256": "6c9c3e70c12f24ca0bb52995d12826a6208e49521e81983f77edf0ea65c63b81"
+    },
+    {
+      "bytes": 3121,
+      "crc32": "0f51a9ab",
+      "git_blob_sha1": "76b8609069e302ed296a97f2534188105ea5c853",
+      "path": "SOURCE/regulatory/checkpoints/AR/EVIDENCE_REQUESTS_FR.md",
+      "sha256": "dfd95d63558a835bc446049e841fa97bb260d0e1f46eafc6d54537c92705aace"
+    },
+    {
+      "bytes": 1378,
+      "crc32": "1149672d",
+      "git_blob_sha1": "c24571fb7dbc2ce53de6c05ee169e46df8002a7c",
+      "path": "SOURCE/regulatory/checkpoints/AR/EXECUTION_REPORT.md",
+      "sha256": "fce34c11218f057d2946897fb73636cec3cfe452c5f129c4e4206ab4141d22e9"
+    },
+    {
+      "bytes": 1761,
+      "crc32": "8339ecc3",
+      "git_blob_sha1": "0613661726e3462119b8c62357c3799bc6af5e82",
+      "path": "SOURCE/regulatory/checkpoints/AR/GAP_DELTA.md",
+      "sha256": "5471d25cbb1e98a2dcb52145012b3f0ee66f62bd96927edb905a86c63c41393c"
+    },
+    {
+      "bytes": 4423,
+      "crc32": "8882e46d",
+      "git_blob_sha1": "931a6e72807676e1553513d27f0304cf6ddfed17",
+      "path": "SOURCE/regulatory/checkpoints/AR/POLICY_AUTHORITY_GATE_SPEC.md",
+      "sha256": "f108b30df3b9950b64d41824fea27ac2f1ff25e8039cd61ed12d5851e5dcedc8"
+    },
+    {
+      "bytes": 3116,
+      "crc32": "f83add34",
+      "git_blob_sha1": "66abbb08fde7f10b4c9cc99641eb8f641567cb23",
+      "path": "SOURCE/regulatory/checkpoints/AR/PRIMARY_LAW_ANALYSIS.md",
+      "sha256": "26737e0dba55cf2d9f87aaef11cd660866f2f0369ab9a6061ea06654341c0007"
+    },
+    {
+      "bytes": 2051,
+      "crc32": "f8e59fba",
+      "git_blob_sha1": "6fa8d21058957eedc65daffa90448eeade87d690",
+      "path": "SOURCE/regulatory/checkpoints/AR/PUBLICATION_CHAIN_REGISTER.json",
+      "sha256": "0d517f79718af18153832b8a49f1ff6d0ff3611e11faf97be8d07593cda34767"
+    },
+    {
+      "bytes": 2110,
+      "crc32": "4a37b055",
+      "git_blob_sha1": "b70c412d2555fdf6920d725cda4d828430b87aff",
+      "path": "SOURCE/regulatory/checkpoints/AR/QUALITY_REVIEW.md",
+      "sha256": "5218086809bacf54b7b7971b5993f7587762ffd55fcb54a18b73b7769ed25adc"
+    },
+    {
+      "bytes": 1860,
+      "crc32": "c2b631fd",
+      "git_blob_sha1": "2dc2473a7cc10e3c736a4c3440885151c7ac3ed1",
+      "path": "SOURCE/regulatory/checkpoints/AR/README.md",
+      "sha256": "7fe5a06882d8f733c04aa6a421fe3f28e1451e33d499fbe53bd1612a71ebfeeb"
+    },
+    {
+      "bytes": 2610,
+      "crc32": "8bc54ff3",
+      "git_blob_sha1": "ea9078937a3195bb56036de20f67dff509e43a8f",
+      "path": "SOURCE/regulatory/checkpoints/AS/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "0c402329fc7aec590612e5b9fc74dd0da9ff0b6bf710a63c47986b1c06d9774d"
+    },
+    {
+      "bytes": 1616,
+      "crc32": "7877fcbf",
+      "git_blob_sha1": "23fa8e3df37bd780954dddf49ed9a9ed0b84c9c2",
+      "path": "SOURCE/regulatory/checkpoints/AS/CONTINUATION_STATE.json",
+      "sha256": "c260b8f985e00db7332a9f3d17f0cb1e961af184fad25eaa97b1d316fc2cdf39"
+    },
+    {
+      "bytes": 4496,
+      "crc32": "8164ca48",
+      "git_blob_sha1": "4c1de97b74c1d182fe57a2b64c26fb1aa744fd51",
+      "path": "SOURCE/regulatory/checkpoints/AS/EVIDENCE_MATRIX.json",
+      "sha256": "f7bc4595a1564631764a307ae7a308657bc5736850bbcd374d03801c318290d3"
+    },
+    {
+      "bytes": 1707,
+      "crc32": "fee6b955",
+      "git_blob_sha1": "4ff19a6788ba19c5e6ff19e9e98c379e3cb3cf62",
+      "path": "SOURCE/regulatory/checkpoints/AS/EXECUTION_REPORT.md",
+      "sha256": "29a9f105b0af8dd302223f64a04eb08715c6c2669e245505145c0d1617942cdf"
+    },
+    {
+      "bytes": 4762,
+      "crc32": "1184e75f",
+      "git_blob_sha1": "9a93fa08f6057e1aaebefc0646bb9dc49fcc1751",
+      "path": "SOURCE/regulatory/checkpoints/AS/PRIMARY_EVIDENCE.md",
+      "sha256": "c981337c835c9f4495bf8791a9bb31b5ee0f090e0962cc981674d9c2f9c0f9f7"
+    },
+    {
+      "bytes": 2525,
+      "crc32": "c7555b27",
+      "git_blob_sha1": "6815b9c240d590904c69c801851611e4da308a2a",
+      "path": "SOURCE/regulatory/checkpoints/AS/QUALITY_REVIEW.md",
+      "sha256": "b58072553f59077a12824190d19ab61c3ee4556726feb4f01d7fc7429be7e517"
+    },
+    {
+      "bytes": 1943,
+      "crc32": "c75bc781",
+      "git_blob_sha1": "ed04760ac80237e985ffac6773a1f1630ad81cb2",
+      "path": "SOURCE/regulatory/checkpoints/AS/README.md",
+      "sha256": "22cc1ad3c11140adbdde7ecc398842c20520aee4b483d82b3447b3bf1398ffaa"
+    },
+    {
+      "bytes": 4032,
+      "crc32": "3e29a1e7",
+      "git_blob_sha1": "16551de967f626e72ea15ab5a7b1bd3416f173a4",
+      "path": "SOURCE/regulatory/checkpoints/AS/REQUIREMENTS_AND_CONTROLS.md",
+      "sha256": "7d7690379698f936d951c86d595701569e4511e94dc00d8b0a2644f83d141655"
+    },
+    {
+      "bytes": 2778,
+      "crc32": "906db1ac",
+      "git_blob_sha1": "e68401375df71556f8ded4db0d2d978e9aae1093",
+      "path": "SOURCE/regulatory/checkpoints/AT/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "9eb02d472d2e6581ea6ab6fd39093e092cb5da5c6d1084b012b99b498f037441"
+    },
+    {
+      "bytes": 1589,
+      "crc32": "2e967666",
+      "git_blob_sha1": "b90736039573c0ab6d8ee87264850a65f3800ca7",
+      "path": "SOURCE/regulatory/checkpoints/AT/CONTINUATION_STATE.json",
+      "sha256": "42de2dee5e1b7c44ebee5a084523e7810bf25b2649c55af753344ce139f5e400"
+    },
+    {
+      "bytes": 1789,
+      "crc32": "1638b159",
+      "git_blob_sha1": "88a1af17c61b80409626a9e67b327153d23b1576",
+      "path": "SOURCE/regulatory/checkpoints/AT/EXECUTION_REPORT.md",
+      "sha256": "5b8f92081d003bfa9b1bd8b1da6069c24ed5d9f7525b930f88b83faebee80cbf"
+    },
+    {
+      "bytes": 2089,
+      "crc32": "54f2bc2a",
+      "git_blob_sha1": "c47c7692b032d4c1e41f29b345ef69a625f2888c",
+      "path": "SOURCE/regulatory/checkpoints/AT/PUBLICATION_AUTHORITY_MATRIX.json",
+      "sha256": "4be3e1042f42e98a77489803ec0260b69ffde9649a42379a29aa7977a59ffde9"
+    },
+    {
+      "bytes": 2162,
+      "crc32": "9bfe85fc",
+      "git_blob_sha1": "808efc2d8fcc4c673dad8d2c6d8cbce3884913b1",
+      "path": "SOURCE/regulatory/checkpoints/AT/QUALITY_REVIEW.md",
+      "sha256": "7eadd9ae6363f87aedcf3b7c6dc2104ce22607b72eecfca394b473d08c0e1544"
+    },
+    {
+      "bytes": 1890,
+      "crc32": "91d91f3d",
+      "git_blob_sha1": "9f2fc4571b3e6711f663b30f8602fdef77dcaec3",
+      "path": "SOURCE/regulatory/checkpoints/AT/README.md",
+      "sha256": "e80380ee71590b318ff4935d40f82f701d76dfc3c9435bb4bd75f51d076e1ee6"
+    },
+    {
+      "bytes": 3629,
+      "crc32": "be327053",
+      "git_blob_sha1": "2eb14025e9c7e807d36c008def27d04b0c427adc",
+      "path": "SOURCE/regulatory/checkpoints/AT/REQUIREMENTS_AND_CONTROLS.md",
+      "sha256": "fd8498726773454f0f9789d00a85a67d3f6cbb099b0e16754e94b164ec4e4719"
+    },
+    {
+      "bytes": 4279,
+      "crc32": "a2aa04e1",
+      "git_blob_sha1": "eff032b4ec4d30217f005da79f5a3fe6a474967b",
+      "path": "SOURCE/regulatory/checkpoints/AT/SOURCE_DELTA.md",
+      "sha256": "b29c81c2ed5f935f0dd8b5a11ac9794d0fa8030ee9b0c20159359c9297b6304f"
+    },
+    {
+      "bytes": 2659,
+      "crc32": "2b9e2094",
+      "git_blob_sha1": "2e98241c74370144f01e995fd7296cf5fb08d186",
+      "path": "SOURCE/regulatory/checkpoints/AU/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "243c68926b54816dabad44bdae01b081f7e70b428f1d3cb6519eaaf97f24b2da"
+    },
+    {
+      "bytes": 1179,
+      "crc32": "9bc4afde",
+      "git_blob_sha1": "731e578a79c00f6d406c6b8f33f702676ce39e9e",
+      "path": "SOURCE/regulatory/checkpoints/AU/CONTINUATION_STATE.json",
+      "sha256": "8baadea5438ae2b431129bbacb40dd5e5bc8959b893b570a986ca8672682f93c"
+    },
+    {
+      "bytes": 3520,
+      "crc32": "4a08e83c",
+      "git_blob_sha1": "23b83b20df6dbe8d11b6bf312622db0c51795f54",
+      "path": "SOURCE/regulatory/checkpoints/AU/DESIGN_GUARDS.md",
+      "sha256": "2d6121ba723926d3b5431315d16a766313a3e9b515ffda820d98b10b1c0285f1"
+    },
+    {
+      "bytes": 1835,
+      "crc32": "4408e216",
+      "git_blob_sha1": "a9a8ef982cb26b925e2746ee7ac3e2c413aad836",
+      "path": "SOURCE/regulatory/checkpoints/AU/EXECUTION_REPORT.md",
+      "sha256": "b82a5f52a0299ed206e0ce1ecad74faaec6aea0b3ff88a9285a708ab6f8d70e6"
+    },
+    {
+      "bytes": 4122,
+      "crc32": "3bc2de4a",
+      "git_blob_sha1": "e68a62af2764a752b6f2ae5dd323fd0e12fec4c8",
+      "path": "SOURCE/regulatory/checkpoints/AU/PRIMARY_SOURCE_DELTA.md",
+      "sha256": "5921e92cf4e72c7cefe6450181532f094430d0d22a38cf8869af6e80ed02ca6c"
+    },
+    {
+      "bytes": 2137,
+      "crc32": "e823e901",
+      "git_blob_sha1": "f681ae7f646ea66639e40863df8192e8c2687f01",
+      "path": "SOURCE/regulatory/checkpoints/AU/QUALITY_REVIEW.md",
+      "sha256": "ab56784b813c3348b33f3821123990f240b218110de23a539926edbef487b18b"
+    },
+    {
+      "bytes": 1752,
+      "crc32": "5d13d7fc",
+      "git_blob_sha1": "4d45dd3838153d213261c6b0976e964c8562ccbb",
+      "path": "SOURCE/regulatory/checkpoints/AU/README.md",
+      "sha256": "bf241ec0e08a577d6acf3c87ea1cb96ee3f2559f7e55c825c138fb80c30edb8e"
+    },
+    {
+      "bytes": 2927,
+      "crc32": "f954aa6f",
+      "git_blob_sha1": "8a433391e3f79ee163b0d2f88f7f98e4f473011f",
+      "path": "SOURCE/regulatory/checkpoints/AU/REGULATORY_LINEAGE.json",
+      "sha256": "0be775235354b0cc649a43e8f2986a6f2b616b55d9933e6a397a8bc7da36d648"
+    },
+    {
+      "bytes": 4309,
+      "crc32": "565a4540",
+      "git_blob_sha1": "a8c7f8871a00c7743dd2bbedba942031644cf9bd",
+      "path": "SOURCE/regulatory/checkpoints/AV/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "49ef35bd4730b6fb8d07054d77b52006a204090c98f95e5eebde231ab70ca15a"
+    },
+    {
+      "bytes": 4476,
+      "crc32": "498d44b8",
+      "git_blob_sha1": "8c7e19b53792237bc3a343455655c5cd47073a56",
+      "path": "SOURCE/regulatory/checkpoints/AV/ACCOUNTING_RULE_CANDIDATES.json",
+      "sha256": "05407eefc06d2d774c215da47a1871d56713e180ada4f7543197303f954408fb"
+    },
+    {
+      "bytes": 1401,
+      "crc32": "5424257b",
+      "git_blob_sha1": "9a191439bb15c2522cb0d3e73885647fefc0fce6",
+      "path": "SOURCE/regulatory/checkpoints/AV/CONTINUATION_STATE.json",
+      "sha256": "7fb661d5a1e1988d9192a2de433dcb964efb7b6e5f2ab3816c3189808efd0fc8"
+    },
+    {
+      "bytes": 3942,
+      "crc32": "7241f307",
+      "git_blob_sha1": "7063c9efb68fb017f246377976e622183c046e43",
+      "path": "SOURCE/regulatory/checkpoints/AV/DOMAIN_DESIGN.md",
+      "sha256": "12feac4b8528ee450566d3190f7e2b765dbd944624f3277e1ab4029bdd68e26a"
+    },
+    {
+      "bytes": 2052,
+      "crc32": "41012b55",
+      "git_blob_sha1": "1b0f77c4fda45027a062677a776d510243e5ddea",
+      "path": "SOURCE/regulatory/checkpoints/AV/EXECUTION_REPORT.md",
+      "sha256": "e4e651d8df63cc37a7dd0160258669d19d5badef78b4fe5a21556b69866cd93e"
+    },
+    {
+      "bytes": 5097,
+      "crc32": "0d42848d",
+      "git_blob_sha1": "18b74cb99d1f10e29e38b4a4d49583a51759ec2f",
+      "path": "SOURCE/regulatory/checkpoints/AV/PRIMARY_EVIDENCE.md",
+      "sha256": "f254ba5a4258c5b4135b303368259fe63a035268562196e4e141e2933c6cb1b8"
+    },
+    {
+      "bytes": 2380,
+      "crc32": "70c55430",
+      "git_blob_sha1": "de299cb2f704e42cb666b238e0963d2fe88dd9ef",
+      "path": "SOURCE/regulatory/checkpoints/AV/QUALITY_REVIEW.md",
+      "sha256": "2801be7373147d3eab0d7f6f3ba3686ef12625925b6ef1fd5c97ee4f6532a7a7"
+    },
+    {
+      "bytes": 1931,
+      "crc32": "6aef411b",
+      "git_blob_sha1": "7f60fb82d9b911d3f15e02dcea514a6f5b9ee311",
+      "path": "SOURCE/regulatory/checkpoints/AV/README.md",
+      "sha256": "4817f801557646e1a2f8ee81d41494c1e13c5692cc2b64095cbe90fa8327bb3e"
+    },
+    {
+      "bytes": 4589,
+      "crc32": "d8fdff17",
+      "git_blob_sha1": "3d70c2adba4ed358dcf0ce6612d92fb1497a8fad",
+      "path": "SOURCE/regulatory/checkpoints/AW/ACCOUNTING_CONTROL_DESIGN.md",
+      "sha256": "f09537dd63881098bda8245cee59e2168b452e8195ea9db2d91e12855f9732b6"
+    },
+    {
+      "bytes": 1278,
+      "crc32": "213aa81b",
+      "git_blob_sha1": "96c478d6cc28f5065d68efdae6badd6ae68f52a5",
+      "path": "SOURCE/regulatory/checkpoints/AW/CONTINUATION_STATE.json",
+      "sha256": "943dd428a95aa04fbd2c18284a47dffbcb381a2b659eaf1c61bbac7a93f9af8c"
+    },
+    {
+      "bytes": 1903,
+      "crc32": "4cde5630",
+      "git_blob_sha1": "2cd9436cf3335d8a0993e72884c020d582220064",
+      "path": "SOURCE/regulatory/checkpoints/AW/EXECUTION_REPORT.md",
+      "sha256": "f30099baedecd0b20ccaa5de74e166a68477bfc14c4abbd321734408e60e5a11"
+    },
+    {
+      "bytes": 3258,
+      "crc32": "3bc660fb",
+      "git_blob_sha1": "5ce9bd3d33da3fc43d839aa34f48b4f18f8e91f2",
+      "path": "SOURCE/regulatory/checkpoints/AW/PCEC_AUTHORITY_CHAIN.json",
+      "sha256": "342bb49f2eb6cc7e9aabe7d50f8feaae11e5d573732ca34b95a1f9a231d71d5a"
+    },
+    {
+      "bytes": 3729,
+      "crc32": "3cd2075b",
+      "git_blob_sha1": "32c6c53ab1f241a4f60876db1ab9bd4480b5c240",
+      "path": "SOURCE/regulatory/checkpoints/AW/PRIMARY_EVIDENCE_DELTA.md",
+      "sha256": "91e2f18fff74e3c943489604151ed466e3e722c6265c2d21bcb6d4878c90ec02"
+    },
+    {
+      "bytes": 1827,
+      "crc32": "f3a360b0",
+      "git_blob_sha1": "2291a42520ee51409a1a7bb19ad37fdff0f734a9",
+      "path": "SOURCE/regulatory/checkpoints/AW/QUALITY_REVIEW.md",
+      "sha256": "da3675f41789faa45a3616cc251cf748ddf627eaaae81573b686a6e0be418ce2"
+    },
+    {
+      "bytes": 1121,
+      "crc32": "4d124907",
+      "git_blob_sha1": "40818d5e0f9d4711aef952771402ebff2ab837e4",
+      "path": "SOURCE/regulatory/checkpoints/AW/README.md",
+      "sha256": "57dfb19c1fa5304c1e5413a4f38bd39379753163bf4ed837ccd51c264bf170de"
+    },
+    {
+      "bytes": 5533,
+      "crc32": "f9660de0",
+      "git_blob_sha1": "8f7aba73bb4a087fe3ca635fba79612281911231",
+      "path": "SOURCE/regulatory/checkpoints/AW/REQUIREMENTS_AND_TESTS.json",
+      "sha256": "2bf240c32df933963da04ed319c2f1a4b84da66e316f53ae40d978cd5aa86dd9"
+    },
+    {
+      "bytes": 5403,
+      "crc32": "2af1ed99",
+      "git_blob_sha1": "ebdd5294f3044f7a5b3bab214a7ab8450d034a21",
+      "path": "SOURCE/regulatory/checkpoints/AX/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "bc9853891eb0edf53b2bfd94a5370c00583fe001b566b85a1758a2058233032e"
+    },
+    {
+      "bytes": 5398,
+      "crc32": "ee2b1696",
+      "git_blob_sha1": "323dbb42ca4557daf1d4393afe44e9203dbb89f7",
+      "path": "SOURCE/regulatory/checkpoints/AX/CONFLICT_REGISTER.json",
+      "sha256": "75bbedaa9b3c381809a564ff1cbbd95e8a40564bee52cdb04d3d8e1307600ca8"
+    },
+    {
+      "bytes": 1243,
+      "crc32": "6fb27445",
+      "git_blob_sha1": "46aa8125a48a48435f797ce79c6cd0ba7b2f9c37",
+      "path": "SOURCE/regulatory/checkpoints/AX/CONTINUATION_STATE.json",
+      "sha256": "50d0bcbc17e0cd16eb4022577664581b06bb7999f4a61f46f2c216f470473e20"
+    },
+    {
+      "bytes": 1549,
+      "crc32": "49a032d8",
+      "git_blob_sha1": "a670c0bf64712c72481771493cf7ee03818fed6a",
+      "path": "SOURCE/regulatory/checkpoints/AX/EXECUTION_REPORT.md",
+      "sha256": "732b8368ca5738f0122db502ac5efeae1af560ec6e52d6e46e62e74411865f08"
+    },
+    {
+      "bytes": 2205,
+      "crc32": "b09cc549",
+      "git_blob_sha1": "1d4b4ebb828f5e4f684c5776dd5330726523d632",
+      "path": "SOURCE/regulatory/checkpoints/AX/QUALITY_REVIEW.md",
+      "sha256": "e634606cb960dcbc345111253165dff26eba3acb6e24bedd083113a4bea8a72d"
+    },
+    {
+      "bytes": 1338,
+      "crc32": "385b8a09",
+      "git_blob_sha1": "5a7147ed97ae19ba58b30ed94e54fc58e1bf2901",
+      "path": "SOURCE/regulatory/checkpoints/AX/README.md",
+      "sha256": "d733f723df92cad76c6ca317402b96bce40da2df73be881c2dca080a179104ce"
+    },
+    {
+      "bytes": 3200,
+      "crc32": "c566df5f",
+      "git_blob_sha1": "3261b7e1340a20041e650a54af5139964251793c",
+      "path": "SOURCE/regulatory/checkpoints/AX/REQUIREMENTS_AND_GATES.md",
+      "sha256": "ed223f1d0d0b18fe8b7170cf94b6b95841e1d0b7e9b0b13eed0989994b523154"
+    },
+    {
+      "bytes": 2832,
+      "crc32": "bd92231b",
+      "git_blob_sha1": "af74586d8ab7a08c35fa5f637884e2624c5be1a6",
+      "path": "SOURCE/regulatory/checkpoints/AX/SOURCE_EVIDENCE.md",
+      "sha256": "21f7a7eda584dbde79a182d3be1f0efb9e058ab385b13575e77c1472a37e7968"
+    },
+    {
+      "bytes": 5001,
+      "crc32": "ef4adc75",
+      "git_blob_sha1": "2d4c4ac906d66a8e32f41bfc5a06429ee0776821",
+      "path": "SOURCE/regulatory/checkpoints/AY/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "b54b51a789919aedd077d434eb6cc9e3aa06f16b13e3c8c041cc21543647581a"
+    },
+    {
+      "bytes": 5118,
+      "crc32": "1a15e200",
+      "git_blob_sha1": "86acc968c9fe03d130491fe3a3e4e14d7865be05",
+      "path": "SOURCE/regulatory/checkpoints/AY/AMENDMENT_RECONCILIATION.json",
+      "sha256": "7f4289d39edae96ad4e6adb5600ecee34b37d0ce562d5efd09dbd9e963a28f20"
+    },
+    {
+      "bytes": 1386,
+      "crc32": "3fd1eaa8",
+      "git_blob_sha1": "3ced5f58838870c06b5e7a6e9f8fadb9bc29c7f0",
+      "path": "SOURCE/regulatory/checkpoints/AY/CONTINUATION_STATE.json",
+      "sha256": "a51c2e47af89f9504f0c54e6998110a9de8bd632cd3d91e780e5de2d0ed3c2cb"
+    },
+    {
+      "bytes": 4504,
+      "crc32": "cb8784d5",
+      "git_blob_sha1": "94f9ab42c12f98869060660a67969aa9d5b8e9e4",
+      "path": "SOURCE/regulatory/checkpoints/AY/CONTROL_DESIGN.md",
+      "sha256": "87ed6fa51d347c4cd2098c47eae3312dd8f1eef847c76bc4217101d129a92d8d"
+    },
+    {
+      "bytes": 2000,
+      "crc32": "e6fe0b96",
+      "git_blob_sha1": "1faa8cc048351b9d186bd8b54fcb5445804d65ad",
+      "path": "SOURCE/regulatory/checkpoints/AY/EXECUTION_REPORT.md",
+      "sha256": "7b3d987c1e9309cc8bfc25dfd00c7a6a2a011ec9b4b0d1d3d5e5e8b4a10a186f"
+    },
+    {
+      "bytes": 3330,
+      "crc32": "0864a585",
+      "git_blob_sha1": "78de1e46c29f600c7b13dcb85189ee186d6c4a38",
+      "path": "SOURCE/regulatory/checkpoints/AY/PRIMARY_EVIDENCE.md",
+      "sha256": "a316480ad2859963d15f243f4e06e32fed8f6d9067b735017ec02412b616a51d"
+    },
+    {
+      "bytes": 2465,
+      "crc32": "ae9b1156",
+      "git_blob_sha1": "bdbbf5a38b938323275902f3034fbcc23ba90c24",
+      "path": "SOURCE/regulatory/checkpoints/AY/QUALITY_REVIEW.md",
+      "sha256": "581f01c7349b18b3c3e0041f0db1edc2b1806cd9a29fc115d471afdf2e290250"
+    },
+    {
+      "bytes": 1824,
+      "crc32": "8d0c5ef0",
+      "git_blob_sha1": "5dce5beec031787287b16aa11adb6d7c87b3b477",
+      "path": "SOURCE/regulatory/checkpoints/AY/README.md",
+      "sha256": "8eb35caaa668148b5fe6768e88b30b72bc1ecef22a79b0b8796a16e956ae1890"
+    },
+    {
+      "bytes": 4393,
+      "crc32": "4b64b71f",
+      "git_blob_sha1": "c32f272e5fb6bd891feaec5fd194911db0ad0e81",
+      "path": "SOURCE/regulatory/checkpoints/AZ/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "c9b8fad8d4eaa558e968a33898b3d79b35a08c9b40a9d54079f17e14258d26e1"
+    },
+    {
+      "bytes": 5791,
+      "crc32": "b984ad9b",
+      "git_blob_sha1": "5045980d15fdc4affd4e232b0dd07850f7e9bbad",
+      "path": "SOURCE/regulatory/checkpoints/AZ/CLAUSE_CROSSWALK.json",
+      "sha256": "41aafc35343c04903ea583fa0d7cd07f4674ea09791e6fd944652930b5dbedac"
+    },
+    {
+      "bytes": 1397,
+      "crc32": "05250a0d",
+      "git_blob_sha1": "55a04ac1d1e5d93656f1696c411bd3753c8b4e26",
+      "path": "SOURCE/regulatory/checkpoints/AZ/CONTINUATION_STATE.json",
+      "sha256": "a266bb3ef7fd6b324a4ea89a0b30816b622a5aee41e259fa3a55f85e6d96a4b1"
+    },
+    {
+      "bytes": 3544,
+      "crc32": "30eb5bad",
+      "git_blob_sha1": "7d99bc56e4c0569f115d4d3b40301e4e7f97d4ad",
+      "path": "SOURCE/regulatory/checkpoints/AZ/CONTROL_DESIGN.md",
+      "sha256": "e6903daeafdf6bbd3f388147373398cd87aeeb2d586cb4b4267aa67ef0cd3703"
+    },
+    {
+      "bytes": 1686,
+      "crc32": "7d83364b",
+      "git_blob_sha1": "5985b929e9f3862c6e698a215ed42a59230b2673",
+      "path": "SOURCE/regulatory/checkpoints/AZ/EXECUTION_REPORT.md",
+      "sha256": "16580977b1817750f438674fcda7c8f6373f2478100ea043e2651118c50d32d3"
+    },
+    {
+      "bytes": 2553,
+      "crc32": "875e2d58",
+      "git_blob_sha1": "a15aa30151198948e01e710de08e461b4fde7ad3",
+      "path": "SOURCE/regulatory/checkpoints/AZ/QUALITY_REVIEW.md",
+      "sha256": "11c3c9d0aefc4b35abfc504abf662de03dafd5fbddb87d3336739eb0900f0e00"
+    },
+    {
+      "bytes": 2592,
+      "crc32": "5dee98e6",
+      "git_blob_sha1": "0f5b9bd7d95ea07c739d4267e0cc1b96df07439d",
+      "path": "SOURCE/regulatory/checkpoints/AZ/README.md",
+      "sha256": "e9b45f0fad82049af375163c06e1f0f248fabde576788522622abb469d066e74"
+    },
+    {
+      "bytes": 6285,
+      "crc32": "25c9edfe",
+      "git_blob_sha1": "7bebf1542949bf8568ac657aa4240e851fd44272",
+      "path": "SOURCE/regulatory/checkpoints/BA/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "ea4f419a38c9e7b7bcfa911661182fa4feb32564d59c16a93922bcaa94555cb6"
+    },
+    {
+      "bytes": 1639,
+      "crc32": "42fe3646",
+      "git_blob_sha1": "4c04f618e1f583954c83f47646963ffd9d74f127",
+      "path": "SOURCE/regulatory/checkpoints/BA/CONTINUATION_STATE.json",
+      "sha256": "dfa80997f1f0ba7df0b5bf780a4c2990387e67a3640f59b9e72524d73fc6c0e9"
+    },
+    {
+      "bytes": 2278,
+      "crc32": "bd63344d",
+      "git_blob_sha1": "02a2403b250e007ded41e1cee1eaa2066aefea91",
+      "path": "SOURCE/regulatory/checkpoints/BA/EXECUTION_REPORT.md",
+      "sha256": "69940ad0b845f9a124ff659f8a1257d217a4383b4c578191fabd227201bed527"
+    },
+    {
+      "bytes": 4647,
+      "crc32": "effb84ee",
+      "git_blob_sha1": "59cf2e2ad8e7b71c344712cae5c7a6a7e7c63b7b",
+      "path": "SOURCE/regulatory/checkpoints/BA/FINANCIAL_INTEGRITY_DECISIONS.md",
+      "sha256": "da841526ecd955a9a66358e4c8e206184af2c0022d0ddc25e441cc36d201848d"
+    },
+    {
+      "bytes": 4191,
+      "crc32": "c2661fc2",
+      "git_blob_sha1": "103ed0802a9a3ca750b586e8704a7f4a066a8e63",
+      "path": "SOURCE/regulatory/checkpoints/BA/PRIMARY_EVIDENCE_AND_CUSTODY.md",
+      "sha256": "9eb0a3b5c665f2c4da982b908355eb2491bc8e36edbabed8ca810c8dede6bf69"
+    },
+    {
+      "bytes": 3407,
+      "crc32": "c3902575",
+      "git_blob_sha1": "aa64a37d0a60e986569a2b050191495f1ea239d0",
+      "path": "SOURCE/regulatory/checkpoints/BA/QUALITY_REVIEW.md",
+      "sha256": "f9ece263c0a7f66e1d1a8612359fc0245b6a7028ead46d3ff71dbd71ba273a83"
+    },
+    {
+      "bytes": 3176,
+      "crc32": "f25a26e2",
+      "git_blob_sha1": "8ae5bbaf534f6f3c5f598283d5859cf313deda78",
+      "path": "SOURCE/regulatory/checkpoints/BA/README.md",
+      "sha256": "a4ab36b36948e83b5925fea990743d273a1d3a49bf4691aec0fba068ecb32df5"
+    },
+    {
+      "bytes": 5269,
+      "crc32": "98fbb796",
+      "git_blob_sha1": "1eb855d41f5e6ef27f7015b358db997d20c976f7",
+      "path": "SOURCE/regulatory/checkpoints/BA/SECURITIES_AMENDMENT_GRAPH.json",
+      "sha256": "970f761b5d4e22b35db2330104cbe9d074e8bf3c0ad24053271c4d3ab9e6c462"
+    },
+    {
+      "bytes": 1839,
+      "crc32": "af44e477",
+      "git_blob_sha1": "5e98d800f44f670031003e2e1068a499dcb2e2ec",
+      "path": "SOURCE/regulatory/checkpoints/BB/AMENDMENT_GRAPH.json",
+      "sha256": "5a6ac1a05a2c3ccab8b8225c954dfc9cf490bfe6a405100bb67992db9a51a6b7"
+    },
+    {
+      "bytes": 1517,
+      "crc32": "4537fe2f",
+      "git_blob_sha1": "a8d12dc087e03bd9bf063ba05c6726c0807a22a8",
+      "path": "SOURCE/regulatory/checkpoints/BB/CONTINUATION_STATE.json",
+      "sha256": "573a155fdd6906c9eff368c7b44c03454b4edf449183138908ad2eb2b8b9de2b"
+    },
+    {
+      "bytes": 2862,
+      "crc32": "df00a5a0",
+      "git_blob_sha1": "c8f912fc76a6712eb710135c8e3a09164e1c3d5e",
+      "path": "SOURCE/regulatory/checkpoints/BB/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "f6a63a9300a45c41ba2390ad201be990284dcea97ac76fd4e9f48fb4db2b0de3"
+    },
+    {
+      "bytes": 1311,
+      "crc32": "f9455678",
+      "git_blob_sha1": "66714566d627d30418c72e1bc94e4d6ab255cb17",
+      "path": "SOURCE/regulatory/checkpoints/BB/EXECUTION_REPORT.md",
+      "sha256": "7f3e6f45dcca6f4eb3373be4d9ee5b7aaeefa54d650ded47618cf217906ef123"
+    },
+    {
+      "bytes": 3509,
+      "crc32": "a5251788",
+      "git_blob_sha1": "1d4ce3e85e3318bacbedb7482cdd11ceb0582b79",
+      "path": "SOURCE/regulatory/checkpoints/BB/PRIMARY_EVIDENCE.md",
+      "sha256": "a25d15001783ae5efccd39b61ec10b630d75b57c61e3439e9444578589a13eef"
+    },
+    {
+      "bytes": 1927,
+      "crc32": "2087207f",
+      "git_blob_sha1": "fa4425b4061f2a7f2a2338f7aa7434005bb8432b",
+      "path": "SOURCE/regulatory/checkpoints/BB/QUALITY_REVIEW.md",
+      "sha256": "c18cd0adc0029693ba62ccaebba55377983468210658ea549a356c38eb9f0194"
+    },
+    {
+      "bytes": 2987,
+      "crc32": "dbfc1381",
+      "git_blob_sha1": "2843e3aae8eb2d56c8a2ecf781cd6272a698569b",
+      "path": "SOURCE/regulatory/checkpoints/BB/README.md",
+      "sha256": "27b926246ab0c9f30d64161e31f59e9547672c790e5fe511cb30b74311e6f8ff"
+    },
+    {
+      "bytes": 2682,
+      "crc32": "aa9a9443",
+      "git_blob_sha1": "e39b718c4c460e876d197282ab2cb6f2b5f343eb",
+      "path": "SOURCE/regulatory/checkpoints/BC/AMENDMENT_AND_APPLICABILITY_GRAPH.json",
+      "sha256": "c3183035beeb419e4350c48acf71f91bd4f474433a7cda2cce070dc66cd29b23"
+    },
+    {
+      "bytes": 1734,
+      "crc32": "b23c3959",
+      "git_blob_sha1": "e0a2c6bd0a720e62670d4cbda8d38ac9d84e2d1e",
+      "path": "SOURCE/regulatory/checkpoints/BC/CONTINUATION_STATE.json",
+      "sha256": "a57a4a6bab755f0477821400e52520abe9517a97e86875d0cef29e6103024e17"
+    },
+    {
+      "bytes": 4374,
+      "crc32": "25c86516",
+      "git_blob_sha1": "1ca7524d72df29e5bb66b60b4abbce65f2e22121",
+      "path": "SOURCE/regulatory/checkpoints/BC/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "f795910582e44a64fe969b33c23bebec004e88663eeaa9b8428b58a3bf6caa0b"
+    },
+    {
+      "bytes": 1333,
+      "crc32": "b1b0f4fd",
+      "git_blob_sha1": "61d183be01e79e097628b3ee2ebb0e991b2fd82a",
+      "path": "SOURCE/regulatory/checkpoints/BC/EXECUTION_REPORT.md",
+      "sha256": "51708ffb69cf98806d18fc615af03d4e34276719a2424704216ed2d90df51cf1"
+    },
+    {
+      "bytes": 3544,
+      "crc32": "482aa881",
+      "git_blob_sha1": "b89ad8ed8afa6cbc55b88ab1e7f649721431e1b2",
+      "path": "SOURCE/regulatory/checkpoints/BC/PRIMARY_EVIDENCE.md",
+      "sha256": "41866181877e1503170a7d9c2109c219476c6fb526d0334ce9fd219f8dd162a7"
+    },
+    {
+      "bytes": 2076,
+      "crc32": "17e4aa6e",
+      "git_blob_sha1": "98faf98ba9f9a50bd241122e7a5deed1593f5bbc",
+      "path": "SOURCE/regulatory/checkpoints/BC/QUALITY_REVIEW.md",
+      "sha256": "b98288ef14b7bcab06053de5f0e9e0c45432ba4887420ef93c3438d5bc6c293b"
+    },
+    {
+      "bytes": 3478,
+      "crc32": "f5509aa4",
+      "git_blob_sha1": "d112f5f635923e5cecb4afa1087fcb9360a636d7",
+      "path": "SOURCE/regulatory/checkpoints/BC/README.md",
+      "sha256": "d4c7618e99b12e1a096af94eb5e413f6dc1f94d327999989229a5b4a7102997b"
+    },
+    {
+      "bytes": 2736,
+      "crc32": "35442283",
+      "git_blob_sha1": "ae6d4f15b0e8dca005b878407332a3a90f55f431",
+      "path": "SOURCE/regulatory/checkpoints/BD/CLAUSE_AUTHORITY_REGISTER.json",
+      "sha256": "00f956f2895b6702c890eecf4700e8ef00de7941f16bac548ebe47858825fe96"
+    },
+    {
+      "bytes": 1725,
+      "crc32": "e61d623e",
+      "git_blob_sha1": "ece7ed0176be332a8bf6d9189bd3efa544149a1c",
+      "path": "SOURCE/regulatory/checkpoints/BD/CONTINUATION_STATE.json",
+      "sha256": "c86c678ea440d745b493802222e0aaaffa5563ea18a4b0563fa44c0904bb4163"
+    },
+    {
+      "bytes": 4724,
+      "crc32": "68426073",
+      "git_blob_sha1": "f5ba211bef7c0c079afd72d12e9544ec0528faa5",
+      "path": "SOURCE/regulatory/checkpoints/BD/CONTROL_AND_ACCEPTANCE_DESIGN.md",
+      "sha256": "48140fd88064bf8bcf045c669046fb4ce858150d9b529ff2a90fbe79769cb0e4"
+    },
+    {
+      "bytes": 3328,
+      "crc32": "1e2f2b9c",
+      "git_blob_sha1": "f8a7e58c8187dc919bad1878e5f14fe10a395210",
+      "path": "SOURCE/regulatory/checkpoints/BD/EVIDENCE_DELTA.md",
+      "sha256": "30ac813bc517a96b420b067c6084838bb87602268d8e4e59431df21fc1086ee5"
+    },
+    {
+      "bytes": 1324,
+      "crc32": "4eb7a7b5",
+      "git_blob_sha1": "35a87a69c5801f0f78602944a36db37820133a53",
+      "path": "SOURCE/regulatory/checkpoints/BD/EXECUTION_REPORT.md",
+      "sha256": "0805f984a09eb154875eedd61e122b894d99ca8a6724ce4d844f861085c9a02a"
+    },
+    {
+      "bytes": 2067,
+      "crc32": "54dc3bab",
+      "git_blob_sha1": "660ae752f33c1b6b088594cd733be93fc923ddd4",
+      "path": "SOURCE/regulatory/checkpoints/BD/QUALITY_REVIEW.md",
+      "sha256": "c9f9d24a08609781a20153021611ea3c1b0f058de4933cc987bc1a6d37a68e7a"
+    },
+    {
+      "bytes": 3263,
+      "crc32": "e3e9b9e0",
+      "git_blob_sha1": "51dd84c29860976aff8e1d355904f3c821707fbc",
+      "path": "SOURCE/regulatory/checkpoints/BD/README.md",
+      "sha256": "31b86da88c89497defaeb06959bbe8d3bc27d86913e1cc9c2daf304662cecaa6"
+    },
+    {
+      "bytes": 2460,
+      "crc32": "fe3560ab",
+      "git_blob_sha1": "ca67f9734b592e3227052c07fdbafc9bf46f638e",
+      "path": "SOURCE/regulatory/checkpoints/BE/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "4eb1a3da4c48afcf769461f7ae63857b19876464860f48eca0dc0048863d81de"
+    },
+    {
+      "bytes": 3760,
+      "crc32": "7014c1fa",
+      "git_blob_sha1": "537f74e9ebaae832dc6b455c458936e3a0367007",
+      "path": "SOURCE/regulatory/checkpoints/BE/CAPITAL_POLICY_AUTHORITY_DESIGN.md",
+      "sha256": "84c2cab04f03d2e5a47fdcabf7c0c33f95a622998494881a64d659a671239c2a"
+    },
+    {
+      "bytes": 1508,
+      "crc32": "a7cd9fa0",
+      "git_blob_sha1": "b88ef1787df2aee2e5882768d87b6e63c51dc6d5",
+      "path": "SOURCE/regulatory/checkpoints/BE/CONTINUATION_STATE.json",
+      "sha256": "664ed96d1922cb2d53b4409f6ae5efc1c791a28d71ef1f8c2ec66aab9bea589b"
+    },
+    {
+      "bytes": 3897,
+      "crc32": "1523c314",
+      "git_blob_sha1": "977e738342a693fffcc52bb5e736990674aa833b",
+      "path": "SOURCE/regulatory/checkpoints/BE/EVIDENCE_DELTA.md",
+      "sha256": "69ca9525c494d90b8309d16522b4e4e4c7444b083fc264066491215b7b808772"
+    },
+    {
+      "bytes": 1388,
+      "crc32": "b5f6986c",
+      "git_blob_sha1": "bb2382bfe3c874f35a7351293855bb1d4dc14b62",
+      "path": "SOURCE/regulatory/checkpoints/BE/EXECUTION_REPORT.md",
+      "sha256": "ca241977db4f180050a53d9b31587c6bddd97e0e5ef2d83b6b96deb3eb29edbe"
+    },
+    {
+      "bytes": 2110,
+      "crc32": "8435637a",
+      "git_blob_sha1": "09cec2dfb19fbc03376a349543f46188bc79f60a",
+      "path": "SOURCE/regulatory/checkpoints/BE/QUALITY_REVIEW.md",
+      "sha256": "7f2335340e246b87249f1798a5c0b14d04438621b0990f4d81b35b8cece76225"
+    },
+    {
+      "bytes": 2878,
+      "crc32": "e58cf9e6",
+      "git_blob_sha1": "1c3afe22d7a9c39ad5a836399fec0590052612ba",
+      "path": "SOURCE/regulatory/checkpoints/BE/README.md",
+      "sha256": "3c7fc37be6424a250d069664899330fd04f51eda4870661cf353a1946d38b808"
+    },
+    {
+      "bytes": 1235,
+      "crc32": "dbeb1165",
+      "git_blob_sha1": "2f52bf9298914f3377732b51d2d0a134db183e0c",
+      "path": "SOURCE/regulatory/checkpoints/BF/CONTINUATION_STATE.json",
+      "sha256": "1aeeea658b05718e29e26d067ff75fe43b667ecc711b6dce09021d46b8ceab1f"
+    },
+    {
+      "bytes": 3264,
+      "crc32": "c9cfeff9",
+      "git_blob_sha1": "afc22b19bc5009ddc144015ccf6d3606cbe855cb",
+      "path": "SOURCE/regulatory/checkpoints/BF/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "566aa09d07aff6c474802cae60b211471c9bb6291fadc1fb685dadf1851ffeb8"
+    },
+    {
+      "bytes": 3138,
+      "crc32": "8af65e2c",
+      "git_blob_sha1": "316b909e25ec4f3ffc1084b7d05bd7335fe83ce5",
+      "path": "SOURCE/regulatory/checkpoints/BF/EVIDENCE_DELTA.md",
+      "sha256": "6b1f43261739eec47642e9b659c7573a7300005d8bbcd176f7ba6c2eb737c0ed"
+    },
+    {
+      "bytes": 1301,
+      "crc32": "12131ada",
+      "git_blob_sha1": "938e1384611c193a7a0b116abee5e1ab8ef3cba5",
+      "path": "SOURCE/regulatory/checkpoints/BF/EXECUTION_REPORT.md",
+      "sha256": "163fc80cce510890043df7d83cb049581bf6b58b210febddc9c1352bb368c231"
+    },
+    {
+      "bytes": 1749,
+      "crc32": "9dd82196",
+      "git_blob_sha1": "08328d7bd0c9c12ed91abdcdd8d8766887a5a6a6",
+      "path": "SOURCE/regulatory/checkpoints/BF/QUALITY_REVIEW.md",
+      "sha256": "9b1793c36c366eaf68032f47d4a7dbaaaa12fc0a7701baa61dfc29fbb4a6caf4"
+    },
+    {
+      "bytes": 1725,
+      "crc32": "af980e60",
+      "git_blob_sha1": "33411d27df8f8b2b5109b908729ef1692ffac068",
+      "path": "SOURCE/regulatory/checkpoints/BF/README.md",
+      "sha256": "acd1f0bad3c2962388349c43c8a727ffee821217b5d9ed25aabb59649e856029"
+    },
+    {
+      "bytes": 2632,
+      "crc32": "9fa4bad2",
+      "git_blob_sha1": "6ad9f83f7aeaad103117ee1509df4caf5971046f",
+      "path": "SOURCE/regulatory/checkpoints/BF/REGULATORY_CAPITAL_RULES.json",
+      "sha256": "3bf4224d2955bd708e94f8352fd32470360f198c2f8110964e474e92c73115ce"
+    },
+    {
+      "bytes": 5772,
+      "crc32": "ab0d7462",
+      "git_blob_sha1": "2efe09fa67d37b29ca19309ae34ccf2c21e45a3e",
+      "path": "SOURCE/regulatory/checkpoints/BG/CAPITAL_TRANSITION_DECISION_MATRIX.json",
+      "sha256": "745d4cac2a49e63255cc43ebe427467bed8a05daf7efc352ed27ddd8a85be6dd"
+    },
+    {
+      "bytes": 1606,
+      "crc32": "37e2dea4",
+      "git_blob_sha1": "1778adfae2ad90ca47a20af85105874068cb71ba",
+      "path": "SOURCE/regulatory/checkpoints/BG/CONTINUATION_STATE.json",
+      "sha256": "abeb47e00c838e85f6a1250097919e70449b55188d3dae45a01bfc51726adfb6"
+    },
+    {
+      "bytes": 3925,
+      "crc32": "e4d29b06",
+      "git_blob_sha1": "b0a87816f760540c0b1367f6ec3c2cbb35400234",
+      "path": "SOURCE/regulatory/checkpoints/BG/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "e8bf028f225efcb6cce5a0c52110705dd4b21b70895610e6c6042ea79863e2d6"
+    },
+    {
+      "bytes": 3987,
+      "crc32": "96b7ec37",
+      "git_blob_sha1": "910c886728e45f9ee59be8b80d001d9bf696546b",
+      "path": "SOURCE/regulatory/checkpoints/BG/EVIDENCE_DELTA.md",
+      "sha256": "a64d921612b977f4bfd3b35f5d7121eea6508c73fbee9e8a7152e97a5073c1b7"
+    },
+    {
+      "bytes": 1562,
+      "crc32": "4117d73c",
+      "git_blob_sha1": "cda27181476706d68667fc7133b6ec554d5541d7",
+      "path": "SOURCE/regulatory/checkpoints/BG/EXECUTION_REPORT.md",
+      "sha256": "a9f42b8a0eea565f6a27670d438520e2bad727a85c1ef2dd61eedbdd5d2341ee"
+    },
+    {
+      "bytes": 1976,
+      "crc32": "481a74ff",
+      "git_blob_sha1": "9ce2451b0961bc1f614a60c82005ceac8fae2f4a",
+      "path": "SOURCE/regulatory/checkpoints/BG/QUALITY_REVIEW.md",
+      "sha256": "165bb98bf7811076836075f7676b3de349d2e17519f41d631cb6389239c02ae9"
+    },
+    {
+      "bytes": 990,
+      "crc32": "f16e52ba",
+      "git_blob_sha1": "ccb1bdb8f47e1defb18a781ee0af8bf1d230bb39",
+      "path": "SOURCE/regulatory/checkpoints/BG/README.md",
+      "sha256": "e3480508f1a5830c5b5370efacfb10c6f70d94ea33d5231b25b5142d4f32d912"
+    },
+    {
+      "bytes": 4873,
+      "crc32": "897398a5",
+      "git_blob_sha1": "df84c3ab375a5b4d12b7fe3a733c58a73e5f6ba6",
+      "path": "SOURCE/regulatory/checkpoints/BH/AUTHORITY_AND_CASE_MATRIX.json",
+      "sha256": "8b3563008a45221c5f7b803b9a1489a6457e6bdb7f577a17359c7cc8291e5a21"
+    },
+    {
+      "bytes": 1440,
+      "crc32": "b6047d2a",
+      "git_blob_sha1": "d78637975c82525d096e7f23b9d6f697083453df",
+      "path": "SOURCE/regulatory/checkpoints/BH/CONTINUATION_STATE.json",
+      "sha256": "19ffdea17ec645e74aa1b17aaba60eb0499a30390c75d19c45f741dd9d6ad05e"
+    },
+    {
+      "bytes": 5299,
+      "crc32": "f64962bd",
+      "git_blob_sha1": "23f6055ea97d7a16aecfa1036e1d3f23fcd24ded",
+      "path": "SOURCE/regulatory/checkpoints/BH/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "14ff69dc37fb37b04ef4c8c5149e1f391ecf6fe2d41e35dcaa19a676122e9034"
+    },
+    {
+      "bytes": 4043,
+      "crc32": "d30fa193",
+      "git_blob_sha1": "1d79457486f4cf59d36e27f7adfb5fda3b93161d",
+      "path": "SOURCE/regulatory/checkpoints/BH/EVIDENCE_DELTA.md",
+      "sha256": "81452fa97a96635166922146779a80176cbf2b8168cb029bf68c8f780d3e35ee"
+    },
+    {
+      "bytes": 1425,
+      "crc32": "b7b46d1e",
+      "git_blob_sha1": "6b734e292c5d95771387a682f5cf287f28e66dcd",
+      "path": "SOURCE/regulatory/checkpoints/BH/EXECUTION_REPORT.md",
+      "sha256": "591521f071857d921669ce850816078763e1a53e8c8d32a82664162631fb960f"
+    },
+    {
+      "bytes": 1951,
+      "crc32": "5fb1692f",
+      "git_blob_sha1": "0002cc55a05e0a0759965117e93c237853720e1f",
+      "path": "SOURCE/regulatory/checkpoints/BH/QUALITY_REVIEW.md",
+      "sha256": "bf432fdfc2c462b745f4dc5ffe5b54864ab1d7b93703f1df4b3d3ef7b5dc4432"
+    },
+    {
+      "bytes": 2581,
+      "crc32": "1564c240",
+      "git_blob_sha1": "64a80a3a8405dabfa992a1ee44213f5f3ec4abd3",
+      "path": "SOURCE/regulatory/checkpoints/BH/README.md",
+      "sha256": "271e524fb0961c5c17f9d70f4bdf92901865e65afdc28c44071b674b990593a0"
+    },
+    {
+      "bytes": 4150,
+      "crc32": "f8b4ef31",
+      "git_blob_sha1": "6e5fc9ad2ad26c372563faa792e3929ba0506aa7",
+      "path": "SOURCE/regulatory/checkpoints/BI/AUTHORITY_MODEL.json",
+      "sha256": "de9b793d71f66f4777dfeb941138c4c451af46709f84f7cf88ff3e5d8e0d59d2"
+    },
+    {
+      "bytes": 1433,
+      "crc32": "86845e65",
+      "git_blob_sha1": "49b8dea8d885f0e1c701635701582e2d755f8fc0",
+      "path": "SOURCE/regulatory/checkpoints/BI/CONTINUATION_STATE.json",
+      "sha256": "22ca6a6936882a679f2cdcdfdb4a25b716f0b32b25b5d3baba4f33f1446d07d8"
+    },
+    {
+      "bytes": 5296,
+      "crc32": "6dbfef9b",
+      "git_blob_sha1": "3760cdc2789d15a673e0e4aa398b0ed9fbe42684",
+      "path": "SOURCE/regulatory/checkpoints/BI/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "a595c1e41fb00fe6b4a9880236a6da7d4c4387f858fb71bed6d454f87e5aa03d"
+    },
+    {
+      "bytes": 4110,
+      "crc32": "78912753",
+      "git_blob_sha1": "e2a9b0cfa99ee006b29a172c4bab6bcc543e0711",
+      "path": "SOURCE/regulatory/checkpoints/BI/EVIDENCE_DELTA.md",
+      "sha256": "3a185f56969012af2227fe223eb80788dee246b2c13fe1eadd7dfa1f7f74765a"
+    },
+    {
+      "bytes": 1298,
+      "crc32": "52c75b96",
+      "git_blob_sha1": "e4372e3aaa0cb3c1f84bf715a2ff0936dc554200",
+      "path": "SOURCE/regulatory/checkpoints/BI/EXECUTION_REPORT.md",
+      "sha256": "850cce385810dc1cd93b186ffa6a6fc7f0220ac4fb1bbdf9154fe397febaa2e5"
+    },
+    {
+      "bytes": 2082,
+      "crc32": "c587bf29",
+      "git_blob_sha1": "c7280792da6f7b6d759fadcbc9e792116e217f7a",
+      "path": "SOURCE/regulatory/checkpoints/BI/QUALITY_REVIEW.md",
+      "sha256": "6c9a890ed78b0b26e38ab248f73ff99910bad63570fb089230697e25ee38cfa5"
+    },
+    {
+      "bytes": 2507,
+      "crc32": "dab08a18",
+      "git_blob_sha1": "e07eb9f7d3b2b4085d2042bb12c03882c48e1621",
+      "path": "SOURCE/regulatory/checkpoints/BI/README.md",
+      "sha256": "4dc97ac773316785bfc40e57c374ca98fe4fb3150588b94a6101a7b03e746ba0"
+    },
+    {
+      "bytes": 1621,
+      "crc32": "2009b701",
+      "git_blob_sha1": "3929a57befeddea8d6407289002313e1083f7cab",
+      "path": "SOURCE/regulatory/checkpoints/BJ/CONTINUATION_STATE.json",
+      "sha256": "9bd2a6bd2b8b061512eeecd515949e1e04d7c30f11e801d746d8808def537b75"
+    },
+    {
+      "bytes": 2865,
+      "crc32": "1af5eb95",
+      "git_blob_sha1": "e7f2711b84a404148cfcadec981b9ab3762e996f",
+      "path": "SOURCE/regulatory/checkpoints/BJ/CONTRADICTION_AND_SCOPE_REGISTER.json",
+      "sha256": "672f9eb86321d861c6f51048af9c2b78a299324b2e68aeb2e5df11aa7fa9529d"
+    },
+    {
+      "bytes": 4593,
+      "crc32": "2f44d0c2",
+      "git_blob_sha1": "d67a09a3e5b04411c6599ad4c5f0e30ebe749bd9",
+      "path": "SOURCE/regulatory/checkpoints/BJ/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "c0c510339c207f1079d614b809a963af0b91759b32e087fd848471d43c66738e"
+    },
+    {
+      "bytes": 3826,
+      "crc32": "4f589117",
+      "git_blob_sha1": "cae950fd25627173c6863b6dcff57ff782e20b22",
+      "path": "SOURCE/regulatory/checkpoints/BJ/EVIDENCE_DELTA.md",
+      "sha256": "9a68794ccfc0078ac226b7aaa6b51df374c02e68cbf9e2bf7b222f6b4b46c71f"
+    },
+    {
+      "bytes": 1628,
+      "crc32": "7014b017",
+      "git_blob_sha1": "84cda50338faf19240c46ec6eda0078988e700a2",
+      "path": "SOURCE/regulatory/checkpoints/BJ/EXECUTION_REPORT.md",
+      "sha256": "bda3e8fad4b3464a00eeea81e96f237dbf69e76e865c57c9fce467ac1ab2c58d"
+    },
+    {
+      "bytes": 1987,
+      "crc32": "56ec0353",
+      "git_blob_sha1": "7436868aa2b2341c988819c68e9f8f3e7d59fd20",
+      "path": "SOURCE/regulatory/checkpoints/BJ/QUALITY_REVIEW.md",
+      "sha256": "8b483847baecfeadb3e27e54e961d07809e1feb70eb89271e1a350a6b332739a"
+    },
+    {
+      "bytes": 3196,
+      "crc32": "34821d54",
+      "git_blob_sha1": "0bedc0219ed4801b82333f3fb320b7656503d118",
+      "path": "SOURCE/regulatory/checkpoints/BJ/README.md",
+      "sha256": "88e01967c6e1e6a61241ad6cc0b67833f4d070a49902bca85a49ed95f3ca56b7"
+    },
+    {
+      "bytes": 1691,
+      "crc32": "4298ac22",
+      "git_blob_sha1": "aa4eb9de5c9c5435e9e0b22764cbcf5fb8e72b96",
+      "path": "SOURCE/regulatory/checkpoints/BK/CONTINUATION_STATE.json",
+      "sha256": "360aa792973c7c4828d74660e0d011941c5ef3f77a130a459e5cb066562c1aaf"
+    },
+    {
+      "bytes": 5613,
+      "crc32": "8abbac56",
+      "git_blob_sha1": "1b01e8aca95bb0a4df45aabc4a640180b7238286",
+      "path": "SOURCE/regulatory/checkpoints/BK/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "9a0abea7e28b8794d3b8300ce5382982621b1dd746f445c08d1d90bafc54902c"
+    },
+    {
+      "bytes": 1865,
+      "crc32": "b00724c8",
+      "git_blob_sha1": "bc0433d85cead5c0f1c89b1bf2824e5019df668b",
+      "path": "SOURCE/regulatory/checkpoints/BK/EXECUTION_REPORT.md",
+      "sha256": "4b3343687fc28e2eaa7ae5d26588ac3dded27f8e5c9a5051b0092d9f1bc2acc3"
+    },
+    {
+      "bytes": 2464,
+      "crc32": "5a2af66c",
+      "git_blob_sha1": "70913c04e4c5777de9df112f9ff08f75513c1f28",
+      "path": "SOURCE/regulatory/checkpoints/BK/QUALITY_REVIEW.md",
+      "sha256": "47bcc680252c7c6f723e3401f5b53a2aa07fafcc08af723a88e765b98229a129"
+    },
+    {
+      "bytes": 4052,
+      "crc32": "d73e470a",
+      "git_blob_sha1": "7a9680651621cc0195a94e7f93a96914db52a5da",
+      "path": "SOURCE/regulatory/checkpoints/BK/README.md",
+      "sha256": "1aada15bb191bd2d7d6614345bc65fc527d0838869e0b6090ba35c54c50d3ffd"
+    },
+    {
+      "bytes": 3995,
+      "crc32": "a1314959",
+      "git_blob_sha1": "2ba69187f06843f7d3c49b22f10ebf200c0cec5c",
+      "path": "SOURCE/regulatory/checkpoints/BK/REGULATORY_CONFLICT_AND_GATE_REGISTER.json",
+      "sha256": "8ceae220273ed7edd14dbe07ebb366a8e7fb4379debe2adb50bec5dfc8a0ea34"
+    },
+    {
+      "bytes": 4868,
+      "crc32": "0ac3a362",
+      "git_blob_sha1": "2572cea391a0743fa9c551597d0a3c21261bc463",
+      "path": "SOURCE/regulatory/checkpoints/BK/SOURCE_AND_AUTHORITY_DELTA.md",
+      "sha256": "3dd121697c7b845043b96c80d0d056f9cf67a8e547729efe837ac0bebbaa4c6b"
+    },
+    {
+      "bytes": 4634,
+      "crc32": "5f820ca5",
+      "git_blob_sha1": "812f474472d14cfd2c9cf0d0aa2ccb6bca41a57a",
+      "path": "SOURCE/regulatory/checkpoints/BL/CLAUSE_SEMANTICS_AND_IDENTITY_GATES.json",
+      "sha256": "90eeac7b431a8369c745297d97d29bb865b9f59ac14fce20e40e96655b62ca12"
+    },
+    {
+      "bytes": 1458,
+      "crc32": "74bc8a09",
+      "git_blob_sha1": "d9d5449198d426306b72b31366a6be1334b0bc7c",
+      "path": "SOURCE/regulatory/checkpoints/BL/CONTINUATION_STATE.json",
+      "sha256": "3a80500bc1c5a03c9e9fc9ff9a83a4d74d35960a122d72c27f9259d476f3d2f7"
+    },
+    {
+      "bytes": 6379,
+      "crc32": "7d18c38a",
+      "git_blob_sha1": "493a8855ce9264a88ab8a383bc7df8e1be76a453",
+      "path": "SOURCE/regulatory/checkpoints/BL/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "cd32af538354d6be3daaf78b10e85263d4f114a7caab4718ffa3c2cd9cbc6945"
+    },
+    {
+      "bytes": 1369,
+      "crc32": "e050f8ab",
+      "git_blob_sha1": "8122c2e111f4a2c71d4f182be0da573a8e65d481",
+      "path": "SOURCE/regulatory/checkpoints/BL/EXECUTION_REPORT.md",
+      "sha256": "4722aff27be5e8e8927382bdf155905c40b14600ce56de0c1f885fe45555b8ac"
+    },
+    {
+      "bytes": 2520,
+      "crc32": "efaa8d77",
+      "git_blob_sha1": "c3ae2cea141096cd3a9a453c0714bf5d2bf30c21",
+      "path": "SOURCE/regulatory/checkpoints/BL/QUALITY_REVIEW.md",
+      "sha256": "17f00298504c444b87dcb73f882d0dd24ab9835f7edd40d27ad6d09a88f226b4"
+    },
+    {
+      "bytes": 1657,
+      "crc32": "13ebcfc7",
+      "git_blob_sha1": "137023d32abb1ba44eb35655343420aff8311f49",
+      "path": "SOURCE/regulatory/checkpoints/BL/README.md",
+      "sha256": "230a2bb392223af98c9168252670fb213470f910156eeb61b7a5860d17bdf343"
+    },
+    {
+      "bytes": 2761,
+      "crc32": "f853d62b",
+      "git_blob_sha1": "8780b07da8fb2a08e08c90896e23af949ab1bb12",
+      "path": "SOURCE/regulatory/checkpoints/BL/SOURCE_AND_EVIDENCE_DELTA.md",
+      "sha256": "271dd4f06fa823e2fe114b270a25ce8d85e4b14396e23046f8712b8ea35f50a4"
+    },
+    {
+      "bytes": 1910,
+      "crc32": "afccc448",
+      "git_blob_sha1": "de5d134b56396ee27269951dc3f61d90ecf78906",
+      "path": "SOURCE/regulatory/checkpoints/BM/CONTINUATION_STATE.json",
+      "sha256": "e678538d781bc24a2ec1629f668ef479c43e51af9722999ce17d11a57174d6ff"
+    },
+    {
+      "bytes": 3830,
+      "crc32": "e274aff4",
+      "git_blob_sha1": "2177dd779d1682030db38ae80284366ec05f75c8",
+      "path": "SOURCE/regulatory/checkpoints/BM/EVIDENCE_DELTA.md",
+      "sha256": "44726ca218c140ede42c8a859b28a1f352e989c7ecf7003459d0ea9a8105c974"
+    },
+    {
+      "bytes": 1759,
+      "crc32": "9a1e0e66",
+      "git_blob_sha1": "3772ea24cfe9ab96407ade0d094f8bacacbb1d2f",
+      "path": "SOURCE/regulatory/checkpoints/BM/EXECUTION_REPORT.md",
+      "sha256": "98d30e169e8ff6d5c988924868cc44827baebeae21cefbbff1860876cceb1a0a"
+    },
+    {
+      "bytes": 3422,
+      "crc32": "82884a5e",
+      "git_blob_sha1": "21310c37d132c6c52e0a9abf6ea499316fbc4fc2",
+      "path": "SOURCE/regulatory/checkpoints/BM/ISSUER_CLARIFICATION_DOCKET.md",
+      "sha256": "0a869eb076f201c201e08a470e36ffb326125539673a77202c73c7f914850ecc"
+    },
+    {
+      "bytes": 4425,
+      "crc32": "2ae40aaa",
+      "git_blob_sha1": "4c84d63d95863bb9d7ca0765c7f876273be2b33d",
+      "path": "SOURCE/regulatory/checkpoints/BM/POLICY_GATE_AND_TEST_DESIGN.md",
+      "sha256": "e1218e6a3845f2bdd6a2aaa88653ef75c37517d0169fc1fe88ca15affa6c06a5"
+    },
+    {
+      "bytes": 2150,
+      "crc32": "b5eb8394",
+      "git_blob_sha1": "3b93f43fe3652d726cad356797142817580e4085",
+      "path": "SOURCE/regulatory/checkpoints/BM/QUALITY_REVIEW.md",
+      "sha256": "5ec80e3f3cc0a413064d6dc49b2bcfdc6a2f9ea92f3d5e0780025a8e889c52d8"
+    },
+    {
+      "bytes": 1921,
+      "crc32": "c2c65788",
+      "git_blob_sha1": "c51bfea599f2d64cbcf4bfe6cc0b7dfecfd0d877",
+      "path": "SOURCE/regulatory/checkpoints/BM/README.md",
+      "sha256": "983f66e24e9e70dc9c46a2925f6c5323db12751c248947b85904e934f44d5160"
+    },
+    {
+      "bytes": 6141,
+      "crc32": "3147ad85",
+      "git_blob_sha1": "cb69bbdbfaca46fc06bf51028f8887aa7d8338d0",
+      "path": "SOURCE/regulatory/checkpoints/BN/CLAUSE_LINEAGE_AND_EXPOSURE_MODEL.json",
+      "sha256": "09bd161349ddbb343488dda6d64fe4dcd175a4ec8ee3ee6c7c61732a27de4fe3"
+    },
+    {
+      "bytes": 2299,
+      "crc32": "f8d66ed0",
+      "git_blob_sha1": "823beb36b2622c0a7a379ec0a2bae0293355ae8b",
+      "path": "SOURCE/regulatory/checkpoints/BN/CONTINUATION_STATE.json",
+      "sha256": "6be28ff8ef587b3a76f19acc261723264052f64e5ef9f5052688a809e057fc92"
+    },
+    {
+      "bytes": 5562,
+      "crc32": "5947fe47",
+      "git_blob_sha1": "53139c88e0d4c5d40f262ff4d2236db7507d70b8",
+      "path": "SOURCE/regulatory/checkpoints/BN/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "aa27c70310d209726b94591c7276ca84197cb6b062d0b09d38823db3585094bd"
+    },
+    {
+      "bytes": 4665,
+      "crc32": "189cc304",
+      "git_blob_sha1": "ca95cef4ad11fabe45c0f300afbdb81272c91e1b",
+      "path": "SOURCE/regulatory/checkpoints/BN/EVIDENCE_DELTA.md",
+      "sha256": "84f3a201f743e57401a20ef3c3f66343a80d39ed075de790042fa17003d752b8"
+    },
+    {
+      "bytes": 2203,
+      "crc32": "8e17665f",
+      "git_blob_sha1": "c59218d83d66e3fc3c6ecb1fbcadfa3b77d2104c",
+      "path": "SOURCE/regulatory/checkpoints/BN/EXECUTION_REPORT.md",
+      "sha256": "166e398ee104259fef6e733d6ce08da722fd1b14eb22f06956353d52562ae746"
+    },
+    {
+      "bytes": 2306,
+      "crc32": "8abbaacb",
+      "git_blob_sha1": "dc370d784c515091334f17c5a0647e34cfd86f50",
+      "path": "SOURCE/regulatory/checkpoints/BN/QUALITY_REVIEW.md",
+      "sha256": "8e3e1dbcb0272afb02eec8992e5ab6834ec77a9684aa7ac1d9385ea7a6df0f38"
+    },
+    {
+      "bytes": 2623,
+      "crc32": "12c5d8f6",
+      "git_blob_sha1": "fefb3b6057724d4a25f1adb0c7f24532098f4b5d",
+      "path": "SOURCE/regulatory/checkpoints/BN/README.md",
+      "sha256": "4bfd5d8765a5407bcf7fba8a31ec0091018fc80f2eeec0cd4458900ee81350b5"
+    },
+    {
+      "bytes": 2037,
+      "crc32": "2979e08f",
+      "git_blob_sha1": "7232c6b3efc1a77ee15f7eddc8a35e01cdbaac62",
+      "path": "SOURCE/regulatory/checkpoints/BO/CONTINUATION_STATE.json",
+      "sha256": "09cb6800f6bd620277479da90915ff4b79807322fe65777d576dfb209b8b26cf"
+    },
+    {
+      "bytes": 6197,
+      "crc32": "b65dd760",
+      "git_blob_sha1": "5e0899dfdcc2c101b50c9e76f9428b3159248896",
+      "path": "SOURCE/regulatory/checkpoints/BO/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "74730a0876acd76bc5df553fc737dfd8e090a6004911eb4886d935f4c28fd26a"
+    },
+    {
+      "bytes": 1742,
+      "crc32": "20546f43",
+      "git_blob_sha1": "49075f190fce8ab3b9baba4586047fff8cbc556e",
+      "path": "SOURCE/regulatory/checkpoints/BO/EXECUTION_REPORT.md",
+      "sha256": "ce6235a9899da841724311ba405b5ed3cb8d508a45082725a1e204a4a9a2e5af"
+    },
+    {
+      "bytes": 2168,
+      "crc32": "dba4b5cb",
+      "git_blob_sha1": "868a1ae7fa3937641d0d43d589611cd3b0387024",
+      "path": "SOURCE/regulatory/checkpoints/BO/QUALITY_REVIEW.md",
+      "sha256": "6f7f8214ef9d4aca290f0ff7b9f8c47589544dd932fc50df7ded2fdf7e9ab7d9"
+    },
+    {
+      "bytes": 2168,
+      "crc32": "1243d88f",
+      "git_blob_sha1": "5d1371fb46b3a6551d1f877da30dc82f0aedc779",
+      "path": "SOURCE/regulatory/checkpoints/BO/README.md",
+      "sha256": "afd5c7799537d66b0d5fa361e2563cd011e91ef0eaa2bcf8500a8a8baf591ef5"
+    },
+    {
+      "bytes": 3540,
+      "crc32": "8fce6ed6",
+      "git_blob_sha1": "61ffcd4fbd2d76127311ae43cec248c1bd0c226f",
+      "path": "SOURCE/regulatory/checkpoints/BO/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "sha256": "fc336d24684ad6aff28b406ccbef6db5a6bdf9922c0039c1d1dde71991d77551"
+    },
+    {
+      "bytes": 5525,
+      "crc32": "5ab31018",
+      "git_blob_sha1": "57ffb7a458716b5257b4906e1e1164be8d00e5c1",
+      "path": "SOURCE/regulatory/checkpoints/BO/SOVEREIGN_SECURITY_AUTHORITY_GATES.json",
+      "sha256": "9b488c511a22997123f9fa7518ba2354363c5021d4a2433c93d4ef2619e0dff6"
+    },
+    {
+      "bytes": 2111,
+      "crc32": "995c97ff",
+      "git_blob_sha1": "dfa3d8230decb767d34eeebffc752da7cc7c44cf",
+      "path": "SOURCE/regulatory/checkpoints/BP/CONTINUATION_STATE.json",
+      "sha256": "7de5a196cf71f481d02d4a13110f6b985903fca2634482426378c85fcd4c3941"
+    },
+    {
+      "bytes": 6683,
+      "crc32": "8fe42b2c",
+      "git_blob_sha1": "715e07627fc34aff423bdaa7d47fb6816801ac43",
+      "path": "SOURCE/regulatory/checkpoints/BP/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "4271ec345919b5a01b093d3da7edc66b5b175b65018d83a3414ad9cd16b0d119"
+    },
+    {
+      "bytes": 1924,
+      "crc32": "e6534caa",
+      "git_blob_sha1": "515d72e3204eb0fcab5303e62768d4ae4445b468",
+      "path": "SOURCE/regulatory/checkpoints/BP/EXECUTION_REPORT.md",
+      "sha256": "2a1574a936e9238a1ae40310a2a497f39b193e9e7c70f1a84acb89dc793b0254"
+    },
+    {
+      "bytes": 2104,
+      "crc32": "7fd3fa49",
+      "git_blob_sha1": "067e3d5af0d60021bb26a04df1f3653493eaa43e",
+      "path": "SOURCE/regulatory/checkpoints/BP/QUALITY_REVIEW.md",
+      "sha256": "4b9f04beac1fa376f3c44ff2d3b04f6d3da33d1a6da739c98ff6b5c847fbed74"
+    },
+    {
+      "bytes": 9979,
+      "crc32": "24243acf",
+      "git_blob_sha1": "9ddc7d834576c77f74c6cc809edd47da73a80152",
+      "path": "SOURCE/regulatory/checkpoints/BP/RAIL_AUTHORITY_AND_MESSAGE_MODEL.json",
+      "sha256": "5cee17bd7d20d3261c0f76392fa1288bae00f9bb08dd612b49894edaf525febc"
+    },
+    {
+      "bytes": 1735,
+      "crc32": "40fb6da5",
+      "git_blob_sha1": "0d0412225d1bacba6b5d464becabcb0b7653f970",
+      "path": "SOURCE/regulatory/checkpoints/BP/README.md",
+      "sha256": "b4b8d1e69d09488405d48a94e398f8b0b4c4ed6527b67bfe8fb2e1ba90e3b1d0"
+    },
+    {
+      "bytes": 4356,
+      "crc32": "dcc075e8",
+      "git_blob_sha1": "c392cd4aa80968f37c991a7e36501ded9ac48f57",
+      "path": "SOURCE/regulatory/checkpoints/BP/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "sha256": "df500c9d6086358ff057c06b03b1a8008a130d8634d1ec9133cd6b05735ecd15"
+    },
+    {
+      "bytes": 2107,
+      "crc32": "77b87a69",
+      "git_blob_sha1": "2fa82d7d635174b99cf74edd1b3b3f59ec717783",
+      "path": "SOURCE/regulatory/checkpoints/BQ/CONTINUATION_STATE.json",
+      "sha256": "ca999e516d92578934a759a4bee89dcfc346bb63891f850ecd4225e5991df4cb"
+    },
+    {
+      "bytes": 4269,
+      "crc32": "e5b0ce96",
+      "git_blob_sha1": "ea838001210183d0572a5cc29e4fa64dfdb4548e",
+      "path": "SOURCE/regulatory/checkpoints/BQ/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "8dd8e99482749d8855c1c0c7830c933aca00598f266a1319e24f06e653d1b80a"
+    },
+    {
+      "bytes": 1857,
+      "crc32": "33ec9be6",
+      "git_blob_sha1": "0cf6ee6c77b00fca2e9a3bb7528371bb9eb95535",
+      "path": "SOURCE/regulatory/checkpoints/BQ/EXECUTION_REPORT.md",
+      "sha256": "3368147f1673307992a13f2f080e6e0f009c0f3bc629fb7dc27a28aeaa8a3011"
+    },
+    {
+      "bytes": 2083,
+      "crc32": "7e7bd531",
+      "git_blob_sha1": "09757d6ec1074f59ea4c3b915f444fa65c74d880",
+      "path": "SOURCE/regulatory/checkpoints/BQ/QUALITY_REVIEW.md",
+      "sha256": "2b4524165aa9994d3464e8fdad7dcd55c5a0bcf8cbe7eaaf0c04dd321cffecbe"
+    },
+    {
+      "bytes": 6237,
+      "crc32": "371a4135",
+      "git_blob_sha1": "666de4ac99266d9eae8b3e3041a7c1f5e5c31be0",
+      "path": "SOURCE/regulatory/checkpoints/BQ/RAIL_DEPLOYMENT_AND_CAPABILITY_GATES.json",
+      "sha256": "ecf3e978c8cde688a69b9aeda008fbc0e3a171f25f16b83d1f8ac313461f4f7d"
+    },
+    {
+      "bytes": 2464,
+      "crc32": "149da176",
+      "git_blob_sha1": "d2b3dd3ebd7019625d697443d53bacae635fe2f5",
+      "path": "SOURCE/regulatory/checkpoints/BQ/README.md",
+      "sha256": "289761f96b42fe257cb21e86d84ea8c2b2fa2bb739953f98a9444c3e48e223ec"
+    },
+    {
+      "bytes": 2770,
+      "crc32": "433872e7",
+      "git_blob_sha1": "d94ae296f5e4fdd63a09e1e47a6c0c2bbdf5caaf",
+      "path": "SOURCE/regulatory/checkpoints/BQ/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "sha256": "c69ce816adf568acada677c2c6db0a32dd6f9e09412ec29d6cfa2df91d9f1a93"
+    },
+    {
+      "bytes": 2048,
+      "crc32": "89e67998",
+      "git_blob_sha1": "6f95fa0a09c864462d19f26b83b44ef31da9d22b",
+      "path": "SOURCE/regulatory/checkpoints/BR/CONTINUATION_STATE.json",
+      "sha256": "50a136494493753e939df58864b7e3c247806ae3217a14597c638a1c9bbd34d3"
+    },
+    {
+      "bytes": 6087,
+      "crc32": "94c11111",
+      "git_blob_sha1": "2729f8cd91cefa3a30c0c100886553987c94bc08",
+      "path": "SOURCE/regulatory/checkpoints/BR/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "d6961e63b3347d07a0e542375ceac2023f4aa450eef19c841a1b0393b481ad0b"
+    },
+    {
+      "bytes": 4141,
+      "crc32": "d6a5a32f",
+      "git_blob_sha1": "d85f8cdb377fad54731279a62e683b838f65de43",
+      "path": "SOURCE/regulatory/checkpoints/BR/EVIDENCE_DELTA.md",
+      "sha256": "0065ab98e43d6c92338929304c41487010851e3baf510e8efd66daa69a3dbca9"
+    },
+    {
+      "bytes": 1614,
+      "crc32": "e0bd24ed",
+      "git_blob_sha1": "3192bcf7c822a89d58238f002c89cd002186ab7d",
+      "path": "SOURCE/regulatory/checkpoints/BR/EXECUTION_REPORT.md",
+      "sha256": "f896c9fd1e57ec31cb4bc60e118b8917c166344c79b92849644ac025b141af1d"
+    },
+    {
+      "bytes": 2175,
+      "crc32": "ae412658",
+      "git_blob_sha1": "383437509004316a710562ff34e6b345bad8bebe",
+      "path": "SOURCE/regulatory/checkpoints/BR/QUALITY_REVIEW.md",
+      "sha256": "31e30ee698620c60dcb446fe8245cf8565eddd334132bf9a86f456f5c4677e08"
+    },
+    {
+      "bytes": 2550,
+      "crc32": "0c81b598",
+      "git_blob_sha1": "af63ac81b7c04ec3194e840314434aba561c3f39",
+      "path": "SOURCE/regulatory/checkpoints/BR/README.md",
+      "sha256": "4854921ab5038fc499b3e58773e530799bc2b873a689cb08f40167272f82cc5d"
+    },
+    {
+      "bytes": 6162,
+      "crc32": "145df48d",
+      "git_blob_sha1": "7a17a4f4fd101f5c7c1887927c3bfb5d5c172e85",
+      "path": "SOURCE/regulatory/checkpoints/BR/RESTITUTION_AND_FINALITY_GATES.json",
+      "sha256": "3c9c6b8e823c7e3aceca0d721748adb8d6259a5b5d219f2398fad0b843521b77"
+    },
+    {
+      "bytes": 2564,
+      "crc32": "42dea0e7",
+      "git_blob_sha1": "37c995f66384e576ccfe3a6aa4a086f3758aa2ec",
+      "path": "SOURCE/regulatory/checkpoints/BS/CONTINUATION_STATE.json",
+      "sha256": "cb665c2308e4531be4f7b5eea1a5307ab6969199d9e0b2af111cdf25ea77e7a7"
+    },
+    {
+      "bytes": 5451,
+      "crc32": "219f4409",
+      "git_blob_sha1": "6319fc23946b70649b2ea2477ab1b5355163e4ad",
+      "path": "SOURCE/regulatory/checkpoints/BS/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "4f8639a6a92846d0b63a96e6466841fc40150142e0faf2adc74cc35e127f6c1a"
+    },
+    {
+      "bytes": 4281,
+      "crc32": "e218a2a2",
+      "git_blob_sha1": "e18143e81314bbf9ea7f5faaddbeb9e91eefc47f",
+      "path": "SOURCE/regulatory/checkpoints/BS/EVIDENCE_DELTA.md",
+      "sha256": "cd20f5cbd6810b1d24143c96a24d6dbb5fc97a86708d5970a92b45c750d5f682"
+    },
+    {
+      "bytes": 1729,
+      "crc32": "78634e79",
+      "git_blob_sha1": "edd5df96ab5619caab83776ac1b445125af4b95c",
+      "path": "SOURCE/regulatory/checkpoints/BS/EXECUTION_REPORT.md",
+      "sha256": "326e6c96134b209675f1b96961118c388c63b226278df17f81b92bf64a590e2f"
+    },
+    {
+      "bytes": 7885,
+      "crc32": "072fc5ad",
+      "git_blob_sha1": "7b7b39692a050f72046c4f5bc8c6ef2750841bc6",
+      "path": "SOURCE/regulatory/checkpoints/BS/LEGAL_SCOPE_AND_ENTITLEMENT_GATES.json",
+      "sha256": "e450be3dc33d4c04f3590072b6d5be98fe37b6f577895d70cb143d46ba53c6bc"
+    },
+    {
+      "bytes": 2238,
+      "crc32": "da35cc9a",
+      "git_blob_sha1": "c5a66b25cc0d198b7eac264a44e6ed80199f4362",
+      "path": "SOURCE/regulatory/checkpoints/BS/QUALITY_REVIEW.md",
+      "sha256": "db57ea08335ad28deca50848998733328f19e4dd14de3548be3ae28bf0d2bf3a"
+    },
+    {
+      "bytes": 1854,
+      "crc32": "e1c9923b",
+      "git_blob_sha1": "c174f83a62aee18110b16657478d8f3d09b20dcc",
+      "path": "SOURCE/regulatory/checkpoints/BS/README.md",
+      "sha256": "1921a2c8ec75fa28808958ae43e12991a87746983001c553e39073506201aae6"
+    },
+    {
+      "bytes": 2063,
+      "crc32": "8d0e4fdc",
+      "git_blob_sha1": "27ea8c0f19dead22a886abe5144cc82e2fafe5d2",
+      "path": "SOURCE/regulatory/checkpoints/BT/CONTINUATION_STATE.json",
+      "sha256": "1af376d7000ec71db17200010bf506ce56689247ab7bc2ccdb12e14276d1a319"
+    },
+    {
+      "bytes": 5905,
+      "crc32": "99361e45",
+      "git_blob_sha1": "4338813c22d526a91698cf24ffb2ed5b2715ac99",
+      "path": "SOURCE/regulatory/checkpoints/BT/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "30aa0794123fb10d84488692e75afa913f1a314bf10d9963af2e6a9f5d81a83e"
+    },
+    {
+      "bytes": 2052,
+      "crc32": "3ac5d2f5",
+      "git_blob_sha1": "5545d43532293080de44114d77ad22b23e8fac16",
+      "path": "SOURCE/regulatory/checkpoints/BT/EXECUTION_REPORT.md",
+      "sha256": "5432febec9d55682e7d81fd33928e16d0cd5b18b99da780d13926ed5357995a5"
+    },
+    {
+      "bytes": 2150,
+      "crc32": "9719036c",
+      "git_blob_sha1": "615de7a4a45dccbd37a19a4e5e901a755b21a8c0",
+      "path": "SOURCE/regulatory/checkpoints/BT/QUALITY_REVIEW.md",
+      "sha256": "10378111b51421471868b825cb05216bcbd7dd9dfe3e2ce8e1781a8ffd55e36c"
+    },
+    {
+      "bytes": 2512,
+      "crc32": "efb1ea12",
+      "git_blob_sha1": "c21e569192b57e986bc116b5584420643a61a3d8",
+      "path": "SOURCE/regulatory/checkpoints/BT/README.md",
+      "sha256": "3da5d3ab764e8c33298bcb3ebe58be862b5a37a6d1bf92c0e3d14524796590a3"
+    },
+    {
+      "bytes": 5042,
+      "crc32": "74670019",
+      "git_blob_sha1": "b00c516bc24939a4ea2809c0e34b20184954486b",
+      "path": "SOURCE/regulatory/checkpoints/BT/SCOPE_RECONCILIATION_AND_POLICY_GATES.json",
+      "sha256": "3a081becacf177d4b28db0740d280106bef373c1978be49cf62a9eab501ab3da"
+    },
+    {
+      "bytes": 3693,
+      "crc32": "b554b5fc",
+      "git_blob_sha1": "fc70bc500e3d481c92c8f78f6240e0d071629780",
+      "path": "SOURCE/regulatory/checkpoints/BT/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "sha256": "b1bf95d82c43aac804aa51f48f50669e39398302d58e86ffac8baaa935bfd36d"
+    },
+    {
+      "bytes": 1626,
+      "crc32": "6bcba03c",
+      "git_blob_sha1": "9594d89c21d28504392b7a5a1bbf3abdc1bbb178",
+      "path": "SOURCE/regulatory/checkpoints/BU/CONTINUATION_STATE.json",
+      "sha256": "de9e737968672fbd9bd96594e8af1d49e71a88dd17094c15aa0d77b7fcef4022"
+    },
+    {
+      "bytes": 5518,
+      "crc32": "83ce0f77",
+      "git_blob_sha1": "20a2dc281fbb314c73ee37d4fb793a0553ad9ff0",
+      "path": "SOURCE/regulatory/checkpoints/BU/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "5da4ec5f21605648a1ad3d76d6633ebcde1f62907b88eef152da1a5d037a2280"
+    },
+    {
+      "bytes": 3279,
+      "crc32": "b425baf3",
+      "git_blob_sha1": "004ad56857c632d2b3e188dca95fc2be3eea0598",
+      "path": "SOURCE/regulatory/checkpoints/BU/EVIDENCE_DELTA.md",
+      "sha256": "eba102fd1e4c62b7b559ea62a10fbd8e724d7cd45d9d677fd9c5d5926f094967"
+    },
+    {
+      "bytes": 1812,
+      "crc32": "9826527f",
+      "git_blob_sha1": "f557e22d147f3cdf41ee0d97a4d36173c36de290",
+      "path": "SOURCE/regulatory/checkpoints/BU/EXECUTION_REPORT.md",
+      "sha256": "057de05fcd7e545c8023ca3e58d9fc9cceb7dcee55c96aee5acc6a17b7d8c498"
+    },
+    {
+      "bytes": 4666,
+      "crc32": "c1ac965b",
+      "git_blob_sha1": "638dc2ac0ab3a170d0c2fda0c49e90b18bc70faf",
+      "path": "SOURCE/regulatory/checkpoints/BU/LEGAL_CITATION_INTEGRITY_GATES.json",
+      "sha256": "3e78e874e1bc65eed7c6ec162fdd139f9e42e3893542a84086bc67beb81b29ec"
+    },
+    {
+      "bytes": 2315,
+      "crc32": "bf9731cd",
+      "git_blob_sha1": "1ff56d7c62e0badb2f1e052e664db749ca58889b",
+      "path": "SOURCE/regulatory/checkpoints/BU/QUALITY_REVIEW.md",
+      "sha256": "b75a9d4f0f56a14f353867d7ba337e93aa5b4a3f5a6a40f4e4df793b7694e1db"
+    },
+    {
+      "bytes": 1594,
+      "crc32": "93868922",
+      "git_blob_sha1": "30e26851b56f39d444f0cbf90dd45940589993e8",
+      "path": "SOURCE/regulatory/checkpoints/BU/README.md",
+      "sha256": "a55c7f624e816c7ed2ddcd02b39e19ad0448c1bea3d23cc10a9a7faca9b83d24"
+    },
+    {
+      "bytes": 1755,
+      "crc32": "e2078d9e",
+      "git_blob_sha1": "9fc2fcbebaa7fdf72b9d7f6a1d27d4adc43377ea",
+      "path": "SOURCE/regulatory/checkpoints/BV/CONTINUATION_STATE.json",
+      "sha256": "3f443103fac3fd9352d88b95b92cbdc6b832f5bc63faaec1ba972a56f4d4c610"
+    },
+    {
+      "bytes": 5739,
+      "crc32": "3a4553b1",
+      "git_blob_sha1": "a67521bbf516f2975ff779be667791a9e1ecd901",
+      "path": "SOURCE/regulatory/checkpoints/BV/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "1461889e107ceae735240c2761c5f289669607a8ec693687d8c22dc48acd8a10"
+    },
+    {
+      "bytes": 5405,
+      "crc32": "832e96e3",
+      "git_blob_sha1": "1610ab58d66aee7fae9917acfd1b84d7841c9a71",
+      "path": "SOURCE/regulatory/checkpoints/BV/EVIDENCE_DELTA.md",
+      "sha256": "0ff00b2fc0b047319980c7aeb522eee8bfbedc9c1c4d9b89b30bd6836268ace2"
+    },
+    {
+      "bytes": 1859,
+      "crc32": "2f0065a8",
+      "git_blob_sha1": "5d9c662773bf45040206db8575fa16153b1b45dc",
+      "path": "SOURCE/regulatory/checkpoints/BV/EXECUTION_REPORT.md",
+      "sha256": "b7bc8e499a189cb04a7fda3f5cb23d42d86752f11a87356ead90a09a95727642"
+    },
+    {
+      "bytes": 2235,
+      "crc32": "5734cc45",
+      "git_blob_sha1": "6040296c6cf0336dbb06372388aaa8695079c907",
+      "path": "SOURCE/regulatory/checkpoints/BV/QUALITY_REVIEW.md",
+      "sha256": "e0d6f1e5116bfd639c32a3831aac5b4cb971195ab2bf350d8430b0c9e715295e"
+    },
+    {
+      "bytes": 1636,
+      "crc32": "f3c75da5",
+      "git_blob_sha1": "09918069ea3fb419b1ecd253f462f362c2d7a1fd",
+      "path": "SOURCE/regulatory/checkpoints/BV/README.md",
+      "sha256": "14592b888cb0e96d1a1188f569ecd6346d5ed8dbf8bfc10f137390968398c858"
+    },
+    {
+      "bytes": 9692,
+      "crc32": "04fb4854",
+      "git_blob_sha1": "6e58f5fa07207840ae6f7e96d517443366ed1cb9",
+      "path": "SOURCE/regulatory/checkpoints/BV/REGULATORY_CONTROL_GATES.json",
+      "sha256": "aa641fe37ed81af8abdb5d9e22fc89db82f6c02dbbf4512902ec5763654dbee4"
+    },
+    {
+      "bytes": 1864,
+      "crc32": "fee3bdce",
+      "git_blob_sha1": "f3c30b790b1891fadf5c8aad6f2d992b307d6c02",
+      "path": "SOURCE/regulatory/checkpoints/BW/CONTINUATION_STATE.json",
+      "sha256": "a6950a34f09d16ba83eda35934a516d49bdb2f63079391e0725f6b4783afe31a"
+    },
+    {
+      "bytes": 8271,
+      "crc32": "6afb1461",
+      "git_blob_sha1": "588b80d3817e8268937bc21ecdc454674bf04ca5",
+      "path": "SOURCE/regulatory/checkpoints/BW/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "03607799c86dace57845eb3ad33fd0030ddc06a3716bcbcf75ca1b9383907e09"
+    },
+    {
+      "bytes": 5003,
+      "crc32": "9ec4e949",
+      "git_blob_sha1": "12fa52390dd908b42e7fd2b87f4972db28856d2f",
+      "path": "SOURCE/regulatory/checkpoints/BW/EVIDENCE_DELTA.md",
+      "sha256": "7411dafa2cdb8d13b0a3b1b78a47ec85121103e90bddb5c2d1372a4a37652e1c"
+    },
+    {
+      "bytes": 1819,
+      "crc32": "dcf59c3e",
+      "git_blob_sha1": "64c722944f4a3bbef56ce09a4546d8f5ed9d8896",
+      "path": "SOURCE/regulatory/checkpoints/BW/EXECUTION_REPORT.md",
+      "sha256": "fc379b687af5e4f2ddac0f5b263fd3d85406bec44334028edec3d99a9a29cb17"
+    },
+    {
+      "bytes": 7687,
+      "crc32": "7bc7cf85",
+      "git_blob_sha1": "297828b87062be402b0d34e5afc9424efa9f3dce",
+      "path": "SOURCE/regulatory/checkpoints/BW/LEGAL_INCIDENT_AND_TEMPORAL_GATES.json",
+      "sha256": "653de25d3460fbbb29b26c23bc7adeba9fe7af6b35636eb110ac891d71be8a4d"
+    },
+    {
+      "bytes": 2353,
+      "crc32": "32f38efb",
+      "git_blob_sha1": "0fab6c7e64320b48b5ad7e5410845b7a40a10578",
+      "path": "SOURCE/regulatory/checkpoints/BW/QUALITY_REVIEW.md",
+      "sha256": "4f789b683e7bca42cb4f6e9fd3c693aae450d685e0e0e1fa6ac0779bb80cba7d"
+    },
+    {
+      "bytes": 1919,
+      "crc32": "083442ee",
+      "git_blob_sha1": "469cd05efa83a07aae32cf6df9a08c2895834455",
+      "path": "SOURCE/regulatory/checkpoints/BW/README.md",
+      "sha256": "a779afe0a2e7cef62a8fb7e825384ca0f0d5355c52c77943c16b7b2c41374754"
+    },
+    {
+      "bytes": 1803,
+      "crc32": "24f13d2d",
+      "git_blob_sha1": "f7decb68517c288c2c8443bb1c5b49675ac6ab10",
+      "path": "SOURCE/regulatory/checkpoints/BX/CONTINUATION_STATE.json",
+      "sha256": "be44b9ee43645dca89abeb6d16af6152d6702abcc99cebb39bf14102e09f794d"
+    },
+    {
+      "bytes": 10429,
+      "crc32": "829cacb3",
+      "git_blob_sha1": "ef3364d3a8915b2e72b4d9e537229488b78e3d5b",
+      "path": "SOURCE/regulatory/checkpoints/BX/CONTROL_MATRIX.json",
+      "sha256": "aaaf4e213a9b06d9f99047aab2a1b2edad799a11b0592cc513bc896c00b8cf8c"
+    },
+    {
+      "bytes": 3635,
+      "crc32": "9938afca",
+      "git_blob_sha1": "c52c1150b942226dbf14f66a651a6f0c55f7d48e",
+      "path": "SOURCE/regulatory/checkpoints/BX/EVIDENCE_DELTA.md",
+      "sha256": "9a9c81892da047d04ee3c7c25ff91152134cc5d1226fc01fdb3a2de9fc464e7b"
+    },
+    {
+      "bytes": 1771,
+      "crc32": "385fe73f",
+      "git_blob_sha1": "c5dc7ab12fc4fb17d46114249f974ead819ee81d",
+      "path": "SOURCE/regulatory/checkpoints/BX/EXECUTION_REPORT.md",
+      "sha256": "c92e6ee742178de2b9cc8f2228491d53ae109bcc2a2d435186b1285b1dd4c763"
+    },
+    {
+      "bytes": 2331,
+      "crc32": "5304f4ed",
+      "git_blob_sha1": "5a401f4623307cecc44fdde25927aa965657bde0",
+      "path": "SOURCE/regulatory/checkpoints/BX/QUALITY_REVIEW.md",
+      "sha256": "11e4ef9c9bb6c6a02e7a4874a4e01519c9f51f026dfa0c1948eca1495e130e92"
+    },
+    {
+      "bytes": 2181,
+      "crc32": "fa8267ac",
+      "git_blob_sha1": "c11c14cf06670ddafc8ba378850a22c9f1514c23",
+      "path": "SOURCE/regulatory/checkpoints/BX/README.md",
+      "sha256": "bc606ad391968161baec3981c9ed43d903c5b8d972a5d93fd824bcbb622ffea6"
+    },
+    {
+      "bytes": 3165,
+      "crc32": "856d2b89",
+      "git_blob_sha1": "d0a83893c6d76f38bd976d968452beebd05f5605",
+      "path": "SOURCE/regulatory/checkpoints/BX/TEST_DESIGN.md",
+      "sha256": "26e74e8508e32ff6392e10f2e9a36e1cb2c15f0173065715334e4255e832b4b9"
+    },
+    {
+      "bytes": 1989,
+      "crc32": "997d9e78",
+      "git_blob_sha1": "dece04788b0771f92a2abe09cb23d8dc9968fec3",
+      "path": "SOURCE/regulatory/checkpoints/BY/CONTINUATION_STATE.json",
+      "sha256": "40898c11746b07b84641d3b99523475fa12c3f5e5b1cc5093db868975cae6505"
+    },
+    {
+      "bytes": 4384,
+      "crc32": "d723f028",
+      "git_blob_sha1": "43c2ebb56aa6ad7af2e2cd8d2492929cc2d27a7e",
+      "path": "SOURCE/regulatory/checkpoints/BY/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "1364c006dc58369859c34bfdb751cf5358f3716890ca6b1ca76e105beb3adf28"
+    },
+    {
+      "bytes": 3911,
+      "crc32": "d4a1621e",
+      "git_blob_sha1": "8352a6ead66eab3a02085957739a3795ffaed88b",
+      "path": "SOURCE/regulatory/checkpoints/BY/EVIDENCE_DELTA.md",
+      "sha256": "70bc1a71c5a0fb49e2b1c0c276890133cff8ec1215e126bc1fc0f98fcb86bb5b"
+    },
+    {
+      "bytes": 1921,
+      "crc32": "7c292ffa",
+      "git_blob_sha1": "415110b97ac3e4b0318966f6cfb0f570170d6fcc",
+      "path": "SOURCE/regulatory/checkpoints/BY/EXECUTION_REPORT.md",
+      "sha256": "283cf9e2bd5bf1df1b65a88fa9bd52ad53d3f57ba962fc65227fcf7793471f71"
+    },
+    {
+      "bytes": 9254,
+      "crc32": "92d5e1a4",
+      "git_blob_sha1": "cb18b91365d48afb678ebc6740d8acc453b3e339",
+      "path": "SOURCE/regulatory/checkpoints/BY/PAYMENT_SUPERVISION_AND_SETTLEMENT_GATES.json",
+      "sha256": "298ebba3a4613c997229e9521585a80bb441deb3c7ad4bcc9a5aac3e445c36c6"
+    },
+    {
+      "bytes": 2535,
+      "crc32": "50a6fcb2",
+      "git_blob_sha1": "ed9603fc4c87d7b89811a842835d55852a302199",
+      "path": "SOURCE/regulatory/checkpoints/BY/QUALITY_REVIEW.md",
+      "sha256": "2697e5456886fabec256cbce1bf5717e1e78f903a30eefe3fa348a827db3d9ff"
+    },
+    {
+      "bytes": 2376,
+      "crc32": "8a0c15a8",
+      "git_blob_sha1": "6fff7508281d562817dc8c31ede07ecfbd53847c",
+      "path": "SOURCE/regulatory/checkpoints/BY/README.md",
+      "sha256": "c6103b74e3d12788c18927842d4dcf49c755c427f9f35f044664581e8a0d7ac4"
+    },
+    {
+      "bytes": 1937,
+      "crc32": "fd5e6c1c",
+      "git_blob_sha1": "1550cbc7be5ce6f14af3afa77a309721b0cec12e",
+      "path": "SOURCE/regulatory/checkpoints/BZ/CONTINUATION_STATE.json",
+      "sha256": "ce3717f8d1a065b2429c242cebc3816e2ac44538f6bf44725a242e2f7efe33ae"
+    },
+    {
+      "bytes": 4364,
+      "crc32": "a5bae8ae",
+      "git_blob_sha1": "3a101868f2849c2f3a864f73bdf73efe3fbd0391",
+      "path": "SOURCE/regulatory/checkpoints/BZ/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "21bee506eb7a9b9d8b148351de07b314f6fcdf743452669920101f4cfba55bde"
+    },
+    {
+      "bytes": 4661,
+      "crc32": "c9278d4b",
+      "git_blob_sha1": "c19f5b27961f100834430447a1bb4eb9817e93c7",
+      "path": "SOURCE/regulatory/checkpoints/BZ/EVIDENCE_DELTA.md",
+      "sha256": "ee834e7216b02ffb1cd94013dea629110f7e3a35b23d684b4df56fbf3029e036"
+    },
+    {
+      "bytes": 2047,
+      "crc32": "7601806b",
+      "git_blob_sha1": "47bce171cc20d606f1f67abd46e56e26f9f5576d",
+      "path": "SOURCE/regulatory/checkpoints/BZ/EXECUTION_REPORT.md",
+      "sha256": "4ca057b8c2be4133536aaa38db6da6e50c27e0e86df64251a1feccc67f9ed276"
+    },
+    {
+      "bytes": 2150,
+      "crc32": "fdca6348",
+      "git_blob_sha1": "cf473235b992462547fa227a36d0a246f35214a1",
+      "path": "SOURCE/regulatory/checkpoints/BZ/QUALITY_REVIEW.md",
+      "sha256": "8f8b7465d6f5cbb8268d7adfd288f3dfdb1df032cff76ab23615a332006e180f"
+    },
+    {
+      "bytes": 2607,
+      "crc32": "a17294aa",
+      "git_blob_sha1": "64dac6d257807f286c93ce73a28ccff5ab978093",
+      "path": "SOURCE/regulatory/checkpoints/BZ/README.md",
+      "sha256": "ac6394044296009213cd51522324ebed03324f3f1301b208fada93f167968dc0"
+    },
+    {
+      "bytes": 8368,
+      "crc32": "266236e7",
+      "git_blob_sha1": "577dc7757a34326b27532ce7af6750dd49448722",
+      "path": "SOURCE/regulatory/checkpoints/BZ/SURVEILLANCE_CONTROL_GATES.json",
+      "sha256": "4f927723eea0555d04e2c018b0626fb2bb9c3b7ea2e83d849e498a3679552e71"
+    },
+    {
+      "bytes": 2124,
+      "crc32": "b1f0b6d0",
+      "git_blob_sha1": "10d25ccb63adc324e2e6d1b4b3a62745f87f6ec3",
+      "path": "SOURCE/regulatory/checkpoints/CA/CONTINUATION_STATE.json",
+      "sha256": "f2cee1322d564c4f92d9969f9d822bd6a9d350d332f2584b24a06e0ee581228c"
+    },
+    {
+      "bytes": 5262,
+      "crc32": "e2730a51",
+      "git_blob_sha1": "3788b4cb3a86e153378e8a4818f9c81a8343228d",
+      "path": "SOURCE/regulatory/checkpoints/CA/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "ea21719481151cd6e8e0e0cad6446ec7750798dc51462c294df6b16cad61bbac"
+    },
+    {
+      "bytes": 5435,
+      "crc32": "26c0d391",
+      "git_blob_sha1": "81821ea385b8437fdfeccd56f22b4aa4846bc9f3",
+      "path": "SOURCE/regulatory/checkpoints/CA/EVIDENCE_DELTA.md",
+      "sha256": "980020cc81e536234edb8101a8520a24f5007d8639863c9c204117a0db508b4c"
+    },
+    {
+      "bytes": 1915,
+      "crc32": "a6c88395",
+      "git_blob_sha1": "3171e1538d0aa0de3ea536879af495d911e2dee3",
+      "path": "SOURCE/regulatory/checkpoints/CA/EXECUTION_REPORT.md",
+      "sha256": "9d0baf09c760cd9254ead83f78778041e089c098d70fbacf8c8eb1c3a0f97511"
+    },
+    {
+      "bytes": 5371,
+      "crc32": "bcf488be",
+      "git_blob_sha1": "9993454b43cab8bb9b1e1440a47e4621842f42d3",
+      "path": "SOURCE/regulatory/checkpoints/CA/ISO20022_AUTHORITY_GATES.json",
+      "sha256": "6f109098422504b8c1a32b27b2feedbcf348e8319242717355a07b7071a54af9"
+    },
+    {
+      "bytes": 2277,
+      "crc32": "6d3a07ec",
+      "git_blob_sha1": "79ba6c141f7ebbaf4556edd92517733b5373fa0b",
+      "path": "SOURCE/regulatory/checkpoints/CA/QUALITY_REVIEW.md",
+      "sha256": "077e2e2a4c52b7b1ec1b5ecc79bde787fcd6c2f426b8c49fde0e678e8f5fc0cf"
+    },
+    {
+      "bytes": 3173,
+      "crc32": "7358520b",
+      "git_blob_sha1": "9672c4af6487a1e02c6068b49ad896612eb83a3b",
+      "path": "SOURCE/regulatory/checkpoints/CA/README.md",
+      "sha256": "839e0819d619a5ecbf3eeb11a9eb2dcbf409b4ed1194063a1a7d720b8f8d5177"
+    },
+    {
+      "bytes": 2153,
+      "crc32": "95cb3617",
+      "git_blob_sha1": "154ed9cc5a95ddec6a82a6efd762eae696c2816d",
+      "path": "SOURCE/regulatory/checkpoints/CB/CONTINUATION_STATE.json",
+      "sha256": "d4faab00cdb1b8a6ebfb26fb94057c0ee0165bf9d0677a7da112c331dc701ff3"
+    },
+    {
+      "bytes": 4161,
+      "crc32": "d24b1efd",
+      "git_blob_sha1": "54d240a392d2542d99c0d5516d1c9fac6a28e9c6",
+      "path": "SOURCE/regulatory/checkpoints/CB/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "1eb27b3d5b05717a1996da2a4a08accb25f2a6d2ea715f33efc3bb2fb13a7801"
+    },
+    {
+      "bytes": 4892,
+      "crc32": "85437f85",
+      "git_blob_sha1": "cbe284f62c05359edf0fd1413998f68ebb3b1d4d",
+      "path": "SOURCE/regulatory/checkpoints/CB/EVIDENCE_DELTA.md",
+      "sha256": "9a2c361af56cb2dc8fd96e2af41ca953ba4d5defae0b0daa5cefc8ef25195369"
+    },
+    {
+      "bytes": 1842,
+      "crc32": "9743d08f",
+      "git_blob_sha1": "a79fd7d17078f289908714cc4a52e37d30a69938",
+      "path": "SOURCE/regulatory/checkpoints/CB/EXECUTION_REPORT.md",
+      "sha256": "b5788dd187b3d34ea03364a91c15b3be0ee06d83369ea23a4d7066fa75a3f868"
+    },
+    {
+      "bytes": 6555,
+      "crc32": "ed9c37ba",
+      "git_blob_sha1": "526ac489781049c50c9b6ac018d0296bda892cbb",
+      "path": "SOURCE/regulatory/checkpoints/CB/PAYMENT_PROFILE_RELEASE_GATES.json",
+      "sha256": "45650fd5ec119c21b52266763ac84fd8568c37cc2aef58cfbee9e0f9d9e47cb3"
+    },
+    {
+      "bytes": 2153,
+      "crc32": "6181bef8",
+      "git_blob_sha1": "6934f2f1402ff90b318fac8114f0af4f066e8c9d",
+      "path": "SOURCE/regulatory/checkpoints/CB/QUALITY_REVIEW.md",
+      "sha256": "8d367701d44cd1277a606cf1f20882c226540418f4df8bffe9c31527b8ec516f"
+    },
+    {
+      "bytes": 1022,
+      "crc32": "d1a2e506",
+      "git_blob_sha1": "d8423464018fce8551557182a2f00bf3e00f9d90",
+      "path": "SOURCE/regulatory/checkpoints/CB/README.md",
+      "sha256": "213eb88830f412a441971e2f718ad9fd68ed3deed3102db19cd2f93d8e0a204a"
+    },
+    {
+      "bytes": 4994,
+      "crc32": "2d23ff6f",
+      "git_blob_sha1": "00d7113578c6b5feb17898edd6278ebfc6294347",
+      "path": "SOURCE/regulatory/checkpoints/CC/README.md",
+      "sha256": "9301c9db096aae242215da09a7d08ab53c12ede152f9754958e217a4a3349c80"
+    },
+    {
+      "bytes": 4780,
+      "crc32": "73589840",
+      "git_blob_sha1": "8a3ccea24b6727773d2c11264d51aa22a71ed492",
+      "path": "SOURCE/regulatory/checkpoints/CD/README.md",
+      "sha256": "02f8abd9943ecdc010e08df003789da3df1cb516b12295e8e8ff72705e0d1f2f"
+    },
+    {
+      "bytes": 5606,
+      "crc32": "84880a65",
+      "git_blob_sha1": "9b406b7cc91a25589709cd52d92af453ba896251",
+      "path": "SOURCE/regulatory/checkpoints/CE/README.md",
+      "sha256": "77eda3e6b84487105718947f5a5da16171dd17b0bddc81f188407141402db101"
+    },
+    {
+      "bytes": 5314,
+      "crc32": "0a922dda",
+      "git_blob_sha1": "77b24ce4c53873373b207bf6c26df261398dfcab",
+      "path": "SOURCE/regulatory/checkpoints/CF/README.md",
+      "sha256": "d1d9cdf544537f517e1b1168f408c33e6dd6777e3234b91ca08df502e6029552"
+    },
+    {
+      "bytes": 5752,
+      "crc32": "169f5078",
+      "git_blob_sha1": "5b628493775bdb8c1a6b8894bf29fd9ce49bcbd4",
+      "path": "SOURCE/regulatory/checkpoints/CG/README.md",
+      "sha256": "803ab7693f53163db61d95fff28e26b635397b72ac34c11b82ca4cbae6d2bdf7"
+    },
+    {
+      "bytes": 6320,
+      "crc32": "dded8025",
+      "git_blob_sha1": "3b72fd718938d39e0baafbe6f5088fbfab76a605",
+      "path": "SOURCE/regulatory/checkpoints/CH/README.md",
+      "sha256": "f538c896910792d03a092c033d2c37781694930a1ff099bcb203367a4fa09776"
+    },
+    {
+      "bytes": 7746,
+      "crc32": "0a061d56",
+      "git_blob_sha1": "7f6bd88d99b2440f956ba8d82c49763eed029288",
+      "path": "SOURCE/regulatory/checkpoints/CI/README.md",
+      "sha256": "a51c71be0310629e607e1a558af13ba6f84c32d961a1cf2da3e566a801e8ca4f"
+    },
+    {
+      "bytes": 8697,
+      "crc32": "35bf0242",
+      "git_blob_sha1": "c7a8f048f62e12c653a1bb7d31577009ad9ce728",
+      "path": "SOURCE/regulatory/checkpoints/CJ/README.md",
+      "sha256": "14a04cda9bf5d0140c4b0790bea2d9bbf78eaf098e522a8ad66794954f07966d"
+    },
+    {
+      "bytes": 8762,
+      "crc32": "d434c444",
+      "git_blob_sha1": "51a236d468accf37eb811a185b04581bd0d9f11c",
+      "path": "SOURCE/regulatory/checkpoints/CK/README.md",
+      "sha256": "41b0b3e2d77cfbef7e0dd8f502736588d0ab7f7a7d9062d63dc10df79c9ec08e"
+    },
+    {
+      "bytes": 13012,
+      "crc32": "dc18b49b",
+      "git_blob_sha1": "5a6cd739f7618ca724fb908b9fe13ce980ffeaed",
+      "path": "SOURCE/regulatory/checkpoints/CL/README.md",
+      "sha256": "dd84e5b04451a72a6bfdb7d60ded13c1d16938672b5062b70761f1d389a712ed"
+    },
+    {
+      "bytes": 7747,
+      "crc32": "7961b7ea",
+      "git_blob_sha1": "37c1af4aa6744efcd95235f09b62cc0a5fc8d65c",
+      "path": "SOURCE/regulatory/checkpoints/CM/README.md",
+      "sha256": "2c8bf239b675f75c5405667521b914bbbb298fa5d6b1efa25993237aaba2dcdd"
+    },
+    {
+      "bytes": 5875,
+      "crc32": "a61f3afa",
+      "git_blob_sha1": "f171d4301e43d15cfac7e764953005ea4f0352a2",
+      "path": "SOURCE/regulatory/checkpoints/CN/README.md",
+      "sha256": "cf6cd27bcc2f59d5a3dc50d261d3508d1177d47ce0b9568a7339d9155836df21"
+    },
+    {
+      "bytes": 5036,
+      "crc32": "41d23026",
+      "git_blob_sha1": "9a7aeea680f56aa5892b62cb516c4bb79a4daa6b",
+      "path": "SOURCE/regulatory/checkpoints/CO/README.md",
+      "sha256": "65c614d56cb45b16002afdc2cf34ba4f1b7f8a5a3cabb6be40a1bbb46f1a92a4"
+    },
+    {
+      "bytes": 6085,
+      "crc32": "411595ad",
+      "git_blob_sha1": "4a7463062e8c78229b98e33d2093a1db4dda55e8",
+      "path": "SOURCE/regulatory/checkpoints/CP/README.md",
+      "sha256": "3056617df83ef7f648c72492d7ba75a298d22cd66e73b1e744b3c587799db1b9"
+    },
+    {
+      "bytes": 6003,
+      "crc32": "872aadf8",
+      "git_blob_sha1": "7526f3df35aaef57af3acece2691451ab263b4ab",
+      "path": "SOURCE/regulatory/checkpoints/CQ/README.md",
+      "sha256": "4ba2db17bd8ce4c95d184ba0a4f2ba13c005707da0f127625775d26fa76ff654"
+    },
+    {
+      "bytes": 8869,
+      "crc32": "6a4d6fca",
+      "git_blob_sha1": "4ab53d4db30aeb15f37d03847df812bd36f8e4a5",
+      "path": "SOURCE/regulatory/checkpoints/CR/README.md",
+      "sha256": "fd3eac045a702d9f0335d1f1ac3db11987785620a7ce5a9611868782532dde48"
+    },
+    {
+      "bytes": 6232,
+      "crc32": "d935d630",
+      "git_blob_sha1": "2a4c584e8367cdbd58beac6049a3ea991f592b57",
+      "path": "SOURCE/regulatory/checkpoints/CS/README.md",
+      "sha256": "2910e819c1f083e4d26ea4df337dc805974c0e5bf82f862a3c27e0c2377a6dd3"
+    },
+    {
+      "bytes": 5383,
+      "crc32": "cf703421",
+      "git_blob_sha1": "cb43ca5d08831a1c96503c5d378e58ad3f5d4b89",
+      "path": "SOURCE/regulatory/checkpoints/CT/README.md",
+      "sha256": "d93722f3211a279cbd84ec32d1e73f949d3da9f5056b34b3c041bbaf67f22e07"
+    },
+    {
+      "bytes": 125241,
+      "crc32": "733ce6df",
+      "git_blob_sha1": "7f51ac1d6eb84ba7ceb6c9a6a9a1ff4f5436f8a5",
+      "path": "SOURCE_CROSSWALK.json",
+      "sha256": "0c7a87fd0e3c3453b6850c878cbbf280a31e9092850e0493c23836b249c9ee20"
+    },
+    {
+      "bytes": 771,
+      "crc32": "f87d8eba",
+      "git_blob_sha1": "916eb269a83dfa1e81bd52964719b2059f455108",
+      "path": "WP_ACC_005_AUTHORITY_HOLD.md",
+      "sha256": "2c49b0e77db3898144cfbe240c1822878a960c406e91ff353f11f3656dadfb25"
+    }
+  ]
+}

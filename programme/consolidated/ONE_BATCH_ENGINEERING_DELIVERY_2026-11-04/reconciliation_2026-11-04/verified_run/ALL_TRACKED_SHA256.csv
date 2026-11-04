@@ -1,7 +1,7 @@
 path,bytes,sha256,extension,source_group,candidate_owner,inspection,title
-.github/workflows/reconcile-core-banking.yml,1195,6240bc3f673a9122aec62e934da8c6fb6ce05bbed1274ac4f2fe76bea1dee9c3,.yml,other,UNMAPPED,UTF8_READ,
+.github/workflows/reconcile-core-banking.yml,1720,5be68796b81379f67949ec85e6fd5b41f6e89aa64b4f49634b792a95f7c3a1b4,.yml,other,UNMAPPED,UTF8_READ,
 .github/workflows/restore-checkpoint-an.yml,1185,0d5d0685a8261d7c62bb3735dd82dc1bd19016014ab195f03fce65895fff6b7f,.yml,other,UNMAPPED,UTF8_READ,
-governance/CANONICAL_PROGRAMME_STATE.json,1992,ee09f949ff57fb21ce496649825c3b77bcbc0ef649adb8626d5ab7142279de4b,.json,governance,UNMAPPED,UTF8_READ,
+governance/CANONICAL_PROGRAMME_STATE.json,2933,87fce51c34fdf8d1b2f22d176a1f1f1db987787e006e77fb215ec0e80b42555c,.json,governance,UNMAPPED,UTF8_READ,
 governance/GOV_REC_001_AN_ARCHIVE_EXISTENCE_RECONCILIATION_2026-11-04.md,3252,cfc3de37e747d84965dd35c85e928f7775f06b7064554c74029784b9b204942c,.md,governance,UNMAPPED,UTF8_READ,GOV-REC-001 — AN archive existence reconciliation (2026-11-04)
 governance/GOV_REC_001_AN_ARCHIVE_PROVENANCE_GATE_2026-11-04.md,3833,6ce5934761eb56376ffcb14720daafb49f75585f8ca3504517fd46f46754ceef,.md,governance,UNMAPPED,UTF8_READ,GOV-REC-001 — AN original-archive provenance and acceptance gate
 governance/GOV_REC_001_AN_BINARY_ZIP_CENTRAL_DIRECTORY_VERIFICATION_2026-11-04.md,3073,717c2edff2f1ab52e9c1fc7e6df3398e6394495886ce1d04df5f954f1d6f341e,.md,governance,UNMAPPED,UTF8_READ,GOV-REC-001 — AN binary retrieval and ZIP central-directory verification
@@ -19,6 +19,7 @@ governance/LOCAL_ARTIFACT_RECOVERY_INVENTORY_2026-11-03.md,2485,2c56410f5a431cdf
 governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md,8095,9a9f83429174a2274bfb211d8d92c18c52b1d30f185585ff33f991aa44c219a3,.md,governance,UNMAPPED,UTF8_READ,OPES Core Banking — Canonical Master Plan and WBS Recovery Register v0.1
 governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.2_2026-11-04.md,5750,d7fe50485caa1daf65644376877969da5f76b26c779753bb02f3a7f4c3d47a0e,.md,governance,UNMAPPED,UTF8_READ,OPES Core Banking — Canonical Master Plan and WBS Recovery Register v0.2
 governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.3_2026-11-04.md,3337,784532e47c0dca4ba28aa8c13217fbf57d41c8fbe253b790e54b2f627eceb8b0,.md,governance,UNMAPPED,UTF8_READ,OPES Core Banking — Canonical Master Recovery State v0.3 (2026-11-04)
+governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.4_2026-11-04.md,944,5b9e41f94df4db250582338e00e797a7b61d5622e4380a1f352cdf9221a7fd0f,.md,governance,UNMAPPED,UTF8_READ,Canonical master recovery and WBS v0.4
 governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md,5995,f4b81942258e02b4830e9fa3405f7f078a6d19700fd23074804355d205685728,.md,governance,UNMAPPED,UTF8_READ,OPES Core Banking — Programme Governance Recovery Baseline
 governance/REPOSITORY_ASSET_SYNC_AUDIT_2026-11-03.md,3470,aeface3ede9cd371be6c61f9c9b40ad2e62b9b58989a098f5ea01e7f4c87391a,.md,governance,UNMAPPED,UTF8_READ,OPES Core Banking — Repository Asset Synchronization Audit
 governance/REPOSITORY_INVENTORY_BLOBS_2026-11-03.json,147321,ddbc57103a3287d42958acc78ec38c2d272cf1f102eb62982507f08ce4f96075,.json,governance,UNMAPPED,UTF8_READ,OPES Core Banking repository asset synchronization snapshot
@@ -36,6 +37,8 @@ governance/recovery/GOV_REC_001_SOURCE_LEDGER_PART_03.json,28936,c6b250d38d37000
 governance/recovery/GOV_REC_001_SOURCE_LEDGER_PART_04.json,28851,9f3ed4a5e5127b6d70db6df07b2c696a5d502e2604a6af9a6ba40ae46ede5fdc,.json,governance,UNMAPPED,UTF8_READ,
 governance/recovery/GOV_REC_001_SOURCE_LEDGER_PART_05.json,11221,8ceda273216fe1bb269910edcf282b32e7222034f444c93bcaf557ca348dc5ef,.json,governance,UNMAPPED,UTF8_READ,
 governance/recovery/GOV_REC_001_SOURCE_LEDGER_PART_06.json,8316,ac97f162211066193de680fded885ea73f9fc2dc05db49fea9c435722c4b82e4,.json,governance,UNMAPPED,UTF8_READ,
+governance/reviews/GOV-WBS-RECON-001_EVIDENCE_ACCESS_GAP_2026-11-04.md,4577,c3ceecc12aa185fb326ae0d1f0c920de1e09a7e13fbfef3e95eeb89494c0be41,.md,governance,UNMAPPED,UTF8_READ,GOV-WBS-RECON-001 — Evidence-access checkpoint (2026-11-04)
+governance/reviews/GOV-WBS-RECON-001_POINTER_EVIDENCE_REVIEW_2026-11-04.md,3327,a52acde25f3eb8a04f751b17987a97b3d81d8945b2d3f963405b9ddb03c5ff4c,.md,governance,UNMAPPED,UTF8_READ,GOV-WBS-RECON-001 — canonical pointer and evidence classification review
 governance/tools/GOV_REC_001_SOURCE_AUDIT_PACKAGER_v1.js,12628,2f1b01027e134f039377eca507bedf137b3ea80b6d9d30092ea321f058b574a0,.js,governance,UNMAPPED,UTF8_READ,
 governance/tools/GOV_REC_001_SOURCE_AUDIT_PACKAGER_v2.js,12194,9cabc2c68d7a141bf7da2da6139d4f5f87e4889648d508b3c38987396727e100,.js,governance,UNMAPPED,UTF8_READ,
 programme/batches/2026-11-03/ACT-001/ACT-001_CONTRACT.json,1968,7944094334211bd3e94e579597404fb27a89b98abc5a6211e89a5d9e72ddabd7,.json,historical_engineering,PRD (candidate; historical WP ACT-001),UTF8_READ,Product factory and catalogue ownership
@@ -733,6 +736,18 @@ programme/batches/2026-11-04/GOV-REC-001/B209_CT/AUDIT.md,3609,f3680da44b4504e5c
 programme/batches/2026-11-04/GOV-REC-001/B209_CT/CROSSWALK.json,5332,63d4d13c5eed202c3600a4fa0fb51a4120bb31f3a06f3ec44b5f71047ca2b08a,.json,historical_recovery,UNMAPPED,UTF8_READ,
 programme/batches/2026-11-04/GOV-REC-001/B209_CT/MANIFEST.json,832,865935f91ebf0a07e88fc80e09e114d55a6f67a109ace622d98142f266a8ba97,.json,historical_recovery,UNMAPPED,UTF8_READ,
 programme/batches/2026-11-04/GOV-REC-001/B209_CT/OPES_Core_Banking_Batch_209_GOV_REC_001_CT_2026-11-04.zip,15636,23a705e84be0df085e852f2fb35536e43b3be2262d91e22678689be583be54e0,.zip,historical_recovery,UNMAPPED,SOURCE_METADATA_ONLY,
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/ARCHIVE_151_209_AUDIT.json,19178,ef0200f8a8f649b36e6f6299f49a3c108ae8d7b66c359f9d42fb62ed2a1e76b6,.json,historical_recovery,UNMAPPED,UTF8_READ,
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/AUDIT.md,822,34a9de9ed7475412aeca75f1fd17441597aa9262b8ed5c03152600c3f2cc3a81,.md,historical_recovery,UNMAPPED,UTF8_READ,Registered evidence batch 210 — whole-history content reconciliation
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/CONTINUATION_STATE.json,540,5f78ed3d4983e8856c2ee7d34078a989e1a7b0a8da63ca870178801f48ef1cc6,.json,historical_recovery,UNMAPPED,UTF8_READ,
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/FILE_TO_WP_CROSSWALK.csv,312283,d95505ea83a9daa257fb4404ed562522d8cbd7c959004136b74163d144c9d213,.csv,historical_recovery,UNMAPPED,UTF8_READ,
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/HISTORICAL_WORK_PACKAGES.json,76584,4037b36f79eb0a10559398dac9806c214bc7eff825a85cf9b0369c00b9b5b429,.json,historical_recovery,UNMAPPED,UTF8_READ,
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/MANIFEST.json,91601,46586428eb785f4ecaebf9dce1d6282df7f748ddc5f69d4ea1f2accb228532bd,.json,historical_recovery,UNMAPPED,UTF8_READ,
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/OPES_Core_Banking_Batch_210_GOV_REC_001_ALL_2026-11-04.zip,704934,7ccfb5a703c9d290a6db46d185fbc649153191db8f384f5a05a2bfac822ed298,.zip,historical_recovery,UNMAPPED,SOURCE_METADATA_ONLY,
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/PROPOSED_DOMAIN_GROUPS.json,18742,c4269126c14e1bfc842dfe3cc5da548638e3230f535194d152a0f9de3276f443,.json,historical_recovery,UNMAPPED,UTF8_READ,
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/RUN_REPORT.json,477,b4fa6eb3623a37f276ddda469e6d4c9a79ee74ced18c3a0ffb541ee7416fd0ee,.json,historical_recovery,UNMAPPED,UTF8_READ,
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/SOURCE_CROSSWALK.json,125241,0c7a87fd0e3c3453b6850c878cbbf280a31e9092850e0493c23836b249c9ee20,.json,historical_recovery,UNMAPPED,UTF8_READ,
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/WP_ACC_005_AUTHORITY_HOLD.md,771,2c49b0e77db3898144cfbe240c1822878a960c406e91ff353f11f3656dadfb25,.md,historical_recovery,UNMAPPED,UTF8_READ,WP-ACC-005 official evidence hold
+programme/batches/2026-11-04/GOV-REC-001/B210_ALL/ZIP_SHA256SUMS.txt,125,49d9f9fb43a6eb9c00bd2eaf4eb7292da8e22379a0baa6445f881de9590c0b32,.txt,historical_recovery,UNMAPPED,UTF8_READ,
 programme/batches/2026-11-04/GOV-REC-001/REMOTE_VERIFICATION_151_160.json,4968,c65698b70e4918bb391123112a7d1bb066ca479bd1b4e532f5c9c48858904218,.json,historical_recovery,UNMAPPED,UTF8_READ,
 programme/batches/2026-11-04/GOV-REC-001/REMOTE_VERIFICATION_161_170.json,4968,f2b5c5e471d91ebb53ba4c81fb48767acaaea2bdaf54e45f2649bef7ca5e41c5,.json,historical_recovery,UNMAPPED,UTF8_READ,
 programme/batches/2026-11-04/GOV-REC-001/REMOTE_VERIFICATION_171_180.json,4968,87d412be54ed0e61fc5b129940b9c1e181c8ff7733ac7edf5f0820190d8e5769,.json,historical_recovery,UNMAPPED,UTF8_READ,
@@ -1293,4 +1308,5 @@ regulatory/recovery/source/AN/REQUIREMENTS.json,1117,729e580f5955def608b083b6ebd
 regulatory/recovery/source/AN/SHA256SUMS.txt,770,f72440358200f491628371743b2fda9832bf33e61843b7a63f8b640d5e34b03e,.txt,recovered_source,UNMAPPED,UTF8_READ,
 regulatory/recovery/source/AN/SOURCE_REGISTER.json,1216,e5e7156873f2510f0060a36758b6eb9aa5a0eeaaae39c8e6731e73606ecd8755,.json,recovered_source,UNMAPPED,UTF8_READ,
 tools/reconcile_core_banking.py,18589,7eb099132ae6280c43bbb8818a9911d952fe6bc94f900355a28d236bc921c5a4,.py,other,UNMAPPED,UTF8_READ,"Canonical state v0.3 corrections trigger a fresh, reproducible audited source archive."
+tools/reconcile_core_banking_batch210.py,13428,767eafe2ed330f806c605d94e7223d5d9e7fd4acfa1b9aa654915f0afec9dfed,.py,other,UNMAPPED,UTF8_READ,
 tools/recovery/build_checkpoint_an.py,2251,440694f3f0f30eb2223cc15096299bdc629932250f2d89708159c6f09ee4b847,.py,other,UNMAPPED,UTF8_READ,

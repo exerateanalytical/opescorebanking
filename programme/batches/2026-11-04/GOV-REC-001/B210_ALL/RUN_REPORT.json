@@ -1,0 +1,15 @@
+{
+  "NEXT_EXACT_TASK": "GOV-WBS-RECON-001: independent approval of source/WP crosswalk, source custody, target WBS and PCEC authority.",
+  "attempted": [
+    "GOV-REC-001",
+    "GOV-WBS-RECON-001"
+  ],
+  "completed_independently_accepted": 0,
+  "newly_blocked": 0,
+  "open": 2,
+  "registered_evidence_batch": 210,
+  "source_audits_fail": 0,
+  "source_audits_pass": 59,
+  "zip_bytes": 704934,
+  "zip_sha256": "7ccfb5a703c9d290a6db46d185fbc649153191db8f384f5a05a2bfac822ed298"
+}

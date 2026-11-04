@@ -1,55 +1,59 @@
 {
-  "programme": "OPES Core Banking",
-  "vendor": "OPESWARE TECHNOLOGIES",
-  "product_type": "Multi-institution commercial banking platform for licensed CEMAC banks; Africa-expandable",
-  "education_product": "Separate synthetic Banking Education Edition software licences (NOT banking regulatory licences)",
-  "updated_date": "2026-11-04",
-  "canonical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.3_2026-11-04.md",
-  "historical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.2_2026-11-04.md",
-  "source_reconciliation_commit": "425bc2776c7bb168b43de9bcd103ea8d4d4a7f91",
-  "historical_engineering_wp_directories_observed": 150,
-  "work_package_contract_json_present": 120,
-  "original_contract_json_missing": 30,
-  "historical_checkpoint_dirs_observed": 59,
-  "recovery_batch_paths_observed_through": 209,
-  "archive_originals_crc_failed": 146,
-  "archive_reconstructions_from_tracked_siblings": 146,
-  "original_archives_replaced": false,
-  "original_archive_custody_verified": false,
-  "implementation_dor_15": "NOT_VERIFIED",
   "accepted_wp_total": "UNKNOWN",
   "approved_programme_wp_denominator": "UNKNOWN",
+  "approved_wbs_denominator": null,
+  "archive_originals_crc_failed": 146,
+  "archive_reconstructions_from_tracked_siblings": 146,
+  "batch210_local_sha256": "7ccfb5a703c9d290a6db46d185fbc649153191db8f384f5a05a2bfac822ed298",
+  "batch210_remote_verified": false,
   "blocked": [
     {
       "id": "WP-ACC-005",
-      "status": "BLOCKED_P0",
-      "reason": "COBAC PCEC 312/322 authoritative classification unresolved"
+      "reason": "COBAC PCEC 312/322 authoritative classification unresolved",
+      "status": "BLOCKED_P0"
     },
     {
       "id": "WP-PAY-GIMAC-001",
-      "status": "NOT_AUTHORIZED",
-      "reason": "Bank-specific network participation and settlement entitlement unknown"
+      "reason": "Bank-specific network participation and settlement entitlement unknown",
+      "status": "NOT_AUTHORIZED"
     },
     {
       "id": "GOV-REC-001",
-      "status": "OPEN",
-      "reason": "Original archival custody and independent acceptance not established"
+      "reason": "Original archival custody and independent acceptance not established",
+      "status": "OPEN"
     },
     {
       "id": "GOV-WBS-RECON-001",
-      "status": "OPEN",
-      "reason": "Exhaustive independently approved WBS and acceptance denominator unresolved"
+      "reason": "Exhaustive independently approved WBS and acceptance denominator unresolved",
+      "status": "OPEN"
     }
   ],
-  "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
-  "reconciliation_status": "IN_PROGRESS",
+  "canonical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.3_2026-11-04.md",
+  "education_product": "Separate synthetic Banking Education Edition software licences (NOT banking regulatory licences)",
   "evidence_as_of_commit": "c7fd4370abb9b9368c785c92b406609ab77d54dd",
-  "last_observed_delivery_batch_id": 209,
-  "last_integrity_verified_batch_id": null,
+  "historical_checkpoint_dirs_observed": 59,
+  "historical_engineering_wp_directories_observed": 150,
+  "historical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.2_2026-11-04.md",
+  "implementation_dor_15": "NOT_VERIFIED",
   "last_independently_accepted_wp_id": null,
-  "original_archive_custody_status": "NOT_VERIFIED",
-  "approved_wbs_denominator": null,
+  "last_integrity_verified_batch_id": null,
+  "last_local_archive_integrity_validated_batch_id": 210,
+  "last_observed_delivery_batch_id": 210,
+  "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
+  "next_exact_task": "GOV-WBS-RECON-001: independent approval of source/WP crosswalk, source custody, target WBS and PCEC authority.",
   "next_exact_task_id": "GOV-WBS-RECON-001",
-  "next_exact_task": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
-  "pointer_review_evidence": "governance/reviews/GOV-WBS-RECON-001_POINTER_EVIDENCE_REVIEW_2026-11-04.md"
+  "original_archive_custody_status": "NOT_VERIFIED",
+  "original_archive_custody_verified": false,
+  "original_archives_replaced": false,
+  "original_contract_json_missing": 30,
+  "pointer_review_evidence": "governance/reviews/GOV-WBS-RECON-001_POINTER_EVIDENCE_REVIEW_2026-11-04.md",
+  "product_type": "Multi-institution commercial banking platform for licensed CEMAC banks; Africa-expandable",
+  "programme": "OPES Core Banking",
+  "reconciliation_status": "CONTENT_CROSSWALK_COMPLETE_APPROVAL_OPEN",
+  "recovery_batch_paths_observed_through": 209,
+  "source_reconciliation_baseline_commit": "a540f9f8c94682a5947dbf6edc4f3041ea1e9e9b",
+  "source_reconciliation_commit": "425bc2776c7bb168b43de9bcd103ea8d4d4a7f91",
+  "updated_date": "2026-11-04",
+  "vendor": "OPESWARE TECHNOLOGIES",
+  "work_package_contract_json_present": 120
 }

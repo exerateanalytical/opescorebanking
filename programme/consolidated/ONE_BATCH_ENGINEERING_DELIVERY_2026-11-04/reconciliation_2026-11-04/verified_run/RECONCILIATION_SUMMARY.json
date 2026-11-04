@@ -2,7 +2,7 @@
   "accepted_wp_total": "UNKNOWN",
   "approved_programme_wp_denominator": "UNKNOWN",
   "banking_tests_executed_by_this_audit": 0,
-  "baseline_git_commit": "3d08971dc0b751710f18c4fd8ab2d23a940cc1b5",
+  "baseline_git_commit": "a540f9f8c94682a5947dbf6edc4f3041ea1e9e9b",
   "contracts_derived_from_existing_source_specs": 30,
   "database_rls_design_gaps": 25,
   "duplicate_test_ids": [],
@@ -38,9 +38,9 @@
     }
   ],
   "generated_archive": {
-    "bytes": 9336037,
+    "bytes": 10185035,
     "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/reconciliation_2026-11-04/verified_run/OPES_Core_Banking_Full_Reconciled_Source_2026-11-04.zip",
-    "sha256": "504ba50fdf212afb432e1287754ec226a2b7baf26f7b8032f9d3ff5e2723b056",
+    "sha256": "0cefa01b00ac910575f0fbfc5a4de532660c93cda16928900fc453e0009020cb",
     "zip_crc_valid": true
   },
   "generic_api_schema_gaps": 25,
@@ -54,7 +54,7 @@
     "original_archive_authenticity_verified": false,
     "original_bytes_preserved": true,
     "repair_package": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/reconciliation_2026-11-04/verified_run/RECONSTRUCTED_INVALID_HISTORICAL_ZIPS_2026-11-04.zip",
-    "repair_package_sha256": "b22aaed77cea40eb767e04874110e76ec6c8706133c5791edba519cb95d65839",
+    "repair_package_sha256": "c2c5118125bd94b1ab30e2ea3cf23fafd3cb227fe3af6d46be08f55797e346d6",
     "unrecoverable_missing_sibling_sources": 0
   },
   "known_blockers": [
@@ -67,7 +67,7 @@
     {
       "action": "stale pointer; observed batch path is not proof of acceptance",
       "declared_latest_archive_batch": null,
-      "latest_recovery_path_number": 209,
+      "latest_recovery_path_number": 210,
       "path": "governance/CANONICAL_PROGRAMME_STATE.json"
     }
   ],
@@ -109,25 +109,25 @@
   "regulatory_certification": "NOT_VERIFIED",
   "regulatory_checkpoint_directories": 59,
   "regulatory_readmes_read": 59,
-  "repository_bytes": 14017374,
+  "repository_bytes": 15392414,
   "run_date": "2026-11-04",
   "scope": "All git-tracked files, text parse, all top-level ZIP CRC tests, draft coverage; not independent regulatory approval",
   "source_contract_executed_test_claim_sum": 0,
   "specification_domain_count": 25,
   "test_scenarios_in_csv": 500,
   "text_file_formats": {
-    ".csv": 31,
+    ".csv": 32,
     ".js": 2,
-    ".json": 398,
-    ".md": 583,
-    ".py": 2,
+    ".json": 405,
+    ".md": 588,
+    ".py": 3,
     ".sql": 26,
-    ".txt": 3,
+    ".txt": 4,
     ".yaml": 27,
     ".yml": 2
   },
-  "text_files_read": 1074,
-  "tracked_files": 1295,
-  "zip_archives_tested": 221,
+  "text_files_read": 1089,
+  "tracked_files": 1311,
+  "zip_archives_tested": 222,
   "zip_crc_failures": 146
 }

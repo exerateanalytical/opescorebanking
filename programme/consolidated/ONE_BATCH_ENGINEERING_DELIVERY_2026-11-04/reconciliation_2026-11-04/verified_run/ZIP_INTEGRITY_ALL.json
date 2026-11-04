@@ -1599,6 +1599,15 @@
   },
   {
     "bad_entry": null,
+    "bytes": 704934,
+    "crc_valid": true,
+    "entries": 326,
+    "path": "programme/batches/2026-11-04/GOV-REC-001/B210_ALL/OPES_Core_Banking_Batch_210_GOV_REC_001_ALL_2026-11-04.zip",
+    "sha256": "7ccfb5a703c9d290a6db46d185fbc649153191db8f384f5a05a2bfac822ed298",
+    "total_uncompressed_bytes": 1670972
+  },
+  {
+    "bad_entry": null,
     "bytes": 546061,
     "crc_valid": true,
     "entries": 11,

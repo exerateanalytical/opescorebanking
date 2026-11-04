@@ -1,0 +1,289 @@
+[
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/GOV.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/GOV_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/GOV_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/GOV_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/GOV_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-GOV",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/ARC.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/ARC_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/ARC_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/ARC_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/ARC_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-ARC",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/CIF.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/CIF_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/CIF_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/CIF_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/CIF_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-CIF",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/PRD.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/PRD_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/PRD_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/PRD_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/PRD_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-PRD",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/ACT.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/ACT_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/ACT_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/ACT_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/ACT_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-ACT",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/LED.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/LED_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/LED_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/LED_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/LED_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-LED",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/BRN.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/BRN_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/BRN_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/BRN_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/BRN_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-BRN",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/PAY.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/PAY_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/PAY_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/PAY_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/PAY_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-PAY",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/CRD.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/CRD_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/CRD_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/CRD_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/CRD_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-CRD",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/TRE.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/TRE_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/TRE_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/TRE_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/TRE_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-TRE",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/AML.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/AML_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/AML_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/AML_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/AML_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-AML",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/REP.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/REP_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/REP_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/REP_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/REP_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-REP",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/CHN.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/CHN_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/CHN_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/CHN_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/CHN_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-CHN",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/CARD.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/CARD_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/CARD_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/CARD_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/CARD_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-CARD",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/CRM.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/CRM_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/CRM_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/CRM_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/CRM_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-CRM",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/FEE.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/FEE_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/FEE_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/FEE_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/FEE_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-FEE",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/REC.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/REC_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/REC_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/REC_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/REC_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-REC",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/SEC.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/SEC_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/SEC_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/SEC_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/SEC_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-SEC",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/DAT.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/DAT_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/DAT_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/DAT_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/DAT_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-DAT",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/API.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/API_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/API_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/API_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/API_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-API",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/INF.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/INF_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/INF_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/INF_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/INF_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-INF",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/DR.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/DR_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/DR_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/DR_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/DR_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-DR",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/ADM.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/ADM_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/ADM_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/ADM_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/ADM_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-ADM",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/TST.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/TST_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/TST_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/TST_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/TST_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-TST",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/REL.openapi.yaml",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/ui/REL_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/workflows/REL_WORKFLOWS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/data/REL_SCHEMA_PROPOSAL.sql",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/tests/REL_ACCEPTANCE_MATRIX.csv"
+    ],
+    "id": "SPEC-REL",
+    "status": "DRAFT_NOT_APPROVED_FOR_TARGET_WBS"
+  },
+  {
+    "draft_sources": [
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/education/CURRICULUM_AND_LAB_SCENARIOS.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/education/EDUCATION_ACCEPTANCE_TESTS.csv",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/education/EDUCATION_SCREEN_INVENTORY.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/education/EDUCATION_EDITION_PRD.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/education/EDUCATION_TENANT_ISOLATION_AND_LICENSING.md",
+      "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/education/EDUCATION_API_CONTRACT.openapi.yaml"
+    ],
+    "id": "SPEC-EDU",
+    "status": "SIMULATED_TRAINING_PRODUCT_NOT_BANKING_LICENCE"
+  }
+]
