@@ -1,0 +1,212 @@
+{
+  "baseline_commit": "965d3c4b93cacfe51e901e7374e81751f0f1bd11",
+  "entries": [
+    {
+      "bytes": 614,
+      "crc32": "ca9b8ec4",
+      "git_blob_sha1": "330bee0906bafeaf60ead628f57a09588e1f1a48",
+      "path": ".github/workflows/domain-contracts-ci.yml",
+      "sha256": "5aba20b0a58482eff0bff7dcb11ecc705916c3e0ba4fffb162c5155c96ffd58b"
+    },
+    {
+      "bytes": 2189,
+      "crc32": "2cd3649f",
+      "git_blob_sha1": "a77603953b81bd7345235407ad2dfc5efa92676c",
+      "path": ".github/workflows/domain-data-ci.yml",
+      "sha256": "e19b5335b205fe1854adec03e2407e4af8b8258e75bf6334d7c7790ebb1a4422"
+    },
+    {
+      "bytes": 521,
+      "crc32": "55f38622",
+      "git_blob_sha1": "2790d2ae1e409b897a2570c7e0a89e8dc2e2b50c",
+      "path": ".github/workflows/ledger-lab-ci.yml",
+      "sha256": "2e890b864ccd19eb8213c69344990f06bcab832d84e6bafaad578051a8b89601"
+    },
+    {
+      "bytes": 1354,
+      "crc32": "6fe7829a",
+      "git_blob_sha1": "4d51f7f474675b4d51556cfa5820886afc04f6e9",
+      "path": ".github/workflows/security-authority-concurrency.yml",
+      "sha256": "c7be935d2a417dfc4f1fcd94e239a544bd19c87d7bed3573a0750b4e3876ee03"
+    },
+    {
+      "bytes": 676,
+      "crc32": "b3ade54c",
+      "git_blob_sha1": "05b1227df0db55debf0ce53eaf399fc2be42bc61",
+      "path": ".github/workflows/tenant-token-router-ci.yml",
+      "sha256": "c162db7d82869f4baaf087d5363b8065b2637cdaf864e2938a03f1891756e454"
+    },
+    {
+      "bytes": 17146,
+      "crc32": "022ce239",
+      "git_blob_sha1": "0cbb244babb359733323906f0dac1da643572d03",
+      "path": "engineering/contracts/ACT/openapi.json",
+      "sha256": "3925a01508eff34036ca810b7b01a87760452d640e587a23b49c7c403d4af31f"
+    },
+    {
+      "bytes": 17124,
+      "crc32": "f64cc798",
+      "git_blob_sha1": "4258177b43952953c231befcb5b77c6e33066291",
+      "path": "engineering/contracts/CIF/openapi.json",
+      "sha256": "8d242aed1aa4e1d21fdd8f358e88fdf690c667a9a0a1ddba4b83399c8ef95662"
+    },
+    {
+      "bytes": 16592,
+      "crc32": "499ef66b",
+      "git_blob_sha1": "e56c67a01835c3f28bd224a821fe1667c91c9cfb",
+      "path": "engineering/contracts/LED/openapi.json",
+      "sha256": "c57b00222e4da8f0eb6be8c23b3aa1ba541633118e69c0089779530577dbf2ef"
+    },
+    {
+      "bytes": 17309,
+      "crc32": "3f249268",
+      "git_blob_sha1": "22131de8dec0c0040956aaeace4a993761b513da",
+      "path": "engineering/contracts/PRD/openapi.json",
+      "sha256": "80ffe9f4c155c208a4ba91413a4c356f72b2e72b2c05b4b74973a05fcc161f4b"
+    },
+    {
+      "bytes": 1145,
+      "crc32": "5b0c3faa",
+      "git_blob_sha1": "d4c96fe7076c54c1e32568256fffa01365c7a141",
+      "path": "engineering/contracts/README.md",
+      "sha256": "263eb41ef03d22f43fbaf43e8f6a142c1e0b4128a31f1f0b4fc46f6f28a7f1c1"
+    },
+    {
+      "bytes": 5882,
+      "crc32": "57ca5aca",
+      "git_blob_sha1": "6bb176b254856a47349133c1050def301245be4f",
+      "path": "engineering/contracts/tests/test_contracts.py",
+      "sha256": "b0a5a3af914da5d5eabbf7f71e07cb345063ab209b323b172c8581206d0753ef"
+    },
+    {
+      "bytes": 9039,
+      "crc32": "54f956cd",
+      "git_blob_sha1": "74910a7139d90d33c461dd421dc5db23e00e10e3",
+      "path": "engineering/domain-data-lab/001_schema.sql",
+      "sha256": "49ae80668cf7bb9c2af8e2eaf3ba680e3ab75dd13e0d3cb8037196ba9d986a56"
+    },
+    {
+      "bytes": 2235,
+      "crc32": "ca4c0c34",
+      "git_blob_sha1": "987997bb5766681d19eb1e1f96fda124e3929648",
+      "path": "engineering/domain-data-lab/README.md",
+      "sha256": "47eca22d9504e5ffded95df2a84d9ec2ab04957a6fe83f2616a92663ca3182db"
+    },
+    {
+      "bytes": 2492,
+      "crc32": "b0b6d873",
+      "git_blob_sha1": "41cf4493d1e89f7651d78ea68f9f711b2465c54f",
+      "path": "engineering/domain-data-lab/tests/002_synthetic_seed.sql",
+      "sha256": "5a081f2ec6d324d6f3f2169800829bfec0cb3a947723e5309bb29baff7e9a764"
+    },
+    {
+      "bytes": 2986,
+      "crc32": "6e3ea79c",
+      "git_blob_sha1": "5062d9d17009cf9d210ac439f3da8bfdb391140d",
+      "path": "engineering/domain-data-lab/tests/role_a.sql",
+      "sha256": "aa4e328f4bb0bfd54dd738e4973e90b2b0af388f4f17240b375846eee53d03c4"
+    },
+    {
+      "bytes": 1033,
+      "crc32": "1bcb794f",
+      "git_blob_sha1": "0c5a1625c6a02467e36f9627ec74131593d953ad",
+      "path": "engineering/domain-data-lab/tests/role_b.sql",
+      "sha256": "035fa368c0233f3b76afe500b171ac604825c248df05bce7951cea799f82dd31"
+    },
+    {
+      "bytes": 1698,
+      "crc32": "d1bc6ff5",
+      "git_blob_sha1": "3503d6d64d3a3eee6cf3c25cb4d207ac8b73d3ec",
+      "path": "engineering/ledger-lab/README.md",
+      "sha256": "b5a6b406a4919d43cda898a914ce495877915c5d74c1d153a0f060a968b98fcc"
+    },
+    {
+      "bytes": 8532,
+      "crc32": "5756ed0d",
+      "git_blob_sha1": "9ecb07c4834a153a2ad4d612140d3d7f83e8846f",
+      "path": "engineering/ledger-lab/ledger.py",
+      "sha256": "9a6442c1dea27aa28e4787fc5eba92cee66ee922de5b94215e0df711747aa3ff"
+    },
+    {
+      "bytes": 6005,
+      "crc32": "8432be5f",
+      "git_blob_sha1": "f84e21d0d3315a960763796710674ac828f673fc",
+      "path": "engineering/ledger-lab/tests/test_invariants.py",
+      "sha256": "0a94ef43e57ce03126b1624de09c5db5bfc32a6e891c2b3857272eb15bb5ad9f"
+    },
+    {
+      "bytes": 3399,
+      "crc32": "27cc09e4",
+      "git_blob_sha1": "4b9f1c91dadc90c2794b77dbd3174a29e5c8286a",
+      "path": "engineering/security/tenant-routing/README.md",
+      "sha256": "464220f1d1338345f1b3d274b2a4ac01a270a0a0baae8bc2eafc5dc0ccf6d9d6"
+    },
+    {
+      "bytes": 7392,
+      "crc32": "d8494474",
+      "git_blob_sha1": "37799728c7c9ad4d18f266d7ffe045b8e857fceb",
+      "path": "engineering/security/tenant-routing/authority.py",
+      "sha256": "181dce51f6cea04704f64c12108ab727a5dc8391875607b26519e0c4038ca84c"
+    },
+    {
+      "bytes": 2123,
+      "crc32": "48bb8881",
+      "git_blob_sha1": "b6800add61c419fca97031b9ecc8cd14a5d7a8fb",
+      "path": "engineering/security/tenant-routing/schema.sql",
+      "sha256": "35d78c6c95b7006e1ed713b2dd9b06d7c03845d4af018bb4c60d400c1b69b006"
+    },
+    {
+      "bytes": 5332,
+      "crc32": "b9e7bbfd",
+      "git_blob_sha1": "7b8e3b9622da44230d82b7f3171b8d9888a2f627",
+      "path": "engineering/security/tenant-routing/tests/test_authority.py",
+      "sha256": "88dd72f5d54ef951413ba3a0258678871dd9d376a3b94d786a93fc2c45778c5f"
+    },
+    {
+      "bytes": 2655,
+      "crc32": "9f53f4b4",
+      "git_blob_sha1": "f9d892b094dfa862930532333c1e05001081439a",
+      "path": "engineering/security/token-router/README.md",
+      "sha256": "af4cba898d5c3aa9585a6f80fac4403b7680d7049e9189350c0d1bdbc33ce93d"
+    },
+    {
+      "bytes": 6131,
+      "crc32": "ce71b25c",
+      "git_blob_sha1": "d6ef10702bbce7a547b2481b1e53002db211ae30",
+      "path": "engineering/security/token-router/router.py",
+      "sha256": "9ecb488cb4d75afee6f83855fd765e018d585fa46294b1445b6c739926912034"
+    },
+    {
+      "bytes": 6377,
+      "crc32": "72176a34",
+      "git_blob_sha1": "0573e1eeefc21df6bc734c492c476e7a05ba824b",
+      "path": "engineering/security/token-router/tests/test_router.py",
+      "sha256": "138339af074c6024b682898ef92650a13e3fe355cedf5ef2af0f2430a8da721f"
+    },
+    {
+      "bytes": 3852,
+      "crc32": "361bba62",
+      "git_blob_sha1": "24d49a5ce63c06f5817f60a8815d88460b4a9700",
+      "path": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.5_2026-11-04.md",
+      "sha256": "b0efb4156b4d9e3023e43f3a85ec3940232a0383e4a6fe5609b4c68eddf9b625"
+    },
+    {
+      "bytes": 10370,
+      "crc32": "0cb8839a",
+      "git_blob_sha1": "1417ee9bc2df13c18f5b064221ce89a4bf081ba0",
+      "path": "governance/OWNER_APPROVED_DOMAIN_OWNERSHIP_REGISTER_2026-11-04.json",
+      "sha256": "2cc543a29fdb6fc6a33fd65eb6b54077f35e05d601e7ecc1a964803563e3a5d1"
+    },
+    {
+      "bytes": 5563,
+      "crc32": "ee0bba48",
+      "git_blob_sha1": "116f3fe27548cf56ad0d41abd33f83cf0a58de7e",
+      "path": "governance/decisions/ADR-OPES-003-BANK_LOCAL_AUTHORIZATION_FENCE.md",
+      "sha256": "df580779e6c52f2b2948151bfcdb491f986f789d2d282d45e1d40e36b5e372f3"
+    }
+  ],
+  "not_banking_approval": true,
+  "provenance": "Git-tracked content bytes; verified test results are separate from this archive's integrity",
+  "schema": "opes.corebanking.archived-source-manifest.v1",
+  "source_files": 29
+}

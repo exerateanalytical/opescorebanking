@@ -1,0 +1,125 @@
+{
+  "CI_results": {
+    "CIF_PRD_ACT_LED_CONTRACT": {
+      "python_tests": 10,
+      "run": 41910375468,
+      "status": "SUCCESS"
+    },
+    "LEDGER_SYNTHETIC_INVARIANTS": {
+      "python_tests": 13,
+      "run": 41910690348,
+      "status": "SUCCESS"
+    },
+    "POSTGRESQL_FOUR_DOMAIN_CONSTRAINTS": {
+      "python_tests": 0,
+      "run": 41911537994,
+      "sql_integration": "SUCCESS"
+    },
+    "SIGNED_JWKS_TOKEN_ROUTER": {
+      "python_tests": 20,
+      "run": 41911013397,
+      "status": "SUCCESS"
+    },
+    "T43_T47_PG_CONCURRENCY": {
+      "python_tests": 7,
+      "run": 41909907072,
+      "status": "SUCCESS"
+    }
+  },
+  "attempted_packages": [
+    {
+      "id": "SEC-TENANT-ROUTING-001",
+      "independent_production_acceptance": "NOT_VERIFIED",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "parent_domain": "SEC",
+      "scope": "T43/T47 bank-local authority and revocation fence laboratory",
+      "status": "IN_PROGRESS_LAB_TESTS_PASSED"
+    },
+    {
+      "id": "SEC-TOKEN-ROUTER-001",
+      "independent_production_acceptance": "NOT_VERIFIED",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "parent_domain": "SEC",
+      "scope": "Pinned RSA JWKS and server-backed tenant routing test model",
+      "status": "IN_PROGRESS_LAB_TESTS_PASSED"
+    },
+    {
+      "id": "CIF-CONTRACT-001",
+      "independent_production_acceptance": "NOT_VERIFIED",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "parent_domain": "CIF",
+      "scope": "Strict typed party/KYC command contracts",
+      "status": "IN_PROGRESS_LAB_TESTS_PASSED"
+    },
+    {
+      "id": "PRD-CONTRACT-001",
+      "independent_production_acceptance": "NOT_VERIFIED",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "parent_domain": "PRD",
+      "scope": "Strict typed product/version command contracts",
+      "status": "IN_PROGRESS_LAB_TESTS_PASSED"
+    },
+    {
+      "id": "ACT-CONTRACT-001",
+      "independent_production_acceptance": "NOT_VERIFIED",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "parent_domain": "ACT",
+      "scope": "Strict typed bank account request contracts",
+      "status": "IN_PROGRESS_LAB_TESTS_PASSED"
+    },
+    {
+      "id": "LED-CONTRACT-001",
+      "independent_production_acceptance": "NOT_VERIFIED",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "parent_domain": "LED",
+      "scope": "Strict typed immutable journal command contracts",
+      "status": "IN_PROGRESS_LAB_TESTS_PASSED"
+    },
+    {
+      "id": "LED-INVARIANTS-001",
+      "independent_production_acceptance": "NOT_VERIFIED",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "parent_domain": "LED",
+      "scope": "Exact integer debit/credit and reversal tests in memory",
+      "status": "IN_PROGRESS_LAB_TESTS_PASSED"
+    },
+    {
+      "id": "DAT-FOUR-DOMAIN-001",
+      "independent_production_acceptance": "NOT_VERIFIED",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "parent_domain": "DAT",
+      "scope": "Seven hardened PostgreSQL CIF PRD ACT LED tables and tenant tests",
+      "status": "IN_PROGRESS_LAB_TESTS_PASSED"
+    }
+  ],
+  "baseline_commit": "965d3c4b93cacfe51e901e7374e81751f0f1bd11",
+  "blocking_risks": [
+    "P0-SEC-01: distributed and cross-bank-local revocation/commit ordering not proven",
+    "P0-SEC-02: production key/mTLS/broker trust topology unverified",
+    "WP-ACC-005: disputed 312/322 PCEC external mapping stays inactive",
+    "Production durable posted ledger, DB atomicity/outbox/DR not implemented"
+  ],
+  "date": "2026-11-04",
+  "executed_python_test_count": 50,
+  "financial_transactions_posted_to_real_bank": 0,
+  "historical_draft_domain_sql_schemas_incomplete": 25,
+  "newly_blocked_work_packages": 0,
+  "next_exact_task": "Implement bank-local signed-token/subject membership -> dedicated DB principal command gateway; integrate the member authorization fence with the durable ledger/outbox transactional commit and test revocation, crash/UNKNOWN and replay across separate services before production readiness.",
+  "next_exact_task_id": "SEC-TENANT-ROUTING-001",
+  "original_historical_archive_custody": "NOT_VERIFIED",
+  "postgresql_domain_relations_tested": 7,
+  "production_deployment_authorized": false,
+  "quality_gap_narrative": "Source is tested in isolated CI but not independently accepted as production software. Domain-data lab has NO POSTED journal or active deposit account. Synthetic ledger is in-memory.",
+  "schema": "opes.corebanking.engineering-run-execution-report.v1",
+  "typed_domain_contracts": [
+    "CIF",
+    "PRD",
+    "ACT",
+    "LED"
+  ],
+  "typed_domain_contracts_not_yet_replaced": 21,
+  "verification_scope": "CONTRACT_AND_SYNTHETIC_ENGINEERING_LABS_ONLY",
+  "work_packages_attempted": 8,
+  "work_packages_kept_open": 8,
+  "work_packages_verified_complete_for_production": 0
+}
