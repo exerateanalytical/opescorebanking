@@ -11,7 +11,7 @@ U="11111111-1111-4111-8111-111111111111"
 def valid(domain,model,payload):
     schema={"$ref":f"#/components/schemas/{model}","components":DATA[domain]["components"]}
     Draft202012Validator.check_schema(schema)
-    return list(Draft202012Validator(schema).iter_errors(payload))
+    return list(Draft202012Validator(schema,format_checker=Draft202012Validator.FORMAT_CHECKER).iter_errors(payload))
 
 class DomainContractTests(unittest.TestCase):
     def test_operations_have_actual_field_specific_request_schemas(self):
