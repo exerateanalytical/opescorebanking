@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-04",
+  "classification": "GITHUB_BINARY_FETCH_AND_HASH_VERIFIED",
+  "records": [
+    {
+      "checkpoint": "AI",
+      "repository_path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AI_2026-10-09.zip",
+      "git_blob_sha": "edd45cb7661077643a172f808aa390fd36470ade",
+      "sha256": "3f2489488610939b2b53046424a58d5ec9e4687103fe3b09843ff36420b31679",
+      "bytes": 565959,
+      "crc32": "eb863eef",
+      "entries": 10,
+      "central_valid": true,
+      "predecessor": {
+        "name": "prior_checkpoint_AH.zip",
+        "method": 8,
+        "uncompressed_bytes": 561357,
+        "crc32": "1560e16c"
+      }
+    },
+    {
+      "checkpoint": "AJ",
+      "repository_path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AJ_2026-10-09.zip",
+      "git_blob_sha": "68029b171411ac14b2728b7b41accded016da115",
+      "sha256": "9f7d2b81325d3ebaf04065a203cd2ed7218fa4a90f7595449e68335262642588",
+      "bytes": 571166,
+      "crc32": "a6673949",
+      "entries": 10,
+      "central_valid": true,
+      "predecessor": {
+        "name": "prior_checkpoint_AI.zip",
+        "method": 8,
+        "uncompressed_bytes": 565959,
+        "crc32": "eb863eef"
+      }
+    },
+    {
+      "checkpoint": "AK",
+      "repository_path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AK_2026-10-09.zip",
+      "git_blob_sha": "62d44c342c3baef8a1f3bec7516a69251885c432",
+      "sha256": "9f3d15833635b145e17416e55df007fe1dd16cecdc54dcf0b9091748151451cf",
+      "bytes": 575544,
+      "crc32": "77b9347d",
+      "entries": 9,
+      "central_valid": true,
+      "predecessor": {
+        "name": "prior_checkpoint_AJ.zip",
+        "method": 8,
+        "uncompressed_bytes": 571166,
+        "crc32": "a6673949"
+      }
+    },
+    {
+      "checkpoint": "AL",
+      "repository_path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AL_2026-10-09.zip",
+      "git_blob_sha": "84c5dfc84859aa6c222d0336f4690a8f2e170def",
+      "sha256": "f396b94e123c7b81a0f13fa0b8163af22f6c92189afbb609892267452536a023",
+      "bytes": 579859,
+      "crc32": "b243c69b",
+      "entries": 9,
+      "central_valid": true,
+      "predecessor": {
+        "name": "prior_checkpoint_AK.zip",
+        "method": 8,
+        "uncompressed_bytes": 575544,
+        "crc32": "77b9347d"
+      }
+    }
+  ]
+}
