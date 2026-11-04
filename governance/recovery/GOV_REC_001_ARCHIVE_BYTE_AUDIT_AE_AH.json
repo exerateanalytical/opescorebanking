@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-04",
+  "classification": "GITHUB_BINARY_FETCH_AND_HASH_VERIFIED",
+  "records": [
+    {
+      "checkpoint": "AE",
+      "repository_path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AE_2026-10-09.zip",
+      "git_blob_sha": "d41e16c7d77c5661d1b41a575ae5f37647c39cc6",
+      "sha256": "4ac19ba584f09bed9223271536cc66482fc787b3f12c2e585a76c2a037e41dc5",
+      "bytes": 546061,
+      "crc32": "53291e61",
+      "entries": 11,
+      "central_valid": true,
+      "predecessor": {
+        "name": "prior_checkpoint_AD.zip",
+        "method": 8,
+        "uncompressed_bytes": 540287,
+        "crc32": "7605168d"
+      }
+    },
+    {
+      "checkpoint": "AF",
+      "repository_path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AF_2026-10-09.zip",
+      "git_blob_sha": "ff19713a5b1a8aa4dbf085bec7d29cf642ef9185",
+      "sha256": "93142a5d5f43fd33c12f67a2c61debd6ce374be90d49360f86a19fd9a3690b3e",
+      "bytes": 551363,
+      "crc32": "2f3733bd",
+      "entries": 12,
+      "central_valid": true,
+      "predecessor": {
+        "name": "prior_checkpoint_AE.zip",
+        "method": 8,
+        "uncompressed_bytes": 546061,
+        "crc32": "53291e61"
+      }
+    },
+    {
+      "checkpoint": "AG",
+      "repository_path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AG_2026-10-09.zip",
+      "git_blob_sha": "d43060f35b3246f0aa128f1404ae61478f4f664e",
+      "sha256": "2dc66f7ac1cd8570e48a2fe441e03830dd2beee0fdeaa2b9b9855fe189e978d4",
+      "bytes": 556408,
+      "crc32": "985b19ae",
+      "entries": 11,
+      "central_valid": true,
+      "predecessor": {
+        "name": "prior_checkpoint_AF.zip",
+        "method": 8,
+        "uncompressed_bytes": 551363,
+        "crc32": "2f3733bd"
+      }
+    },
+    {
+      "checkpoint": "AH",
+      "repository_path": "regulatory/recovery/archives/OPES_Core_Banking_Checkpoint_AH_2026-10-09.zip",
+      "git_blob_sha": "8ba239716d55ce5deea32f95bdb74b897a64afde",
+      "sha256": "4ee6565bf4fa071477daf55fe4cf14290a2d28bbeb137685878552082ce4f546",
+      "bytes": 561357,
+      "crc32": "1560e16c",
+      "entries": 11,
+      "central_valid": true,
+      "predecessor": {
+        "name": "prior_checkpoint_AG.zip",
+        "method": 8,
+        "uncompressed_bytes": 556408,
+        "crc32": "985b19ae"
+      }
+    }
+  ]
+}
