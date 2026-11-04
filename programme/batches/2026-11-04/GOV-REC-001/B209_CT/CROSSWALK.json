@@ -1,0 +1,107 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 209,
+  "checkpoint": "CT",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/CT/README.md",
+      "git_blob_sha": "cb43ca5d08831a1c96503c5d378e58ad3f5d4b89",
+      "sha256": "d93722f3211a279cbd84ec32d1e73f949d3da9f5056b34b3c041bbaf67f22e07",
+      "bytes": 5383,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-03. Predecessor: CS, retrieved from main commit c3312c2e850ecf1a2021f6cd060a64341f595824. Phase 4 Accounting Core and Financial Integrity."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Date: 2026-11-03. Predecessor: CS, retrieved from main commit c3312c2e850ecf1a2021f6cd060a64341f595824. Phase 4 Accounting Core and Financial Integrity."
+        },
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "STATUS: SAFE PARTIAL RESEARCH CHECKPOINT; WP-ACC-005 OPEN / P0 BLOCKED; Definition of Ready FAILED. No production code, account activation, migration, or tests."
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "3. Official Bulletin no. 5 https://www.beac.int/wp-content/uploads/2016/10/Bulletin-COBAC-n%C2%B05.pdf : indexed text describes historical shortcomings in banks' formal accounting procedures, information systems and CERBER reporting. This is contextual operational risk evidence only, NOT a correction of the Article 8(d) code."
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "5. Targeted issuer-domain search for PCEC letters referencing 312/322 did not produce an authenticated signed clarification. Non-discovery is not proof of absence."
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Continuing issue: PCEC-I2015-ARTICLE8D-312-322"
+        },
+        {
+          "line": 13,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Preserve literal verified assertions from CP/CQ: Article 7 assigns 312 to sensitive medium-term loans; Article 8(b) assigns 322 to sensitive short-term loans; Article 8(d) prints 312 for the short-term parent while enumerating children 3220–3227. This run did not revalidate original page images. A probable drafting error is an inference, not a legal correcti"
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "EV-CR-001 OPEN — obtain signed competent-authority clarification for 312/322; no new primary correction."
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "EV-CR-003 OPEN — Bulletin 6 full-text/page inspection timed out; inspect I-2003/01 and older 1998 PCEC, plus bulletins 5/8/9/10 in exact publication order; record which provisions actually affect 312/322 rather than assuming."
+        },
+        {
+          "line": 25,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Regulatory: do not infer authority from bulletin metadata or a document index. Record issuer, signed instrument, article/page, date, effective date, source digest and supersession links before changing regulatory mapping status."
+        },
+        {
+          "line": 30,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Operations/testing: prepare negative tests for conflicting active parent identities, absent signed authority, retroactive mutation, wrong institution profile and unreconciled migration; not executed."
+        },
+        {
+          "line": 31,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Legal, financial, architecture, security, risk, data, operations, testability and auditor-evidence reviews all retain unresolved gates. No P0 resolved."
+        },
+        {
+          "line": 34,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Work packages attempted 1; completed 0; open 1; blocked from closure 1. Partial safe checkpoint CT documented. Production code 0; tests executed 0. No dependent package advanced."
+        },
+        {
+          "line": 37,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Retrieve and inspect official Bulletin COBAC no. 6 pages containing Instruction I-2003/01, cross-reference the 1998 PCEC and bulletins 5/8/9/10 for account 312/322 lineage with precise page and article citations; separately seek signed post-2015 PCEC corrigendum/letter. If no authoritative resolution, preserve BLOCKED_AUTHORITY_REQUIRED and improve the legal"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": null,
+  "unique_historical_wp_mentions": [
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 1,
+    "read": 1,
+    "sha_matched": 1
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 210"
+}
