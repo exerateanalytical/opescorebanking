@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 178,
+  "checkpoint": "BP",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "b9d30735f37f6408cb598620353ebe77f2e1b262521c54cf0289345517b230fd",
+      "crc32": "bef39d8a",
+      "bytes": 7366
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "582445621cf3d944b38578d3c710e43456c3ae0ef19f8dffa718eecd1fa95ccb",
+      "crc32": "10dd2038",
+      "bytes": 12351
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BP/CONTINUATION_STATE.json",
+      "sha256": "7de5a196cf71f481d02d4a13110f6b985903fca2634482426378c85fcd4c3941",
+      "crc32": "995c97ff",
+      "bytes": 2111
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BP/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "4271ec345919b5a01b093d3da7edc66b5b175b65018d83a3414ad9cd16b0d119",
+      "crc32": "8fe42b2c",
+      "bytes": 6683
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BP/EXECUTION_REPORT.md",
+      "sha256": "2a1574a936e9238a1ae40310a2a497f39b193e9e7c70f1a84acb89dc793b0254",
+      "crc32": "e6534caa",
+      "bytes": 1924
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BP/QUALITY_REVIEW.md",
+      "sha256": "4b9f04beac1fa376f3c44ff2d3b04f6d3da33d1a6da739c98ff6b5c847fbed74",
+      "crc32": "7fd3fa49",
+      "bytes": 2104
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BP/RAIL_AUTHORITY_AND_MESSAGE_MODEL.json",
+      "sha256": "5cee17bd7d20d3261c0f76392fa1288bae00f9bb08dd612b49894edaf525febc",
+      "crc32": "24243acf",
+      "bytes": 9979
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BP/README.md",
+      "sha256": "b4b8d1e69d09488405d48a94e398f8b0b4c4ed6527b67bfe8fb2e1ba90e3b1d0",
+      "crc32": "40fb6da5",
+      "bytes": 1735
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BP/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "sha256": "df500c9d6086358ff057c06b03b1a8008a130d8634d1ec9133cd6b05735ecd15",
+      "crc32": "dcc075e8",
+      "bytes": 4356
+    }
+  ]
+}
