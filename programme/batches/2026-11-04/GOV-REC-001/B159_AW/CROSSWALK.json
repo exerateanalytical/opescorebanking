@@ -1,0 +1,302 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 159,
+  "checkpoint": "AW",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/AW/ACCOUNTING_CONTROL_DESIGN.md",
+      "git_blob_sha": "3d70c2adba4ed358dcf0ce6612d92fb1497a8fad",
+      "sha256": "f09537dd63881098bda8245cee59e2168b452e8195ea9db2d91e12855f9732b6",
+      "bytes": 4589,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Accounting Core owns immutable posted journals, postings, accounting periods and balances derived from journals. Regulatory Authority owns effective-dated legal instrument provenance and status. Chart Authority owns versioned PCEC mapping candidates and institution approvals. Credit Risk owns classification decisions and supporting evidence; it **cannot dire"
+        },
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "`ChartRelease{release_id,institution_id,regulatory_profile,source_instruments[],effective_from,effective_to,approved_at,approved_by,second_approver,source_hashes[],mapping_version,status}`. State: DRAFT -> EVIDENCE_REVIEW -> CFO_APPROVED -> COMPLIANCE_APPROVED -> SCHEDULED -> ACTIVE -> RETIRED; any disputed legal effect -> QUARANTINED. Distinguish legally ef"
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "The 1998 PCEC instructs same-day booking and no post-close entries except exceptional complementary days. Proposed `AccountingPeriod` states OPEN -> CLOSING -> CLOSED -> SEALED, with separately authorized `COMPLEMENTARY_WINDOW` only if institution/regulatory policy approves. A closed period cannot accept ordinary backdated posting. Prior-period errors use da"
+        },
+        {
+          "line": 16,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Transactional outbox/inbox, idempotent replay, independent reconciler, unknown-external-outcome quarantine, tamper-evident audit, least privilege, key custody, DR restore tests and business-date rollover testing. Prevent a status update from creating or destroying money. Manual overrides require dual control, reason, expiry and evidence. All unresolved legal"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AW/CONTINUATION_STATE.json",
+      "git_blob_sha": "96c478d6cc28f5065d68efdae6badd6ae68f52a5",
+      "sha256": "943dd428a95aa04fbd2c18284a47dffbcb381a2b659eaf1c61bbac7a93f9af8c",
+      "bytes": 1278,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 6,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited; not independently reaudited)\","
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"completed\": 0,"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"blocked_from_closure\": 1,"
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_sent\": 0,"
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 23,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"next_exact_task\": \"WP-ACC-005 — Checkpoint AX: authenticate and reconcile the 1998 full PCEC baseline with the complete I-2002/01, I-2003/01, I-2015/01 and post-2018 amendment chain; obtain qualified legal interpretation of R-2018/01 Article 33; secure current institution-approved chart/reporting mappings; continue issuer-certified 01/25–02/25 and Court/pub"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AW/EXECUTION_REPORT.md",
+      "git_blob_sha": "2cd9436cf3335d8a0993e72884c020d582220064",
+      "sha256": "f30099baedecd0b20ccaa5de74e166a68477bfc14c4abbd321734408e60e5a11",
+      "bytes": 1903,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Attempted work packages: **1** (WP-ACC-005). Completed work packages: **0**. Kept open: **1**. Blocked from closure: **1**. Dependent work packages attempted: **0**."
+        },
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Substantive advance: located and inspected the **full 258-page BEAC-hosted historical PCEC July 1998** (not merely 8KB founding regulation); identified Annex I dimensions, class 9 off-balance double-entry, end-of-day closure controls, nine-class chart, report traceability, and historically dated Cameroon year-end language requiring non-activation. Mapped ame"
+        },
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Proposed requirements: **12**; acceptance scenarios specified: **16**; banking tests executed: **0**; production code written: **0**; regulatory requests transmitted: **0**; P0 gaps closed: **0**. Source PDF bytes/hash: **not retained** (container external DNS unavailable). Financial DoR: **FAIL**."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Regulatory sources: https://www.beac.int/wp-content/uploads/2016/10/Plan-comptable-des-e%CC%81tablissements-de-cre%CC%81dit-1998.pdf; https://www.beac.int/wp-content/uploads/2016/10/cbR-98_01.pdf ; https://www.beac.int/wp-content/uploads/2016/10/Bulletin-COBAC-n%C2%B06.pdf ; https://www.beac.int/supervision-bancaire/instructions-de-cobac/ ."
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "NEXT EXACT TASK: WP-ACC-005 — Checkpoint AX: reconcile authenticated current PCEC amendments and Article 33 legal interpretation; obtain certified 01/25–02/25/publication/Court records and institution-approved mappings; preserve P0 financial holds."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AW/PCEC_AUTHORITY_CHAIN.json",
+      "git_blob_sha": "5ce9bd3d33da3fc43d839aa34f48b4f18f8e91f2",
+      "sha256": "342bb49f2eb6cc7e9aabe7d50f8feaae11e5d573732ca34b95a1f9a231d71d5a",
+      "bytes": 3258,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 54,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"ISSUER_TEXT_PREVIOUSLY_INSPECTED_AV_LEGAL_EFFECT_UNRESOLVED\","
+        },
+        {
+          "line": 62,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"Authenticate 01/25 and 02/25 full legal/publication/judicial chain and missing printed page 10\","
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AW/PRIMARY_EVIDENCE_DELTA.md",
+      "git_blob_sha": "32c6c53ab1f241a4f60876db1ab9bd4480b5c240",
+      "sha256": "91e2f18fff74e3c943489604151ed466e3e722c6265c2d21bcb6d4878c90ec02",
+      "bytes": 3729,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 22,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Publisher-domain primary materials inspected by web extraction. The container had no external DNS access to retrieve original PDF bytes. No SHA-256 source binary, signature certificate, Court-certified disposition, institution-approved PCEC mapping, or independent legal opinion obtained. All source-derived account codes remain **historical research candidate"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AW/QUALITY_REVIEW.md",
+      "git_blob_sha": "2291a42520ee51409a1a7bb19ad37fdff0f734a9",
+      "sha256": "da3675f41789faa45a3616cc251cf748ddf627eaaae81573b686a6e0be418ce2",
+      "bytes": 1827,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Regulatory/legal: **OPEN/P0** — historical 1998 PCEC located; current amendment completeness and 2018 Article 33 interpretation unresolved. Legal adoption/publication/judicial status of 01/25 and 02/25 unresolved."
+        },
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Architecture: proposal separates Chart Authority, Regulatory Authority, Accounting Core and Credit Risk; domain boundaries need ADR review."
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Privacy/retention: historical PCEC attributes identified; current lawful basis, retention and minimization unresolved."
+        },
+        {
+          "line": 15,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Final review decision:** keep WP-ACC-005 OPEN/P0-BLOCKED; do not implement ledger financial rule changes, dormant-account transfers or credit provisioning from unverified chart mappings."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AW/README.md",
+      "git_blob_sha": "40818d5e0f9d4711aef952771402ebff2ab837e4",
+      "sha256": "57dfb19c1fa5304c1e5413a4f38bd39379753163bf4ed837ccd51c264bf170de",
+      "bytes": 1121,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-01. Parent: AV (main @ d589cccba3f3b7713dad9d360d0282d77151cfbe). Phase 4 Accounting Core / Financial Integrity."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Outcome:** Official BEAC-hosted **258-page historical PCEC edition (July 1998)** located and its key sections inspected; earlier AV lacked this full baseline. This is not a certified consolidated 2026 chart. WP-ACC-005 remains OPEN/P0-BLOCKED. No production code, financial policy activation, banking tests, or regulator contact."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AW/REQUIREMENTS_AND_TESTS.json",
+      "git_blob_sha": "8f7aba73bb4a087fe3ca635fba79612281911231",
+      "sha256": "2bf240c32df933963da04ed319c2f1a4b84da66e316f53ae40d978cd5aa86dd9",
+      "bytes": 5533,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 57,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"description\": \"R-2018/01 Article 33 legal-effect discrepancy must be legally resolved before historical applicability rules activate\","
+        },
+        {
+          "line": 117,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"description\": \"Missing residence/group attribute generates evidence exception, not fabricated value\","
+        },
+        {
+          "line": 129,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"description\": \"Missing R-2018/01 Article 33 legal interpretation blocks retroactive rule activation\","
+        },
+        {
+          "line": 153,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"description\": \"Unknown settlement outcome remains unresolved and no finality or liquidity is fabricated\","
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "AW",
+    "date": "2026-11-01",
+    "previous": "AV",
+    "previous_verified_main_commit": "d589cccba3f3b7713dad9d360d0282d77151cfbe",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited; not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "work_packages_attempted": 1,
+    "completed": 0,
+    "kept_open": 1,
+    "blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "new_primary_source": "BEAC-hosted 258-page July 1998 PCEC full edition",
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "regulatory_requests_sent": 0,
+    "p0_gaps_closed": 0,
+    "definition_of_ready": "FAIL",
+    "source_binary_custody": "NOT_RETAINED",
+    "delivery_status": "PENDING_REMOTE_VERIFICATION",
+    "next_exact_task": "WP-ACC-005 — Checkpoint AX: authenticate and reconcile the 1998 full PCEC baseline with the complete I-2002/01, I-2003/01, I-2015/01 and post-2018 amendment chain; obtain qualified legal interpretation of R-2018/01 Article 33; secure current institution-approved chart/reporting mappings; continue issuer-certified 01/25–02/25 and Court/publication/settlement evidence acquisition; maintain all financial activation holds."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 8,
+    "read": 8,
+    "sha_matched": 8
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 160"
+}

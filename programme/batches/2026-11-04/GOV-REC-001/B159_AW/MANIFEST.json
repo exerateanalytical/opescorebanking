@@ -1,0 +1,71 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 159,
+  "checkpoint": "AW",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "5de5a51c2bd97e3c8c63c1cd055fe9487df35a1f16c5b1af376be831f7b56650",
+      "crc32": "32551c02",
+      "bytes": 7062
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "c6f1fa0520d3b25aa0e1a95a6aecfa8760ec0946f6c5320ac1cb774366a66cb2",
+      "crc32": "5a07d879",
+      "bytes": 14071
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AW/ACCOUNTING_CONTROL_DESIGN.md",
+      "sha256": "f09537dd63881098bda8245cee59e2168b452e8195ea9db2d91e12855f9732b6",
+      "crc32": "d8fdff17",
+      "bytes": 4589
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AW/CONTINUATION_STATE.json",
+      "sha256": "943dd428a95aa04fbd2c18284a47dffbcb381a2b659eaf1c61bbac7a93f9af8c",
+      "crc32": "213aa81b",
+      "bytes": 1278
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AW/EXECUTION_REPORT.md",
+      "sha256": "f30099baedecd0b20ccaa5de74e166a68477bfc14c4abbd321734408e60e5a11",
+      "crc32": "4cde5630",
+      "bytes": 1903
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AW/PCEC_AUTHORITY_CHAIN.json",
+      "sha256": "342bb49f2eb6cc7e9aabe7d50f8feaae11e5d573732ca34b95a1f9a231d71d5a",
+      "crc32": "3bc660fb",
+      "bytes": 3258
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AW/PRIMARY_EVIDENCE_DELTA.md",
+      "sha256": "91e2f18fff74e3c943489604151ed466e3e722c6265c2d21bcb6d4878c90ec02",
+      "crc32": "3cd2075b",
+      "bytes": 3729
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AW/QUALITY_REVIEW.md",
+      "sha256": "da3675f41789faa45a3616cc251cf748ddf627eaaae81573b686a6e0be418ce2",
+      "crc32": "f3a360b0",
+      "bytes": 1827
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AW/README.md",
+      "sha256": "57dfb19c1fa5304c1e5413a4f38bd39379753163bf4ed837ccd51c264bf170de",
+      "crc32": "4d124907",
+      "bytes": 1121
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AW/REQUIREMENTS_AND_TESTS.json",
+      "sha256": "2bf240c32df933963da04ed319c2f1a4b84da66e316f53ae40d978cd5aa86dd9",
+      "crc32": "f9660de0",
+      "bytes": 5533
+    }
+  ]
+}
