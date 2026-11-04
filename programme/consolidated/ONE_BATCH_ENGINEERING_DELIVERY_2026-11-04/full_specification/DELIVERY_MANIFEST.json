@@ -2,7 +2,7 @@
   "status": "DRAFT_DELIVERED_NOT_ACCEPTED",
   "baseline": "0aef0c039b2d96bf689f1a9dac0896e6abf64a18",
   "domain_count": 25,
-  "files_count": 141,
+  "files_count": 143,
   "domain_files_per_type": 25,
   "education_files": 6,
   "domain_ids": [
@@ -40,5 +40,12 @@
     "GIMAC institution entitlement"
   ],
   "implementation_status": "NOT_IMPLEMENTED",
-  "certification": "NOT_CERTIFIED"
+  "certification": "NOT_CERTIFIED",
+  "manifest_count_correction": {
+    "previous_reported": 141,
+    "verified_actual_directory_files": 143,
+    "corrected_on": "2026-11-04",
+    "source": "whole-repository reconciliation metadata + local full tracked-file audit",
+    "does_not_imply_accepted_work": true
+  }
 }

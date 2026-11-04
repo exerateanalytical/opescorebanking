@@ -1,17 +1,45 @@
 {
   "programme": "OPES Core Banking",
+  "vendor": "OPESWARE TECHNOLOGIES",
+  "product_type": "Multi-institution commercial banking platform for licensed CEMAC banks; Africa-expandable",
+  "education_product": "Separate synthetic Banking Education Edition software licences (NOT banking regulatory licences)",
   "updated_date": "2026-11-04",
-  "canonical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.2_2026-11-04.md",
-  "superseded_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md",
-  "historical_source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
-  "latest_completed_archive_batch": 180,
-  "latest_archive_batch_status": "DRAFT_EVIDENCE_REMOTELY_VERIFIED",
-  "governance_work_package": "GOV-REC-001",
-  "governance_work_package_status": "IN_PROGRESS",
-  "historical_wbs_denominator": "UNKNOWN",
-  "active_P0": [
-    "WP-ACC-005"
+  "canonical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.3_2026-11-04.md",
+  "historical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.2_2026-11-04.md",
+  "source_reconciliation_commit": "425bc2776c7bb168b43de9bcd103ea8d4d4a7f91",
+  "historical_engineering_wp_directories_observed": 150,
+  "work_package_contract_json_present": 120,
+  "original_contract_json_missing": 30,
+  "historical_checkpoint_dirs_observed": 59,
+  "recovery_batch_paths_observed_through": 209,
+  "archive_originals_crc_failed": 146,
+  "archive_reconstructions_from_tracked_siblings": 146,
+  "original_archives_replaced": false,
+  "original_archive_custody_verified": false,
+  "implementation_dor_15": "NOT_VERIFIED",
+  "accepted_wp_total": "UNKNOWN",
+  "approved_programme_wp_denominator": "UNKNOWN",
+  "blocked": [
+    {
+      "id": "WP-ACC-005",
+      "status": "BLOCKED_P0",
+      "reason": "COBAC PCEC 312/322 authoritative classification unresolved"
+    },
+    {
+      "id": "WP-PAY-GIMAC-001",
+      "status": "NOT_AUTHORIZED",
+      "reason": "Bank-specific network participation and settlement entitlement unknown"
+    },
+    {
+      "id": "GOV-REC-001",
+      "status": "OPEN",
+      "reason": "Original archival custody and independent acceptance not established"
+    },
+    {
+      "id": "GOV-WBS-RECON-001",
+      "status": "OPEN",
+      "reason": "Exhaustive independently approved WBS and acceptance denominator unresolved"
+    }
   ],
-  "next_exact_task": "GOV-REC-001 batch 181: audit all eight checkpoint AN source blobs and independently verify original AN cumulative ZIP provenance or explicitly record unavailable source; preserve WP-ACC-005 P0 and WBS UNKNOWN",
-  "run_index": "programme/batches/2026-11-04/GOV-REC-001/RUN_INDEX_151_180.json"
+  "next_action": "Independent regulatory/CFO resolution of WP-ACC-005 and bank-specific entitlement evidence; independent approval and test execution of the drafted product contracts"
 }

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Exhaustive tracked-file reconciliation. Metadata and automated content checks are not approvals."""
+# Canonical state v0.3 corrections trigger a fresh, reproducible audited source archive.
 import csv, hashlib, io, json, os, pathlib, re, subprocess, zipfile
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
