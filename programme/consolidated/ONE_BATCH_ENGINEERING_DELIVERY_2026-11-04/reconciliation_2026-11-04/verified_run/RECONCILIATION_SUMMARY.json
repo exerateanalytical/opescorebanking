@@ -2,7 +2,7 @@
   "accepted_wp_total": "UNKNOWN",
   "approved_programme_wp_denominator": "UNKNOWN",
   "banking_tests_executed_by_this_audit": 0,
-  "baseline_git_commit": "57bc88c014c40c3f8534d94c8a96b55d9fcdae35",
+  "baseline_git_commit": "98df1716fed03a9c2ff0d6fcc78413ad574422c8",
   "database_rls_design_gaps": 25,
   "duplicate_test_ids": [],
   "engineering_contracts_parsed": 120,
@@ -37,9 +37,9 @@
     }
   ],
   "generated_archive": {
-    "bytes": 9308535,
+    "bytes": 9311230,
     "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/reconciliation_2026-11-04/verified_run/OPES_Core_Banking_Full_Reconciled_Source_2026-11-04.zip",
-    "sha256": "422aeee369a349c58d4544e1788380e7c23c583006edaf9658968063d935b20f",
+    "sha256": "32ea7efd845abc9cdb0be40d5ab8c6ddeb92827e4b11e31d490fa0486bb3fd18",
     "zip_crc_valid": true
   },
   "generic_api_schema_gaps": 25,
@@ -52,7 +52,7 @@
     "original_archive_authenticity_verified": false,
     "original_bytes_preserved": true,
     "repair_package": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/reconciliation_2026-11-04/verified_run/RECONSTRUCTED_INVALID_HISTORICAL_ZIPS_2026-11-04.zip",
-    "repair_package_sha256": "ffba0033b1adc5518a8bcf1bd2ef07371594d140a4134e28bae612427ac6823a",
+    "repair_package_sha256": "05f95d4b99ac66c99a66795ba37812715928dd231d07371127046283652ffb31",
     "unrecoverable_missing_sibling_sources": 0
   },
   "known_blockers": [
@@ -63,14 +63,8 @@
   ],
   "manifest_conflicts": [
     {
-      "action": "supersede manifest count; preserve historical file",
-      "actual": 143,
-      "declared": 141,
-      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/DELIVERY_MANIFEST.json"
-    },
-    {
       "action": "stale pointer; observed batch path is not proof of acceptance",
-      "declared_latest_archive_batch": 180,
+      "declared_latest_archive_batch": null,
       "latest_recovery_path_number": 209,
       "path": "governance/CANONICAL_PROGRAMME_STATE.json"
     }
@@ -80,7 +74,7 @@
   "regulatory_certification": "NOT_VERIFIED",
   "regulatory_checkpoint_directories": 59,
   "regulatory_readmes_read": 59,
-  "repository_bytes": 14010948,
+  "repository_bytes": 14015703,
   "run_date": "2026-11-04",
   "scope": "All git-tracked files, text parse, all top-level ZIP CRC tests, draft coverage; not independent regulatory approval",
   "source_contract_executed_test_claim_sum": 0,
@@ -90,15 +84,15 @@
     ".csv": 31,
     ".js": 2,
     ".json": 398,
-    ".md": 582,
+    ".md": 583,
     ".py": 2,
     ".sql": 26,
     ".txt": 3,
     ".yaml": 27,
     ".yml": 2
   },
-  "text_files_read": 1073,
-  "tracked_files": 1294,
+  "text_files_read": 1074,
+  "tracked_files": 1295,
   "zip_archives_tested": 221,
   "zip_crc_failures": 146
 }

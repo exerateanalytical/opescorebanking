@@ -1,9 +1,9 @@
 # OPES Core Banking — Exhaustive repository machine audit
-Source commit: 57bc88c014c40c3f8534d94c8a96b55d9fcdae35. Source snapshot is git-tracked content; no approved historical WBS denominator.
-Tracked: 1294 files; text bodies read 1073; ZIPs CRC-tested 221 (failures: 146).
+Source commit: 98df1716fed03a9c2ff0d6fcc78413ad574422c8. Source snapshot is git-tracked content; no approved historical WBS denominator.
+Tracked: 1295 files; text bodies read 1074; ZIPs CRC-tested 221 (failures: 146).
 Parsed 2026-11-03 contracts: 120; regulatory checkpoint README bodies: 59.
 Domain slots missing: 0; proposed SQL without RLS: 25; generic API payload gaps: 25.
-Exact duplicate SHA-256 groups: 4; register/test-count conflicts: 2.
+Exact duplicate SHA-256 groups: 4; register/test-count conflicts: 1.
 Financial P0: WP-ACC-005 remains blocked; GIMAC and other bank-specific entitlements remain unverified.
 Banking implementation, tests, 15 DoR gates and independent professional reviews are NOT claimed.
 ### Evidence limits

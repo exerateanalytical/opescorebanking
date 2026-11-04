@@ -1,7 +1,7 @@
 path,sha256,bytes,heading,mentions_draft,mentions_acc_005,mentions_gimac
 .github/workflows/reconcile-core-banking.yml,6240bc3f673a9122aec62e934da8c6fb6ce05bbed1274ac4f2fe76bea1dee9c3,1195,,NO,NO,NO
 .github/workflows/restore-checkpoint-an.yml,0d5d0685a8261d7c62bb3735dd82dc1bd19016014ab195f03fce65895fff6b7f,1185,,NO,NO,NO
-governance/CANONICAL_PROGRAMME_STATE.json,064c5628045bdfa97a3e894ee939dc710a5dd7fffd96213b1c1698ca4827b1e2,941,,NO,YES,NO
+governance/CANONICAL_PROGRAMME_STATE.json,ee09f949ff57fb21ce496649825c3b77bcbc0ef649adb8626d5ab7142279de4b,1992,,NO,YES,YES
 governance/GOV_REC_001_AN_ARCHIVE_EXISTENCE_RECONCILIATION_2026-11-04.md,cfc3de37e747d84965dd35c85e928f7775f06b7064554c74029784b9b204942c,3252,GOV-REC-001 — AN archive existence reconciliation (2026-11-04),NO,YES,YES
 governance/GOV_REC_001_AN_ARCHIVE_PROVENANCE_GATE_2026-11-04.md,6ce5934761eb56376ffcb14720daafb49f75585f8ca3504517fd46f46754ceef,3833,GOV-REC-001 — AN original-archive provenance and acceptance gate,NO,YES,NO
 governance/GOV_REC_001_AN_BINARY_ZIP_CENTRAL_DIRECTORY_VERIFICATION_2026-11-04.md,717c2edff2f1ab52e9c1fc7e6df3398e6394495886ce1d04df5f954f1d6f341e,3073,GOV-REC-001 — AN binary retrieval and ZIP central-directory verification,YES,YES,NO
@@ -18,6 +18,7 @@ governance/GOV_WBS_RECON_001_ACCEPTANCE_AND_ARTIFACT_CROSSWALK_PROTOCOL_2026-11-
 governance/LOCAL_ARTIFACT_RECOVERY_INVENTORY_2026-11-03.md,2c56410f5a431cdff2dc5ae89741f41e4acde32029b9eb5bdb0b8ed00775093e,2485,Local artifact recovery inventory — 2026-11-03,NO,NO,NO
 governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md,9a9f83429174a2274bfb211d8d92c18c52b1d30f185585ff33f991aa44c219a3,8095,OPES Core Banking — Canonical Master Plan and WBS Recovery Register v0.1,NO,YES,YES
 governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.2_2026-11-04.md,d7fe50485caa1daf65644376877969da5f76b26c779753bb02f3a7f4c3d47a0e,5750,OPES Core Banking — Canonical Master Plan and WBS Recovery Register v0.2,YES,YES,YES
+governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.3_2026-11-04.md,784532e47c0dca4ba28aa8c13217fbf57d41c8fbe253b790e54b2f627eceb8b0,3337,OPES Core Banking — Canonical Master Recovery State v0.3 (2026-11-04),YES,YES,YES
 governance/PROGRAMME_RECOVERY_BASELINE_2026-11-03.md,f4b81942258e02b4830e9fa3405f7f078a6d19700fd23074804355d205685728,5995,OPES Core Banking — Programme Governance Recovery Baseline,NO,YES,NO
 governance/REPOSITORY_ASSET_SYNC_AUDIT_2026-11-03.md,aeface3ede9cd371be6c61f9c9b40ad2e62b9b58989a098f5ea01e7f4c87391a,3470,OPES Core Banking — Repository Asset Synchronization Audit,NO,YES,NO
 governance/REPOSITORY_INVENTORY_BLOBS_2026-11-03.json,ddbc57103a3287d42958acc78ec38c2d272cf1f102eb62982507f08ce4f96075,147321,OPES Core Banking repository asset synchronization snapshot,NO,NO,NO
@@ -587,7 +588,7 @@ programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/REP_SPE
 programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/SEC_SPEC.md,3dec968b8a9297d5a0113ffb48c09c3155bc808ed29c35f3eee95a59670a021a,11604,SEC — Security/identity/cryptography: consolidated engineering specification (draft),YES,YES,NO
 programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/TRE_SPEC.md,0c5aa6118e698f633e9f778355b71cabc6d21589169aa43777f69f7382dd1682,11701,TRE — Treasury/FX/ALM: consolidated engineering specification (draft),YES,YES,NO
 programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/domains/TST_SPEC.md,21ee36b29798e78d33bd1abe89cd628ce33ef3695b7ed1441d5949b1674d575d,10295,TST — QA/certification evidence: consolidated engineering specification (draft),YES,YES,NO
-programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/DELIVERY_MANIFEST.json,2da20ddfdad66ed8ab50f77c6cb33f006b07ea89a8c0fafdf177bec49fb7a5c6,776,,NO,YES,YES
+programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/DELIVERY_MANIFEST.json,09bcc99b798cd78af4da2a0bfdb314934c4bdbdf768094f6bf72189a6500b638,1054,,NO,YES,YES
 programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/README.md,d5b6ac20130960f9e399446dfe9e0deae8dc96a065cf45d116167a02771cacfc,1655,OPES Core Banking — Full specification generation pass,YES,YES,NO
 programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/ACT.openapi.yaml,7a2ac55affb433c142ed0f1014dd0655ec07f616cc4e68d4dc4439e2965a0841,5143,,YES,NO,NO
 programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/ADM.openapi.yaml,a23c71b098f8c5477bd57a2500438256f7385f5f978b45b8ec442aa74eea96be,5127,,YES,NO,NO
@@ -1070,5 +1071,5 @@ regulatory/recovery/source/AN/README.md,f2128a6c354d4f8042e5f5dd06688b69f16cba16
 regulatory/recovery/source/AN/REQUIREMENTS.json,729e580f5955def608b083b6ebda1ccc76384441b16ef7f5222802c8a3ae89ab,1117,,YES,NO,NO
 regulatory/recovery/source/AN/SHA256SUMS.txt,f72440358200f491628371743b2fda9832bf33e61843b7a63f8b640d5e34b03e,770,,NO,NO,NO
 regulatory/recovery/source/AN/SOURCE_REGISTER.json,e5e7156873f2510f0060a36758b6eb9aa5a0eeaaae39c8e6731e73606ecd8755,1216,,YES,NO,NO
-tools/reconcile_core_banking.py,2e5c76fcc63b352f407f69852732ce87f36fa6d0d047d6022fe432081ce8d8a2,16829,Preserve invalid historical ZIP bytes; reconstruct clearly labelled usable,YES,YES,YES
+tools/reconcile_core_banking.py,7e3f36b5a06aae13d0a667d00122c1ace3467be7e3c8007242deaad280220f59,16918,"Canonical state v0.3 corrections trigger a fresh, reproducible audited source archive.",YES,YES,YES
 tools/recovery/build_checkpoint_an.py,440694f3f0f30eb2223cc15096299bdc629932250f2d89708159c6f09ee4b847,2251,,NO,NO,NO

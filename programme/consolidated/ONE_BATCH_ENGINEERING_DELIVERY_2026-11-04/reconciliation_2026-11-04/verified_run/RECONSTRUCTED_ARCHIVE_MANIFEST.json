@@ -4,7 +4,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-001/OPES_Core_Banking_Batch_61_ACT-001_2026-11-03.zip",
     "original_sha256": "24a0ffa97db634682002e8904efbb0e5ad3fdf20e0b954723fcac703f1aaf2d8",
     "reconstructed_bytes": 2894,
-    "reconstructed_sha256": "be254b78e718f4d4c09a99c9ed74268c85892aa2a54286567021d9ff721889df",
+    "reconstructed_sha256": "82ed24d515c2bff0eb1c72c09626bf87541999d87600a422adc9bec6de8cb363",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-001.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-001/ACT-001_CONTRACT.json",
@@ -17,7 +17,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-002/OPES_Core_Banking_Batch_62_ACT-002_2026-11-03.zip",
     "original_sha256": "6847f865420458d96d64f8bdc607cc17f27c855f847e2681949c30ce96f52bdb",
     "reconstructed_bytes": 2891,
-    "reconstructed_sha256": "5f8ae46d7a8471a0e881bce02cdfba7cb36621373c160dd647ae5d9fd34127ec",
+    "reconstructed_sha256": "12123daff82dc70c8793432f152f9f19f7f26cc3cbd278c43eca0bcead2fb3bc",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-002.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-002/ACT-002_CONTRACT.json",
@@ -30,7 +30,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-003/OPES_Core_Banking_Batch_63_ACT-003_2026-11-03.zip",
     "original_sha256": "4e8032919f5d5f51f86f7a043198ef817559f4889291e99752179f7da2abc6a6",
     "reconstructed_bytes": 2835,
-    "reconstructed_sha256": "d1cb2a15d89a5fadbd573ac72ea0ad48704bf4c17b8c66b99c1e3f76cb475d69",
+    "reconstructed_sha256": "421df37a10ecd56555ba0a52c1c9e7f254270bff120908c56f33133455035124",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-003.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-003/ACT-003_CONTRACT.json",
@@ -43,7 +43,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-004/OPES_Core_Banking_Batch_64_ACT-004_2026-11-03.zip",
     "original_sha256": "60a9434a5143ddca9301fd875fa5b8752d1d75025ec102c1c322d8a6f63f0ea2",
     "reconstructed_bytes": 2927,
-    "reconstructed_sha256": "89eb4a69857e4c354d3e80fe436e71ae978c9bc848ea37aaa2636a2f5c7e4612",
+    "reconstructed_sha256": "45cda6573e86be7d35c5b5c015b18993946ba4ba694350a078b5fcd1fd7daf42",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-004.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-004/ACT-004_CONTRACT.json",
@@ -56,7 +56,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-005/OPES_Core_Banking_Batch_65_ACT-005_2026-11-03.zip",
     "original_sha256": "e1d5d414823aed2c670cea8f92a82ee8a47cc9ec3e003c0d7af2beb5ac8fb54f",
     "reconstructed_bytes": 2794,
-    "reconstructed_sha256": "71ea28a363a6452b649f6ada2eb3ed763433b977294ecf0fbf7fec3c27f81873",
+    "reconstructed_sha256": "77c4694bb5ec13c9c181ecfc2a3f4bb6eb1db7f27f610a53ee482cdfbb2dc994",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-005.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-005/ACT-005_CONTRACT.json",
@@ -69,7 +69,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-006/OPES_Core_Banking_Batch_66_ACT-006_2026-11-03.zip",
     "original_sha256": "23b65e3f6fa2012675fbf349201f9458072c0f78ea114ac78eec46d6cbfcf7b1",
     "reconstructed_bytes": 2804,
-    "reconstructed_sha256": "0012468a525660a86ae61e4f977d5d2896080ce9c25b51a137cf2d9d62eb26c9",
+    "reconstructed_sha256": "f56b318c1e4113f46b6d397631c469a35b026de6586ccb5a90e72b8a842d8390",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-006.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-006/ACT-006_CONTRACT.json",
@@ -82,7 +82,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-007/OPES_Core_Banking_Batch_67_ACT-007_2026-11-03.zip",
     "original_sha256": "fdc24f7d5cf16daaeebc75a8aba7d08570aa57e8aa20d76c1292b311ee8e4e2e",
     "reconstructed_bytes": 2769,
-    "reconstructed_sha256": "7675e5c32cf15f3e1e581ae250506f0907bf7cf135081094ee2c234eb71bd9f3",
+    "reconstructed_sha256": "eb956570ad037fc2b0f354f8a1e073ba4cfe03f19a811b0d29a81c2b5cbfe82d",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-007.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-007/ACT-007_CONTRACT.json",
@@ -95,7 +95,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-008/OPES_Core_Banking_Batch_68_ACT-008_2026-11-03.zip",
     "original_sha256": "255640048b8a023023083ea04062307f4d6f1d47ca9bfc8f13f683ffdd8296da",
     "reconstructed_bytes": 2790,
-    "reconstructed_sha256": "86bf212c962b74f5d3e8c754ede08f927ce1cebf5c7fb8dfe8706b44b253947c",
+    "reconstructed_sha256": "862d9249eea4f1e518ac9bc47eeeae4f5607c9b40b1385a48bfffce6c57a77e7",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-008.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-008/ACT-008_CONTRACT.json",
@@ -108,7 +108,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-009/OPES_Core_Banking_Batch_69_ACT-009_2026-11-03.zip",
     "original_sha256": "a640d2b61b409a00441976b961fda1e93c726dd538241d5b98fb5a9d3b65f088",
     "reconstructed_bytes": 2862,
-    "reconstructed_sha256": "4325d73353088a099242076528fb1cb5d97fdb567dbebdcbe15e917582a34259",
+    "reconstructed_sha256": "2916ee9dde2a80fac32c98410ecebca683a34ec85ba533031d1fb4078b545100",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-009.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-009/ACT-009_CONTRACT.json",
@@ -121,7 +121,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-010/OPES_Core_Banking_Batch_70_ACT-010_2026-11-03.zip",
     "original_sha256": "4e26b32fdf0704ad0aea6f3cddd7627f3c20ef296a29a858630e389cf9d7e104",
     "reconstructed_bytes": 2777,
-    "reconstructed_sha256": "93273c656be10ff81f5d562e18392b09695049b4967894135a19ecf610319266",
+    "reconstructed_sha256": "88cec508bdae36762f451d29b7408fdb3a767ccf64652923b23617e9d98a538d",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-010.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-010/ACT-010_CONTRACT.json",
@@ -134,7 +134,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-011/OPES_Core_Banking_Batch_71_ACT-011_2026-11-03.zip",
     "original_sha256": "d04659cd9e37be42f4262dbc45ef51c8db9848415853b0dd2a4d9ec19f492080",
     "reconstructed_bytes": 2794,
-    "reconstructed_sha256": "d15d30256b1e5ba41eac3727285f248d43fb0bf7e75f1180b55de39acddeef76",
+    "reconstructed_sha256": "cacd5fe23fed61df62612fbb98c61550ac57d85de636503f8f48bb0e2f6937b8",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-011.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-011/ACT-011_CONTRACT.json",
@@ -147,7 +147,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-012/OPES_Core_Banking_Batch_72_ACT-012_2026-11-03.zip",
     "original_sha256": "fa2d4e002c35b277852166de40afe4f56c99c16b54c11d04229272e7291b2197",
     "reconstructed_bytes": 2745,
-    "reconstructed_sha256": "0b566690c3feb06396f6b2de7346563a15461db619d521d7f93cdbe970404202",
+    "reconstructed_sha256": "0a54260ad7bc7c5ba485efaeaeecf7d11b28fd67b73473ee11882c2f92861c67",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-012.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-012/ACT-012_CONTRACT.json",
@@ -160,7 +160,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-013/OPES_Core_Banking_Batch_73_ACT-013_2026-11-03.zip",
     "original_sha256": "6c895067e906e710373f9beb02b5475e1e567162cccf6e470bca97831fd8d997",
     "reconstructed_bytes": 2753,
-    "reconstructed_sha256": "bef790d27f6738e937060ae01b228fd3dc5224e96004db3d8922217b870700ae",
+    "reconstructed_sha256": "90e6f5ec2a496d7ed9c851881187229bde25ecbee5ff82b86f6548085bdf9543",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-013.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-013/ACT-013_CONTRACT.json",
@@ -173,7 +173,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-014/OPES_Core_Banking_Batch_74_ACT-014_2026-11-03.zip",
     "original_sha256": "202d428b43d3220d31acd3620744f02d3e3e949b201a0802d17bee709e9f9064",
     "reconstructed_bytes": 2799,
-    "reconstructed_sha256": "c9b9bcb50721b9dc429d76f9cabce29f4f23159bb6d88313db12621d3462a630",
+    "reconstructed_sha256": "b5662debc679592f4235e2fa3232b287245e62818f1a950b09905c91bbb685bc",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-014.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-014/ACT-014_CONTRACT.json",
@@ -186,7 +186,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-015/OPES_Core_Banking_Batch_75_ACT-015_2026-11-03.zip",
     "original_sha256": "c5d28d49b16359fce79335f96be527e4ed0dd4b867f00cce40a5db807880384a",
     "reconstructed_bytes": 2742,
-    "reconstructed_sha256": "aa53403260d49db149d16b2ab50302eb1e08ea3ada737e31167ea6588e464925",
+    "reconstructed_sha256": "4ac7c0d9fb9c6a87949164168149a5b971f4a4f1a167219f9014dd8b416b8a75",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-015.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-015/ACT-015_CONTRACT.json",
@@ -199,7 +199,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-016/OPES_Core_Banking_Batch_76_ACT-016_2026-11-03.zip",
     "original_sha256": "c79f98661119fe7bed374d88a11e615e0371989107400ea56b761a254e948f24",
     "reconstructed_bytes": 2835,
-    "reconstructed_sha256": "14eb4b5115752922b5f04089e18bc43446218ee0436251cf3ee0dd9e73e0c697",
+    "reconstructed_sha256": "42751c36319d46e8cbd7dec755b2d9c301bce11947632f11dd42f762ce28cf74",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-016.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-016/ACT-016_CONTRACT.json",
@@ -212,7 +212,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-017/OPES_Core_Banking_Batch_77_ACT-017_2026-11-03.zip",
     "original_sha256": "6533e7d338fe70ae1d50dda9b992f9383227b2a6b027cc03e68693405e9c1adf",
     "reconstructed_bytes": 2745,
-    "reconstructed_sha256": "d8eaaa9e1487e97fdb4e0e911f5bf3de12241960f31a06d72fcc129b21f46425",
+    "reconstructed_sha256": "69d8d36ca90c717496d20488fce70c332dcdebae930c560fa13f1161229b97a5",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-017.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-017/ACT-017_CONTRACT.json",
@@ -225,7 +225,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-018/OPES_Core_Banking_Batch_78_ACT-018_2026-11-03.zip",
     "original_sha256": "00de2b88030d759f8bc420e11b672b21f600f7b9807fbcfd47c597b38ab1ddff",
     "reconstructed_bytes": 2734,
-    "reconstructed_sha256": "fc56952c794b72123d8f897571a447ccb9c50fdb887cd9e11c2aebd42f58f1e5",
+    "reconstructed_sha256": "c68501aa2f272426613d0bd364cd71c5340b424c95be4b154263fd10ff5e2ad6",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-018.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-018/ACT-018_CONTRACT.json",
@@ -238,7 +238,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-019/OPES_Core_Banking_Batch_79_ACT-019_2026-11-03.zip",
     "original_sha256": "029014671d2e3af121a2d6e732814f1e068abce06bc565b08476fd0085d3490d",
     "reconstructed_bytes": 2795,
-    "reconstructed_sha256": "6816c82cb4fb83e9dcdabc947e089883d6fbba7f2ee160c4d73fc652ab18f194",
+    "reconstructed_sha256": "50c78e524ce75ca0a5dd122f6c58e94c32b80816be79ebce86d79fe67121a06e",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-019.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-019/ACT-019_CONTRACT.json",
@@ -251,7 +251,7 @@
     "original_path": "programme/batches/2026-11-03/ACT-020/OPES_Core_Banking_Batch_80_ACT-020_2026-11-03.zip",
     "original_sha256": "3388fb6a0bbd44d7575b6361913bea894bb27777ca370c0793f161193057dc94",
     "reconstructed_bytes": 3007,
-    "reconstructed_sha256": "53279ca23ee7e98c0d530261f9522ccdff2b8ad7d27c2fe60ad3cb6a9415fa91",
+    "reconstructed_sha256": "f5b6203d805638d0d73d9a7c720a45add6d9a199c6b42b24b57de989cc2eebf0",
     "reconstructed_zip_path": "RECONSTRUCTED/ACT-020.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ACT-020/ACT-020_CONTRACT.json",
@@ -264,7 +264,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-001/OPES_Core_Banking_Batch_21_ARC-001_2026-11-03.zip",
     "original_sha256": "c91d9586279e948c42d33e25173bcad7ea5d3ccdc983906f96233a1de8c37347",
     "reconstructed_bytes": 1690,
-    "reconstructed_sha256": "53c32289b47dfb7e6ae3860196482c77e26a1823c7490c009f1a9e55515ae12a",
+    "reconstructed_sha256": "8f0760dbc7affa699108f4df603a65364f76c97f59fa8835604cdad462afe7e3",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-001.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-001/ARC-001_SPEC.md"
@@ -276,7 +276,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-002/OPES_Core_Banking_Batch_22_ARC-002_2026-11-03.zip",
     "original_sha256": "2d24ca82039e386896928cbd705e704f1c97ba0268db0eba02c27bc389650f55",
     "reconstructed_bytes": 1714,
-    "reconstructed_sha256": "d4737f70b41e4b0aed0ae3c0b89ceaff04eb67a37a6bfc5530d9a870abe2c39b",
+    "reconstructed_sha256": "53a27ac2f9e1a161e32ee0efca7b1b15d9ae40ecb10b20300cb88663b4ed0066",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-002.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-002/ARC-002_SPEC.md"
@@ -288,7 +288,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-003/OPES_Core_Banking_Batch_23_ARC-003_2026-11-03.zip",
     "original_sha256": "a9bac10b0108e27c283c908c08228d28e23f63774675eaca915c3226a34aef01",
     "reconstructed_bytes": 1694,
-    "reconstructed_sha256": "70aafbc7d90c3417ce3b732b8e78c59bc89608e67cfe30cc38afcaf7a758cb4c",
+    "reconstructed_sha256": "d4c60c1d62d08ed4d9b45a5f42e9c40285a610fea24e9539ecbacfe6f346cc90",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-003.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-003/ARC-003_SPEC.md"
@@ -300,7 +300,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-004/OPES_Core_Banking_Batch_24_ARC-004_2026-11-03.zip",
     "original_sha256": "fba04307c8c363fbcbcc2e5861134c50e44bfe6839da4f5824abeae928c3470d",
     "reconstructed_bytes": 1662,
-    "reconstructed_sha256": "d56dbfb28c8dcf06000ec10af81f281e32b9950c8045bbb5dde9638af9d2340d",
+    "reconstructed_sha256": "0497d745f31523ceab6c6eaedeef6d9821cddfa18ab76e7ac6ecb379982702d1",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-004.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-004/ARC-004_SPEC.md"
@@ -312,7 +312,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-005/OPES_Core_Banking_Batch_25_ARC-005_2026-11-03.zip",
     "original_sha256": "f595c97e1aa1e43d4ce102023398527fd8637fdbb899ef132a80850443d5b8e6",
     "reconstructed_bytes": 1768,
-    "reconstructed_sha256": "f36c32e15340f7ca7ebd924ab6d3227b5f1eb0960592cd8b5202a27c7043248c",
+    "reconstructed_sha256": "b179e8e7e88d2dc9bd89a8f7e453cdb37179fa1c86a93b316f514a7c1eb501ac",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-005.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-005/ARC-005_SPEC.md"
@@ -324,7 +324,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-006/OPES_Core_Banking_Batch_26_ARC-006_2026-11-03.zip",
     "original_sha256": "35cb07914620e05ca61f8e33b587a9143de9cb166ff890ce554db1c6ffa1ef56",
     "reconstructed_bytes": 1847,
-    "reconstructed_sha256": "dc492737558f5657d8d7ad4fa6674ad088a0a04754a64418618c34d167d8c39d",
+    "reconstructed_sha256": "951b87d27f70fc1d1ffb59750abec69160233ec2784706a093146d40e7e076d5",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-006.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-006/ARC-006_SPEC.md"
@@ -336,7 +336,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-007/OPES_Core_Banking_Batch_27_ARC-007_2026-11-03.zip",
     "original_sha256": "4cf0d1dc03676a457d3b2a4a43d027fcaaf1e5cfdfec71b164a5f00cc7d160cd",
     "reconstructed_bytes": 1802,
-    "reconstructed_sha256": "d405777f6fe59fd980d6e4d24d1e97e87a9661cb6d90d666c09c01468fe10d92",
+    "reconstructed_sha256": "30496b45d4c1705fc954785185a61a58eaf770280fcf21f9a9965a7749df0869",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-007.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-007/ARC-007_SPEC.md"
@@ -348,7 +348,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-008/OPES_Core_Banking_Batch_28_ARC-008_2026-11-03.zip",
     "original_sha256": "04463fa5a18843439d7d543261ad822877e6632067d4ff102499b6b2942a882f",
     "reconstructed_bytes": 1772,
-    "reconstructed_sha256": "fc63f235b285477f6c286b24abe5d8642d0db2df45e7fac2c8710df9cd81d134",
+    "reconstructed_sha256": "d81813b130ce0fe93ff012ddab889308277e0468bc9e2ca0cadf527553f216db",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-008.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-008/ARC-008_SPEC.md"
@@ -360,7 +360,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-009/OPES_Core_Banking_Batch_29_ARC-009_2026-11-03.zip",
     "original_sha256": "7aa9f5f55b995cdacd9631c167fd8f8e4fd9006a004333db6c37bc19005dc83d",
     "reconstructed_bytes": 1868,
-    "reconstructed_sha256": "25d846d737427058ec789d8188261e93350ff063039e8e3f1d8479c9c3da2346",
+    "reconstructed_sha256": "dd1bb85ccf49af40db5916b145649b6be732c1ef3aea56d2cfdeba587697f47e",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-009.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-009/ARC-009_SPEC.md"
@@ -372,7 +372,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-010/OPES_Core_Banking_Batch_30_ARC-010_2026-11-03.zip",
     "original_sha256": "dae3c026f632a195dca0859722f87b28d47e8b23ca17123dc8ed0c3ee01520a2",
     "reconstructed_bytes": 2014,
-    "reconstructed_sha256": "99605702a794ea9920582c64c95a80f09f1614ca4c497a9aab8b3239ec6bdccb",
+    "reconstructed_sha256": "9dfc23f59160fd03d2dd8754730c17c5345a4d2165d67cfd651dab827c9d98f2",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-010.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-010/ARC-010_SPEC.md"
@@ -384,7 +384,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-011/OPES_Core_Banking_Batch_31_ARC-011_2026-11-03.zip",
     "original_sha256": "546fd0f5aabfbb79775303132830a251207397ece4edbc65e1dc37d1db6323bf",
     "reconstructed_bytes": 3585,
-    "reconstructed_sha256": "732597ec66808685b33b0cb181031203c31a597ec3abdb952ac2e4e972311e5a",
+    "reconstructed_sha256": "86c1e191679c7bba2f32efea5c238b15b9a5184c002f3d66393844dc8a6eec2e",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-011.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-011/ARC-011_CONTRACT.json",
@@ -397,7 +397,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-012/OPES_Core_Banking_Batch_32_ARC-012_2026-11-03.zip",
     "original_sha256": "6684fa7f182261e7930f65dc84574abda0ba38574c48dba9c2b0f666011ee9b4",
     "reconstructed_bytes": 3586,
-    "reconstructed_sha256": "8404930e0fad3a8a800412ead80cdbdb3d7630d8b4d49dea334b4c5866ba89ee",
+    "reconstructed_sha256": "b7bb22f6a2f8d8772006089a06f8a76d35609e752f677847b013273cc852c72c",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-012.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-012/ARC-012_CONTRACT.json",
@@ -410,7 +410,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-013/OPES_Core_Banking_Batch_33_ARC-013_2026-11-03.zip",
     "original_sha256": "65fb9ec7353868248e70049e8d1876842cc28366ab3083c80c7308bce6249ebc",
     "reconstructed_bytes": 3425,
-    "reconstructed_sha256": "f4f3c80b88f2a7bd85c2222d8945e2a149226a3aac4cfe770b94ffa6babcc348",
+    "reconstructed_sha256": "77ed5cf277ff29b84951f9d436cd758f221c8a1c8262accee96b64019837d6bd",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-013.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-013/ARC-013_CONTRACT.json",
@@ -423,7 +423,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-014/OPES_Core_Banking_Batch_34_ARC-014_2026-11-03.zip",
     "original_sha256": "f0214d1b4580311f41110944152e49fc8d434b9fe3485b0d857222713036db01",
     "reconstructed_bytes": 3241,
-    "reconstructed_sha256": "14894658d8d60bd1ddcb3d59f7be3482998c716c4f381b9c128d560d77be1405",
+    "reconstructed_sha256": "126ce855779bc691726f49ddd4e977bd9926113f6422102e824d666574ab78bf",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-014.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-014/ARC-014_CONTRACT.json",
@@ -436,7 +436,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-015/OPES_Core_Banking_Batch_35_ARC-015_2026-11-03.zip",
     "original_sha256": "f55eed399b9c06f504594d3b091e96ec8e124f3257c157aa4dfd9982d506b99a",
     "reconstructed_bytes": 3164,
-    "reconstructed_sha256": "a2509173da0397bfa92d27d6cfe07456c7afa9aa6e4f23a44cb4880a0cf31e81",
+    "reconstructed_sha256": "5fa1d7154f5a737196f61c654c185688a9bb8116fbd8f33788e45f87565b9db1",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-015.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-015/ARC-015_CONTRACT.json",
@@ -449,7 +449,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-016/OPES_Core_Banking_Batch_36_ARC-016_2026-11-03.zip",
     "original_sha256": "c3ffb7951f90fe23db346a9d9d6429a42bbef980bd56386d744f07d8f9c7394f",
     "reconstructed_bytes": 3243,
-    "reconstructed_sha256": "cdd377df58c348ccc0dd08293abe6826b35dd34582965b26b510027293f74148",
+    "reconstructed_sha256": "9cd5870b54490985bc9ffde036db7fdab89191ba3c39e2cf07dcd39b64dd4564",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-016.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-016/ARC-016_CONTRACT.json",
@@ -462,7 +462,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-017/OPES_Core_Banking_Batch_37_ARC-017_2026-11-03.zip",
     "original_sha256": "bfe88873b0a1386cc66be32245d32514959e3114db7a4f910c624b9718e2cd5d",
     "reconstructed_bytes": 3291,
-    "reconstructed_sha256": "0dc23e78dd303990aeb65e4097d564a810f5be42a20aa4b8532b7d74256a48e5",
+    "reconstructed_sha256": "2270691beac8870c3a579306c908cf186f688bdfb7d49d4b8dd41863234df301",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-017.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-017/ARC-017_CONTRACT.json",
@@ -475,7 +475,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-018/OPES_Core_Banking_Batch_38_ARC-018_2026-11-03.zip",
     "original_sha256": "20a13acf7bb039358b747a8621cc827bd5f1cee6806da5d46d4bfb3756cd4658",
     "reconstructed_bytes": 3056,
-    "reconstructed_sha256": "ee6c7287655fbe6488ebe3cb920a6e9eeb22415926e1a2feb7d47b6ce2f301d0",
+    "reconstructed_sha256": "28b71b0458a038a3b8889ae220dac905ee890b5dd588d7183f40fc337e6c28ec",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-018.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-018/ARC-018_CONTRACT.json",
@@ -488,7 +488,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-019/OPES_Core_Banking_Batch_39_ARC-019_2026-11-03.zip",
     "original_sha256": "ebed15fb2c3af6e42bb36b26a81f3a67dd0ad174c377d1d8d6335c640e53c304",
     "reconstructed_bytes": 3121,
-    "reconstructed_sha256": "98f14991256b295db9864458efe52c70846fa1fdf7c10c55c84d000ba0891542",
+    "reconstructed_sha256": "9ebca0e6fdbaad43378c6e339dfa2eda86519b7b1bd3591a5e87e411a7868ad8",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-019.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-019/ARC-019_CONTRACT.json",
@@ -501,7 +501,7 @@
     "original_path": "programme/batches/2026-11-03/ARC-020/OPES_Core_Banking_Batch_40_ARC-020_2026-11-03.zip",
     "original_sha256": "1eca42ac0ccbf3212801ee070f696f3887131de5f7707962f093ae7401835015",
     "reconstructed_bytes": 3344,
-    "reconstructed_sha256": "afc3eff2e3c03f944c654f58ef39060ca7bca52a2c4d3b219c0d5cfab12ef70e",
+    "reconstructed_sha256": "904f6988029c84001f28c80d4815dda61313e8cbd6bf436ff84c54fe136b4534",
     "reconstructed_zip_path": "RECONSTRUCTED/ARC-020.zip",
     "source_paths": [
       "programme/batches/2026-11-03/ARC-020/ARC-020_CONTRACT.json",
@@ -514,7 +514,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-001/OPES_Core_Banking_Batch_121_BRN-001_2026-11-03.zip",
     "original_sha256": "9022002843b59f898b39660c30cf44f70fff362902885a850d20fcfced36b877",
     "reconstructed_bytes": 3576,
-    "reconstructed_sha256": "56e5839d347d646d61c267598ed3691a33cef00edde6fc2e7c20fae3403c14d4",
+    "reconstructed_sha256": "c4d4a86d42ec9daca2359edc193527b3595db6b978f8f8397e1bf0722ea3c15b",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-001.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-001/BRN-001_CONTRACT.json",
@@ -528,7 +528,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-002/OPES_Core_Banking_Batch_122_BRN-002_2026-11-03.zip",
     "original_sha256": "386ce5c13336e67e8aded0897f125785badf2edbbd967950b9503cb96230e190",
     "reconstructed_bytes": 3506,
-    "reconstructed_sha256": "799d62a8a8765b698716315728343dc4eaff7cc6babd3cd62b146b6dcadc9e5d",
+    "reconstructed_sha256": "36a940168e3b714b44ae9797c36ec568d38227ce440a84feb31c23ebb91bd263",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-002.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-002/BRN-002_CONTRACT.json",
@@ -542,7 +542,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-003/OPES_Core_Banking_Batch_123_BRN-003_2026-11-03.zip",
     "original_sha256": "f1aad45c284815046d36b2531dcea1a260d084e3800cdf8e0f46c84e117fd746",
     "reconstructed_bytes": 3438,
-    "reconstructed_sha256": "ea67716661f1a97e22d94af0e9ff5670d64ede823c941e01afe019e695354414",
+    "reconstructed_sha256": "e8c44c9217ea2105671744fd8efde55cc7d928b4160e5f6367509a3ce45201d6",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-003.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-003/BRN-003_CONTRACT.json",
@@ -556,7 +556,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-004/OPES_Core_Banking_Batch_124_BRN-004_2026-11-03.zip",
     "original_sha256": "24359ce19bb9cbde2be4b1ab4ff89706b5e5ee34a885e804399884c3f7180ef1",
     "reconstructed_bytes": 3597,
-    "reconstructed_sha256": "77d66f602a2eb0a4692e1a56b0bf5af14b865c15cbda0d858750b8fa17fe61c5",
+    "reconstructed_sha256": "2ee6df86c67e1d59217fd6017b42668be8200f91ec0bfb8d0eba8664bd623409",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-004.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-004/BRN-004_CONTRACT.json",
@@ -570,7 +570,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-005/OPES_Core_Banking_Batch_125_BRN-005_2026-11-03.zip",
     "original_sha256": "a0c2c7e04381de0f2636ed785a8afe24ae9b9ecea1daa70fca58100df302ad2d",
     "reconstructed_bytes": 3023,
-    "reconstructed_sha256": "cd44184d4037c1ee1428de503efad45fbd1a8df506d3a85098c890cb47e68894",
+    "reconstructed_sha256": "bdd5fa311f786e3bcbdb79c454345dbe8ca3652e4ab0e2399857ed2789b75159",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-005.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-005/BRN-005_CONTRACT.json",
@@ -584,7 +584,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-006/OPES_Core_Banking_Batch_126_BRN-006_2026-11-03.zip",
     "original_sha256": "47dc9ee88ef7f46789530eea5a1b00500757d2f275ab5fbcf3d7eaee784c6928",
     "reconstructed_bytes": 2993,
-    "reconstructed_sha256": "08c7d02e0ee6407fc96f15be2248f7078be91db5cde601995d3d2cdb0262373f",
+    "reconstructed_sha256": "69ae2a66975501a1628f48496c89e639facfd839a2e290fc68c8e92ec33ef9dd",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-006.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-006/BRN-006_CONTRACT.json",
@@ -598,7 +598,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-007/OPES_Core_Banking_Batch_127_BRN-007_2026-11-03.zip",
     "original_sha256": "b6064775744959e9ec21f8c2bbe68c764d7f8328c19867a2c929f944539803b9",
     "reconstructed_bytes": 3032,
-    "reconstructed_sha256": "01b93b9d722c3fbc682dc4a6850df29a059f968548fca8841320890df7323a68",
+    "reconstructed_sha256": "83f24ac98e4dd1afbf4b63589cca4894078a26a6840b5df45bd1aa4dc18c4e39",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-007.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-007/BRN-007_CONTRACT.json",
@@ -612,7 +612,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-008/OPES_Core_Banking_Batch_128_BRN-008_2026-11-03.zip",
     "original_sha256": "5ab9423801e2aafd2ff778e506ee0f9d45f0bf0ba85522ae9b13137676bee63f",
     "reconstructed_bytes": 3070,
-    "reconstructed_sha256": "f1c279703bec7dbd88475b90334c81ce8d982241659ddba8ab999e17358e35c4",
+    "reconstructed_sha256": "06593ae3718311286c5d9e61181938a97f9fa8b639c2d61ecd98159a885b96b1",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-008.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-008/BRN-008_CONTRACT.json",
@@ -626,7 +626,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-009/OPES_Core_Banking_Batch_129_BRN-009_2026-11-03.zip",
     "original_sha256": "17841324252e45efce3b2077e917ae0fb560d0567b443683fe322a21557c70c4",
     "reconstructed_bytes": 3000,
-    "reconstructed_sha256": "79e9db77c4b62e7ba7fc84bff2e28c6dd0d47205d6bcbc271629646f16907a82",
+    "reconstructed_sha256": "a505741cb31434f3565aa007298b2e2d55d337f4ce23feee205a8d71a11a69c8",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-009.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-009/BRN-009_CONTRACT.json",
@@ -640,7 +640,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-010/OPES_Core_Banking_Batch_130_BRN-010_2026-11-03.zip",
     "original_sha256": "585ec1d5a87494d1f59b7e0654d6d7348544183424c5242456a35beeac6551a5",
     "reconstructed_bytes": 3044,
-    "reconstructed_sha256": "5999a1abf5a1deb4713963a07cb602bf7b4bf9474133df24e4648d38a85a11f8",
+    "reconstructed_sha256": "bec763efba515b94bc6962ae81d104c8a6f40107b3dcf24ec3c9f32c24f61e59",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-010.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-010/BRN-010_CONTRACT.json",
@@ -654,7 +654,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-011/OPES_Core_Banking_Batch_131_BRN-011_2026-11-03.zip",
     "original_sha256": "b1000bf748b15bcbf3f2e20ce2a0ff85e550683f04f55d71d8b22c03886fedd5",
     "reconstructed_bytes": 3005,
-    "reconstructed_sha256": "35265571c3892e8ae445f28da139fd1880b7d190386f24a081d07179641ea09a",
+    "reconstructed_sha256": "754cef95ca142839ed96d8f4fc025f47830c89ba9aaa36edba77702200538a10",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-011.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-011/BRN-011_CONTRACT.json",
@@ -668,7 +668,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-012/OPES_Core_Banking_Batch_132_BRN-012_2026-11-03.zip",
     "original_sha256": "8a0c0f0a14f723eb1f8e5a198daa47d6028cc21ce5aeb2c381e9ab61778f02c4",
     "reconstructed_bytes": 3163,
-    "reconstructed_sha256": "abedd4d57e513d678492548d3536c6c6668ac8e790caa7040a5dc6bc19bca448",
+    "reconstructed_sha256": "42652f2ffa3e400a74521bb64ae5466e69284f50f92bd79639ae0e6017dd68a3",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-012.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-012/BRN-012_CONTRACT.json",
@@ -682,7 +682,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-013/OPES_Core_Banking_Batch_133_BRN-013_2026-11-03.zip",
     "original_sha256": "4416e44f6591ed5652db0ffb6d657544b2f8a70c27c16c15767285c2fb296f6f",
     "reconstructed_bytes": 3154,
-    "reconstructed_sha256": "45a236f7664557c709a035ae57caba9deb744c28d3f4778a6cf619d622f2e35f",
+    "reconstructed_sha256": "29b8183d8a8636def245918f546c19b9c9eed022bc4c8e6cd521d5103b87dec9",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-013.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-013/BRN-013_CONTRACT.json",
@@ -696,7 +696,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-014/OPES_Core_Banking_Batch_134_BRN-014_2026-11-03.zip",
     "original_sha256": "eb061226649faef136d53623c93dcc32e43cc9389d9194d849a9b3b8b0cfad8c",
     "reconstructed_bytes": 3216,
-    "reconstructed_sha256": "5955694ade0c0891eaa7c3d628c5d60b123f042ffa7744b8c54c8efe431c1c2d",
+    "reconstructed_sha256": "770c3379b0bb2ee24f13a06c1f56a4cdf664077cdb187996ac8c914aa2ea8be7",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-014.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-014/BRN-014_CONTRACT.json",
@@ -710,7 +710,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-015/OPES_Core_Banking_Batch_135_BRN-015_2026-11-03.zip",
     "original_sha256": "7999dba36774f40ca5c6f00b751f39363b85244d4ffa413f54b1c19443d52fc1",
     "reconstructed_bytes": 3167,
-    "reconstructed_sha256": "274fb0bd7763b85421323a9343f366330ed8350eaf39048167ba5234a240ed42",
+    "reconstructed_sha256": "47ea61f13779ccd36af88589dbc597743744438e6c5486a9d7f8f846740dcab3",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-015.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-015/BRN-015_CONTRACT.json",
@@ -724,7 +724,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-016/OPES_Core_Banking_Batch_136_BRN-016_2026-11-03.zip",
     "original_sha256": "64134e842c7953b9ea85ce10599016c6ed7da6a0e4774a4c6d2c29968ca17935",
     "reconstructed_bytes": 3299,
-    "reconstructed_sha256": "6700394b85eef43cdf56ecf90905ed16d44c0ad7f966da781604a01fcfb0aa01",
+    "reconstructed_sha256": "c9affb44a4661e2d3bfd53dae79bf346f1e160f19401b6468c416fae574ff455",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-016.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-016/BRN-016_CONTRACT.json",
@@ -738,7 +738,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-017/OPES_Core_Banking_Batch_137_BRN-017_2026-11-03.zip",
     "original_sha256": "2bcb5ecfa18c63da8e6c1077e73928b721ed28f633327270bff100c324b54aee",
     "reconstructed_bytes": 3112,
-    "reconstructed_sha256": "450ec36398894d182370980db60dec7ef2d92c0cde579c72f2d56a16b31232d6",
+    "reconstructed_sha256": "283d5fe56a5ae78771ff6347582417c07733972e47448406732c5cedefbc7bd7",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-017.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-017/BRN-017_CONTRACT.json",
@@ -752,7 +752,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-018/OPES_Core_Banking_Batch_138_BRN-018_2026-11-03.zip",
     "original_sha256": "107ac15f7a1f7a6891592d2aa864e3fffe96f0d70b9f68d26918201c3342b921",
     "reconstructed_bytes": 3171,
-    "reconstructed_sha256": "6ec5701cd8b07ee84edb31c392c1842bb6e0da5cec8d6f9e091a5f4bcf68a0c3",
+    "reconstructed_sha256": "dc0f44fdf369e3d66dcfaac7c26edeb17b7b23f25d2c2322d53f9a5a5dc2fd79",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-018.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-018/BRN-018_CONTRACT.json",
@@ -766,7 +766,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-019/OPES_Core_Banking_Batch_139_BRN-019_2026-11-03.zip",
     "original_sha256": "1497a6eceedb12eb45cb5334d2cae149d704bb01fe36e1b949464c5ba632ec33",
     "reconstructed_bytes": 3252,
-    "reconstructed_sha256": "bddefe4201988b6042a729bd1ac8ee86bbc6be6712e0c8aec18f5a61690ce782",
+    "reconstructed_sha256": "92b4b34949e445dc07f66ab0411141f0cd8b70459fca9641fb2a81cc3aec1d5f",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-019.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-019/BRN-019_CONTRACT.json",
@@ -780,7 +780,7 @@
     "original_path": "programme/batches/2026-11-03/BRN-020/OPES_Core_Banking_Batch_140_BRN-020_2026-11-03.zip",
     "original_sha256": "23ede81414c58937e23821910f3a1093304b7a72e91f9e8fbbd59aa747c7a0b2",
     "reconstructed_bytes": 3318,
-    "reconstructed_sha256": "f53094ca3aeb3d1ce5971fb88c04d36ae452c89e56326cd69ed3fb65e67c7c19",
+    "reconstructed_sha256": "0d551aaea3b9f84b5d9285c05d76c8c55be680b74dd787d6f1e44fd3751705f8",
     "reconstructed_zip_path": "RECONSTRUCTED/BRN-020.zip",
     "source_paths": [
       "programme/batches/2026-11-03/BRN-020/BRN-020_CONTRACT.json",
@@ -794,7 +794,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-001/OPES_Core_Banking_Batch_101_CHN-001_2026-11-03.zip",
     "original_sha256": "6cf5f5d1f4e0bdd85ad82cda62d0ba8bf784567a2abcae704e0c67ecfe4959f6",
     "reconstructed_bytes": 3105,
-    "reconstructed_sha256": "71af91b8910ca537e26acfff62edcb0e0ade31733254058a9d3e81e5af61380c",
+    "reconstructed_sha256": "afc32e1023230741c377781b3bc5b04d88ee513f484b8d9784272829d1834efb",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-001.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-001/CHN-001_CONTRACT.json",
@@ -807,7 +807,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-002/OPES_Core_Banking_Batch_102_CHN-002_2026-11-03.zip",
     "original_sha256": "f3ec4d25ee9e553b000ded862c782ef941fb206e9d139ab64d9b82ebc24162f9",
     "reconstructed_bytes": 3018,
-    "reconstructed_sha256": "5baac2e2c0172cf49d44464923fd3bbd2471e0a558152c666f563ac8439e5b24",
+    "reconstructed_sha256": "704e1106a3be961e070bd8e6db71c7cb7f57e9b4e6420f10da264b72356dabae",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-002.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-002/CHN-002_CONTRACT.json",
@@ -820,7 +820,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-003/OPES_Core_Banking_Batch_103_CHN-003_2026-11-03.zip",
     "original_sha256": "ad230697ca0cdfe687691d54102c79ceb872083b6f4a11de6f3abe86047bf683",
     "reconstructed_bytes": 3152,
-    "reconstructed_sha256": "ba960f3a922fad2c73574fb6be0555387561eda25c6b424830b384e5b8f6197a",
+    "reconstructed_sha256": "9bbb1b45890826ee563ed89bb456da67a48953ccee6b6b06c62e5f179d1dc67a",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-003.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-003/CHN-003_CONTRACT.json",
@@ -833,7 +833,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-004/OPES_Core_Banking_Batch_104_CHN-004_2026-11-03.zip",
     "original_sha256": "71949acd77dff1c3dee5e1da66d9749cba9aefc8d53100356a90310b6e08de62",
     "reconstructed_bytes": 3023,
-    "reconstructed_sha256": "684369cd6de869c9aa9d983fe24309d78502612088df92b0ec97dfd1e569069d",
+    "reconstructed_sha256": "5e547a87e63dd7bb16f23feb1f66e281af5b570a01c134e4a10bd60a65760943",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-004.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-004/CHN-004_CONTRACT.json",
@@ -846,7 +846,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-005/OPES_Core_Banking_Batch_105_CHN-005_2026-11-03.zip",
     "original_sha256": "0378c5b461c7c52ac2ed26aa1c6a01b2739215bebda9e1af1560808eb3e1f47c",
     "reconstructed_bytes": 3015,
-    "reconstructed_sha256": "48492992474f396f3459828ae47e88d723932261b7dc4bc4e1867e718902a4f6",
+    "reconstructed_sha256": "b19cf8ba92ddb4a6ad7dd80b1b5b36b1767b06c368cb64e0af1e23aa065a26a0",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-005.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-005/CHN-005_CONTRACT.json",
@@ -859,7 +859,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-006/OPES_Core_Banking_Batch_106_CHN-006_2026-11-03.zip",
     "original_sha256": "71e3d235dad2bd160ffcfd1817dcfb7d6cb3aea3e846692cd42b2a5d075b1a3e",
     "reconstructed_bytes": 3084,
-    "reconstructed_sha256": "8caa41f3e933c2ab624cee800c9c26d25148252f8a30b9ab445ab54b5b93be15",
+    "reconstructed_sha256": "856e1f1bba67d540d04930e1fc8234775b65730ff63191784e18a8530ff8887e",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-006.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-006/CHN-006_CONTRACT.json",
@@ -872,7 +872,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-007/OPES_Core_Banking_Batch_107_CHN-007_2026-11-03.zip",
     "original_sha256": "c5a55250565043347dfe25c4ad21036aba8ad9a7477955ce83cf903fb4a9059f",
     "reconstructed_bytes": 3154,
-    "reconstructed_sha256": "f65ec570e34bd3a584a2663f23acfd692a1fe38fea121f13af79dbfb02756f13",
+    "reconstructed_sha256": "38e5c8b947ba5444a68145c10713211fa1f7d292dff1ac1d350d3d310edcc1c8",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-007.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-007/CHN-007_CONTRACT.json",
@@ -885,7 +885,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-008/OPES_Core_Banking_Batch_108_CHN-008_2026-11-03.zip",
     "original_sha256": "b0c2b8c1df3c7f9cb3217bebc27a08b0f753dcf681d2227b74fe7e0715439bb0",
     "reconstructed_bytes": 2972,
-    "reconstructed_sha256": "e001cc8f43f84bbeca719e685842020fcdc99be05249888f03df6a9a7304969c",
+    "reconstructed_sha256": "89e56296571eda8b8ee876fd349d5fce51363fba57ce74eba503f3921732d2a9",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-008.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-008/CHN-008_CONTRACT.json",
@@ -898,7 +898,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-009/OPES_Core_Banking_Batch_109_CHN-009_2026-11-03.zip",
     "original_sha256": "a5af3a59aee26df1839044568061a5a570279c2c5445fcc79d764fc0e51271b9",
     "reconstructed_bytes": 3077,
-    "reconstructed_sha256": "6d2dd7d703a651fd637cb83823e8a04fc0ee4be747e576d34c34f847529c4476",
+    "reconstructed_sha256": "9b6acef6c49ebbde482747e570b6dd10166112101662408f75d53eea5cd61d00",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-009.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-009/CHN-009_CONTRACT.json",
@@ -911,7 +911,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-010/OPES_Core_Banking_Batch_110_CHN-010_2026-11-03.zip",
     "original_sha256": "e6bc6a8f7b6f8ca093511e8ea463d1928442bf4aaacf54e292399d54a2a3e167",
     "reconstructed_bytes": 3071,
-    "reconstructed_sha256": "726a70bb3f2d9f749b07894db060911d09063fff20cac7a73a823918abfc63ae",
+    "reconstructed_sha256": "e3132da16f019b8826b55bed4d38abf12c58e9949404a78ed376533e64add410",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-010.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-010/CHN-010_CONTRACT.json",
@@ -924,7 +924,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-011/OPES_Core_Banking_Batch_111_CHN-011_2026-11-03.zip",
     "original_sha256": "2614df7b93904378f8d9d6cc87e3a9d71e9c281a274fa8461f11736281ab6bcf",
     "reconstructed_bytes": 3077,
-    "reconstructed_sha256": "0c69ae376365226e39683c1fcf3f7d4d888e8b43e85066431ba23351c372b7f2",
+    "reconstructed_sha256": "87fe0175697030bf38395356e9540aa6665f76ee18579f57f8f4ab351f869107",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-011.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-011/CHN-011_CONTRACT.json",
@@ -937,7 +937,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-012/OPES_Core_Banking_Batch_112_CHN-012_2026-11-03.zip",
     "original_sha256": "8960af2a090b071145d7a00a85df8c4b83c13f8a76b17c83e1cfeda258af4375",
     "reconstructed_bytes": 3099,
-    "reconstructed_sha256": "e7996610dc607a9147dfbcfc8c1ac25383226dbc35fa9b760e952d3249937f87",
+    "reconstructed_sha256": "86e483e5d70c4192e2f52fe5983952e222e57e19ae5027c1f9484d6ca344ed6b",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-012.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-012/CHN-012_CONTRACT.json",
@@ -950,7 +950,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-013/OPES_Core_Banking_Batch_113_CHN-013_2026-11-03.zip",
     "original_sha256": "5fc0a6522d95ddb4e9b41455379604d109e0e1130f72e577c5c53d0a6832dbe6",
     "reconstructed_bytes": 2988,
-    "reconstructed_sha256": "2d688ce4545ee95f759c05a7f94b1918a0911764eb6cae44e7463606016e8f2c",
+    "reconstructed_sha256": "3416072e1f6f6e9080f5c9ce4028791fe6a79daa54f6496633a68be9914058a7",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-013.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-013/CHN-013_CONTRACT.json",
@@ -963,7 +963,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-014/OPES_Core_Banking_Batch_114_CHN-014_2026-11-03.zip",
     "original_sha256": "638aae2412ee202d4fc2197faeb59f491adf109f0ede7265a62c1b35563961ae",
     "reconstructed_bytes": 3078,
-    "reconstructed_sha256": "2dfe77b40f905ff2c81cdc4f6d9fd8e532e0add4bdb683c9697422c246ed9483",
+    "reconstructed_sha256": "1d52af7e6f106b3327d8a83c48855653d92498b8753b976c62d28a82d88be989",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-014.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-014/CHN-014_CONTRACT.json",
@@ -976,7 +976,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-015/OPES_Core_Banking_Batch_115_CHN-015_2026-11-03.zip",
     "original_sha256": "d4eb4fb0ed7ddd4e4894b42ce792e5a082ddeaa7512ba8f9ff092472d8ea4f59",
     "reconstructed_bytes": 3042,
-    "reconstructed_sha256": "baffb89d4ed5d4fef889d0806c2fd6140e0dcb88693080fb9abb4a25c6ee431c",
+    "reconstructed_sha256": "5ba34785782edabd19ccdd3143c57b8fc59f0d12c4256289d4a9c0992b3d9cca",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-015.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-015/CHN-015_CONTRACT.json",
@@ -989,7 +989,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-016/OPES_Core_Banking_Batch_116_CHN-016_2026-11-03.zip",
     "original_sha256": "cdef49734d351a81af47854923a152a835c4d11632695c866a34608bf73eb3b0",
     "reconstructed_bytes": 3118,
-    "reconstructed_sha256": "032bb88db28209c40f71698090e67244de731ac7f097e98d02eac4c3d7ffb858",
+    "reconstructed_sha256": "552854f954edc95dac985739194c23c7236c4ddd7fbdadb872187120c019973c",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-016.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-016/CHN-016_CONTRACT.json",
@@ -1002,7 +1002,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-017/OPES_Core_Banking_Batch_117_CHN-017_2026-11-03.zip",
     "original_sha256": "eddd7fd20473a2fd9da1e39f678717eb7f5c8197b6f9511d6e332fca7b73298a",
     "reconstructed_bytes": 3304,
-    "reconstructed_sha256": "6202a2e1e04840bb0947eac95e9a2cb1861ec94f247b1760a5da600703a5330e",
+    "reconstructed_sha256": "e680e02989b3b053f3664d34d114caf0e19e4ea5023650d0b751e7809b4d514e",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-017.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-017/CHN-017_CONTRACT.json",
@@ -1015,7 +1015,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-018/OPES_Core_Banking_Batch_118_CHN-018_2026-11-03.zip",
     "original_sha256": "4bcedce3d6795d4bb2b8b76974965090ceca9919bffffea95ac224e5f5dae48b",
     "reconstructed_bytes": 3065,
-    "reconstructed_sha256": "28ce7377ef5eb73291bb37493218dd252bbbca4ba12e87f56906596ff51e8caf",
+    "reconstructed_sha256": "4ef0f8bb08e14bc1d1dabc4ecbbf47b593f4fbb78bdb9e2496e198f7bb90ec74",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-018.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-018/CHN-018_CONTRACT.json",
@@ -1028,7 +1028,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-019/OPES_Core_Banking_Batch_119_CHN-019_2026-11-03.zip",
     "original_sha256": "9562b95f69622fa4c4e3e79bdfabe922f2f0564877cf05819e37fadd67e95002",
     "reconstructed_bytes": 3230,
-    "reconstructed_sha256": "ec691d08adcce0f0be1ae9992690cab5ebf384697dff1114565f789e5adaba93",
+    "reconstructed_sha256": "e355e102204d8960727c5bddf45a7d77523914d53c748446baf6bdb8aeb21b41",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-019.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-019/CHN-019_CONTRACT.json",
@@ -1041,7 +1041,7 @@
     "original_path": "programme/batches/2026-11-03/CHN-020/OPES_Core_Banking_Batch_120_CHN-020_2026-11-03.zip",
     "original_sha256": "eccb978c57063eeb57f128c217ee702c6a302afad5b051b745f0c08c30e54db8",
     "reconstructed_bytes": 3478,
-    "reconstructed_sha256": "13468405d7a081f79d8fd1c5604684ee2793e7fe88d4b2b752624a91c9281fa9",
+    "reconstructed_sha256": "79a0a7e427b83116e112f340e32173080949dea4ceae7ced30c053ea0b2ab583",
     "reconstructed_zip_path": "RECONSTRUCTED/CHN-020.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CHN-020/CHN-020_CONTRACT.json",
@@ -1054,7 +1054,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-001/OPES_Core_Banking_Batch_41_CIF-001_2026-11-03.zip",
     "original_sha256": "022e87bd84c10c4d77ef420136f6a578eb53751a0b1efd9963b520ec3f810acb",
     "reconstructed_bytes": 3215,
-    "reconstructed_sha256": "e14f8d2653a058b2b7b6c5e813541b7237fa78910762dfd4bbe96d54e1bbae93",
+    "reconstructed_sha256": "f26cbbc921321b06aac514102109260f20415f4fcf86e41df22e8e32b5447507",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-001.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-001/CIF-001_CONTRACT.json",
@@ -1067,7 +1067,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-002/OPES_Core_Banking_Batch_42_CIF-002_2026-11-03.zip",
     "original_sha256": "53727789473f8c2d79fc1715daeb9bd43fca9f2c43f8fdc7fb4df2720e80b7a0",
     "reconstructed_bytes": 3322,
-    "reconstructed_sha256": "d9f65ade641ceabb0e3d8418e3005e20d6ab495b6bb2553faf5a1023a11e3f1d",
+    "reconstructed_sha256": "90e6705285dfa7d17d59edd493215af7273c70093d21ca5902e6665ca25b80ec",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-002.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-002/CIF-002_CONTRACT.json",
@@ -1080,7 +1080,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-003/OPES_Core_Banking_Batch_43_CIF-003_2026-11-03.zip",
     "original_sha256": "b19c251be0a48ff4297d577858195bd386754049c02615d3b6a12f1d49de8d2c",
     "reconstructed_bytes": 3022,
-    "reconstructed_sha256": "5c0fa99788dcc4bf5d857b8fff385f5d1c63c96908c7cfa33fb7df9ded315930",
+    "reconstructed_sha256": "9bce671a85b4ca0a079b0d7c11feb0d9e596b94e985663811cd2a1e2f752c4fd",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-003.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-003/CIF-003_CONTRACT.json",
@@ -1093,7 +1093,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-004/OPES_Core_Banking_Batch_44_CIF-004_2026-11-03.zip",
     "original_sha256": "b9bdb0aff5d2644cc936be3bbd421d4a7e327f6ad4ea88c0435475374340d02c",
     "reconstructed_bytes": 3146,
-    "reconstructed_sha256": "16774baefaae3c6840e63f87e6edcf566d69997b6b531259bb6684c5a56b2aac",
+    "reconstructed_sha256": "fa12993b90778f7e9a69653cb202c7911b5ff1e842f41a3850ffaa16c00dc825",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-004.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-004/CIF-004_CONTRACT.json",
@@ -1106,7 +1106,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-005/OPES_Core_Banking_Batch_45_CIF-005_2026-11-03.zip",
     "original_sha256": "6766cd88803ba62bfba92b93a8df8e95dc01389ef68be80b5eddd543f575cc2a",
     "reconstructed_bytes": 3019,
-    "reconstructed_sha256": "73b075b94dd4fa99735d1f1fd8ae9ea0947a72dbb373b9672139760db2d50b5f",
+    "reconstructed_sha256": "6174b92c6ef624d5652b5a4f864af7496fe1aef8f7c71bb9e1676ae86879ef0e",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-005.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-005/CIF-005_CONTRACT.json",
@@ -1119,7 +1119,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-006/OPES_Core_Banking_Batch_46_CIF-006_2026-11-03.zip",
     "original_sha256": "07c137ae5520cfdd8ada52b8f76390cacc9e293b90f1e5d7b33096a417ebd558",
     "reconstructed_bytes": 3239,
-    "reconstructed_sha256": "a1501880762bc84d97bdec2a54b9485237415d07e661443a03a6e455e14d679e",
+    "reconstructed_sha256": "671154b688bb81d30dfd51c0f93f1acda55189ab74bd011fa5224e46d5dcfdbb",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-006.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-006/CIF-006_CONTRACT.json",
@@ -1132,7 +1132,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-007/OPES_Core_Banking_Batch_47_CIF-007_2026-11-03.zip",
     "original_sha256": "853213e3f8721b40abac04832a07e03de068df84c6d8dc7d1f38bcf0fc76f0fa",
     "reconstructed_bytes": 3217,
-    "reconstructed_sha256": "05c9c09332461e2372f422e5cd64434ae4b1eb7dadc11fcdd127cdf971f1f6a3",
+    "reconstructed_sha256": "8c009a81aac5ecba834664be97c5cb45c7e5f8f64f337576080c8105349412b7",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-007.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-007/CIF-007_CONTRACT.json",
@@ -1145,7 +1145,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-008/OPES_Core_Banking_Batch_48_CIF-008_2026-11-03.zip",
     "original_sha256": "bfb77cc9948968c22bddf0d0bc466a7dbce0bb1ae93b1c2c0d2131b155c82ea9",
     "reconstructed_bytes": 3127,
-    "reconstructed_sha256": "e0fd0af3e719c83f4be9a8b2ecf6d86047b50a5be7e7654fbd87fbacd1f559d5",
+    "reconstructed_sha256": "1984f56121902a642bbec7e47dd35eaf816829115702d3cc34a389b63f033995",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-008.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-008/CIF-008_CONTRACT.json",
@@ -1158,7 +1158,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-009/OPES_Core_Banking_Batch_49_CIF-009_2026-11-03.zip",
     "original_sha256": "efd8741f4772ace79f93c10d99087c0021e463cb992d72adcbda9c403e2f0287",
     "reconstructed_bytes": 3202,
-    "reconstructed_sha256": "f0c46d33583ffd57953af45574e9042cac1a353e1ca0c292c253ee60cbe94f33",
+    "reconstructed_sha256": "57ede9e62d730bffdd5b8611c3a12534f74e183799495e988830448bb37feafd",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-009.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-009/CIF-009_CONTRACT.json",
@@ -1171,7 +1171,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-010/OPES_Core_Banking_Batch_50_CIF-010_2026-11-03.zip",
     "original_sha256": "71693e565ba4cadd257786b40679e1b347f7dd2bc465ecf098b774640b284933",
     "reconstructed_bytes": 3244,
-    "reconstructed_sha256": "164875877b7eab6698830b3e9440bee328e4010ef1ad4735b22c31967d6125d6",
+    "reconstructed_sha256": "5445ce4e5e14eff9a86ca18ba6d6b26af2cf70504e6722f71c25adfa8add3e83",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-010.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-010/CIF-010_CONTRACT.json",
@@ -1184,7 +1184,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-011/OPES_Core_Banking_Batch_51_CIF-011_2026-11-03.zip",
     "original_sha256": "2a3dc0f36a557cfd9967880704b7e805b7d2890bd5f05cb34fed06fcb7301ceb",
     "reconstructed_bytes": 3206,
-    "reconstructed_sha256": "d4299e5d91d00507307bf805b6151e1c3f31a82bd73511020376bb6f7deace1c",
+    "reconstructed_sha256": "694696a8f43e7ac36191266bf7cb1bfe45b8f5f987ec58294abadd144a9b881c",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-011.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-011/CIF-011_CONTRACT.json",
@@ -1197,7 +1197,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-012/OPES_Core_Banking_Batch_52_CIF-012_2026-11-03.zip",
     "original_sha256": "a5a15bee6210730e2bcf16b62ce5d047f51549690b9e398cf9b780e53abfc4c7",
     "reconstructed_bytes": 3188,
-    "reconstructed_sha256": "247ba38aaf043f5bde6cc7d3b03578f53418e3ec1d28bc4234186da28651609c",
+    "reconstructed_sha256": "684757cbd4d04753581b17ec3c6b67abf0f142d3345ba6a68d0132bf783d996c",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-012.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-012/CIF-012_CONTRACT.json",
@@ -1210,7 +1210,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-013/OPES_Core_Banking_Batch_53_CIF-013_2026-11-03.zip",
     "original_sha256": "ba8d5a7986daee7e6154f7f5bcbc043dda0d04e27d1d45569c9de4454765ba03",
     "reconstructed_bytes": 3219,
-    "reconstructed_sha256": "34b17ceb1cbf4ac3c16051a39b476a06d59b3ad817c22cc2b9b7927d22f0269c",
+    "reconstructed_sha256": "890d0c5178d5586aa90da3bc13f0965a6576818f439e3912297face6740dab63",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-013.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-013/CIF-013_CONTRACT.json",
@@ -1223,7 +1223,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-014/OPES_Core_Banking_Batch_54_CIF-014_2026-11-03.zip",
     "original_sha256": "f9616ec8f24e9c1d37d0a3927e39ac8b7812a508ea81a955ce6e987bd914c13a",
     "reconstructed_bytes": 3148,
-    "reconstructed_sha256": "704dfbe663c8698e79163ba7a33c2cf8873ecc13baf4fca921d69bcc4112b591",
+    "reconstructed_sha256": "f27f935657be70b0eed9269b33bf8c805cfa7ab4e48afd29c83151a2525618aa",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-014.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-014/CIF-014_CONTRACT.json",
@@ -1236,7 +1236,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-015/OPES_Core_Banking_Batch_55_CIF-015_2026-11-03.zip",
     "original_sha256": "206f52ff572de10ba3e0e95b057330eecad93c69b87d075a1dbe9bd6a812c7f6",
     "reconstructed_bytes": 3185,
-    "reconstructed_sha256": "c94513c5caf64efe2e33a905ab286e249affc6bf662eaeed232f59836e6fc123",
+    "reconstructed_sha256": "91dd224cdb3420f3be82479cd57be7d45e87c686d154256d63a90df4c610aab1",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-015.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-015/CIF-015_CONTRACT.json",
@@ -1249,7 +1249,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-016/OPES_Core_Banking_Batch_56_CIF-016_2026-11-03.zip",
     "original_sha256": "36e80f7f8b1524a3639ea64399530a4fdafb12f2e36e5acde936b8a2cd7baf0b",
     "reconstructed_bytes": 2932,
-    "reconstructed_sha256": "8bd15c3df8d32f5c6148ee343f969f81fb9a17e57d3ce81b48ab6cff65e48612",
+    "reconstructed_sha256": "f3081a80c405a6183c70a2fe8db10adf63f429b13429d60f571400d04bd290bd",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-016.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-016/CIF-016_CONTRACT.json",
@@ -1262,7 +1262,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-017/OPES_Core_Banking_Batch_57_CIF-017_2026-11-03.zip",
     "original_sha256": "66e1b1e953aeaf85f671a83bdae24be1e4bce535af5df4dfcfcef816c01425c8",
     "reconstructed_bytes": 3117,
-    "reconstructed_sha256": "6c5c094fa422d2f558f3ca409beb80afa1b280af3bfd53376cfee4587f45b34d",
+    "reconstructed_sha256": "b56a21e2e1ed02bd0f7b3bd2251066e0652401339513a28fbae9663095a13ca2",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-017.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-017/CIF-017_CONTRACT.json",
@@ -1275,7 +1275,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-018/OPES_Core_Banking_Batch_58_CIF-018_2026-11-03.zip",
     "original_sha256": "10e881efc04613dcc5a4468d2476c3d1cb877ce6049dfb6e1de6ddd59790e460",
     "reconstructed_bytes": 3176,
-    "reconstructed_sha256": "8fa3a077d3ca76cc957573d881eb207263b16c73626d2035f797bba2d048eb13",
+    "reconstructed_sha256": "c146439f368974af6572634f2c58833e62d4945636dc7cb2a617b9bb473c6226",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-018.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-018/CIF-018_CONTRACT.json",
@@ -1288,7 +1288,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-019/OPES_Core_Banking_Batch_59_CIF-019_2026-11-03.zip",
     "original_sha256": "0ae98cdd4335f7adb1c8207c24017bb9df055b98767e99ebf9201d9f02e2a3e8",
     "reconstructed_bytes": 3321,
-    "reconstructed_sha256": "5b649c059b61af7590615016c1f9d5f206005ec2a03fe36f8fdb1da99577250d",
+    "reconstructed_sha256": "787beb32d1cff4d0bf57039b60f567f06f8ed5e849b29f2cfb67bad2e14e7305",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-019.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-019/CIF-019_CONTRACT.json",
@@ -1301,7 +1301,7 @@
     "original_path": "programme/batches/2026-11-03/CIF-020/OPES_Core_Banking_Batch_60_CIF-020_2026-11-03.zip",
     "original_sha256": "cb1c3b0534ce7e47a28e5d28d16abcffd24d4f8721e644f065a6df7425882d59",
     "reconstructed_bytes": 3525,
-    "reconstructed_sha256": "b8ab94bf8a3ea4d676a19476ff05b8043b82e2825a75ddf6a439e26bd2fa37d5",
+    "reconstructed_sha256": "a3c6af7b1f4bde4a8c44394386535271722f953d5f4ce65c42bcec6d87dc60ac",
     "reconstructed_zip_path": "RECONSTRUCTED/CIF-020.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CIF-020/CIF-020_CONTRACT.json",
@@ -1314,7 +1314,7 @@
     "original_path": "programme/batches/2026-11-03/CMP-001/OPES_Core_Banking_Batch_141_CMP-001_2026-11-03.zip",
     "original_sha256": "b2dff36a91ff4bed2c073bef5e4301499b495066b552fe2b1fc66ff66ca884f0",
     "reconstructed_bytes": 3198,
-    "reconstructed_sha256": "49f60f9507328345b3ba81a488608f4e30414433fbdcc0eca2a7fa7e24083123",
+    "reconstructed_sha256": "bb6637aa5138ac1dceac02bef7f81b6c7493a2c69fa07f7cfded5fd42188ff5f",
     "reconstructed_zip_path": "RECONSTRUCTED/CMP-001.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CMP-001/CMP-001_CONTRACT.json",
@@ -1328,7 +1328,7 @@
     "original_path": "programme/batches/2026-11-03/CMP-002/OPES_Core_Banking_Batch_142_CMP-002_2026-11-03.zip",
     "original_sha256": "61239e3eddd0016cf98367a13bb78fa59cc41103a124165bb29587f7e9eea522",
     "reconstructed_bytes": 3262,
-    "reconstructed_sha256": "04665643d22d5e5190f718e7638febbe7ea158bfdc34f384b12416583ba08527",
+    "reconstructed_sha256": "d3b57d49a050131f84527f9575bce326c85afcadaba9e4963da124881653a0be",
     "reconstructed_zip_path": "RECONSTRUCTED/CMP-002.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CMP-002/CMP-002_CONTRACT.json",
@@ -1342,7 +1342,7 @@
     "original_path": "programme/batches/2026-11-03/CMP-003/OPES_Core_Banking_Batch_143_CMP-003_2026-11-03.zip",
     "original_sha256": "d1e7e69c16311b86d717c3e63816a5917e6a8558b10c7709cce65429828bb5f1",
     "reconstructed_bytes": 3210,
-    "reconstructed_sha256": "55b7be9c99e1a6506e504b6933224e15c5ba663112751f08f4e27f7d7a49d8fd",
+    "reconstructed_sha256": "525f8216148edbcfc0bf8c9b6b96067c01fb8bff26003d76dcb9ee13512adb0b",
     "reconstructed_zip_path": "RECONSTRUCTED/CMP-003.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CMP-003/CMP-003_CONTRACT.json",
@@ -1356,7 +1356,7 @@
     "original_path": "programme/batches/2026-11-03/CMP-004/OPES_Core_Banking_Batch_144_CMP-004_2026-11-03.zip",
     "original_sha256": "97818acedbd8c54c07267dffe85f8747364b7a4361bdef9b0139e1cd0c6fb0d2",
     "reconstructed_bytes": 3240,
-    "reconstructed_sha256": "5fc2690d8cec219e06f7b6266ac6313bcf1f4d4b6c8b15f6e5816021cd2e6452",
+    "reconstructed_sha256": "f93c01b631516bccdab8ec41ef98b196e9cb8a799fb595bafd719d0f3b3c3244",
     "reconstructed_zip_path": "RECONSTRUCTED/CMP-004.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CMP-004/CMP-004_CONTRACT.json",
@@ -1370,7 +1370,7 @@
     "original_path": "programme/batches/2026-11-03/CMP-005/OPES_Core_Banking_Batch_145_CMP-005_2026-11-03.zip",
     "original_sha256": "aff5bdc32be9a7948f830194fa0101daf723702d4e593d1ae99e6f4b5ba0a63f",
     "reconstructed_bytes": 3219,
-    "reconstructed_sha256": "7bf548b6e7a7785008125356d9ec573b9e08f6b78bd45d455ff4d7dfcfe1c71a",
+    "reconstructed_sha256": "a5ef3a97a7224980c489bcb9c784d3319183caf2bd64de34ddf182b59d26e0a0",
     "reconstructed_zip_path": "RECONSTRUCTED/CMP-005.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CMP-005/CMP-005_CONTRACT.json",
@@ -1384,7 +1384,7 @@
     "original_path": "programme/batches/2026-11-03/CMP-006/OPES_Core_Banking_Batch_146_CMP-006_2026-11-03.zip",
     "original_sha256": "413944f263b1cc5d9b1c1d74a4cb6189832cb8f1a8b59d9c4865cab25ee5556d",
     "reconstructed_bytes": 3319,
-    "reconstructed_sha256": "3e9438fdcb78a9e3dd1e63b7c7a81a172c5659be37ca6897a1317579be782cef",
+    "reconstructed_sha256": "4a750c8bb6a3f7495da886cc54d87736b68df0547617fecc15b59c86f595ad95",
     "reconstructed_zip_path": "RECONSTRUCTED/CMP-006.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CMP-006/CMP-006_CONTRACT.json",
@@ -1398,7 +1398,7 @@
     "original_path": "programme/batches/2026-11-03/CMP-007/OPES_Core_Banking_Batch_147_CMP-007_2026-11-03.zip",
     "original_sha256": "677d2b43b24d04103fe86d73b23837d5ec3b93727d2aef3788d0155d41fab76f",
     "reconstructed_bytes": 3345,
-    "reconstructed_sha256": "69d0a519e3fedc3c356f00c6b7cb9bac802d8bb9386acf01c098c1c3b7f12fb2",
+    "reconstructed_sha256": "47e8a4a262519fbcff2eb987e444ecf07757cf40b2b6b33742b9f7a27839ab65",
     "reconstructed_zip_path": "RECONSTRUCTED/CMP-007.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CMP-007/CMP-007_CONTRACT.json",
@@ -1412,7 +1412,7 @@
     "original_path": "programme/batches/2026-11-03/CMP-008/OPES_Core_Banking_Batch_148_CMP-008_2026-11-03.zip",
     "original_sha256": "5640c4ca02476ffe241fea77b3989a21c38a3d2f8172467f41e428f21279c1a6",
     "reconstructed_bytes": 3191,
-    "reconstructed_sha256": "5eba5fce2342a7294ec40f073da16bd9ec3b3e03d6dd917349510e586d119618",
+    "reconstructed_sha256": "d060ed9e87fc4e8316c1601fc980397e94aa3130e1d589d7686a610b2bb7e2e8",
     "reconstructed_zip_path": "RECONSTRUCTED/CMP-008.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CMP-008/CMP-008_CONTRACT.json",
@@ -1426,7 +1426,7 @@
     "original_path": "programme/batches/2026-11-03/CMP-009/OPES_Core_Banking_Batch_149_CMP-009_2026-11-03.zip",
     "original_sha256": "76f5827ceeadcfcfb4f19e4dd64dd7ac4e9fd72851245412ab4f420ee0d613fd",
     "reconstructed_bytes": 3318,
-    "reconstructed_sha256": "dfc40d18e3068b128bd21e8cb77a24cc833b6adb9e181bb09cd22b3c5a6f439a",
+    "reconstructed_sha256": "88facd6c6c1ee71db8d4507bfaf21a3488c1240effed059d7659ebcf52d6a1fe",
     "reconstructed_zip_path": "RECONSTRUCTED/CMP-009.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CMP-009/CMP-009_CONTRACT.json",
@@ -1440,7 +1440,7 @@
     "original_path": "programme/batches/2026-11-03/CMP-010/OPES_Core_Banking_Batch_150_CMP-010_2026-11-03.zip",
     "original_sha256": "efc85cded1c18b0544b50e257d8a43932dabf53270d20da241aef4be2d91382c",
     "reconstructed_bytes": 3544,
-    "reconstructed_sha256": "bad1cf4befbeefe63a33962fc9e6acd58943d45c6352ecd2db915317a7e265a3",
+    "reconstructed_sha256": "f1dbf151adb9bb919823c3acae7c5f2387d6ee01942f066f53987735c93d4ced",
     "reconstructed_zip_path": "RECONSTRUCTED/CMP-010.zip",
     "source_paths": [
       "programme/batches/2026-11-03/CMP-010/CMP-010_CONTRACT.json",
@@ -1454,7 +1454,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-005/OPES_Core_Banking_Batch_05_GOV-005_2026-11-03.zip",
     "original_sha256": "e625e2fd683e395080f9f1a9c8de21920be3021904840421ac21fa822de91677",
     "reconstructed_bytes": 1697,
-    "reconstructed_sha256": "4286a8c1ef90633395bfb1eccd18f9c19e48eb2fa68a9a673f8badadf06bd426",
+    "reconstructed_sha256": "0bf731ea3147be2fdade7ea2ffe18808338d78da4ddfa3b754766307695e5283",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-005.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-005/GOV-005_SPEC.md"
@@ -1466,7 +1466,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-006/OPES_Core_Banking_Batch_06_GOV-006_2026-11-03.zip",
     "original_sha256": "a66c2c44d26b77a36d80e67e6c8762f4ed37e065bad74c0aff0ec2efbb7b0e0c",
     "reconstructed_bytes": 1768,
-    "reconstructed_sha256": "681db62dc53eeb95ca8d0d0d2295285a389b4fdfb139e53d4e804f9fc3bf76cd",
+    "reconstructed_sha256": "772b21f7f770f73410f8210db6df0dc171799c1ec804838395d8a003ec007b51",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-006.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-006/GOV-006_SPEC.md"
@@ -1478,7 +1478,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-007/OPES_Core_Banking_Batch_07_GOV-007_2026-11-03.zip",
     "original_sha256": "513aef59183a9390494f42d26e7eadfd335e74b54aca846a401642651173f509",
     "reconstructed_bytes": 1659,
-    "reconstructed_sha256": "71c6ca0bb73aa90987f0c25737e28925ecef6a8fbd06a735032843d7f6c20f60",
+    "reconstructed_sha256": "163da36f56d5d3febb2346af18b893ad3ac0bddff279ebc3b63b3afcc5b52941",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-007.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-007/GOV-007_SPEC.md"
@@ -1490,7 +1490,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-008/OPES_Core_Banking_Batch_08_GOV-008_2026-11-03.zip",
     "original_sha256": "81506b1ab48cbeca46b6f23bf4a44e7856a718a28fcf9e62433b8962beb80d14",
     "reconstructed_bytes": 1628,
-    "reconstructed_sha256": "7d1e8c1676e46bc79a385f142fa37bb93c1702ff1b647d44e7a6930820e9022a",
+    "reconstructed_sha256": "69fccf4105009f367e44aba2a46e502667d4f5f3ad781d2752d6ea77d3a1ecdc",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-008.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-008/GOV-008_SPEC.md"
@@ -1502,7 +1502,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-009/OPES_Core_Banking_Batch_09_GOV-009_2026-11-03.zip",
     "original_sha256": "6a336fdc0d38630983948e87bb5d8df6fb89e514ccb8e4e4bfe32f3a901c4992",
     "reconstructed_bytes": 1904,
-    "reconstructed_sha256": "121a58593b2494220f3dbf744b71a948a9e498684183fa3d1a3e360a1184c2f5",
+    "reconstructed_sha256": "e465557b836c68db2c6f7aaef0c0edf4536d690cc8e3cb917b77908d81c3585e",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-009.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-009/GOV-009_SPEC.md"
@@ -1514,7 +1514,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-010/OPES_Core_Banking_Batch_10_GOV-010_2026-11-03.zip",
     "original_sha256": "0dbcf6ee16b949587fe07f5b3d17acc4a7d72fd69bee50a858103bec71de1d26",
     "reconstructed_bytes": 1907,
-    "reconstructed_sha256": "bfc75e544ae9a6aca9ba5086a1e0bd1006f50496aea124bf9a7ea2cb245edaff",
+    "reconstructed_sha256": "018284c3b791b54919658a177b43dc7c10fc5da8ee5695f217441a4eddb574ec",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-010.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-010/GOV-010_SPEC.md"
@@ -1526,7 +1526,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-011/OPES_Core_Banking_Batch_11_GOV-011_2026-11-03.zip",
     "original_sha256": "3ab336a1a2f196352fab75c141a1205ca7bee3858d9695697fa7f3b9f284a1fc",
     "reconstructed_bytes": 1947,
-    "reconstructed_sha256": "81677b3e31c9fda78c70e2dd5f42398250715e8a68a72cdb2762990bf6b5515c",
+    "reconstructed_sha256": "ec8375f510f6adc3aea22b962a0930d7b1c0f54be5d28e8adfe7fbdb3fb64423",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-011.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-011/GOV-011_SPEC.md"
@@ -1538,7 +1538,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-012/OPES_Core_Banking_Batch_12_GOV-012_2026-11-03.zip",
     "original_sha256": "85347958f24dfbdf836904c7d6d727a2f9a53cb41d83ed35cc1ca43dc10c52e8",
     "reconstructed_bytes": 1873,
-    "reconstructed_sha256": "868b793bade27eab4d7c3ce3c4761a202a324a0d5a8430a3b38d4d7f2850e77e",
+    "reconstructed_sha256": "167fdc607cff298083c8c3b44b1448974fbcd69b9f6056b2a2738bd913f4970a",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-012.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-012/GOV-012_SPEC.md"
@@ -1550,7 +1550,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-013/OPES_Core_Banking_Batch_13_GOV-013_2026-11-03.zip",
     "original_sha256": "0fa99b1bb9183d2a7dedab7bc243b09a575c17010b460d4568fcfb8533ffef11",
     "reconstructed_bytes": 1915,
-    "reconstructed_sha256": "0810ace39e9f5e84cca2cb9c46a382c64d750999d705e953fa3957b7a4f9825a",
+    "reconstructed_sha256": "4820fbaf2928fd77e00f455b432b8e4507848397c9991a6f5a7b33722d6808c4",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-013.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-013/GOV-013_SPEC.md"
@@ -1562,7 +1562,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-014/OPES_Core_Banking_Batch_14_GOV-014_2026-11-03.zip",
     "original_sha256": "b3f88be11b7c0ed048cda1a94aa1d15be3edea47f3834f29c086a63e4e01f9a7",
     "reconstructed_bytes": 1862,
-    "reconstructed_sha256": "c9458abaf66a593cdc16a10ec0e23b71f2cd1a548113bf7f09b03cc21dbecf51",
+    "reconstructed_sha256": "d4a52d96ef215e6d9e0404b5ed5870d2d0bc56896e7d668b2f8a560bf93def57",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-014.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-014/GOV-014_SPEC.md"
@@ -1574,7 +1574,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-015/OPES_Core_Banking_Batch_15_GOV-015_2026-11-03.zip",
     "original_sha256": "1975638edb6d0f0705bf7c9e97a8b8d313cf1e04e705e5cfb89cf0a35e7c2b7e",
     "reconstructed_bytes": 1790,
-    "reconstructed_sha256": "7b11bec8c79ba90461977ead56ba39d0c20e4067d822805490314bc9ca7f29fc",
+    "reconstructed_sha256": "404cdbc3fa71e77030c53f72bfeef495ccc0041dd47776f2c47d9ca10d4a4305",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-015.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-015/GOV-015_SPEC.md"
@@ -1586,7 +1586,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-016/OPES_Core_Banking_Batch_16_GOV-016_2026-11-03.zip",
     "original_sha256": "f6ec98c7a41b10cb0416664c5e7db20934b8013269aecb9656074b083744b718",
     "reconstructed_bytes": 1941,
-    "reconstructed_sha256": "4cd5ca0f44770ec13bde37c81e1a241d9b68f7dd23a201428f5c3482b7263be2",
+    "reconstructed_sha256": "d161a878de04a19ffed8af50e5089559444fd349da5978f5dc2cc2efb28f3cc9",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-016.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-016/GOV-016_SPEC.md"
@@ -1598,7 +1598,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-017/OPES_Core_Banking_Batch_17_GOV-017_2026-11-03.zip",
     "original_sha256": "b31fc77436a24ed38aff9525aa60ba7449c542589eeb048a41e0162dff605419",
     "reconstructed_bytes": 1905,
-    "reconstructed_sha256": "9499a8a075ea90a61638bc31973358421c4373b09defe91fce3b468a954dedd1",
+    "reconstructed_sha256": "a2762e81c82ed03b01fcfac1fa5193a18700ee678a5a95e7a9a5ed67c7612ac1",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-017.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-017/GOV-017_SPEC.md"
@@ -1610,7 +1610,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-018/OPES_Core_Banking_Batch_18_GOV-018_2026-11-03.zip",
     "original_sha256": "4075aa20bab978610f6a282683b692073b62ea37fa7b7fa9e093f01644ad77eb",
     "reconstructed_bytes": 1906,
-    "reconstructed_sha256": "32466ab2fd58b0cfd8a811e1adc24aabee45049b3ef5c35ef3a34a0b009c5327",
+    "reconstructed_sha256": "5a0c0a506487c69f17136ba06ed60c55c702b65e9baee60585b942a4e5dca340",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-018.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-018/GOV-018_SPEC.md"
@@ -1622,7 +1622,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-019/OPES_Core_Banking_Batch_19_GOV-019_2026-11-03.zip",
     "original_sha256": "eb46d3cc005557ef299782997e5ce76fe970d9cf3b853654c9e9bf34cc9e048a",
     "reconstructed_bytes": 1852,
-    "reconstructed_sha256": "520191f94d5ba88e30dfdbe3ca34640f0c23c91de08a6b4db2c0bf978aeee80f",
+    "reconstructed_sha256": "3c0551aeafba6db81477f02dfe19ce25e65a14a6bef417aadaf8b3c9ca7c88a9",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-019.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-019/GOV-019_SPEC.md"
@@ -1634,7 +1634,7 @@
     "original_path": "programme/batches/2026-11-03/GOV-020/OPES_Core_Banking_Batch_20_GOV-020_2026-11-03.zip",
     "original_sha256": "1eeb0b109893d1a82089b8af40cebea946274d77d391cd074966cc68ddb35121",
     "reconstructed_bytes": 1923,
-    "reconstructed_sha256": "376cb1d6e428fab9aec32852f76f956bd07ba4bd4bd37df88bb344c113b0d24e",
+    "reconstructed_sha256": "566ce158e484c2aadcb426b973abaef6ef61492287432e7d89ca6ed69f59c0c8",
     "reconstructed_zip_path": "RECONSTRUCTED/GOV-020.zip",
     "source_paths": [
       "programme/batches/2026-11-03/GOV-020/GOV-020_SPEC.md"
@@ -1646,7 +1646,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-001/OPES_Core_Banking_Batch_81_OPS-001_2026-11-03.zip",
     "original_sha256": "7b6419ab6fd65f2bc0cbbaaae3e8e696dde361dd3f4e05cd87d91d467a4abe68",
     "reconstructed_bytes": 2810,
-    "reconstructed_sha256": "f95aaec88109c885275116d8e0259995b545d92debbc78a43b1bca971d437279",
+    "reconstructed_sha256": "abbb8bf5f7bcb3dde70ea767e3ea861caabcc95a47a12c21d5907bf048344210",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-001.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-001/OPS-001_CONTRACT.json",
@@ -1659,7 +1659,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-002/OPES_Core_Banking_Batch_82_OPS-002_2026-11-03.zip",
     "original_sha256": "1058496534283d052185c640db06bc75e13660eda97ee1791b50ddd9f4af33b5",
     "reconstructed_bytes": 2799,
-    "reconstructed_sha256": "b7832f43f508f7be855a280600e7c5c2571dcdc06977e57f032944e6843ee7a4",
+    "reconstructed_sha256": "5563ecffc2104045f4d55e6cc187096f9bc9febef8b41883b2013f1ca732ee23",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-002.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-002/OPS-002_CONTRACT.json",
@@ -1672,7 +1672,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-003/OPES_Core_Banking_Batch_83_OPS-003_2026-11-03.zip",
     "original_sha256": "e83dea857dfe0ed19a331bc27ca3ec70432c1c1d3a41871d955c2228d616068d",
     "reconstructed_bytes": 2869,
-    "reconstructed_sha256": "25e0970d6ca53e4c44bc3646ba5562d2ee911d11fb05dec20498a95f7d5f3c79",
+    "reconstructed_sha256": "c45d7721f487b4a11cdf586128609db2124d6eb112203a7eb7970462ad3cc953",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-003.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-003/OPS-003_CONTRACT.json",
@@ -1685,7 +1685,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-004/OPES_Core_Banking_Batch_84_OPS-004_2026-11-03.zip",
     "original_sha256": "21e9fd39f34782961cd01f9b90f9fcf4589fe71ab2c278eebe8b7aa9ca07990f",
     "reconstructed_bytes": 2937,
-    "reconstructed_sha256": "92f6e94c1768218ee0a65ff2d65bd40778ee94f8523dcd69792e50350e0ca473",
+    "reconstructed_sha256": "e10ad3f75c824c0a9c0f58e104a5421558d80acb9d65b0b50044ee64e8da4a87",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-004.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-004/OPS-004_CONTRACT.json",
@@ -1698,7 +1698,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-005/OPES_Core_Banking_Batch_85_OPS-005_2026-11-03.zip",
     "original_sha256": "1a657586eaea11ce642a08695d102194927689643bb35ede052cfd0eb45abf88",
     "reconstructed_bytes": 2731,
-    "reconstructed_sha256": "10a779f89f55406d8ff47a97e01712a62ebe23316a1122dea64200d2a9fd3375",
+    "reconstructed_sha256": "7732839224baac2444b8a31cc6e1e93e23a1a86c3ee4eb3d7bee765324832b82",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-005.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-005/OPS-005_CONTRACT.json",
@@ -1711,7 +1711,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-006/OPES_Core_Banking_Batch_86_OPS-006_2026-11-03.zip",
     "original_sha256": "6acf9f64d5b10277b58765f5190cb86a1871ea1abe7413fc2cbf132e4640a811",
     "reconstructed_bytes": 2882,
-    "reconstructed_sha256": "d1074d8aeed4565201b425501baf0bbe59c1fb68d6dc9d0bd4c71fe981cb562d",
+    "reconstructed_sha256": "baee31cf8c8ae16d81eebc793ecf1a2826c0b7b67665c2e030c01af3c23a6a63",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-006.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-006/OPS-006_CONTRACT.json",
@@ -1724,7 +1724,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-007/OPES_Core_Banking_Batch_87_OPS-007_2026-11-03.zip",
     "original_sha256": "0f42a1bd4d68365f8638cb44d42e2eed737af41a8b80fba354c5abe2e686f369",
     "reconstructed_bytes": 2799,
-    "reconstructed_sha256": "0d12fc60919ceea8bd79e3be3cdabc3a499e68372069bdc5cd2f2828015487ca",
+    "reconstructed_sha256": "cf22333b2f5090e72da245de4dc2bf55a345140dc23a22e277a2469d68c6c864",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-007.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-007/OPS-007_CONTRACT.json",
@@ -1737,7 +1737,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-008/OPES_Core_Banking_Batch_88_OPS-008_2026-11-03.zip",
     "original_sha256": "a5d429350cf65115fa590e106e806eab6a832bb26894977dccbcd092b7fd0a91",
     "reconstructed_bytes": 2863,
-    "reconstructed_sha256": "d2ba0398e8a15c42d66755e2adcd96f0ad5de8c9737b27c3bb41981451b63c38",
+    "reconstructed_sha256": "bfc7ebe53183807d6eda9595952ad7d21357296be3273167ec9b6759df4b9761",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-008.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-008/OPS-008_CONTRACT.json",
@@ -1750,7 +1750,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-009/OPES_Core_Banking_Batch_89_OPS-009_2026-11-03.zip",
     "original_sha256": "c2ca6e0ac76b00739c686da4a190026064fced6cff532f9ccf9ac039384059ad",
     "reconstructed_bytes": 2919,
-    "reconstructed_sha256": "e356352a430ae597800c288ab819eac92150b2a8143c00ec73a3b34fabae5ef8",
+    "reconstructed_sha256": "a64e975ee8cfcc2b65d247a8443543c412fc9d9816cad20dd74d9a760f44a7bb",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-009.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-009/OPS-009_CONTRACT.json",
@@ -1763,7 +1763,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-010/OPES_Core_Banking_Batch_90_OPS-010_2026-11-03.zip",
     "original_sha256": "f0a194859bb5de3f18dc33fdbf37212de4f5ff5f692009b8849112922a32e2d9",
     "reconstructed_bytes": 3038,
-    "reconstructed_sha256": "3a76ffa9f109f67176963cf05c08e7a940e9c9ebc3501dc16b6148abe6aca23b",
+    "reconstructed_sha256": "be60acdfda4ff57b8fed8e0a2b80b7f2fb2ab47aeb1acebe5f047359c6bb702a",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-010.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-010/OPS-010_CONTRACT.json",
@@ -1776,7 +1776,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-011/OPES_Core_Banking_Batch_91_OPS-011_2026-11-03.zip",
     "original_sha256": "95d107ff059bc7e9bb3b0775f6f99ced4247bd7b66be2e04e6ea933649a621b5",
     "reconstructed_bytes": 3128,
-    "reconstructed_sha256": "ab43f416935b742040f13120e9c47f492183d27282d762c8b8b00083a033b7ee",
+    "reconstructed_sha256": "93616c21ff1b6f0514d5de463f3f381d4842c7e5aff94442915982d55302e2b7",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-011.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-011/OPS-011_CONTRACT.json",
@@ -1789,7 +1789,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-012/OPES_Core_Banking_Batch_92_OPS-012_2026-11-03.zip",
     "original_sha256": "eb6f4015f4d9bca46b6d23b08a534eaf7b71b64ed72b678bda6a038cd9c137bb",
     "reconstructed_bytes": 3026,
-    "reconstructed_sha256": "7e096c15c045361790272594bf7a33f6d4ca796e837445d1cf63b100723ea8d3",
+    "reconstructed_sha256": "8746ac92ddcd4836daf7047ba97bdce69a452af0f9554ce8e74876b79b84f507",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-012.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-012/OPS-012_CONTRACT.json",
@@ -1802,7 +1802,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-013/OPES_Core_Banking_Batch_93_OPS-013_2026-11-03.zip",
     "original_sha256": "c0c1110d9eda9da4f2cf1040b3a9ebfe266d569087c16f7396f413a3e37c640a",
     "reconstructed_bytes": 3109,
-    "reconstructed_sha256": "a1b18de37629fd672df2aaff4e494c601bb2de823e8ea79180b3279abeac2a43",
+    "reconstructed_sha256": "3a19ae1ed9b1cf2fcab8d9bcaa23ba776a8e1829b2fcec3cee82e0cafd64fa11",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-013.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-013/OPS-013_CONTRACT.json",
@@ -1815,7 +1815,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-014/OPES_Core_Banking_Batch_94_OPS-014_2026-11-03.zip",
     "original_sha256": "5773ed8d57f312356268e820c4ee526fc66fa8081738c32b496ff2c83b498602",
     "reconstructed_bytes": 3031,
-    "reconstructed_sha256": "9a22804074a6cc7f7ee11ea23caccc089b776a88c4005a5877a0c72773493a58",
+    "reconstructed_sha256": "b5943b7a0bff89a059dbecbccea010f29cfefda2004625076b60f4b1857f2d60",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-014.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-014/OPS-014_CONTRACT.json",
@@ -1828,7 +1828,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-015/OPES_Core_Banking_Batch_95_OPS-015_2026-11-03.zip",
     "original_sha256": "37f91906731bb32c6dd8cf825448a3296cf439d36343c80b76a2f6a937a2e11b",
     "reconstructed_bytes": 3322,
-    "reconstructed_sha256": "b6892bd7ca581dad6444f60f3159bb7602d521910d49d979fef841fdcc41306c",
+    "reconstructed_sha256": "c49e98e17ff03532ffa2fd92942e5b0eeb3193c5e62b75f0661fdf4f70d08387",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-015.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-015/OPS-015_CONTRACT.json",
@@ -1841,7 +1841,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-016/OPES_Core_Banking_Batch_96_OPS-016_2026-11-03.zip",
     "original_sha256": "60fa848beabccf388b9e9ba6b094e5320c35d8c2d023f487f3b590bce7b98adf",
     "reconstructed_bytes": 3121,
-    "reconstructed_sha256": "008a50ff1f403427e12734278f063de3c059bc3678edacaed25ac60f85487364",
+    "reconstructed_sha256": "0b81e23772978dc09f0fdd4d9e5623af8d9232bcf13f4c0445eb3b8f67c7af31",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-016.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-016/OPS-016_CONTRACT.json",
@@ -1854,7 +1854,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-017/OPES_Core_Banking_Batch_97_OPS-017_2026-11-03.zip",
     "original_sha256": "d07b0b730c74d475105ca0b6ace150c2f2437751c001cb64b242edcdc9e1c701",
     "reconstructed_bytes": 3028,
-    "reconstructed_sha256": "8d09e1914ef26868ee821035bc0e107d018929134f454ac49c7ba7bcdd110917",
+    "reconstructed_sha256": "0ddab979a9e8365e669b82c92669a62076dccc3c2277409494cb7b36ac77fd9b",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-017.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-017/OPS-017_CONTRACT.json",
@@ -1867,7 +1867,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-018/OPES_Core_Banking_Batch_98_OPS-018_2026-11-03.zip",
     "original_sha256": "efd025cfec29bf0cbc94bfc22ff4249a5b87aaeb7b9c3be390f408b4d044a16a",
     "reconstructed_bytes": 3162,
-    "reconstructed_sha256": "970e4ea0e029ce09db9aab81f10a9173d153aef2537fb9a9ee351025794c0b76",
+    "reconstructed_sha256": "b71a05220ab9dcd5a09991831b85ba62f13b7e0280d0a4d71d84451b51bcae50",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-018.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-018/OPS-018_CONTRACT.json",
@@ -1880,7 +1880,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-019/OPES_Core_Banking_Batch_99_OPS-019_2026-11-03.zip",
     "original_sha256": "3b3eb01a4a8becd7b4a3a431efe47befa99ef36e71c5e721b0d84d03aa5ecf48",
     "reconstructed_bytes": 3036,
-    "reconstructed_sha256": "de8a3cd649747821306d875de01bd9ba4c8728c383cfcff87811a236bb83088b",
+    "reconstructed_sha256": "fbd0ebc9809fe62f65aac50d8f986dba554a127916eea8876f71361259dc9e80",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-019.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-019/OPS-019_CONTRACT.json",
@@ -1893,7 +1893,7 @@
     "original_path": "programme/batches/2026-11-03/OPS-020/OPES_Core_Banking_Batch_100_OPS-020_2026-11-03.zip",
     "original_sha256": "7992feb1cf331912c6655d1e21c7bd989cdd2514a6c92d77d56d332160f86067",
     "reconstructed_bytes": 3107,
-    "reconstructed_sha256": "a4d8b8259174bf99c2ea756339b8ebeabb603e1e64e7c3f4ea69147dc02a5a92",
+    "reconstructed_sha256": "8702af9acfcedafcd73a57fea39889400c09875d37fd884f1ab1d07481b10131",
     "reconstructed_zip_path": "RECONSTRUCTED/OPS-020.zip",
     "source_paths": [
       "programme/batches/2026-11-03/OPS-020/OPS-020_CONTRACT.json",
