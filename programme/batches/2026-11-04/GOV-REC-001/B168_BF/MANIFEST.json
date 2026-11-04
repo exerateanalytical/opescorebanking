@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 168,
+  "checkpoint": "BF",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "3334bd5dd7af3ac2a9dc8f595cb4d5fcafa7a06f1304424d8d7de51825d35d71",
+      "crc32": "4394b850",
+      "bytes": 6027
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "860b725fa525f721a5032d593b28881b430f57cb477436b848c7bbc50d14491e",
+      "crc32": "f9fa8ddb",
+      "bytes": 15071
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BF/CONTINUATION_STATE.json",
+      "sha256": "1aeeea658b05718e29e26d067ff75fe43b667ecc711b6dce09021d46b8ceab1f",
+      "crc32": "dbeb1165",
+      "bytes": 1235
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BF/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "566aa09d07aff6c474802cae60b211471c9bb6291fadc1fb685dadf1851ffeb8",
+      "crc32": "c9cfeff9",
+      "bytes": 3264
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BF/EVIDENCE_DELTA.md",
+      "sha256": "6b1f43261739eec47642e9b659c7573a7300005d8bbcd176f7ba6c2eb737c0ed",
+      "crc32": "8af65e2c",
+      "bytes": 3138
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BF/EXECUTION_REPORT.md",
+      "sha256": "163fc80cce510890043df7d83cb049581bf6b58b210febddc9c1352bb368c231",
+      "crc32": "12131ada",
+      "bytes": 1301
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BF/QUALITY_REVIEW.md",
+      "sha256": "9b1793c36c366eaf68032f47d4a7dbaaaa12fc0a7701baa61dfc29fbb4a6caf4",
+      "crc32": "9dd82196",
+      "bytes": 1749
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BF/README.md",
+      "sha256": "acd1f0bad3c2962388349c43c8a727ffee821217b5d9ed25aabb59649e856029",
+      "crc32": "af980e60",
+      "bytes": 1725
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BF/REGULATORY_CAPITAL_RULES.json",
+      "sha256": "3bf4224d2955bd708e94f8352fd32470360f198c2f8110964e474e92c73115ce",
+      "crc32": "9fa4bad2",
+      "bytes": 2632
+    }
+  ]
+}
