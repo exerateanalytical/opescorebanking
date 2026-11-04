@@ -1,0 +1,71 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 156,
+  "checkpoint": "AT",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "40d533db1b8ffedc64c22adf76a4326896897fd883f992772819ff5c78c88052",
+      "crc32": "9b0602cc",
+      "bytes": 7643
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "daf686e390a522301900cef13811f634a35fb200ff9d8f577ec3416ff32f1e31",
+      "crc32": "fc3d1f75",
+      "bytes": 16758
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AT/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "9eb02d472d2e6581ea6ab6fd39093e092cb5da5c6d1084b012b99b498f037441",
+      "crc32": "906db1ac",
+      "bytes": 2778
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AT/CONTINUATION_STATE.json",
+      "sha256": "42de2dee5e1b7c44ebee5a084523e7810bf25b2649c55af753344ce139f5e400",
+      "crc32": "2e967666",
+      "bytes": 1589
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AT/EXECUTION_REPORT.md",
+      "sha256": "5b8f92081d003bfa9b1bd8b1da6069c24ed5d9f7525b930f88b83faebee80cbf",
+      "crc32": "1638b159",
+      "bytes": 1789
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AT/PUBLICATION_AUTHORITY_MATRIX.json",
+      "sha256": "4be3e1042f42e98a77489803ec0260b69ffde9649a42379a29aa7977a59ffde9",
+      "crc32": "54f2bc2a",
+      "bytes": 2089
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AT/QUALITY_REVIEW.md",
+      "sha256": "7eadd9ae6363f87aedcf3b7c6dc2104ce22607b72eecfca394b473d08c0e1544",
+      "crc32": "9bfe85fc",
+      "bytes": 2162
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AT/README.md",
+      "sha256": "e80380ee71590b318ff4935d40f82f701d76dfc3c9435bb4bd75f51d076e1ee6",
+      "crc32": "91d91f3d",
+      "bytes": 1890
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AT/REQUIREMENTS_AND_CONTROLS.md",
+      "sha256": "fd8498726773454f0f9789d00a85a67d3f6cbb099b0e16754e94b164ec4e4719",
+      "crc32": "be327053",
+      "bytes": 3629
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AT/SOURCE_DELTA.md",
+      "sha256": "b29c81c2ed5f935f0dd8b5a11ac9794d0fa8030ee9b0c20159359c9297b6304f",
+      "crc32": "a2aa04e1",
+      "bytes": 4279
+    }
+  ]
+}
