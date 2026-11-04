@@ -1,0 +1,352 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 169,
+  "checkpoint": "BG",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BG/CAPITAL_TRANSITION_DECISION_MATRIX.json",
+      "git_blob_sha": "2efe09fa67d37b29ca19309ae34ccf2c21e45a3e",
+      "sha256": "745d4cac2a49e63255cc43ebe427467bed8a05daf7efc352ed27ddd8a85be6dd",
+      "bytes": 5772,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 26,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"notes\": \"Articles 4–7 overlap for existing institutions; legal interpretation unresolved.\""
+        },
+        {
+          "line": 29,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"unresolved_legal_questions\": ["
+        },
+        {
+          "line": 31,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"Does a submitted but not approved capital-raising plan confer any interim regulatory relief? No automatic relief assumed.\","
+        },
+        {
+          "line": 33,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"What are effects of changes to institution category, merger, licence, head office or regulatory direction?\","
+        },
+        {
+          "line": 86,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"action\": \"Submission does not equal regulatory approval; staged compliance not automatically conferred\","
+        },
+        {
+          "line": 126,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"ledger_effect\": \"NONE; regulatory evaluation cannot create, alter, or reverse a posted journal\","
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BG/CONTINUATION_STATE.json",
+      "git_blob_sha": "1778adfae2ad90ca47a20af85105874068cb71ba",
+      "sha256": "abeb47e00c838e85f6a1250097919e70449b55188d3dae45a01bfc51726adfb6",
+      "bytes": 1606,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 17,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        },
+        {
+          "line": 19,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"new_source\": \"Issuer-hosted scanned BEAC R-2009/01 complete 2-page text; verified bank 10bn and financial establishment 2bn; compared with government-hosted R-2025/02 Articles 4–7\","
+        },
+        {
+          "line": 26,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"next_exact_task\": \"WP-ACC-005 — Checkpoint BH: authenticate and hash original R-2009/01 and R-2025/02 PDFs and publication chains; obtain written COBAC/institution-counsel interpretation of R-2025/02 Articles 4/6/7 overlap and 2026 plan-approval effect; inspect COBAC 2025 report and R-2021/01–02 originals; obtain bank-approved PCEC/capital accounting and ou"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BG/CONTROL_AND_TEST_DESIGN.md",
+      "git_blob_sha": "b0a87816f760540c0b1367f6ec3c2cbb35400234",
+      "sha256": "e8bf028f225efcb6cce5a0c52110705dd4b21b70895610e6c6042ea79863e2d6",
+      "bytes": 3925,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Compliance evaluation: OUT_OF_SCOPE / INDETERMINATE / REVIEW_REQUIRED / COMPLIANT / NONCOMPLIANT / TRANSITION_CONFIRMED; never publish COMPLIANT from incomplete legal applicability evidence."
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Retain immutable signed evidence and role-based audit of source updates, rule promotions and retroactive corrections. Only explicit authorized recalculation changes a regulatory assessment, never journal history."
+        },
+        {
+          "line": 13,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Twelve additional BG negative/temporal scenarios (specified, NOT executed)"
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "7. **Changed category:** bank-to-financial-establishment conversion cannot reuse a stale bank transition profile without verified regulatory category decision."
+        },
+        {
+          "line": 23,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "10. **Known-at replay:** a later discovered amendment cannot silently rewrite an earlier signed regulatory filing or ledger; preserve before/after and correction evidence."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BG/EVIDENCE_DELTA.md",
+      "git_blob_sha": "910c886728e45f9ee59be8b80d001d9bf696546b",
+      "sha256": "a64d921612b977f4bfd3b35f5d7121eea6508c73fbee9e8a7152e97a5073c1b7",
+      "bytes": 3987,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Date:** 2026-11-02. **Predecessor:** BF, independently fetched from remote main. **Active:** WP-ACC-005, P0-blocked. **Nature:** non-executable legal/accounting research."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "2. **Government-hosted R-2025/02 complete text** was re-read: https://www.finances.gouv.cg/fr/download/file/fid/9490 . Article 4 says entry into force 1 January 2026; Article 5 requires full paid-up minimum for newly approved institutions; Article 6 gives pre-existing institutions a one-year transition, requires submission by 30 June 2026 of a capital-raisin"
+        },
+        {
+          "line": 14,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Regulatory evidence custody and authority"
+        },
+        {
+          "line": 17,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| R-2009/01 | Yes, BEAC scan, 2 pages | No | Not verified | Not complete | Not supplied |"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| R-2025/02 | Government-hosted full text, 2 pages | No | Not verified | Not complete | Not supplied |"
+        },
+        {
+          "line": 19,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| R-2021/01 and R-2021/02 | Secondary/official-report references only | No | Not verified | Not complete | Not supplied |"
+        },
+        {
+          "line": 22,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Regulatory decision"
+        },
+        {
+          "line": 23,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "No executable capital rule or accounting mapping authorized. Preserve separate social-capital, paid-up-capital, prudential-own-funds and ledger evidence; no automatic compliance certification, no financial posting from regulatory statuses."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BG/EXECUTION_REPORT.md",
+      "git_blob_sha": "cda27181476706d68667fc7133b6ec554d5541d7",
+      "sha256": "a9f42b8a0eea565f6a27670d438520e2bad727a85c1ef2dd61eedbdd5d2341ee",
+      "bytes": 1562,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Predecessor BF continuation state and design fetched from GitHub; BG absent before this run. One work package (WP-ACC-005) continued. **Attempted 1; completed 0; kept open 1; blocked 1; dependent packages 0.**"
+        },
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Updated non-executable authority/decision matrix and 12 additional specified acceptance scenarios; multidisciplinary review completed; P0 unresolved."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Banking tests 0; production code 0; regulatory requests sent 0; P0 closures 0; DoR FAIL.**"
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint BH: authenticate and hash original R-2009/01 and R-2025/02 PDFs and publication chains; obtain written COBAC/institution-counsel interpretation of R-2025/02 Articles 4/6/7 overlap and 2026 plan-approval effect; inspect COBAC 2025 report and R-2021/01–02 originals; obtain bank-approved PCEC/capital accounting and o"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BG/QUALITY_REVIEW.md",
+      "git_blob_sha": "9ce2451b0961bc1f614a60c82005ceac8fae2f4a",
+      "sha256": "165bb98bf7811076836075f7676b3de349d2e17519f41d631cb6389239c02ae9",
+      "bytes": 1976,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Legal/regulatory | New issuer-hosted original R-2009/01 scanned pages confirm 10bn/2bn; R-2025/02 Articles 4/6/7 temporal overlap remains interpretively unresolved; Bulletin/amendments missing | **P0 OPEN** |"
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Prudential | Capital minimum, paid-up capital and regulatory own funds remain separate; R-2021 amendments unacquired | **P0 OPEN** |"
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Domain architecture | Separate instrument, applicability, plan, finance and evaluation lifecycles proposed; not approved | DESIGN ONLY |"
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Operations/DR | Regulatory approval UNKNOWN, replay, outage and recovery semantics specified, not exercised | OPEN |"
+        },
+        {
+          "line": 13,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Testing/audit | 12 BG scenarios specified, 0 executed; no auditor sign-off or regulatory certification | FAIL |"
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Regulatory evidence readiness | Full source custody and publication chain not established | **FAIL** |"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Gate:** WP-ACC-005 remains OPEN / P0 BLOCKED. Definition of Ready FAIL. No dependent financial implementation, journal posting, settlement or executable capital policy."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BG/README.md",
+      "git_blob_sha": "ccb1bdb8f47e1defb18a781ee0af8bf1d230bb39",
+      "sha256": "e3480508f1a5830c5b5370efacfb10c6f70d94ea33d5231b25b5142d4f32d912",
+      "bytes": 990,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**WP-ACC-005 remains OPEN/P0 BLOCKED.** Predecessor BF remotely verified. New work: BEAC issuer-hosted scanned R-2009/01 (2 pages) read and compared clause-by-clause with Republic of Congo government-hosted R-2025/02, with a structured 2026–2029 legal/applicability decision table. No banking code or tests; no P0 gap closure."
+        },
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Next:** WP-ACC-005 — Checkpoint BH: authenticate and hash original R-2009/01 and R-2025/02 PDFs and publication chains; obtain written COBAC/institution-counsel interpretation of R-2025/02 Articles 4/6/7 overlap and 2026 plan-approval effect; inspect COBAC 2025 report and R-2021/01–02 originals; obtain bank-approved PCEC/capital accounting and outstanding "
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BG",
+    "date": "2026-11-02",
+    "previous": "BF",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "new_source": "Issuer-hosted scanned BEAC R-2009/01 complete 2-page text; verified bank 10bn and financial establishment 2bn; compared with government-hosted R-2025/02 Articles 4–7",
+    "original_pdf_binary_acquired": false,
+    "original_sha256_verified": false,
+    "publication_chain_verified": false,
+    "report_2025_body_inspected": false,
+    "new_acceptance_scenarios_specified": 12,
+    "remote_delivery": "VERIFIED_GITHUB_MAIN",
+    "next_exact_task": "WP-ACC-005 — Checkpoint BH: authenticate and hash original R-2009/01 and R-2025/02 PDFs and publication chains; obtain written COBAC/institution-counsel interpretation of R-2025/02 Articles 4/6/7 overlap and 2026 plan-approval effect; inspect COBAC 2025 report and R-2021/01–02 originals; obtain bank-approved PCEC/capital accounting and outstanding 01/25–02/25 court/settlement evidence. Preserve P0 hold.",
+    "checkpoint_files_verified": 7,
+    "checkpoint_last_file_commit": "bd2e495bdf4327758e68fc925742b692ccbbac58"
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 170"
+}
