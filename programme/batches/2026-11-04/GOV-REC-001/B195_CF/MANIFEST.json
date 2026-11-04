@@ -1,0 +1,29 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 195,
+  "checkpoint": "CF",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "e0fd6d8ca414d9951b830626fe0b026774727e7a785ed92be3bf3486b512e1a7",
+      "crc32": "1367fd1c",
+      "bytes": 3073
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "d59c6cb6da6f332c780ceaa056f1c3cde8b253700771df6f7acae5aa2793d81b",
+      "crc32": "15f1451a",
+      "bytes": 3570
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/CF/README.md",
+      "sha256": "d1d9cdf544537f517e1b1168f408c33e6dd6777e3234b91ca08df502e6029552",
+      "crc32": "0a922dda",
+      "bytes": 5314
+    }
+  ]
+}
