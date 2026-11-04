@@ -1,0 +1,71 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 157,
+  "checkpoint": "AU",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "3cb005d9133c19a797181e3b3a5878a12851636d78e98eb00713319d40132264",
+      "crc32": "30ea1c22",
+      "bytes": 7325
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "fc563bba6abd4ada72c3866ce42988f05c372c5f30c8082806e341740c8e8404",
+      "crc32": "1f3d0282",
+      "bytes": 17399
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AU/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "243c68926b54816dabad44bdae01b081f7e70b428f1d3cb6519eaaf97f24b2da",
+      "crc32": "2b9e2094",
+      "bytes": 2659
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AU/CONTINUATION_STATE.json",
+      "sha256": "8baadea5438ae2b431129bbacb40dd5e5bc8959b893b570a986ca8672682f93c",
+      "crc32": "9bc4afde",
+      "bytes": 1179
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AU/DESIGN_GUARDS.md",
+      "sha256": "2d6121ba723926d3b5431315d16a766313a3e9b515ffda820d98b10b1c0285f1",
+      "crc32": "4a08e83c",
+      "bytes": 3520
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AU/EXECUTION_REPORT.md",
+      "sha256": "b82a5f52a0299ed206e0ce1ecad74faaec6aea0b3ff88a9285a708ab6f8d70e6",
+      "crc32": "4408e216",
+      "bytes": 1835
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AU/PRIMARY_SOURCE_DELTA.md",
+      "sha256": "5921e92cf4e72c7cefe6450181532f094430d0d22a38cf8869af6e80ed02ca6c",
+      "crc32": "3bc2de4a",
+      "bytes": 4122
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AU/QUALITY_REVIEW.md",
+      "sha256": "ab56784b813c3348b33f3821123990f240b218110de23a539926edbef487b18b",
+      "crc32": "e823e901",
+      "bytes": 2137
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AU/README.md",
+      "sha256": "bf241ec0e08a577d6acf3c87ea1cb96ee3f2559f7e55c825c138fb80c30edb8e",
+      "crc32": "5d13d7fc",
+      "bytes": 1752
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AU/REGULATORY_LINEAGE.json",
+      "sha256": "0be775235354b0cc649a43e8f2986a6f2b616b55d9933e6a397a8bc7da36d648",
+      "crc32": "f954aa6f",
+      "bytes": 2927
+    }
+  ]
+}
