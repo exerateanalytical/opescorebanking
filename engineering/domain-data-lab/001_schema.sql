@@ -170,7 +170,7 @@ BEGIN
     EXECUTE format('ALTER TABLE opes_domains.%I FORCE ROW LEVEL SECURITY',tbl);
     EXECUTE format(
       'CREATE POLICY %I ON opes_domains.%I TO opes_foundation_runtime USING (institution_id=opes_tenant.current_institution_id()) WITH CHECK (institution_id=opes_tenant.current_institution_id())',
-      'tenant_scope_'+tbl,tbl
+      'tenant_scope_'||tbl,tbl
     );
   END LOOP;
 END $$;
