@@ -1,0 +1,95 @@
+{
+  "accepted_wp_total": "UNKNOWN",
+  "approved_programme_wp_denominator": "UNKNOWN",
+  "banking_tests_executed_by_this_audit": 0,
+  "baseline_git_commit": "c9712843155705b0b61ea9d447d2aa085ab3b69b",
+  "database_rls_design_gaps": 25,
+  "duplicate_test_ids": [],
+  "engineering_contracts_parsed": 120,
+  "exact_duplicates": [
+    {
+      "paths": [
+        "regulatory/checkpoints/AN/EVIDENCE_REQUEST_PLAN.md",
+        "regulatory/recovery/source/AN/EVIDENCE_REQUEST_PLAN.md"
+      ],
+      "sha256": "c0eb99efe0e1ab81725de4276fb034df40c9d570862c463c8b12eb3b2333486c"
+    },
+    {
+      "paths": [
+        "regulatory/checkpoints/AN/GAP_UPDATE.md",
+        "regulatory/recovery/source/AN/GAP_UPDATE.md"
+      ],
+      "sha256": "d1358168c21aa4bc7e69ddda1c7cf380c02042d6b9245fd0383bdbc3f6c31e8b"
+    },
+    {
+      "paths": [
+        "regulatory/checkpoints/AN/QUALITY_REVIEW.md",
+        "regulatory/recovery/source/AN/QUALITY_REVIEW.md"
+      ],
+      "sha256": "a16c7281f3fbd84de9ffec8b4837c7e74403f1c34ba4faad7fa248d8835f2719"
+    },
+    {
+      "paths": [
+        "regulatory/recovery/RECOVERED_CHECKPOINTS_AE_AM_SHA256_2026-11-03.txt",
+        "regulatory/recovery/archives/SHA256SUMS.txt"
+      ],
+      "sha256": "48b23a8b3beb5a50c5aa0564ff1c5dcabbfbde82350f4b4103e791aaef9d2571"
+    }
+  ],
+  "generated_archive": {
+    "bytes": 8867634,
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/reconciliation_2026-11-04/verified_run/OPES_Core_Banking_Full_Reconciled_Source_2026-11-04.zip",
+    "sha256": "343f596e7e861579a00da87cada27f995b3dd5009952ded5041d2b534e81021b",
+    "zip_crc_valid": true
+  },
+  "generic_api_schema_gaps": 25,
+  "historical_original_archive_custody": "NOT_VERIFIED",
+  "historical_wp_ids_observed": 80,
+  "identical_sha256_groups": 4,
+  "known_blockers": [
+    "WP-ACC-005 PCEC 312/322 source and legal/CFO authority",
+    "bank-specific payment network entitlement",
+    "historical custody and independent acceptance",
+    "15 DoR gates"
+  ],
+  "manifest_conflicts": [
+    {
+      "action": "supersede manifest count; preserve historical file",
+      "actual": 143,
+      "declared": 141,
+      "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/DELIVERY_MANIFEST.json"
+    },
+    {
+      "action": "stale pointer; observed batch path is not proof of acceptance",
+      "declared_latest_archive_batch": 180,
+      "latest_recovery_path_number": 209,
+      "path": "governance/CANONICAL_PROGRAMME_STATE.json"
+    }
+  ],
+  "missing_domain_file_slots": 0,
+  "production_banking_code_generated": 0,
+  "regulatory_certification": "NOT_VERIFIED",
+  "regulatory_checkpoint_directories": 59,
+  "regulatory_readmes_read": 59,
+  "repository_bytes": 14007921,
+  "run_date": "2026-11-04",
+  "scope": "All git-tracked files, text parse, all top-level ZIP CRC tests, draft coverage; not independent regulatory approval",
+  "source_contract_executed_test_claim_sum": 0,
+  "specification_domain_count": 25,
+  "test_scenarios_in_csv": 500,
+  "text_file_formats": {
+    ".csv": 31,
+    ".js": 2,
+    ".json": 398,
+    ".md": 582,
+    ".py": 2,
+    ".sql": 26,
+    ".txt": 3,
+    ".yaml": 27,
+    ".yml": 2
+  },
+  "text_files_read": 1073,
+  "tracked_files": 1294,
+  "zip_archives_tested": 221,
+  "zip_crc_failures": 146
+}

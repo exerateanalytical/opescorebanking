@@ -1,0 +1,252 @@
+[
+  {
+    "domain": "GOV",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "ARC",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "CIF",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "PRD",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "ACT",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "LED",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "BRN",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "PAY",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "CRD",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "TRE",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "AML",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "REP",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "CHN",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "CARD",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "CRM",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "FEE",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "REC",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "SEC",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "DAT",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "API",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "INF",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "DR",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "ADM",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "TST",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "domain": "REL",
+    "issue": "RLS enforcement absent from proposal",
+    "type": "database_security"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/ACT.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/ADM.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/AML.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/API.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/ARC.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/BRN.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/CARD.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/CHN.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/CIF.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/CRD.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/CRM.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/DAT.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/DR.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/FEE.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/GOV.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/INF.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/LED.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/PAY.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/PRD.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/REC.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/REL.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/REP.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/SEC.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/TRE.openapi.yaml",
+    "type": "api_depth"
+  },
+  {
+    "issue": "generic payload schema, not fully typed domain fields",
+    "path": "programme/consolidated/ONE_BATCH_ENGINEERING_DELIVERY_2026-11-04/full_specification/apis/TST.openapi.yaml",
+    "type": "api_depth"
+  }
+]

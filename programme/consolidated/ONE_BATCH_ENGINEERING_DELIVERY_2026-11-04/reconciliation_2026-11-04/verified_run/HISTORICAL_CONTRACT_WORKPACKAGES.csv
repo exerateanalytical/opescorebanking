@@ -1,0 +1,121 @@
+path,id,batch,title,status,candidate_domain,planned_tests,executed_tests_claim,schema_attributes
+programme/batches/2026-11-03/ACT-001/ACT-001_CONTRACT.json,ACT-001,61,Product factory and catalogue ownership,DRAFT_REVIEW_OPEN,PRD (candidate; historical WP ACT-001),5,0,10
+programme/batches/2026-11-03/ACT-002/ACT-002_CONTRACT.json,ACT-002,62,Product terms versioning and approved change lifecycle,DRAFT_REVIEW_OPEN,ACT-002,5,0,10
+programme/batches/2026-11-03/ACT-003/ACT-003_CONTRACT.json,ACT-003,63,Customer and institution product eligibility policy,DRAFT_REVIEW_OPEN,ACT-003,5,0,10
+programme/batches/2026-11-03/ACT-004/ACT-004_CONTRACT.json,ACT-004,64,"Fees, tariff schedules and precise monetary calculation",DRAFT_REVIEW_OPEN,ACT-004,5,0,10
+programme/batches/2026-11-03/ACT-005/ACT-005_CONTRACT.json,ACT-005,65,"Product approval, release and suspension controls",DRAFT_REVIEW_OPEN,ACT-005,5,0,10
+programme/batches/2026-11-03/ACT-006/ACT-006_CONTRACT.json,ACT-006,66,Account opening workflow and customer binding,DRAFT_REVIEW_OPEN,ACT-006,5,0,10
+programme/batches/2026-11-03/ACT-007/ACT-007_CONTRACT.json,ACT-007,67,"Account lifecycle states, holds and closure authority",DRAFT_REVIEW_OPEN,ACT-007,5,0,10
+programme/batches/2026-11-03/ACT-008/ACT-008_CONTRACT.json,ACT-008,68,"Account mandates, ownership and signing controls",DRAFT_REVIEW_OPEN,ACT-008,5,0,10
+programme/batches/2026-11-03/ACT-009/ACT-009_CONTRACT.json,ACT-009,69,"Deposit initiation, booking and source reconciliation",DRAFT_REVIEW_OPEN,ACT-009,5,0,10
+programme/batches/2026-11-03/ACT-010/ACT-010_CONTRACT.json,ACT-010,70,Savings interest accrual and application control,DRAFT_REVIEW_OPEN,ACT-010,5,0,10
+programme/batches/2026-11-03/ACT-011/ACT-011_CONTRACT.json,ACT-011,71,Account-to-ledger contract and authoritative balance views,DRAFT_REVIEW_OPEN,ACT-011,5,0,10
+programme/batches/2026-11-03/ACT-012/ACT-012_CONTRACT.json,ACT-012,72,Standing orders and recurring account instructions,DRAFT_REVIEW_OPEN,ACT-012,5,0,10
+programme/batches/2026-11-03/ACT-013/ACT-013_CONTRACT.json,ACT-013,73,"Dormancy, reactivation and unclaimed balance policy",DRAFT_REVIEW_OPEN,ACT-013,5,0,10
+programme/batches/2026-11-03/ACT-014/ACT-014_CONTRACT.json,ACT-014,74,Account termination and final financial settlement workflow,DRAFT_REVIEW_OPEN,ACT-014,5,0,10
+programme/batches/2026-11-03/ACT-015/ACT-015_CONTRACT.json,ACT-015,75,"Statements, transaction history and evidence-backed presentation",DRAFT_REVIEW_OPEN,ACT-015,5,0,10
+programme/batches/2026-11-03/ACT-016/ACT-016_CONTRACT.json,ACT-016,76,"Account holds, liens and availability restrictions",DRAFT_REVIEW_OPEN,ACT-016,5,0,10
+programme/batches/2026-11-03/ACT-017/ACT-017_CONTRACT.json,ACT-017,77,"Account access, overdraft and funds-availability decision model",DRAFT_REVIEW_OPEN,ACT-017,5,0,10
+programme/batches/2026-11-03/ACT-018/ACT-018_CONTRACT.json,ACT-018,78,Account service API contracts and event projections,DRAFT_REVIEW_OPEN,ACT-018,5,0,10
+programme/batches/2026-11-03/ACT-019/ACT-019_CONTRACT.json,ACT-019,79,"Account exceptions, correction and end-of-day dependencies",DRAFT_REVIEW_OPEN,ACT-019,5,0,10
+programme/batches/2026-11-03/ACT-020/ACT-020_CONTRACT.json,ACT-020,80,Account and deposit phase design acceptance dossier,DRAFT_REVIEW_OPEN,ACT-020,5,0,10
+programme/batches/2026-11-03/ARC-011/ARC-011_CONTRACT.json,ARC-011,31,Financial transaction and consistency boundaries,DRAFT_DELIVERED_AWAITING_INDEPENDENT_ACCEPTANCE,ARC-011,0,,0
+programme/batches/2026-11-03/ARC-012/ARC-012_CONTRACT.json,ARC-012,32,Institution scoping and data isolation,DRAFT_DELIVERED_AWAITING_INDEPENDENT_ACCEPTANCE,ARC-012,0,,0
+programme/batches/2026-11-03/ARC-013/ARC-013_CONTRACT.json,ARC-013,33,Versioned configuration and capability activation,DRAFT_DELIVERED_AWAITING_INDEPENDENT_ACCEPTANCE,ARC-013,0,,0
+programme/batches/2026-11-03/ARC-014/ARC-014_CONTRACT.json,,34,External systems and anti-corruption integration boundaries,DRAFT_REVIEW_OPEN,ARC-014,0,,0
+programme/batches/2026-11-03/ARC-015/ARC-015_CONTRACT.json,,35,"Observability, audit and operational evidence architecture",DRAFT_REVIEW_OPEN,ARC-015,0,,0
+programme/batches/2026-11-03/ARC-016/ARC-016_CONTRACT.json,,36,"Resilience, failure states and disaster recovery",DRAFT_REVIEW_OPEN,ARC-016,0,,0
+programme/batches/2026-11-03/ARC-017/ARC-017_CONTRACT.json,ARC-017,37,Performance envelope and capacity validation plan,DRAFT_REVIEW_PENDING,ARC-017,0,0,0
+programme/batches/2026-11-03/ARC-018/ARC-018_CONTRACT.json,ARC-018,38,Identity security and cryptographic trust boundaries,DRAFT_REVIEW_PENDING,ARC-018,0,0,0
+programme/batches/2026-11-03/ARC-019/ARC-019_CONTRACT.json,ARC-019,39,Architecture verification and quality gate strategy,DRAFT_REVIEW_PENDING,ARC-019,0,0,0
+programme/batches/2026-11-03/ARC-020/ARC-020_CONTRACT.json,ARC-020,40,Architecture review and transition-to-implementation decision dossier,DRAFT_DELIVERED_REVIEW_OPEN,ARC-020,0,0,0
+programme/batches/2026-11-03/BRN-001/BRN-001_CONTRACT.json,,121,"Branch hierarchy, licensing scope and service catalogue",,BRN-001,0,,0
+programme/batches/2026-11-03/BRN-002/BRN-002_CONTRACT.json,,122,"Teller identities, shift assignment and entitlement lifecycle",,BRN-002,0,,0
+programme/batches/2026-11-03/BRN-003/BRN-003_CONTRACT.json,,123,"Cash drawer opening, custody and opening balance evidence",,BRN-003,0,,0
+programme/batches/2026-11-03/BRN-004/BRN-004_CONTRACT.json,,124,Teller cash deposit intake and controlled financial handoff,,BRN-004,0,,0
+programme/batches/2026-11-03/BRN-005/BRN-005_CONTRACT.json,BRN-005,125,,DRAFT_UNAPPROVED,BRN-005,0,,0
+programme/batches/2026-11-03/BRN-006/BRN-006_CONTRACT.json,BRN-006,126,,DRAFT_UNAPPROVED,BRN-006,0,,0
+programme/batches/2026-11-03/BRN-007/BRN-007_CONTRACT.json,BRN-007,127,,DRAFT_UNAPPROVED,BRN-007,0,,0
+programme/batches/2026-11-03/BRN-008/BRN-008_CONTRACT.json,BRN-008,128,,DRAFT_UNAPPROVED,BRN-008,0,,0
+programme/batches/2026-11-03/BRN-009/BRN-009_CONTRACT.json,BRN-009,,,,BRN-009,0,,0
+programme/batches/2026-11-03/BRN-010/BRN-010_CONTRACT.json,BRN-010,,,,BRN-010,0,,0
+programme/batches/2026-11-03/BRN-011/BRN-011_CONTRACT.json,BRN-011,,,,BRN-011,0,,0
+programme/batches/2026-11-03/BRN-012/BRN-012_CONTRACT.json,BRN-012,,,,BRN-012,0,,0
+programme/batches/2026-11-03/BRN-013/BRN-013_CONTRACT.json,BRN-013,,,,BRN-013,0,,0
+programme/batches/2026-11-03/BRN-014/BRN-014_CONTRACT.json,BRN-014,,,,BRN-014,0,,0
+programme/batches/2026-11-03/BRN-015/BRN-015_CONTRACT.json,BRN-015,,,,BRN-015,0,,0
+programme/batches/2026-11-03/BRN-016/BRN-016_CONTRACT.json,BRN-016,,,,BRN-016,0,,0
+programme/batches/2026-11-03/BRN-017/BRN-017_CONTRACT.json,BRN-017,,,,BRN-017,0,,0
+programme/batches/2026-11-03/BRN-018/BRN-018_CONTRACT.json,BRN-018,,,,BRN-018,0,,0
+programme/batches/2026-11-03/BRN-019/BRN-019_CONTRACT.json,BRN-019,,,,BRN-019,0,,0
+programme/batches/2026-11-03/BRN-020/BRN-020_CONTRACT.json,BRN-020,,,,BRN-020,0,,0
+programme/batches/2026-11-03/CHN-001/CHN-001_CONTRACT.json,,101,Omnichannel banking architecture and experience boundaries,,CHN-001,0,,0
+programme/batches/2026-11-03/CHN-002/CHN-002_CONTRACT.json,,102,Retail web banking session and account navigation,,CHN-002,0,,0
+programme/batches/2026-11-03/CHN-003/CHN-003_CONTRACT.json,,103,Customer mobile banking and device-safe transaction workflows,,CHN-003,0,,0
+programme/batches/2026-11-03/CHN-004/CHN-004_CONTRACT.json,,104,"Corporate banking portal, organization roles and approval chains",,CHN-004,0,,0
+programme/batches/2026-11-03/CHN-005/CHN-005_CONTRACT.json,,105,"Channel user roles, account delegation and capability decisions",,CHN-005,0,,0
+programme/batches/2026-11-03/CHN-006/CHN-006_CONTRACT.json,,106,"Account home, balances and transaction feed freshness",,CHN-006,0,,0
+programme/batches/2026-11-03/CHN-007/CHN-007_CONTRACT.json,,107,Retail payment initiation and confirmation journey,,CHN-007,0,,0
+programme/batches/2026-11-03/CHN-008/CHN-008_CONTRACT.json,,108,"Beneficiary enrolment, trust and validation controls",,CHN-008,0,,0
+programme/batches/2026-11-03/CHN-009/CHN-009_CONTRACT.json,,109,"Customer authentication, risk-based step-up and recovery",,CHN-009,0,,0
+programme/batches/2026-11-03/CHN-010/CHN-010_CONTRACT.json,,110,"Customer notifications, receipts and communication provenance",,CHN-010,0,,0
+programme/batches/2026-11-03/CHN-011/CHN-011_CONTRACT.json,,111,"Customer support, complaints and payment dispute case management",,CHN-011,0,,0
+programme/batches/2026-11-03/CHN-012/CHN-012_CONTRACT.json,,112,Agency banking terminal and field-operator safeguards,,CHN-012,0,,0
+programme/batches/2026-11-03/CHN-013/CHN-013_CONTRACT.json,,113,Merchant banking portal and transaction reporting APIs,,CHN-013,0,,0
+programme/batches/2026-11-03/CHN-014/CHN-014_CONTRACT.json,,114,"Partner developer portal, service credentials and API products",,CHN-014,0,,0
+programme/batches/2026-11-03/CHN-015/CHN-015_CONTRACT.json,,115,Consent-managed data sharing and open-banking permissions,,CHN-015,0,,0
+programme/batches/2026-11-03/CHN-016/CHN-016_CONTRACT.json,,116,"Digital-channel fraud, transaction risk and protective friction",,CHN-016,0,,0
+programme/batches/2026-11-03/CHN-017/CHN-017_CONTRACT.json,,117,"Accessibility, localization and low-vision inclusive banking UX",,CHN-017,0,,0
+programme/batches/2026-11-03/CHN-018/CHN-018_CONTRACT.json,,118,"Offline, intermittent network and retry-safe channel behavior",,CHN-018,0,,0
+programme/batches/2026-11-03/CHN-019/CHN-019_CONTRACT.json,,119,"Channel device lifecycle, compatibility and end-to-end testing",,CHN-019,0,,0
+programme/batches/2026-11-03/CHN-020/CHN-020_CONTRACT.json,,120,Digital channels acceptance dossier and implementation readiness gate,,CHN-020,0,,0
+programme/batches/2026-11-03/CIF-001/CIF-001_CONTRACT.json,CIF-001,41,Canonical party and customer identity model,DRAFT_DELIVERED_REVIEW_OPEN,CIF-001,0,0,0
+programme/batches/2026-11-03/CIF-002/CIF-002_CONTRACT.json,CIF-002,42,Natural person identity data and verification boundaries,DRAFT_DELIVERED_REVIEW_OPEN,CIF-002,0,0,0
+programme/batches/2026-11-03/CIF-003/CIF-003_CONTRACT.json,CIF-003,43,Legal entity identity and organization registry,DRAFT_REVIEW_OPEN,CIF-003,0,0,0
+programme/batches/2026-11-03/CIF-004/CIF-004_CONTRACT.json,CIF-004,44,Ultimate beneficial ownership and control graph,DRAFT_REVIEW_OPEN,CIF-004,0,0,0
+programme/batches/2026-11-03/CIF-005/CIF-005_CONTRACT.json,CIF-005,45,"Party relationships, mandates and lifecycle validity",DRAFT_REVIEW_OPEN,CIF-005,0,0,0
+programme/batches/2026-11-03/CIF-006/CIF-006_CONTRACT.json,CIF-006,46,Customer onboarding case and progression state machine,DRAFT_UNREVIEWED,CIF-006,0,,0
+programme/batches/2026-11-03/CIF-007/CIF-007_CONTRACT.json,CIF-007,47,Individual identity evidence verification and document custody,DRAFT_UNREVIEWED,CIF-007,0,,0
+programme/batches/2026-11-03/CIF-008/CIF-008_CONTRACT.json,CIF-008,48,"Business identity, KYB evidence and authorized representative verification",DRAFT_UNREVIEWED,CIF-008,0,,0
+programme/batches/2026-11-03/CIF-009/CIF-009_CONTRACT.json,CIF-009,49,Duplicate party detection and supervised resolution,DRAFT_NOT_SIGNED,CIF-009,0,0,0
+programme/batches/2026-11-03/CIF-010/CIF-010_CONTRACT.json,CIF-010,50,Onboarding customer risk classification and review policy,DRAFT_NOT_SIGNED,CIF-010,0,0,0
+programme/batches/2026-11-03/CIF-011/CIF-011_CONTRACT.json,CIF-011,51,Sanctions screening evidence and escalation workflow,DRAFT_NOT_SIGNED,CIF-011,0,0,0
+programme/batches/2026-11-03/CIF-012/CIF-012_CONTRACT.json,CIF-012,52,Politically exposed person assessment and control,,CIF-012,0,,0
+programme/batches/2026-11-03/CIF-013/CIF-013_CONTRACT.json,CIF-013,53,Enhanced due diligence and escalated onboarding decisions,,CIF-013,0,,0
+programme/batches/2026-11-03/CIF-014/CIF-014_CONTRACT.json,CIF-014,54,"Consent, privacy notices and legal processing basis",,CIF-014,0,,0
+programme/batches/2026-11-03/CIF-015/CIF-015_CONTRACT.json,,55,"Customer identity lifecycle, refresh and suspension",DRAFT_REVIEW_OPEN,CIF-015,0,0,0
+programme/batches/2026-11-03/CIF-016/CIF-016_CONTRACT.json,,56,Onboarding segregation of duties and maker-checker approval,DRAFT_REVIEW_OPEN,CIF-016,0,0,0
+programme/batches/2026-11-03/CIF-017/CIF-017_CONTRACT.json,,57,"Identity audit, retention and lawful evidence access",DRAFT_REVIEW_OPEN,CIF-017,0,0,0
+programme/batches/2026-11-03/CIF-018/CIF-018_CONTRACT.json,CIF-018,58,Customer information APIs and event contract boundaries,DRAFT_REVIEW_OPEN,CIF-018,0,0,0
+programme/batches/2026-11-03/CIF-019/CIF-019_CONTRACT.json,CIF-019,59,"Onboarding failure, exception and recovery controls",DRAFT_REVIEW_OPEN,CIF-019,0,0,0
+programme/batches/2026-11-03/CIF-020/CIF-020_CONTRACT.json,CIF-020,60,CIF onboarding acceptance framework and handoff readiness,DRAFT_REVIEW_OPEN,CIF-020,0,0,0
+programme/batches/2026-11-03/CMP-001/CMP-001_CONTRACT.json,CMP-001,,,,CMP-001,0,,0
+programme/batches/2026-11-03/CMP-002/CMP-002_CONTRACT.json,CMP-002,,,,CMP-002,0,,0
+programme/batches/2026-11-03/CMP-003/CMP-003_CONTRACT.json,CMP-003,,,,CMP-003,0,,0
+programme/batches/2026-11-03/CMP-004/CMP-004_CONTRACT.json,CMP-004,,,,CMP-004,0,,0
+programme/batches/2026-11-03/CMP-005/CMP-005_CONTRACT.json,CMP-005,,,,CMP-005,0,,0
+programme/batches/2026-11-03/CMP-006/CMP-006_CONTRACT.json,CMP-006,,,,CMP-006,0,,0
+programme/batches/2026-11-03/CMP-007/CMP-007_CONTRACT.json,CMP-007,,,,CMP-007,0,,0
+programme/batches/2026-11-03/CMP-008/CMP-008_CONTRACT.json,CMP-008,,,,CMP-008,0,,0
+programme/batches/2026-11-03/CMP-009/CMP-009_CONTRACT.json,CMP-009,,,,CMP-009,0,,0
+programme/batches/2026-11-03/CMP-010/CMP-010_CONTRACT.json,CMP-010,,,,CMP-010,0,,0
+programme/batches/2026-11-03/OPS-001/OPS-001_CONTRACT.json,OPS-001,81,Infrastructure environment taxonomy and separation,DRAFT_REVIEW_OPEN,OPS-001,5,0,10
+programme/batches/2026-11-03/OPS-002/OPS-002_CONTRACT.json,OPS-002,82,"Source control, branch protection and secure SDLC",DRAFT_REVIEW_OPEN,OPS-002,5,0,10
+programme/batches/2026-11-03/OPS-003/OPS-003_CONTRACT.json,OPS-003,83,"Build artifact provenance, SBOM and dependency integrity",DRAFT_REVIEW_OPEN,OPS-003,5,0,10
+programme/batches/2026-11-03/OPS-004/OPS-004_CONTRACT.json,OPS-004,84,"Secrets, certificates, encryption and key custody design",DRAFT_REVIEW_OPEN,OPS-004,5,0,10
+programme/batches/2026-11-03/OPS-005/OPS-005_CONTRACT.json,OPS-005,85,Privileged access management and session controls,DRAFT_REVIEW_OPEN,OPS-005,5,0,10
+programme/batches/2026-11-03/OPS-006/OPS-006_CONTRACT.json,OPS-006,86,"Data protection, encryption and controlled retention",DRAFT_REVIEW_OPEN,OPS-006,5,0,10
+programme/batches/2026-11-03/OPS-007/OPS-007_CONTRACT.json,OPS-007,87,"Network segmentation, API perimeter and zero-trust controls",DRAFT_REVIEW_OPEN,OPS-007,5,0,10
+programme/batches/2026-11-03/OPS-008/OPS-008_CONTRACT.json,OPS-008,88,"Monitoring, SLOs and operational reconciliation alerts",DRAFT_REVIEW_OPEN,OPS-008,5,0,10
+programme/batches/2026-11-03/OPS-009/OPS-009_CONTRACT.json,OPS-009,89,Security incident response and operational escalation,DRAFT_REVIEW_OPEN,OPS-009,5,0,10
+programme/batches/2026-11-03/OPS-010/OPS-010_CONTRACT.json,OPS-010,90,"Backup, restore, DR and financial recovery acceptance model",DRAFT_REVIEW_OPEN,OPS-010,5,0,10
+programme/batches/2026-11-03/OPS-011/OPS-011_CONTRACT.json,,91,"High availability, failover and journal quorum assurance",,OPS-011,0,,0
+programme/batches/2026-11-03/OPS-012/OPS-012_CONTRACT.json,,92,"Production change, release authorization and rollback",,OPS-012,0,,0
+programme/batches/2026-11-03/OPS-013/OPS-013_CONTRACT.json,,93,Core banking legacy migration and reconciliation protocol,,OPS-013,0,,0
+programme/batches/2026-11-03/OPS-014/OPS-014_CONTRACT.json,,94,Enterprise data governance and lineage controls,,OPS-014,0,,0
+programme/batches/2026-11-03/OPS-015/OPS-015_CONTRACT.json,,95,Capacity planning and nonfunctional service objectives,,OPS-015,0,,0
+programme/batches/2026-11-03/OPS-016/OPS-016_CONTRACT.json,,96,Service reliability engineering and maintenance policy,,OPS-016,0,,0
+programme/batches/2026-11-03/OPS-017/OPS-017_CONTRACT.json,,97,Regulatory audit export and supervisory evidence delivery,,OPS-017,0,,0
+programme/batches/2026-11-03/OPS-018/OPS-018_CONTRACT.json,,98,Vulnerability management and adversarial testing gates,,OPS-018,0,,0
+programme/batches/2026-11-03/OPS-019/OPS-019_CONTRACT.json,,99,Bank operations runbooks and controlled daily processing,,OPS-019,0,,0
+programme/batches/2026-11-03/OPS-020/OPS-020_CONTRACT.json,,100,Operations and security release readiness dossier,,OPS-020,0,,0

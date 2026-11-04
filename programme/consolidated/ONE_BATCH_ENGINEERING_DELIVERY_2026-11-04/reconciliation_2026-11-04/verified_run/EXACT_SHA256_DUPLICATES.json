@@ -1,0 +1,30 @@
+[
+  {
+    "paths": [
+      "regulatory/checkpoints/AN/EVIDENCE_REQUEST_PLAN.md",
+      "regulatory/recovery/source/AN/EVIDENCE_REQUEST_PLAN.md"
+    ],
+    "sha256": "c0eb99efe0e1ab81725de4276fb034df40c9d570862c463c8b12eb3b2333486c"
+  },
+  {
+    "paths": [
+      "regulatory/checkpoints/AN/GAP_UPDATE.md",
+      "regulatory/recovery/source/AN/GAP_UPDATE.md"
+    ],
+    "sha256": "d1358168c21aa4bc7e69ddda1c7cf380c02042d6b9245fd0383bdbc3f6c31e8b"
+  },
+  {
+    "paths": [
+      "regulatory/checkpoints/AN/QUALITY_REVIEW.md",
+      "regulatory/recovery/source/AN/QUALITY_REVIEW.md"
+    ],
+    "sha256": "a16c7281f3fbd84de9ffec8b4837c7e74403f1c34ba4faad7fa248d8835f2719"
+  },
+  {
+    "paths": [
+      "regulatory/recovery/RECOVERED_CHECKPOINTS_AE_AM_SHA256_2026-11-03.txt",
+      "regulatory/recovery/archives/SHA256SUMS.txt"
+    ],
+    "sha256": "48b23a8b3beb5a50c5aa0564ff1c5dcabbfbde82350f4b4103e791aaef9d2571"
+  }
+]

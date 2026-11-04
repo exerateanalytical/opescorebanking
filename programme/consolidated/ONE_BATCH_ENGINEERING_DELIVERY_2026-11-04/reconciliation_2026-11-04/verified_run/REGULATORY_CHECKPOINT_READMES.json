@@ -1,0 +1,415 @@
+[
+  {
+    "checkpoint": "AN",
+    "path": "regulatory/checkpoints/AN/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "f71efd08a3a350ab1dc754cebd31ce1377add44f929c930d4612dd03c952211b"
+  },
+  {
+    "checkpoint": "AO",
+    "path": "regulatory/checkpoints/AO/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "515b86204da178c5801096d6aa399e9f46b010d3248a6ba1358737bbbf9047b6"
+  },
+  {
+    "checkpoint": "AP",
+    "path": "regulatory/checkpoints/AP/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "82b48801b695a1f55ccee05bbe384d612065990baa1f39d5356bcddf2c61777d"
+  },
+  {
+    "checkpoint": "AQ",
+    "path": "regulatory/checkpoints/AQ/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "c17e45cf79b3a05b252805ad666abe54bb1a1ffd869a5bd3d113ae9410e1068a"
+  },
+  {
+    "checkpoint": "AR",
+    "path": "regulatory/checkpoints/AR/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "7fe5a06882d8f733c04aa6a421fe3f28e1451e33d499fbe53bd1612a71ebfeeb"
+  },
+  {
+    "checkpoint": "AS",
+    "path": "regulatory/checkpoints/AS/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "22cc1ad3c11140adbdde7ecc398842c20520aee4b483d82b3447b3bf1398ffaa"
+  },
+  {
+    "checkpoint": "AT",
+    "path": "regulatory/checkpoints/AT/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "e80380ee71590b318ff4935d40f82f701d76dfc3c9435bb4bd75f51d076e1ee6"
+  },
+  {
+    "checkpoint": "AU",
+    "path": "regulatory/checkpoints/AU/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "bf241ec0e08a577d6acf3c87ea1cb96ee3f2559f7e55c825c138fb80c30edb8e"
+  },
+  {
+    "checkpoint": "AV",
+    "path": "regulatory/checkpoints/AV/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "4817f801557646e1a2f8ee81d41494c1e13c5692cc2b64095cbe90fa8327bb3e"
+  },
+  {
+    "checkpoint": "AW",
+    "path": "regulatory/checkpoints/AW/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "57dfb19c1fa5304c1e5413a4f38bd39379753163bf4ed837ccd51c264bf170de"
+  },
+  {
+    "checkpoint": "AX",
+    "path": "regulatory/checkpoints/AX/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "d733f723df92cad76c6ca317402b96bce40da2df73be881c2dca080a179104ce"
+  },
+  {
+    "checkpoint": "AY",
+    "path": "regulatory/checkpoints/AY/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "8eb35caaa668148b5fe6768e88b30b72bc1ecef22a79b0b8796a16e956ae1890"
+  },
+  {
+    "checkpoint": "AZ",
+    "path": "regulatory/checkpoints/AZ/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "e9b45f0fad82049af375163c06e1f0f248fabde576788522622abb469d066e74"
+  },
+  {
+    "checkpoint": "BA",
+    "path": "regulatory/checkpoints/BA/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "a4ab36b36948e83b5925fea990743d273a1d3a49bf4691aec0fba068ecb32df5"
+  },
+  {
+    "checkpoint": "BB",
+    "path": "regulatory/checkpoints/BB/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "27b926246ab0c9f30d64161e31f59e9547672c790e5fe511cb30b74311e6f8ff"
+  },
+  {
+    "checkpoint": "BC",
+    "path": "regulatory/checkpoints/BC/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "d4c7618e99b12e1a096af94eb5e413f6dc1f94d327999989229a5b4a7102997b"
+  },
+  {
+    "checkpoint": "BD",
+    "path": "regulatory/checkpoints/BD/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "31b86da88c89497defaeb06959bbe8d3bc27d86913e1cc9c2daf304662cecaa6"
+  },
+  {
+    "checkpoint": "BE",
+    "path": "regulatory/checkpoints/BE/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "3c7fc37be6424a250d069664899330fd04f51eda4870661cf353a1946d38b808"
+  },
+  {
+    "checkpoint": "BF",
+    "path": "regulatory/checkpoints/BF/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "acd1f0bad3c2962388349c43c8a727ffee821217b5d9ed25aabb59649e856029"
+  },
+  {
+    "checkpoint": "BG",
+    "path": "regulatory/checkpoints/BG/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "e3480508f1a5830c5b5370efacfb10c6f70d94ea33d5231b25b5142d4f32d912"
+  },
+  {
+    "checkpoint": "BH",
+    "path": "regulatory/checkpoints/BH/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "271e524fb0961c5c17f9d70f4bdf92901865e65afdc28c44071b674b990593a0"
+  },
+  {
+    "checkpoint": "BI",
+    "path": "regulatory/checkpoints/BI/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "4dc97ac773316785bfc40e57c374ca98fe4fb3150588b94a6101a7b03e746ba0"
+  },
+  {
+    "checkpoint": "BJ",
+    "path": "regulatory/checkpoints/BJ/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "88e01967c6e1e6a61241ad6cc0b67833f4d070a49902bca85a49ed95f3ca56b7"
+  },
+  {
+    "checkpoint": "BK",
+    "path": "regulatory/checkpoints/BK/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "1aada15bb191bd2d7d6614345bc65fc527d0838869e0b6090ba35c54c50d3ffd"
+  },
+  {
+    "checkpoint": "BL",
+    "path": "regulatory/checkpoints/BL/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "230a2bb392223af98c9168252670fb213470f910156eeb61b7a5860d17bdf343"
+  },
+  {
+    "checkpoint": "BM",
+    "path": "regulatory/checkpoints/BM/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "983f66e24e9e70dc9c46a2925f6c5323db12751c248947b85904e934f44d5160"
+  },
+  {
+    "checkpoint": "BN",
+    "path": "regulatory/checkpoints/BN/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "4bfd5d8765a5407bcf7fba8a31ec0091018fc80f2eeec0cd4458900ee81350b5"
+  },
+  {
+    "checkpoint": "BO",
+    "path": "regulatory/checkpoints/BO/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "afd5c7799537d66b0d5fa361e2563cd011e91ef0eaa2bcf8500a8a8baf591ef5"
+  },
+  {
+    "checkpoint": "BP",
+    "path": "regulatory/checkpoints/BP/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "b4b8d1e69d09488405d48a94e398f8b0b4c4ed6527b67bfe8fb2e1ba90e3b1d0"
+  },
+  {
+    "checkpoint": "BQ",
+    "path": "regulatory/checkpoints/BQ/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "289761f96b42fe257cb21e86d84ea8c2b2fa2bb739953f98a9444c3e48e223ec"
+  },
+  {
+    "checkpoint": "BR",
+    "path": "regulatory/checkpoints/BR/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "4854921ab5038fc499b3e58773e530799bc2b873a689cb08f40167272f82cc5d"
+  },
+  {
+    "checkpoint": "BS",
+    "path": "regulatory/checkpoints/BS/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "1921a2c8ec75fa28808958ae43e12991a87746983001c553e39073506201aae6"
+  },
+  {
+    "checkpoint": "BT",
+    "path": "regulatory/checkpoints/BT/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "3da5d3ab764e8c33298bcb3ebe58be862b5a37a6d1bf92c0e3d14524796590a3"
+  },
+  {
+    "checkpoint": "BU",
+    "path": "regulatory/checkpoints/BU/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "a55c7f624e816c7ed2ddcd02b39e19ad0448c1bea3d23cc10a9a7faca9b83d24"
+  },
+  {
+    "checkpoint": "BV",
+    "path": "regulatory/checkpoints/BV/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "14592b888cb0e96d1a1188f569ecd6346d5ed8dbf8bfc10f137390968398c858"
+  },
+  {
+    "checkpoint": "BW",
+    "path": "regulatory/checkpoints/BW/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "a779afe0a2e7cef62a8fb7e825384ca0f0d5355c52c77943c16b7b2c41374754"
+  },
+  {
+    "checkpoint": "BX",
+    "path": "regulatory/checkpoints/BX/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "bc606ad391968161baec3981c9ed43d903c5b8d972a5d93fd824bcbb622ffea6"
+  },
+  {
+    "checkpoint": "BY",
+    "path": "regulatory/checkpoints/BY/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "c6103b74e3d12788c18927842d4dcf49c755c427f9f35f044664581e8a0d7ac4"
+  },
+  {
+    "checkpoint": "BZ",
+    "path": "regulatory/checkpoints/BZ/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "ac6394044296009213cd51522324ebed03324f3f1301b208fada93f167968dc0"
+  },
+  {
+    "checkpoint": "CA",
+    "path": "regulatory/checkpoints/CA/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "839e0819d619a5ecbf3eeb11a9eb2dcbf409b4ed1194063a1a7d720b8f8d5177"
+  },
+  {
+    "checkpoint": "CB",
+    "path": "regulatory/checkpoints/CB/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "213eb88830f412a441971e2f718ad9fd68ed3deed3102db19cd2f93d8e0a204a"
+  },
+  {
+    "checkpoint": "CC",
+    "path": "regulatory/checkpoints/CC/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "9301c9db096aae242215da09a7d08ab53c12ede152f9754958e217a4a3349c80"
+  },
+  {
+    "checkpoint": "CD",
+    "path": "regulatory/checkpoints/CD/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "02f8abd9943ecdc010e08df003789da3df1cb516b12295e8e8ff72705e0d1f2f"
+  },
+  {
+    "checkpoint": "CE",
+    "path": "regulatory/checkpoints/CE/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "77eda3e6b84487105718947f5a5da16171dd17b0bddc81f188407141402db101"
+  },
+  {
+    "checkpoint": "CF",
+    "path": "regulatory/checkpoints/CF/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "d1d9cdf544537f517e1b1168f408c33e6dd6777e3234b91ca08df502e6029552"
+  },
+  {
+    "checkpoint": "CG",
+    "path": "regulatory/checkpoints/CG/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "803ab7693f53163db61d95fff28e26b635397b72ac34c11b82ca4cbae6d2bdf7"
+  },
+  {
+    "checkpoint": "CH",
+    "path": "regulatory/checkpoints/CH/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "f538c896910792d03a092c033d2c37781694930a1ff099bcb203367a4fa09776"
+  },
+  {
+    "checkpoint": "CI",
+    "path": "regulatory/checkpoints/CI/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "a51c71be0310629e607e1a558af13ba6f84c32d961a1cf2da3e566a801e8ca4f"
+  },
+  {
+    "checkpoint": "CJ",
+    "path": "regulatory/checkpoints/CJ/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "14a04cda9bf5d0140c4b0790bea2d9bbf78eaf098e522a8ad66794954f07966d"
+  },
+  {
+    "checkpoint": "CK",
+    "path": "regulatory/checkpoints/CK/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "41b0b3e2d77cfbef7e0dd8f502736588d0ab7f7a7d9062d63dc10df79c9ec08e"
+  },
+  {
+    "checkpoint": "CL",
+    "path": "regulatory/checkpoints/CL/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "dd84e5b04451a72a6bfdb7d60ded13c1d16938672b5062b70761f1d389a712ed"
+  },
+  {
+    "checkpoint": "CM",
+    "path": "regulatory/checkpoints/CM/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "2c8bf239b675f75c5405667521b914bbbb298fa5d6b1efa25993237aaba2dcdd"
+  },
+  {
+    "checkpoint": "CN",
+    "path": "regulatory/checkpoints/CN/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "cf6cd27bcc2f59d5a3dc50d261d3508d1177d47ce0b9568a7339d9155836df21"
+  },
+  {
+    "checkpoint": "CO",
+    "path": "regulatory/checkpoints/CO/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "65c614d56cb45b16002afdc2cf34ba4f1b7f8a5a3cabb6be40a1bbb46f1a92a4"
+  },
+  {
+    "checkpoint": "CP",
+    "path": "regulatory/checkpoints/CP/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "3056617df83ef7f648c72492d7ba75a298d22cd66e73b1e744b3c587799db1b9"
+  },
+  {
+    "checkpoint": "CQ",
+    "path": "regulatory/checkpoints/CQ/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "4ba2db17bd8ce4c95d184ba0a4f2ba13c005707da0f127625775d26fa76ff654"
+  },
+  {
+    "checkpoint": "CR",
+    "path": "regulatory/checkpoints/CR/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "fd3eac045a702d9f0335d1f1ac3db11987785620a7ce5a9611868782532dde48"
+  },
+  {
+    "checkpoint": "CS",
+    "path": "regulatory/checkpoints/CS/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "2910e819c1f083e4d26ea4df337dc805974c0e5bf82f862a3c27e0c2377a6dd3"
+  },
+  {
+    "checkpoint": "CT",
+    "path": "regulatory/checkpoints/CT/README.md",
+    "pcec_conflict_claim": true,
+    "readme_checked": true,
+    "sha256": "d93722f3211a279cbd84ec32d1e73f949d3da9f5056b34b3c041bbaf67f22e07"
+  }
+]
