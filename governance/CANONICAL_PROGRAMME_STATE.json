@@ -5,7 +5,7 @@
   "archive_originals_crc_failed": 146,
   "archive_reconstructions_from_tracked_siblings": 146,
   "batch210_local_sha256": "7ccfb5a703c9d290a6db46d185fbc649153191db8f384f5a05a2bfac822ed298",
-  "batch210_remote_verified": false,
+  "batch210_remote_verified": true,
   "blocked": [
     {
       "id": "WP-ACC-005",
@@ -36,11 +36,11 @@
   "historical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.2_2026-11-04.md",
   "implementation_dor_15": "NOT_VERIFIED",
   "last_independently_accepted_wp_id": null,
-  "last_integrity_verified_batch_id": null,
+  "last_integrity_verified_batch_id": 210,
   "last_local_archive_integrity_validated_batch_id": 210,
   "last_observed_delivery_batch_id": 210,
   "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
-  "next_exact_task": "GOV-WBS-RECON-001: independent approval of source/WP crosswalk, source custody, target WBS and PCEC authority.",
+  "next_exact_task": "Independent architecture/legal/CFO/CISO/audit review of batch 210 150-historical-WP crosswalk and proposed domain boundaries; obtain PCEC 312/322 issuer clarification and original archive provenance without bypassing financial P0.",
   "next_exact_task_id": "GOV-WBS-RECON-001",
   "original_archive_custody_status": "NOT_VERIFIED",
   "original_archive_custody_verified": false,
@@ -55,5 +55,10 @@
   "source_reconciliation_commit": "425bc2776c7bb168b43de9bcd103ea8d4d4a7f91",
   "updated_date": "2026-11-04",
   "vendor": "OPESWARE TECHNOLOGIES",
-  "work_package_contract_json_present": 120
+  "work_package_contract_json_present": 120,
+  "batch210_remote_sha256": "7ccfb5a703c9d290a6db46d185fbc649153191db8f384f5a05a2bfac822ed298",
+  "batch210_remote_git_blob_sha1": "961453f3bd149ed2ac656b6dace68445697ce131",
+  "batch210_remote_bytes": 704934,
+  "batch210_verified_at_utc_date": "2026-11-04",
+  "batch210_verified_basis": "GitHub remote blob downloaded via connector in base64; independently decoded and SHA-256 recomputed; exact byte length matched; ZIP entry integrity checked in successful GitHub Actions run"
 }
