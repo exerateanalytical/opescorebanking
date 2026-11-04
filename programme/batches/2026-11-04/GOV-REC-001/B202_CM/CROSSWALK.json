@@ -1,0 +1,107 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 202,
+  "checkpoint": "CM",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/CM/README.md",
+      "git_blob_sha": "37c1af4aa6744efcd95235f09b62cc0a5fc8d65c",
+      "sha256": "2c8bf239b675f75c5405667521b914bbbb298fa5d6b1efa25993237aaba2dcdd",
+      "bytes": 7747,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 3,
+          "excerpt": "Date: 2026-11-03. Predecessor: CL. Phase 4 — Accounting Core and Financial Integrity. **SAFE PARTIAL RESEARCH CHECKPOINT. WP-ACC-005 OPEN / P0 BLOCKED.** No production code, executed tests, approved a"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Date: 2026-11-03. Predecessor: CL. Phase 4 — Accounting Core and Financial Integrity. **SAFE PARTIAL RESEARCH CHECKPOINT. WP-ACC-005 OPEN / P0 BLOCKED.** No production code, executed tests, approved account crosswalk or certification."
+        },
+        {
+          "line": 7,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "1. Read canonical `regulatory/checkpoints/CL/README.md` from GitHub before continuing. It documents the visually inspected I-2015/01 Articles 2–13 and the unresolved Article 8(d) account 312/322 discrepancy."
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "2. Official COBAC instructions index: https://www.beac.int/supervision-bancaire/instructions-de-cobac/ — lists I-2015/01 and earlier I-2002/01. No correction of Article 8(d) identified in the indexed materials reviewed this run."
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "4. Official I-2015/01 indexed copy: https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015_01_pcec.pdf — current live PDF fetch timed out; relied on previously visually inspected CL record for the specific page-7 discrepancy, **not** on a new independent visual reading this run."
+        },
+        {
+          "line": 15,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "## Decision on 312/322 discrepancy"
+        },
+        {
+          "line": 17,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**OPEN / NO OFFICIAL CORRIGENDUM LOCATED.** CL documents Article 8(b) creating division 322 for sensitive short-term credit and Article 8(d) referring to 312 while enumerating 322-prefixed children. This is strong internal contextual evidence of a drafting inconsistency, **not** sufficient legal authority to replace the printed 312 with 322 in an operative c"
+        },
+        {
+          "line": 21,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Request from COBAC/BEAC: (a) signed I-2015/01 source and all errata/lettres PCEC concerning Article 8(d); (b) subsequent PCEC instructions, letters and applicable versions; (c) definitive effective dates and institution applicability; (d) confirmation whether the text '312' is an error and, if so, the legally authorized replacement; (e) applicable CERBER cro"
+        },
+        {
+          "line": 33,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Reject any ambiguous mapping, including the 312/322 source discrepancy, before approval."
+        },
+        {
+          "line": 38,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Negative test specifications (not executed): duplicate migration command; ambiguous code collision; unapproved retroactive policy; closed-period update; incomplete source evidence; failed trial-balance tie-out; changed CERBER taxonomy; absent maker-checker; missing institution licence."
+        },
+        {
+          "line": 40,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "## Quality review and unresolved gates"
+        },
+        {
+          "line": 42,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Regulatory: R-99/01 establishes the correction mechanism, but no authoritative 312/322 correction found. Accounting: zero approved leaf-account crosswalk rows. Architecture: bitemporal account identity and semantic versioning proposed; not implemented. Security: legal/CFO maker-checker and immutable audit required. AML/fraud: related-party overrides require "
+        },
+        {
+          "line": 46,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Attempted: **1** work package (continuation of WP-ACC-005). Completed: **0**. Kept open: **1**. Blocked from closure: **1**. Safe partial research checkpoints: **1 (CM)**. P0 blockers resolved: **0**. Code: **0**. Tests executed: **0**. No dependent work package attempted."
+        },
+        {
+          "line": 50,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**WP-ACC-005 — Checkpoint CN:** Search issuer PCEC clarification letters/errata and later signed amendments for authoritative resolution of I-2015/01 Article 8(d) 312/322; if unavailable, preserve the ambiguity and build a source-page-provenanced *draft* leaf-account crosswalk for Article 8 only, with explicit ambiguous rows and no financial activation. Sepa"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": null,
+  "unique_historical_wp_mentions": [
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 1,
+    "read": 1,
+    "sha_matched": 1
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 203"
+}
