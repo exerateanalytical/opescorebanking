@@ -1,0 +1,127 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 208,
+  "checkpoint": "CS",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/CS/README.md",
+      "git_blob_sha": "2a4c584e8367cdbd58beac6049a3ea991f592b57",
+      "sha256": "2910e819c1f083e4d26ea4df337dc805974c0e5bf82f862a3c27e0c2377a6dd3",
+      "bytes": 6232,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-03. Predecessor: CR, verified repository file. Phase 4 Accounting Core and Financial Integrity."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "STATUS: SAFE PARTIAL RESEARCH CHECKPOINT. WP-ACC-005 OPEN / P0 BLOCKED. NOT READY FOR PRODUCTION. No tests run."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "1. COBAC I-2015/01 issuer-hosted original: https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015_01_pcec.pdf . The prior CQ/CP record documents source-page verification of Article 7 (312 medium-term sensitive credit) and Article 8(b,d) (322 short-term sensitive credit but 312 printed as parent in 8(d) with children 3220–3227). This run re-"
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "4. NEW contextual primary-source discovery: COBAC Bulletin no. 6, https://www.beac.int/wp-content/uploads/2016/10/Bulletin-COBAC-n%C2%B06.pdf , reproduces Instruction I-2003/01 amending PCEC and I-2002/01. This confirms historical amendment material exists in an official bulletin outside the instruction index; it does NOT resolve 312/322 and must not be trea"
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Targeted current issuer-domain search did NOT produce an authenticated PCEC letter, signed corrigendum, or binding later amendment resolving Article 8(d). Search non-discovery is not proof of nonexistence."
+        },
+        {
+          "line": 14,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Issue PCEC-I2015-ARTICLE8D-312-322. Source assertions must be stored literally, never normalized silently."
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- A: Competent-authority authenticated corrigendum/letter explicitly clarifies 312→322, with scope/effective date: evaluate, independently transcribe, obtain legal/CFO approval, then propose versioned mapping. NOT CURRENTLY AVAILABLE."
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- C: No authoritative clarification: maintain BLOCKED_AUTHORITY_REQUIRED, preserve both literal assertions and inferred candidate only as non-executable research; no posting, migration, reclassification or reporting on disputed mapping. CURRENT SAFE DISPOSITION."
+        },
+        {
+          "line": 19,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Decision evidence required: document issuer, signature/authenticity, legal authority, document date, effective date, relevant articles/pages, institution scope, source URL/archive hash, supersession chain, independent reviewer, CFO signoff, and reconciliation/test approval. Never infer a regulatory rule from the child-number prefix alone."
+        },
+        {
+          "line": 22,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "RegulatoryRuleEvidence {evidence_id, issuer, instrument_id, article, page, source_url, sha256_nullable, authenticity_state, publication_date_nullable, effective_from_nullable, effective_to_nullable, institution_profile, review_state}."
+        },
+        {
+          "line": 24,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Activation gate: deny when contradictory active assertions, unknown authority, unapproved institution profile, missing effective-date determination, missing independent legal/CFO review, or reconciliation test absent. Use maker-checker and append-only audit events. Reject any attempt to rewrite posted journal lines; future corrections require balanced, autho"
+        },
+        {
+          "line": 26,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "CERBER mappings and PCEMF applicability must remain separate; do not turn a PCEC chart inference into regulatory reporting or microfinance postings."
+        },
+        {
+          "line": 29,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "EV-CR-001 OPEN: no authenticated 312/322 clarification."
+        },
+        {
+          "line": 30,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "EV-CR-002 OPEN: no complete later signed supersession chain."
+        },
+        {
+          "line": 35,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "EV-CR-007 OPEN: R-2018/01 transition legal treatment unresolved."
+        },
+        {
+          "line": 38,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Regulatory: failed authority gate. Accounting: fail closed; immutable journals and double-entry remain non-negotiable. Security: provenance and dual approval specified only. AML/risk: avoid silent maturity reclassification. Data/audit: versioned literal assertions proposed. Operations: reconciliation and compensating correction required for any eventual migr"
+        },
+        {
+          "line": 39,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Work packages attempted 1; completed 0; open 1; blocked 1. One safe partial documentation checkpoint CS; no dependent work advanced. Definition of Ready FAILED."
+        },
+        {
+          "line": 42,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Inspect the official COBAC Bulletin no. 6 and subsequent official bulletins for PCEC amendment/clarification lineage relevant to accounts 312/322; seek authenticated Secretary-General *lettre PCEC* or signed correction for I-2015/01 Article 8(d). Update the evidence register with exact instrument/article/page/effective-date provenance. If none, keep disputed"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": null,
+  "unique_historical_wp_mentions": [
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 1,
+    "read": 1,
+    "sha_matched": 1
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 209"
+}
