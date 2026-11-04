@@ -1,0 +1,315 @@
+{
+  "schema": "opes.corebanking.source-census.reconciliation-part.v1",
+  "part": 5,
+  "date": "2026-11-04",
+  "source_snapshot": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "crosswalk_count": 10,
+  "source_paths": 16,
+  "checkpoints": [
+    {
+      "checkpoint": "CB",
+      "batch": 191,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B191_CB/CROSSWALK.json",
+      "crosswalk_blob_sha": "a5bf015620e6767b47f2de48a8eee7f23df90a2b",
+      "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "source_file_count": 7,
+      "predecessor_claim": "CA",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited; not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/CB/CONTINUATION_STATE.json",
+          "git_blob_sha": "154ed9cc5a95ddec6a82a6efd762eae696c2816d",
+          "sha256": "d4faab00cdb1b8a6ebfb26fb94057c0ee0165bf9d0677a7da112c331dc701ff3",
+          "bytes": 2153,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/CB/CONTROL_AND_TEST_DESIGN.md",
+          "git_blob_sha": "54d240a392d2542d99c0d5516d1c9fac6a28e9c6",
+          "sha256": "1eb27b3d5b05717a1996da2a4a08accb25f2a6d2ea715f33efc3bb2fb13a7801",
+          "bytes": 4161,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/CB/EVIDENCE_DELTA.md",
+          "git_blob_sha": "cbe284f62c05359edf0fd1413998f68ebb3b1d4d",
+          "sha256": "9a2c361af56cb2dc8fd96e2af41ca953ba4d5defae0b0daa5cefc8ef25195369",
+          "bytes": 4892,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/CB/EXECUTION_REPORT.md",
+          "git_blob_sha": "a79fd7d17078f289908714cc4a52e37d30a69938",
+          "sha256": "b5788dd187b3d34ea03364a91c15b3be0ee06d83369ea23a4d7066fa75a3f868",
+          "bytes": 1842,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/CB/PAYMENT_PROFILE_RELEASE_GATES.json",
+          "git_blob_sha": "526ac489781049c50c9b6ac018d0296bda892cbb",
+          "sha256": "45650fd5ec119c21b52266763ac84fd8568c37cc2aef58cfbee9e0f9d9e47cb3",
+          "bytes": 6555,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/CB/QUALITY_REVIEW.md",
+          "git_blob_sha": "6934f2f1402ff90b318fac8114f0af4f066e8c9d",
+          "sha256": "8d367701d44cd1277a606cf1f20882c226540418f4df8bffe9c31527b8ec516f",
+          "bytes": 2153,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/CB/README.md",
+          "git_blob_sha": "d8423464018fce8551557182a2f00bf3e00f9d90",
+          "sha256": "213eb88830f412a441971e2f718ad9fd68ed3deed3102db19cd2f93d8e0a204a",
+          "bytes": 1022,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "CC",
+      "batch": 192,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B192_CC/CROSSWALK.json",
+      "crosswalk_blob_sha": "b01b9965192609e236a7730714b411c548901b4b",
+      "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "source_file_count": 1,
+      "predecessor_claim": null,
+      "claimed_phase": null,
+      "active_wp_claim": null,
+      "claimed_last_completed_wp": null,
+      "status_claim": null,
+      "definition_of_ready_claim": null,
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/CC/README.md",
+          "git_blob_sha": "00d7113578c6b5feb17898edd6278ebfc6294347",
+          "sha256": "9301c9db096aae242215da09a7d08ab53c12ede152f9754958e217a4a3349c80",
+          "bytes": 4994,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "CD",
+      "batch": 193,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B193_CD/CROSSWALK.json",
+      "crosswalk_blob_sha": "d1d2c53c209e40e3fa1545291e2890fc03e1c238",
+      "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "source_file_count": 1,
+      "predecessor_claim": null,
+      "claimed_phase": null,
+      "active_wp_claim": null,
+      "claimed_last_completed_wp": null,
+      "status_claim": null,
+      "definition_of_ready_claim": null,
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/CD/README.md",
+          "git_blob_sha": "8a3ccea24b6727773d2c11264d51aa22a71ed492",
+          "sha256": "02f8abd9943ecdc010e08df003789da3df1cb516b12295e8e8ff72705e0d1f2f",
+          "bytes": 4780,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "CE",
+      "batch": 194,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B194_CE/CROSSWALK.json",
+      "crosswalk_blob_sha": "0853334066fb413df2f8e88c5e100f89d1777c42",
+      "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "source_file_count": 1,
+      "predecessor_claim": null,
+      "claimed_phase": null,
+      "active_wp_claim": null,
+      "claimed_last_completed_wp": null,
+      "status_claim": null,
+      "definition_of_ready_claim": null,
+      "mentioned_wps": [
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/CE/README.md",
+          "git_blob_sha": "9b406b7cc91a25589709cd52d92af453ba896251",
+          "sha256": "77eda3e6b84487105718947f5a5da16171dd17b0bddc81f188407141402db101",
+          "bytes": 5606,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "CF",
+      "batch": 195,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B195_CF/CROSSWALK.json",
+      "crosswalk_blob_sha": "20dcc473448df7a187dd42b8c8eb3a96fe413bb3",
+      "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "source_file_count": 1,
+      "predecessor_claim": null,
+      "claimed_phase": null,
+      "active_wp_claim": null,
+      "claimed_last_completed_wp": null,
+      "status_claim": null,
+      "definition_of_ready_claim": null,
+      "mentioned_wps": [
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/CF/README.md",
+          "git_blob_sha": "77b24ce4c53873373b207bf6c26df261398dfcab",
+          "sha256": "d1d9cdf544537f517e1b1168f408c33e6dd6777e3234b91ca08df502e6029552",
+          "bytes": 5314,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "CG",
+      "batch": 196,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B196_CG/CROSSWALK.json",
+      "crosswalk_blob_sha": "38fd40b8f4244c335aa278141973fc73e3860dcd",
+      "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "source_file_count": 1,
+      "predecessor_claim": null,
+      "claimed_phase": null,
+      "active_wp_claim": null,
+      "claimed_last_completed_wp": null,
+      "status_claim": null,
+      "definition_of_ready_claim": null,
+      "mentioned_wps": [
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/CG/README.md",
+          "git_blob_sha": "5b628493775bdb8c1a6b8894bf29fd9ce49bcbd4",
+          "sha256": "803ab7693f53163db61d95fff28e26b635397b72ac34c11b82ca4cbae6d2bdf7",
+          "bytes": 5752,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "CH",
+      "batch": 197,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B197_CH/CROSSWALK.json",
+      "crosswalk_blob_sha": "709dd8f458942fa2e4dbf6e020d2276b638eeb89",
+      "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "source_file_count": 1,
+      "predecessor_claim": null,
+      "claimed_phase": null,
+      "active_wp_claim": null,
+      "claimed_last_completed_wp": null,
+      "status_claim": null,
+      "definition_of_ready_claim": null,
+      "mentioned_wps": [
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/CH/README.md",
+          "git_blob_sha": "3b72fd718938d39e0baafbe6f5088fbfab76a605",
+          "sha256": "f538c896910792d03a092c033d2c37781694930a1ff099bcb203367a4fa09776",
+          "bytes": 6320,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "CI",
+      "batch": 198,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B198_CI/CROSSWALK.json",
+      "crosswalk_blob_sha": "af365055c06080182ec8b9adcddff47e2847be3b",
+      "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "source_file_count": 1,
+      "predecessor_claim": null,
+      "claimed_phase": null,
+      "active_wp_claim": null,
+      "claimed_last_completed_wp": null,
+      "status_claim": null,
+      "definition_of_ready_claim": null,
+      "mentioned_wps": [
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/CI/README.md",
+          "git_blob_sha": "7f6bd88d99b2440f956ba8d82c49763eed029288",
+          "sha256": "a51c71be0310629e607e1a558af13ba6f84c32d961a1cf2da3e566a801e8ca4f",
+          "bytes": 7746,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "CJ",
+      "batch": 199,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B199_CJ/CROSSWALK.json",
+      "crosswalk_blob_sha": "a995c7ad75d685af6973a81b59d37b9770301e18",
+      "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "source_file_count": 1,
+      "predecessor_claim": null,
+      "claimed_phase": null,
+      "active_wp_claim": null,
+      "claimed_last_completed_wp": null,
+      "status_claim": null,
+      "definition_of_ready_claim": null,
+      "mentioned_wps": [
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/CJ/README.md",
+          "git_blob_sha": "c7a8f048f62e12c653a1bb7d31577009ad9ce728",
+          "sha256": "14a04cda9bf5d0140c4b0790bea2d9bbf78eaf098e522a8ad66794954f07966d",
+          "bytes": 8697,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "CK",
+      "batch": 200,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B200_CK/CROSSWALK.json",
+      "crosswalk_blob_sha": "cf962a8a7c8d5e491d1c0565a6a82134ca561e98",
+      "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "source_file_count": 1,
+      "predecessor_claim": null,
+      "claimed_phase": null,
+      "active_wp_claim": null,
+      "claimed_last_completed_wp": null,
+      "status_claim": null,
+      "definition_of_ready_claim": null,
+      "mentioned_wps": [
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/CK/README.md",
+          "git_blob_sha": "51a236d468accf37eb811a185b04581bd0d9f11c",
+          "sha256": "41b0b3e2d77cfbef7e0dd8f502736588d0ab7f7a7d9062d63dc10df79c9ec08e",
+          "bytes": 8762,
+          "json_valid": null
+        }
+      ]
+    }
+  ]
+}
