@@ -50,10 +50,11 @@ for num,cp,d in runs:
                 if sha(data)!=e["sha256"] or len(data)!=e["bytes"] or format(zlib.crc32(data)&0xffffffff,"08x")!=str(e["crc32"]):
                     record["errors"].append("MANIFEST_HASH_ERROR:"+e["path"])
             expected={p for p in srcmap if p.startswith("regulatory/checkpoints/"+cp+"/")}
-            observed={x["source_path"] for x in cross["source_documents"]}
+            documents=cross.get("source_documents",cross.get("source_records",[]))
+            observed={x.get("source_path",x.get("path")) for x in documents}
             if observed!=expected:record["errors"].append("SOURCE_SET_MISMATCH")
-            for e in cross["source_documents"]:
-                p=e["source_path"]
+            for e in documents:
+                p=e.get("source_path",e.get("path"))
                 if p not in srcmap:record["errors"].append("INVALID_SOURCE_REF");continue
                 actual=srcmap[p]
                 if e.get("sha256")!=actual["sha256"] or e.get("git_blob_sha")!=actual["git_blob_sha1"]:
