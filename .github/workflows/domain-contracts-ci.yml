@@ -1,0 +1,19 @@
+name: OPES Core Banking Domain Contract Validation
+on:
+  push:
+    paths:
+      - 'engineering/contracts/**'
+      - '.github/workflows/domain-contracts-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install JSON Schema validator
+        run: python3 -m pip install --disable-pip-version-check 'jsonschema>=4,<5'
+      - name: Execute field-specific OpenAPI contract tests
+        run: python3 -m unittest discover -s engineering/contracts/tests -p 'test_*.py' -v

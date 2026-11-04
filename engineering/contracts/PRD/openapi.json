@@ -1,0 +1,642 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OPES Core Banking — PRD field-specific contract",
+    "version": "0.1.0-lab-draft",
+    "description": "Domain-specific typed contract, synthetic/integration planning only. Replaces generic payload object for PRD candidate commands. NOT PRODUCTION DoR."
+  },
+  "servers": [
+    {
+      "url": "https://api.example.invalid"
+    }
+  ],
+  "paths": {
+    "/v1/institutions/{institutionId}/prd/create-product": {
+      "post": {
+        "operationId": "prd_create_product",
+        "tags": [
+          "PRD"
+        ],
+        "summary": "create-product scoped command",
+        "description": "Draft typed API contract; authority and maker-checker are enforced by backend, not client-supplied actor ID. No live network settlement or real-money implementation is implied.",
+        "security": [
+          {
+            "oidc": [
+              "banking.write"
+            ]
+          }
+        ],
+        "x-permission": "prd.create-product",
+        "x-required-scoped-authority": "VERIFIED_TOKEN_SUBJECT_AND_INSTITUTION_MEMBERSHIP",
+        "parameters": [
+          {
+            "name": "institutionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]+$"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProduct"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted for internal processing; does not mean settlement or posted money.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "401": {
+            "description": "Unauthenticated"
+          },
+          "403": {
+            "description": "Unauthorized institution or action"
+          },
+          "404": {
+            "description": "Unknown scoped object"
+          },
+          "409": {
+            "description": "Duplicate idempotency key with changed payload or optimistic version conflict"
+          },
+          "422": {
+            "description": "Invalid lifecycle transition, financial rule, or evidence"
+          },
+          "503": {
+            "description": "Fail-closed unavailable"
+          }
+        }
+      }
+    },
+    "/v1/institutions/{institutionId}/prd/approve-version": {
+      "post": {
+        "operationId": "prd_approve_version",
+        "tags": [
+          "PRD"
+        ],
+        "summary": "approve-version scoped command",
+        "description": "Draft typed API contract; authority and maker-checker are enforced by backend, not client-supplied actor ID. No live network settlement or real-money implementation is implied.",
+        "security": [
+          {
+            "oidc": [
+              "banking.write"
+            ]
+          }
+        ],
+        "x-permission": "prd.approve-version",
+        "x-required-scoped-authority": "VERIFIED_TOKEN_SUBJECT_AND_INSTITUTION_MEMBERSHIP",
+        "parameters": [
+          {
+            "name": "institutionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]+$"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApproveProductVersion"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted for internal processing; does not mean settlement or posted money.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "401": {
+            "description": "Unauthenticated"
+          },
+          "403": {
+            "description": "Unauthorized institution or action"
+          },
+          "404": {
+            "description": "Unknown scoped object"
+          },
+          "409": {
+            "description": "Duplicate idempotency key with changed payload or optimistic version conflict"
+          },
+          "422": {
+            "description": "Invalid lifecycle transition, financial rule, or evidence"
+          },
+          "503": {
+            "description": "Fail-closed unavailable"
+          }
+        }
+      }
+    },
+    "/v1/institutions/{institutionId}/prd/activate-product": {
+      "post": {
+        "operationId": "prd_activate_product",
+        "tags": [
+          "PRD"
+        ],
+        "summary": "activate-product scoped command",
+        "description": "Draft typed API contract; authority and maker-checker are enforced by backend, not client-supplied actor ID. No live network settlement or real-money implementation is implied.",
+        "security": [
+          {
+            "oidc": [
+              "banking.write"
+            ]
+          }
+        ],
+        "x-permission": "prd.activate-product",
+        "x-required-scoped-authority": "VERIFIED_TOKEN_SUBJECT_AND_INSTITUTION_MEMBERSHIP",
+        "parameters": [
+          {
+            "name": "institutionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]+$"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActivateProductVersion"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted for internal processing; does not mean settlement or posted money.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "401": {
+            "description": "Unauthenticated"
+          },
+          "403": {
+            "description": "Unauthorized institution or action"
+          },
+          "404": {
+            "description": "Unknown scoped object"
+          },
+          "409": {
+            "description": "Duplicate idempotency key with changed payload or optimistic version conflict"
+          },
+          "422": {
+            "description": "Invalid lifecycle transition, financial rule, or evidence"
+          },
+          "503": {
+            "description": "Fail-closed unavailable"
+          }
+        }
+      }
+    },
+    "/v1/institutions/{institutionId}/prd/operations/{operationId}": {
+      "get": {
+        "operationId": "prd_get_operation",
+        "tags": [
+          "PRD"
+        ],
+        "security": [
+          {
+            "oidc": [
+              "banking.read"
+            ]
+          }
+        ],
+        "x-permission": "prd.operation.read",
+        "parameters": [
+          {
+            "name": "institutionId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "operationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Scoped operation state",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperationReceipt"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthenticated"
+          },
+          "403": {
+            "description": "Cross-tenant forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CorrelationId": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "OperationId": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "JournalLine": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "accountId",
+          "side",
+          "amountMinor",
+          "currency"
+        ],
+        "properties": {
+          "accountId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "side": {
+            "type": "string",
+            "enum": [
+              "DEBIT",
+              "CREDIT"
+            ]
+          },
+          "amountMinor": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9000000000000000
+          },
+          "currency": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "postingPurpose": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 120
+          }
+        }
+      },
+      "OperationReceipt": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "operationId",
+          "institutionId",
+          "domain",
+          "state",
+          "acceptedAt",
+          "correlationId"
+        ],
+        "properties": {
+          "operationId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "institutionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "domain": {
+            "type": "string",
+            "enum": [
+              "CIF",
+              "PRD",
+              "ACT",
+              "LED"
+            ]
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "RECEIVED",
+              "PENDING_APPROVAL",
+              "REJECTED",
+              "COMPLETED",
+              "UNKNOWN_PENDING_RECONCILIATION"
+            ]
+          },
+          "acceptedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "correlationId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "aggregateVersion": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          }
+        }
+      },
+      "Problem": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type",
+          "title",
+          "status",
+          "correlationId"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "format": "uri"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "status": {
+            "type": "integer",
+            "minimum": 400,
+            "maximum": 599
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1200
+          },
+          "correlationId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "CreateProduct": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "productCode",
+          "productType",
+          "currency",
+          "minOpeningAmountMinor",
+          "effectiveFrom",
+          "name",
+          "eligibilityPolicyId"
+        ],
+        "properties": {
+          "productCode": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9_]{2,31}$"
+          },
+          "productType": {
+            "type": "string",
+            "enum": [
+              "CURRENT",
+              "SAVINGS",
+              "TERM_DEPOSIT",
+              "CREDIT_LINE"
+            ]
+          },
+          "currency": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "minOpeningAmountMinor": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9000000000000000
+          },
+          "effectiveFrom": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 120
+          },
+          "eligibilityPolicyId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "interestRateBasisPoints": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100000
+          },
+          "overdraftPermitted": {
+            "type": "boolean"
+          },
+          "feeScheduleVersionId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "ApproveProductVersion": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "productId",
+          "revisionId",
+          "expectedVersion",
+          "decision",
+          "reviewEvidenceId"
+        ],
+        "properties": {
+          "productId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "revisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "expectedVersion": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "APPROVE",
+              "REJECT"
+            ]
+          },
+          "reviewEvidenceId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 1000
+          }
+        }
+      },
+      "ActivateProductVersion": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "productId",
+          "revisionId",
+          "expectedVersion",
+          "effectiveFrom",
+          "releaseApprovalId"
+        ],
+        "properties": {
+          "productId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "revisionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "expectedVersion": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "effectiveFrom": {
+            "type": "string",
+            "format": "date"
+          },
+          "releaseApprovalId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "migrationPolicy": {
+            "type": "string",
+            "enum": [
+              "NEW_ACCOUNTS_ONLY",
+              "FUTURE_EFFECTIVE_TERMS"
+            ]
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.example.invalid/.well-known/openid-configuration"
+      }
+    }
+  },
+  "x-scope-status": "ENGINEERING_DRAFT_NOT_ACCEPTED",
+  "x-immutable-financial-policy": "Only LED posts, balances derived, reversals are new journals; uncertain external states never falsely final."
+}
