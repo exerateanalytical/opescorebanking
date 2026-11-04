@@ -1,0 +1,319 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 166,
+  "checkpoint": "BD",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BD/CLAUSE_AUTHORITY_REGISTER.json",
+      "git_blob_sha": "ae6d4f15b0e8dca005b878407332a3a90f55f431",
+      "sha256": "00f956f2895b6702c890eecf4700e8ef00de7941f16bac548ebe47858825fe96",
+      "bytes": 2736,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 54,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"issuer complete CEMAC 02/25 including printed page 10\","
+        },
+        {
+          "line": 61,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BD/CONTINUATION_STATE.json",
+      "git_blob_sha": "ece7ed0176be332a8bf6d9189bd3efa544149a1c",
+      "sha256": "c86c678ea440d745b493802222e0aaaffa5563ea18a4b0563fa44c0904bb4163",
+      "bytes": 1725,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 19,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        },
+        {
+          "line": 31,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"canonical_next_exact_task\": \"WP-ACC-005 — Checkpoint BE: acquire issuer-signed full R-2020/01, R-2021/01 and R-2021/02 and later amendments, check current R-2024/01 Article30 instruction/Article16 legal applicability, inspect 2025 COBAC annual report, obtain institution-approved PCEC and 01/25–02/25 court/publication/settlement evidence; maintain P0 impleme"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BD/CONTROL_AND_ACCEPTANCE_DESIGN.md",
+      "git_blob_sha": "f5ba211bef7c0c079afd72d12e9544ec0528faa5",
+      "sha256": "48140fd88064bf8bcf045c669046fb4ce858150d9b529ff2a90fbe79769cb0e4",
+      "bytes": 4724,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**RegulatoryAuthorityRecord**: issuer, instrument_id, article_path, source_locator, verified_by, verification_method, published_at, effective_from, transitional_until, applicability_profile, supersession_edges, unresolved_interpretations, signed_approval_refs, source_hash_nullable, status. A clause cannot enter `APPROVED_FOR_EXECUTION` with missing issuer te"
+        },
+        {
+          "line": 15,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Regulatory clause: DISCOVERED → SOURCE_INSPECTED → AUTHENTICATED → LEGALLY_INTERPRETED → BANK_APPROVED → EFFECTIVE; REJECTED/REVOKED/SUSPENDED explicit; no automatic promotion."
+        },
+        {
+          "line": 19,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## 12 negative acceptance scenarios — specified only, not executed"
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "BD-T01: Incomplete Article 16 page-break evidence must not authorize data residency certification."
+        },
+        {
+          "line": 28,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "BD-T09: Failed/unknown outbound notice must remain unresolved; retry cannot fabricate successful delivery."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BD/EVIDENCE_DELTA.md",
+      "git_blob_sha": "f8a7e58c8187dc919bad1878e5f14fe10a395210",
+      "sha256": "30ac813bc517a96b420b067c6084838bb87602268d8e4e59431df21fc1086ee5",
+      "bytes": 3328,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Evidence | Provenance | What was actually verified | What was NOT verified |"
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| COBAC annual report 2025 | Official BEAC publications catalogue and host directory | Report appears published/linked | Report body not parsed; no conclusions on 2025 regulatory developments |"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- COBAC 2025 annual report (unread; size-blocked): https://www.beac.int/wp-content/uploads/2016/10/Rapport-annuel-de-la-COBAC-2025-PDF-648-Mo_compressed.pdf"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BD/EXECUTION_REPORT.md",
+      "git_blob_sha": "35a87a69c5801f0f78602944a36db37820133a53",
+      "sha256": "0805f984a09eb154875eedd61e122b894d99ca8a6724ce4d844f861085c9a02a",
+      "bytes": 1324,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Predecessor verified:** BC continuation state and README remotely fetched from main; BD did not exist at start. **Attempted substantive WPs: 1 (WP-ACC-005 continuation). Completed: 0. Kept open: 1. Blocked from closure: 1. Dependent WPs attempted: 0.**"
+        },
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Primary research: R-2024/01 Art 16 printed pp113–114 checked across PDF page break, Art 41 specific partial repeals, Art 35 retained subclause reference, Art 30 incident criteria and notification schedule. Secondary research: R-2020/01 amendment lead. Official 2025 COBAC report discovered but unread (web size cap, container DNS). No issuer original binaries "
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BD/QUALITY_REVIEW.md",
+      "git_blob_sha": "660ae752f33c1b6b088594cd733be93fc923ddd4",
+      "sha256": "c9f9d24a08609781a20153021611ea3c1b0f058de4933cc987bc1a6d37a68e7a",
+      "bytes": 2067,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Legal/regulatory | Article 16 page continuation visually confirmed; later interpretations/instructions and publication evidence unresolved. | BLOCKED |"
+        },
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Financial/accounting | No approved PCEC, bank GL mapping or verified 01/25–02/25 transfer settlement policy. | P0 BLOCKED |"
+        },
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Prudential/capital | R-2020/01 secondary lead and R-2021 amendments require full signed texts and qualified interpretation. | BLOCKED |"
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| AML/fraud | No claim of live surveillance or screening; unauthorized financial transfers remain prohibited. | BLOCKED |"
+        },
+        {
+          "line": 11,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Data/privacy/retention | In-country accessible and usable physical/digital records must be assessed; foreign processing legality not assumed. | BLOCKED |"
+        },
+        {
+          "line": 12,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Payments/settlement | No integration proof or settlement evidence; no status-driven posting. | P0 BLOCKED |"
+        },
+        {
+          "line": 16,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Regulator/auditor evidence | Original PDF bytes/hash, 2025 report body, certified 02/25 page 10, court and CFO approvals missing. | BLOCKED |"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Review disposition:** No P0 closure; no banking code; no banking tests; no certification. WP-ACC-005 OPEN/P0 BLOCKED, DoR FAIL. Research checkpoint BD is safe for continuation, not approval for implementation."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BD/README.md",
+      "git_blob_sha": "51dd84c29860976aff8e1d355904f3c821707fbc",
+      "sha256": "31b86da88c89497defaeb06959bbe8d3bc27d86913e1cc9c2daf304662cecaa6",
+      "bytes": 3263,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Date:** 2026-11-02. **Predecessor:** BC, remotely fetched from main. **Phase:** 4 — Accounting Core / Financial Integrity. **Active WP:** WP-ACC-005 OPEN / P0 BLOCKED. Last completed WP-ACC-004 inherited, not reaudited."
+        },
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "1. **R-2024/01 Article 16, page-break verified:** the BEAC-hosted COBAC 2024 annual annex states all institution data must be available in the CEMAC State of its principal headquarters, and specifically physical personnel, patrimony, banking/related transactions, procedures, archives and documents must be conserved, accessible and usable there. The sentence "
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "3. **R-2024/01 Article 30 incident-notification obligations:** immediate written-trace notification for significant IT incidents; specific listed significance criteria include critical functions, at least 10% customers or operations, >24h outage, sensitive/classified data leakage, certain gross financial impacts, and public reputational leaks. One-week inter"
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "5. BEAC public directory currently lists a **2025 COBAC annual report**, and a file is discoverable at the official host. The 18MB file was not parsed: web fetch rejected size and container DNS resolution failed. Its contents and any 2025 regulatory changes remain unverified."
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Only clause-level evidence and non-executable design updated. Preserve financial separation, no capital weighting, no automated dormant-account transfer, no regulatory-reporting integration claim, no GL posting. No original PDF bytes or SHA-256 retained. Existing P0s remain open. DoR FAIL."
+        },
+        {
+          "line": 14,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint BE: obtain authenticated R-2021/01, R-2021/02, R-2020/01 and subsequent amendment texts; verify whether any instruction changes R-2024/01 Article 30 thresholds and clarify Article 16 data availability; inspect original COBAC 2025 annual report and issuer publication evidence; continue signed PCEC, 01/25–02/25, cou"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BD",
+    "date": "2026-11-02",
+    "previous": "BC",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "acceptance_scenarios_specified": 12,
+    "acceptance_scenarios_executed": 0,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "issuer_original_pdf_binaries_retained": 0,
+    "issuer_original_pdf_sha256_computed": 0,
+    "findings": [
+      "R-2024/01 Art16 physical archive continuation verified visually across printed pp113-114",
+      "R-2024/01 Art41 exact partial repeal of R-2008/01 42-44, R-2016/04 65(iii), EMF R-2017/06 71(iii)",
+      "R-2024/01 Art35 references still-relevant predecessor subclauses (ii)",
+      "R-2024/01 Art30 significant incident criteria and follow-up obligations, subject to later instruction",
+      "R-2020/01 amendment of R-2010/02 only secondary lead",
+      "Official 2025 COBAC annual report discoverable but body unread due size/DNS"
+    ],
+    "canonical_next_exact_task": "WP-ACC-005 — Checkpoint BE: acquire issuer-signed full R-2020/01, R-2021/01 and R-2021/02 and later amendments, check current R-2024/01 Article30 instruction/Article16 legal applicability, inspect 2025 COBAC annual report, obtain institution-approved PCEC and 01/25–02/25 court/publication/settlement evidence; maintain P0 implementation hold."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 167"
+}

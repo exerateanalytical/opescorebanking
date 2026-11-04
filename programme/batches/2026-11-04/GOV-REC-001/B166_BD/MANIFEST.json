@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 166,
+  "checkpoint": "BD",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "1534c16392224e22fdbdd661787aaead0adae218f93ccb82e26e0207cb21c140",
+      "crc32": "ac208079",
+      "bytes": 6101
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "3d8dc53a83b40fca0c56db2d78dbbab29ee7823f195439c4e7844d03a9d51538",
+      "crc32": "2b4143b9",
+      "bytes": 14642
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BD/CLAUSE_AUTHORITY_REGISTER.json",
+      "sha256": "00f956f2895b6702c890eecf4700e8ef00de7941f16bac548ebe47858825fe96",
+      "crc32": "35442283",
+      "bytes": 2736
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BD/CONTINUATION_STATE.json",
+      "sha256": "c86c678ea440d745b493802222e0aaaffa5563ea18a4b0563fa44c0904bb4163",
+      "crc32": "e61d623e",
+      "bytes": 1725
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BD/CONTROL_AND_ACCEPTANCE_DESIGN.md",
+      "sha256": "48140fd88064bf8bcf045c669046fb4ce858150d9b529ff2a90fbe79769cb0e4",
+      "crc32": "68426073",
+      "bytes": 4724
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BD/EVIDENCE_DELTA.md",
+      "sha256": "30ac813bc517a96b420b067c6084838bb87602268d8e4e59431df21fc1086ee5",
+      "crc32": "1e2f2b9c",
+      "bytes": 3328
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BD/EXECUTION_REPORT.md",
+      "sha256": "0805f984a09eb154875eedd61e122b894d99ca8a6724ce4d844f861085c9a02a",
+      "crc32": "4eb7a7b5",
+      "bytes": 1324
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BD/QUALITY_REVIEW.md",
+      "sha256": "c9f9d24a08609781a20153021611ea3c1b0f058de4933cc987bc1a6d37a68e7a",
+      "crc32": "54dc3bab",
+      "bytes": 2067
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BD/README.md",
+      "sha256": "31b86da88c89497defaeb06959bbe8d3bc27d86913e1cc9c2daf304662cecaa6",
+      "crc32": "e3e9b9e0",
+      "bytes": 3263
+    }
+  ]
+}
