@@ -14,8 +14,8 @@
     },
     {
       "id": "WP-PAY-GIMAC-001",
-      "reason": "Bank-specific network participation and settlement entitlement unknown",
-      "status": "NOT_AUTHORIZED"
+      "status": "LIVE_DEPLOYMENT_ONLY_NOT_DEVELOPMENT_BLOCKER",
+      "reason": "Institution/operator participation credentials and scheme access are required only if and when a real integration is activated; OPESWARE core-banking software development and sales do not require a participating bank."
     },
     {
       "id": "GOV-REC-001",
@@ -24,11 +24,11 @@
     },
     {
       "id": "GOV-WBS-RECON-001",
-      "reason": "Exhaustive independently approved WBS and acceptance denominator unresolved",
-      "status": "OPEN"
+      "status": "SPONSOR_SCOPE_APPROVED_EVIDENCE_CROSSWALK_IN_PROGRESS",
+      "reason": "User has approved package scope and ownership; historical completion/provenance and test acceptance remain evidence-open, not a mandatory pre-coding signoff."
     }
   ],
-  "canonical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.3_2026-11-04.md",
+  "canonical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.4_2026-11-04.md",
   "education_product": "Separate synthetic Banking Education Edition software licences (NOT banking regulatory licences)",
   "evidence_as_of_commit": "c7fd4370abb9b9368c785c92b406609ab77d54dd",
   "historical_checkpoint_dirs_observed": 59,
@@ -40,8 +40,8 @@
   "last_local_archive_integrity_validated_batch_id": 210,
   "last_observed_delivery_batch_id": 210,
   "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
-  "next_exact_task": "Independent architecture/legal/CFO/CISO/audit review of batch 210 150-historical-WP crosswalk and proposed domain boundaries; obtain PCEC 312/322 issuer clarification and original archive provenance without bypassing financial P0.",
-  "next_exact_task_id": "GOV-WBS-RECON-001",
+  "next_exact_task": "Build and execute contract/security/tenant-isolation foundations in a strictly isolated test environment; no live financial ledger, disputed PCEC mapping or payment-rail credentials.",
+  "next_exact_task_id": "FOUNDATION-TENANT-CONTRACTS-001",
   "original_archive_custody_status": "NOT_VERIFIED",
   "original_archive_custody_verified": false,
   "original_archives_replaced": false,
@@ -60,5 +60,13 @@
   "batch210_remote_git_blob_sha1": "961453f3bd149ed2ac656b6dace68445697ce131",
   "batch210_remote_bytes": 704934,
   "batch210_verified_at_utc_date": "2026-11-04",
-  "batch210_verified_basis": "GitHub remote blob downloaded via connector in base64; independently decoded and SHA-256 recomputed; exact byte length matched; ZIP entry integrity checked in successful GitHub Actions run"
+  "batch210_verified_basis": "GitHub remote blob downloaded via connector in base64; independently decoded and SHA-256 recomputed; exact byte length matched; ZIP entry integrity checked in successful GitHub Actions run",
+  "product_development_authorization": "OPESWARE_OWNER_APPROVED",
+  "planning_scope_and_ownership": "SPONSOR_APPROVED_2026-11-04; numerical denominator and historical work acceptance distinct",
+  "participating_bank_agreement_required_for_software_development": false,
+  "third_party_rail_entitlement_requirement": "ONLY_APPLIES_TO_LIVE_EXTERNAL_RAIL_CONNECTION_FOR_ACTUAL_DEPLOYMENT; NOT_PRODUCT_DEVELOPMENT",
+  "financial_review_requirement": "ENGINEERING_FINANCIAL_INTEGRITY_REVIEW_AND_EXECUTABLE_TEST_EVIDENCE; NO MANDATORY EXTERNAL_BANK_CFO_SIGNOFF_FOR_DEVELOPMENT",
+  "regulatory_fallback_policy": "BINDING_AUTHORITY_AS_WRITTEN_FOR_LEGAL_MAPPINGS; STANDARDS_BASED_DESIGN_FOR_UNSPECIFIED_TECHNICAL_RULES; ISOLATE_UNRESOLVED_312_322_MAPPING_ONLY",
+  "implementation_path": "INDEPENDENT_ISOLATED_FOUNDATION_AND_SIMULATOR_WORK_ALLOWED; PRODUCTION_BOUND_SLICE_MUST_PASS_15_DOR",
+  "execution_policy_revision": "2026-11-04_OWNER_CORRECTIONS_V1"
 }
