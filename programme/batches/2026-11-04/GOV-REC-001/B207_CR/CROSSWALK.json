@@ -1,0 +1,172 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 207,
+  "checkpoint": "CR",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/CR/README.md",
+      "git_blob_sha": "4ab53d4db30aeb15f37d03847df812bd36f8e4a5",
+      "sha256": "fd3eac045a702d9f0335d1f1ac3db11987785620a7ce5a9611868782532dde48",
+      "bytes": 8869,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 3,
+          "excerpt": "Date: 2026-11-03. Predecessor: CQ (GitHub main verified at 5b21d98e009453232522d5ab70041d6517f38107 before this run). Phase 4 — Accounting Core and Financial Integrity. **SAFE PARTIAL RESEARCH CHECKPO"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Date: 2026-11-03. Predecessor: CQ (GitHub main verified at 5b21d98e009453232522d5ab70041d6517f38107 before this run). Phase 4 — Accounting Core and Financial Integrity. **SAFE PARTIAL RESEARCH CHECKPOINT; WP-ACC-005 OPEN / P0 BLOCKED; NO PRODUCTION IMPLEMENTATION.**"
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Source of the conflict (issuer-hosted): https://www.beac.int/wp-content/uploads/2016/10/instruction_cobac_i_2015_01_pcec.pdf — I-2015/01, Article 7(b,d): 312 = *Crédits à moyen terme sensibles*, children 3121–3127; Article 8(b): 322 = *Crédits à court terme sensibles*; Article 8(d): prints 312 for *Crédits à court terme sensibles* but lists 3220–3227. Thes"
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Fresh public source discovery: https://www.beac.int/supervision-bancaire/instructions-de-cobac/ lists I-2015/01 and older instructions. Targeted indexed queries for COBAC PCEC letters + 312/322 and 2015 errata did not return an authenticated correction. **Not found in the public index does not mean nonexistent.**"
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- No signed clarification letter, authenticated amended chart, full historical supersession chain, or source-byte hash was obtained this run. All unresolved provenance fields remain UNKNOWN, not invented."
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## 2. Regulatory question / disposition"
+        },
+        {
+          "line": 13,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Conflict ID: PCEC-I2015-ARTICLE8D-312-322."
+        },
+        {
+          "line": 15,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "A. Article 7: code 312, medium-term sensitive credit, children 3121–3127."
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "B. Article 8(b): code 322, short-term sensitive credit."
+        },
+        {
+          "line": 17,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "C. Article 8(d): printed code 312, short-term sensitive credit, children 3220–3227."
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Candidate interpretation (NOT APPROVED):** Article 8(d) may contain a typographical substitution 312 for 322. The contradictory printed text must be retained unchanged. Only authenticated competent-authority clarification or sufficiently authoritative subsequent amendment plus legal review can approve any correction."
+        },
+        {
+          "line": 19,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Disposition: BLOCKED_AUTHORITY_REQUIRED. No account mapping, posting, reporting, migration, loan maturity reclassification or balance rewrite from this candidate interpretation."
+        },
+        {
+          "line": 22,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Objet : Demande de clarification officielle — Instruction COBAC I-2015/01, article 8(d), comptes 312 et 322 du PCEC**"
+        },
+        {
+          "line": 28,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "L'article 7(b) désigne le compte 312 « Crédits à moyen terme sensibles ». L'article 8(b) désigne le compte 322 « Crédits à court terme sensibles ». Toutefois, l'article 8(d) fait référence au compte 312 « Crédits à court terme sensibles » tout en énumérant les subdivisions 3220 à 3227."
+        },
+        {
+          "line": 31,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "1. Si la référence « 312 » à l'article 8(d) doit être lue « 322 », ou si une autre interprétation officielle s'applique."
+        },
+        {
+          "line": 47,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| EV-CR-001 | Signed PCEC clarification for Article 8(d) | COBAC SG under R-99/01 Article 2(a) | issuer, signature, exact wording, scope, effective date, authentic copy/hash | NOT OBTAINED | P0 |"
+        },
+        {
+          "line": 48,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| EV-CR-002 | Later signed amendments/consolidated PCEC | COBAC/BEAC | provision-by-provision supersession, issuer, dates, applicability | NOT VERIFIED | P0 |"
+        },
+        {
+          "line": 49,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| EV-CR-003 | Historical PCEC original and amendment lineage | COBAC/BEAC | exact code/label/page and effective-period crosswalk | INCOMPLETE | P0 |"
+        },
+        {
+          "line": 50,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| EV-CR-004 | Institution-specific applicability and CFO/legal interpretation | licensed institution's authorized reviewers | documented institution type, sign-offs, controlled effective dates | NOT OBTAINED | P0 |"
+        },
+        {
+          "line": 51,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| EV-CR-005 | Reporting mapping for CERBER | authoritative reporting instructions | separate account-to-report mapping, period, version, reconciliation | NOT VERIFIED | P1/P0 if reporting activated |"
+        },
+        {
+          "line": 55,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## 5. Proposed controls / negative acceptance cases (SPECIFIED, NOT EXECUTED)"
+        },
+        {
+          "line": 57,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Reject an Article 8(d) import where the declared parent 312 conflicts with child prefix 322; retain literal evidence."
+        },
+        {
+          "line": 58,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Reject inferred substitution 312→322 without authenticated authority and maker-checker/legal/CFO sign-off."
+        },
+        {
+          "line": 59,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Reject financial posting, historical migration, CERBER reporting or loan reclassification using a BLOCKED mapping."
+        },
+        {
+          "line": 66,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Regulatory: conflict remains, official clarification absent; fail. Financial integrity: collision cannot be allowed to contaminate balances; fail closed. Architecture: preserve three distinct source assertions and immutable semantic identities; design only. Security: controlled evidence review and dual approval; design only. AML/risk: maturity classification"
+        },
+        {
+          "line": 68,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Run accounting:** attempted 1 substantive work package (WP-ACC-005 continuation); completed 0; open 1; blocked from closure 1. Safe partial documentation checkpoint CR. P0 resolved 0. Definition of Ready FAILED. No dependent work package advanced."
+        },
+        {
+          "line": 71,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Obtain an authenticated COBAC Secretary-General *lettre PCEC*, signed corrigendum, or subsequent binding amendment resolving I-2015/01 Article 8(d)'s 312/322 contradiction; verify signature, scope, effective date and provision-level supersession. If unavailable, continue targeted issuer evidence acquisition and prepare a source-backed legal/CFO decision doss"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": null,
+  "unique_historical_wp_mentions": [
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 1,
+    "read": 1,
+    "sha_matched": 1
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 208"
+}
