@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 177,
+  "checkpoint": "BO",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "d22eefdd5f52a31b4f3ad97adce91cd664d33f3b3c135222d8ac4d725577b510",
+      "crc32": "9047a66f",
+      "bytes": 7075
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "d638ca342d528113a8654f89c13cf59225d58fb850b8b0133ba4a1deb9265f16",
+      "crc32": "6f3dc0e5",
+      "bytes": 16953
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BO/CONTINUATION_STATE.json",
+      "sha256": "09cb6800f6bd620277479da90915ff4b79807322fe65777d576dfb209b8b26cf",
+      "crc32": "2979e08f",
+      "bytes": 2037
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BO/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "74730a0876acd76bc5df553fc737dfd8e090a6004911eb4886d935f4c28fd26a",
+      "crc32": "b65dd760",
+      "bytes": 6197
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BO/EXECUTION_REPORT.md",
+      "sha256": "ce6235a9899da841724311ba405b5ed3cb8d508a45082725a1e204a4a9a2e5af",
+      "crc32": "20546f43",
+      "bytes": 1742
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BO/QUALITY_REVIEW.md",
+      "sha256": "6f7f8214ef9d4aca290f0ff7b9f8c47589544dd932fc50df7ded2fdf7e9ab7d9",
+      "crc32": "dba4b5cb",
+      "bytes": 2168
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BO/README.md",
+      "sha256": "afd5c7799537d66b0d5fa361e2563cd011e91ef0eaa2bcf8500a8a8baf591ef5",
+      "crc32": "1243d88f",
+      "bytes": 2168
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BO/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "sha256": "fc336d24684ad6aff28b406ccbef6db5a6bdf9922c0039c1d1dde71991d77551",
+      "crc32": "8fce6ed6",
+      "bytes": 3540
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BO/SOVEREIGN_SECURITY_AUTHORITY_GATES.json",
+      "sha256": "9b488c511a22997123f9fa7518ba2354363c5021d4a2433c93d4ef2619e0dff6",
+      "crc32": "5ab31018",
+      "bytes": 5525
+    }
+  ]
+}
