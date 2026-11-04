@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-04",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "records": [
+    {
+      "checkpoint": "CC",
+      "source_path": "regulatory/checkpoints/CC/README.md",
+      "git_blob_sha": "00d7113578c6b5feb17898edd6278ebfc6294347",
+      "predecessor_claim": "CB",
+      "line": 2,
+      "exact_excerpt": "Date: 2026-11-03. Predecessor: CB, remote main db450b35b43c390523327c9ee995b8eebd9d623e. Phase 4 Accounting Core / Financial Integrity. Last completed WP-ACC-004 inherited, not reaudited."
+    },
+    {
+      "checkpoint": "CD",
+      "source_path": "regulatory/checkpoints/CD/README.md",
+      "git_blob_sha": "8a3ccea24b6727773d2c11264d51aa22a71ed492",
+      "predecessor_claim": "CC",
+      "line": 2,
+      "exact_excerpt": "Date: 2026-11-03. Predecessor: CC, verified main 1fdda8ad6efe5719107cad2d883dae3cef952a53."
+    },
+    {
+      "checkpoint": "CE",
+      "source_path": "regulatory/checkpoints/CE/README.md",
+      "git_blob_sha": "9b406b7cc91a25589709cd52d92af453ba896251",
+      "predecessor_claim": "CD",
+      "line": 2,
+      "exact_excerpt": "Date: 2026-11-03. Predecessor: CD. Phase 4 Accounting Core and Financial Integrity."
+    },
+    {
+      "checkpoint": "CF",
+      "source_path": "regulatory/checkpoints/CF/README.md",
+      "git_blob_sha": "77b24ce4c53873373b207bf6c26df261398dfcab",
+      "predecessor_claim": "CE",
+      "line": 2,
+      "exact_excerpt": "Date: 2026-11-03. Predecessor: CE. Phase 4 Accounting Core and Financial Integrity."
+    },
+    {
+      "checkpoint": "CG",
+      "source_path": "regulatory/checkpoints/CG/README.md",
+      "git_blob_sha": "5b628493775bdb8c1a6b8894bf29fd9ce49bcbd4",
+      "predecessor_claim": "CF",
+      "line": 2,
+      "exact_excerpt": "Date: 2026-11-03. Predecessor: CF (verified main commit 7fdf8032171b35768abbee65996bb775ac5a9998). Phase 4 — Accounting Core and Financial Integrity."
+    },
+    {
+      "checkpoint": "CH",
+      "source_path": "regulatory/checkpoints/CH/README.md",
+      "git_blob_sha": "3b72fd718938d39e0baafbe6f5088fbfab76a605",
+      "predecessor_claim": "CG",
+      "line": 2,
+      "exact_excerpt": "Date: 2026-11-03. Predecessor: CG (main commit 8df9e4036fb541b8ea65a64e33ab1b1bd222016a)."
+    },
+    {
+      "checkpoint": "CI",
+      "source_path": "regulatory/checkpoints/CI/README.md",
+      "git_blob_sha": "7f6bd88d99b2440f956ba8d82c49763eed029288",
+      "predecessor_claim": "CH",
+      "line": 3,
+      "exact_excerpt": "Date: 2026-11-03. Predecessor: CH (commit b6b82134089b25435d14c901f77f557c1884ef99). Phase 4 — Accounting Core and Financial Integrity."
+    },
+    {
+      "checkpoint": "CJ",
+      "source_path": "regulatory/checkpoints/CJ/README.md",
+      "git_blob_sha": "c7a8f048f62e12c653a1bb7d31577009ad9ce728",
+      "predecessor_claim": "CI",
+      "line": 3,
+      "exact_excerpt": "Date: 2026-11-03. Predecessor: CI. Phase 4 — Accounting Core and Financial Integrity. **SAFE RESEARCH CHECKPOINT ONLY; WP-ACC-005 OPEN / P0 BLOCKED.** No production implementation, certification or tests."
+    },
+    {
+      "checkpoint": "CK",
+      "source_path": "regulatory/checkpoints/CK/README.md",
+      "git_blob_sha": "51a236d468accf37eb811a185b04581bd0d9f11c",
+      "predecessor_claim": "CJ",
+      "line": 3,
+      "exact_excerpt": "Date: 2026-11-03. Predecessor: CJ. Phase 4 — Accounting Core and Financial Integrity. **SAFE RESEARCH CHECKPOINT ONLY; WP-ACC-005 OPEN / P0 BLOCKED.** No implementation, executable tests, certification, or approved regulatory parameters."
+    }
+  ],
+  "classification": "SOURCE_ASSERTION_NOT_GIT_PARENT_PROOF"
+}
