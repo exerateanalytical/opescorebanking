@@ -41,5 +41,15 @@
       "reason": "Exhaustive independently approved WBS and acceptance denominator unresolved"
     }
   ],
-  "next_action": "Independent regulatory/CFO resolution of WP-ACC-005 and bank-specific entitlement evidence; independent approval and test execution of the drafted product contracts"
+  "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
+  "reconciliation_status": "IN_PROGRESS",
+  "evidence_as_of_commit": "c7fd4370abb9b9368c785c92b406609ab77d54dd",
+  "last_observed_delivery_batch_id": 209,
+  "last_integrity_verified_batch_id": null,
+  "last_independently_accepted_wp_id": null,
+  "original_archive_custody_status": "NOT_VERIFIED",
+  "approved_wbs_denominator": null,
+  "next_exact_task_id": "GOV-WBS-RECON-001",
+  "next_exact_task": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
+  "pointer_review_evidence": "governance/reviews/GOV-WBS-RECON-001_POINTER_EVIDENCE_REVIEW_2026-11-04.md"
 }
