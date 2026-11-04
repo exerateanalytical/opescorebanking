@@ -1,0 +1,21 @@
+case_id,category,precondition,action,expected,evidence_status
+ARC-T001,functional,"bank scoped fixture and approved policy","authorized command","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T002,functional,"bank scoped fixture and approved policy","duplicate command","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T003,functional,"bank scoped fixture and approved policy","idempotency key collision","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T004,functional,"bank scoped fixture and approved policy","stale version","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T005,security,"bank scoped fixture and approved policy","cross-tenant read","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T006,security,"bank scoped fixture and approved policy","cross-tenant write","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T007,security,"bank scoped fixture and approved policy","self approval","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T008,security,"bank scoped fixture and approved policy","expired policy","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T009,financial-resilience,"bank scoped fixture and approved policy","outbox retry","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T010,financial-resilience,"bank scoped fixture and approved policy","inbox replay","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T011,financial-resilience,"bank scoped fixture and approved policy","external unknown","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T012,financial-resilience,"bank scoped fixture and approved policy","reversal","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T013,financial-resilience,"bank scoped fixture and approved policy","financial balancing","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T014,financial-resilience,"bank scoped fixture and approved policy","restore consistency","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T015,quality,"bank scoped fixture and approved policy","audit completeness","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T016,quality,"bank scoped fixture and approved policy","privacy redaction","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T017,quality,"bank scoped fixture and approved policy","accessibility keyboard","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T018,quality,"bank scoped fixture and approved policy","mobile responsive","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T019,quality,"bank scoped fixture and approved policy","p95 load target","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED
+ARC-T020,quality,"bank scoped fixture and approved policy","DR failover","deny invalid actions, retain evidence and reconcile effects; exact assertion per scenario",NOT_EXECUTED

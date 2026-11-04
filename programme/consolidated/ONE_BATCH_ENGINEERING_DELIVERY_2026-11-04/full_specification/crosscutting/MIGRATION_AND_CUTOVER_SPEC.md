@@ -1,0 +1,4 @@
+# Migration and cutover design
+Extract signed snapshots from legacy systems; classify PII and financial data; map parties, products, accounts, mandates, balances, accrued interest, loans, collateral, holds, pending payments, journals and audit evidence with immutable source IDs.
+Dry-run transformations with deterministic mapping version, reject orphan foreign keys, invalid currency/precision, negative unsupported amounts, unmatched account ownership and unreconciled suspense.
+Opening balance migration must produce balanced approved journals with source totals and bank CFO signoff. Freeze source cutover, reconcile pre/post balances per currency, branch, product and customer; track external unsettled payment statuses separately. Rehearse rollback without losing external finality; prefer controlled forward-fix after live settlement. Education migration supports synthetic content only.

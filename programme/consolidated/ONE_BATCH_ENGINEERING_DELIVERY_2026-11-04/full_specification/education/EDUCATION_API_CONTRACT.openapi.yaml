@@ -1,0 +1,37 @@
+openapi: 3.1.0
+info: {title: OPES Banking Education API, version: 0.1.0-draft}
+servers: [{url: 'https://training.example.invalid'}]
+paths:
+  /v1/education/institutions/{institutionId}/courses/{courseId}/labs:
+    post:
+      operationId: createLab
+      security: [{oidc: [education.instructor]}]
+      parameters:
+        - {name: institutionId, in: path, required: true, schema: {type: string, format: uuid}}
+        - {name: courseId, in: path, required: true, schema: {type: string, format: uuid}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {type: object, required: [scenario_version], properties: {scenario_version: {type: string}, seed: {type: integer}, virtual_clock: {type: string, format: date-time}}}
+      responses:
+        '201': {description: Simulated lab created}
+        '403': {description: Instructor authorization required}
+  /v1/education/institutions/{institutionId}/labs/{labId}/faults:
+    post:
+      operationId: injectFault
+      security: [{oidc: [education.instructor]}]
+      parameters:
+        - {name: institutionId, in: path, required: true, schema: {type: string, format: uuid}}
+        - {name: labId, in: path, required: true, schema: {type: string, format: uuid}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {type: object, required: [fault_type], properties: {fault_type: {type: string, enum: [CASH_SHORTAGE, PAYMENT_TIMEOUT, DUPLICATE_REQUEST, FX_SHOCK, SANCTIONS_HIT, RESTORE_TEST]}}}
+      responses:
+        '202': {description: Simulated fault queued}
+        '403': {description: Forbidden}
+components:
+  securitySchemes:
+    oidc: {type: openIdConnect, openIdConnectUrl: 'https://training-id.example.invalid/.well-known/openid-configuration'}

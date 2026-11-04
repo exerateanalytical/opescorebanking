@@ -1,0 +1,5 @@
+# Banking Education Edition — UI screens
+Instructor: course catalogue, class roster, virtual bank builder, bank/branch configuration, role assignment, synthetic fixture generator, scenario designer, virtual-clock controller, fault injection, live lab monitor, journal explorer, audit replay, rubric editor, exam scheduler, marking, moderation, gradebook, skills dashboard, certificate export, reset/archive.
+Student: course home, banking-role selection, assigned branch, customer onboarding, KYC review, teller drawer, accounts, payments, loan underwriting, treasury desk, compliance alerts, ledger posting, reconciliation, regulatory return, simulated customer portal, audit evidence, incident response, exam tasks, results and competency passport.
+Admin: institution licence, campus sites, instructors, SSO, enrolments, permissions, privacy/retention, offline server, content packs, system health and accessibility settings.
+Every training screen displays persistent SIMULATED environment banner; no confusing resemblance to real bank receipts; mobile and desktop accessibility targets align with WCAG 2.2 AA.

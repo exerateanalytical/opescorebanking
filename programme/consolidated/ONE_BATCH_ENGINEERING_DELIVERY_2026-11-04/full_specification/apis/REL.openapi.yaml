@@ -1,0 +1,100 @@
+openapi: 3.1.0
+info:
+  title: 'OPES Core Banking Release API (proposed)'
+  version: 0.2.0-draft
+  description: 'CEMAC-first multi-bank product; draft interface, not certified'
+servers: [{url: 'https://api.example.invalid'}]
+paths:
+  /v1/institutions/{institutionId}/rel/assess-readiness:
+    post:
+      operationId: rel_assess_readiness
+      summary: 'Release — assess-readiness'
+      security: [{oidc: [banking.write]}]
+      parameters:
+        - {name: institutionId, in: path, required: true, schema: {type: string, format: uuid}}
+        - {name: Idempotency-Key, in: header, required: true, schema: {type: string, minLength: 16}}
+        - {name: X-Correlation-ID, in: header, required: true, schema: {type: string, format: uuid}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/Command'}
+      responses:
+        '202': {description: 'Accepted for processing, not proof of external finality', content: {application/json: {schema: {$ref: '#/components/schemas/Operation'}}}}
+        '403': {description: 'Denied by institution/role/SoD policy'}
+        '409': {description: 'Version or idempotency conflict'}
+        '422': {description: 'Invalid lifecycle transition'}
+        '503': {description: 'Fail-closed service unavailable'}
+  /v1/institutions/{institutionId}/rel/approve-pilot:
+    post:
+      operationId: rel_approve_pilot
+      summary: 'Release — approve-pilot'
+      security: [{oidc: [banking.write]}]
+      parameters:
+        - {name: institutionId, in: path, required: true, schema: {type: string, format: uuid}}
+        - {name: Idempotency-Key, in: header, required: true, schema: {type: string, minLength: 16}}
+        - {name: X-Correlation-ID, in: header, required: true, schema: {type: string, format: uuid}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/Command'}
+      responses:
+        '202': {description: 'Accepted for processing, not proof of external finality', content: {application/json: {schema: {$ref: '#/components/schemas/Operation'}}}}
+        '403': {description: 'Denied by institution/role/SoD policy'}
+        '409': {description: 'Version or idempotency conflict'}
+        '422': {description: 'Invalid lifecycle transition'}
+        '503': {description: 'Fail-closed service unavailable'}
+  /v1/institutions/{institutionId}/rel/release-version:
+    post:
+      operationId: rel_release_version
+      summary: 'Release — release-version'
+      security: [{oidc: [banking.write]}]
+      parameters:
+        - {name: institutionId, in: path, required: true, schema: {type: string, format: uuid}}
+        - {name: Idempotency-Key, in: header, required: true, schema: {type: string, minLength: 16}}
+        - {name: X-Correlation-ID, in: header, required: true, schema: {type: string, format: uuid}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/Command'}
+      responses:
+        '202': {description: 'Accepted for processing, not proof of external finality', content: {application/json: {schema: {$ref: '#/components/schemas/Operation'}}}}
+        '403': {description: 'Denied by institution/role/SoD policy'}
+        '409': {description: 'Version or idempotency conflict'}
+        '422': {description: 'Invalid lifecycle transition'}
+        '503': {description: 'Fail-closed service unavailable'}
+  /v1/institutions/{institutionId}/rel/operations/{operationId}:
+    get:
+      operationId: rel_get_operation
+      security: [{oidc: [banking.read]}]
+      parameters:
+        - {name: institutionId, in: path, required: true, schema: {type: string, format: uuid}}
+        - {name: operationId, in: path, required: true, schema: {type: string, format: uuid}}
+      responses:
+        '200': {description: 'Authoritative internal state', content: {application/json: {schema: {$ref: '#/components/schemas/Operation'}}}}
+        '403': {description: Forbidden}
+        '404': {description: Not found}
+components:
+  schemas:
+    Command:
+      type: object
+      additionalProperties: false
+      required: [aggregate_id, expected_version, policy_version, payload]
+      properties:
+        aggregate_id: {type: string, format: uuid}
+        expected_version: {type: integer, minimum: 0}
+        policy_version: {type: string, minLength: 1}
+        reason: {type: string, maxLength: 2000}
+        payload: {type: object}
+    Operation:
+      type: object
+      required: [operation_id, state, correlation_id]
+      properties:
+        operation_id: {type: string, format: uuid}
+        state: {type: string, enum: [PENDING_APPROVAL, AUTHORIZED, PROCESSING, UNKNOWN_PENDING_RECONCILIATION, COMPLETED, REJECTED, REVERSED]}
+        correlation_id: {type: string, format: uuid}
+        external_finality_verified: {type: boolean, default: false}
+  securitySchemes:
+    oidc: {type: openIdConnect, openIdConnectUrl: 'https://identity.example.invalid/.well-known/openid-configuration'}

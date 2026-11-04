@@ -1,0 +1,12 @@
+requirement_id,authority,source,classification,applicability,verified_effective_date,status
+REG-001,COBAC,Official banking supervision regulations,BINDING_IF_APPLICABLE,CEMAC banks,UNKNOWN,PRIMARY_SOURCE_REVIEW_REQUIRED
+REG-002,BEAC,Payment systems regulations and instructions,BINDING_IF_APPLICABLE,CEMAC payment participants,UNKNOWN,PRIMARY_SOURCE_REVIEW_REQUIRED
+REG-003,GABAC,Regional AML/CFT framework,BINDING_IF_APPLICABLE,CEMAC regulated institutions,UNKNOWN,PRIMARY_SOURCE_REVIEW_REQUIRED
+REG-004,OHADA,Applicable accounting and commercial law,BINDING_IF_APPLICABLE,Applicable legal entities,UNKNOWN,PRIMARY_SOURCE_REVIEW_REQUIRED
+STD-001,Basel Committee,Operational resilience principles,INTERNATIONAL_REFERENCE,Bank operational resilience,NOT_APPLICABLE,REFERENCE
+STD-002,NIST,SP 800-53 security and privacy controls,INTERNATIONAL_REFERENCE,Security architecture,NOT_APPLICABLE,REFERENCE
+STD-003,ISO,ISO 27001 and ISO 22301,INTERNATIONAL_REFERENCE,Security and continuity,NOT_APPLICABLE,REFERENCE
+STD-004,ISO,ISO 20022,INTERNATIONAL_REFERENCE,Payment messaging subject to rail profile,NOT_APPLICABLE,REFERENCE
+STD-005,PCI SSC,PCI DSS,CONTRACTUAL_IF_IN_SCOPE,Cardholder data environment,UNKNOWN,SCOPE_REVIEW_REQUIRED
+STD-006,OWASP,ASVS,INTERNATIONAL_REFERENCE,Application security,NOT_APPLICABLE,REFERENCE
+BLOCK-001,COBAC,Disputed PCEC 312/322 interpretation,BINDING_IF_APPLICABLE,Ledger posting rules,UNKNOWN,BLOCKED_P0

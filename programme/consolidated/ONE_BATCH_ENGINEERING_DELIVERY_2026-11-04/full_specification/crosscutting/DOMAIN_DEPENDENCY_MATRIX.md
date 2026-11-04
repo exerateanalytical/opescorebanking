@@ -1,0 +1,4 @@
+# Domain dependencies, authority and integration
+LED owns immutable journal posting. ACT, BRN, PAY, CRD, TRE, FEE and CARD request authorized postings but cannot mutate balances. REC independently reconciles LED with subledgers and external statements. CIF owns party identity, AML owns investigations, SEC owns principal authorization. PRD owns effective-dated product rules. REP builds frozen, lineage-backed returns. API adapters do not create settlement finality. GOV approves institution profile and jurisdiction overlays. INF/DR/TST/REL govern controlled deployment and evidence.
+Cross-context transaction contract: command with idempotency key -> owning aggregate transaction + outbox -> at-least-once event -> inbox dedupe -> independently reconcilable projection. No distributed database transaction spanning banks or external rails.
+Education edition reuses domain rules in isolated simulated environment; never production accounts or rail credentials.

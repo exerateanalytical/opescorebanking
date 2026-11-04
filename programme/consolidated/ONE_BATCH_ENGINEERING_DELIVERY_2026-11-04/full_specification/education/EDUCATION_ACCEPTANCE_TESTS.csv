@@ -1,0 +1,13 @@
+id,scenario,expected,status
+EDU-001,"student cannot access another campus","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-002,"student cannot self-grade","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-003,"training token rejected by production APIs","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-004,"training network cannot reach real payment rail","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-005,"all exports marked SIMULATED","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-006,"instructor fault injection auditable","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-007,"virtual clock deterministic","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-008,"journal balances remain exact","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-009,"course reset retains assessment evidence","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-010,"offline lab sync idempotent","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-011,"simulated sanctions filing cannot reach regulator","Isolation, authorization and evidence invariant holds",NOT_EXECUTED
+EDU-012,"training licence expiry preserves student records","Isolation, authorization and evidence invariant holds",NOT_EXECUTED

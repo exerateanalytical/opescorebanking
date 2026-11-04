@@ -1,0 +1,6 @@
+# Security threat model and control catalogue
+Assets: bank-owned PII, CIF evidence, customer balances, immutable journals, cryptographic keys, payment credentials, AML case files, regulatory reports and audit evidence.
+Trust boundaries: bank institution, branch, staff role, customer channel, vendor control plane, payment rail, education sandbox and operational backup.
+STRIDE cases: spoofed user/session -> phishing-resistant MFA for privileged actions; tampered payment payload -> server-side signed intent and idempotency; repudiation -> tamper-evident append-only audit; information disclosure -> bank-isolated keys and least privilege; denial of service -> rate limits and fail-closed payment queue; elevation -> maker-checker/SoD and just-in-time privileged access.
+Mandatory controls: per-bank secret scope, key rotation with dual control, no secret in code/logs, TLS, encryption at rest, privileged session review, vulnerability/SBOM provenance, dependency pinning, code review, static/dynamic scanning, secure release signing, incident response and legal hold.
+Test: cross-bank IDOR, confused deputy, SSRF, forged callbacks, replay, clock skew, malformed ISO 20022, duplicate outbox, recovery data bleed, authorization bypass and education-to-production egress denial. Independent penetration testing required before release.
