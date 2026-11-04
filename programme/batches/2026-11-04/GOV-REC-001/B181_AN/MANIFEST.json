@@ -1,0 +1,71 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 181,
+  "checkpoint": "AN",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "a791b651fb44568ba0d20d82367b6eaa039421dd46ad91282267beb86e4cd3af",
+      "crc32": "4cf7f117",
+      "bytes": 5733
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "e8cc34049e8d8ba67edbe82023bfb03b68325d7e5cdbff97fc821fa738ad1ec9",
+      "crc32": "b21fe219",
+      "bytes": 10663
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AN/ACCEPTANCE_TESTS.json",
+      "sha256": "558556d19c931f5e0db9951868c0840f707fc820749bd129e67b89a139c75857",
+      "crc32": "ccb87cbc",
+      "bytes": 879
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AN/CONTINUATION_STATE.json",
+      "sha256": "2592562c073f93c86ae3f05b580c869d2827c3556ea32ddf2b54cbeb7fce7866",
+      "crc32": "fa7ea4f0",
+      "bytes": 822
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AN/EVIDENCE_REQUEST_PLAN.md",
+      "sha256": "c0eb99efe0e1ab81725de4276fb034df40c9d570862c463c8b12eb3b2333486c",
+      "crc32": "34771bd7",
+      "bytes": 445
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AN/GAP_UPDATE.md",
+      "sha256": "d1358168c21aa4bc7e69ddda1c7cf380c02042d6b9245fd0383bdbc3f6c31e8b",
+      "crc32": "09615fe4",
+      "bytes": 256
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AN/QUALITY_REVIEW.md",
+      "sha256": "a16c7281f3fbd84de9ffec8b4837c7e74403f1c34ba4faad7fa248d8835f2719",
+      "crc32": "12f258b8",
+      "bytes": 1388
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AN/README.md",
+      "sha256": "f71efd08a3a350ab1dc754cebd31ce1377add44f929c930d4612dd03c952211b",
+      "crc32": "d1a371d5",
+      "bytes": 782
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AN/REQUIREMENTS.json",
+      "sha256": "b3fbb5844e1fc3ef6f355c01c3789b08152550f1ef9ef82479b2449cc4610f2d",
+      "crc32": "3b1362ff",
+      "bytes": 1115
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AN/SOURCE_REGISTER.json",
+      "sha256": "a13235d198cb55f40d61e8f1ff0d4204a5482231fcb0d7c432b61a1e330532d5",
+      "crc32": "3cab40c2",
+      "bytes": 1217
+    }
+  ]
+}

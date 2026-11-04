@@ -1,0 +1,294 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 181,
+  "checkpoint": "AN",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/AN/ACCEPTANCE_TESTS.json",
+      "git_blob_sha": "201b47eb7144e580b71409b23ca558a0282e8729",
+      "sha256": "558556d19c931f5e0db9951868c0840f707fc820749bd129e67b89a139c75857",
+      "bytes": 879,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"expected\": \"Reject incomplete printed page sequence for financial activation.\""
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"expected\": \"A court order on 01/25 must not change 02/25 status automatically.\""
+        },
+        {
+          "line": 30,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"expected\": \"Unknown settlement outcome remains unresolved and reconciliation-open.\""
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AN/CONTINUATION_STATE.json",
+      "git_blob_sha": "e5e10140d795daecd760a170216c5128f50e22e1",
+      "sha256": "2592562c073f93c86ae3f05b580c869d2827c3556ea32ddf2b54cbeb7fce7866",
+      "bytes": 822,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005",
+        "WP-PAY-GIMAC-001"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_wp\": \"WP-ACC-004 (inherited)\","
+        },
+        {
+          "line": 7,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"active_wp\": \"WP-ACC-005 OPEN BLOCKED\","
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"parallel_workstream\": \"WP-PAY-GIMAC-001 OPEN NOT ATTEMPTED\","
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"completed\": 0,"
+        },
+        {
+          "line": 12,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"blocked_from_closure\": 1,"
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_sent\": 0,"
+        },
+        {
+          "line": 17,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"next_exact_task\": \"WP-ACC-005 Checkpoint AO: acquire issuer-authenticated complete Regulation 02/25 including printed page 10; obtain separately certified Court dispositions for 01/25 and 02/25; obtain original COBAC-MINFI correspondence and institution-specific approved PCEC/settlement requirements.\""
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AN/EVIDENCE_REQUEST_PLAN.md",
+      "git_blob_sha": "8d0a596e8f6873d448a415f5096067278e3ae60f",
+      "sha256": "c0eb99efe0e1ab81725de4276fb034df40c9d570862c463c8b12eb3b2333486c",
+      "bytes": 445,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "2. Request independently certified docket, orders and disposition for each 01/25 and 02/25 from competent Court registry."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AN/GAP_UPDATE.md",
+      "git_blob_sha": "ab673ba47ca5e92ecae5dfb4b66ee754b073b234",
+      "sha256": "d1358168c21aa4bc7e69ddda1c7cf380c02042d6b9245fd0383bdbc3f6c31e8b",
+      "bytes": 256,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "GAP-ACC-057: missing complete issuer-certified page 10, Article 23 continuation, Articles 24–26."
+        },
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "GAP-ACC-064: separate certified Court dispositions absent."
+        },
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "GAP-ACC-066: supervisory requests vs settlement mandate unresolved."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AN/QUALITY_REVIEW.md",
+      "git_blob_sha": "550e3b08674737b57577a9850838edc4ec49df95",
+      "sha256": "a16c7281f3fbd84de9ffec8b4837c7e74403f1c34ba4faad7fa248d8835f2719",
+      "bytes": 1388,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Regulatory/legal: FAIL — missing authenticated Article 23 continuation and Articles 24–26, certified litigation outcomes, original COBAC letters."
+        },
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Architecture: PROPOSED instrument identity and authority gates; separate 01/25 and 02/25 court statuses."
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Usability: operator must see unresolved evidence and prevent execution."
+        },
+        {
+          "line": 16,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Decision: WP-ACC-005 OPEN BLOCKED; Definition of Ready FAIL."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AN/README.md",
+      "git_blob_sha": "84f1f3b545877579b30335781b8dbdcd93c2f2a7",
+      "sha256": "f71efd08a3a350ab1dc754cebd31ce1377add44f929c930d4612dd03c952211b",
+      "bytes": 782,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005",
+        "WP-PAY-GIMAC-001"
+      ],
+      "phase_mentions": [
+        {
+          "line": 3,
+          "excerpt": "Checkpoint date: 2026-10-09. Phase 4 — Accounting Core / Financial Integrity."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Last completed work package: WP-ACC-004 (inherited). Active: WP-ACC-005 — OPEN / BLOCKED. GIMACPAY: WP-PAY-GIMAC-001 — OPEN / NOT ATTEMPTED."
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "No production code, banking tests or regulatory requests have been executed. Definition of Ready: FAIL."
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "This file is a checkpoint status record, **not** the complete cumulative archive. Complete historical checkpoint ZIPs are not yet uploaded to this repository."
+        },
+        {
+          "line": 11,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Next: acquire issuer-authenticated complete Regulation 02/25 (including missing printed page 10), certified separate judicial dispositions for 01/25 and 02/25, original COBAC–MINFI correspondence, and institution-specific PCEC/settlement approvals."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AN/REQUIREMENTS.json",
+      "git_blob_sha": "322604937f794be6ac15daaa7701e073cf83d2d4",
+      "sha256": "b3fbb5844e1fc3ef6f355c01c3789b08152550f1ef9ef82479b2449cc4610f2d",
+      "bytes": 1115,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 25,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"statement\": \"Account-transfer policy must require complete authenticated Article 23–26 and approved interpretation.\""
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AN/SOURCE_REGISTER.json",
+      "git_blob_sha": "edd3dfb17563df8820b73f7176d69f18c732a6bb",
+      "sha256": "a13235d198cb55f40d61e8f1ff0d4204a5482231fcb0d7c432b61a1e330532d5",
+      "bytes": 1217,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"finding\": \"Catalogue does not provide authenticated complete 02/25 in this search\","
+        },
+        {
+          "line": 13,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"finding\": \"Public catalogue is not complete court or issuer evidence\","
+        },
+        {
+          "line": 20,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"finding\": \"Regulation 02/25 copy exists but inherited gap records missing printed page 10\","
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "AN",
+    "previous": "AM",
+    "date": "2026-10-09",
+    "phase": "Phase 4 Accounting Core / Financial Integrity",
+    "last_completed_wp": "WP-ACC-004 (inherited)",
+    "active_wp": "WP-ACC-005 OPEN BLOCKED",
+    "parallel_workstream": "WP-PAY-GIMAC-001 OPEN NOT ATTEMPTED",
+    "attempted": 1,
+    "completed": 0,
+    "open": 1,
+    "blocked_from_closure": 1,
+    "dependent_attempted": 0,
+    "production_code_loc": 0,
+    "banking_tests_executed": 0,
+    "regulatory_requests_sent": 0,
+    "definition_of_ready": "FAIL",
+    "next_exact_task": "WP-ACC-005 Checkpoint AO: acquire issuer-authenticated complete Regulation 02/25 including printed page 10; obtain separately certified Court dispositions for 01/25 and 02/25; obtain original COBAC-MINFI correspondence and institution-specific approved PCEC/settlement requirements."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005",
+    "WP-PAY-GIMAC-001"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 8,
+    "read": 8,
+    "sha_matched": 8
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 182"
+}
