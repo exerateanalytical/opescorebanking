@@ -1,0 +1,71 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 158,
+  "checkpoint": "AV",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "d12000e7e294358fea3bdb4f6bd7ed13da916e2d58ed3c209462a2b7a514a11f",
+      "crc32": "3c6fa08e",
+      "bytes": 7483
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "0acab6051b472ddda5ae664827dde86b5d5e7884b10484677e6e07f8e67b8dca",
+      "crc32": "dfbde924",
+      "bytes": 16071
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AV/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "49ef35bd4730b6fb8d07054d77b52006a204090c98f95e5eebde231ab70ca15a",
+      "crc32": "565a4540",
+      "bytes": 4309
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AV/ACCOUNTING_RULE_CANDIDATES.json",
+      "sha256": "05407eefc06d2d774c215da47a1871d56713e180ada4f7543197303f954408fb",
+      "crc32": "498d44b8",
+      "bytes": 4476
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AV/CONTINUATION_STATE.json",
+      "sha256": "7fb661d5a1e1988d9192a2de433dcb964efb7b6e5f2ab3816c3189808efd0fc8",
+      "crc32": "5424257b",
+      "bytes": 1401
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AV/DOMAIN_DESIGN.md",
+      "sha256": "12feac4b8528ee450566d3190f7e2b765dbd944624f3277e1ab4029bdd68e26a",
+      "crc32": "7241f307",
+      "bytes": 3942
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AV/EXECUTION_REPORT.md",
+      "sha256": "e4e651d8df63cc37a7dd0160258669d19d5badef78b4fe5a21556b69866cd93e",
+      "crc32": "41012b55",
+      "bytes": 2052
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AV/PRIMARY_EVIDENCE.md",
+      "sha256": "f254ba5a4258c5b4135b303368259fe63a035268562196e4e141e2933c6cb1b8",
+      "crc32": "0d42848d",
+      "bytes": 5097
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AV/QUALITY_REVIEW.md",
+      "sha256": "2801be7373147d3eab0d7f6f3ba3686ef12625925b6ef1fd5c97ee4f6532a7a7",
+      "crc32": "70c55430",
+      "bytes": 2380
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AV/README.md",
+      "sha256": "4817f801557646e1a2f8ee81d41494c1e13c5692cc2b64095cbe90fa8327bb3e",
+      "crc32": "6aef411b",
+      "bytes": 1931
+    }
+  ]
+}
