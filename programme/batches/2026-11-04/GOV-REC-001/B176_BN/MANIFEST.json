@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 176,
+  "checkpoint": "BN",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "abf120aa1c2be7e9311b07d10400a68182673aead87fd54b2803b1008f0373c0",
+      "crc32": "32496fc4",
+      "bytes": 7878
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "9375652d055d8123fd6e59e03f80b440e8a70d81139fb98a273cba112e1d7329",
+      "crc32": "2010368a",
+      "bytes": 15014
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BN/CLAUSE_LINEAGE_AND_EXPOSURE_MODEL.json",
+      "sha256": "09bd161349ddbb343488dda6d64fe4dcd175a4ec8ee3ee6c7c61732a27de4fe3",
+      "crc32": "3147ad85",
+      "bytes": 6141
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BN/CONTINUATION_STATE.json",
+      "sha256": "6be28ff8ef587b3a76f19acc261723264052f64e5ef9f5052688a809e057fc92",
+      "crc32": "f8d66ed0",
+      "bytes": 2299
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BN/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "aa27c70310d209726b94591c7276ca84197cb6b062d0b09d38823db3585094bd",
+      "crc32": "5947fe47",
+      "bytes": 5562
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BN/EVIDENCE_DELTA.md",
+      "sha256": "84f3a201f743e57401a20ef3c3f66343a80d39ed075de790042fa17003d752b8",
+      "crc32": "189cc304",
+      "bytes": 4665
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BN/EXECUTION_REPORT.md",
+      "sha256": "166e398ee104259fef6e733d6ce08da722fd1b14eb22f06956353d52562ae746",
+      "crc32": "8e17665f",
+      "bytes": 2203
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BN/QUALITY_REVIEW.md",
+      "sha256": "8e3e1dbcb0272afb02eec8992e5ab6834ec77a9684aa7ac1d9385ea7a6df0f38",
+      "crc32": "8abbaacb",
+      "bytes": 2306
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BN/README.md",
+      "sha256": "4bfd5d8765a5407bcf7fba8a31ec0091018fc80f2eeec0cd4458900ee81350b5",
+      "crc32": "12c5d8f6",
+      "bytes": 2623
+    }
+  ]
+}
