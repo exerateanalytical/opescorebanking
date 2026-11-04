@@ -40,7 +40,7 @@
   "last_local_archive_integrity_validated_batch_id": 210,
   "last_observed_delivery_batch_id": 210,
   "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
-  "next_exact_task": "Select and threat-model bank-local versus distributed fence authority topology; specify global revocation acknowledgement protocol and deterministic synthetic T43/T47 executable harness.",
+  "next_exact_task": "Implement the bank-local, trusted-token-to-membership-to-PostgreSQL-principal gateway with an atomic journal/outbox fence. Add crash/revocation race, replay and UNKNOWN-outcome integration tests across genuine service boundaries before production promotion. Then continue the remaining 21 precise domain API/schema workstreams.",
   "next_exact_task_id": "SEC-TENANT-ROUTING-001",
   "original_archive_custody_status": "NOT_VERIFIED",
   "original_archive_custody_verified": false,
@@ -50,7 +50,7 @@
   "product_type": "Multi-institution commercial banking platform for licensed CEMAC banks; Africa-expandable",
   "programme": "OPES Core Banking",
   "reconciliation_status": "CONTENT_CROSSWALK_COMPLETE_APPROVAL_OPEN",
-  "recovery_batch_paths_observed_through": 209,
+  "recovery_batch_paths_observed_through": 210,
   "source_reconciliation_baseline_commit": "a540f9f8c94682a5947dbf6edc4f3041ea1e9e9b",
   "source_reconciliation_commit": "425bc2776c7bb168b43de9bcd103ea8d4d4a7f91",
   "updated_date": "2026-11-04",
@@ -90,13 +90,55 @@
     "id": "SEC-TENANT-ROUTING-001",
     "status": "IN_PROGRESS_BLOCKED_FROM_PRODUCTION",
     "latest_review": "governance/reviews/SEC-TENANT-ROUTING-001_FORMAL_ORDERING_MODEL_06_2026-11-04.md",
+    "architectural_decision": "governance/decisions/ADR-OPES-003-BANK_LOCAL_AUTHORIZATION_FENCE.md",
     "review_number": 6,
     "p0": [
       "P0-SEC-01",
       "P0-SEC-02"
     ],
-    "new_tests_executed": 0,
-    "acceptance_scenarios": "T01–T55 DRAFT",
-    "accepted": false
-  }
+    "lab_concurrency_tests_executed_passed": 7,
+    "synthetic_token_router_tests_executed_passed": 20,
+    "bank_local_single_transaction_fence": "LAB_TESTED",
+    "distributed_ledger_boundary": "NOT_IMPLEMENTED_OR_PROVEN",
+    "production_accepted": false
+  },
+  "active_engineering_evidence_checkpoint": {
+    "id": "ENG-REMEDIATION-001",
+    "status": "SYNTHETIC_CODE_AND_CONTRACT_TEST_EVIDENCE_DELIVERED_NOT_PRODUCTION_APPROVED",
+    "archive_path": "programme/checkpoints/2026-11-04/ENG-REMEDIATION-001/OPES_ENG_REMEDIATION_001_TESTED_LABS_2026-11-04.zip",
+    "archive_sha256": "871b663f54176e61a6a2631ed41528b17a150068fa4ca39e9d8e44a36caa3ff0",
+    "remote_git_blob_sha1": "7c8d50caf073d1bcf0ba068b045b79c4b749e36d",
+    "remote_archive_bytes": 52168,
+    "verified_remote_at_commit": "23a558f17e93371ca326c402a2fe9d77432463f4",
+    "reproducible_manifest_path": "programme/checkpoints/2026-11-04/ENG-REMEDIATION-001/MANIFEST.json",
+    "execution_report_path": "programme/checkpoints/2026-11-04/ENG-REMEDIATION-001/EXECUTION_REPORT.json",
+    "work_packages_attempted": 8,
+    "work_packages_accepted_for_production": 0,
+    "work_packages_kept_open": 8,
+    "new_blockers": 0,
+    "python_tests_executed_passed": 50,
+    "postgres_security_integration": "PASSED",
+    "build_runs": [
+      41909907072,
+      41910375468,
+      41910690348,
+      41911013397,
+      41911537994
+    ]
+  },
+  "domain_contract_status": {
+    "approved_domain_groups": 25,
+    "fully_typed_high_priority_draft_api_groups": 4,
+    "remaining_legacy_api_groups_without_substantive_replacement": 21,
+    "domain_database_lab_tables_with_RLS": 7,
+    "domain_groups_covered_by_database_lab": [
+      "CIF",
+      "PRD",
+      "ACT",
+      "LED"
+    ],
+    "historical_generic_sql_domain_groups_still_unapproved": 25,
+    "postable_production_journal": "NOT_IMPLEMENTED"
+  },
+  "engineering_code_run_date": "2026-11-04"
 }
