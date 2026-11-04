@@ -1,0 +1,17 @@
+{
+  "programme": "OPES Core Banking",
+  "updated_date": "2026-11-04",
+  "canonical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.2_2026-11-04.md",
+  "superseded_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.1_2026-11-03.md",
+  "historical_source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "latest_completed_archive_batch": 180,
+  "latest_archive_batch_status": "DRAFT_EVIDENCE_REMOTELY_VERIFIED",
+  "governance_work_package": "GOV-REC-001",
+  "governance_work_package_status": "IN_PROGRESS",
+  "historical_wbs_denominator": "UNKNOWN",
+  "active_P0": [
+    "WP-ACC-005"
+  ],
+  "next_exact_task": "GOV-REC-001 batch 181: audit all eight checkpoint AN source blobs and independently verify original AN cumulative ZIP provenance or explicitly record unavailable source; preserve WP-ACC-005 P0 and WBS UNKNOWN",
+  "run_index": "programme/batches/2026-11-04/GOV-REC-001/RUN_INDEX_151_180.json"
+}

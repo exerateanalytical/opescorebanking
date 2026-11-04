@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-04",
+  "programme": "OPES Core Banking",
+  "work_package": "GOV-REC-001",
+  "branch": "main",
+  "start_of_run_head": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "reconciled_head_before_reporting": "8901ef188c97e07122fdd10032be084fd413ac15",
+  "batches_attempted": 30,
+  "batches_with_verified_remote_zip": 30,
+  "batch_range": "151-180",
+  "source_checkpoints_audited": 30,
+  "source_blobs_audited_this_run": 221,
+  "historical_source_blobs_total": 317,
+  "outside_full_audit_this_run": 96,
+  "archive_bytes_total": 1425712,
+  "work_packages_attempted": 1,
+  "work_packages_independently_verified_complete": 0,
+  "work_packages_kept_open": 1,
+  "work_packages_newly_blocked": 0,
+  "preexisting_P0_blocked": [
+    "WP-ACC-005"
+  ],
+  "production_banking_code_written": 0,
+  "banking_tests_executed": 0,
+  "regulatory_certifications": 0,
+  "implementation_DoR_authorized": false,
+  "programme_denominator": "UNKNOWN",
+  "remote_verification_receipts": [
+    "programme/batches/2026-11-04/GOV-REC-001/REMOTE_VERIFICATION_151_160.json",
+    "programme/batches/2026-11-04/GOV-REC-001/REMOTE_VERIFICATION_161_170.json",
+    "programme/batches/2026-11-04/GOV-REC-001/REMOTE_VERIFICATION_171_180.json"
+  ],
+  "detailed_batch_index": "programme/batches/2026-11-04/GOV-REC-001/RUN_INDEX_151_180.json",
+  "next_exact_task": "GOV-REC-001 batch 181: audit all eight checkpoint AN source blobs and independently verify original AN cumulative ZIP provenance or explicitly record unavailable source; preserve WP-ACC-005 P0 and WBS UNKNOWN"
+}

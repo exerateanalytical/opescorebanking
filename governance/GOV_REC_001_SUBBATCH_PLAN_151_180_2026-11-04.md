@@ -9,36 +9,36 @@ Unparsed historical checkpoint evidence blocks final WBS denominator and indepen
 ## Registered sub-batches
 | Batch | Source checkpoint | Parent WP | Required artifact | Status |
 |---:|---|---|---|---|
-| 151 | regulatory/checkpoints/AO/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 152 | regulatory/checkpoints/AP/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 153 | regulatory/checkpoints/AQ/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 154 | regulatory/checkpoints/AR/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 155 | regulatory/checkpoints/AS/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 156 | regulatory/checkpoints/AT/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 157 | regulatory/checkpoints/AU/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 158 | regulatory/checkpoints/AV/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 159 | regulatory/checkpoints/AW/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 160 | regulatory/checkpoints/AX/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 161 | regulatory/checkpoints/AY/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 162 | regulatory/checkpoints/AZ/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 163 | regulatory/checkpoints/BA/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 164 | regulatory/checkpoints/BB/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 165 | regulatory/checkpoints/BC/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 166 | regulatory/checkpoints/BD/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 167 | regulatory/checkpoints/BE/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 168 | regulatory/checkpoints/BF/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 169 | regulatory/checkpoints/BG/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 170 | regulatory/checkpoints/BH/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 171 | regulatory/checkpoints/BI/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 172 | regulatory/checkpoints/BJ/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 173 | regulatory/checkpoints/BK/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 174 | regulatory/checkpoints/BL/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 175 | regulatory/checkpoints/BM/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 176 | regulatory/checkpoints/BN/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 177 | regulatory/checkpoints/BO/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 178 | regulatory/checkpoints/BP/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 179 | regulatory/checkpoints/BQ/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
-| 180 | regulatory/checkpoints/BR/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | NOT_STARTED |
+| 151 | regulatory/checkpoints/AO/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 152 | regulatory/checkpoints/AP/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 153 | regulatory/checkpoints/AQ/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 154 | regulatory/checkpoints/AR/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 155 | regulatory/checkpoints/AS/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 156 | regulatory/checkpoints/AT/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 157 | regulatory/checkpoints/AU/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 158 | regulatory/checkpoints/AV/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 159 | regulatory/checkpoints/AW/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 160 | regulatory/checkpoints/AX/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 161 | regulatory/checkpoints/AY/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 162 | regulatory/checkpoints/AZ/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 163 | regulatory/checkpoints/BA/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 164 | regulatory/checkpoints/BB/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 165 | regulatory/checkpoints/BC/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 166 | regulatory/checkpoints/BD/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 167 | regulatory/checkpoints/BE/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 168 | regulatory/checkpoints/BF/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 169 | regulatory/checkpoints/BG/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 170 | regulatory/checkpoints/BH/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 171 | regulatory/checkpoints/BI/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 172 | regulatory/checkpoints/BJ/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 173 | regulatory/checkpoints/BK/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 174 | regulatory/checkpoints/BL/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 175 | regulatory/checkpoints/BM/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 176 | regulatory/checkpoints/BN/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 177 | regulatory/checkpoints/BO/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 178 | regulatory/checkpoints/BP/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 179 | regulatory/checkpoints/BQ/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
+| 180 | regulatory/checkpoints/BR/ | GOV-REC-001 | Source-backed crosswalk, source ledger with Git blob IDs, risk/claim audit, manifest-bearing ZIP and extracted sources | DRAFT_DELIVERED_VERIFIED (WP OPEN) |
 
 ## Exit criteria for each recovery batch
 1. Enumerate exact source blob paths and read every file in the named checkpoint directory at a fixed commit.
@@ -56,3 +56,6 @@ Owner: OPESWARE TECHNOLOGIES programme; evidence producer: assistant; independen
 
 ## NEXT EXACT TASK
 GOV-REC-001 batch 151 (AO): retrieve all AO source blobs, analyze historic claims, create ZIP and extracted provenance records, push and remotely verify. Then advance to batch 152 only on safe checkpoint.
+
+## Run closure 2026-11-04
+All 30 sub-batches 151–180 have separate remote ZIPs with downloaded-byte SHA-256 verification. See programme/batches/2026-11-04/GOV-REC-001/RUN_INDEX_151_180.json and RUN_151_180_EXECUTION_REPORT.json. Parent GOV-REC-001 still IN_PROGRESS; no accepted WP closure or DoR authorization.
