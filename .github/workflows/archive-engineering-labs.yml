@@ -1,0 +1,31 @@
+name: OPES Core Banking tested-engineering checkpoint archive
+on:
+  push:
+    paths:
+      - 'tools/package_engineering_run_2026_11_04.py'
+      - '.github/workflows/archive-engineering-labs.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  archive-test-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Build and verify one reproducible nonproduction ZIP
+        run: python3 tools/package_engineering_run_2026_11_04.py
+      - name: Preserve checkpoint and push to main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "OPES Core Banking Engineering"
+          git config user.email "actions@users.noreply.github.com"
+          git add programme/checkpoints/2026-11-04/ENG-REMEDIATION-001/
+          if ! git diff --cached --quiet; then
+            git commit -m "evidence: tested engineering labs checkpoint with source hashes, ZIP and exact WP status"
+            git push origin HEAD:main
+          fi
