@@ -1,0 +1,700 @@
+{
+  "schema": "opes.corebanking.source-census.reconciliation-part.v1",
+  "part": 3,
+  "date": "2026-11-04",
+  "source_snapshot": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "crosswalk_count": 10,
+  "source_paths": 70,
+  "checkpoints": [
+    {
+      "checkpoint": "BH",
+      "batch": 170,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B170_BH/CROSSWALK.json",
+      "crosswalk_blob_sha": "daa69a2596d84a8bca5614610efd512e2f968ff9",
+      "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "source_file_count": 7,
+      "predecessor_claim": "BG",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited; not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/BH/AUTHORITY_AND_CASE_MATRIX.json",
+          "git_blob_sha": "df84c3ab375a5b4d12b7fe3a733c58a73e5f6ba6",
+          "sha256": "8b3563008a45221c5f7b803b9a1489a6457e6bdb7f577a17359c7cc8291e5a21",
+          "bytes": 4873,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BH/CONTINUATION_STATE.json",
+          "git_blob_sha": "d78637975c82525d096e7f23b9d6f697083453df",
+          "sha256": "19ffdea17ec645e74aa1b17aaba60eb0499a30390c75d19c45f741dd9d6ad05e",
+          "bytes": 1440,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BH/CONTROL_AND_TEST_DESIGN.md",
+          "git_blob_sha": "23f6055ea97d7a16aecfa1036e1d3f23fcd24ded",
+          "sha256": "14ff69dc37fb37b04ef4c8c5149e1f391ecf6fe2d41e35dcaa19a676122e9034",
+          "bytes": 5299,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BH/EVIDENCE_DELTA.md",
+          "git_blob_sha": "1d79457486f4cf59d36e27f7adfb5fda3b93161d",
+          "sha256": "81452fa97a96635166922146779a80176cbf2b8168cb029bf68c8f780d3e35ee",
+          "bytes": 4043,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BH/EXECUTION_REPORT.md",
+          "git_blob_sha": "6b734e292c5d95771387a682f5cf287f28e66dcd",
+          "sha256": "591521f071857d921669ce850816078763e1a53e8c8d32a82664162631fb960f",
+          "bytes": 1425,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BH/QUALITY_REVIEW.md",
+          "git_blob_sha": "0002cc55a05e0a0759965117e93c237853720e1f",
+          "sha256": "bf432fdfc2c462b745f4dc5ffe5b54864ab1d7b93703f1df4b3d3ef7b5dc4432",
+          "bytes": 1951,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BH/README.md",
+          "git_blob_sha": "64a80a3a8405dabfa992a1ee44213f5f3ec4abd3",
+          "sha256": "271e524fb0961c5c17f9d70f4bdf92901865e65afdc28c44071b674b990593a0",
+          "bytes": 2581,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "BI",
+      "batch": 171,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B171_BI/CROSSWALK.json",
+      "crosswalk_blob_sha": "29614328de39e531d5521e7980d72288497e38c2",
+      "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "source_file_count": 7,
+      "predecessor_claim": "BH",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited; not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/BI/AUTHORITY_MODEL.json",
+          "git_blob_sha": "6e5fc9ad2ad26c372563faa792e3929ba0506aa7",
+          "sha256": "de9b793d71f66f4777dfeb941138c4c451af46709f84f7cf88ff3e5d8e0d59d2",
+          "bytes": 4150,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BI/CONTINUATION_STATE.json",
+          "git_blob_sha": "49b8dea8d885f0e1c701635701582e2d755f8fc0",
+          "sha256": "22ca6a6936882a679f2cdcdfdb4a25b716f0b32b25b5d3baba4f33f1446d07d8",
+          "bytes": 1433,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BI/CONTROL_AND_TEST_DESIGN.md",
+          "git_blob_sha": "3760cdc2789d15a673e0e4aa398b0ed9fbe42684",
+          "sha256": "a595c1e41fb00fe6b4a9880236a6da7d4c4387f858fb71bed6d454f87e5aa03d",
+          "bytes": 5296,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BI/EVIDENCE_DELTA.md",
+          "git_blob_sha": "e2a9b0cfa99ee006b29a172c4bab6bcc543e0711",
+          "sha256": "3a185f56969012af2227fe223eb80788dee246b2c13fe1eadd7dfa1f7f74765a",
+          "bytes": 4110,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BI/EXECUTION_REPORT.md",
+          "git_blob_sha": "e4372e3aaa0cb3c1f84bf715a2ff0936dc554200",
+          "sha256": "850cce385810dc1cd93b186ffa6a6fc7f0220ac4fb1bbdf9154fe397febaa2e5",
+          "bytes": 1298,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BI/QUALITY_REVIEW.md",
+          "git_blob_sha": "c7280792da6f7b6d759fadcbc9e792116e217f7a",
+          "sha256": "6c9a890ed78b0b26e38ab248f73ff99910bad63570fb089230697e25ee38cfa5",
+          "bytes": 2082,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BI/README.md",
+          "git_blob_sha": "e07eb9f7d3b2b4085d2042bb12c03882c48e1621",
+          "sha256": "4dc97ac773316785bfc40e57c374ca98fe4fb3150588b94a6101a7b03e746ba0",
+          "bytes": 2507,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "BJ",
+      "batch": 172,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B172_BJ/CROSSWALK.json",
+      "crosswalk_blob_sha": "8b04266e803b5e7178ef7c9c297c3e07b72ccf86",
+      "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "source_file_count": 7,
+      "predecessor_claim": "BI",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited; not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/BJ/CONTINUATION_STATE.json",
+          "git_blob_sha": "3929a57befeddea8d6407289002313e1083f7cab",
+          "sha256": "9bd2a6bd2b8b061512eeecd515949e1e04d7c30f11e801d746d8808def537b75",
+          "bytes": 1621,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BJ/CONTRADICTION_AND_SCOPE_REGISTER.json",
+          "git_blob_sha": "e7f2711b84a404148cfcadec981b9ab3762e996f",
+          "sha256": "672f9eb86321d861c6f51048af9c2b78a299324b2e68aeb2e5df11aa7fa9529d",
+          "bytes": 2865,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BJ/CONTROL_AND_TEST_DESIGN.md",
+          "git_blob_sha": "d67a09a3e5b04411c6599ad4c5f0e30ebe749bd9",
+          "sha256": "c0c510339c207f1079d614b809a963af0b91759b32e087fd848471d43c66738e",
+          "bytes": 4593,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BJ/EVIDENCE_DELTA.md",
+          "git_blob_sha": "cae950fd25627173c6863b6dcff57ff782e20b22",
+          "sha256": "9a68794ccfc0078ac226b7aaa6b51df374c02e68cbf9e2bf7b222f6b4b46c71f",
+          "bytes": 3826,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BJ/EXECUTION_REPORT.md",
+          "git_blob_sha": "84cda50338faf19240c46ec6eda0078988e700a2",
+          "sha256": "bda3e8fad4b3464a00eeea81e96f237dbf69e76e865c57c9fce467ac1ab2c58d",
+          "bytes": 1628,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BJ/QUALITY_REVIEW.md",
+          "git_blob_sha": "7436868aa2b2341c988819c68e9f8f3e7d59fd20",
+          "sha256": "8b483847baecfeadb3e27e54e961d07809e1feb70eb89271e1a350a6b332739a",
+          "bytes": 1987,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BJ/README.md",
+          "git_blob_sha": "0bedc0219ed4801b82333f3fb320b7656503d118",
+          "sha256": "88e01967c6e1e6a61241ad6cc0b67833f4d070a49902bca85a49ed95f3ca56b7",
+          "bytes": 3196,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "BK",
+      "batch": 173,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B173_BK/CROSSWALK.json",
+      "crosswalk_blob_sha": "6d8fb72e63406fa8df077ba2ef403da7c4637fa3",
+      "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "source_file_count": 7,
+      "predecessor_claim": "BJ",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited, not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/BK/CONTINUATION_STATE.json",
+          "git_blob_sha": "aa4eb9de5c9c5435e9e0b22764cbcf5fb8e72b96",
+          "sha256": "360aa792973c7c4828d74660e0d011941c5ef3f77a130a459e5cb066562c1aaf",
+          "bytes": 1691,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BK/CONTROL_AND_TEST_DESIGN.md",
+          "git_blob_sha": "1b01e8aca95bb0a4df45aabc4a640180b7238286",
+          "sha256": "9a0abea7e28b8794d3b8300ce5382982621b1dd746f445c08d1d90bafc54902c",
+          "bytes": 5613,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BK/EXECUTION_REPORT.md",
+          "git_blob_sha": "bc0433d85cead5c0f1c89b1bf2824e5019df668b",
+          "sha256": "4b3343687fc28e2eaa7ae5d26588ac3dded27f8e5c9a5051b0092d9f1bc2acc3",
+          "bytes": 1865,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BK/QUALITY_REVIEW.md",
+          "git_blob_sha": "70913c04e4c5777de9df112f9ff08f75513c1f28",
+          "sha256": "47bcc680252c7c6f723e3401f5b53a2aa07fafcc08af723a88e765b98229a129",
+          "bytes": 2464,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BK/README.md",
+          "git_blob_sha": "7a9680651621cc0195a94e7f93a96914db52a5da",
+          "sha256": "1aada15bb191bd2d7d6614345bc65fc527d0838869e0b6090ba35c54c50d3ffd",
+          "bytes": 4052,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BK/REGULATORY_CONFLICT_AND_GATE_REGISTER.json",
+          "git_blob_sha": "2ba69187f06843f7d3c49b22f10ebf200c0cec5c",
+          "sha256": "8ceae220273ed7edd14dbe07ebb366a8e7fb4379debe2adb50bec5dfc8a0ea34",
+          "bytes": 3995,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BK/SOURCE_AND_AUTHORITY_DELTA.md",
+          "git_blob_sha": "2572cea391a0743fa9c551597d0a3c21261bc463",
+          "sha256": "3dd121697c7b845043b96c80d0d056f9cf67a8e547729efe837ac0bebbaa4c6b",
+          "bytes": 4868,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "BL",
+      "batch": 174,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B174_BL/CROSSWALK.json",
+      "crosswalk_blob_sha": "aee9dae0c66e1ab5838e39b1d2c638ccbcd975bb",
+      "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "source_file_count": 7,
+      "predecessor_claim": "BK",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited, not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/BL/CLAUSE_SEMANTICS_AND_IDENTITY_GATES.json",
+          "git_blob_sha": "812f474472d14cfd2c9cf0d0aa2ccb6bca41a57a",
+          "sha256": "90eeac7b431a8369c745297d97d29bb865b9f59ac14fce20e40e96655b62ca12",
+          "bytes": 4634,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BL/CONTINUATION_STATE.json",
+          "git_blob_sha": "d9d5449198d426306b72b31366a6be1334b0bc7c",
+          "sha256": "3a80500bc1c5a03c9e9fc9ff9a83a4d74d35960a122d72c27f9259d476f3d2f7",
+          "bytes": 1458,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BL/CONTROL_AND_TEST_DESIGN.md",
+          "git_blob_sha": "493a8855ce9264a88ab8a383bc7df8e1be76a453",
+          "sha256": "cd32af538354d6be3daaf78b10e85263d4f114a7caab4718ffa3c2cd9cbc6945",
+          "bytes": 6379,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BL/EXECUTION_REPORT.md",
+          "git_blob_sha": "8122c2e111f4a2c71d4f182be0da573a8e65d481",
+          "sha256": "4722aff27be5e8e8927382bdf155905c40b14600ce56de0c1f885fe45555b8ac",
+          "bytes": 1369,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BL/QUALITY_REVIEW.md",
+          "git_blob_sha": "c3ae2cea141096cd3a9a453c0714bf5d2bf30c21",
+          "sha256": "17f00298504c444b87dcb73f882d0dd24ab9835f7edd40d27ad6d09a88f226b4",
+          "bytes": 2520,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BL/README.md",
+          "git_blob_sha": "137023d32abb1ba44eb35655343420aff8311f49",
+          "sha256": "230a2bb392223af98c9168252670fb213470f910156eeb61b7a5860d17bdf343",
+          "bytes": 1657,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BL/SOURCE_AND_EVIDENCE_DELTA.md",
+          "git_blob_sha": "8780b07da8fb2a08e08c90896e23af949ab1bb12",
+          "sha256": "271dd4f06fa823e2fe114b270a25ce8d85e4b14396e23046f8712b8ea35f50a4",
+          "bytes": 2761,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "BM",
+      "batch": 175,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B175_BM/CROSSWALK.json",
+      "crosswalk_blob_sha": "8f0c02375e1d647c8dcbd48fa491abdb2944f559",
+      "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "source_file_count": 7,
+      "predecessor_claim": "BL",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited; not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/BM/CONTINUATION_STATE.json",
+          "git_blob_sha": "de5d134b56396ee27269951dc3f61d90ecf78906",
+          "sha256": "e678538d781bc24a2ec1629f668ef479c43e51af9722999ce17d11a57174d6ff",
+          "bytes": 1910,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BM/EVIDENCE_DELTA.md",
+          "git_blob_sha": "2177dd779d1682030db38ae80284366ec05f75c8",
+          "sha256": "44726ca218c140ede42c8a859b28a1f352e989c7ecf7003459d0ea9a8105c974",
+          "bytes": 3830,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BM/EXECUTION_REPORT.md",
+          "git_blob_sha": "3772ea24cfe9ab96407ade0d094f8bacacbb1d2f",
+          "sha256": "98d30e169e8ff6d5c988924868cc44827baebeae21cefbbff1860876cceb1a0a",
+          "bytes": 1759,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BM/ISSUER_CLARIFICATION_DOCKET.md",
+          "git_blob_sha": "21310c37d132c6c52e0a9abf6ea499316fbc4fc2",
+          "sha256": "0a869eb076f201c201e08a470e36ffb326125539673a77202c73c7f914850ecc",
+          "bytes": 3422,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BM/POLICY_GATE_AND_TEST_DESIGN.md",
+          "git_blob_sha": "4c84d63d95863bb9d7ca0765c7f876273be2b33d",
+          "sha256": "e1218e6a3845f2bdd6a2aaa88653ef75c37517d0169fc1fe88ca15affa6c06a5",
+          "bytes": 4425,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BM/QUALITY_REVIEW.md",
+          "git_blob_sha": "3b93f43fe3652d726cad356797142817580e4085",
+          "sha256": "5ec80e3f3cc0a413064d6dc49b2bcfdc6a2f9ea92f3d5e0780025a8e889c52d8",
+          "bytes": 2150,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BM/README.md",
+          "git_blob_sha": "c51bfea599f2d64cbcf4bfe6cc0b7dfecfd0d877",
+          "sha256": "983f66e24e9e70dc9c46a2925f6c5323db12751c248947b85904e934f44d5160",
+          "bytes": 1921,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "BN",
+      "batch": 176,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B176_BN/CROSSWALK.json",
+      "crosswalk_blob_sha": "026a41dc983f28d1282f04a41a58e79a41c0af5f",
+      "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "source_file_count": 7,
+      "predecessor_claim": "BM",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited; not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/BN/CLAUSE_LINEAGE_AND_EXPOSURE_MODEL.json",
+          "git_blob_sha": "cb69bbdbfaca46fc06bf51028f8887aa7d8338d0",
+          "sha256": "09bd161349ddbb343488dda6d64fe4dcd175a4ec8ee3ee6c7c61732a27de4fe3",
+          "bytes": 6141,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BN/CONTINUATION_STATE.json",
+          "git_blob_sha": "823beb36b2622c0a7a379ec0a2bae0293355ae8b",
+          "sha256": "6be28ff8ef587b3a76f19acc261723264052f64e5ef9f5052688a809e057fc92",
+          "bytes": 2299,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BN/CONTROL_AND_TEST_DESIGN.md",
+          "git_blob_sha": "53139c88e0d4c5d40f262ff4d2236db7507d70b8",
+          "sha256": "aa27c70310d209726b94591c7276ca84197cb6b062d0b09d38823db3585094bd",
+          "bytes": 5562,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BN/EVIDENCE_DELTA.md",
+          "git_blob_sha": "ca95cef4ad11fabe45c0f300afbdb81272c91e1b",
+          "sha256": "84f3a201f743e57401a20ef3c3f66343a80d39ed075de790042fa17003d752b8",
+          "bytes": 4665,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BN/EXECUTION_REPORT.md",
+          "git_blob_sha": "c59218d83d66e3fc3c6ecb1fbcadfa3b77d2104c",
+          "sha256": "166e398ee104259fef6e733d6ce08da722fd1b14eb22f06956353d52562ae746",
+          "bytes": 2203,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BN/QUALITY_REVIEW.md",
+          "git_blob_sha": "dc370d784c515091334f17c5a0647e34cfd86f50",
+          "sha256": "8e3e1dbcb0272afb02eec8992e5ab6834ec77a9684aa7ac1d9385ea7a6df0f38",
+          "bytes": 2306,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BN/README.md",
+          "git_blob_sha": "fefb3b6057724d4a25f1adb0c7f24532098f4b5d",
+          "sha256": "4bfd5d8765a5407bcf7fba8a31ec0091018fc80f2eeec0cd4458900ee81350b5",
+          "bytes": 2623,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "BO",
+      "batch": 177,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B177_BO/CROSSWALK.json",
+      "crosswalk_blob_sha": "2abf0ae26a18fde4f4e3abad21db5d46e2bb9ede",
+      "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "source_file_count": 7,
+      "predecessor_claim": "BN",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited; not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/BO/CONTINUATION_STATE.json",
+          "git_blob_sha": "7232c6b3efc1a77ee15f7eddc8a35e01cdbaac62",
+          "sha256": "09cb6800f6bd620277479da90915ff4b79807322fe65777d576dfb209b8b26cf",
+          "bytes": 2037,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BO/CONTROL_AND_TEST_DESIGN.md",
+          "git_blob_sha": "5e0899dfdcc2c101b50c9e76f9428b3159248896",
+          "sha256": "74730a0876acd76bc5df553fc737dfd8e090a6004911eb4886d935f4c28fd26a",
+          "bytes": 6197,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BO/EXECUTION_REPORT.md",
+          "git_blob_sha": "49075f190fce8ab3b9baba4586047fff8cbc556e",
+          "sha256": "ce6235a9899da841724311ba405b5ed3cb8d508a45082725a1e204a4a9a2e5af",
+          "bytes": 1742,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BO/QUALITY_REVIEW.md",
+          "git_blob_sha": "868a1ae7fa3937641d0d43d589611cd3b0387024",
+          "sha256": "6f7f8214ef9d4aca290f0ff7b9f8c47589544dd932fc50df7ded2fdf7e9ab7d9",
+          "bytes": 2168,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BO/README.md",
+          "git_blob_sha": "5d1371fb46b3a6551d1f877da30dc82f0aedc779",
+          "sha256": "afd5c7799537d66b0d5fa361e2563cd011e91ef0eaa2bcf8500a8a8baf591ef5",
+          "bytes": 2168,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BO/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+          "git_blob_sha": "61ffcd4fbd2d76127311ae43cec248c1bd0c226f",
+          "sha256": "fc336d24684ad6aff28b406ccbef6db5a6bdf9922c0039c1d1dde71991d77551",
+          "bytes": 3540,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BO/SOVEREIGN_SECURITY_AUTHORITY_GATES.json",
+          "git_blob_sha": "57ffb7a458716b5257b4906e1e1164be8d00e5c1",
+          "sha256": "9b488c511a22997123f9fa7518ba2354363c5021d4a2433c93d4ef2619e0dff6",
+          "bytes": 5525,
+          "json_valid": true
+        }
+      ]
+    },
+    {
+      "checkpoint": "BP",
+      "batch": 178,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B178_BP/CROSSWALK.json",
+      "crosswalk_blob_sha": "7b31c5e447660cddf5d1a0c324178a8ff7c913b3",
+      "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "source_file_count": 7,
+      "predecessor_claim": "BO",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited; not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/BP/CONTINUATION_STATE.json",
+          "git_blob_sha": "dfa3d8230decb767d34eeebffc752da7cc7c44cf",
+          "sha256": "7de5a196cf71f481d02d4a13110f6b985903fca2634482426378c85fcd4c3941",
+          "bytes": 2111,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BP/CONTROL_AND_TEST_DESIGN.md",
+          "git_blob_sha": "715e07627fc34aff423bdaa7d47fb6816801ac43",
+          "sha256": "4271ec345919b5a01b093d3da7edc66b5b175b65018d83a3414ad9cd16b0d119",
+          "bytes": 6683,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BP/EXECUTION_REPORT.md",
+          "git_blob_sha": "515d72e3204eb0fcab5303e62768d4ae4445b468",
+          "sha256": "2a1574a936e9238a1ae40310a2a497f39b193e9e7c70f1a84acb89dc793b0254",
+          "bytes": 1924,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BP/QUALITY_REVIEW.md",
+          "git_blob_sha": "067e3d5af0d60021bb26a04df1f3653493eaa43e",
+          "sha256": "4b9f04beac1fa376f3c44ff2d3b04f6d3da33d1a6da739c98ff6b5c847fbed74",
+          "bytes": 2104,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BP/RAIL_AUTHORITY_AND_MESSAGE_MODEL.json",
+          "git_blob_sha": "9ddc7d834576c77f74c6cc809edd47da73a80152",
+          "sha256": "5cee17bd7d20d3261c0f76392fa1288bae00f9bb08dd612b49894edaf525febc",
+          "bytes": 9979,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BP/README.md",
+          "git_blob_sha": "0d0412225d1bacba6b5d464becabcb0b7653f970",
+          "sha256": "b4b8d1e69d09488405d48a94e398f8b0b4c4ed6527b67bfe8fb2e1ba90e3b1d0",
+          "bytes": 1735,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BP/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+          "git_blob_sha": "c392cd4aa80968f37c991a7e36501ded9ac48f57",
+          "sha256": "df500c9d6086358ff057c06b03b1a8008a130d8634d1ec9133cd6b05735ecd15",
+          "bytes": 4356,
+          "json_valid": null
+        }
+      ]
+    },
+    {
+      "checkpoint": "BQ",
+      "batch": 179,
+      "crosswalk_path": "programme/batches/2026-11-04/GOV-REC-001/B179_BQ/CROSSWALK.json",
+      "crosswalk_blob_sha": "85ae8b2105f43743dc9aa7abf030ef9985cebcae",
+      "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "source_file_count": 7,
+      "predecessor_claim": "BP",
+      "claimed_phase": "Phase 4 — Accounting Core / Financial Integrity",
+      "active_wp_claim": "WP-ACC-005",
+      "claimed_last_completed_wp": "WP-ACC-004 (inherited, not independently reaudited)",
+      "status_claim": "OPEN_P0_BLOCKED",
+      "definition_of_ready_claim": "FAIL",
+      "mentioned_wps": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "source_records": [
+        {
+          "path": "regulatory/checkpoints/BQ/CONTINUATION_STATE.json",
+          "git_blob_sha": "2fa82d7d635174b99cf74edd1b3b3f59ec717783",
+          "sha256": "ca999e516d92578934a759a4bee89dcfc346bb63891f850ecd4225e5991df4cb",
+          "bytes": 2107,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BQ/CONTROL_AND_TEST_DESIGN.md",
+          "git_blob_sha": "ea838001210183d0572a5cc29e4fa64dfdb4548e",
+          "sha256": "8dd8e99482749d8855c1c0c7830c933aca00598f266a1319e24f06e653d1b80a",
+          "bytes": 4269,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BQ/EXECUTION_REPORT.md",
+          "git_blob_sha": "0cf6ee6c77b00fca2e9a3bb7528371bb9eb95535",
+          "sha256": "3368147f1673307992a13f2f080e6e0f009c0f3bc629fb7dc27a28aeaa8a3011",
+          "bytes": 1857,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BQ/QUALITY_REVIEW.md",
+          "git_blob_sha": "09757d6ec1074f59ea4c3b915f444fa65c74d880",
+          "sha256": "2b4524165aa9994d3464e8fdad7dcd55c5a0bcf8cbe7eaaf0c04dd321cffecbe",
+          "bytes": 2083,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BQ/RAIL_DEPLOYMENT_AND_CAPABILITY_GATES.json",
+          "git_blob_sha": "666de4ac99266d9eae8b3e3041a7c1f5e5c31be0",
+          "sha256": "ecf3e978c8cde688a69b9aeda008fbc0e3a171f25f16b83d1f8ac313461f4f7d",
+          "bytes": 6237,
+          "json_valid": true
+        },
+        {
+          "path": "regulatory/checkpoints/BQ/README.md",
+          "git_blob_sha": "d2b3dd3ebd7019625d697443d53bacae635fe2f5",
+          "sha256": "289761f96b42fe257cb21e86d84ea8c2b2fa2bb739953f98a9444c3e48e223ec",
+          "bytes": 2464,
+          "json_valid": null
+        },
+        {
+          "path": "regulatory/checkpoints/BQ/SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+          "git_blob_sha": "d94ae296f5e4fdd63a09e1e47a6c0c2bbdf5caaf",
+          "sha256": "c69ce816adf568acada677c2c6db0a32dd6f9e09412ec29d6cfa2df91d9f1a93",
+          "bytes": 2770,
+          "json_valid": null
+        }
+      ]
+    }
+  ]
+}
