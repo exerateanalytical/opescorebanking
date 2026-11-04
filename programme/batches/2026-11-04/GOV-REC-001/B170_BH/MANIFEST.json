@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 170,
+  "checkpoint": "BH",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "610b5419f309c6ea270a2a5dba74d676e18768f6c2452c9d2e84b1d0c29f18dd",
+      "crc32": "3627b2e1",
+      "bytes": 5790
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "08687d0665b775a3e3093228cd359b1c0c1a638b14804a7cecea70699b21be04",
+      "crc32": "74ce6898",
+      "bytes": 13716
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BH/AUTHORITY_AND_CASE_MATRIX.json",
+      "sha256": "8b3563008a45221c5f7b803b9a1489a6457e6bdb7f577a17359c7cc8291e5a21",
+      "crc32": "897398a5",
+      "bytes": 4873
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BH/CONTINUATION_STATE.json",
+      "sha256": "19ffdea17ec645e74aa1b17aaba60eb0499a30390c75d19c45f741dd9d6ad05e",
+      "crc32": "b6047d2a",
+      "bytes": 1440
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BH/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "14ff69dc37fb37b04ef4c8c5149e1f391ecf6fe2d41e35dcaa19a676122e9034",
+      "crc32": "f64962bd",
+      "bytes": 5299
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BH/EVIDENCE_DELTA.md",
+      "sha256": "81452fa97a96635166922146779a80176cbf2b8168cb029bf68c8f780d3e35ee",
+      "crc32": "d30fa193",
+      "bytes": 4043
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BH/EXECUTION_REPORT.md",
+      "sha256": "591521f071857d921669ce850816078763e1a53e8c8d32a82664162631fb960f",
+      "crc32": "b7b46d1e",
+      "bytes": 1425
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BH/QUALITY_REVIEW.md",
+      "sha256": "bf432fdfc2c462b745f4dc5ffe5b54864ab1d7b93703f1df4b3d3ef7b5dc4432",
+      "crc32": "5fb1692f",
+      "bytes": 1951
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BH/README.md",
+      "sha256": "271e524fb0961c5c17f9d70f4bdf92901865e65afdc28c44071b674b990593a0",
+      "crc32": "1564c240",
+      "bytes": 2581
+    }
+  ]
+}
