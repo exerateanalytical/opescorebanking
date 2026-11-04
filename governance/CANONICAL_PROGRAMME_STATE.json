@@ -28,19 +28,19 @@
       "reason": "User has approved package scope and ownership; historical completion/provenance and test acceptance remain evidence-open, not a mandatory pre-coding signoff."
     }
   ],
-  "canonical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.4_2026-11-04.md",
+  "canonical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.5_2026-11-04.md",
   "education_product": "Separate synthetic Banking Education Edition software licences (NOT banking regulatory licences)",
   "evidence_as_of_commit": "c7fd4370abb9b9368c785c92b406609ab77d54dd",
   "historical_checkpoint_dirs_observed": 59,
   "historical_engineering_wp_directories_observed": 150,
   "historical_master_plan": "governance/MASTER_PLAN_AND_WBS_RECOVERY_REGISTER_v0.2_2026-11-04.md",
-  "implementation_dor_15": "NOT_VERIFIED",
+  "implementation_dor_15": "NOT_VERIFIED_FOR_PRODUCTION",
   "last_independently_accepted_wp_id": null,
   "last_integrity_verified_batch_id": 210,
   "last_local_archive_integrity_validated_batch_id": 210,
   "last_observed_delivery_batch_id": 210,
   "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
-  "next_exact_task": "Build and execute contract/security/tenant-isolation foundations in a strictly isolated test environment; no live financial ledger, disputed PCEC mapping or payment-rail credentials.",
+  "next_exact_task": "Establish verified JWT token-derived tenant and subject binding to dedicated institution database principals and deny cross-bank impersonation; then complete specific CIF/PRD/ACT/LED domain contracts and SQL constraints.",
   "next_exact_task_id": "FOUNDATION-TENANT-CONTRACTS-001",
   "original_archive_custody_status": "NOT_VERIFIED",
   "original_archive_custody_verified": false,
@@ -68,5 +68,17 @@
   "financial_review_requirement": "ENGINEERING_FINANCIAL_INTEGRITY_REVIEW_AND_EXECUTABLE_TEST_EVIDENCE; NO MANDATORY EXTERNAL_BANK_CFO_SIGNOFF_FOR_DEVELOPMENT",
   "regulatory_fallback_policy": "BINDING_AUTHORITY_AS_WRITTEN_FOR_LEGAL_MAPPINGS; STANDARDS_BASED_DESIGN_FOR_UNSPECIFIED_TECHNICAL_RULES; ISOLATE_UNRESOLVED_312_322_MAPPING_ONLY",
   "implementation_path": "INDEPENDENT_ISOLATED_FOUNDATION_AND_SIMULATOR_WORK_ALLOWED; PRODUCTION_BOUND_SLICE_MUST_PASS_15_DOR",
-  "execution_policy_revision": "2026-11-04_OWNER_CORRECTIONS_V1"
+  "execution_policy_revision": "2026-11-04_OWNER_CORRECTIONS_V1",
+  "domain_planning_scope_approved": true,
+  "domain_planning_scope_approved_count": 25,
+  "domain_ownership_register": "governance/OWNER_APPROVED_DOMAIN_OWNERSHIP_REGISTER_2026-11-04.json",
+  "tenant_foundation_test_ci": {
+    "status": "PASSED",
+    "run_id": 41857001213,
+    "url": "https://github.com/exerateanalytical/opescorebanking/actions/runs/41857001213",
+    "python_unittests_passed": 8,
+    "postgres_sql_integration": "PASSED",
+    "production_ready": false
+  },
+  "last_verified_coding_commit": "860fecdbb1d88c0dabc7590f87a2647d31ebe012"
 }

@@ -1,8 +1,10 @@
-# Gap disposition and completion truth
-This delivery supplies 25 per-domain API OpenAPI drafts, 25 SQL schema proposals, 25 workflow contracts, 25 UI screen inventories, 25 test CSV matrices, six education files, and cross-cutting financial/security/operations documentation. These are **design drafts**, not implementation acceptance.
-- DRAFTED: institution-aware API operations, data proposal, lifecycle/recovery, screen inventories, 20 scenario rows per domain, banking education programme and simulated-only isolation.
-- EXISTING: historical 001–209 checkpoints and previous 25 domain specs retained; prior crosswalk remains provisional.
-- BLOCKED: COBAC PCEC 312/322 legal interpretation, bank-specific payment network participation, institution-specific regulatory source signoff and external independent acceptance.
-- OPEN: physical schema security hardening (RLS, full constraints, domain-specific field semantics), exact API request models and response variants, bank-approved product/accounting mapping, exhaustive regulatory article-by-article source mapping, real UI implementation, executed tests, 15 DoR approvals, exhaustive artifact-to-WP reconciliation, consolidated ZIP remote upload and cryptographic manifest.
-- NOT APPLICABLE: education software licensing does not confer a regulated banking licence or legal authority to handle deposits.
-Approved historical work-package denominator UNKNOWN. Do not claim 100% production readiness or certified banking operations.
+# Current delivery and gap disposition — 2026-11-04
+
+- **GOVERNANCE CORRECTED:** OPESWARE owner approved module scope and internal ownership. Do not request a participating bank or an external CFO signature for ordinary software design, coding or commercial licensing.
+- **EXTERNAL RAIL BOUNDARY:** Live SYGMA/SYSTAC/GIMACPAY credentials/rights belong to the deploying authorized operator; simulator development and product source code proceed independently. See ADR-OPES-001.
+- **REGULATION:** COBAC official 312/322 printed inconsistency isolated at effective-dated classification mapping. Standards may fill technical design gaps but not silently amend binding text. See ADR-OPES-002.
+- **ENGINEERING IMPLEMENTED/TESTED:** engineering/foundation/tenant/ has PostgreSQL 16 tenant lab, RLS, composite foreign keys, immutable active policies, regulator mapping constraint, concrete OpenAPI 3.1. GitHub Actions run 41857001213 PASS: 8 Python contract tests plus PostgreSQL SQL security assertions.
+- **STILL OPEN:** trusted gateway/JWT and DB principal binding, production-grade per-institution keys, fully typed 25-domain endpoints, 25 domain-specific hardened SQL models, implemented ledger posting and accounting invariants, release tests and 15 DoR.
+- **DOCUMENTARY:** historical original archives and acceptance provenance are distinct from vendor permission to develop code.
+- **BLOCKED ONLY IN DEPENDENT CONTEXT:** affected 312/322 external mapping, actual live scheme activation without appropriate operator credentials, and promotion to production when DoR fails.
+- **NEXT:** FOUNDATION-TENANT-CONTRACTS-001 implement and test authorized tenant identity binding.
