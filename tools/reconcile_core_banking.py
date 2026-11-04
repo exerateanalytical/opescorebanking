@@ -113,6 +113,29 @@ if canonical in files:
     if last>j.get("latest_completed_archive_batch",0):manifest_conflicts.append({"path":canonical,"declared_latest_archive_batch":j.get("latest_completed_archive_batch"),"latest_recovery_path_number":last,"action":"stale pointer; observed batch path is not proof of acceptance"})
 dup=[{"sha256":s,"paths":p} for s,p in duplicate.items() if len(p)>1]
 source_wp=sorted({x["id"] for x in contracts if x.get("id")})
+# Reconcile 150 historical WP directories against 120 original CONTRACT.json files.
+# Normalize the 30 absent contract files from real sibling SPEC.md bytes without
+# pretending the originals ever existed or inventing historic approvals.
+historical_wps=sorted({m.group(1) for p in files if (m:=re.match(r"programme/batches/2026-11-03/([^/]+)/",p))})
+missing_contracts=[]
+for wp in historical_wps:
+    contract="programme/batches/2026-11-03/"+wp+"/"+wp+"_CONTRACT.json"
+    if contract in files:continue
+    src="programme/batches/2026-11-03/"+wp+"/"+wp+"_SPEC.md"
+    if src not in files:
+        missing_contracts.append({"id":wp,"status":"MISSING_SOURCE_SPEC","expected_contract":contract})
+        continue
+    raw=(ROOT/src).read_bytes();body=raw.decode("utf8")
+    headings=re.findall(r"(?m)^#{1,4}\s+(.+)$",body)
+    missing_contracts.append({
+      "id":wp,"status":"DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT",
+      "expected_contract":contract,"source_spec":src,"source_spec_sha256":digest(raw),
+      "source_title":headings[0] if headings else wp,
+      "source_headings":headings,
+      "source_text_preserved":body,
+      "independent_acceptance":"NOT_VERIFIED"})
+writejson(OUT/"NORMALIZED_MISSING_HISTORICAL_CONTRACTS.json",missing_contracts)
+
 reg_dirs=sorted({p.split("/")[2] for p in files if p.startswith("regulatory/checkpoints/") and len(p.split("/"))>3})
 test_duplicate=[k for k,c in Counter(k for _,k in test_ids).items() if k and c>1]
 summary={
@@ -133,6 +156,11 @@ summary={
   "banking_tests_executed_by_this_audit":0,"production_banking_code_generated":0,
   "regulatory_certification":"NOT_VERIFIED","historical_original_archive_custody":"NOT_VERIFIED"
 }
+summary["historical_wp_ids_observed"]=len(historical_wps)
+summary["historical_wp_directories"]=len(historical_wps)
+summary["original_contract_json_present"]=len(contracts)
+summary["contracts_derived_from_existing_source_specs"]=sum(x.get("status")=="DERIVED_FROM_EXISTING_SPEC_NOT_ORIGINAL_CONTRACT" for x in missing_contracts)
+summary["missing_original_contract_ids"]=[x["id"] for x in missing_contracts]
 writecsv(OUT/"ALL_TRACKED_SHA256.csv",["path","bytes","sha256","extension","source_group","candidate_owner","inspection","title"],file_rows)
 writecsv(OUT/"ALL_TEXT_CONTENT_CROSSWALK.csv",["path","sha256","bytes","heading","mentions_draft","mentions_acc_005","mentions_gimac"],text_rows)
 writecsv(OUT/"HISTORICAL_CONTRACT_WORKPACKAGES.csv",["path","id","batch","title","status","candidate_domain","planned_tests","executed_tests_claim","schema_attributes"],[[x.get(k) for k in ("path","id","batch","title","status","candidate_domain","planned_tests","executed_tests_claim","schema_attributes")] for x in contracts])
