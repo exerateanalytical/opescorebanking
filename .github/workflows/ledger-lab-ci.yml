@@ -1,0 +1,17 @@
+name: OPES Core Banking Financial Invariants Laboratory
+on:
+  push:
+    paths:
+      - 'engineering/ledger-lab/**'
+      - '.github/workflows/ledger-lab-ci.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  synthetic-ledger-invariants:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run exact minor-unit, balancing, idempotency and reversal tests
+        run: cd engineering/ledger-lab && python3 -m unittest discover -s tests -p 'test_*.py' -v
