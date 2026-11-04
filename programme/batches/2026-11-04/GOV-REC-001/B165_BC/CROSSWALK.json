@@ -1,0 +1,380 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 165,
+  "checkpoint": "BC",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BC/AMENDMENT_AND_APPLICABILITY_GRAPH.json",
+      "git_blob_sha": "e39b718c4c460e876d197282ab2cb6f2b5f343eb",
+      "sha256": "c3183035beeb419e4350c48acf71f91bd4f474433a7cda2cce070dc66cd29b23",
+      "bytes": 2682,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 12,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"confidence\": \"EXISTENCE_HIGH_EXACT_TEXT_MISSING\","
+        },
+        {
+          "line": 21,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"confidence\": \"EXISTENCE_HIGH_EXACT_TEXT_MISSING\","
+        },
+        {
+          "line": 46,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"on_missing\": \"NOT_ELIGIBLE_PENDING_REVIEW\""
+        },
+        {
+          "line": 50,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"rule\": \"regulatory risk weight is not accounting valuation, liquidity eligibility, title transfer or settlement\","
+        },
+        {
+          "line": 51,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"on_missing\": \"NO_AUTOMATIC_CROSS_DOMAIN_PROMOTION\""
+        },
+        {
+          "line": 55,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"rule\": \"historic and current regulatory calculations must carry effective-dated provenance\","
+        },
+        {
+          "line": 56,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"on_missing\": \"BLOCK_CALCULATION_PUBLICATION\""
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BC/CONTINUATION_STATE.json",
+      "git_blob_sha": "e0a2c6bd0a720e62670d4cbda8d38ac9d84e2d1e",
+      "sha256": "a57a4a6bab755f0477821400e52520abe9517a97e86875d0cef29e6103024e17",
+      "bytes": 1734,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited; not independently reaudited)\","
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"0% sovereign-security weighting described as conditional on secured repayment mechanism, exact clauses missing\","
+        },
+        {
+          "line": 26,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        },
+        {
+          "line": 30,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"canonical_next_exact_task\": \"WP-ACC-005 — Checkpoint BD: acquire signed full COBAC R-2021/01 and R-2021/02 texts and subsequent amendments, current R-2010/01/02/03 and R-2016/03 applicability, R-2024/01 Article 41 transition and Article 16 territorial interpretation; secure bank-approved PCEC and prudential mappings and outstanding 01/25–02/25 publication/c"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BC/CONTROL_AND_TEST_DESIGN.md",
+      "git_blob_sha": "1ca7524d72df29e5bb66b60b4abbce65f2e22121",
+      "sha256": "f795910582e44a64fe969b33c23bebec004e88663eeaa9b8428b58a3bf6caa0b",
+      "bytes": 4374,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "A sovereign-security risk-weight assessment is an **effective-dated derived regulatory calculation**, never a posted journal, cash receipt, settlement confirmation, liquidity classification or title transfer. A credit-risk analyst proposes classification; risk/compliance validates eligibility; finance reconciles capital impact; maker/checker are distinct. Al"
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "`UNASSESSED → EVIDENCE_INCOMPLETE | INELIGIBLE | ELIGIBILITY_REVIEW → RISK_APPROVED → FINANCE_RECONCILED → REPORTABLE`. A court/regulator change, expired guarantee or evidence invalidation moves assessment to `SUSPENDED_REVIEW`; it must not automatically mutate accounting balances. No transition to `REPORTABLE` without all required source and approval eviden"
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "`RegulatoryInstrumentRef`: issuer, instrument, clause, authenticated-source ID, publication/effective dates, supersession edge, jurisdiction, institution type."
+        },
+        {
+          "line": 15,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "### Proposed negative acceptance scenarios — NOT EXECUTED"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "3. Amendment exists but effective date unverified → regulatory calculation publication blocked."
+        },
+        {
+          "line": 25,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "10. Disaster recovery failover with missing in-country availability evidence must be flagged for legal/operational review."
+        },
+        {
+          "line": 27,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "12. Unauthorized cross-border data replication or missing approved data residency design must block deployment."
+        },
+        {
+          "line": 28,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "13. Missing immutable audit trail blocks regulatory report publication."
+        },
+        {
+          "line": 29,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "14. Restored ledger/read model discrepancy after failover blocks reconciliation sign-off."
+        },
+        {
+          "line": 30,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "15. Regulatory report value must reconcile to source exposure and approved mapping, without direct balance mutation."
+        },
+        {
+          "line": 36,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- CEMAC/COBAC/BEAC: still outstanding full 01/25–02/25 publication/court/settlement chain, original COBAC–MINFI correspondence and signed page 10."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BC/EXECUTION_REPORT.md",
+      "git_blob_sha": "61d183be01e79e097628b3ee2ebb0e991b2fd82a",
+      "sha256": "51708ffb69cf98806d18fc615af03d4e34276719a2424704216ed2d90df51cf1",
+      "bytes": 1333,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Phase:** 4. **Predecessor:** BB remotely fetched and verified. **Active:** WP-ACC-005 OPEN / P0 BLOCKED."
+        },
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Attempted:** 1 WP; **completed:** 0 WP; **kept open:** 1; **blocked from closure:** 1; **dependent WPs attempted:** 0."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Tests executed:** 0; **production code:** 0; **regulatory requests transmitted:** 0; **source binary SHA-256:** 0; **P0 closed:** 0; **DoR:** FAIL."
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint BD: obtain signed operative 2021 amendments and current supersession chain, authoritative R-2024/01 commencement/transition and territorial data availability interpretation, bank-approved PCEC/risk/settlement mapping, outstanding 01/25–02/25 issuer-complete/court/publication evidence. No executable financial polic"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BC/PRIMARY_EVIDENCE.md",
+      "git_blob_sha": "b89ad8ed8afa6cbc55b88ab1e7f649721431e1b2",
+      "sha256": "41866181877e1503170a7d9c2109c219476c6fb526d0334ce9fd219f8dd162a7",
+      "bytes": 3544,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Missing: full signed regulations, exact replaced paragraphs, dates, publication, application conditions, later amendments, legal opinions, official binary hash."
+        },
+        {
+          "line": 14,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Article 16: all institutional data must be **available in the State of its principal headquarters in CEMAC**; do not infer a complete international transfer/hosting authorization model from this clause alone."
+        },
+        {
+          "line": 28,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Web/browser source content was inspected on 2026-11-02. No original source binaries were downloaded into canonical custody, no source SHA-256 calculated, no regulator correspondence sent, and no official legal interpretation received. This checkpoint documents evidence **discovery**, not certified regulatory applicability."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BC/QUALITY_REVIEW.md",
+      "git_blob_sha": "98faf98ba9f9a50bd241122e7a5deed1593f5bbc",
+      "sha256": "b98288ef14b7bcab06053de5f0e9e0c45432ba4887420ef93c3438d5bc6c293b",
+      "bytes": 2076,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Legal/regulatory | BEAC review proves R-2021/01 and /02 amendment **existence**, not operative exact clauses or current consolidated law; R-2024/01 date wording needs careful commencement/transition distinction. | BLOCKED |"
+        },
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Accounting/CFO | Zero prudential weight cannot be equated to asset valuation, GL posting, ownership, cash or settlement; PCEC chart unsigned. | BLOCKED |"
+        },
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Risk/AML/fraud | Secured repayment mechanism and eligible asset evidence missing; sovereign issuer identity alone insufficient. | BLOCKED |"
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Privacy/data | Article 16 in-country **availability** must be satisfied; broader storage/transfer legal interpretation and institution-specific hosting evidence missing. | BLOCKED |"
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Maintainability | Effective-dated regulatory versioning and no silent amendment substitutions required. | DESIGN ONLY |"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Auditor evidence | Original R-2021 amendment texts, signed source custody, publication chain and institution sign-offs absent. | BLOCKED |"
+        },
+        {
+          "line": 15,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Quality conclusion:** BC is a safe research checkpoint only. WP-ACC-005 remains OPEN / P0 BLOCKED; DoR FAIL. Do not manufacture a regulator-certified capital or sovereign-security policy from the 2021 review's summary. Existing P0s (including incomplete 02/25 and PCEC approval) are unchanged. No banking tests, penetration tests, DR tests, security scans or"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BC/README.md",
+      "git_blob_sha": "d112f5f635923e5cecb4afa1087fcb9360a636d7",
+      "sha256": "d4c7618e99b12e1a096af94eb5e413f6dc1f94d327999989229a5b4a7102997b",
+      "bytes": 3478,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Date:** 2026-11-02. **Predecessor:** BB, verified on remote main before work. **Phase:** 4 — Accounting Core / Financial Integrity. **Active:** WP-ACC-005 OPEN / P0 BLOCKED. Last completed WP-ACC-004 is inherited, not independently reaudited."
+        },
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "1. An **official BEAC-hosted 2021 financial stability review** explicitly identifies **COBAC R-2021/01 amending R-2010/01** (risk coverage) and **R-2021/02 amending R-2010/02** (risk concentration/division). The review describes a **conditional**, not automatic, possibility of 0% weighting for certain State-issued securities where a secure repayment mechanis"
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "4. Source custody and complete clause-level regulatory applicability remain open. No banking code, financial policy activation, tests or certifications."
+        },
+        {
+          "line": 14,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Add IT-risk annex requirements as **cross-domain design dependencies**, not completed compliance or a new closed work package."
+        },
+        {
+          "line": 17,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint BD: obtain issuer-authenticated complete COBAC R-2021/01 and R-2021/02 texts, subsequent amendment chain and qualified applicability interpretation for R-2010/01/02/03 and R-2016/03; authenticate COBAC R-2024/01 Article 41 transition and Article 16 territorial availability requirements; obtain institution-approved"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BC",
+    "date": "2026-11-02",
+    "previous": "BB",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited; not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "new_findings": [
+      "Official BEAC 2021 review confirms R-2021/01 amends R-2010/01",
+      "Official BEAC 2021 review confirms R-2021/02 amends R-2010/02",
+      "0% sovereign-security weighting described as conditional on secured repayment mechanism, exact clauses missing",
+      "COBAC 2024 annual annex contains R-2024/01 Article 16 territorial data availability and Arts22-40 security/DR/data controls",
+      "R-2024/01 Article41 formal 2025-01-01 commencement vs transitional 2026 dates in report narrative; do not collapse"
+    ],
+    "new_acceptance_scenarios_specified": 15,
+    "acceptance_scenarios_executed": 0,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "regulatory_requests_transmitted": 0,
+    "original_issuer_binaries_retained": 0,
+    "original_issuer_hashes_computed": 0,
+    "p0_gaps_closed": 0,
+    "canonical_next_exact_task": "WP-ACC-005 — Checkpoint BD: acquire signed full COBAC R-2021/01 and R-2021/02 texts and subsequent amendments, current R-2010/01/02/03 and R-2016/03 applicability, R-2024/01 Article 41 transition and Article 16 territorial interpretation; secure bank-approved PCEC and prudential mappings and outstanding 01/25–02/25 publication/court/settlement evidence. Preserve P0 hold."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 166"
+}
