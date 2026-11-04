@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 173,
+  "checkpoint": "BK",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "4da1b6c4210196ad5c33d523a9940017e55a2c6c3f58a036e2c743330eafa49a",
+      "crc32": "47195d06",
+      "bytes": 7555
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "9c7983599ac316012261fee86a8079750cf774f19fceafa936353dd0f62dc69f",
+      "crc32": "89b40fd8",
+      "bytes": 17548
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BK/CONTINUATION_STATE.json",
+      "sha256": "360aa792973c7c4828d74660e0d011941c5ef3f77a130a459e5cb066562c1aaf",
+      "crc32": "4298ac22",
+      "bytes": 1691
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BK/CONTROL_AND_TEST_DESIGN.md",
+      "sha256": "9a0abea7e28b8794d3b8300ce5382982621b1dd746f445c08d1d90bafc54902c",
+      "crc32": "8abbac56",
+      "bytes": 5613
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BK/EXECUTION_REPORT.md",
+      "sha256": "4b3343687fc28e2eaa7ae5d26588ac3dded27f8e5c9a5051b0092d9f1bc2acc3",
+      "crc32": "b00724c8",
+      "bytes": 1865
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BK/QUALITY_REVIEW.md",
+      "sha256": "47bcc680252c7c6f723e3401f5b53a2aa07fafcc08af723a88e765b98229a129",
+      "crc32": "5a2af66c",
+      "bytes": 2464
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BK/README.md",
+      "sha256": "1aada15bb191bd2d7d6614345bc65fc527d0838869e0b6090ba35c54c50d3ffd",
+      "crc32": "d73e470a",
+      "bytes": 4052
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BK/REGULATORY_CONFLICT_AND_GATE_REGISTER.json",
+      "sha256": "8ceae220273ed7edd14dbe07ebb366a8e7fb4379debe2adb50bec5dfc8a0ea34",
+      "crc32": "a1314959",
+      "bytes": 3995
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BK/SOURCE_AND_AUTHORITY_DELTA.md",
+      "sha256": "3dd121697c7b845043b96c80d0d056f9cf67a8e547729efe837ac0bebbaa4c6b",
+      "crc32": "0ac3a362",
+      "bytes": 4868
+    }
+  ]
+}

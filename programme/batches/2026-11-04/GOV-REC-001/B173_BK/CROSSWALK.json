@@ -1,0 +1,373 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 173,
+  "checkpoint": "BK",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/BK/CONTINUATION_STATE.json",
+      "git_blob_sha": "aa4eb9de5c9c5435e9e0b22764cbcf5fb8e72b96",
+      "sha256": "360aa792973c7c4828d74660e0d011941c5ef3f77a130a459e5cb066562c1aaf",
+      "bytes": 1691,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_transmitted\": 0,"
+        },
+        {
+          "line": 26,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"next_exact_task\": \"WP-ACC-005 — Checkpoint BL: obtain signed COBAC rectification/interpretation of D-2025/328 Article 2 (R-2020/02 vs R-2020/01) and 37/36 discrepancy; obtain issuer-authenticated R-2020/01 and R-2020/02, subsequent amendments, original bytes/hashes/publication/notification, Article 7 precise quotity and bank-specific eligibility decisions; "
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BK/CONTROL_AND_TEST_DESIGN.md",
+      "git_blob_sha": "1b01e8aca95bb0a4df45aabc4a640180b7238286",
+      "sha256": "9a0abea7e28b8794d3b8300ce5382982621b1dd746f445c08d1d90bafc54902c",
+      "bytes": 5613,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "# BK — Proposed non-executable regulatory entitlement and assurance design"
+        },
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Design only; no production implementation, no signed ADR, no regulatory policy activation.**"
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- `RegulatoryAuthority`: immutable source custody, article-level provenance, publication, effective intervals, amendments, issuer corrections, evidence status, legal interpretations."
+        },
+        {
+          "line": 11,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- `RegulatoryReporting`: derived auditable projection, never an authoritative posting system."
+        },
+        {
+          "line": 22,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Proposed API boundaries:** `POST /v1/regulatory/evidence` accepts source reference only into QUARANTINED pending hash and review; `POST /v1/regulatory/rosters/{id}/reconcile` produces an immutable discrepancy report, never silently edits a count; `POST /v1/risk/exposure-assessments` defaults to STANDARD_NO_RELIEF if any gate is absent; `POST /v1/regulatory"
+        },
+        {
+          "line": 24,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Events (proposed):** `RegulatorySourceVerified`, `RegulatoryConflictRaised`, `IssuerCorrectionRecorded`, `AnnualRosterApproved`, `InstitutionEligibilityGranted`, `InstitutionEligibilityRevoked`, `ExposureAssessmentProduced`. No event implies settlement or GL posting. Use transactional outbox/inbox and replay-safe projections only after implementation DoR."
+        },
+        {
+          "line": 29,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Negative acceptance scenarios — specified, NOT executed"
+        },
+        {
+          "line": 36,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "7. Evidence is only a third-party reproduction without original custody: deny regulatory promotion."
+        },
+        {
+          "line": 47,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "18. Counterparty linked-group aggregation is incomplete: deny risk treatment pending verified group scope."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BK/EXECUTION_REPORT.md",
+      "git_blob_sha": "bc0433d85cead5c0f1c89b1bf2824e5019df668b",
+      "sha256": "4b3343687fc28e2eaa7ae5d26588ac3dded27f8e5c9a5051b0092d9f1bc2acc3",
+      "bytes": 1865,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Work packages attempted 1; completed 0; kept open 1; blocked from closure 1; dependent packages attempted 0.** Work package WP-ACC-005 remains OPEN/P0 BLOCKED. Last completed WP-ACC-004 inherited/not independently reaudited."
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Engineering:** clause-level provenance/contradiction register; proposed domain/API/event/state/security/AML/accounting boundaries; 18 negative acceptance scenarios **specified, not executed**; multidisciplinary review. No approved ADR or certification."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BK/QUALITY_REVIEW.md",
+      "git_blob_sha": "70913c04e4c5777de9df112f9ff08f75513c1f28",
+      "sha256": "47bcc680252c7c6f723e3401f5b53a2aa07fafcc08af723a88e765b98229a129",
+      "bytes": 2464,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Regulatory/legal | BLOCKED | Signed issuer correction of R-2020/02 citation, annual roster discrepancy, amendment/publication chain |"
+        },
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Financial/accounting/CFO | BLOCKED | Bank-approved PCEC mapping; no ledger side effects from prudential labels |"
+        },
+        {
+          "line": 7,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Credit/prudential risk | BLOCKED | R-2020/01 Article 7 formula, bank-side eligibility, eligible exposure perimeter and current amendments |"
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Architecture/domain | DESIGN OPEN | RegulatoryAuthority vs CreditRiskPolicy vs AccountingCore boundaries proposed, not approved ADR |"
+        },
+        {
+          "line": 13,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Payments/settlement | BLOCKED/OUT OF SCOPE | No posting or settlement from eligibility; unresolved 01/25–02/25 evidence |"
+        },
+        {
+          "line": 15,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "| Testability/observability | NOT EXECUTED | 18 negative scenarios specified; 0 executed; no test harness |"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Auditor/regulator evidence | BLOCKED | Signed sources, publication chain, institution approvals, verifiable hashes |"
+        },
+        {
+          "line": 22,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**Disposition:** WP-ACC-005 OPEN/P0 BLOCKED. DoR FAIL. No P0 closed; no production code, banking tests, security scans or external regulator requests. A safe research checkpoint can be committed, but dependent financial implementation cannot start."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BK/README.md",
+      "git_blob_sha": "7a9680651621cc0195a94e7f93a96914db52a5da",
+      "sha256": "1aada15bb191bd2d7d6614345bc65fc527d0838869e0b6090ba35c54c50d3ffd",
+      "bytes": 4052,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-02. Verified predecessor: BJ (GitHub `CONTINUATION_STATE.json` and contradiction register inspected). Phase 4 — Accounting Core / Financial Integrity. Last reported completed package: WP"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "# Checkpoint BK — WP-ACC-005 | Regulatory cross-instrument provenance and fail-closed large-exposure relief"
+        },
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Date: 2026-11-02. Verified predecessor: BJ (GitHub `CONTINUATION_STATE.json` and contradiction register inspected). Phase 4 — Accounting Core / Financial Integrity. Last reported completed package: WP-ACC-004 (inherited, not reaudited). Active package: WP-ACC-005 OPEN/P0 BLOCKED."
+        },
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "The text of **two different 15 April 2020 COBAC regulations** was read through issuer-formatted reproductions (not authenticated issuer originals): R-2020/01 amends R-2010/02 on large exposures; R-2020/02 governs appointment/remuneration of provisional administrators and liquidators. This materially strengthens the earlier BJ concern: Article 2 of government"
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Do not auto-activate 2026 preferential large-exposure treatment. Keep `D-2025/328` as unapproved reference evidence with a conflicting roster count (37 in recitals, 36 enumerated), conflicting cross-instrument reference, uncertain precise reduction semantics, unverified original bytes, no signed issuer rectification, no bank-specific authorization and no ban"
+        },
+        {
+          "line": 13,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Government-hosted decision: https://www.finances.gouv.cg/fr/download/file/fid/9493 — text read through web PDF index; original binary and SHA-256 not retained; page-image/signature authentication incomplete."
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Official Republic of Congo regulatory catalogue lists R-2020/01: https://www.dgifn.cg/index.php/texte-reglementaires/ — search index observed, live page returned 403."
+        },
+        {
+          "line": 20,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "See `SOURCE_AND_AUTHORITY_DELTA.md`, `REGULATORY_CONFLICT_AND_GATE_REGISTER.json`, `CONTROL_AND_TEST_DESIGN.md`, `QUALITY_REVIEW.md`, `CONTINUATION_STATE.json`, `EXECUTION_REPORT.md`."
+        },
+        {
+          "line": 23,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "WP-ACC-005 — Checkpoint BL: acquire issuer-authenticated rectification or written interpretation of D-2025/328's Article 2 cross-reference and 37/36 discrepancy; obtain original signed R-2020/01/R-2020/02 and later amendments, confirm precise Article 7 quotity semantics and institution-specific COBAC eligibility, retain original bytes/hashes/notification/eff"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BK/REGULATORY_CONFLICT_AND_GATE_REGISTER.json",
+      "git_blob_sha": "2ba69187f06843f7d3c49b22f10ebf200c0cec5c",
+      "sha256": "8ceae220273ed7edd14dbe07ebb366a8e7fb4379debe2adb50bec5dfc8a0ea34",
+      "bytes": 3995,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 inherited, not independently reaudited\""
+        },
+        {
+          "line": 74,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"reason\": \"Quotity reduction scope/formula and subsequent amendments not certified\","
+        },
+        {
+          "line": 88,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"ROSTER_COMPLETE\","
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/BK/SOURCE_AND_AUTHORITY_DELTA.md",
+      "git_blob_sha": "2572cea391a0743fa9c551597d0a3c21261bc463",
+      "sha256": "3dd121697c7b845043b96c80d0d056f9cf67a8e547729efe837ac0bebbaa4c6b",
+      "bytes": 4868,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "# BK — Evidence and regulatory authority delta (2026-11-02)"
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**BK-E02 — R-2020/02**: A different issuer-formatted PDF reproduction states that R-2020/02 governs appointment and remuneration of provisional administrators and liquidators. Its Article 7 addresses liquidator selection, not exposure quotities. Thus the R-2020/02 reference in D-2025/328 Article 2 is materially inconsistent with the actual subject and Articl"
+        },
+        {
+          "line": 14,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "## New or refined unresolved issues"
+        },
+        {
+          "line": 17,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "3. **BK-C03 P0 candidate (refines BJ-C01):** Recital 37 vs Article 1 list 36; independent press agrees 36 but does not prove completeness."
+        },
+        {
+          "line": 18,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "4. **BK-C04 P0 candidate:** Quotity-reduction language must not be conflated with risk weight, provision, loan principal, capital ratio denominator, or regulatory single-name limit; current exact formula/eligible instruments require regulator and bank approval."
+        },
+        {
+          "line": 25,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Incomplete 02/25 printed page 10 and Articles 23–26; separate certified 01/25 and 02/25 judicial records and Official Bulletin publication chain; original COBAC–MINFI correspondence; institution-approved PCEC/settlement mapping; capital-transition R-2025/02 Articles 4/6/7; complete R-2021/01–02 and subsequent amendments; COBAC 2025 report body. None closed i"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "BK",
+    "date": "2026-11-02",
+    "previous": "BJ",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "definition_of_ready": "FAIL",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "security_scans_executed": 0,
+    "regulatory_requests_transmitted": 0,
+    "p0_gaps_closed": 0,
+    "new_negative_acceptance_scenarios_specified": 18,
+    "new_evidence": "R-2020/01 Article 7 and R-2020/02 Articles 1/7 read via separate issuer-formatted third-party reproductions; D-2025/328 Article 2 cross-reference is substantively inconsistent, not just unverified; R-2020/01 introduces beneficiary bank financial-condition eligibility; 36 enumerated corroborated by secondary press, 37 recital still uncorrected",
+    "original_pdf_binary_acquired": false,
+    "sha256_verified": false,
+    "issuer_correction_obtained": false,
+    "bank_specific_cobac_eligibility_verified": false,
+    "next_exact_task": "WP-ACC-005 — Checkpoint BL: obtain signed COBAC rectification/interpretation of D-2025/328 Article 2 (R-2020/02 vs R-2020/01) and 37/36 discrepancy; obtain issuer-authenticated R-2020/01 and R-2020/02, subsequent amendments, original bytes/hashes/publication/notification, Article 7 precise quotity and bank-specific eligibility decisions; continue PCEC and 01/25–02/25 source/judicial/settlement evidence. Preserve P0 hold."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 7,
+    "read": 7,
+    "sha_matched": 7
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 174"
+}
