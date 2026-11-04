@@ -1,0 +1,8 @@
+{
+  "attempted": 1,
+  "completed": 0,
+  "open": 1,
+  "blocked": 0,
+  "design_delivered": 1,
+  "next_exact_task": "SEC-TENANT-ROUTING-001: verify OIDC/JWKS bank-membership gateway design and build synthetic negative-test harness only after bounded DoR review"
+}

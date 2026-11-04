@@ -1,0 +1,12 @@
+{
+  "id": "SEC-TENANT-ROUTING-001",
+  "status": "DESIGN_DELIVERED_REVIEW_OPEN",
+  "negative_tests": 15,
+  "previously_executed": [
+    "T07",
+    "T12"
+  ],
+  "new_executed": [],
+  "production_DOR": "NOT_MET",
+  "next_exact_task": "SEC-TENANT-ROUTING-001: verify OIDC/JWKS bank-membership gateway design and build synthetic negative-test harness only after bounded DoR review"
+}

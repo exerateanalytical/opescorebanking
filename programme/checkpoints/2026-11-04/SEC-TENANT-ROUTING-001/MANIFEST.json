@@ -1,0 +1,20 @@
+{
+  "source_commit": "c73730a5687f19c7cf5c3e51285477a0b2780a03",
+  "entries": [
+    {
+      "path": "SPEC.md",
+      "bytes": 2688,
+      "crc32": "dc59a21c"
+    },
+    {
+      "path": "CONTRACT.json",
+      "bytes": 379,
+      "crc32": "42d7abf3"
+    },
+    {
+      "path": "CONTINUATION.json",
+      "bytes": 261,
+      "crc32": "f55a54b9"
+    }
+  ]
+}
