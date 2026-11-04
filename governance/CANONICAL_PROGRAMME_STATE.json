@@ -40,7 +40,7 @@
   "last_local_archive_integrity_validated_batch_id": 210,
   "last_observed_delivery_batch_id": 210,
   "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
-  "next_exact_task": "Formally specify revocation versus irreversible command ordering and authoritative lease/fencing safety/liveness properties; prepare deterministic synthetic concurrency harness for T43/T47; do not claim test execution.",
+  "next_exact_task": "Select and threat-model bank-local versus distributed fence authority topology; specify global revocation acknowledgement protocol and deterministic synthetic T43/T47 executable harness.",
   "next_exact_task_id": "SEC-TENANT-ROUTING-001",
   "original_archive_custody_status": "NOT_VERIFIED",
   "original_archive_custody_verified": false,
@@ -89,8 +89,8 @@
   "security_active_wp": {
     "id": "SEC-TENANT-ROUTING-001",
     "status": "IN_PROGRESS_BLOCKED_FROM_PRODUCTION",
-    "latest_review": "governance/reviews/SEC-TENANT-ROUTING-001_SECURITY_REVIEW_05_2026-11-04.md",
-    "review_number": 5,
+    "latest_review": "governance/reviews/SEC-TENANT-ROUTING-001_FORMAL_ORDERING_MODEL_06_2026-11-04.md",
+    "review_number": 6,
     "p0": [
       "P0-SEC-01",
       "P0-SEC-02"
