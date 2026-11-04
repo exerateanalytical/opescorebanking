@@ -1,0 +1,413 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 154,
+  "checkpoint": "AR",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/AR/ACCEPTANCE_SCENARIOS.json",
+      "git_blob_sha": "4356286924c833084c84fd74b11f026290a21b18",
+      "sha256": "4e38979d30b27a36576938f99d86ab4902c0edb34915d7d460e1b31f1520f7a0",
+      "bytes": 3269,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"expected\": \"deny policy activation; record source gate unresolved\","
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"given\": \"An online article claims 2025-09-01 effective date but Bulletin issue/page missing\","
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"given\": \"Two incomplete PDFs reproduce the same printed-page gap\","
+        },
+        {
+          "line": 17,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"expected\": \"do not mark completeness by source count\","
+        },
+        {
+          "line": 28,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"given\": \"Court petition exists for 01/25 without an operative certified order\","
+        },
+        {
+          "line": 59,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"expected\": \"remain unresolved; no finality, no duplicate retry\","
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AR/CONTINUATION_STATE.json",
+      "git_blob_sha": "927f60ea7bc5d4a8dd063a4a5501e00b8fee838c",
+      "sha256": "6c9c3e70c12f24ca0bb52995d12826a6208e49521e81983f77edf0ea65c63b81",
+      "bytes": 1373,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 5,
+          "excerpt": "\"phase\": \"Phase 4 — Accounting Core / Financial Integrity\","
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"last_completed_work_package\": \"WP-ACC-004 (inherited, not independently reaudited)\","
+        },
+        {
+          "line": 8,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"status\": \"OPEN_P0_BLOCKED\","
+        },
+        {
+          "line": 10,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"work_packages_completed\": 0,"
+        },
+        {
+          "line": 12,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"work_packages_blocked_from_closure\": 1,"
+        },
+        {
+          "line": 16,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"regulatory_requests_sent\": 0,"
+        },
+        {
+          "line": 17,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"definition_of_ready\": \"FAIL\","
+        },
+        {
+          "line": 22,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"canonical_next_exact_task\": \"WP-ACC-005 — Checkpoint AS: authenticate CEMAC Bulletin Officiel publication references and complete signed 01/25 and 02/25 (including missing printed page 10), independent certified court orders, COBAC–MINFI original letter, June 2026 implementing text status and bank-specific PCEC/settlement approvals; preserve policy hold and"
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AR/EVIDENCE_REQUESTS_FR.md",
+      "git_blob_sha": "76b8609069e302ed296a97f2534188105ea5c853",
+      "sha256": "dfd95d63558a835bc446049e841fa97bb260d0e1f46eafc6d54537c92705aace",
+      "bytes": 3121,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 9,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## To CEMAC Court registry, via authorized counsel"
+        },
+        {
+          "line": 16,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "For every received item: issuer confirmation through a separate verified channel, SHA-256, original binary retention, page/annex inventory, acquisition date, access controls, evidence version, reviewer, legal opinion and discrepancy register."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AR/EXECUTION_REPORT.md",
+      "git_blob_sha": "c24571fb7dbc2ce53de6c05ee169e46df8002a7c",
+      "sha256": "fce34c11218f057d2946897fb73636cec3cfe452c5f129c4e4206ab4141d22e9",
+      "bytes": 1378,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Phase 4, WP-ACC-005. Remote predecessor AQ inspected and verified; no later AR/AS continuation state existed at beginning of run. **Attempted 1; completed 0; kept open 1; blocked from closure 1; depen"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Phase 4, WP-ACC-005. Remote predecessor AQ inspected and verified; no later AR/AS continuation state existed at beginning of run. **Attempted 1; completed 0; kept open 1; blocked from closure 1; dependent packages attempted 0.**"
+        },
+        {
+          "line": 3,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "New primary research: revised CEMAC Treaty Articles 40–44 establish instrument taxonomy, direct applicability and the Article 43 publication/effective-date evidence chain. This **does not** establish actual publication or entry into force of 01/25/02/25. Official CEMAC catalogue and BEAC COBAC communiqué inspected; no complete authenticated 02/25, court orde"
+        },
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**Production code 0; banking tests 0; security scans 0; regulatory requests sent 0; DoR FAIL.** No P0 gap closed."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "**NEXT EXACT TASK:** WP-ACC-005 — Checkpoint AS: obtain certified Bulletin Officiel publication/issue/page evidence and complete 02/25 printed page 10, certified separate court dispositions, original COBAC–MINFI correspondence, final June 2026 adoption evidence, bank-approved PCEC/settlement mapping; no executable policy activation."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AR/GAP_DELTA.md",
+      "git_blob_sha": "0613661726e3462119b8c62357c3799bc6af5e82",
+      "sha256": "5471d25cbb1e98a2dcb52145012b3f0ee66f62bd96927edb905a86c63c41393c",
+      "bytes": 1761,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **GAP-ACC-057** remains P0 OPEN: issuer-authenticated complete 02/25 including printed page 10, Article 23 continuation and Articles 24–26 absent."
+        },
+        {
+          "line": 5,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **GAP-ACC-067** is **pre-existing in historical AC/AD**, concerning current consolidated procedural status and amendment lineage of the 2009 CEMAC Court Convention. Preserve its prior P1/conditional-P0 classification; **do not reassign its ID**."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AR/POLICY_AUTHORITY_GATE_SPEC.md",
+      "git_blob_sha": "931a6e72807676e1553513d27f0304cf6ddfed17",
+      "sha256": "f108b30df3b9950b64d41824fea27ac2f1ff25e8039cd61ed12d5851e5dcedc8",
+      "bytes": 4423,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "# AR — Non-executable regulatory policy authority gate (proposed design)"
+        },
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Regulatory Evidence Registry owns immutable received artefact hashes, issuer, provenance, publication record and versions. Legal Applicability owns separately signed jurisdiction/institution-specific opinions and certified court effects. Policy Governance owns proposed rules and approval workflow. Dormancy owns **classification only**. Accounting Core owns *"
+        },
+        {
+          "line": 7,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Any unresolved contradiction, missing page, unverified legal effect or expired institution-specific sign-off routes to `ON_HOLD`; a newly authenticated stay/amendment triggers `REASSESSMENT_REQUIRED` without rewriting historical policies or posted journals. `RETIRED` and `SUPERSEDED` are terminal for new instructions but retain audit history."
+        },
+        {
+          "line": 12,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- `LegalDisposition`: independent instrument ID and case ID, court, order type, signed order hash, scope, operative date, service/appeal status, counsel assessment; never infer effects across 01/25 and 02/25."
+        },
+        {
+          "line": 24,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Institution and licence profile; source chain; certified court effects; state machine failure/recovery; RBAC/maker-checker; AML/fraud and claimant proof; ledger templates; API/event contracts; retention; DR/reconciliation; executable negative tests; audit reconstruction. All currently incomplete for WP-ACC-005."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AR/PRIMARY_LAW_ANALYSIS.md",
+      "git_blob_sha": "66abbb08fde7f10b4c9cc99641eb8f641567cb23",
+      "sha256": "26737e0dba55cf2d9f87aaef11cd660866f2f0369ab9a6061ea06654341c0007",
+      "bytes": 3116,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 4,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **Article 40:** the Council of Ministers and UMAC Ministerial Committee may adopt regulations, framework regulations and directives, and make decisions/recommendations. This is an instrument-type/issuer gate, not proof that any particular 2025 regulation is complete or published."
+        },
+        {
+          "line": 6,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- **Article 43:** regulations are published in the Community Official Bulletin and also in member-state Official Journals; entry into force is the date they specify or, absent such date, the twentieth day following publication. **Publication provenance, text completeness and any specified date must be independently recorded**. The provision does not itself p"
+        },
+        {
+          "line": 9,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Earlier AQ concentrated on the missing printed page 10, court cases and contradictory inactivity thresholds. AR additionally requires a **certified issue/page reference from the CEMAC Bulletin Officiel and relevant national Journal Officiel publication** for each instrument, together with a complete signed copy and any amendments/errata. A secondary article "
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AR/PUBLICATION_CHAIN_REGISTER.json",
+      "git_blob_sha": "6fa8d21058957eedc65daffa90448eeade87d690",
+      "sha256": "0d517f79718af18153832b8a49f1ff6d0ff3611e11faf97be8d07593cda34767",
+      "bytes": 2051,
+      "extension": "json",
+      "json_valid": true,
+      "work_package_mentions": [],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 21,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"claim_source\": \"secondary and incomplete reproductions; not issuer certified\","
+        },
+        {
+          "line": 28,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"court_case_id\": \"UNKNOWN\","
+        },
+        {
+          "line": 38,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"claim_source\": \"incomplete third-party reproductions\","
+        },
+        {
+          "line": 40,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"missing_printed_page\": \"10 (Article 23 continuation and Articles 24–26)\","
+        },
+        {
+          "line": 46,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "\"court_case_id\": \"UNKNOWN\","
+        },
+        {
+          "line": 52,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "\"rule\": \"UNKNOWN means evidence not obtained by programme; never assert invalidity, repeal, suspension or non-publication from absence.\""
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AR/QUALITY_REVIEW.md",
+      "git_blob_sha": "b70c412d2555fdf6920d725cda4d828430b87aff",
+      "sha256": "5218086809bacf54b7b7971b5993f7587762ffd55fcb54a18b73b7769ed25adc",
+      "bytes": 2110,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Outcome: **WP-ACC-005 OPEN / P0 BLOCKED; Definition of Ready FAIL**."
+        },
+        {
+          "line": 5,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Regulatory/legal | FAIL: Article 43 creates publication-chain evidence need; official issue/page and complete signed 02/25 absent; court effects unresolved. |"
+        },
+        {
+          "line": 15,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Observability/auditability | OPEN: immutable evidence chain and reconstructable approvals proposed; not verified in system. |"
+        },
+        {
+          "line": 18,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Regulator/auditor evidence | FAIL: signed original, Bulletin proof, court dispositions and CFO approvals missing. |"
+        },
+        {
+          "line": 19,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Do not mark WP complete; do not advance dependent work. This review adds no compliance or certification claim."
+        }
+      ]
+    },
+    {
+      "source_path": "regulatory/checkpoints/AR/README.md",
+      "git_blob_sha": "2dc2473a7cc10e3c736a4c3440885151c7ac3ed1",
+      "sha256": "7fe5a06882d8f733c04aa6a421fe3f28e1451e33d499fbe53bd1612a71ebfeeb",
+      "bytes": 1860,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-004",
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 2,
+          "excerpt": "Date: 2026-11-01. Predecessor: AQ (remote continuation state read). Phase 4 Accounting Core / Financial Integrity. Last completed WP: WP-ACC-004 (inherited, not reaudited)."
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 2,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "Date: 2026-11-01. Predecessor: AQ (remote continuation state read). Phase 4 Accounting Core / Financial Integrity. Last completed WP: WP-ACC-004 (inherited, not reaudited)."
+        },
+        {
+          "line": 4,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "This checkpoint adds a **primary-law publication/effective-date evidence gate** based on Articles 40–44 of the CEMAC revised Treaty, a publication-chain register for 01/25 and 02/25, a non-executable authority-to-policy promotion specification, targeted French evidence requests and new negative acceptance cases. It does **not** reconstruct missing Article 23"
+        },
+        {
+          "line": 6,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "WP-ACC-005 remains OPEN / P0 BLOCKED. The lack of authenticated page 10, separate court dispositions, issuer publication proof, original COBAC–MINFI correspondence and bank-approved PCEC/settlement mappings prevents implementation. Preserve immutable double-entry, no status-driven posting, no automatic transfers."
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Incomplete third-party reproduction of 02/25: https://legecam.cm/wp-content/uploads/2025/08/Reglement-N%C2%B002_traitement-comptes-inactifs-des-avoirs-en-desherence.pdf (AQ evidence; missing printed page 10)."
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": {
+    "checkpoint": "AR",
+    "date": "2026-11-01",
+    "previous": "AQ",
+    "phase": "Phase 4 — Accounting Core / Financial Integrity",
+    "last_completed_work_package": "WP-ACC-004 (inherited, not independently reaudited)",
+    "active_work_package": "WP-ACC-005",
+    "status": "OPEN_P0_BLOCKED",
+    "work_packages_attempted": 1,
+    "work_packages_completed": 0,
+    "work_packages_kept_open": 1,
+    "work_packages_blocked_from_closure": 1,
+    "dependent_packages_attempted": 0,
+    "banking_tests_executed": 0,
+    "production_code_written": 0,
+    "regulatory_requests_sent": 0,
+    "definition_of_ready": "FAIL",
+    "new_primary_finding": "CEMAC revised Treaty Articles 40–44; Article 43 publication/effective-date proof is a distinct evidence gate",
+    "new_gap": "GAP-ACC-069 candidate P0 publication-chain evidence (IDs 067 and 068 already exist in historical archive)",
+    "new_p1_gap": "GAP-ACC-070 proposed evidence/implementation design",
+    "acceptance_scenarios_specified": 14,
+    "canonical_next_exact_task": "WP-ACC-005 — Checkpoint AS: authenticate CEMAC Bulletin Officiel publication references and complete signed 01/25 and 02/25 (including missing printed page 10), independent certified court orders, COBAC–MINFI original letter, June 2026 implementing text status and bank-specific PCEC/settlement approvals; preserve policy hold and do not implement financial posting."
+  },
+  "unique_historical_wp_mentions": [
+    "WP-ACC-004",
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 10,
+    "read": 10,
+    "sha_matched": 10
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 155"
+}

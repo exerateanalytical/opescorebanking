@@ -1,0 +1,83 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 154,
+  "checkpoint": "AR",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "c49ceae16b6c62d2611c0b236b6a08799bdef181b7b5b907cb6fe871dd30dd3e",
+      "crc32": "14d5b17b",
+      "bytes": 8613
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "f24df661bd11d8137e3239f40774dc8639e2be68e45a4d0206fb716d6b1d58fe",
+      "crc32": "e7935159",
+      "bytes": 18764
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AR/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "4e38979d30b27a36576938f99d86ab4902c0edb34915d7d460e1b31f1520f7a0",
+      "crc32": "7fd967ad",
+      "bytes": 3269
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AR/CONTINUATION_STATE.json",
+      "sha256": "6c9c3e70c12f24ca0bb52995d12826a6208e49521e81983f77edf0ea65c63b81",
+      "crc32": "968d3bba",
+      "bytes": 1373
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AR/EVIDENCE_REQUESTS_FR.md",
+      "sha256": "dfd95d63558a835bc446049e841fa97bb260d0e1f46eafc6d54537c92705aace",
+      "crc32": "0f51a9ab",
+      "bytes": 3121
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AR/EXECUTION_REPORT.md",
+      "sha256": "fce34c11218f057d2946897fb73636cec3cfe452c5f129c4e4206ab4141d22e9",
+      "crc32": "1149672d",
+      "bytes": 1378
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AR/GAP_DELTA.md",
+      "sha256": "5471d25cbb1e98a2dcb52145012b3f0ee66f62bd96927edb905a86c63c41393c",
+      "crc32": "8339ecc3",
+      "bytes": 1761
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AR/POLICY_AUTHORITY_GATE_SPEC.md",
+      "sha256": "f108b30df3b9950b64d41824fea27ac2f1ff25e8039cd61ed12d5851e5dcedc8",
+      "crc32": "8882e46d",
+      "bytes": 4423
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AR/PRIMARY_LAW_ANALYSIS.md",
+      "sha256": "26737e0dba55cf2d9f87aaef11cd660866f2f0369ab9a6061ea06654341c0007",
+      "crc32": "f83add34",
+      "bytes": 3116
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AR/PUBLICATION_CHAIN_REGISTER.json",
+      "sha256": "0d517f79718af18153832b8a49f1ff6d0ff3611e11faf97be8d07593cda34767",
+      "crc32": "f8e59fba",
+      "bytes": 2051
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AR/QUALITY_REVIEW.md",
+      "sha256": "5218086809bacf54b7b7971b5993f7587762ffd55fcb54a18b73b7769ed25adc",
+      "crc32": "4a37b055",
+      "bytes": 2110
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AR/README.md",
+      "sha256": "7fe5a06882d8f733c04aa6a421fe3f28e1451e33d499fbe53bd1612a71ebfeeb",
+      "crc32": "c2b631fd",
+      "bytes": 1860
+    }
+  ]
+}
