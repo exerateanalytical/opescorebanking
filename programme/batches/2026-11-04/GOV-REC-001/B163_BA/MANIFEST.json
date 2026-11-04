@@ -1,0 +1,71 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 163,
+  "checkpoint": "BA",
+  "parent_wp": "GOV-REC-001",
+  "created_date": "2026-11-04",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "classification": "SOURCE_AUDIT_NOT_ACCEPTED_WP",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "8b7fb5191b1bf95ad8ab748b222b876a9745d29ab39ef43c8fb5cd735ff9d18a",
+      "crc32": "54a4c45e",
+      "bytes": 6439
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "edbcff4441f89ef2f9a04404b3345576c382dc5a417e123812f60aea74b13fbf",
+      "crc32": "787cf964",
+      "bytes": 15512
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BA/ACCEPTANCE_SCENARIOS.json",
+      "sha256": "ea4f419a38c9e7b7bcfa911661182fa4feb32564d59c16a93922bcaa94555cb6",
+      "crc32": "25c9edfe",
+      "bytes": 6285
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BA/CONTINUATION_STATE.json",
+      "sha256": "dfa80997f1f0ba7df0b5bf780a4c2990387e67a3640f59b9e72524d73fc6c0e9",
+      "crc32": "42fe3646",
+      "bytes": 1639
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BA/EXECUTION_REPORT.md",
+      "sha256": "69940ad0b845f9a124ff659f8a1257d217a4383b4c578191fabd227201bed527",
+      "crc32": "bd63344d",
+      "bytes": 2278
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BA/FINANCIAL_INTEGRITY_DECISIONS.md",
+      "sha256": "da841526ecd955a9a66358e4c8e206184af2c0022d0ddc25e441cc36d201848d",
+      "crc32": "effb84ee",
+      "bytes": 4647
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BA/PRIMARY_EVIDENCE_AND_CUSTODY.md",
+      "sha256": "9eb0a3b5c665f2c4da982b908355eb2491bc8e36edbabed8ca810c8dede6bf69",
+      "crc32": "c2661fc2",
+      "bytes": 4191
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BA/QUALITY_REVIEW.md",
+      "sha256": "f9ece263c0a7f66e1d1a8612359fc0245b6a7028ead46d3ff71dbd71ba273a83",
+      "crc32": "c3902575",
+      "bytes": 3407
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BA/README.md",
+      "sha256": "a4ab36b36948e83b5925fea990743d273a1d3a49bf4691aec0fba068ecb32df5",
+      "crc32": "f25a26e2",
+      "bytes": 3176
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/BA/SECURITIES_AMENDMENT_GRAPH.json",
+      "sha256": "970f761b5d4e22b35db2330104cbe9d074e8bf3c0ad24053271c4d3ab9e6c462",
+      "crc32": "98fbb796",
+      "bytes": 5269
+    }
+  ]
+}
