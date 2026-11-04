@@ -1,0 +1,3949 @@
+{
+  "schema": "opes.corebanking.git-commit-spine.audit.v1",
+  "date": "2026-11-04",
+  "pinned_head": "ea5f65843e97890218efc01ecbb6b5cc7bdb6425",
+  "seen_commits": 486,
+  "pages": [
+    {
+      "page": 1,
+      "count": 100,
+      "first_sha": "ea5f65843e97890218efc01ecbb6b5cc7bdb6425",
+      "last_sha": "acc86958e19da822aa7cb385ad6122a096203789"
+    },
+    {
+      "page": 2,
+      "count": 100,
+      "first_sha": "224696d084695f90917b925c6890cb4322af594f",
+      "last_sha": "561b5a1601f9324acc1a921d2a89bdb8c8e1a078"
+    },
+    {
+      "page": 3,
+      "count": 100,
+      "first_sha": "fdf78a9f1486b379d2e7dbfae0adf724f5232413",
+      "last_sha": "0e0c34c39b170e05e8ff3346903a42af1d8d5eec"
+    },
+    {
+      "page": 4,
+      "count": 100,
+      "first_sha": "03639cc85d6a5b1691a5e0f86ecd4c28aa5f4ba6",
+      "last_sha": "8f81134e73d1565982da5feac9ee77a25bd18054"
+    },
+    {
+      "page": 5,
+      "count": 86,
+      "first_sha": "c5c240edbae2cd2eb87a2d5d19f28bc18a2dfa22",
+      "last_sha": "2472f98130427a523f0bb0613abc1585eea5f4da"
+    },
+    {
+      "page": 6,
+      "count": 0
+    }
+  ],
+  "adjacency_mismatches": [],
+  "found_checkpoint_AN": {
+    "sha": "2472f98130427a523f0bb0613abc1585eea5f4da",
+    "parent_sha": null,
+    "date": "2026-10-20T16:58:59Z",
+    "message": "docs: record OPES Core Banking checkpoint AN status",
+    "page": 5,
+    "index": 85
+  },
+  "found_checkpoint_CT": {
+    "sha": "cd71c4fce3e246349399da7ec1009c90930f9596",
+    "parent_sha": "c3312c2e850ecf1a2021f6cd060a64341f595824",
+    "date": "2026-11-03T18:43:44Z",
+    "message": "docs(regulatory): checkpoint CT bulletin lineage evidence limits fail closed",
+    "page": 3,
+    "index": 33
+  },
+  "records": [
+    {
+      "sha": "ea5f65843e97890218efc01ecbb6b5cc7bdb6425",
+      "parent_sha": "83bd8883ccb6587593d4aeb5b4c718a308a5cbf0",
+      "date": "2026-11-04T02:14:56Z",
+      "message": "governance: parse CL–CT README historical predecessor assertions",
+      "page": 1,
+      "index": 0
+    },
+    {
+      "sha": "83bd8883ccb6587593d4aeb5b4c718a308a5cbf0",
+      "parent_sha": "2b5b415f8b37ee60a1d197bef4f330f22f0e7832",
+      "date": "2026-11-04T02:14:19Z",
+      "message": "governance: parse CC–CK README historical predecessor assertions",
+      "page": 1,
+      "index": 1
+    },
+    {
+      "sha": "2b5b415f8b37ee60a1d197bef4f330f22f0e7832",
+      "parent_sha": "e70ebca22c2c855a04c807dcdca02a6c4df70eee",
+      "date": "2026-11-04T02:12:23Z",
+      "message": "governance: source ledger reconciliation part 6",
+      "page": 1,
+      "index": 2
+    },
+    {
+      "sha": "e70ebca22c2c855a04c807dcdca02a6c4df70eee",
+      "parent_sha": "9722353daf555c31d8f12ea5a0e6286a420a27ce",
+      "date": "2026-11-04T02:11:47Z",
+      "message": "governance: source ledger reconciliation part 5",
+      "page": 1,
+      "index": 3
+    },
+    {
+      "sha": "9722353daf555c31d8f12ea5a0e6286a420a27ce",
+      "parent_sha": "44c6dd30ca7925c652334ca068a633d959576178",
+      "date": "2026-11-04T02:11:14Z",
+      "message": "governance: source ledger reconciliation part 4",
+      "page": 1,
+      "index": 4
+    },
+    {
+      "sha": "44c6dd30ca7925c652334ca068a633d959576178",
+      "parent_sha": "bd7d4fce3aef890a4be1b93a9ace945c29e6d3fe",
+      "date": "2026-11-04T02:10:36Z",
+      "message": "governance: source ledger reconciliation part 3",
+      "page": 1,
+      "index": 5
+    },
+    {
+      "sha": "bd7d4fce3aef890a4be1b93a9ace945c29e6d3fe",
+      "parent_sha": "5785e80d78732d17932f096d563d1b48656627a6",
+      "date": "2026-11-04T02:10:00Z",
+      "message": "governance: source ledger reconciliation part 2",
+      "page": 1,
+      "index": 6
+    },
+    {
+      "sha": "5785e80d78732d17932f096d563d1b48656627a6",
+      "parent_sha": "d4156ee9c5d10894569d805a1cc4126ce719f29e",
+      "date": "2026-11-04T02:09:25Z",
+      "message": "governance: source ledger reconciliation part 1",
+      "page": 1,
+      "index": 7
+    },
+    {
+      "sha": "d4156ee9c5d10894569d805a1cc4126ce719f29e",
+      "parent_sha": "0ac1ab680743a1fb84f8abe987a5cbbcfe203813",
+      "date": "2026-11-04T02:06:00Z",
+      "message": "GOV-REC-001 batch 209: audit CT checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 8
+    },
+    {
+      "sha": "0ac1ab680743a1fb84f8abe987a5cbbcfe203813",
+      "parent_sha": "44a7bf8a3f3b9131dc4dcfbb7c665a255f40d5d4",
+      "date": "2026-11-04T02:05:38Z",
+      "message": "GOV-REC-001 batch 208: audit CS checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 9
+    },
+    {
+      "sha": "44a7bf8a3f3b9131dc4dcfbb7c665a255f40d5d4",
+      "parent_sha": "0a3f7a1f49164ecb03efe4bc0401fed5282a4035",
+      "date": "2026-11-04T02:04:59Z",
+      "message": "GOV-REC-001 batch 207: audit CR checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 10
+    },
+    {
+      "sha": "0a3f7a1f49164ecb03efe4bc0401fed5282a4035",
+      "parent_sha": "45857f6c176bef8cb7a8ef6ef24e3b2cca7d52dc",
+      "date": "2026-11-04T02:04:36Z",
+      "message": "GOV-REC-001 batch 206: audit CQ checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 11
+    },
+    {
+      "sha": "45857f6c176bef8cb7a8ef6ef24e3b2cca7d52dc",
+      "parent_sha": "950f6d6517fd1af471049ad9dec3922572ee6f66",
+      "date": "2026-11-04T02:03:54Z",
+      "message": "GOV-REC-001 batch 205: audit CP checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 12
+    },
+    {
+      "sha": "950f6d6517fd1af471049ad9dec3922572ee6f66",
+      "parent_sha": "4e9c10b276523646176e0efb766c67a516a1f2b9",
+      "date": "2026-11-04T02:03:33Z",
+      "message": "GOV-REC-001 batch 204: audit CO checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 13
+    },
+    {
+      "sha": "4e9c10b276523646176e0efb766c67a516a1f2b9",
+      "parent_sha": "af3795166c84c9bead04e41fbcd495bff5a578ee",
+      "date": "2026-11-04T02:02:56Z",
+      "message": "GOV-REC-001 batch 203: audit CN checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 14
+    },
+    {
+      "sha": "af3795166c84c9bead04e41fbcd495bff5a578ee",
+      "parent_sha": "71d3d450f84b66265cfc38ce79619de6a2ec58e3",
+      "date": "2026-11-04T02:02:36Z",
+      "message": "GOV-REC-001 batch 202: audit CM checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 15
+    },
+    {
+      "sha": "71d3d450f84b66265cfc38ce79619de6a2ec58e3",
+      "parent_sha": "c008581b2cc99c80c5c6437b972499df6e7f103c",
+      "date": "2026-11-04T02:01:58Z",
+      "message": "GOV-REC-001 batch 201: audit CL checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 16
+    },
+    {
+      "sha": "c008581b2cc99c80c5c6437b972499df6e7f103c",
+      "parent_sha": "95d1c301cded4b2841424af0be92994ca5ff7175",
+      "date": "2026-11-04T02:01:38Z",
+      "message": "GOV-REC-001 batch 200: audit CK checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 17
+    },
+    {
+      "sha": "95d1c301cded4b2841424af0be92994ca5ff7175",
+      "parent_sha": "cb1639322bfa256fcdddd67f27a09c85175873e3",
+      "date": "2026-11-04T02:01:01Z",
+      "message": "GOV-REC-001 batch 199: audit CJ checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 18
+    },
+    {
+      "sha": "cb1639322bfa256fcdddd67f27a09c85175873e3",
+      "parent_sha": "f3f79baa1e93bd15cf083000807b857a58ab3627",
+      "date": "2026-11-04T02:00:41Z",
+      "message": "GOV-REC-001 batch 198: audit CI checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 19
+    },
+    {
+      "sha": "f3f79baa1e93bd15cf083000807b857a58ab3627",
+      "parent_sha": "e6f1ac159f9fff6d0352ca01a99c896778a59003",
+      "date": "2026-11-04T01:59:42Z",
+      "message": "GOV-REC-001 batch 197: audit CH checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 20
+    },
+    {
+      "sha": "e6f1ac159f9fff6d0352ca01a99c896778a59003",
+      "parent_sha": "25387a22c9dc5b8c98ddf358f8657d07c57aed48",
+      "date": "2026-11-04T01:59:22Z",
+      "message": "GOV-REC-001 batch 196: audit CG checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 21
+    },
+    {
+      "sha": "25387a22c9dc5b8c98ddf358f8657d07c57aed48",
+      "parent_sha": "0f573bc737655ec2b819563f1e1c3cdff47d69c5",
+      "date": "2026-11-04T01:58:47Z",
+      "message": "GOV-REC-001 batch 195: audit CF checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 22
+    },
+    {
+      "sha": "0f573bc737655ec2b819563f1e1c3cdff47d69c5",
+      "parent_sha": "e432968d9b8ac0dab1399189a62eeb7a84accea8",
+      "date": "2026-11-04T01:58:26Z",
+      "message": "GOV-REC-001 batch 194: audit CE checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 23
+    },
+    {
+      "sha": "e432968d9b8ac0dab1399189a62eeb7a84accea8",
+      "parent_sha": "74fb0a0914b742851ddf95aa9e1899f117fccb2d",
+      "date": "2026-11-04T01:57:47Z",
+      "message": "GOV-REC-001 batch 193: audit CD checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 24
+    },
+    {
+      "sha": "74fb0a0914b742851ddf95aa9e1899f117fccb2d",
+      "parent_sha": "34be4b34fc3857b8911f72d31c8bcc907ece00a1",
+      "date": "2026-11-04T01:57:26Z",
+      "message": "GOV-REC-001 batch 192: audit CC checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 25
+    },
+    {
+      "sha": "34be4b34fc3857b8911f72d31c8bcc907ece00a1",
+      "parent_sha": "284a7a94d3cc9e90de2d88a23a904b9b8db79080",
+      "date": "2026-11-04T01:56:45Z",
+      "message": "GOV-REC-001 batch 191: audit CB checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 26
+    },
+    {
+      "sha": "284a7a94d3cc9e90de2d88a23a904b9b8db79080",
+      "parent_sha": "2e953276d7938ff25c91a9f2ee61f89cc3bd7d44",
+      "date": "2026-11-04T01:55:58Z",
+      "message": "GOV-REC-001 batch 190: audit CA checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 27
+    },
+    {
+      "sha": "2e953276d7938ff25c91a9f2ee61f89cc3bd7d44",
+      "parent_sha": "97aca75a36c81574ddd2dabff9a9f107c9eb59ea",
+      "date": "2026-11-04T01:55:21Z",
+      "message": "GOV-REC-001 batch 189: audit BZ checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 28
+    },
+    {
+      "sha": "97aca75a36c81574ddd2dabff9a9f107c9eb59ea",
+      "parent_sha": "f0546dd6ccf4e0be57e5418e85024af3dc9ba1dc",
+      "date": "2026-11-04T01:54:42Z",
+      "message": "GOV-REC-001 batch 188: audit BY checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 29
+    },
+    {
+      "sha": "f0546dd6ccf4e0be57e5418e85024af3dc9ba1dc",
+      "parent_sha": "826abe73291fb3b4c6fc899482a56185d7d9a65b",
+      "date": "2026-11-04T01:53:55Z",
+      "message": "GOV-REC-001 batch 187: audit BX checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 30
+    },
+    {
+      "sha": "826abe73291fb3b4c6fc899482a56185d7d9a65b",
+      "parent_sha": "14e3cd4b5de28c7747db115b0ee558c966fa2e90",
+      "date": "2026-11-04T01:53:16Z",
+      "message": "GOV-REC-001 batch 186: audit BW checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 31
+    },
+    {
+      "sha": "14e3cd4b5de28c7747db115b0ee558c966fa2e90",
+      "parent_sha": "35624d3643ddb332d716aba64d534c227bc85488",
+      "date": "2026-11-04T01:52:38Z",
+      "message": "GOV-REC-001 batch 185: audit BV checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 32
+    },
+    {
+      "sha": "35624d3643ddb332d716aba64d534c227bc85488",
+      "parent_sha": "e112f681199db2572849931f4e972c4f936f76d5",
+      "date": "2026-11-04T01:51:58Z",
+      "message": "GOV-REC-001 batch 184: audit BU checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 33
+    },
+    {
+      "sha": "e112f681199db2572849931f4e972c4f936f76d5",
+      "parent_sha": "7d8f84ca6907edf363e9020fa477b325764d1cc3",
+      "date": "2026-11-04T01:51:15Z",
+      "message": "GOV-REC-001 batch 183: audit BT checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 34
+    },
+    {
+      "sha": "7d8f84ca6907edf363e9020fa477b325764d1cc3",
+      "parent_sha": "5179895d486e7033f8c139eb1daf3ebf817b68b5",
+      "date": "2026-11-04T01:50:39Z",
+      "message": "GOV-REC-001 batch 182: audit BS checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 35
+    },
+    {
+      "sha": "5179895d486e7033f8c139eb1daf3ebf817b68b5",
+      "parent_sha": "a844fb001dce4a8517e475ad46e10d5dc4f6393c",
+      "date": "2026-11-04T01:49:51Z",
+      "message": "GOV-REC-001 batch 181: audit AN checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 36
+    },
+    {
+      "sha": "a844fb001dce4a8517e475ad46e10d5dc4f6393c",
+      "parent_sha": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "date": "2026-11-04T01:49:07Z",
+      "message": "governance: register dependency-safe evidence batches 181-210",
+      "page": 1,
+      "index": 37
+    },
+    {
+      "sha": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+      "parent_sha": "3378e4166a4d3cdcb157599afa9594c7de8d22b8",
+      "date": "2026-11-04T01:35:50Z",
+      "message": "governance: audit AN eight source blobs; keep batch 181 and accounting P0 open",
+      "page": 1,
+      "index": 38
+    },
+    {
+      "sha": "3378e4166a4d3cdcb157599afa9594c7de8d22b8",
+      "parent_sha": "8901ef188c97e07122fdd10032be084fd413ac15",
+      "date": "2026-11-04T01:01:11Z",
+      "message": "governance: reconcile 30 verified source-audit ZIPs and advance canonical WBS recovery v0.2",
+      "page": 1,
+      "index": 39
+    },
+    {
+      "sha": "8901ef188c97e07122fdd10032be084fd413ac15",
+      "parent_sha": "68d1210aceb92f5c5c9bf435e70f4b4fd65e874c",
+      "date": "2026-11-04T00:58:08Z",
+      "message": "governance: independently verify source ZIP bytes and paths for recovery batches 171-180",
+      "page": 1,
+      "index": 40
+    },
+    {
+      "sha": "68d1210aceb92f5c5c9bf435e70f4b4fd65e874c",
+      "parent_sha": "6da18125b73acafc62f7e344dcae0baa73ad4223",
+      "date": "2026-11-04T00:57:41Z",
+      "message": "governance: independently verify source ZIP bytes and paths for recovery batches 161-170",
+      "page": 1,
+      "index": 41
+    },
+    {
+      "sha": "6da18125b73acafc62f7e344dcae0baa73ad4223",
+      "parent_sha": "4c009a261f6ea24fab1f75516d4664967f3548dd",
+      "date": "2026-11-04T00:57:15Z",
+      "message": "governance: independently verify source ZIP bytes and paths for recovery batches 151-160",
+      "page": 1,
+      "index": 42
+    },
+    {
+      "sha": "4c009a261f6ea24fab1f75516d4664967f3548dd",
+      "parent_sha": "fe35b46d3de958182bb9b9740150ea4d6ca3e380",
+      "date": "2026-11-04T00:55:53Z",
+      "message": "GOV-REC-001 batch 180: audit BR checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 43
+    },
+    {
+      "sha": "fe35b46d3de958182bb9b9740150ea4d6ca3e380",
+      "parent_sha": "8ae6ff817e79d4d1323e2cf4f947c9c7c80e84f4",
+      "date": "2026-11-04T00:55:28Z",
+      "message": "GOV-REC-001 batch 179: audit BQ checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 44
+    },
+    {
+      "sha": "8ae6ff817e79d4d1323e2cf4f947c9c7c80e84f4",
+      "parent_sha": "253af77adca0c53d5e87f212456a7720dc12514b",
+      "date": "2026-11-04T00:55:04Z",
+      "message": "GOV-REC-001 batch 178: audit BP checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 45
+    },
+    {
+      "sha": "253af77adca0c53d5e87f212456a7720dc12514b",
+      "parent_sha": "5f79591bdfbdd0b5dd60c61ffb24f1788c435c12",
+      "date": "2026-11-04T00:54:37Z",
+      "message": "GOV-REC-001 batch 177: audit BO checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 46
+    },
+    {
+      "sha": "5f79591bdfbdd0b5dd60c61ffb24f1788c435c12",
+      "parent_sha": "c19fc7dd52565743ed1b803fee3015a7217d1fcd",
+      "date": "2026-11-04T00:54:14Z",
+      "message": "GOV-REC-001 batch 176: audit BN checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 47
+    },
+    {
+      "sha": "c19fc7dd52565743ed1b803fee3015a7217d1fcd",
+      "parent_sha": "75aa71cded78784d18227de00129810c0fc7267a",
+      "date": "2026-11-04T00:53:50Z",
+      "message": "GOV-REC-001 batch 175: audit BM checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 48
+    },
+    {
+      "sha": "75aa71cded78784d18227de00129810c0fc7267a",
+      "parent_sha": "b72d2ee66b1ab922011ee7ab5ba909baef28bdc8",
+      "date": "2026-11-04T00:53:23Z",
+      "message": "GOV-REC-001 batch 174: audit BL checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 49
+    },
+    {
+      "sha": "b72d2ee66b1ab922011ee7ab5ba909baef28bdc8",
+      "parent_sha": "5537d5b3623ae2e392793089b5a0f6c41bdcfd0e",
+      "date": "2026-11-04T00:53:03Z",
+      "message": "GOV-REC-001 batch 173: audit BK checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 50
+    },
+    {
+      "sha": "5537d5b3623ae2e392793089b5a0f6c41bdcfd0e",
+      "parent_sha": "41c1ddab583ccf9765c9f35a5902a8bd0682b521",
+      "date": "2026-11-04T00:52:43Z",
+      "message": "GOV-REC-001 batch 172: audit BJ checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 51
+    },
+    {
+      "sha": "41c1ddab583ccf9765c9f35a5902a8bd0682b521",
+      "parent_sha": "d85a09686b640dfbf2bec053096d0c9d3ee90275",
+      "date": "2026-11-04T00:52:24Z",
+      "message": "GOV-REC-001 batch 171: audit BI checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 52
+    },
+    {
+      "sha": "d85a09686b640dfbf2bec053096d0c9d3ee90275",
+      "parent_sha": "2dc52827b0b783c5ae64e67fa4b9b99ca24e32c0",
+      "date": "2026-11-04T00:51:59Z",
+      "message": "GOV-REC-001 batch 170: audit BH checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 53
+    },
+    {
+      "sha": "2dc52827b0b783c5ae64e67fa4b9b99ca24e32c0",
+      "parent_sha": "8181cd8cca228e92f2cfc3c8069fd1888a26c543",
+      "date": "2026-11-04T00:51:39Z",
+      "message": "GOV-REC-001 batch 169: audit BG checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 54
+    },
+    {
+      "sha": "8181cd8cca228e92f2cfc3c8069fd1888a26c543",
+      "parent_sha": "22b2aa10ca584808bd7dfaaf5a4b7c5fa2b1ea77",
+      "date": "2026-11-04T00:51:09Z",
+      "message": "GOV-REC-001 batch 168: audit BF checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 55
+    },
+    {
+      "sha": "22b2aa10ca584808bd7dfaaf5a4b7c5fa2b1ea77",
+      "parent_sha": "b9b09b4b743c55d280bdfb77bec536f7113cd290",
+      "date": "2026-11-04T00:50:42Z",
+      "message": "GOV-REC-001 batch 167: audit BE checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 56
+    },
+    {
+      "sha": "b9b09b4b743c55d280bdfb77bec536f7113cd290",
+      "parent_sha": "73bd87d7268efc7cc0a36820a2a3d50f7215ba18",
+      "date": "2026-11-04T00:50:09Z",
+      "message": "GOV-REC-001 batch 166: audit BD checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 57
+    },
+    {
+      "sha": "73bd87d7268efc7cc0a36820a2a3d50f7215ba18",
+      "parent_sha": "d950a3c2cce528730853612111984f9e74a87c3b",
+      "date": "2026-11-04T00:49:44Z",
+      "message": "GOV-REC-001 batch 165: audit BC checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 58
+    },
+    {
+      "sha": "d950a3c2cce528730853612111984f9e74a87c3b",
+      "parent_sha": "5a45a292ab395687b20e0830cb6e7daee871acf6",
+      "date": "2026-11-04T00:49:23Z",
+      "message": "GOV-REC-001 batch 164: audit BB checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 59
+    },
+    {
+      "sha": "5a45a292ab395687b20e0830cb6e7daee871acf6",
+      "parent_sha": "6aa511fb82293b157bff6d3df9c5ae5da89660dc",
+      "date": "2026-11-04T00:49:02Z",
+      "message": "GOV-REC-001 batch 163: audit BA checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 60
+    },
+    {
+      "sha": "6aa511fb82293b157bff6d3df9c5ae5da89660dc",
+      "parent_sha": "ec237d14dfcd1332052117ea636ef79a745dd916",
+      "date": "2026-11-04T00:48:43Z",
+      "message": "GOV-REC-001 batch 162: audit AZ checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 61
+    },
+    {
+      "sha": "ec237d14dfcd1332052117ea636ef79a745dd916",
+      "parent_sha": "557859f0b93828ec37b0f680c5870163cf8b5cd6",
+      "date": "2026-11-04T00:48:24Z",
+      "message": "GOV-REC-001 batch 161: audit AY checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 62
+    },
+    {
+      "sha": "557859f0b93828ec37b0f680c5870163cf8b5cd6",
+      "parent_sha": "6a5ed05e856ada5afa67df5311984c27df111198",
+      "date": "2026-11-04T00:47:59Z",
+      "message": "GOV-REC-001 batch 160: audit AX checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 63
+    },
+    {
+      "sha": "6a5ed05e856ada5afa67df5311984c27df111198",
+      "parent_sha": "e45cc28b9b9205f633fb4fe79792b72471f3f3a6",
+      "date": "2026-11-04T00:47:41Z",
+      "message": "GOV-REC-001 batch 159: audit AW checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 64
+    },
+    {
+      "sha": "e45cc28b9b9205f633fb4fe79792b72471f3f3a6",
+      "parent_sha": "7646442f512ce5b2890da4e2694122ac0e502509",
+      "date": "2026-11-04T00:47:23Z",
+      "message": "GOV-REC-001 batch 158: audit AV checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 65
+    },
+    {
+      "sha": "7646442f512ce5b2890da4e2694122ac0e502509",
+      "parent_sha": "eb381d9c288f2e06e872c9d7f9a2e1da253d651a",
+      "date": "2026-11-04T00:47:01Z",
+      "message": "GOV-REC-001 batch 157: audit AU checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 66
+    },
+    {
+      "sha": "eb381d9c288f2e06e872c9d7f9a2e1da253d651a",
+      "parent_sha": "23a3413528cffc4a75dd8778c7e450ee6a9e0422",
+      "date": "2026-11-04T00:46:38Z",
+      "message": "GOV-REC-001 batch 156: audit AT checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 67
+    },
+    {
+      "sha": "23a3413528cffc4a75dd8778c7e450ee6a9e0422",
+      "parent_sha": "223ac3ed10682dc37b289fd232e6033b8c02d99d",
+      "date": "2026-11-04T00:46:22Z",
+      "message": "governance: optimize audit archive verification for bounded per-call limits",
+      "page": 1,
+      "index": 68
+    },
+    {
+      "sha": "223ac3ed10682dc37b289fd232e6033b8c02d99d",
+      "parent_sha": "7bd04d38904c3584985170e254442db46a41a651",
+      "date": "2026-11-04T00:45:27Z",
+      "message": "GOV-REC-001 batch 155: audit AS checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 69
+    },
+    {
+      "sha": "7bd04d38904c3584985170e254442db46a41a651",
+      "parent_sha": "5e483392d943a0fb8e84376615cf34cb9f88bdc8",
+      "date": "2026-11-04T00:44:44Z",
+      "message": "GOV-REC-001 batch 154: audit AR checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 70
+    },
+    {
+      "sha": "5e483392d943a0fb8e84376615cf34cb9f88bdc8",
+      "parent_sha": "9805b40cb39c89d37674ba835959684f6fb73027",
+      "date": "2026-11-04T00:44:20Z",
+      "message": "GOV-REC-001 batch 153: audit AQ checkpoint with source-provenance ZIP",
+      "page": 1,
+      "index": 71
+    },
+    {
+      "sha": "9805b40cb39c89d37674ba835959684f6fb73027",
+      "parent_sha": "5153e4f733f03e1efd010552cb53681a81997b78",
+      "date": "2026-11-04T00:42:57Z",
+      "message": "governance: record verified evidence recovery batches 151 and 152",
+      "page": 1,
+      "index": 72
+    },
+    {
+      "sha": "5153e4f733f03e1efd010552cb53681a81997b78",
+      "parent_sha": "39bcaa264ffda6528a96316031971b8d48ddea4a",
+      "date": "2026-11-04T00:42:46Z",
+      "message": "governance: add deterministic source-audit ZIP packager with hash and remote verification",
+      "page": 1,
+      "index": 73
+    },
+    {
+      "sha": "39bcaa264ffda6528a96316031971b8d48ddea4a",
+      "parent_sha": "0aa920040611e0d7b38b6fcaf7be38461cb14d6c",
+      "date": "2026-11-04T00:42:42Z",
+      "message": "GOV-REC-001 batch 152: AP full-source audit with evidence ZIP",
+      "page": 1,
+      "index": 74
+    },
+    {
+      "sha": "0aa920040611e0d7b38b6fcaf7be38461cb14d6c",
+      "parent_sha": "4178a49bb869742d80a671d6269a3bcd38fce5e9",
+      "date": "2026-11-04T00:40:20Z",
+      "message": "GOV-REC-001 batch 151: audit AO historical checkpoint source with ZIP evidence",
+      "page": 1,
+      "index": 75
+    },
+    {
+      "sha": "4178a49bb869742d80a671d6269a3bcd38fce5e9",
+      "parent_sha": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "date": "2026-11-04T00:38:07Z",
+      "message": "governance: register GOV-REC-001 source audit sub-batches 151-180",
+      "page": 1,
+      "index": 76
+    },
+    {
+      "sha": "9c2476b94a1af7dbfac31684679332bc9e401207",
+      "parent_sha": "68222c2e5411672f9664c27cd618b834610edff3",
+      "date": "2026-11-03T23:44:26Z",
+      "message": "docs(governance): census 317 checkpoint blobs and audit 12 README provenance records",
+      "page": 1,
+      "index": 77
+    },
+    {
+      "sha": "68222c2e5411672f9664c27cd618b834610edff3",
+      "parent_sha": "c85494e5122377ee795d39ba85fb29f36da3f11f",
+      "date": "2026-11-03T22:46:43Z",
+      "message": "chore(core-banking): synchronize tracked artifact manifest and correct historical recovery status",
+      "page": 1,
+      "index": 78
+    },
+    {
+      "sha": "c85494e5122377ee795d39ba85fb29f36da3f11f",
+      "parent_sha": "ca48c595a74b8e5cf6f24b34fdaf3cb822cdc53b",
+      "date": "2026-11-03T22:38:12Z",
+      "message": "docs(governance): add evidence-backed GOV-REC-001 historical source crosswalk delta",
+      "page": 1,
+      "index": 79
+    },
+    {
+      "sha": "ca48c595a74b8e5cf6f24b34fdaf3cb822cdc53b",
+      "parent_sha": "22857683792a27c9017df5860babaca7a98f3547",
+      "date": "2026-11-03T22:31:08Z",
+      "message": "docs(compliance): batch 150 CMP-010 Compliance phase acceptance matrix and P0 release dependencies",
+      "page": 1,
+      "index": 80
+    },
+    {
+      "sha": "22857683792a27c9017df5860babaca7a98f3547",
+      "parent_sha": "ae4fbab79baec27396efd49763fd2fee093b4e87",
+      "date": "2026-11-03T22:30:59Z",
+      "message": "docs(compliance): batch 149 CMP-009 Compliance audit trail, confidentiality and lawful retention",
+      "page": 1,
+      "index": 81
+    },
+    {
+      "sha": "ae4fbab79baec27396efd49763fd2fee093b4e87",
+      "parent_sha": "d51d370b5fb8ee58f76788beee6333f68eca364c",
+      "date": "2026-11-03T22:29:35Z",
+      "message": "docs(compliance): batch 148 CMP-008 Fraud protective actions and governed customer interventions",
+      "page": 1,
+      "index": 82
+    },
+    {
+      "sha": "d51d370b5fb8ee58f76788beee6333f68eca364c",
+      "parent_sha": "21b6ffee699e83b0f8e876b33e0bb457f7a6014d",
+      "date": "2026-11-03T22:29:22Z",
+      "message": "docs(compliance): batch 147 CMP-007 Regulatory reporting lineage, prudential calculation and approval",
+      "page": 1,
+      "index": 83
+    },
+    {
+      "sha": "21b6ffee699e83b0f8e876b33e0bb457f7a6014d",
+      "parent_sha": "1a23ce9a000826e19520a0c1bf44c05d991d5096",
+      "date": "2026-11-03T22:29:14Z",
+      "message": "docs(compliance): batch 146 CMP-006 Protected suspicious activity reporting and disclosure controls",
+      "page": 1,
+      "index": 84
+    },
+    {
+      "sha": "1a23ce9a000826e19520a0c1bf44c05d991d5096",
+      "parent_sha": "33c646484d4ecf38c697ae2cc51d0f93beff01e9",
+      "date": "2026-11-03T22:29:06Z",
+      "message": "docs(compliance): batch 145 CMP-005 Sanctions and PEP watchlist edition governance",
+      "page": 1,
+      "index": 85
+    },
+    {
+      "sha": "33c646484d4ecf38c697ae2cc51d0f93beff01e9",
+      "parent_sha": "cad0ef62e50ee96e22531b2e9190d2f4977115b8",
+      "date": "2026-11-03T22:27:48Z",
+      "message": "docs(compliance): batch 144 CMP-004 Compliance investigation cases and maker-checker escalation",
+      "page": 1,
+      "index": 86
+    },
+    {
+      "sha": "cad0ef62e50ee96e22531b2e9190d2f4977115b8",
+      "parent_sha": "2f2e266640803b1659b7118445ce2b5e0f23e43f",
+      "date": "2026-11-03T22:27:39Z",
+      "message": "docs(compliance): batch 143 CMP-003 Transaction monitoring scenarios and alert provenance",
+      "page": 1,
+      "index": 87
+    },
+    {
+      "sha": "2f2e266640803b1659b7118445ce2b5e0f23e43f",
+      "parent_sha": "8fba07ca86e2bc6275c3bea25762a78cd9cf6c88",
+      "date": "2026-11-03T22:27:26Z",
+      "message": "docs(compliance): batch 142 CMP-002 Customer AML risk assessment and ongoing due diligence linkage",
+      "page": 1,
+      "index": 88
+    },
+    {
+      "sha": "8fba07ca86e2bc6275c3bea25762a78cd9cf6c88",
+      "parent_sha": "730b84c583e4ebae9a512c221046c224e47ce2b8",
+      "date": "2026-11-03T22:27:17Z",
+      "message": "docs(compliance): batch 141 CMP-001 Compliance authority inventory and effective-dated rule catalogue",
+      "page": 1,
+      "index": 89
+    },
+    {
+      "sha": "730b84c583e4ebae9a512c221046c224e47ce2b8",
+      "parent_sha": "939f5f908670f55c4cc0fbe9d3afdad9037bffc8",
+      "date": "2026-11-03T22:25:56Z",
+      "message": "docs(branch): batch 140 BRN-020 Branch teller and vault phase assurance dossier",
+      "page": 1,
+      "index": 90
+    },
+    {
+      "sha": "939f5f908670f55c4cc0fbe9d3afdad9037bffc8",
+      "parent_sha": "3f7bf3a68566a805c4ed8e73247144aaa756e98b",
+      "date": "2026-11-03T22:25:47Z",
+      "message": "docs(branch): batch 139 BRN-019 Branch connectivity outage, offline restrictions and safe restart",
+      "page": 1,
+      "index": 91
+    },
+    {
+      "sha": "3f7bf3a68566a805c4ed8e73247144aaa756e98b",
+      "parent_sha": "a51a732e1b0c79d9118c9d4a871a26eb482d4d8a",
+      "date": "2026-11-03T22:25:39Z",
+      "message": "docs(branch): batch 138 BRN-018 Teller transaction limits, anti-fraud and protective holds",
+      "page": 1,
+      "index": 92
+    },
+    {
+      "sha": "a51a732e1b0c79d9118c9d4a871a26eb482d4d8a",
+      "parent_sha": "72abc7bdde4a79b040044c43a3b5cca731d192af",
+      "date": "2026-11-03T22:25:29Z",
+      "message": "docs(branch): batch 137 BRN-017 Noncash branch service cases, queues and controlled fulfillment",
+      "page": 1,
+      "index": 93
+    },
+    {
+      "sha": "72abc7bdde4a79b040044c43a3b5cca731d192af",
+      "parent_sha": "5177edc021434a3dc14e76641605b2f328b5dcf1",
+      "date": "2026-11-03T22:24:13Z",
+      "message": "docs(branch): batch 136 BRN-016 Foreign currency cash exchange and rate evidence",
+      "page": 1,
+      "index": 94
+    },
+    {
+      "sha": "5177edc021434a3dc14e76641605b2f328b5dcf1",
+      "parent_sha": "f1370a323c808eaeb02820e8fdca07f4a819a32c",
+      "date": "2026-11-03T22:24:05Z",
+      "message": "docs(branch): batch 135 BRN-015 Branch banking calendar, opening and end-of-day operations",
+      "page": 1,
+      "index": 95
+    },
+    {
+      "sha": "f1370a323c808eaeb02820e8fdca07f4a819a32c",
+      "parent_sha": "121183d6d0bdff2ca7bafb66badedbaa49abf698",
+      "date": "2026-11-03T22:23:57Z",
+      "message": "docs(branch): batch 134 BRN-014 Cash receipts, counter customer proof and reconciliation",
+      "page": 1,
+      "index": 96
+    },
+    {
+      "sha": "121183d6d0bdff2ca7bafb66badedbaa49abf698",
+      "parent_sha": "5cc22d22e38bd403a3d215b8775c1a979d98d056",
+      "date": "2026-11-03T22:23:49Z",
+      "message": "docs(branch): batch 133 BRN-013 Customer identity and authorized representation at teller counter",
+      "page": 1,
+      "index": 97
+    },
+    {
+      "sha": "5cc22d22e38bd403a3d215b8775c1a979d98d056",
+      "parent_sha": "acc86958e19da822aa7cb385ad6122a096203789",
+      "date": "2026-11-03T22:22:27Z",
+      "message": "docs(branch): batch 132 BRN-012 Cash shortage, overage and financial exception investigation",
+      "page": 1,
+      "index": 98
+    },
+    {
+      "sha": "acc86958e19da822aa7cb385ad6122a096203789",
+      "parent_sha": "224696d084695f90917b925c6890cb4322af594f",
+      "date": "2026-11-03T22:22:19Z",
+      "message": "docs(branch): batch 131 BRN-011 Branch dual control, delegation and high-value approvals",
+      "page": 1,
+      "index": 99
+    },
+    {
+      "sha": "224696d084695f90917b925c6890cb4322af594f",
+      "parent_sha": "6e87a040d23c3bf87fb1a23b114876f3b247318f",
+      "date": "2026-11-03T22:22:10Z",
+      "message": "docs(branch): batch 130 BRN-010 Vault replenishment and cash forecasting",
+      "page": 2,
+      "index": 0
+    },
+    {
+      "sha": "6e87a040d23c3bf87fb1a23b114876f3b247318f",
+      "parent_sha": "8792ce0707d81dddfc8615ffed108709b9971044",
+      "date": "2026-11-03T22:22:02Z",
+      "message": "docs(branch): batch 129 BRN-009 Inter-branch cash transit and receipt evidence",
+      "page": 2,
+      "index": 1
+    },
+    {
+      "sha": "8792ce0707d81dddfc8615ffed108709b9971044",
+      "parent_sha": "0035673b7133ae86ac2fc4894ec0da4e15caf966",
+      "date": "2026-11-03T22:20:48Z",
+      "message": "docs(branch): batch 128 BRN-008 Vault-drawer cash handover and conserved custody transfers",
+      "page": 2,
+      "index": 2
+    },
+    {
+      "sha": "0035673b7133ae86ac2fc4894ec0da4e15caf966",
+      "parent_sha": "cf551d9ae1ee659f6858cda49ff269b668a39acf",
+      "date": "2026-11-03T22:20:39Z",
+      "message": "docs(branch): batch 127 BRN-007 Vault cash denomination inventory",
+      "page": 2,
+      "index": 3
+    },
+    {
+      "sha": "cf551d9ae1ee659f6858cda49ff269b668a39acf",
+      "parent_sha": "ff58b4b0a9751d57d4eb711ee977ad74022f2c08",
+      "date": "2026-11-03T22:20:30Z",
+      "message": "docs(branch): batch 126 BRN-006 Cash drawer shift closeout and variance resolution",
+      "page": 2,
+      "index": 4
+    },
+    {
+      "sha": "ff58b4b0a9751d57d4eb711ee977ad74022f2c08",
+      "parent_sha": "20ebb52e9dd327732db5e50cdaab58081e292e87",
+      "date": "2026-11-03T22:20:22Z",
+      "message": "docs(branch): batch 125 BRN-005 Teller withdrawals and controlled cash payout",
+      "page": 2,
+      "index": 5
+    },
+    {
+      "sha": "20ebb52e9dd327732db5e50cdaab58081e292e87",
+      "parent_sha": "cd839560158bca284e3284672d8717bd0d58793b",
+      "date": "2026-11-03T22:18:30Z",
+      "message": "docs(branch): batch 124/150 BRN-004 Teller cash deposit intake and controlled financial handoff",
+      "page": 2,
+      "index": 6
+    },
+    {
+      "sha": "cd839560158bca284e3284672d8717bd0d58793b",
+      "parent_sha": "a81e4e1d5ea686f364ff0614226612329c236dbf",
+      "date": "2026-11-03T22:18:21Z",
+      "message": "docs(branch): batch 123/150 BRN-003 Cash drawer opening, custody and opening balance evidence",
+      "page": 2,
+      "index": 7
+    },
+    {
+      "sha": "a81e4e1d5ea686f364ff0614226612329c236dbf",
+      "parent_sha": "2ef217e5cec96cfabbf238317db9cec7ebc2a569",
+      "date": "2026-11-03T22:18:12Z",
+      "message": "docs(branch): batch 122/150 BRN-002 Teller identities, shift assignment and entitlement lifecycle",
+      "page": 2,
+      "index": 8
+    },
+    {
+      "sha": "2ef217e5cec96cfabbf238317db9cec7ebc2a569",
+      "parent_sha": "38c3551745a7d901e7de1cc930f7e344ba5453cf",
+      "date": "2026-11-03T22:18:03Z",
+      "message": "docs(branch): batch 121/150 BRN-001 Branch hierarchy, licensing scope and service catalogue",
+      "page": 2,
+      "index": 9
+    },
+    {
+      "sha": "38c3551745a7d901e7de1cc930f7e344ba5453cf",
+      "parent_sha": "f3f86ff80b162363421a95a56be0a156579b0267",
+      "date": "2026-11-03T21:41:53Z",
+      "message": "docs: record provisional GOV-REC-001 tree inventory evidence (ZIP delivery open)",
+      "page": 2,
+      "index": 10
+    },
+    {
+      "sha": "f3f86ff80b162363421a95a56be0a156579b0267",
+      "parent_sha": "7cb30ed39cfbd87566fd547d433c395f3e9eb6c5",
+      "date": "2026-11-03T21:19:19Z",
+      "message": "docs(core-banking): batch 120/120 CHN-020 Digital channels acceptance dossier and implementation readiness gate",
+      "page": 2,
+      "index": 11
+    },
+    {
+      "sha": "7cb30ed39cfbd87566fd547d433c395f3e9eb6c5",
+      "parent_sha": "87b0fab7f7335a7483aa9f8d2f7a7f28ef777aa3",
+      "date": "2026-11-03T21:19:10Z",
+      "message": "docs(core-banking): batch 119/120 CHN-019 Channel device lifecycle, compatibility and end-to-end testing",
+      "page": 2,
+      "index": 12
+    },
+    {
+      "sha": "87b0fab7f7335a7483aa9f8d2f7a7f28ef777aa3",
+      "parent_sha": "863477630445ebd27002b8eb03def8f9e2940b73",
+      "date": "2026-11-03T21:17:53Z",
+      "message": "docs(core-banking): batch 118/120 CHN-018 Offline, intermittent network and retry-safe channel behavior",
+      "page": 2,
+      "index": 13
+    },
+    {
+      "sha": "863477630445ebd27002b8eb03def8f9e2940b73",
+      "parent_sha": "725b8f6a63fdc6fd6bed27fd0f47203d691dde32",
+      "date": "2026-11-03T21:17:45Z",
+      "message": "docs(core-banking): batch 117/120 CHN-017 Accessibility, localization and low-vision inclusive banking UX",
+      "page": 2,
+      "index": 14
+    },
+    {
+      "sha": "725b8f6a63fdc6fd6bed27fd0f47203d691dde32",
+      "parent_sha": "b1763a42ebb2acdb83920f1eb9456ff36ecd4ec5",
+      "date": "2026-11-03T21:17:36Z",
+      "message": "docs(core-banking): batch 116/120 CHN-016 Digital-channel fraud, transaction risk and protective friction",
+      "page": 2,
+      "index": 15
+    },
+    {
+      "sha": "b1763a42ebb2acdb83920f1eb9456ff36ecd4ec5",
+      "parent_sha": "2997bc0930a5b883051b288b6f29b84d2d7ef777",
+      "date": "2026-11-03T21:17:28Z",
+      "message": "docs(core-banking): batch 115/120 CHN-015 Consent-managed data sharing and open-banking permissions",
+      "page": 2,
+      "index": 16
+    },
+    {
+      "sha": "2997bc0930a5b883051b288b6f29b84d2d7ef777",
+      "parent_sha": "8772bd2fbcd84df7b3a63f004173e6fa9cb2b19c",
+      "date": "2026-11-03T21:16:14Z",
+      "message": "docs(core-banking): batch 114/120 CHN-014 Partner developer portal, service credentials and API products",
+      "page": 2,
+      "index": 17
+    },
+    {
+      "sha": "8772bd2fbcd84df7b3a63f004173e6fa9cb2b19c",
+      "parent_sha": "3b8fd10f7754e87ca9c22072becbe37c36f706c2",
+      "date": "2026-11-03T21:16:05Z",
+      "message": "docs(core-banking): batch 113/120 CHN-013 Merchant banking portal and transaction reporting APIs",
+      "page": 2,
+      "index": 18
+    },
+    {
+      "sha": "3b8fd10f7754e87ca9c22072becbe37c36f706c2",
+      "parent_sha": "0595b21ec8bfcd4dab7a97bcd47560cadfaac10a",
+      "date": "2026-11-03T21:15:58Z",
+      "message": "docs(core-banking): batch 112/120 CHN-012 Agency banking terminal and field-operator safeguards",
+      "page": 2,
+      "index": 19
+    },
+    {
+      "sha": "0595b21ec8bfcd4dab7a97bcd47560cadfaac10a",
+      "parent_sha": "35bab713f403d653b1eb206c1389850cc3f1f79f",
+      "date": "2026-11-03T21:15:49Z",
+      "message": "docs(core-banking): batch 111/120 CHN-011 Customer support, complaints and payment dispute case management",
+      "page": 2,
+      "index": 20
+    },
+    {
+      "sha": "35bab713f403d653b1eb206c1389850cc3f1f79f",
+      "parent_sha": "5c2c5053e66fd9123559d6082f3dfb1c25d386e6",
+      "date": "2026-11-03T21:14:33Z",
+      "message": "docs(core-banking): batch 110/120 CHN-010 Customer notifications, receipts and communication provenance",
+      "page": 2,
+      "index": 21
+    },
+    {
+      "sha": "5c2c5053e66fd9123559d6082f3dfb1c25d386e6",
+      "parent_sha": "b59490feb20e59ed26ca43c4d51c6b5c42fd3d9a",
+      "date": "2026-11-03T21:14:25Z",
+      "message": "docs(core-banking): batch 109/120 CHN-009 Customer authentication, risk-based step-up and recovery",
+      "page": 2,
+      "index": 22
+    },
+    {
+      "sha": "b59490feb20e59ed26ca43c4d51c6b5c42fd3d9a",
+      "parent_sha": "e1f653cde3ac6fba641ad20324702f70238c59a8",
+      "date": "2026-11-03T21:14:17Z",
+      "message": "docs(core-banking): batch 108/120 CHN-008 Beneficiary enrolment, trust and validation controls",
+      "page": 2,
+      "index": 23
+    },
+    {
+      "sha": "e1f653cde3ac6fba641ad20324702f70238c59a8",
+      "parent_sha": "c98c942d8961de8fcbf1882188af767fdbbe7363",
+      "date": "2026-11-03T21:14:08Z",
+      "message": "docs(core-banking): batch 107/120 CHN-007 Retail payment initiation and confirmation journey",
+      "page": 2,
+      "index": 24
+    },
+    {
+      "sha": "c98c942d8961de8fcbf1882188af767fdbbe7363",
+      "parent_sha": "cc260af009c713f42d5806002d6cc3ea1c6d2b63",
+      "date": "2026-11-03T21:12:52Z",
+      "message": "docs(core-banking): batch 106/120 CHN-006 Account home, balances and transaction feed freshness",
+      "page": 2,
+      "index": 25
+    },
+    {
+      "sha": "cc260af009c713f42d5806002d6cc3ea1c6d2b63",
+      "parent_sha": "b7d95b226e8ea7706ce7f5df31c65b25328164ee",
+      "date": "2026-11-03T21:12:44Z",
+      "message": "docs(core-banking): batch 105/120 CHN-005 Channel user roles, account delegation and capability decisions",
+      "page": 2,
+      "index": 26
+    },
+    {
+      "sha": "b7d95b226e8ea7706ce7f5df31c65b25328164ee",
+      "parent_sha": "30e192111a1761c25508f2fed6530428380d4118",
+      "date": "2026-11-03T21:12:36Z",
+      "message": "docs(core-banking): batch 104/120 CHN-004 Corporate banking portal, organization roles and approval chains",
+      "page": 2,
+      "index": 27
+    },
+    {
+      "sha": "30e192111a1761c25508f2fed6530428380d4118",
+      "parent_sha": "0eb2a1ea7403ce1fff59fc5f4f1bcd8d263a3500",
+      "date": "2026-11-03T21:12:28Z",
+      "message": "docs(core-banking): batch 103/120 CHN-003 Customer mobile banking and device-safe transaction workflows",
+      "page": 2,
+      "index": 28
+    },
+    {
+      "sha": "0eb2a1ea7403ce1fff59fc5f4f1bcd8d263a3500",
+      "parent_sha": "9beb2f0ff6c61ec11948d7bcc37747fc170fbc86",
+      "date": "2026-11-03T21:11:12Z",
+      "message": "docs(core-banking): batch 102/120 CHN-002 Retail web banking session and account navigation",
+      "page": 2,
+      "index": 29
+    },
+    {
+      "sha": "9beb2f0ff6c61ec11948d7bcc37747fc170fbc86",
+      "parent_sha": "1f3183bf4a358a99f6b768d0acc7cc91f8cd2e8c",
+      "date": "2026-11-03T21:11:04Z",
+      "message": "docs(core-banking): batch 101/120 CHN-001 Omnichannel banking architecture and experience boundaries",
+      "page": 2,
+      "index": 30
+    },
+    {
+      "sha": "1f3183bf4a358a99f6b768d0acc7cc91f8cd2e8c",
+      "parent_sha": "b0ade83b80b531af3390aea2bc04fcf40ce29cee",
+      "date": "2026-11-03T21:10:55Z",
+      "message": "docs(core-banking): batch 100/120 OPS-020 Operations and security release readiness dossier",
+      "page": 2,
+      "index": 31
+    },
+    {
+      "sha": "b0ade83b80b531af3390aea2bc04fcf40ce29cee",
+      "parent_sha": "176d8c840fbb432f52c1e2e04723fc18644cb62e",
+      "date": "2026-11-03T21:10:44Z",
+      "message": "docs(core-banking): batch 99/120 OPS-019 Bank operations runbooks and controlled daily processing",
+      "page": 2,
+      "index": 32
+    },
+    {
+      "sha": "176d8c840fbb432f52c1e2e04723fc18644cb62e",
+      "parent_sha": "0d49d4cd4515d006da1dd03d426a02e01c55f02f",
+      "date": "2026-11-03T21:09:28Z",
+      "message": "docs(core-banking): batch 98/120 OPS-018 Vulnerability management and adversarial testing gates",
+      "page": 2,
+      "index": 33
+    },
+    {
+      "sha": "0d49d4cd4515d006da1dd03d426a02e01c55f02f",
+      "parent_sha": "e319d869484d081c1bd07d4c233ac69e400f4e36",
+      "date": "2026-11-03T21:09:20Z",
+      "message": "docs(core-banking): batch 97/120 OPS-017 Regulatory audit export and supervisory evidence delivery",
+      "page": 2,
+      "index": 34
+    },
+    {
+      "sha": "e319d869484d081c1bd07d4c233ac69e400f4e36",
+      "parent_sha": "e4aa34b55a46bf532f3be074f376e444cb57bbbb",
+      "date": "2026-11-03T21:09:12Z",
+      "message": "docs(core-banking): batch 96/120 OPS-016 Service reliability engineering and maintenance policy",
+      "page": 2,
+      "index": 35
+    },
+    {
+      "sha": "e4aa34b55a46bf532f3be074f376e444cb57bbbb",
+      "parent_sha": "372a0f7152901f27b9d01c6d7c5dfbd8cc115d55",
+      "date": "2026-11-03T21:09:04Z",
+      "message": "docs(core-banking): batch 95/120 OPS-015 Capacity planning and nonfunctional service objectives",
+      "page": 2,
+      "index": 36
+    },
+    {
+      "sha": "372a0f7152901f27b9d01c6d7c5dfbd8cc115d55",
+      "parent_sha": "46f3aeee999739ebb042c2f43df3be57c009efb0",
+      "date": "2026-11-03T21:07:50Z",
+      "message": "docs(core-banking): batch 94/120 OPS-014 Enterprise data governance and lineage controls",
+      "page": 2,
+      "index": 37
+    },
+    {
+      "sha": "46f3aeee999739ebb042c2f43df3be57c009efb0",
+      "parent_sha": "73477ef3a4797b14f0802a7610f75f71065a8a95",
+      "date": "2026-11-03T21:07:42Z",
+      "message": "docs(core-banking): batch 93/120 OPS-013 Core banking legacy migration and reconciliation protocol",
+      "page": 2,
+      "index": 38
+    },
+    {
+      "sha": "73477ef3a4797b14f0802a7610f75f71065a8a95",
+      "parent_sha": "fed85a8f8935edf81a0cfafbc82b6165494f7c10",
+      "date": "2026-11-03T21:07:33Z",
+      "message": "docs(core-banking): batch 92/120 OPS-012 Production change, release authorization and rollback",
+      "page": 2,
+      "index": 39
+    },
+    {
+      "sha": "fed85a8f8935edf81a0cfafbc82b6165494f7c10",
+      "parent_sha": "52107fffdb2dc1345107ad49559ddeacc6228742",
+      "date": "2026-11-03T21:07:11Z",
+      "message": "docs(core-banking): batch 91/120 OPS-011 High availability, failover and journal quorum assurance",
+      "page": 2,
+      "index": 40
+    },
+    {
+      "sha": "52107fffdb2dc1345107ad49559ddeacc6228742",
+      "parent_sha": "1618b342ffeeb8aa6ec8c1db3a68ba42820f19b6",
+      "date": "2026-11-03T21:00:09Z",
+      "message": "docs(core-banking): batch 90/90 OPS-010 Backup, restore, DR and financial recovery acceptance model",
+      "page": 2,
+      "index": 41
+    },
+    {
+      "sha": "1618b342ffeeb8aa6ec8c1db3a68ba42820f19b6",
+      "parent_sha": "81534e6b3a1dae97583e6c5694ba0f44df2a61a2",
+      "date": "2026-11-03T20:59:58Z",
+      "message": "docs(core-banking): batch 89/90 OPS-009 Security incident response and operational escalation",
+      "page": 2,
+      "index": 42
+    },
+    {
+      "sha": "81534e6b3a1dae97583e6c5694ba0f44df2a61a2",
+      "parent_sha": "bd38ac084da226c6467c0b30a30a4834f4dfdc4d",
+      "date": "2026-11-03T20:58:35Z",
+      "message": "docs(core-banking): batch 88/90 OPS-008 Monitoring, SLOs and operational reconciliation alerts",
+      "page": 2,
+      "index": 43
+    },
+    {
+      "sha": "bd38ac084da226c6467c0b30a30a4834f4dfdc4d",
+      "parent_sha": "2f224bad6a7127e957a3538ece4fc26c6fbde17a",
+      "date": "2026-11-03T20:58:25Z",
+      "message": "docs(core-banking): batch 87/90 OPS-007 Network segmentation, API perimeter and zero-trust controls",
+      "page": 2,
+      "index": 44
+    },
+    {
+      "sha": "2f224bad6a7127e957a3538ece4fc26c6fbde17a",
+      "parent_sha": "70f66d1de60546805f864c8c88c4cbf01c5156a3",
+      "date": "2026-11-03T20:58:16Z",
+      "message": "docs(core-banking): batch 86/90 OPS-006 Data protection, encryption and controlled retention",
+      "page": 2,
+      "index": 45
+    },
+    {
+      "sha": "70f66d1de60546805f864c8c88c4cbf01c5156a3",
+      "parent_sha": "3e77c1e2fbe38e6b2f2ab54879a4f12734a77053",
+      "date": "2026-11-03T20:58:06Z",
+      "message": "docs(core-banking): batch 85/90 OPS-005 Privileged access management and session controls",
+      "page": 2,
+      "index": 46
+    },
+    {
+      "sha": "3e77c1e2fbe38e6b2f2ab54879a4f12734a77053",
+      "parent_sha": "be850d851754c86951f4def660cf1470c8d7d8b5",
+      "date": "2026-11-03T20:56:47Z",
+      "message": "docs(core-banking): batch 84/90 OPS-004 Secrets, certificates, encryption and key custody design",
+      "page": 2,
+      "index": 47
+    },
+    {
+      "sha": "be850d851754c86951f4def660cf1470c8d7d8b5",
+      "parent_sha": "17faaa9dac07e32368f04ca56b8fb1235ae1045d",
+      "date": "2026-11-03T20:56:37Z",
+      "message": "docs(core-banking): batch 83/90 OPS-003 Build artifact provenance, SBOM and dependency integrity",
+      "page": 2,
+      "index": 48
+    },
+    {
+      "sha": "17faaa9dac07e32368f04ca56b8fb1235ae1045d",
+      "parent_sha": "68f8d9ead8f01a316bd1752fc1406c8827c1c26a",
+      "date": "2026-11-03T20:56:25Z",
+      "message": "docs(core-banking): batch 82/90 OPS-002 Source control, branch protection and secure SDLC",
+      "page": 2,
+      "index": 49
+    },
+    {
+      "sha": "68f8d9ead8f01a316bd1752fc1406c8827c1c26a",
+      "parent_sha": "5b0693724ea8752d3a3c54196819f1aa5cb5f78f",
+      "date": "2026-11-03T20:56:15Z",
+      "message": "docs(core-banking): batch 81/90 OPS-001 Infrastructure environment taxonomy and separation",
+      "page": 2,
+      "index": 50
+    },
+    {
+      "sha": "5b0693724ea8752d3a3c54196819f1aa5cb5f78f",
+      "parent_sha": "adb91f7d674985b1a8b4e2842da2e2f505b63ddb",
+      "date": "2026-11-03T20:54:48Z",
+      "message": "docs(core-banking): batch 80/90 ACT-020 Account and deposit phase design acceptance dossier",
+      "page": 2,
+      "index": 51
+    },
+    {
+      "sha": "adb91f7d674985b1a8b4e2842da2e2f505b63ddb",
+      "parent_sha": "134ce8fdc4030bcbf506cee4775be88f442a0d3c",
+      "date": "2026-11-03T20:54:33Z",
+      "message": "docs(core-banking): batch 79/90 ACT-019 Account exceptions, correction and end-of-day dependencies",
+      "page": 2,
+      "index": 52
+    },
+    {
+      "sha": "134ce8fdc4030bcbf506cee4775be88f442a0d3c",
+      "parent_sha": "7128ebb911086b0a8cf9901bdf4060efc5150887",
+      "date": "2026-11-03T20:54:18Z",
+      "message": "docs(core-banking): batch 78/90 ACT-018 Account service API contracts and event projections",
+      "page": 2,
+      "index": 53
+    },
+    {
+      "sha": "7128ebb911086b0a8cf9901bdf4060efc5150887",
+      "parent_sha": "6647d72558c182176e8f4d916876910745b76263",
+      "date": "2026-11-03T20:54:06Z",
+      "message": "docs(core-banking): batch 77/90 ACT-017 Account access, overdraft and funds-availability decision model",
+      "page": 2,
+      "index": 54
+    },
+    {
+      "sha": "6647d72558c182176e8f4d916876910745b76263",
+      "parent_sha": "10add3580a0d873a7b18baecdaffd2a093fd70fb",
+      "date": "2026-11-03T20:52:48Z",
+      "message": "docs(core-banking): batch 76/90 ACT-016 Account holds, liens and availability restrictions",
+      "page": 2,
+      "index": 55
+    },
+    {
+      "sha": "10add3580a0d873a7b18baecdaffd2a093fd70fb",
+      "parent_sha": "d76480ee7c74b56b87d21223f426e75369eb10f8",
+      "date": "2026-11-03T20:52:34Z",
+      "message": "docs(core-banking): batch 75/90 ACT-015 Statements, transaction history and evidence-backed presentation",
+      "page": 2,
+      "index": 56
+    },
+    {
+      "sha": "d76480ee7c74b56b87d21223f426e75369eb10f8",
+      "parent_sha": "ae28ee63a35fc6938b0e1396ecf707ad1ffa5917",
+      "date": "2026-11-03T20:52:22Z",
+      "message": "docs(core-banking): batch 74/90 ACT-014 Account termination and final financial settlement workflow",
+      "page": 2,
+      "index": 57
+    },
+    {
+      "sha": "ae28ee63a35fc6938b0e1396ecf707ad1ffa5917",
+      "parent_sha": "dc09399629ebe80312fbf5ce22aab2a0cbfe1140",
+      "date": "2026-11-03T20:52:11Z",
+      "message": "docs(core-banking): batch 73/90 ACT-013 Dormancy, reactivation and unclaimed balance policy",
+      "page": 2,
+      "index": 58
+    },
+    {
+      "sha": "dc09399629ebe80312fbf5ce22aab2a0cbfe1140",
+      "parent_sha": "e2a2797b3891a24afb9f1e80666e4102c41d757e",
+      "date": "2026-11-03T20:50:53Z",
+      "message": "docs(core-banking): batch 72/90 ACT-012 Standing orders and recurring account instructions",
+      "page": 2,
+      "index": 59
+    },
+    {
+      "sha": "e2a2797b3891a24afb9f1e80666e4102c41d757e",
+      "parent_sha": "075fabd8b04063465956e82f5d9edf4ca8afc11c",
+      "date": "2026-11-03T20:50:43Z",
+      "message": "docs(core-banking): batch 71/90 ACT-011 Account-to-ledger contract and authoritative balance views",
+      "page": 2,
+      "index": 60
+    },
+    {
+      "sha": "075fabd8b04063465956e82f5d9edf4ca8afc11c",
+      "parent_sha": "5d10963a426c95ea9ffc918a62f093f24498a2aa",
+      "date": "2026-11-03T20:50:32Z",
+      "message": "docs(core-banking): batch 70/90 ACT-010 Savings interest accrual and application control",
+      "page": 2,
+      "index": 61
+    },
+    {
+      "sha": "5d10963a426c95ea9ffc918a62f093f24498a2aa",
+      "parent_sha": "589773a3932593431005c55338aa6686d99a3ce5",
+      "date": "2026-11-03T20:50:23Z",
+      "message": "docs(core-banking): batch 69/90 ACT-009 Deposit initiation, booking and source reconciliation",
+      "page": 2,
+      "index": 62
+    },
+    {
+      "sha": "589773a3932593431005c55338aa6686d99a3ce5",
+      "parent_sha": "1dff82b7291007eea00762f47b5bde440e343568",
+      "date": "2026-11-03T20:49:06Z",
+      "message": "docs(core-banking): batch 68/90 ACT-008 Account mandates, ownership and signing controls",
+      "page": 2,
+      "index": 63
+    },
+    {
+      "sha": "1dff82b7291007eea00762f47b5bde440e343568",
+      "parent_sha": "fb86a1429fa88f733855d9fcab2181be891662d9",
+      "date": "2026-11-03T20:48:57Z",
+      "message": "docs(core-banking): batch 67/90 ACT-007 Account lifecycle states, holds and closure authority",
+      "page": 2,
+      "index": 64
+    },
+    {
+      "sha": "fb86a1429fa88f733855d9fcab2181be891662d9",
+      "parent_sha": "18a00f1bed3053b106faa79321d86f168993ec0b",
+      "date": "2026-11-03T20:48:46Z",
+      "message": "docs(core-banking): batch 66/90 ACT-006 Account opening workflow and customer binding",
+      "page": 2,
+      "index": 65
+    },
+    {
+      "sha": "18a00f1bed3053b106faa79321d86f168993ec0b",
+      "parent_sha": "29308c8a69b91a0987ddc21fb7901d78d4017b26",
+      "date": "2026-11-03T20:48:37Z",
+      "message": "docs(core-banking): batch 65/90 ACT-005 Product approval, release and suspension controls",
+      "page": 2,
+      "index": 66
+    },
+    {
+      "sha": "29308c8a69b91a0987ddc21fb7901d78d4017b26",
+      "parent_sha": "1dd853b62fcb31cee1b34fa1c541a95282924999",
+      "date": "2026-11-03T20:47:22Z",
+      "message": "docs(core-banking): batch 64/90 ACT-004 Fees, tariff schedules and precise monetary calculation",
+      "page": 2,
+      "index": 67
+    },
+    {
+      "sha": "1dd853b62fcb31cee1b34fa1c541a95282924999",
+      "parent_sha": "c9115bf0f18704a8d7821fd574c778fc3a45e5f4",
+      "date": "2026-11-03T20:47:12Z",
+      "message": "docs(core-banking): batch 63/90 ACT-003 Customer and institution product eligibility policy",
+      "page": 2,
+      "index": 68
+    },
+    {
+      "sha": "c9115bf0f18704a8d7821fd574c778fc3a45e5f4",
+      "parent_sha": "d054ae5caa79e3db1d90239fb331bcd3b2ff787f",
+      "date": "2026-11-03T20:47:02Z",
+      "message": "docs(core-banking): batch 62/90 ACT-002 Product terms versioning and approved change lifecycle",
+      "page": 2,
+      "index": 69
+    },
+    {
+      "sha": "d054ae5caa79e3db1d90239fb331bcd3b2ff787f",
+      "parent_sha": "16110f10b1e19302d1763ef5a6ec394c7bee61f8",
+      "date": "2026-11-03T20:46:47Z",
+      "message": "docs(core-banking): batch 61/90 ACT-001 Product factory and catalogue ownership",
+      "page": 2,
+      "index": 70
+    },
+    {
+      "sha": "16110f10b1e19302d1763ef5a6ec394c7bee61f8",
+      "parent_sha": "0f2323352cc4d1d71062c88a80a95506314d5c5c",
+      "date": "2026-11-03T20:39:19Z",
+      "message": "docs(core-banking): batch 60/60 CIF-020 CIF onboarding acceptance framework and handoff readiness",
+      "page": 2,
+      "index": 71
+    },
+    {
+      "sha": "0f2323352cc4d1d71062c88a80a95506314d5c5c",
+      "parent_sha": "f15bf552874e7ab39d5794f17fcfcd5d0c69ca94",
+      "date": "2026-11-03T20:39:09Z",
+      "message": "docs(core-banking): batch 59/60 CIF-019 Onboarding failure, exception and recovery controls",
+      "page": 2,
+      "index": 72
+    },
+    {
+      "sha": "f15bf552874e7ab39d5794f17fcfcd5d0c69ca94",
+      "parent_sha": "ed177034463b516708ff8afdad36a6c9a69b039f",
+      "date": "2026-11-03T20:39:01Z",
+      "message": "docs(core-banking): batch 58/60 CIF-018 Customer information APIs and event contract boundaries",
+      "page": 2,
+      "index": 73
+    },
+    {
+      "sha": "ed177034463b516708ff8afdad36a6c9a69b039f",
+      "parent_sha": "3d24f719cecf28eee0231db8e0f4e7747c500ba8",
+      "date": "2026-11-03T20:36:53Z",
+      "message": "docs(core-banking): batch 57/60 CIF-017 Identity audit, retention and lawful evidence access",
+      "page": 2,
+      "index": 74
+    },
+    {
+      "sha": "3d24f719cecf28eee0231db8e0f4e7747c500ba8",
+      "parent_sha": "5cb3f8f46d3757651b32a25f4a32ebe8b985bf4c",
+      "date": "2026-11-03T20:36:44Z",
+      "message": "docs(core-banking): batch 56/60 CIF-016 Onboarding segregation of duties and maker-checker approval",
+      "page": 2,
+      "index": 75
+    },
+    {
+      "sha": "5cb3f8f46d3757651b32a25f4a32ebe8b985bf4c",
+      "parent_sha": "5662a98f41d9df2d35dac463ca5dbbb2a7f02c6f",
+      "date": "2026-11-03T20:36:33Z",
+      "message": "docs(core-banking): batch 55/60 CIF-015 Customer identity lifecycle, refresh and suspension",
+      "page": 2,
+      "index": 76
+    },
+    {
+      "sha": "5662a98f41d9df2d35dac463ca5dbbb2a7f02c6f",
+      "parent_sha": "b11914b52c5c5ac68f5e17cfb663c18b3b06d8d0",
+      "date": "2026-11-03T20:35:03Z",
+      "message": "docs(core-banking): batch 54/60 CIF-014 Consent, privacy notices and legal processing basis",
+      "page": 2,
+      "index": 77
+    },
+    {
+      "sha": "b11914b52c5c5ac68f5e17cfb663c18b3b06d8d0",
+      "parent_sha": "6b697d2b3902486ca304af24d8b7199925938f70",
+      "date": "2026-11-03T20:34:54Z",
+      "message": "docs(core-banking): batch 53/60 CIF-013 Enhanced due diligence and escalated onboarding decisions",
+      "page": 2,
+      "index": 78
+    },
+    {
+      "sha": "6b697d2b3902486ca304af24d8b7199925938f70",
+      "parent_sha": "aea13fa2b45e4979eb63c81acb4ecc480e09d8c6",
+      "date": "2026-11-03T20:34:44Z",
+      "message": "docs(core-banking): batch 52/60 CIF-012 Politically exposed person assessment and control",
+      "page": 2,
+      "index": 79
+    },
+    {
+      "sha": "aea13fa2b45e4979eb63c81acb4ecc480e09d8c6",
+      "parent_sha": "4077ce81257a5d2203d41492d8f3168694334f87",
+      "date": "2026-11-03T20:33:10Z",
+      "message": "docs(core-banking): batch 51/60 CIF-011 Sanctions screening evidence and escalation workflow",
+      "page": 2,
+      "index": 80
+    },
+    {
+      "sha": "4077ce81257a5d2203d41492d8f3168694334f87",
+      "parent_sha": "293f65ef640751f61d323c5d2310be0b3e008539",
+      "date": "2026-11-03T20:33:02Z",
+      "message": "docs(core-banking): batch 50/60 CIF-010 Onboarding customer risk classification and review policy",
+      "page": 2,
+      "index": 81
+    },
+    {
+      "sha": "293f65ef640751f61d323c5d2310be0b3e008539",
+      "parent_sha": "f28ff973113dcf1507c1620422ffe1c3a4004262",
+      "date": "2026-11-03T20:32:45Z",
+      "message": "docs(core-banking): batch 49/60 CIF-009 Duplicate party detection and supervised resolution",
+      "page": 2,
+      "index": 82
+    },
+    {
+      "sha": "f28ff973113dcf1507c1620422ffe1c3a4004262",
+      "parent_sha": "11cf8b98eb6e895a2aa5bbf1618dd71b35a381f9",
+      "date": "2026-11-03T20:31:13Z",
+      "message": "docs(core-banking): batch 48/60 CIF-008 Business identity, KYB evidence and authorized representative verification",
+      "page": 2,
+      "index": 83
+    },
+    {
+      "sha": "11cf8b98eb6e895a2aa5bbf1618dd71b35a381f9",
+      "parent_sha": "e0679888f9551014e738ffe358027baea7e34e66",
+      "date": "2026-11-03T20:31:04Z",
+      "message": "docs(core-banking): batch 47/60 CIF-007 Individual identity evidence verification and document custody",
+      "page": 2,
+      "index": 84
+    },
+    {
+      "sha": "e0679888f9551014e738ffe358027baea7e34e66",
+      "parent_sha": "2c95f63be355c819ba74a2ae02d319752bf71d85",
+      "date": "2026-11-03T20:30:55Z",
+      "message": "docs(core-banking): batch 46/60 CIF-006 Customer onboarding case and progression state machine",
+      "page": 2,
+      "index": 85
+    },
+    {
+      "sha": "2c95f63be355c819ba74a2ae02d319752bf71d85",
+      "parent_sha": "5504192042d49a040c0a0ab56423bf6248213332",
+      "date": "2026-11-03T20:29:20Z",
+      "message": "docs(core-banking): batch 45/60 CIF-005 Party relationships, mandates and lifecycle validity",
+      "page": 2,
+      "index": 86
+    },
+    {
+      "sha": "5504192042d49a040c0a0ab56423bf6248213332",
+      "parent_sha": "385eb8594374de40cb36c7e3e952e2d848ee016c",
+      "date": "2026-11-03T20:29:09Z",
+      "message": "docs(core-banking): batch 44/60 CIF-004 Ultimate beneficial ownership and control graph",
+      "page": 2,
+      "index": 87
+    },
+    {
+      "sha": "385eb8594374de40cb36c7e3e952e2d848ee016c",
+      "parent_sha": "b7fa0b3e9a0fc8939f59de361ad72136d019bd60",
+      "date": "2026-11-03T20:29:00Z",
+      "message": "docs(core-banking): batch 43/60 CIF-003 Legal entity identity and organization registry",
+      "page": 2,
+      "index": 88
+    },
+    {
+      "sha": "b7fa0b3e9a0fc8939f59de361ad72136d019bd60",
+      "parent_sha": "8608636bb7b97677b4323e5aa7d7f4f25fd73794",
+      "date": "2026-11-03T20:27:27Z",
+      "message": "docs(core-banking): batch 42/60 CIF-002 Natural person identity data and verification boundaries",
+      "page": 2,
+      "index": 89
+    },
+    {
+      "sha": "8608636bb7b97677b4323e5aa7d7f4f25fd73794",
+      "parent_sha": "d1ee699cefc055a96dcfffe51d750ab706db9da4",
+      "date": "2026-11-03T20:27:19Z",
+      "message": "docs(core-banking): batch 41/60 CIF-001 Canonical party and customer identity model",
+      "page": 2,
+      "index": 90
+    },
+    {
+      "sha": "d1ee699cefc055a96dcfffe51d750ab706db9da4",
+      "parent_sha": "1599d0490b86839a63c350e39dcb52c87f8f16f7",
+      "date": "2026-11-03T20:27:10Z",
+      "message": "docs(core-banking): batch 40/60 ARC-020 Architecture review and transition-to-implementation decision dossier",
+      "page": 2,
+      "index": 91
+    },
+    {
+      "sha": "1599d0490b86839a63c350e39dcb52c87f8f16f7",
+      "parent_sha": "a5d35743110e9ddceebdcd41f10f95f65a16105b",
+      "date": "2026-11-03T20:25:42Z",
+      "message": "docs(core-banking): batch 39/60 ARC-019 Architecture verification and quality gate strategy",
+      "page": 2,
+      "index": 92
+    },
+    {
+      "sha": "a5d35743110e9ddceebdcd41f10f95f65a16105b",
+      "parent_sha": "703c42f3f0a3b8ed6532daa6d6790b7543769c91",
+      "date": "2026-11-03T20:25:33Z",
+      "message": "docs(core-banking): batch 38/60 ARC-018 Identity security and cryptographic trust boundaries",
+      "page": 2,
+      "index": 93
+    },
+    {
+      "sha": "703c42f3f0a3b8ed6532daa6d6790b7543769c91",
+      "parent_sha": "3c9340950370be943ace9a3966a34d0b7e3dd52d",
+      "date": "2026-11-03T20:25:24Z",
+      "message": "docs(core-banking): batch 37/60 ARC-017 Performance envelope and capacity validation plan",
+      "page": 2,
+      "index": 94
+    },
+    {
+      "sha": "3c9340950370be943ace9a3966a34d0b7e3dd52d",
+      "parent_sha": "87829c91e17bb28f8312dde1e38656c2a380fab6",
+      "date": "2026-11-03T20:23:51Z",
+      "message": "docs(core-banking): batch 36/60 ARC-016 Resilience, failure states and disaster recovery",
+      "page": 2,
+      "index": 95
+    },
+    {
+      "sha": "87829c91e17bb28f8312dde1e38656c2a380fab6",
+      "parent_sha": "a2352a3f1d34cb7ee207a0b1bc68733beab5c0c4",
+      "date": "2026-11-03T20:23:43Z",
+      "message": "docs(core-banking): batch 35/60 ARC-015 Observability, audit and operational evidence architecture",
+      "page": 2,
+      "index": 96
+    },
+    {
+      "sha": "a2352a3f1d34cb7ee207a0b1bc68733beab5c0c4",
+      "parent_sha": "02a344c97efe39e968dce027376f479c1e857052",
+      "date": "2026-11-03T20:23:36Z",
+      "message": "docs(core-banking): batch 34/60 ARC-014 External systems and anti-corruption integration boundaries",
+      "page": 2,
+      "index": 97
+    },
+    {
+      "sha": "02a344c97efe39e968dce027376f479c1e857052",
+      "parent_sha": "561b5a1601f9324acc1a921d2a89bdb8c8e1a078",
+      "date": "2026-11-03T20:22:00Z",
+      "message": "docs(core-banking): batch 33/60 ARC-013 Versioned configuration and capability activation",
+      "page": 2,
+      "index": 98
+    },
+    {
+      "sha": "561b5a1601f9324acc1a921d2a89bdb8c8e1a078",
+      "parent_sha": "fdf78a9f1486b379d2e7dbfae0adf724f5232413",
+      "date": "2026-11-03T20:21:51Z",
+      "message": "docs(core-banking): batch 32/60 ARC-012 Institution scoping and data isolation",
+      "page": 2,
+      "index": 99
+    },
+    {
+      "sha": "fdf78a9f1486b379d2e7dbfae0adf724f5232413",
+      "parent_sha": "da6d5ce4a6044619241e6dff26de64f1faf14267",
+      "date": "2026-11-03T20:21:43Z",
+      "message": "docs(core-banking): batch 31/60 ARC-011 Financial transaction and consistency boundaries",
+      "page": 3,
+      "index": 0
+    },
+    {
+      "sha": "da6d5ce4a6044619241e6dff26de64f1faf14267",
+      "parent_sha": "da042918b068e9993de5537bc249423fefd7b9bd",
+      "date": "2026-11-03T20:14:11Z",
+      "message": "docs(core-banking): batch 30 ARC-010 Data architecture, classification and lifecycle blueprint",
+      "page": 3,
+      "index": 1
+    },
+    {
+      "sha": "da042918b068e9993de5537bc249423fefd7b9bd",
+      "parent_sha": "977aaaaccaf24a7a323dde885faecd5acb656a90",
+      "date": "2026-11-03T20:14:04Z",
+      "message": "docs(core-banking): batch 29 ARC-009 Idempotency, replay and uncertain-outcome contract",
+      "page": 3,
+      "index": 2
+    },
+    {
+      "sha": "977aaaaccaf24a7a323dde885faecd5acb656a90",
+      "parent_sha": "955f4e586eaed6114e4fb1dcdea165f857d90242",
+      "date": "2026-11-03T20:12:47Z",
+      "message": "docs(core-banking): batch 28 ARC-008 Transactional outbox/inbox and durable delivery policy",
+      "page": 3,
+      "index": 3
+    },
+    {
+      "sha": "955f4e586eaed6114e4fb1dcdea165f857d90242",
+      "parent_sha": "b18988e39ddfaf90c1f425af2afd13d0a9f2f3a5",
+      "date": "2026-11-03T20:12:40Z",
+      "message": "docs(core-banking): batch 27 ARC-007 Domain event envelope and schema governance",
+      "page": 3,
+      "index": 4
+    },
+    {
+      "sha": "b18988e39ddfaf90c1f425af2afd13d0a9f2f3a5",
+      "parent_sha": "01089cfb9104a4214617822c3d9a8bc6ca310570",
+      "date": "2026-11-03T20:12:30Z",
+      "message": "docs(core-banking): batch 26 ARC-006 API contract conventions and service ownership",
+      "page": 3,
+      "index": 5
+    },
+    {
+      "sha": "01089cfb9104a4214617822c3d9a8bc6ca310570",
+      "parent_sha": "49b06a452eb9914a51828df04edde29c5278b39f",
+      "date": "2026-11-03T20:12:22Z",
+      "message": "docs(core-banking): batch 25 ARC-005 Architecture decision register and ADR templates",
+      "page": 3,
+      "index": 6
+    },
+    {
+      "sha": "49b06a452eb9914a51828df04edde29c5278b39f",
+      "parent_sha": "103849523dbaf04db62cc046e81f5fa525c027d1",
+      "date": "2026-11-03T20:11:16Z",
+      "message": "docs(core-banking): batch 24 ARC-004 Architecture principles and quality constraints",
+      "page": 3,
+      "index": 7
+    },
+    {
+      "sha": "103849523dbaf04db62cc046e81f5fa525c027d1",
+      "parent_sha": "801c42e573fe2926554cbfd2d26a385fdeddcdf8",
+      "date": "2026-11-03T20:11:09Z",
+      "message": "docs(core-banking): batch 23 ARC-003 Deployment and continuity option assessment",
+      "page": 3,
+      "index": 8
+    },
+    {
+      "sha": "801c42e573fe2926554cbfd2d26a385fdeddcdf8",
+      "parent_sha": "ff45f43f36f73d11ccfbb66576260430c613999b",
+      "date": "2026-11-03T20:11:02Z",
+      "message": "docs(core-banking): batch 22 ARC-002 Domain boundaries and invariants",
+      "page": 3,
+      "index": 9
+    },
+    {
+      "sha": "ff45f43f36f73d11ccfbb66576260430c613999b",
+      "parent_sha": "e0277e470432d0345404ee63f1f0598c558392f3",
+      "date": "2026-11-03T20:10:54Z",
+      "message": "docs(core-banking): batch 21 ARC-001 Enterprise context map",
+      "page": 3,
+      "index": 10
+    },
+    {
+      "sha": "e0277e470432d0345404ee63f1f0598c558392f3",
+      "parent_sha": "dd9877bc4243ccf5b37715afb18dd720eeecd4b9",
+      "date": "2026-11-03T20:07:55Z",
+      "message": "docs(core-banking): batch 20 GOV-020 Audit readiness, evidence retention and independent reconstruction",
+      "page": 3,
+      "index": 11
+    },
+    {
+      "sha": "dd9877bc4243ccf5b37715afb18dd720eeecd4b9",
+      "parent_sha": "378c0010d56afbddf4621cb97163e00dd4ca30fa",
+      "date": "2026-11-03T20:07:49Z",
+      "message": "docs(core-banking): batch 19 GOV-019 Formal master-plan ratification and acceptance dossier",
+      "page": 3,
+      "index": 12
+    },
+    {
+      "sha": "378c0010d56afbddf4621cb97163e00dd4ca30fa",
+      "parent_sha": "33ce51b9865eecc5f445e04916ba9552d545701f",
+      "date": "2026-11-03T20:07:40Z",
+      "message": "docs(core-banking): batch 18 GOV-018 Cross-disciplinary quality assurance review framework",
+      "page": 3,
+      "index": 13
+    },
+    {
+      "sha": "33ce51b9865eecc5f445e04916ba9552d545701f",
+      "parent_sha": "e5dcb854aaaf36d553073a60feba665adc46102c",
+      "date": "2026-11-03T20:07:31Z",
+      "message": "docs(core-banking): batch 17 GOV-017 Historical archive provenance and binary custody programme",
+      "page": 3,
+      "index": 14
+    },
+    {
+      "sha": "e5dcb854aaaf36d553073a60feba665adc46102c",
+      "parent_sha": "26718bd8a68492eaf36d7f12a238938a56245cbf",
+      "date": "2026-11-03T20:06:13Z",
+      "message": "docs(core-banking): batch 16 GOV-016 Historical checkpoint lineage and evidence crosswalk",
+      "page": 3,
+      "index": 15
+    },
+    {
+      "sha": "26718bd8a68492eaf36d7f12a238938a56245cbf",
+      "parent_sha": "7b5d03be24f16a8b10c772832abac2792eab8141",
+      "date": "2026-11-03T20:06:06Z",
+      "message": "docs(core-banking): batch 15 GOV-015 Controlled scope, version and architectural change procedure",
+      "page": 3,
+      "index": 16
+    },
+    {
+      "sha": "7b5d03be24f16a8b10c772832abac2792eab8141",
+      "parent_sha": "c4d64c7e395ec84d80c7dbaa7813a809fdabc381",
+      "date": "2026-11-03T20:05:58Z",
+      "message": "docs(core-banking): batch 14 GOV-014 Initial programme risk and P0 blocker register",
+      "page": 3,
+      "index": 17
+    },
+    {
+      "sha": "c4d64c7e395ec84d80c7dbaa7813a809fdabc381",
+      "parent_sha": "5214a3b54e67acc202214baa9c249881fea2a327",
+      "date": "2026-11-03T20:05:50Z",
+      "message": "docs(core-banking): batch 13 GOV-013 Definition of Ready, Done and evidence acceptance matrix",
+      "page": 3,
+      "index": 18
+    },
+    {
+      "sha": "5214a3b54e67acc202214baa9c249881fea2a327",
+      "parent_sha": "26aec2f06199a954724df5c0f5b8924697dc9f80",
+      "date": "2026-11-03T20:04:44Z",
+      "message": "docs(core-banking): batch 12 GOV-012 Dependency graph and critical-path gate model",
+      "page": 3,
+      "index": 19
+    },
+    {
+      "sha": "26aec2f06199a954724df5c0f5b8924697dc9f80",
+      "parent_sha": "ee53d756eacf670b8e43582ad9a190625b94749f",
+      "date": "2026-11-03T20:04:36Z",
+      "message": "docs(core-banking): batch 11 GOV-011 260-package planning envelope and baseline reconciliation",
+      "page": 3,
+      "index": 20
+    },
+    {
+      "sha": "ee53d756eacf670b8e43582ad9a190625b94749f",
+      "parent_sha": "8d8bfabf0a1c70733e5d4440c92c4209aaa0c16b",
+      "date": "2026-11-03T20:04:29Z",
+      "message": "docs(core-banking): batch 10 GOV-010 Legal-to-engineering requirement traceability contract",
+      "page": 3,
+      "index": 21
+    },
+    {
+      "sha": "8d8bfabf0a1c70733e5d4440c92c4209aaa0c16b",
+      "parent_sha": "a131f5a6bd362b6308db96cbdc09dbfe269a6ec1",
+      "date": "2026-11-03T20:04:22Z",
+      "message": "docs(core-banking): batch 09 GOV-009 Effective dating, amendments and regulatory version control",
+      "page": 3,
+      "index": 22
+    },
+    {
+      "sha": "a131f5a6bd362b6308db96cbdc09dbfe269a6ec1",
+      "parent_sha": "dd5f0c77e0d341238b92cd15394cd022d4dd09d1",
+      "date": "2026-11-03T20:03:06Z",
+      "message": "docs(core-banking): batch 08 GOV-008 Jurisdiction, licensing and capability matrix",
+      "page": 3,
+      "index": 23
+    },
+    {
+      "sha": "dd5f0c77e0d341238b92cd15394cd022d4dd09d1",
+      "parent_sha": "687ce62eb2728d5999b4b350a48d47d87f3918fa",
+      "date": "2026-11-03T20:02:59Z",
+      "message": "docs(core-banking): batch 07 GOV-007 Regulatory authority and contradiction precedence",
+      "page": 3,
+      "index": 24
+    },
+    {
+      "sha": "687ce62eb2728d5999b4b350a48d47d87f3918fa",
+      "parent_sha": "0ea09eadbdb78aa53f14a278cef466dea72e64e1",
+      "date": "2026-11-03T20:02:52Z",
+      "message": "docs(core-banking): batch 06 GOV-006 Regulatory source inventory and controlled taxonomy",
+      "page": 3,
+      "index": 25
+    },
+    {
+      "sha": "0ea09eadbdb78aa53f14a278cef466dea72e64e1",
+      "parent_sha": "ca8169ba964e3a28e9a0dd46ecf00fcb7fee0709",
+      "date": "2026-11-03T20:02:45Z",
+      "message": "docs(core-banking): batch 05 GOV-005 Delegation, conflict escalation and maker-checker policy",
+      "page": 3,
+      "index": 26
+    },
+    {
+      "sha": "ca8169ba964e3a28e9a0dd46ecf00fcb7fee0709",
+      "parent_sha": "d1e1ed7dc3c2469bfcb5a6da03766eaf6d0e03f9",
+      "date": "2026-11-03T19:59:53Z",
+      "message": "docs(core-banking): batch 04 GOV-004 Governance ceremonies and stop/go decision controls",
+      "page": 3,
+      "index": 27
+    },
+    {
+      "sha": "d1e1ed7dc3c2469bfcb5a6da03766eaf6d0e03f9",
+      "parent_sha": "9cd4ffe928a8afa1b07a63c2637bc83281f879e7",
+      "date": "2026-11-03T19:59:45Z",
+      "message": "docs(core-banking): batch 03 GOV-003 Stakeholder and independent assurance roster",
+      "page": 3,
+      "index": 28
+    },
+    {
+      "sha": "9cd4ffe928a8afa1b07a63c2637bc83281f879e7",
+      "parent_sha": "68e7fdb0ab85a2a453f9270110732911c140b213",
+      "date": "2026-11-03T19:59:36Z",
+      "message": "docs(core-banking): batch 02 GOV-002 Institution and regulatory deployment profiles",
+      "page": 3,
+      "index": 29
+    },
+    {
+      "sha": "68e7fdb0ab85a2a453f9270110732911c140b213",
+      "parent_sha": "f1e095e4bdf5a6fb15ad469f2441e3661ce0b5a0",
+      "date": "2026-11-03T19:59:24Z",
+      "message": "docs(core-banking): batch 01 GOV-001 Programme charter and non-negotiable outcomes",
+      "page": 3,
+      "index": 30
+    },
+    {
+      "sha": "f1e095e4bdf5a6fb15ad469f2441e3661ce0b5a0",
+      "parent_sha": "38f8142540d13f3fd7e7322c81b6ce2eceba82e7",
+      "date": "2026-11-03T19:48:33Z",
+      "message": "docs(governance): archive GOV-REC-001 partial recovery checkpoint",
+      "page": 3,
+      "index": 31
+    },
+    {
+      "sha": "38f8142540d13f3fd7e7322c81b6ce2eceba82e7",
+      "parent_sha": "cd71c4fce3e246349399da7ec1009c90930f9596",
+      "date": "2026-11-03T19:40:54Z",
+      "message": "docs(governance): baseline master plan and evidence-qualified WBS recovery register",
+      "page": 3,
+      "index": 32
+    },
+    {
+      "sha": "cd71c4fce3e246349399da7ec1009c90930f9596",
+      "parent_sha": "c3312c2e850ecf1a2021f6cd060a64341f595824",
+      "date": "2026-11-03T18:43:44Z",
+      "message": "docs(regulatory): checkpoint CT bulletin lineage evidence limits fail closed",
+      "page": 3,
+      "index": 33
+    },
+    {
+      "sha": "c3312c2e850ecf1a2021f6cd060a64341f595824",
+      "parent_sha": "3bbc27f1a97ef1f5bfc9e1e9fa536ef73cbcf346",
+      "date": "2026-11-03T17:45:53Z",
+      "message": "docs(regulatory): checkpoint CS PCEC legal CFO decision dossier fail closed",
+      "page": 3,
+      "index": 34
+    },
+    {
+      "sha": "3bbc27f1a97ef1f5bfc9e1e9fa536ef73cbcf346",
+      "parent_sha": "5b21d98e009453232522d5ab70041d6517f38107",
+      "date": "2026-11-03T16:40:39Z",
+      "message": "docs(regulatory): checkpoint CR COBAC PCEC clarification request and evidence register",
+      "page": 3,
+      "index": 35
+    },
+    {
+      "sha": "5b21d98e009453232522d5ab70041d6517f38107",
+      "parent_sha": "4b72d76fa2add3218a29e86201128e6cbf1a2e6f",
+      "date": "2026-11-03T15:44:24Z",
+      "message": "docs(regulatory): CQ identify PCEC 312 maturity collision and preserve fail-closed mapping gate",
+      "page": 3,
+      "index": 36
+    },
+    {
+      "sha": "4b72d76fa2add3218a29e86201128e6cbf1a2e6f",
+      "parent_sha": "f3b219bd7cd5154ab878236f669d1f61fd3a7e12",
+      "date": "2026-11-03T14:41:44Z",
+      "message": "docs(regulatory): CP verify I-2015/01 Article 8 312/322 discrepancy from BEAC page images",
+      "page": 3,
+      "index": 37
+    },
+    {
+      "sha": "f3b219bd7cd5154ab878236f669d1f61fd3a7e12",
+      "parent_sha": "a51f8f11c1c3cf5c0286f2e38dee089ddddfe5db",
+      "date": "2026-11-03T13:37:07Z",
+      "message": "docs(regulatory): checkpoint CO source acquisition leads and PCEC Article 8 evidence hold",
+      "page": 3,
+      "index": 38
+    },
+    {
+      "sha": "a51f8f11c1c3cf5c0286f2e38dee089ddddfe5db",
+      "parent_sha": "54c4e472caf49c207bbaacaf053238cefaafeaff",
+      "date": "2026-11-03T12:40:29Z",
+      "message": "docs(accounting): CN quarantine ambiguous PCEC Article 8 mappings pending primary evidence",
+      "page": 3,
+      "index": 39
+    },
+    {
+      "sha": "54c4e472caf49c207bbaacaf053238cefaafeaff",
+      "parent_sha": "e23fd1ce51682d9513a7fa5ca6bd3fb0bec3236e",
+      "date": "2026-11-03T11:42:21Z",
+      "message": "docs(accounting): CM authority search and fail-closed PCEC crosswalk design",
+      "page": 3,
+      "index": 40
+    },
+    {
+      "sha": "e23fd1ce51682d9513a7fa5ca6bd3fb0bec3236e",
+      "parent_sha": "93d1b3753f23db662d6ed88feda0cec2d8186cf1",
+      "date": "2026-11-03T10:40:37Z",
+      "message": "docs(regulatory): CL visual audit of COBAC 2015 PCEC changes and 2018 effective-date clause",
+      "page": 3,
+      "index": 41
+    },
+    {
+      "sha": "93d1b3753f23db662d6ed88feda0cec2d8186cf1",
+      "parent_sha": "248f8cefafa463e01f160e4859d3eb2a9d2f3a9d",
+      "date": "2026-11-03T09:40:12Z",
+      "message": "docs(regulatory): CK R-2018/01 provision matrix and blocked 2015 full review",
+      "page": 3,
+      "index": 42
+    },
+    {
+      "sha": "248f8cefafa463e01f160e4859d3eb2a9d2f3a9d",
+      "parent_sha": "419d83826457fc1ed7614fcebf1040260d368033",
+      "date": "2026-11-03T08:41:27Z",
+      "message": "docs(regulatory): checkpoint CJ PCEC authority, accounting controls and partial 2015 amendment review",
+      "page": 3,
+      "index": 43
+    },
+    {
+      "sha": "419d83826457fc1ed7614fcebf1040260d368033",
+      "parent_sha": "053cc3cbe9493758154874b2158f70b40c3f443b",
+      "date": "2026-11-03T07:58:42Z",
+      "message": "archive(regulatory): restore byte-exact original checkpoint AN",
+      "page": 3,
+      "index": 44
+    },
+    {
+      "sha": "053cc3cbe9493758154874b2158f70b40c3f443b",
+      "parent_sha": "89c3db820b5c6b4ed1d064a857f5d68667caf2c8",
+      "date": "2026-11-03T07:58:32Z",
+      "message": "recovery(regulatory): stage verified original AN sources and deterministic archive restore",
+      "page": 3,
+      "index": 45
+    },
+    {
+      "sha": "89c3db820b5c6b4ed1d064a857f5d68667caf2c8",
+      "parent_sha": "8fff3e0fdf5a76238b5b1743ff88f424be227621",
+      "date": "2026-11-03T07:39:55Z",
+      "message": "docs(regulatory): checkpoint CI PCEC article anchors and effective-date gates",
+      "page": 3,
+      "index": 46
+    },
+    {
+      "sha": "8fff3e0fdf5a76238b5b1743ff88f424be227621",
+      "parent_sha": "37d7180ce8ad84654a68a9a3b1e522dd051e1df1",
+      "date": "2026-11-03T07:32:22Z",
+      "message": "docs(recovery): archive WP-ACC-005 Checkpoint R (2026-10-20)",
+      "page": 3,
+      "index": 47
+    },
+    {
+      "sha": "37d7180ce8ad84654a68a9a3b1e522dd051e1df1",
+      "parent_sha": "b6b82134089b25435d14c901f77f557c1884ef99",
+      "date": "2026-11-03T07:28:57Z",
+      "message": "docs(recovery): preserve uploaded historical recovery audit findings and missing artifact register",
+      "page": 3,
+      "index": 48
+    },
+    {
+      "sha": "b6b82134089b25435d14c901f77f557c1884ef99",
+      "parent_sha": "8df9e4036fb541b8ea65a64e33ab1b1bd222016a",
+      "date": "2026-11-03T06:36:48Z",
+      "message": "Checkpoint CH: locate COBAC PCEC amendment and preserve accounting P0 gates",
+      "page": 3,
+      "index": 49
+    },
+    {
+      "sha": "8df9e4036fb541b8ea65a64e33ab1b1bd222016a",
+      "parent_sha": "c2c5b68b1429defcb691c348c9b61bcd9fb32f28",
+      "date": "2026-11-03T05:42:43Z",
+      "message": "Checkpoint CG: verify BEAC source boundaries and retain WP-ACC-005 P0 holds",
+      "page": 3,
+      "index": 50
+    },
+    {
+      "sha": "c2c5b68b1429defcb691c348c9b61bcd9fb32f28",
+      "parent_sha": "dc956d2cf317f0123d4af3b57c5953fc917db2ed",
+      "date": "2026-11-03T04:42:24Z",
+      "message": "docs: mark recovered checkpoints AE-AM as pushed and verified",
+      "page": 3,
+      "index": 51
+    },
+    {
+      "sha": "dc956d2cf317f0123d4af3b57c5953fc917db2ed",
+      "parent_sha": "3f2418eb9cdc82950f674da3d9875ea4a95d454c",
+      "date": "2026-11-03T04:41:27Z",
+      "message": "archive: recover original core banking checkpoints AE-AM",
+      "page": 3,
+      "index": 52
+    },
+    {
+      "sha": "3f2418eb9cdc82950f674da3d9875ea4a95d454c",
+      "parent_sha": "7fdf8032171b35768abbee65996bb775ac5a9998",
+      "date": "2026-11-03T04:41:15Z",
+      "message": "chore: stage one-time recovered archive import",
+      "page": 3,
+      "index": 53
+    },
+    {
+      "sha": "7fdf8032171b35768abbee65996bb775ac5a9998",
+      "parent_sha": "b87f7683c0e8a667c0f2896993c39a3c62598df0",
+      "date": "2026-11-03T04:38:09Z",
+      "message": "Checkpoint CF: revalidate BEAC SYGMA V10 evidence and preserve WP-ACC-005 P0 holds",
+      "page": 3,
+      "index": 54
+    },
+    {
+      "sha": "b87f7683c0e8a667c0f2896993c39a3c62598df0",
+      "parent_sha": "4786a866bd7da7bfafb70742b57187f8f5c510e2",
+      "date": "2026-11-03T04:33:29Z",
+      "message": "docs: update core banking recovery status after finding AE-AM originals",
+      "page": 3,
+      "index": 55
+    },
+    {
+      "sha": "4786a866bd7da7bfafb70742b57187f8f5c510e2",
+      "parent_sha": "d1a4b8124e36eb9eb0bae85c0aa0fc5c49684be9",
+      "date": "2026-11-03T04:33:12Z",
+      "message": "docs: record full hashes for recovered core banking checkpoints AE-AM",
+      "page": 3,
+      "index": 56
+    },
+    {
+      "sha": "d1a4b8124e36eb9eb0bae85c0aa0fc5c49684be9",
+      "parent_sha": "6222ec776f041a4be3713a0ebbc24163e0a055e1",
+      "date": "2026-11-03T04:22:42Z",
+      "message": "docs: add recovered core banking artifact manifest",
+      "page": 3,
+      "index": 57
+    },
+    {
+      "sha": "6222ec776f041a4be3713a0ebbc24163e0a055e1",
+      "parent_sha": "211bde5be155effbf9b2ad309370396553f2fa81",
+      "date": "2026-11-03T04:15:31Z",
+      "message": "docs: preserve recovery record for unpushed core banking artifacts",
+      "page": 3,
+      "index": 58
+    },
+    {
+      "sha": "211bde5be155effbf9b2ad309370396553f2fa81",
+      "parent_sha": "ac6bdc4529da84fe13171dfc235ab8f81844fed0",
+      "date": "2026-11-03T03:45:08Z",
+      "message": "regulatory: checkpoint CE issuer revalidation and fail-closed payment authority gates",
+      "page": 3,
+      "index": 59
+    },
+    {
+      "sha": "ac6bdc4529da84fe13171dfc235ab8f81844fed0",
+      "parent_sha": "906f93d8df3c01bd28492bfe72c03c8f7ea4b858",
+      "date": "2026-11-03T03:38:58Z",
+      "message": "governance: inventory recovered historical artifacts and explicitly track upload gaps",
+      "page": 3,
+      "index": 60
+    },
+    {
+      "sha": "906f93d8df3c01bd28492bfe72c03c8f7ea4b858",
+      "parent_sha": "c7a9548954ee244ccc6dee3a7d739b9653536d85",
+      "date": "2026-11-03T03:29:21Z",
+      "message": "governance: establish provisional programme recovery baseline and evidence gates",
+      "page": 3,
+      "index": 61
+    },
+    {
+      "sha": "c7a9548954ee244ccc6dee3a7d739b9653536d85",
+      "parent_sha": "1fdda8ad6efe5719107cad2d883dae3cef952a53",
+      "date": "2026-11-03T02:37:20Z",
+      "message": "Checkpoint CD: document BEAC migration chronology conflict and preserve payment activation P0 gates",
+      "page": 3,
+      "index": 62
+    },
+    {
+      "sha": "1fdda8ad6efe5719107cad2d883dae3cef952a53",
+      "parent_sha": "db450b35b43c390523327c9ee995b8eebd9d623e",
+      "date": "2026-11-03T01:42:00Z",
+      "message": "Checkpoint CC: distinguish legacy SYGMA operation from unverified V10 activation; preserve P0 gates",
+      "page": 3,
+      "index": 63
+    },
+    {
+      "sha": "db450b35b43c390523327c9ee995b8eebd9d623e",
+      "parent_sha": "ec68b3d02965b1f2c79d0ec0b13dffc89bec54d5",
+      "date": "2026-11-03T00:46:52Z",
+      "message": "Checkpoint CB: trace BEAC CMA MX contracts and quarantine unapproved MT-MX semantics; preserve WP-ACC-005 P0",
+      "page": 3,
+      "index": 64
+    },
+    {
+      "sha": "ec68b3d02965b1f2c79d0ec0b13dffc89bec54d5",
+      "parent_sha": "c582312568669071cb7ca60e852cdeb6ab900368",
+      "date": "2026-11-02T23:46:27Z",
+      "message": "Checkpoint CA: authenticate BEAC 2025 ISO 20022 rules, quarantine contradictory rollout dates, preserve WP-ACC-005 P0",
+      "page": 3,
+      "index": 65
+    },
+    {
+      "sha": "c582312568669071cb7ca60e852cdeb6ab900368",
+      "parent_sha": "923ad456a46df31a950c288c8afb131f40458f8e",
+      "date": "2026-11-02T22:46:49Z",
+      "message": "Checkpoint BZ: verify 2014 BEAC surveillance instruction, quarantine March-May date conflict, preserve WP-ACC-005 P0",
+      "page": 3,
+      "index": 66
+    },
+    {
+      "sha": "923ad456a46df31a950c288c8afb131f40458f8e",
+      "parent_sha": "263c38b7ca0261011c032d81b829869e8ed7be5a",
+      "date": "2026-11-02T21:40:32Z",
+      "message": "Checkpoint BY: reconcile BEAC 2014 payment charter ex officio debit and dual-supervisor incident evidence; retain WP-ACC-005 P0",
+      "page": 3,
+      "index": 67
+    },
+    {
+      "sha": "263c38b7ca0261011c032d81b829869e8ed7be5a",
+      "parent_sha": "4f2c0b7765bffb091f3c68bc5434aaa2916ff1c9",
+      "date": "2026-11-02T20:40:03Z",
+      "message": "Repair missing BW consolidated lineage entry without changing historical checkpoint",
+      "page": 3,
+      "index": 68
+    },
+    {
+      "sha": "4f2c0b7765bffb091f3c68bc5434aaa2916ff1c9",
+      "parent_sha": "2aa1bafe676b853b7243f53258f3ea1a8d1ed8ea",
+      "date": "2026-11-02T20:39:53Z",
+      "message": "OPES Core Banking: consolidate BX regulatory and recovery evidence checkpoint",
+      "page": 3,
+      "index": 69
+    },
+    {
+      "sha": "2aa1bafe676b853b7243f53258f3ea1a8d1ed8ea",
+      "parent_sha": "204948391024184f3cd46909334b96da3fa383a3",
+      "date": "2026-11-02T20:39:44Z",
+      "message": "OPES Core Banking BX: EXECUTION_REPORT.md regulatory integrity checkpoint",
+      "page": 3,
+      "index": 70
+    },
+    {
+      "sha": "204948391024184f3cd46909334b96da3fa383a3",
+      "parent_sha": "205c321d49f74b683718f21fa6a6c9581fb64068",
+      "date": "2026-11-02T20:39:42Z",
+      "message": "OPES Core Banking BX: CONTINUATION_STATE.json regulatory integrity checkpoint",
+      "page": 3,
+      "index": 71
+    },
+    {
+      "sha": "205c321d49f74b683718f21fa6a6c9581fb64068",
+      "parent_sha": "f4ac972cc64da8e3c4d7f4884dec528c5cc317ee",
+      "date": "2026-11-02T20:39:39Z",
+      "message": "OPES Core Banking BX: QUALITY_REVIEW.md regulatory integrity checkpoint",
+      "page": 3,
+      "index": 72
+    },
+    {
+      "sha": "f4ac972cc64da8e3c4d7f4884dec528c5cc317ee",
+      "parent_sha": "15c70e87b682419bb90ffd23f1b375f5d822c971",
+      "date": "2026-11-02T20:39:37Z",
+      "message": "OPES Core Banking BX: TEST_DESIGN.md regulatory integrity checkpoint",
+      "page": 3,
+      "index": 73
+    },
+    {
+      "sha": "15c70e87b682419bb90ffd23f1b375f5d822c971",
+      "parent_sha": "9fe681e7f5f87f1d17966b1a667f43b596843a49",
+      "date": "2026-11-02T20:39:35Z",
+      "message": "OPES Core Banking BX: CONTROL_MATRIX.json regulatory integrity checkpoint",
+      "page": 3,
+      "index": 74
+    },
+    {
+      "sha": "9fe681e7f5f87f1d17966b1a667f43b596843a49",
+      "parent_sha": "ef5ad6ff6dd15275173f91b14ff72c871be1f80d",
+      "date": "2026-11-02T20:39:32Z",
+      "message": "OPES Core Banking BX: EVIDENCE_DELTA.md regulatory integrity checkpoint",
+      "page": 3,
+      "index": 75
+    },
+    {
+      "sha": "ef5ad6ff6dd15275173f91b14ff72c871be1f80d",
+      "parent_sha": "cca263fbd67994f98b517cf13e13e8caa7703b80",
+      "date": "2026-11-02T20:39:30Z",
+      "message": "OPES Core Banking BX: README.md regulatory integrity checkpoint",
+      "page": 3,
+      "index": 76
+    },
+    {
+      "sha": "cca263fbd67994f98b517cf13e13e8caa7703b80",
+      "parent_sha": "34b5e253bb7f5fc3cdb5af9b3fa8a981fa7a0cb8",
+      "date": "2026-11-02T19:44:09Z",
+      "message": "docs(corebanking): consolidate checkpoint BW without rewriting prior lineage",
+      "page": 3,
+      "index": 77
+    },
+    {
+      "sha": "34b5e253bb7f5fc3cdb5af9b3fa8a981fa7a0cb8",
+      "parent_sha": "c9f392c17121371dddfb8d02510a21597c641321",
+      "date": "2026-11-02T19:44:06Z",
+      "message": "docs(corebanking): BW evidence and incident governance — EXECUTION_REPORT.md",
+      "page": 3,
+      "index": 78
+    },
+    {
+      "sha": "c9f392c17121371dddfb8d02510a21597c641321",
+      "parent_sha": "a39c0e0ab6bb35054de7f557ed316477ffc9db17",
+      "date": "2026-11-02T19:44:03Z",
+      "message": "docs(corebanking): BW evidence and incident governance — CONTINUATION_STATE.json",
+      "page": 3,
+      "index": 79
+    },
+    {
+      "sha": "a39c0e0ab6bb35054de7f557ed316477ffc9db17",
+      "parent_sha": "d7beb27dcc479a4a4e24707fb7dc3058473a325a",
+      "date": "2026-11-02T19:44:00Z",
+      "message": "docs(corebanking): BW evidence and incident governance — QUALITY_REVIEW.md",
+      "page": 3,
+      "index": 80
+    },
+    {
+      "sha": "d7beb27dcc479a4a4e24707fb7dc3058473a325a",
+      "parent_sha": "a7c4e2516a714cc13c3b2c4104b88cdc2fc31881",
+      "date": "2026-11-02T19:43:58Z",
+      "message": "docs(corebanking): BW evidence and incident governance — CONTROL_AND_TEST_DESIGN.md",
+      "page": 3,
+      "index": 81
+    },
+    {
+      "sha": "a7c4e2516a714cc13c3b2c4104b88cdc2fc31881",
+      "parent_sha": "239142495e10fb5d553b3813c23d0c6f927325fa",
+      "date": "2026-11-02T19:43:56Z",
+      "message": "docs(corebanking): BW evidence and incident governance — LEGAL_INCIDENT_AND_TEMPORAL_GATES.json",
+      "page": 3,
+      "index": 82
+    },
+    {
+      "sha": "239142495e10fb5d553b3813c23d0c6f927325fa",
+      "parent_sha": "02e9017670ccd1ff98b971920930d0505a5d0f8f",
+      "date": "2026-11-02T19:43:53Z",
+      "message": "docs(corebanking): BW evidence and incident governance — EVIDENCE_DELTA.md",
+      "page": 3,
+      "index": 83
+    },
+    {
+      "sha": "02e9017670ccd1ff98b971920930d0505a5d0f8f",
+      "parent_sha": "0081e58142f8a29b787b1d1a44810c9676733858",
+      "date": "2026-11-02T19:43:50Z",
+      "message": "docs(corebanking): BW evidence and incident governance — README.md",
+      "page": 3,
+      "index": 84
+    },
+    {
+      "sha": "0081e58142f8a29b787b1d1a44810c9676733858",
+      "parent_sha": "b409e36662e728d549283f91bf791667fc1e0042",
+      "date": "2026-11-02T18:39:34Z",
+      "message": "docs(core-banking): consolidate BV evidence and next continuation",
+      "page": 3,
+      "index": 85
+    },
+    {
+      "sha": "b409e36662e728d549283f91bf791667fc1e0042",
+      "parent_sha": "0f6cc57dfc50866e055773f99c4a095472343f37",
+      "date": "2026-11-02T18:39:31Z",
+      "message": "docs(core-banking): BV EXECUTION_REPORT.md — scoped regulatory evidence",
+      "page": 3,
+      "index": 86
+    },
+    {
+      "sha": "0f6cc57dfc50866e055773f99c4a095472343f37",
+      "parent_sha": "fce4e0943305bf3920911354b9209c95a375b866",
+      "date": "2026-11-02T18:39:29Z",
+      "message": "docs(core-banking): BV CONTINUATION_STATE.json — scoped regulatory evidence",
+      "page": 3,
+      "index": 87
+    },
+    {
+      "sha": "fce4e0943305bf3920911354b9209c95a375b866",
+      "parent_sha": "6c989c56c860858e7cf3a733dee9a05820405a81",
+      "date": "2026-11-02T18:39:27Z",
+      "message": "docs(core-banking): BV QUALITY_REVIEW.md — scoped regulatory evidence",
+      "page": 3,
+      "index": 88
+    },
+    {
+      "sha": "6c989c56c860858e7cf3a733dee9a05820405a81",
+      "parent_sha": "411e0468f76c983b99ff02dac23e9f5860b0b470",
+      "date": "2026-11-02T18:39:24Z",
+      "message": "docs(core-banking): BV CONTROL_AND_TEST_DESIGN.md — scoped regulatory evidence",
+      "page": 3,
+      "index": 89
+    },
+    {
+      "sha": "411e0468f76c983b99ff02dac23e9f5860b0b470",
+      "parent_sha": "80b31a11cc02f929d399b39b2c934454bf0f3b0b",
+      "date": "2026-11-02T18:39:22Z",
+      "message": "docs(core-banking): BV REGULATORY_CONTROL_GATES.json — scoped regulatory evidence",
+      "page": 3,
+      "index": 90
+    },
+    {
+      "sha": "80b31a11cc02f929d399b39b2c934454bf0f3b0b",
+      "parent_sha": "7d0d53769237525b77f08008d80a11236c82f148",
+      "date": "2026-11-02T18:39:17Z",
+      "message": "docs(core-banking): BV EVIDENCE_DELTA.md — scoped regulatory evidence",
+      "page": 3,
+      "index": 91
+    },
+    {
+      "sha": "7d0d53769237525b77f08008d80a11236c82f148",
+      "parent_sha": "185eeecd42d725c7bc8d65bf930ac87c2269d145",
+      "date": "2026-11-02T18:39:14Z",
+      "message": "docs(core-banking): BV README.md — scoped regulatory evidence",
+      "page": 3,
+      "index": 92
+    },
+    {
+      "sha": "185eeecd42d725c7bc8d65bf930ac87c2269d145",
+      "parent_sha": "ca00c78b94de0d2054be7dadc3562c1beec67724",
+      "date": "2026-11-02T17:40:14Z",
+      "message": "docs(core-banking): consolidate BU evidence and next continuation",
+      "page": 3,
+      "index": 93
+    },
+    {
+      "sha": "ca00c78b94de0d2054be7dadc3562c1beec67724",
+      "parent_sha": "9108d18ba4ab1e25b50f8980580e133feb670268",
+      "date": "2026-11-02T17:40:11Z",
+      "message": "docs(core-banking): BU citation-integrity EXECUTION_REPORT.md",
+      "page": 3,
+      "index": 94
+    },
+    {
+      "sha": "9108d18ba4ab1e25b50f8980580e133feb670268",
+      "parent_sha": "0258301ee4f02a91df6b26a55c91079b70e79a06",
+      "date": "2026-11-02T17:40:08Z",
+      "message": "docs(core-banking): BU citation-integrity CONTINUATION_STATE.json",
+      "page": 3,
+      "index": 95
+    },
+    {
+      "sha": "0258301ee4f02a91df6b26a55c91079b70e79a06",
+      "parent_sha": "bcea106fd478111ef8d452c5241d95759ee3dcb0",
+      "date": "2026-11-02T17:40:06Z",
+      "message": "docs(core-banking): BU citation-integrity QUALITY_REVIEW.md",
+      "page": 3,
+      "index": 96
+    },
+    {
+      "sha": "bcea106fd478111ef8d452c5241d95759ee3dcb0",
+      "parent_sha": "88717b2076912ccae5aadee7d80e08e99d39c2e1",
+      "date": "2026-11-02T17:40:01Z",
+      "message": "docs(core-banking): BU citation-integrity CONTROL_AND_TEST_DESIGN.md",
+      "page": 3,
+      "index": 97
+    },
+    {
+      "sha": "88717b2076912ccae5aadee7d80e08e99d39c2e1",
+      "parent_sha": "0e0c34c39b170e05e8ff3346903a42af1d8d5eec",
+      "date": "2026-11-02T17:39:59Z",
+      "message": "docs(core-banking): BU citation-integrity LEGAL_CITATION_INTEGRITY_GATES.json",
+      "page": 3,
+      "index": 98
+    },
+    {
+      "sha": "0e0c34c39b170e05e8ff3346903a42af1d8d5eec",
+      "parent_sha": "03639cc85d6a5b1691a5e0f86ecd4c28aa5f4ba6",
+      "date": "2026-11-02T17:39:56Z",
+      "message": "docs(core-banking): BU citation-integrity EVIDENCE_DELTA.md",
+      "page": 3,
+      "index": 99
+    },
+    {
+      "sha": "03639cc85d6a5b1691a5e0f86ecd4c28aa5f4ba6",
+      "parent_sha": "28ca0df05ad3451e8b6b41698c39b423c59b49b9",
+      "date": "2026-11-02T17:39:53Z",
+      "message": "docs(core-banking): BU citation-integrity README.md",
+      "page": 4,
+      "index": 0
+    },
+    {
+      "sha": "28ca0df05ad3451e8b6b41698c39b423c59b49b9",
+      "parent_sha": "58bb54e1cc96c4fea502d96b6fd18e2e5ba24be6",
+      "date": "2026-11-02T16:43:21Z",
+      "message": "docs(core-banking): BT reconcile PSP categories and retain restitution P0 gate",
+      "page": 4,
+      "index": 1
+    },
+    {
+      "sha": "58bb54e1cc96c4fea502d96b6fd18e2e5ba24be6",
+      "parent_sha": "3d05bf30da461aa8c93abbf586030177295e56af",
+      "date": "2026-11-02T15:48:33Z",
+      "message": "docs(core-banking): consolidate BS legal scope evidence",
+      "page": 4,
+      "index": 2
+    },
+    {
+      "sha": "3d05bf30da461aa8c93abbf586030177295e56af",
+      "parent_sha": "8b2fa69b1c31f258c8adcf32a1540c88d176de7e",
+      "date": "2026-11-02T15:48:30Z",
+      "message": "docs(core-banking): BS scope and participant authority — EXECUTION_REPORT.md",
+      "page": 4,
+      "index": 3
+    },
+    {
+      "sha": "8b2fa69b1c31f258c8adcf32a1540c88d176de7e",
+      "parent_sha": "4bbe2505675e2c41500a48e0fbab843e86c28af1",
+      "date": "2026-11-02T15:48:27Z",
+      "message": "docs(core-banking): BS scope and participant authority — CONTINUATION_STATE.json",
+      "page": 4,
+      "index": 4
+    },
+    {
+      "sha": "4bbe2505675e2c41500a48e0fbab843e86c28af1",
+      "parent_sha": "75163d49444a81840ec09077d0659f3d9f18cf6b",
+      "date": "2026-11-02T15:48:25Z",
+      "message": "docs(core-banking): BS scope and participant authority — QUALITY_REVIEW.md",
+      "page": 4,
+      "index": 5
+    },
+    {
+      "sha": "75163d49444a81840ec09077d0659f3d9f18cf6b",
+      "parent_sha": "2a0cf48f6426cd92625761ad759f05f1d762f80b",
+      "date": "2026-11-02T15:48:22Z",
+      "message": "docs(core-banking): BS scope and participant authority — CONTROL_AND_TEST_DESIGN.md",
+      "page": 4,
+      "index": 6
+    },
+    {
+      "sha": "2a0cf48f6426cd92625761ad759f05f1d762f80b",
+      "parent_sha": "54d838521ecb2b79a4edc999cb03b25b8747fe6c",
+      "date": "2026-11-02T15:48:20Z",
+      "message": "docs(core-banking): BS scope and participant authority — LEGAL_SCOPE_AND_ENTITLEMENT_GATES.json",
+      "page": 4,
+      "index": 7
+    },
+    {
+      "sha": "54d838521ecb2b79a4edc999cb03b25b8747fe6c",
+      "parent_sha": "f9979f7f764706dfc598c543cb5874a999a71e0d",
+      "date": "2026-11-02T15:48:17Z",
+      "message": "docs(core-banking): BS scope and participant authority — EVIDENCE_DELTA.md",
+      "page": 4,
+      "index": 8
+    },
+    {
+      "sha": "f9979f7f764706dfc598c543cb5874a999a71e0d",
+      "parent_sha": "2e57766beaa6d7dc5abfdc68801a98e4be31d18d",
+      "date": "2026-11-02T15:48:14Z",
+      "message": "docs(core-banking): BS scope and participant authority — README.md",
+      "page": 4,
+      "index": 9
+    },
+    {
+      "sha": "2e57766beaa6d7dc5abfdc68801a98e4be31d18d",
+      "parent_sha": "c90073df9b79c92ad01b89e1ad83ddff5946ba9f",
+      "date": "2026-11-02T14:50:48Z",
+      "message": "docs(core-banking): BR scope-safe PSP restitution and payment finality evidence",
+      "page": 4,
+      "index": 10
+    },
+    {
+      "sha": "c90073df9b79c92ad01b89e1ad83ddff5946ba9f",
+      "parent_sha": "3cb16a5cb8649fe28b5aae600ee828393417e347",
+      "date": "2026-11-02T13:51:26Z",
+      "message": "docs(core-banking): consolidate BQ issuer-confirmed SYSTAC2 live status",
+      "page": 4,
+      "index": 11
+    },
+    {
+      "sha": "3cb16a5cb8649fe28b5aae600ee828393417e347",
+      "parent_sha": "3a84c75a2764f7ea9f0b5db679e0c0c85a03b88c",
+      "date": "2026-11-02T13:51:17Z",
+      "message": "docs(core-banking): BQ verified SYSTAC2 production evidence — EXECUTION_REPORT.md",
+      "page": 4,
+      "index": 12
+    },
+    {
+      "sha": "3a84c75a2764f7ea9f0b5db679e0c0c85a03b88c",
+      "parent_sha": "506c37ec38287a3677ccd5c1043b2cb464a9dd4d",
+      "date": "2026-11-02T13:51:15Z",
+      "message": "docs(core-banking): BQ verified SYSTAC2 production evidence — CONTINUATION_STATE.json",
+      "page": 4,
+      "index": 13
+    },
+    {
+      "sha": "506c37ec38287a3677ccd5c1043b2cb464a9dd4d",
+      "parent_sha": "6e9439161a1144c33a4a40181a926f9c423349c9",
+      "date": "2026-11-02T13:51:13Z",
+      "message": "docs(core-banking): BQ verified SYSTAC2 production evidence — QUALITY_REVIEW.md",
+      "page": 4,
+      "index": 14
+    },
+    {
+      "sha": "6e9439161a1144c33a4a40181a926f9c423349c9",
+      "parent_sha": "d28123d822657d3b9b80f4fad5b390b9179fb69c",
+      "date": "2026-11-02T13:51:10Z",
+      "message": "docs(core-banking): BQ verified SYSTAC2 production evidence — CONTROL_AND_TEST_DESIGN.md",
+      "page": 4,
+      "index": 15
+    },
+    {
+      "sha": "d28123d822657d3b9b80f4fad5b390b9179fb69c",
+      "parent_sha": "cecb3b03ce6510e127c5b666627a35e38bab91c6",
+      "date": "2026-11-02T13:51:07Z",
+      "message": "docs(core-banking): BQ verified SYSTAC2 production evidence — RAIL_DEPLOYMENT_AND_CAPABILITY_GATES.json",
+      "page": 4,
+      "index": 16
+    },
+    {
+      "sha": "cecb3b03ce6510e127c5b666627a35e38bab91c6",
+      "parent_sha": "65894611d582a2a08111b802b96f3d11b472a8c9",
+      "date": "2026-11-02T13:51:04Z",
+      "message": "docs(core-banking): BQ verified SYSTAC2 production evidence — SOURCE_EVIDENCE_AND_LIMITATIONS.md",
+      "page": 4,
+      "index": 17
+    },
+    {
+      "sha": "65894611d582a2a08111b802b96f3d11b472a8c9",
+      "parent_sha": "8ab6aa2e757975a67d04954e44dbe59f8fe3cff2",
+      "date": "2026-11-02T13:51:02Z",
+      "message": "docs(core-banking): BQ verified SYSTAC2 production evidence — README.md",
+      "page": 4,
+      "index": 18
+    },
+    {
+      "sha": "8ab6aa2e757975a67d04954e44dbe59f8fe3cff2",
+      "parent_sha": "67568e764e78c9abcc191a386a08b4b86ce235ab",
+      "date": "2026-11-02T12:45:40Z",
+      "message": "docs(core-banking): consolidate BP evidence and BQ continuation",
+      "page": 4,
+      "index": 19
+    },
+    {
+      "sha": "67568e764e78c9abcc191a386a08b4b86ce235ab",
+      "parent_sha": "097d7111707abe44eeaca5d5441a60a4ab5036c2",
+      "date": "2026-11-02T12:45:31Z",
+      "message": "docs(core-banking): BP EXECUTION_REPORT.md evidence and safety gates",
+      "page": 4,
+      "index": 20
+    },
+    {
+      "sha": "097d7111707abe44eeaca5d5441a60a4ab5036c2",
+      "parent_sha": "0f7f77eeefecf1a5be2236bf4bf6d0119ff64a04",
+      "date": "2026-11-02T12:45:29Z",
+      "message": "docs(core-banking): BP CONTINUATION_STATE.json evidence and safety gates",
+      "page": 4,
+      "index": 21
+    },
+    {
+      "sha": "0f7f77eeefecf1a5be2236bf4bf6d0119ff64a04",
+      "parent_sha": "9eb4d067197a49b8c644a0acf0999481847afe34",
+      "date": "2026-11-02T12:45:26Z",
+      "message": "docs(core-banking): BP QUALITY_REVIEW.md evidence and safety gates",
+      "page": 4,
+      "index": 22
+    },
+    {
+      "sha": "9eb4d067197a49b8c644a0acf0999481847afe34",
+      "parent_sha": "5588137d4df7affa26ab6f87fd48fff2b56dc589",
+      "date": "2026-11-02T12:45:23Z",
+      "message": "docs(core-banking): BP CONTROL_AND_TEST_DESIGN.md evidence and safety gates",
+      "page": 4,
+      "index": 23
+    },
+    {
+      "sha": "5588137d4df7affa26ab6f87fd48fff2b56dc589",
+      "parent_sha": "95fbf49839559abe1682968c4b02701f3af0ae2f",
+      "date": "2026-11-02T12:45:20Z",
+      "message": "docs(core-banking): BP RAIL_AUTHORITY_AND_MESSAGE_MODEL.json evidence and safety gates",
+      "page": 4,
+      "index": 24
+    },
+    {
+      "sha": "95fbf49839559abe1682968c4b02701f3af0ae2f",
+      "parent_sha": "12422d243aec0ec999d68a4b77034812d369b83b",
+      "date": "2026-11-02T12:45:18Z",
+      "message": "docs(core-banking): BP SOURCE_EVIDENCE_AND_LIMITATIONS.md evidence and safety gates",
+      "page": 4,
+      "index": 25
+    },
+    {
+      "sha": "12422d243aec0ec999d68a4b77034812d369b83b",
+      "parent_sha": "524e5880b9dc0184da18e949339b80ebef4e353d",
+      "date": "2026-11-02T12:45:15Z",
+      "message": "docs(core-banking): BP README.md evidence and safety gates",
+      "page": 4,
+      "index": 26
+    },
+    {
+      "sha": "524e5880b9dc0184da18e949339b80ebef4e353d",
+      "parent_sha": "84b90bb559904eca4b603ac38e8bb7960ef78638",
+      "date": "2026-11-02T11:45:03Z",
+      "message": "docs(core-banking): checkpoint BO sovereign-security authority vs settlement evidence gates",
+      "page": 4,
+      "index": 27
+    },
+    {
+      "sha": "84b90bb559904eca4b603ac38e8bb7960ef78638",
+      "parent_sha": "cb37148b97a72fbb71c972adae545703ee05ae92",
+      "date": "2026-11-02T10:46:06Z",
+      "message": "docs(core-banking): checkpoint BN issuer-hosted 2010 exposure lineage and 2021 amendment gates",
+      "page": 4,
+      "index": 28
+    },
+    {
+      "sha": "cb37148b97a72fbb71c972adae545703ee05ae92",
+      "parent_sha": "3936073bffc1e629c5fef97347a40f449bb33b5e",
+      "date": "2026-11-02T09:42:14Z",
+      "message": "docs(core-banking): checkpoint BM annual roster isolation and regulatory clarification docket",
+      "page": 4,
+      "index": 29
+    },
+    {
+      "sha": "3936073bffc1e629c5fef97347a40f449bb33b5e",
+      "parent_sha": "d6d61f1b9168b6e358a68949e92d732e0e298baf",
+      "date": "2026-11-02T08:48:35Z",
+      "message": "docs(core-banking): checkpoint BL clause semantics and entity identity P0 evidence",
+      "page": 4,
+      "index": 30
+    },
+    {
+      "sha": "d6d61f1b9168b6e358a68949e92d732e0e298baf",
+      "parent_sha": "82fa0ef1a6bf8cd125eff7f2246c2d35dde9d2d1",
+      "date": "2026-11-02T08:37:39Z",
+      "message": "docs(core-banking): reconcile consolidated programme through verified BK",
+      "page": 4,
+      "index": 31
+    },
+    {
+      "sha": "82fa0ef1a6bf8cd125eff7f2246c2d35dde9d2d1",
+      "parent_sha": "59aed5b7580d2340f135f8906a698406afc586cf",
+      "date": "2026-11-02T08:37:29Z",
+      "message": "docs(core-banking): BK EXECUTION_REPORT.md evidence and P0 hold",
+      "page": 4,
+      "index": 32
+    },
+    {
+      "sha": "59aed5b7580d2340f135f8906a698406afc586cf",
+      "parent_sha": "0b308cee21e01f89f5a40c5d67d931595a153573",
+      "date": "2026-11-02T08:37:27Z",
+      "message": "docs(core-banking): BK CONTINUATION_STATE.json evidence and P0 hold",
+      "page": 4,
+      "index": 33
+    },
+    {
+      "sha": "0b308cee21e01f89f5a40c5d67d931595a153573",
+      "parent_sha": "58a90a5e621de264507848bcf6e0f1278fec07b1",
+      "date": "2026-11-02T08:37:25Z",
+      "message": "docs(core-banking): BK QUALITY_REVIEW.md evidence and P0 hold",
+      "page": 4,
+      "index": 34
+    },
+    {
+      "sha": "58a90a5e621de264507848bcf6e0f1278fec07b1",
+      "parent_sha": "0d4bb13ff1927fc7702b4a26fb43913af12c6061",
+      "date": "2026-11-02T08:37:22Z",
+      "message": "docs(core-banking): BK CONTROL_AND_TEST_DESIGN.md evidence and P0 hold",
+      "page": 4,
+      "index": 35
+    },
+    {
+      "sha": "0d4bb13ff1927fc7702b4a26fb43913af12c6061",
+      "parent_sha": "7aa3177267427670a337eeee31bd338e31b67b81",
+      "date": "2026-11-02T08:37:20Z",
+      "message": "docs(core-banking): BK REGULATORY_CONFLICT_AND_GATE_REGISTER.json evidence and P0 hold",
+      "page": 4,
+      "index": 36
+    },
+    {
+      "sha": "7aa3177267427670a337eeee31bd338e31b67b81",
+      "parent_sha": "871e8b7bf9e7af2823e0a14ddda41f54f9e8bfdd",
+      "date": "2026-11-02T08:37:18Z",
+      "message": "docs(core-banking): BK SOURCE_AND_AUTHORITY_DELTA.md evidence and P0 hold",
+      "page": 4,
+      "index": 37
+    },
+    {
+      "sha": "871e8b7bf9e7af2823e0a14ddda41f54f9e8bfdd",
+      "parent_sha": "e704cdc94f5f5fa9ff128d22058a51d671840c06",
+      "date": "2026-11-02T08:37:16Z",
+      "message": "docs(core-banking): BK README.md evidence and P0 hold",
+      "page": 4,
+      "index": 38
+    },
+    {
+      "sha": "e704cdc94f5f5fa9ff128d22058a51d671840c06",
+      "parent_sha": "b15b81b3ee16b0ddaf84726b93a50e21117dbf6e",
+      "date": "2026-11-02T06:40:57Z",
+      "message": "docs: reconcile OPES Core Banking consolidation through checkpoint BJ",
+      "page": 4,
+      "index": 39
+    },
+    {
+      "sha": "b15b81b3ee16b0ddaf84726b93a50e21117dbf6e",
+      "parent_sha": "bcaecb7aeeb626c969bdcde2f0350ed7767eebbd",
+      "date": "2026-11-02T06:40:46Z",
+      "message": "docs(regulatory): BJ EXECUTION_REPORT.md evidence and P0 holds",
+      "page": 4,
+      "index": 40
+    },
+    {
+      "sha": "bcaecb7aeeb626c969bdcde2f0350ed7767eebbd",
+      "parent_sha": "74f4b5ea8a29d9e39d76acf9787e06cbafcaf3d7",
+      "date": "2026-11-02T06:40:44Z",
+      "message": "docs(regulatory): BJ CONTINUATION_STATE.json evidence and P0 holds",
+      "page": 4,
+      "index": 41
+    },
+    {
+      "sha": "74f4b5ea8a29d9e39d76acf9787e06cbafcaf3d7",
+      "parent_sha": "bf1a13d9d38cd7065f68e104aeca1f513e7791a5",
+      "date": "2026-11-02T06:40:41Z",
+      "message": "docs(regulatory): BJ QUALITY_REVIEW.md evidence and P0 holds",
+      "page": 4,
+      "index": 42
+    },
+    {
+      "sha": "bf1a13d9d38cd7065f68e104aeca1f513e7791a5",
+      "parent_sha": "8b83a408fc1191df67e831a488750b20cdf906df",
+      "date": "2026-11-02T06:40:38Z",
+      "message": "docs(regulatory): BJ CONTROL_AND_TEST_DESIGN.md evidence and P0 holds",
+      "page": 4,
+      "index": 43
+    },
+    {
+      "sha": "8b83a408fc1191df67e831a488750b20cdf906df",
+      "parent_sha": "a450a70a804ee474c69ba08838ff2712f6c626a6",
+      "date": "2026-11-02T06:40:36Z",
+      "message": "docs(regulatory): BJ CONTRADICTION_AND_SCOPE_REGISTER.json evidence and P0 holds",
+      "page": 4,
+      "index": 44
+    },
+    {
+      "sha": "a450a70a804ee474c69ba08838ff2712f6c626a6",
+      "parent_sha": "b8e22333396da594f2f3e09f0edba4f250b77237",
+      "date": "2026-11-02T06:40:33Z",
+      "message": "docs(regulatory): BJ EVIDENCE_DELTA.md evidence and P0 holds",
+      "page": 4,
+      "index": 45
+    },
+    {
+      "sha": "b8e22333396da594f2f3e09f0edba4f250b77237",
+      "parent_sha": "62686158f8d94b60bfb9be0178a08d9ad6331b2f",
+      "date": "2026-11-02T06:40:30Z",
+      "message": "docs(regulatory): BJ README.md evidence and P0 holds",
+      "page": 4,
+      "index": 46
+    },
+    {
+      "sha": "62686158f8d94b60bfb9be0178a08d9ad6331b2f",
+      "parent_sha": "e2a6f35f602e0482314d835479277514a0f41056",
+      "date": "2026-11-02T05:47:09Z",
+      "message": "docs: reconcile consolidated OPES Core Banking lineage through BI",
+      "page": 4,
+      "index": 47
+    },
+    {
+      "sha": "e2a6f35f602e0482314d835479277514a0f41056",
+      "parent_sha": "5ba47774c94efb349a446afa09411c2d6a68dc05",
+      "date": "2026-11-02T05:46:59Z",
+      "message": "docs(BI): EXECUTION_REPORT.md — distinguish corporate and COBAC capital-plan authority",
+      "page": 4,
+      "index": 48
+    },
+    {
+      "sha": "5ba47774c94efb349a446afa09411c2d6a68dc05",
+      "parent_sha": "420be409f9900178d8321227887b2009ba3dea92",
+      "date": "2026-11-02T05:46:56Z",
+      "message": "docs(BI): CONTINUATION_STATE.json — distinguish corporate and COBAC capital-plan authority",
+      "page": 4,
+      "index": 49
+    },
+    {
+      "sha": "420be409f9900178d8321227887b2009ba3dea92",
+      "parent_sha": "13aa16c88546160e3efbcf44d0f25a8b42a47f50",
+      "date": "2026-11-02T05:46:54Z",
+      "message": "docs(BI): QUALITY_REVIEW.md — distinguish corporate and COBAC capital-plan authority",
+      "page": 4,
+      "index": 50
+    },
+    {
+      "sha": "13aa16c88546160e3efbcf44d0f25a8b42a47f50",
+      "parent_sha": "bca0d5a6f9049987b7b585ad4248dd49edc349ab",
+      "date": "2026-11-02T05:46:51Z",
+      "message": "docs(BI): CONTROL_AND_TEST_DESIGN.md — distinguish corporate and COBAC capital-plan authority",
+      "page": 4,
+      "index": 51
+    },
+    {
+      "sha": "bca0d5a6f9049987b7b585ad4248dd49edc349ab",
+      "parent_sha": "05d21986fbfa117225ed50e3efc37e93a100d7cc",
+      "date": "2026-11-02T05:46:49Z",
+      "message": "docs(BI): AUTHORITY_MODEL.json — distinguish corporate and COBAC capital-plan authority",
+      "page": 4,
+      "index": 52
+    },
+    {
+      "sha": "05d21986fbfa117225ed50e3efc37e93a100d7cc",
+      "parent_sha": "c099eb686fddef8e8841837b7103e0b47e490853",
+      "date": "2026-11-02T05:46:47Z",
+      "message": "docs(BI): EVIDENCE_DELTA.md — distinguish corporate and COBAC capital-plan authority",
+      "page": 4,
+      "index": 53
+    },
+    {
+      "sha": "c099eb686fddef8e8841837b7103e0b47e490853",
+      "parent_sha": "804d034b107af9ece3df706b7ae677ab26755668",
+      "date": "2026-11-02T05:46:45Z",
+      "message": "docs(BI): README.md — distinguish corporate and COBAC capital-plan authority",
+      "page": 4,
+      "index": 54
+    },
+    {
+      "sha": "804d034b107af9ece3df706b7ae677ab26755668",
+      "parent_sha": "12bfd464a23dced0fedff405ef0942749015da39",
+      "date": "2026-11-02T04:40:17Z",
+      "message": "docs: index verified BH regulatory evidence custody and legal hold",
+      "page": 4,
+      "index": 55
+    },
+    {
+      "sha": "12bfd464a23dced0fedff405ef0942749015da39",
+      "parent_sha": "77ec7a999c0e13f7586aa841fadb2c39c23a8324",
+      "date": "2026-11-02T04:40:09Z",
+      "message": "docs(BH): EXECUTION_REPORT.md — capital-transition authority and evidence custody",
+      "page": 4,
+      "index": 56
+    },
+    {
+      "sha": "77ec7a999c0e13f7586aa841fadb2c39c23a8324",
+      "parent_sha": "abc578e6f8607faf1e4767dab72425d121658fd6",
+      "date": "2026-11-02T04:40:07Z",
+      "message": "docs(BH): CONTINUATION_STATE.json — capital-transition authority and evidence custody",
+      "page": 4,
+      "index": 57
+    },
+    {
+      "sha": "abc578e6f8607faf1e4767dab72425d121658fd6",
+      "parent_sha": "1ef9ff7978e66f959bb103bff3f2c69145be9893",
+      "date": "2026-11-02T04:40:05Z",
+      "message": "docs(BH): QUALITY_REVIEW.md — capital-transition authority and evidence custody",
+      "page": 4,
+      "index": 58
+    },
+    {
+      "sha": "1ef9ff7978e66f959bb103bff3f2c69145be9893",
+      "parent_sha": "df271a6e570a009ff75808958e1743cc4fd0e1d8",
+      "date": "2026-11-02T04:40:03Z",
+      "message": "docs(BH): CONTROL_AND_TEST_DESIGN.md — capital-transition authority and evidence custody",
+      "page": 4,
+      "index": 59
+    },
+    {
+      "sha": "df271a6e570a009ff75808958e1743cc4fd0e1d8",
+      "parent_sha": "bc5961d22eccaffb70ae98eac3db49902f3cd193",
+      "date": "2026-11-02T04:40:00Z",
+      "message": "docs(BH): AUTHORITY_AND_CASE_MATRIX.json — capital-transition authority and evidence custody",
+      "page": 4,
+      "index": 60
+    },
+    {
+      "sha": "bc5961d22eccaffb70ae98eac3db49902f3cd193",
+      "parent_sha": "3d3ac19c321cfeb3df37b760645ad699ca207753",
+      "date": "2026-11-02T04:39:58Z",
+      "message": "docs(BH): EVIDENCE_DELTA.md — capital-transition authority and evidence custody",
+      "page": 4,
+      "index": 61
+    },
+    {
+      "sha": "3d3ac19c321cfeb3df37b760645ad699ca207753",
+      "parent_sha": "9e47910f8801920942fcc337a837f8bab47c2463",
+      "date": "2026-11-02T04:39:56Z",
+      "message": "docs(BH): README.md — capital-transition authority and evidence custody",
+      "page": 4,
+      "index": 62
+    },
+    {
+      "sha": "9e47910f8801920942fcc337a837f8bab47c2463",
+      "parent_sha": "20d0ed10f37e907d5d18e6b6444c1d7eae37de1c",
+      "date": "2026-11-02T03:44:56Z",
+      "message": "docs(corebank): include BG official 2009 baseline and transition legal hold in consolidation",
+      "page": 4,
+      "index": 63
+    },
+    {
+      "sha": "20d0ed10f37e907d5d18e6b6444c1d7eae37de1c",
+      "parent_sha": "bd2e495bdf4327758e68fc925742b692ccbbac58",
+      "date": "2026-11-02T03:44:53Z",
+      "message": "docs(corebank): verify BG checkpoint remote delivery status",
+      "page": 4,
+      "index": 64
+    },
+    {
+      "sha": "bd2e495bdf4327758e68fc925742b692ccbbac58",
+      "parent_sha": "88ffe048b3053d4c0083ada58172e8907dd56d31",
+      "date": "2026-11-02T03:44:43Z",
+      "message": "docs(corebank): BG EXECUTION_REPORT.md — capital transition evidence and P0 hold",
+      "page": 4,
+      "index": 65
+    },
+    {
+      "sha": "88ffe048b3053d4c0083ada58172e8907dd56d31",
+      "parent_sha": "bc58d76e2e4e9b2af412876372c2c5dcc8a05877",
+      "date": "2026-11-02T03:44:40Z",
+      "message": "docs(corebank): BG CONTINUATION_STATE.json — capital transition evidence and P0 hold",
+      "page": 4,
+      "index": 66
+    },
+    {
+      "sha": "bc58d76e2e4e9b2af412876372c2c5dcc8a05877",
+      "parent_sha": "3ff5f3e7f735e6c6d372d20ff4dbc2f9c17ed6c6",
+      "date": "2026-11-02T03:44:38Z",
+      "message": "docs(corebank): BG QUALITY_REVIEW.md — capital transition evidence and P0 hold",
+      "page": 4,
+      "index": 67
+    },
+    {
+      "sha": "3ff5f3e7f735e6c6d372d20ff4dbc2f9c17ed6c6",
+      "parent_sha": "7c45e20938f1d2aced3d9732728460a7b00ff6d8",
+      "date": "2026-11-02T03:44:35Z",
+      "message": "docs(corebank): BG CONTROL_AND_TEST_DESIGN.md — capital transition evidence and P0 hold",
+      "page": 4,
+      "index": 68
+    },
+    {
+      "sha": "7c45e20938f1d2aced3d9732728460a7b00ff6d8",
+      "parent_sha": "b7139608358fbf4e6164b4e952d3113944893820",
+      "date": "2026-11-02T03:44:33Z",
+      "message": "docs(corebank): BG CAPITAL_TRANSITION_DECISION_MATRIX.json — capital transition evidence and P0 hold",
+      "page": 4,
+      "index": 69
+    },
+    {
+      "sha": "b7139608358fbf4e6164b4e952d3113944893820",
+      "parent_sha": "1932c3e107242e5ff83d6d1e3ea0f5168e4631be",
+      "date": "2026-11-02T03:44:30Z",
+      "message": "docs(corebank): BG EVIDENCE_DELTA.md — capital transition evidence and P0 hold",
+      "page": 4,
+      "index": 70
+    },
+    {
+      "sha": "1932c3e107242e5ff83d6d1e3ea0f5168e4631be",
+      "parent_sha": "c712b955353565d1caec49a99e5d4627a95fb7d3",
+      "date": "2026-11-02T03:44:27Z",
+      "message": "docs(corebank): BG README.md — capital transition evidence and P0 hold",
+      "page": 4,
+      "index": 71
+    },
+    {
+      "sha": "c712b955353565d1caec49a99e5d4627a95fb7d3",
+      "parent_sha": "89dee9c6c2ef22c652da3a33af5839af8eb751d8",
+      "date": "2026-11-02T02:44:44Z",
+      "message": "docs: advance consolidated banking regulatory evidence lineage through BF",
+      "page": 4,
+      "index": 72
+    },
+    {
+      "sha": "89dee9c6c2ef22c652da3a33af5839af8eb751d8",
+      "parent_sha": "bcde97e3d477fc7336a7f18ceb1b4c96b08ef963",
+      "date": "2026-11-02T02:44:37Z",
+      "message": "docs(BF): verify government-hosted COBAC R-2025/02 and preserve financial policy hold",
+      "page": 4,
+      "index": 73
+    },
+    {
+      "sha": "bcde97e3d477fc7336a7f18ceb1b4c96b08ef963",
+      "parent_sha": "27527a9c3238484b513c6dd54a73222c07fa0a14",
+      "date": "2026-11-02T02:44:35Z",
+      "message": "docs(BF): verify government-hosted COBAC R-2025/02 and preserve financial policy hold",
+      "page": 4,
+      "index": 74
+    },
+    {
+      "sha": "27527a9c3238484b513c6dd54a73222c07fa0a14",
+      "parent_sha": "0064cf77a0d95b61e8bc0d8543396864f5abe944",
+      "date": "2026-11-02T02:44:33Z",
+      "message": "docs(BF): verify government-hosted COBAC R-2025/02 and preserve financial policy hold",
+      "page": 4,
+      "index": 75
+    },
+    {
+      "sha": "0064cf77a0d95b61e8bc0d8543396864f5abe944",
+      "parent_sha": "76bb6e6bd0806be8bb133c7556acf61599663ec8",
+      "date": "2026-11-02T02:44:31Z",
+      "message": "docs(BF): verify government-hosted COBAC R-2025/02 and preserve financial policy hold",
+      "page": 4,
+      "index": 76
+    },
+    {
+      "sha": "76bb6e6bd0806be8bb133c7556acf61599663ec8",
+      "parent_sha": "f08e5dff527ac95b6c64e5f3934051eb73613ae0",
+      "date": "2026-11-02T02:44:29Z",
+      "message": "docs(BF): verify government-hosted COBAC R-2025/02 and preserve financial policy hold",
+      "page": 4,
+      "index": 77
+    },
+    {
+      "sha": "f08e5dff527ac95b6c64e5f3934051eb73613ae0",
+      "parent_sha": "9d4ff863ea3994cecd856ab9c9234b04e9494f0e",
+      "date": "2026-11-02T02:44:26Z",
+      "message": "docs(BF): verify government-hosted COBAC R-2025/02 and preserve financial policy hold",
+      "page": 4,
+      "index": 78
+    },
+    {
+      "sha": "9d4ff863ea3994cecd856ab9c9234b04e9494f0e",
+      "parent_sha": "00a44c22df5bd1339991d1874d1d309e7cc18591",
+      "date": "2026-11-02T02:44:24Z",
+      "message": "docs(BF): verify government-hosted COBAC R-2025/02 and preserve financial policy hold",
+      "page": 4,
+      "index": 79
+    },
+    {
+      "sha": "00a44c22df5bd1339991d1874d1d309e7cc18591",
+      "parent_sha": "663f42ea9afeeae2d290ddeb36b94b2c7e0b6c99",
+      "date": "2026-11-02T01:44:15Z",
+      "message": "docs: reconcile BE regulatory capital authority research into consolidated programme",
+      "page": 4,
+      "index": 80
+    },
+    {
+      "sha": "663f42ea9afeeae2d290ddeb36b94b2c7e0b6c99",
+      "parent_sha": "6cb975b14229da0fc5b7e5a28c26b8e91b32513c",
+      "date": "2026-11-02T01:44:07Z",
+      "message": "research(BE): EXECUTION_REPORT.md regulatory evidence and fail-closed capital controls",
+      "page": 4,
+      "index": 81
+    },
+    {
+      "sha": "6cb975b14229da0fc5b7e5a28c26b8e91b32513c",
+      "parent_sha": "7e322523becd2e0974c03dd835009a9992a2dd72",
+      "date": "2026-11-02T01:44:05Z",
+      "message": "research(BE): CONTINUATION_STATE.json regulatory evidence and fail-closed capital controls",
+      "page": 4,
+      "index": 82
+    },
+    {
+      "sha": "7e322523becd2e0974c03dd835009a9992a2dd72",
+      "parent_sha": "ce068997c161465d3043c8f6173e73e2b8038db3",
+      "date": "2026-11-02T01:44:02Z",
+      "message": "research(BE): QUALITY_REVIEW.md regulatory evidence and fail-closed capital controls",
+      "page": 4,
+      "index": 83
+    },
+    {
+      "sha": "ce068997c161465d3043c8f6173e73e2b8038db3",
+      "parent_sha": "ed5321c582adcbb5018d56f48e918f43ef3e8484",
+      "date": "2026-11-02T01:43:59Z",
+      "message": "research(BE): ACCEPTANCE_SCENARIOS.json regulatory evidence and fail-closed capital controls",
+      "page": 4,
+      "index": 84
+    },
+    {
+      "sha": "ed5321c582adcbb5018d56f48e918f43ef3e8484",
+      "parent_sha": "686d458841499eeb6a0addc570b3b657794f2bac",
+      "date": "2026-11-02T01:43:57Z",
+      "message": "research(BE): CAPITAL_POLICY_AUTHORITY_DESIGN.md regulatory evidence and fail-closed capital controls",
+      "page": 4,
+      "index": 85
+    },
+    {
+      "sha": "686d458841499eeb6a0addc570b3b657794f2bac",
+      "parent_sha": "199549c79cf70950dfd6017b77d99fbb07188a4f",
+      "date": "2026-11-02T01:43:54Z",
+      "message": "research(BE): EVIDENCE_DELTA.md regulatory evidence and fail-closed capital controls",
+      "page": 4,
+      "index": 86
+    },
+    {
+      "sha": "199549c79cf70950dfd6017b77d99fbb07188a4f",
+      "parent_sha": "301815435cf2306bdeb277fb0f4dbabbd589f15e",
+      "date": "2026-11-02T01:43:52Z",
+      "message": "research(BE): README.md regulatory evidence and fail-closed capital controls",
+      "page": 4,
+      "index": 87
+    },
+    {
+      "sha": "301815435cf2306bdeb277fb0f4dbabbd589f15e",
+      "parent_sha": "9f9057349b0cb2eb4af169620ea4ce785e8a331f",
+      "date": "2026-11-02T00:46:09Z",
+      "message": "docs: update consolidated programme index through verified BD research checkpoint",
+      "page": 4,
+      "index": 88
+    },
+    {
+      "sha": "9f9057349b0cb2eb4af169620ea4ce785e8a331f",
+      "parent_sha": "9ffc1701a1c78e355bf365b2227d3cbba3a85210",
+      "date": "2026-11-02T00:45:58Z",
+      "message": "research: BD EXECUTION_REPORT.md clause-level COBAC evidence and P0 holds",
+      "page": 4,
+      "index": 89
+    },
+    {
+      "sha": "9ffc1701a1c78e355bf365b2227d3cbba3a85210",
+      "parent_sha": "d8ffa8d3cd0126eba9d76bd8dcd2dc27aa5847cf",
+      "date": "2026-11-02T00:45:56Z",
+      "message": "research: BD CONTINUATION_STATE.json clause-level COBAC evidence and P0 holds",
+      "page": 4,
+      "index": 90
+    },
+    {
+      "sha": "d8ffa8d3cd0126eba9d76bd8dcd2dc27aa5847cf",
+      "parent_sha": "3f806c4ff8d12c238559b39a819bc1ccc580f370",
+      "date": "2026-11-02T00:45:53Z",
+      "message": "research: BD QUALITY_REVIEW.md clause-level COBAC evidence and P0 holds",
+      "page": 4,
+      "index": 91
+    },
+    {
+      "sha": "3f806c4ff8d12c238559b39a819bc1ccc580f370",
+      "parent_sha": "a93664471dad4a48d3e2fafbb07feaeeee855069",
+      "date": "2026-11-02T00:45:50Z",
+      "message": "research: BD CONTROL_AND_ACCEPTANCE_DESIGN.md clause-level COBAC evidence and P0 holds",
+      "page": 4,
+      "index": 92
+    },
+    {
+      "sha": "a93664471dad4a48d3e2fafbb07feaeeee855069",
+      "parent_sha": "56f9ca6744efe1aa7233e22ae5e06a48f652f4b5",
+      "date": "2026-11-02T00:45:48Z",
+      "message": "research: BD CLAUSE_AUTHORITY_REGISTER.json clause-level COBAC evidence and P0 holds",
+      "page": 4,
+      "index": 93
+    },
+    {
+      "sha": "56f9ca6744efe1aa7233e22ae5e06a48f652f4b5",
+      "parent_sha": "edf7dfda28b10815806a556eebe613a5415e62e6",
+      "date": "2026-11-02T00:45:45Z",
+      "message": "research: BD EVIDENCE_DELTA.md clause-level COBAC evidence and P0 holds",
+      "page": 4,
+      "index": 94
+    },
+    {
+      "sha": "edf7dfda28b10815806a556eebe613a5415e62e6",
+      "parent_sha": "1c4ae588b11ce0b6f98983323a1801a2a1f4ef47",
+      "date": "2026-11-02T00:45:43Z",
+      "message": "research: BD README.md clause-level COBAC evidence and P0 holds",
+      "page": 4,
+      "index": 95
+    },
+    {
+      "sha": "1c4ae588b11ce0b6f98983323a1801a2a1f4ef47",
+      "parent_sha": "f347032c5fa98eabfa9e20ba2db2fb84f9452ffe",
+      "date": "2026-11-01T23:39:30Z",
+      "message": "docs: integrate BC 2021 amendments and COBAC 2024 IT risk findings into consolidation",
+      "page": 4,
+      "index": 96
+    },
+    {
+      "sha": "f347032c5fa98eabfa9e20ba2db2fb84f9452ffe",
+      "parent_sha": "96c2c012da3a012ddda84aedaae481c07a91dfd6",
+      "date": "2026-11-01T23:39:11Z",
+      "message": "research(BC): EXECUTION_REPORT.md — 2021 amendments and COBAC IT-risk evidence",
+      "page": 4,
+      "index": 97
+    },
+    {
+      "sha": "96c2c012da3a012ddda84aedaae481c07a91dfd6",
+      "parent_sha": "8f81134e73d1565982da5feac9ee77a25bd18054",
+      "date": "2026-11-01T23:39:08Z",
+      "message": "research(BC): CONTINUATION_STATE.json — 2021 amendments and COBAC IT-risk evidence",
+      "page": 4,
+      "index": 98
+    },
+    {
+      "sha": "8f81134e73d1565982da5feac9ee77a25bd18054",
+      "parent_sha": "c5c240edbae2cd2eb87a2d5d19f28bc18a2dfa22",
+      "date": "2026-11-01T23:39:06Z",
+      "message": "research(BC): QUALITY_REVIEW.md — 2021 amendments and COBAC IT-risk evidence",
+      "page": 4,
+      "index": 99
+    },
+    {
+      "sha": "c5c240edbae2cd2eb87a2d5d19f28bc18a2dfa22",
+      "parent_sha": "26fa8d569193ec8aa93c4195e5f4efb32c79eba3",
+      "date": "2026-11-01T23:39:04Z",
+      "message": "research(BC): CONTROL_AND_TEST_DESIGN.md — 2021 amendments and COBAC IT-risk evidence",
+      "page": 5,
+      "index": 0
+    },
+    {
+      "sha": "26fa8d569193ec8aa93c4195e5f4efb32c79eba3",
+      "parent_sha": "aeffdb09bf860988b9728b0690520a9e49e29c60",
+      "date": "2026-11-01T23:39:02Z",
+      "message": "research(BC): AMENDMENT_AND_APPLICABILITY_GRAPH.json — 2021 amendments and COBAC IT-risk evidence",
+      "page": 5,
+      "index": 1
+    },
+    {
+      "sha": "aeffdb09bf860988b9728b0690520a9e49e29c60",
+      "parent_sha": "18b0b165a83d5e0cd47f191329c312a7110428d2",
+      "date": "2026-11-01T23:39:00Z",
+      "message": "research(BC): PRIMARY_EVIDENCE.md — 2021 amendments and COBAC IT-risk evidence",
+      "page": 5,
+      "index": 2
+    },
+    {
+      "sha": "18b0b165a83d5e0cd47f191329c312a7110428d2",
+      "parent_sha": "a42c574044520dd5efdcce98b467846061e2db1d",
+      "date": "2026-11-01T23:38:58Z",
+      "message": "research(BC): README.md — 2021 amendments and COBAC IT-risk evidence",
+      "page": 5,
+      "index": 3
+    },
+    {
+      "sha": "a42c574044520dd5efdcce98b467846061e2db1d",
+      "parent_sha": "5b279dd5de365ad9b2a5281f63d21888a3789c70",
+      "date": "2026-11-01T22:39:15Z",
+      "message": "docs: extend banking consolidation through verified BB checkpoint",
+      "page": 5,
+      "index": 4
+    },
+    {
+      "sha": "5b279dd5de365ad9b2a5281f63d21888a3789c70",
+      "parent_sha": "66f517c94fbf7bccfb59ef187f6edfef3b0e738b",
+      "date": "2026-11-01T22:39:01Z",
+      "message": "research(BB): EXECUTION_REPORT.md regulatory supersession and source conflict",
+      "page": 5,
+      "index": 5
+    },
+    {
+      "sha": "66f517c94fbf7bccfb59ef187f6edfef3b0e738b",
+      "parent_sha": "14f21a59ae6bb38bc9b5c2b89cf207609480d91e",
+      "date": "2026-11-01T22:38:59Z",
+      "message": "research(BB): CONTINUATION_STATE.json regulatory supersession and source conflict",
+      "page": 5,
+      "index": 6
+    },
+    {
+      "sha": "14f21a59ae6bb38bc9b5c2b89cf207609480d91e",
+      "parent_sha": "e21b6481cccaa68f7d28075539d011bf14eb3771",
+      "date": "2026-11-01T22:38:57Z",
+      "message": "research(BB): QUALITY_REVIEW.md regulatory supersession and source conflict",
+      "page": 5,
+      "index": 7
+    },
+    {
+      "sha": "e21b6481cccaa68f7d28075539d011bf14eb3771",
+      "parent_sha": "fa8aefb359788b0374b45e1b441c69051337ed82",
+      "date": "2026-11-01T22:38:55Z",
+      "message": "research(BB): CONTROL_AND_TEST_DESIGN.md regulatory supersession and source conflict",
+      "page": 5,
+      "index": 8
+    },
+    {
+      "sha": "fa8aefb359788b0374b45e1b441c69051337ed82",
+      "parent_sha": "3562c028d345af3cf77492443fe229331e1116b0",
+      "date": "2026-11-01T22:38:53Z",
+      "message": "research(BB): AMENDMENT_GRAPH.json regulatory supersession and source conflict",
+      "page": 5,
+      "index": 9
+    },
+    {
+      "sha": "3562c028d345af3cf77492443fe229331e1116b0",
+      "parent_sha": "e9c8a3dbff8b7f7acea5a9456772c65888d54778",
+      "date": "2026-11-01T22:38:51Z",
+      "message": "research(BB): PRIMARY_EVIDENCE.md regulatory supersession and source conflict",
+      "page": 5,
+      "index": 10
+    },
+    {
+      "sha": "e9c8a3dbff8b7f7acea5a9456772c65888d54778",
+      "parent_sha": "7129bad347ed4d888266c4cde0f03aab092c153a",
+      "date": "2026-11-01T22:38:48Z",
+      "message": "research(BB): README.md regulatory supersession and source conflict",
+      "page": 5,
+      "index": 11
+    },
+    {
+      "sha": "7129bad347ed4d888266c4cde0f03aab092c153a",
+      "parent_sha": "d5dc15cfebfa01b59489ad9af34e3aaa39732d49",
+      "date": "2026-11-01T21:43:33Z",
+      "message": "docs: consolidate OPES Core Banking research and canonical checkpoint lineage through AR",
+      "page": 5,
+      "index": 12
+    },
+    {
+      "sha": "d5dc15cfebfa01b59489ad9af34e3aaa39732d49",
+      "parent_sha": "39e3219646b99f56cad504c84911732f6b0547ec",
+      "date": "2026-11-01T21:38:58Z",
+      "message": "docs(core-banking): BA EXECUTION_REPORT.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 13
+    },
+    {
+      "sha": "39e3219646b99f56cad504c84911732f6b0547ec",
+      "parent_sha": "822e6538e5bf09161f3da2ff48603d6b9b7b9bf9",
+      "date": "2026-11-01T21:38:56Z",
+      "message": "docs(core-banking): BA CONTINUATION_STATE.json (WP-ACC-005 open)",
+      "page": 5,
+      "index": 14
+    },
+    {
+      "sha": "822e6538e5bf09161f3da2ff48603d6b9b7b9bf9",
+      "parent_sha": "b2ce92b469bedb2923bcfc7331dff44a10a0b527",
+      "date": "2026-11-01T21:38:54Z",
+      "message": "docs(core-banking): BA QUALITY_REVIEW.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 15
+    },
+    {
+      "sha": "b2ce92b469bedb2923bcfc7331dff44a10a0b527",
+      "parent_sha": "acdc6963e9f4de00c3c535aa7ad36ae7babd6cfc",
+      "date": "2026-11-01T21:38:51Z",
+      "message": "docs(core-banking): BA ACCEPTANCE_SCENARIOS.json (WP-ACC-005 open)",
+      "page": 5,
+      "index": 16
+    },
+    {
+      "sha": "acdc6963e9f4de00c3c535aa7ad36ae7babd6cfc",
+      "parent_sha": "1d2129afb617b79eb319e4db86447bc5b6982bb6",
+      "date": "2026-11-01T21:38:27Z",
+      "message": "docs(core-banking): BA FINANCIAL_INTEGRITY_DECISIONS.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 17
+    },
+    {
+      "sha": "1d2129afb617b79eb319e4db86447bc5b6982bb6",
+      "parent_sha": "c49d98372d55534d7d619c02ca907c022170a279",
+      "date": "2026-11-01T21:38:25Z",
+      "message": "docs(core-banking): BA SECURITIES_AMENDMENT_GRAPH.json (WP-ACC-005 open)",
+      "page": 5,
+      "index": 18
+    },
+    {
+      "sha": "c49d98372d55534d7d619c02ca907c022170a279",
+      "parent_sha": "d4fc5f7c143991dd943b2185c5c1d9c4eaff62b8",
+      "date": "2026-11-01T21:38:23Z",
+      "message": "docs(core-banking): BA PRIMARY_EVIDENCE_AND_CUSTODY.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 19
+    },
+    {
+      "sha": "d4fc5f7c143991dd943b2185c5c1d9c4eaff62b8",
+      "parent_sha": "b61bc35ffcc93ca200ea2b97208917e8f5ba3c9b",
+      "date": "2026-11-01T21:38:21Z",
+      "message": "docs(core-banking): BA README.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 20
+    },
+    {
+      "sha": "b61bc35ffcc93ca200ea2b97208917e8f5ba3c9b",
+      "parent_sha": "a3d0aeaa19ec15a0416e7403a64f5ad954330cc0",
+      "date": "2026-11-01T20:39:43Z",
+      "message": "docs(core-banking): AZ clause-level PCEC correction EXECUTION_REPORT.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 21
+    },
+    {
+      "sha": "a3d0aeaa19ec15a0416e7403a64f5ad954330cc0",
+      "parent_sha": "aa5ecfc80596d30efd73fd5c4d10462a5e6d948c",
+      "date": "2026-11-01T20:39:41Z",
+      "message": "docs(core-banking): AZ clause-level PCEC correction CONTINUATION_STATE.json (WP-ACC-005 open)",
+      "page": 5,
+      "index": 22
+    },
+    {
+      "sha": "aa5ecfc80596d30efd73fd5c4d10462a5e6d948c",
+      "parent_sha": "1a195e05713e012424f37576f88d4411250ffb71",
+      "date": "2026-11-01T20:39:38Z",
+      "message": "docs(core-banking): AZ clause-level PCEC correction QUALITY_REVIEW.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 23
+    },
+    {
+      "sha": "1a195e05713e012424f37576f88d4411250ffb71",
+      "parent_sha": "a3f8e90cafaf6badf5f1745a290a5af9b5d5b419",
+      "date": "2026-11-01T20:39:35Z",
+      "message": "docs(core-banking): AZ clause-level PCEC correction ACCEPTANCE_SCENARIOS.json (WP-ACC-005 open)",
+      "page": 5,
+      "index": 24
+    },
+    {
+      "sha": "a3f8e90cafaf6badf5f1745a290a5af9b5d5b419",
+      "parent_sha": "9a42266172612c9c2af233f948b959c5f02479d3",
+      "date": "2026-11-01T20:39:31Z",
+      "message": "docs(core-banking): AZ clause-level PCEC correction CONTROL_DESIGN.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 25
+    },
+    {
+      "sha": "9a42266172612c9c2af233f948b959c5f02479d3",
+      "parent_sha": "1a8dddc930e9f9128a383fb1ad7395dcc22d8fc9",
+      "date": "2026-11-01T20:39:28Z",
+      "message": "docs(core-banking): AZ clause-level PCEC correction CLAUSE_CROSSWALK.json (WP-ACC-005 open)",
+      "page": 5,
+      "index": 26
+    },
+    {
+      "sha": "1a8dddc930e9f9128a383fb1ad7395dcc22d8fc9",
+      "parent_sha": "f085981c65378e110486ed22fe70fbec931e4106",
+      "date": "2026-11-01T20:39:26Z",
+      "message": "docs(core-banking): AZ clause-level PCEC correction README.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 27
+    },
+    {
+      "sha": "f085981c65378e110486ed22fe70fbec931e4106",
+      "parent_sha": "1dee0f951a4463b9a725055636d8e67f58864c82",
+      "date": "2026-11-01T19:41:36Z",
+      "message": "docs(core-banking): AY I-2002/01 primary scan recovery and PCEC temporal reconciliation (WP-ACC-005 open)",
+      "page": 5,
+      "index": 28
+    },
+    {
+      "sha": "1dee0f951a4463b9a725055636d8e67f58864c82",
+      "parent_sha": "308a247429a4985c6319142e00c90f4dd4a9788d",
+      "date": "2026-11-01T18:43:50Z",
+      "message": "docs(core-banking): AX evidence conflict review EXECUTION_REPORT.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 29
+    },
+    {
+      "sha": "308a247429a4985c6319142e00c90f4dd4a9788d",
+      "parent_sha": "ab3a303cf3dccbe99c85b842d1fcb369e3a6bd4f",
+      "date": "2026-11-01T18:43:48Z",
+      "message": "docs(core-banking): AX evidence conflict review CONTINUATION_STATE.json (WP-ACC-005 open)",
+      "page": 5,
+      "index": 30
+    },
+    {
+      "sha": "ab3a303cf3dccbe99c85b842d1fcb369e3a6bd4f",
+      "parent_sha": "6cc457784c2411a603836c5fe0bfea0a758bdf48",
+      "date": "2026-11-01T18:43:45Z",
+      "message": "docs(core-banking): AX evidence conflict review QUALITY_REVIEW.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 31
+    },
+    {
+      "sha": "6cc457784c2411a603836c5fe0bfea0a758bdf48",
+      "parent_sha": "4708085f358faed205ec50558519cc6af5f4f46c",
+      "date": "2026-11-01T18:43:43Z",
+      "message": "docs(core-banking): AX evidence conflict review ACCEPTANCE_SCENARIOS.json (WP-ACC-005 open)",
+      "page": 5,
+      "index": 32
+    },
+    {
+      "sha": "4708085f358faed205ec50558519cc6af5f4f46c",
+      "parent_sha": "ebd7d6cc3b9f219be6d45a362d0e8560691e243c",
+      "date": "2026-11-01T18:43:41Z",
+      "message": "docs(core-banking): AX evidence conflict review REQUIREMENTS_AND_GATES.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 33
+    },
+    {
+      "sha": "ebd7d6cc3b9f219be6d45a362d0e8560691e243c",
+      "parent_sha": "912c0dd88d1f5225b7295372f7840c480894fb87",
+      "date": "2026-11-01T18:43:38Z",
+      "message": "docs(core-banking): AX evidence conflict review CONFLICT_REGISTER.json (WP-ACC-005 open)",
+      "page": 5,
+      "index": 34
+    },
+    {
+      "sha": "912c0dd88d1f5225b7295372f7840c480894fb87",
+      "parent_sha": "c77043770631f6860cf38fa1220c377e0e2b13c1",
+      "date": "2026-11-01T18:43:35Z",
+      "message": "docs(core-banking): AX evidence conflict review SOURCE_EVIDENCE.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 35
+    },
+    {
+      "sha": "c77043770631f6860cf38fa1220c377e0e2b13c1",
+      "parent_sha": "a8559bdd938fdb5de7031686ff065728f8116735",
+      "date": "2026-11-01T18:43:33Z",
+      "message": "docs(core-banking): AX evidence conflict review README.md (WP-ACC-005 open)",
+      "page": 5,
+      "index": 36
+    },
+    {
+      "sha": "a8559bdd938fdb5de7031686ff065728f8116735",
+      "parent_sha": "d589cccba3f3b7713dad9d360d0282d77151cfbe",
+      "date": "2026-11-01T17:44:42Z",
+      "message": "docs(core-banking): AW recover full 1998 PCEC baseline and temporal accounting controls (WP-ACC-005 open)",
+      "page": 5,
+      "index": 37
+    },
+    {
+      "sha": "d589cccba3f3b7713dad9d360d0282d77151cfbe",
+      "parent_sha": "6b483cbb0f5db440456ac6a94549b777b1be4cdc",
+      "date": "2026-11-01T16:42:32Z",
+      "message": "docs(core-banking): AV PCEC and R-2018/01 accounting authority review (WP-ACC-005 remains blocked)",
+      "page": 5,
+      "index": 38
+    },
+    {
+      "sha": "6b483cbb0f5db440456ac6a94549b777b1be4cdc",
+      "parent_sha": "7767d840414e6ef58feb80e520c616d0e72a98b8",
+      "date": "2026-11-01T15:45:17Z",
+      "message": "research(core-banking): AU official April 2025 consultation lineage and financial holds",
+      "page": 5,
+      "index": 39
+    },
+    {
+      "sha": "7767d840414e6ef58feb80e520c616d0e72a98b8",
+      "parent_sha": "97fbe1d2fff48d3a0b3e974f05b7ac41156bf4fc",
+      "date": "2026-11-01T14:39:34Z",
+      "message": "research(core-banking): AT scanned-source authority controls and PCEC taxonomy gate",
+      "page": 5,
+      "index": 40
+    },
+    {
+      "sha": "97fbe1d2fff48d3a0b3e974f05b7ac41156bf4fc",
+      "parent_sha": "08b6fe0e0b069ce715c5e4ceec884d2b4d6de79a",
+      "date": "2026-11-01T13:37:47Z",
+      "message": "research(core-banking): AS official UMAC adoption evidence and gated applicability delta",
+      "page": 5,
+      "index": 41
+    },
+    {
+      "sha": "08b6fe0e0b069ce715c5e4ceec884d2b4d6de79a",
+      "parent_sha": "dbe16d939cc09f764a57130b6644f830dbf92e84",
+      "date": "2026-11-01T12:40:28Z",
+      "message": "fix(core-banking): preserve historical gap IDs 067/068; allocate 069/070",
+      "page": 5,
+      "index": 42
+    },
+    {
+      "sha": "dbe16d939cc09f764a57130b6644f830dbf92e84",
+      "parent_sha": "088fbc73850054b3beed9c1e06a49b4205917934",
+      "date": "2026-11-01T12:40:25Z",
+      "message": "fix(core-banking): preserve historical gap IDs 067/068; allocate 069/070",
+      "page": 5,
+      "index": 43
+    },
+    {
+      "sha": "088fbc73850054b3beed9c1e06a49b4205917934",
+      "parent_sha": "d62f2e0a2f7c399d23ef59488b3a15e220b5e267",
+      "date": "2026-11-01T12:39:36Z",
+      "message": "fix(core-banking): AR next sequential checkpoint AS",
+      "page": 5,
+      "index": 44
+    },
+    {
+      "sha": "d62f2e0a2f7c399d23ef59488b3a15e220b5e267",
+      "parent_sha": "9912db9f58dde7050fc47a54ed7ff84144aa51bb",
+      "date": "2026-11-01T12:39:30Z",
+      "message": "fix(core-banking): AR next sequential checkpoint AS",
+      "page": 5,
+      "index": 45
+    },
+    {
+      "sha": "9912db9f58dde7050fc47a54ed7ff84144aa51bb",
+      "parent_sha": "3a334f2f39dc5c3c27bac9981295b4f39159220f",
+      "date": "2026-11-01T12:39:23Z",
+      "message": "research(core-banking): AR EXECUTION_REPORT.md (WP-ACC-005 publication-chain evidence)",
+      "page": 5,
+      "index": 46
+    },
+    {
+      "sha": "3a334f2f39dc5c3c27bac9981295b4f39159220f",
+      "parent_sha": "3ddbb871de8d0bd00f8f2f76b88d62e7fb1f8292",
+      "date": "2026-11-01T12:39:18Z",
+      "message": "research(core-banking): AR CONTINUATION_STATE.json (WP-ACC-005 publication-chain evidence)",
+      "page": 5,
+      "index": 47
+    },
+    {
+      "sha": "3ddbb871de8d0bd00f8f2f76b88d62e7fb1f8292",
+      "parent_sha": "0cd9b1cb28a6285016423db8c007138af6292b35",
+      "date": "2026-11-01T12:39:15Z",
+      "message": "research(core-banking): AR QUALITY_REVIEW.md (WP-ACC-005 publication-chain evidence)",
+      "page": 5,
+      "index": 48
+    },
+    {
+      "sha": "0cd9b1cb28a6285016423db8c007138af6292b35",
+      "parent_sha": "06de8d22d9c7603f601f04ff1216445c16d70022",
+      "date": "2026-11-01T12:39:13Z",
+      "message": "research(core-banking): AR EVIDENCE_REQUESTS_FR.md (WP-ACC-005 publication-chain evidence)",
+      "page": 5,
+      "index": 49
+    },
+    {
+      "sha": "06de8d22d9c7603f601f04ff1216445c16d70022",
+      "parent_sha": "dd2c8460e35815b37bf3493420e00d9305d46eac",
+      "date": "2026-11-01T12:39:10Z",
+      "message": "research(core-banking): AR ACCEPTANCE_SCENARIOS.json (WP-ACC-005 publication-chain evidence)",
+      "page": 5,
+      "index": 50
+    },
+    {
+      "sha": "dd2c8460e35815b37bf3493420e00d9305d46eac",
+      "parent_sha": "16881ff7d008b2a429e318aaf6659ed4f8e44971",
+      "date": "2026-11-01T12:39:08Z",
+      "message": "research(core-banking): AR GAP_DELTA.md (WP-ACC-005 publication-chain evidence)",
+      "page": 5,
+      "index": 51
+    },
+    {
+      "sha": "16881ff7d008b2a429e318aaf6659ed4f8e44971",
+      "parent_sha": "3357d4259e918788171ce837c2e4136c6b45a82e",
+      "date": "2026-11-01T12:39:05Z",
+      "message": "research(core-banking): AR POLICY_AUTHORITY_GATE_SPEC.md (WP-ACC-005 publication-chain evidence)",
+      "page": 5,
+      "index": 52
+    },
+    {
+      "sha": "3357d4259e918788171ce837c2e4136c6b45a82e",
+      "parent_sha": "62ac0495e444a9b73df05ca45aa388c37ea16708",
+      "date": "2026-11-01T12:39:00Z",
+      "message": "research(core-banking): AR PUBLICATION_CHAIN_REGISTER.json (WP-ACC-005 publication-chain evidence)",
+      "page": 5,
+      "index": 53
+    },
+    {
+      "sha": "62ac0495e444a9b73df05ca45aa388c37ea16708",
+      "parent_sha": "4329766a0b1d2db45b95babb581e5f246d639972",
+      "date": "2026-11-01T12:38:58Z",
+      "message": "research(core-banking): AR PRIMARY_LAW_ANALYSIS.md (WP-ACC-005 publication-chain evidence)",
+      "page": 5,
+      "index": 54
+    },
+    {
+      "sha": "4329766a0b1d2db45b95babb581e5f246d639972",
+      "parent_sha": "777354bbaa3897cd7f2e8df1dd97302d39696c89",
+      "date": "2026-11-01T12:38:56Z",
+      "message": "research(core-banking): AR README.md (WP-ACC-005 publication-chain evidence)",
+      "page": 5,
+      "index": 55
+    },
+    {
+      "sha": "777354bbaa3897cd7f2e8df1dd97302d39696c89",
+      "parent_sha": "0a49197ced335632187307e72a9b252da89c31f4",
+      "date": "2026-11-01T11:42:45Z",
+      "message": "regulatory: checkpoint AQ evidence reconciliation — EXECUTION_REPORT.md",
+      "page": 5,
+      "index": 56
+    },
+    {
+      "sha": "0a49197ced335632187307e72a9b252da89c31f4",
+      "parent_sha": "35894a7cf24bff0c68049c57d20e098f8295bfb9",
+      "date": "2026-11-01T11:42:43Z",
+      "message": "regulatory: checkpoint AQ evidence reconciliation — CONTINUATION_STATE.json",
+      "page": 5,
+      "index": 57
+    },
+    {
+      "sha": "35894a7cf24bff0c68049c57d20e098f8295bfb9",
+      "parent_sha": "d62c330d9b0725ddff6b7c014cf51f4ad4a09f7d",
+      "date": "2026-11-01T11:42:40Z",
+      "message": "regulatory: checkpoint AQ evidence reconciliation — REVIEW_AND_GATES.md",
+      "page": 5,
+      "index": 58
+    },
+    {
+      "sha": "d62c330d9b0725ddff6b7c014cf51f4ad4a09f7d",
+      "parent_sha": "791179cb0032b72bb88897775b7903cd180d32e9",
+      "date": "2026-11-01T11:42:38Z",
+      "message": "regulatory: checkpoint AQ evidence reconciliation — AUTHORITY_DECISION_MATRIX.json",
+      "page": 5,
+      "index": 59
+    },
+    {
+      "sha": "791179cb0032b72bb88897775b7903cd180d32e9",
+      "parent_sha": "605d4cf1b19b4bcd931b0d6f0df83c5043322e28",
+      "date": "2026-11-01T11:42:36Z",
+      "message": "regulatory: checkpoint AQ evidence reconciliation — EVIDENCE_DELTA.md",
+      "page": 5,
+      "index": 60
+    },
+    {
+      "sha": "605d4cf1b19b4bcd931b0d6f0df83c5043322e28",
+      "parent_sha": "4377cb2811b9f31c4f8e7765d395d75f4f2bce4b",
+      "date": "2026-11-01T11:42:34Z",
+      "message": "regulatory: checkpoint AQ evidence reconciliation — README.md",
+      "page": 5,
+      "index": 61
+    },
+    {
+      "sha": "4377cb2811b9f31c4f8e7765d395d75f4f2bce4b",
+      "parent_sha": "4772f4d1e2791c597658c9d435b97ea8c3b384f8",
+      "date": "2026-11-01T09:37:28Z",
+      "message": "regulatory: checkpoint AP evidence and controls — EXECUTION_REPORT.md",
+      "page": 5,
+      "index": 62
+    },
+    {
+      "sha": "4772f4d1e2791c597658c9d435b97ea8c3b384f8",
+      "parent_sha": "6050580d2439e2e81169d527ee6e7ec7d89677ff",
+      "date": "2026-11-01T09:37:26Z",
+      "message": "regulatory: checkpoint AP evidence and controls — CONTINUATION_STATE.json",
+      "page": 5,
+      "index": 63
+    },
+    {
+      "sha": "6050580d2439e2e81169d527ee6e7ec7d89677ff",
+      "parent_sha": "b8054ffcd9c1c9e98479ae25d691de390a0f0dc9",
+      "date": "2026-11-01T09:37:23Z",
+      "message": "regulatory: checkpoint AP evidence and controls — QUALITY_REVIEW.md",
+      "page": 5,
+      "index": 64
+    },
+    {
+      "sha": "b8054ffcd9c1c9e98479ae25d691de390a0f0dc9",
+      "parent_sha": "df333b632c6c7e5d109d1bb15670a1219b957c28",
+      "date": "2026-11-01T09:37:20Z",
+      "message": "regulatory: checkpoint AP evidence and controls — ACCEPTANCE_TESTS.json",
+      "page": 5,
+      "index": 65
+    },
+    {
+      "sha": "df333b632c6c7e5d109d1bb15670a1219b957c28",
+      "parent_sha": "23149acfbfff1f591f44a643156a31789e3c9812",
+      "date": "2026-11-01T09:37:10Z",
+      "message": "regulatory: checkpoint AP evidence and controls — CONTROL_DESIGN.md",
+      "page": 5,
+      "index": 66
+    },
+    {
+      "sha": "23149acfbfff1f591f44a643156a31789e3c9812",
+      "parent_sha": "9540d1c1d2fd2772b361bae4743e2bd9e641a736",
+      "date": "2026-11-01T09:37:07Z",
+      "message": "regulatory: checkpoint AP evidence and controls — CASE_PROVENANCE.md",
+      "page": 5,
+      "index": 67
+    },
+    {
+      "sha": "9540d1c1d2fd2772b361bae4743e2bd9e641a736",
+      "parent_sha": "6218c4816e912f5728b35adcd35c5655510d9a20",
+      "date": "2026-11-01T09:37:04Z",
+      "message": "regulatory: checkpoint AP evidence and controls — EVIDENCE_REGISTER.json",
+      "page": 5,
+      "index": 68
+    },
+    {
+      "sha": "6218c4816e912f5728b35adcd35c5655510d9a20",
+      "parent_sha": "6a9453d023b699d785e38a2f685731379c429684",
+      "date": "2026-11-01T09:37:01Z",
+      "message": "regulatory: checkpoint AP evidence and controls — README.md",
+      "page": 5,
+      "index": 69
+    },
+    {
+      "sha": "6a9453d023b699d785e38a2f685731379c429684",
+      "parent_sha": "24382cdbd9fbe5c4c7f37df4ef421d0274569c42",
+      "date": "2026-11-01T08:41:06Z",
+      "message": "docs(core-banking): checkpoint AO EXECUTION_REPORT.md",
+      "page": 5,
+      "index": 70
+    },
+    {
+      "sha": "24382cdbd9fbe5c4c7f37df4ef421d0274569c42",
+      "parent_sha": "5c50c4c8c439342600d7fdf36a7630e836d0ec41",
+      "date": "2026-11-01T08:41:00Z",
+      "message": "docs(core-banking): checkpoint AO CONTINUATION_STATE.json",
+      "page": 5,
+      "index": 71
+    },
+    {
+      "sha": "5c50c4c8c439342600d7fdf36a7630e836d0ec41",
+      "parent_sha": "c8aec856ff433d2dacb7fec9d106ff8c1fa8b168",
+      "date": "2026-11-01T08:40:57Z",
+      "message": "docs(core-banking): checkpoint AO QUALITY_REVIEW.md",
+      "page": 5,
+      "index": 72
+    },
+    {
+      "sha": "c8aec856ff433d2dacb7fec9d106ff8c1fa8b168",
+      "parent_sha": "e570d58b54894a902948d368a766df3a983dc58b",
+      "date": "2026-11-01T08:40:54Z",
+      "message": "docs(core-banking): checkpoint AO ACCEPTANCE_TESTS.json",
+      "page": 5,
+      "index": 73
+    },
+    {
+      "sha": "e570d58b54894a902948d368a766df3a983dc58b",
+      "parent_sha": "074ef1af1d05cce096134bdeada807aa679b21fe",
+      "date": "2026-11-01T08:40:52Z",
+      "message": "docs(core-banking): checkpoint AO REGULATORY_IMPACT.md",
+      "page": 5,
+      "index": 74
+    },
+    {
+      "sha": "074ef1af1d05cce096134bdeada807aa679b21fe",
+      "parent_sha": "0ef43dd701318e7dfd31fae0297a50fe38e8b508",
+      "date": "2026-11-01T08:40:49Z",
+      "message": "docs(core-banking): checkpoint AO EVIDENCE_REGISTER.json",
+      "page": 5,
+      "index": 75
+    },
+    {
+      "sha": "0ef43dd701318e7dfd31fae0297a50fe38e8b508",
+      "parent_sha": "e8b9b10cf1bc3fcd60ad54bd789964994851a1a1",
+      "date": "2026-11-01T08:40:46Z",
+      "message": "docs(core-banking): checkpoint AO README.md",
+      "page": 5,
+      "index": 76
+    },
+    {
+      "sha": "e8b9b10cf1bc3fcd60ad54bd789964994851a1a1",
+      "parent_sha": "76eec1180459cfc1ed95bf1f391508e36eeba06b",
+      "date": "2026-10-20T18:00:25Z",
+      "message": "docs: inventory cumulative regulatory checkpoint archives and upload blockers",
+      "page": 5,
+      "index": 77
+    },
+    {
+      "sha": "76eec1180459cfc1ed95bf1f391508e36eeba06b",
+      "parent_sha": "8cc83fc4f9bd6647305e1060306aa9df046ab7a2",
+      "date": "2026-10-20T17:50:24Z",
+      "message": "docs: add checkpoint AN EVIDENCE_REQUEST_PLAN.md",
+      "page": 5,
+      "index": 78
+    },
+    {
+      "sha": "8cc83fc4f9bd6647305e1060306aa9df046ab7a2",
+      "parent_sha": "f9ad3e950163e613fbf2e05d635e23d6e46bd249",
+      "date": "2026-10-20T17:50:21Z",
+      "message": "docs: add checkpoint AN GAP_UPDATE.md",
+      "page": 5,
+      "index": 79
+    },
+    {
+      "sha": "f9ad3e950163e613fbf2e05d635e23d6e46bd249",
+      "parent_sha": "fcde6998e9fb536b974c426fd71845972ac23aa8",
+      "date": "2026-10-20T17:50:19Z",
+      "message": "docs: add checkpoint AN CONTINUATION_STATE.json",
+      "page": 5,
+      "index": 80
+    },
+    {
+      "sha": "fcde6998e9fb536b974c426fd71845972ac23aa8",
+      "parent_sha": "691b1ae3c3addcd4b0b4a576e19121f473f52a19",
+      "date": "2026-10-20T17:50:16Z",
+      "message": "docs: add checkpoint AN QUALITY_REVIEW.md",
+      "page": 5,
+      "index": 81
+    },
+    {
+      "sha": "691b1ae3c3addcd4b0b4a576e19121f473f52a19",
+      "parent_sha": "ab98ffd4f3fb9829962c18b9d1a8b62ec5ecda59",
+      "date": "2026-10-20T17:50:14Z",
+      "message": "docs: add checkpoint AN ACCEPTANCE_TESTS.json",
+      "page": 5,
+      "index": 82
+    },
+    {
+      "sha": "ab98ffd4f3fb9829962c18b9d1a8b62ec5ecda59",
+      "parent_sha": "a161ba2609af0ccb57a2cee3208efe0fb9f5e0b7",
+      "date": "2026-10-20T17:50:11Z",
+      "message": "docs: add checkpoint AN REQUIREMENTS.json",
+      "page": 5,
+      "index": 83
+    },
+    {
+      "sha": "a161ba2609af0ccb57a2cee3208efe0fb9f5e0b7",
+      "parent_sha": "2472f98130427a523f0bb0613abc1585eea5f4da",
+      "date": "2026-10-20T17:50:09Z",
+      "message": "docs: add checkpoint AN SOURCE_REGISTER.json",
+      "page": 5,
+      "index": 84
+    },
+    {
+      "sha": "2472f98130427a523f0bb0613abc1585eea5f4da",
+      "parent_sha": null,
+      "date": "2026-10-20T16:58:59Z",
+      "message": "docs: record OPES Core Banking checkpoint AN status",
+      "page": 5,
+      "index": 85
+    }
+  ]
+}
