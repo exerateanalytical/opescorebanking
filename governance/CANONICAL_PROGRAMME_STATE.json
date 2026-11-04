@@ -40,8 +40,8 @@
   "last_local_archive_integrity_validated_batch_id": 210,
   "last_observed_delivery_batch_id": 210,
   "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
-  "next_exact_task": "Integrate OIDC issuer/JWKS/audience/subject authorization at API gateway with the tested authenticated bank-specific database roles; negative-test credential routing, authorization and key separation. Then finish strictly typed CIF/PRD/ACT/LED contracts and database models.",
-  "next_exact_task_id": "FOUNDATION-TENANT-CONTRACTS-001",
+  "next_exact_task": "Formally specify revocation versus irreversible command ordering and authoritative lease/fencing safety/liveness properties; prepare deterministic synthetic concurrency harness for T43/T47; do not claim test execution.",
+  "next_exact_task_id": "SEC-TENANT-ROUTING-001",
   "original_archive_custody_status": "NOT_VERIFIED",
   "original_archive_custody_verified": false,
   "original_archives_replaced": false,
@@ -85,5 +85,18 @@
     "production_ready": false
   },
   "last_verified_coding_commit": "860fecdbb1d88c0dabc7590f87a2647d31ebe012",
-  "tenant_data_isolation_level": "POSTGRESQL_LAB_TESTED_WITH_AUTHENTICATED_DB_SESSION_USER_BINDING; PRODUCTION_TENANT_ROUTER_NOT_YET_IMPLEMENTED"
+  "tenant_data_isolation_level": "POSTGRESQL_LAB_TESTED_WITH_AUTHENTICATED_DB_SESSION_USER_BINDING; PRODUCTION_TENANT_ROUTER_NOT_YET_IMPLEMENTED",
+  "security_active_wp": {
+    "id": "SEC-TENANT-ROUTING-001",
+    "status": "IN_PROGRESS_BLOCKED_FROM_PRODUCTION",
+    "latest_review": "governance/reviews/SEC-TENANT-ROUTING-001_SECURITY_REVIEW_05_2026-11-04.md",
+    "review_number": 5,
+    "p0": [
+      "P0-SEC-01",
+      "P0-SEC-02"
+    ],
+    "new_tests_executed": 0,
+    "acceptance_scenarios": "T01–T55 DRAFT",
+    "accepted": false
+  }
 }
