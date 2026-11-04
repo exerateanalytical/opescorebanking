@@ -37,7 +37,25 @@ jobs:
         env:
           PGPASSWORD: postgres
         run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -f engineering/foundation/tenant/001_schema.sql
-      - name: Execute live PostgreSQL tenant isolation and policy tests
+      - name: Execute original PostgreSQL tenant isolation and policy tests
         env:
           PGPASSWORD: postgres
         run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -f engineering/foundation/tenant/tests/isolation.sql
+      - name: Apply authenticated database-principal tenant binding
+        env:
+          PGPASSWORD: postgres
+        run: |
+          psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -f engineering/foundation/tenant/002_authenticated_principal_binding.sql
+          psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -f engineering/foundation/tenant/tests/002_ci_login_principals.sql
+      - name: Verify bank A cannot impersonate bank B by changing tenant header or GUC
+        env:
+          PGPASSWORD: only_testing_bank_a
+        run: psql -h 127.0.0.1 -U opes_bank_a_test -d opes_test -v ON_ERROR_STOP=1 -f engineering/foundation/tenant/tests/role_isolation_a.sql
+      - name: Verify bank B cannot impersonate bank A
+        env:
+          PGPASSWORD: only_testing_bank_b
+        run: psql -h 127.0.0.1 -U opes_bank_b_test -d opes_test -v ON_ERROR_STOP=1 -f engineering/foundation/tenant/tests/role_isolation_b.sql
+      - name: Verify unbound DB principal sees no institution data
+        env:
+          PGPASSWORD: only_testing_unbound
+        run: psql -h 127.0.0.1 -U opes_unbound_test -d opes_test -v ON_ERROR_STOP=1 -f engineering/foundation/tenant/tests/role_isolation_unbound.sql
