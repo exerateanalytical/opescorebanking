@@ -1,0 +1,65 @@
+{
+  "schema": "opes.corebanking.batch-manifest.v1",
+  "batch": 151,
+  "parent_wp": "GOV-REC-001",
+  "checkpoint": "AO",
+  "source_ref": "9c2476b94a1af7dbfac31684679332bc9e401207",
+  "created_date": "2026-11-04",
+  "evidence_status": "HISTORICAL_SOURCE_AUDIT_ONLY",
+  "files": [
+    {
+      "path": "AUDIT.md",
+      "sha256": "ade9cd149275e7c29a3316b60e260297e3b6b6ef701903fdc2f968dd4db7db86",
+      "crc32": "cf9d959b",
+      "bytes": 6500
+    },
+    {
+      "path": "CROSSWALK.json",
+      "sha256": "b9341167c1131017df31a3802031b19376107d1dc71d8ca6a11415235684b0ad",
+      "crc32": "f2bffefe",
+      "bytes": 14614
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AO/ACCEPTANCE_TESTS.json",
+      "sha256": "ce59d0064c0ea2afd3479669f72f215ac7840024c4b6a00036ac958915513165",
+      "crc32": "c05c2782",
+      "bytes": 1812
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AO/CONTINUATION_STATE.json",
+      "sha256": "d5092f992347649ac8d4994479738b3d3df15d35481ee6c46e25cd1148915820",
+      "crc32": "2d68c1d5",
+      "bytes": 1405
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AO/EVIDENCE_REGISTER.json",
+      "sha256": "f85e78cef14b37e963008cce446970469790ca90bd1959b109c365cf6231fdcf",
+      "crc32": "f29a8888",
+      "bytes": 3182
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AO/EXECUTION_REPORT.md",
+      "sha256": "d85faded9abfb0c428724431b5301bf1d89724e3c58632f0c56de4a600638cfc",
+      "crc32": "cad50211",
+      "bytes": 1695
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AO/QUALITY_REVIEW.md",
+      "sha256": "44b319b4e614e510ceb5cce2fae82d4b02e022227600f69b879c04c578e213d9",
+      "crc32": "fab1d2f5",
+      "bytes": 1706
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AO/README.md",
+      "sha256": "515b86204da178c5801096d6aa399e9f46b010d3248a6ba1358737bbbf9047b6",
+      "crc32": "a70eec23",
+      "bytes": 975
+    },
+    {
+      "path": "SOURCE/regulatory/checkpoints/AO/REGULATORY_IMPACT.md",
+      "sha256": "9dedd9546ca4d9436235a59ff62f09c480539abd9e64e7617f4142889e52ca91",
+      "crc32": "885d2464",
+      "bytes": 3085
+    }
+  ]
+}
