@@ -1,0 +1,341 @@
+{
+  "schema": "opes.wbs.domains.v1",
+  "date": "2026-11-04",
+  "programme_owner": "OPESWARE TECHNOLOGIES",
+  "sponsor_scope_approved": true,
+  "developer_does_not_require_participating_bank_agreement": true,
+  "external_bank_cfo_signature_required_for_source_development": false,
+  "groups": [
+    {
+      "id": "GOV",
+      "scope": "Vendor and institution policy management",
+      "owner": "OPESWARE TECHNOLOGIES (GOV engineering lead)",
+      "depends_on": [],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "ARC",
+      "scope": "DDD architecture and event boundaries",
+      "owner": "OPESWARE TECHNOLOGIES (ARC engineering lead)",
+      "depends_on": [
+        "GOV"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "CIF",
+      "scope": "Party identity KYC and KYB",
+      "owner": "OPESWARE TECHNOLOGIES (CIF engineering lead)",
+      "depends_on": [
+        "ARC",
+        "SEC"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "PRD",
+      "scope": "Product factory and immutable terms",
+      "owner": "OPESWARE TECHNOLOGIES (PRD engineering lead)",
+      "depends_on": [
+        "ARC",
+        "CIF"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "ACT",
+      "scope": "Accounts and deposits",
+      "owner": "OPESWARE TECHNOLOGIES (ACT engineering lead)",
+      "depends_on": [
+        "PRD",
+        "LED",
+        "CIF"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "LED",
+      "scope": "General ledger and posting invariants",
+      "owner": "OPESWARE TECHNOLOGIES (LED engineering lead)",
+      "depends_on": [
+        "ARC"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "BRN",
+      "scope": "Branches tellers vaults and cash",
+      "owner": "OPESWARE TECHNOLOGIES (BRN engineering lead)",
+      "depends_on": [
+        "ACT",
+        "LED"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "PAY",
+      "scope": "Payments and external interfaces",
+      "owner": "OPESWARE TECHNOLOGIES (PAY engineering lead)",
+      "depends_on": [
+        "ACT",
+        "LED",
+        "REC"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "CRD",
+      "scope": "Credit and loan lifecycle",
+      "owner": "OPESWARE TECHNOLOGIES (CRD engineering lead)",
+      "depends_on": [
+        "ACT",
+        "CIF",
+        "LED"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "TRE",
+      "scope": "Treasury and liquidity",
+      "owner": "OPESWARE TECHNOLOGIES (TRE engineering lead)",
+      "depends_on": [
+        "LED",
+        "REC"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "AML",
+      "scope": "AML sanctions fraud and monitoring",
+      "owner": "OPESWARE TECHNOLOGIES (AML engineering lead)",
+      "depends_on": [
+        "CIF",
+        "ACT"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "REP",
+      "scope": "Management and regulatory reporting",
+      "owner": "OPESWARE TECHNOLOGIES (REP engineering lead)",
+      "depends_on": [
+        "LED",
+        "AML"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "CHN",
+      "scope": "Digital mobile agency corporate banking",
+      "owner": "OPESWARE TECHNOLOGIES (CHN engineering lead)",
+      "depends_on": [
+        "SEC",
+        "API",
+        "ACT"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "CARD",
+      "scope": "Cards and processor interfaces",
+      "owner": "OPESWARE TECHNOLOGIES (CARD engineering lead)",
+      "depends_on": [
+        "ACT",
+        "PAY"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "CRM",
+      "scope": "Customer services and communication",
+      "owner": "OPESWARE TECHNOLOGIES (CRM engineering lead)",
+      "depends_on": [
+        "CIF",
+        "CHN"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "FEE",
+      "scope": "Fees schedules and billing",
+      "owner": "OPESWARE TECHNOLOGIES (FEE engineering lead)",
+      "depends_on": [
+        "PRD",
+        "LED"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "REC",
+      "scope": "Financial reconciliation",
+      "owner": "OPESWARE TECHNOLOGIES (REC engineering lead)",
+      "depends_on": [
+        "LED"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "SEC",
+      "scope": "Cybersecurity identity and authorization",
+      "owner": "OPESWARE TECHNOLOGIES (SEC engineering lead)",
+      "depends_on": [
+        "ARC"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "DAT",
+      "scope": "Data governance privacy retention",
+      "owner": "OPESWARE TECHNOLOGIES (DAT engineering lead)",
+      "depends_on": [
+        "SEC",
+        "ARC"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "API",
+      "scope": "API gateway developer contracts and events",
+      "owner": "OPESWARE TECHNOLOGIES (API engineering lead)",
+      "depends_on": [
+        "SEC",
+        "ARC"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "INF",
+      "scope": "Infrastructure observability keys and resilience",
+      "owner": "OPESWARE TECHNOLOGIES (INF engineering lead)",
+      "depends_on": [
+        "SEC"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "DR",
+      "scope": "Disaster recovery business continuity",
+      "owner": "OPESWARE TECHNOLOGIES (DR engineering lead)",
+      "depends_on": [
+        "INF"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "ADM",
+      "scope": "Administration SoD maker-checker",
+      "owner": "OPESWARE TECHNOLOGIES (ADM engineering lead)",
+      "depends_on": [
+        "SEC",
+        "GOV"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "TST",
+      "scope": "Independent testing contract and invariant evidence",
+      "owner": "OPESWARE TECHNOLOGIES (TST engineering lead)",
+      "depends_on": [
+        "ARC"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    },
+    {
+      "id": "REL",
+      "scope": "Controlled releases migrations and deployment",
+      "owner": "OPESWARE TECHNOLOGIES (REL engineering lead)",
+      "depends_on": [
+        "TST",
+        "INF"
+      ],
+      "scope_approval": "SPONSOR_APPROVED",
+      "implementation": "DRAFT_NOT_ACCEPTED",
+      "tests": "NOT_EXECUTED_FOR_THIS_DOMAIN",
+      "production_DOR": "NOT_VERIFIED"
+    }
+  ],
+  "domain_group_count": 25,
+  "historical_work_package_directories": 150,
+  "accepted_leaf_work_packages": "UNKNOWN",
+  "domain_leaf_scope_denominator": "NOT_YET_AUDITED",
+  "first_foundation_lab": {
+    "name": "FOUNDATION-TENANT-CONTRACTS-001",
+    "CI_run_id": 41857001213,
+    "python_unittests_passed": 8,
+    "postgres_integration": "PASSED",
+    "production_accepted": false
+  },
+  "next_exact_task": "Implement verified token->institution identity binding and per-bank DB principal isolation; advance typed CIF/PRD/ACT/LED contracts."
+}
