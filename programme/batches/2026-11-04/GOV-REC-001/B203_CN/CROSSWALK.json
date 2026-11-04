@@ -1,0 +1,127 @@
+{
+  "schema": "opes.corebanking.govrec.source-audit.v1",
+  "run_date": "2026-11-04",
+  "batch_number": 203,
+  "checkpoint": "CN",
+  "parent_wp": "GOV-REC-001",
+  "source_ref": "ee13700c466053bdc3a5e4fb468e65fad939aee1",
+  "source_documents": [
+    {
+      "source_path": "regulatory/checkpoints/CN/README.md",
+      "git_blob_sha": "f171d4301e43d15cfac7e764953005ea4f0352a2",
+      "sha256": "cf6cd27bcc2f59d5a3dc50d261d3508d1177d47ce0b9568a7339d9155836df21",
+      "bytes": 5875,
+      "extension": "md",
+      "json_valid": null,
+      "work_package_mentions": [
+        "WP-ACC-005"
+      ],
+      "phase_mentions": [
+        {
+          "line": 3,
+          "excerpt": "Date: 2026-11-03. Predecessor: CM (read from canonical GitHub repository). Phase 4 — Accounting Core and Financial Integrity. **SAFE PARTIAL RESEARCH CHECKPOINT; WP-ACC-005 OPEN / P0 BLOCKED.** This i"
+        }
+      ],
+      "material_excerpts": [
+        {
+          "line": 1,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "# Checkpoint CN — WP-ACC-005: Article 8 source-access failure and draft crosswalk quarantine"
+        },
+        {
+          "line": 3,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Date: 2026-11-03. Predecessor: CM (read from canonical GitHub repository). Phase 4 — Accounting Core and Financial Integrity. **SAFE PARTIAL RESEARCH CHECKPOINT; WP-ACC-005 OPEN / P0 BLOCKED.** This is not a completed work package."
+        },
+        {
+          "line": 7,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Prior canonical record reviewed: `regulatory/checkpoints/CM/README.md`. It records the previously observed I-2015/01 Article 8(d) reference to account 312, versus surrounding 322-prefixed account family, without official corrigendum."
+        },
+        {
+          "line": 8,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "- Fresh issuer-restricted searches on 2026-11-03 for `lettre PCEC`, `312`, `322`, I-2015/01 and R-2018/01 transition provisions returned **no results**. This is **not proof of absence** of an official clarification."
+        },
+        {
+          "line": 10,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "- Existing official R-99/01 evidence, recorded in CM, identifies `lettres PCEC` as a correction/clarification channel; no issuer letter resolving the discrepancy was obtained in this run."
+        },
+        {
+          "line": 13,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "## Article 8 draft crosswalk — controlled incomplete evidence register"
+        },
+        {
+          "line": 15,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "This is a **schema and uncertainty register**, not a claim to have extracted or verified individual leaf accounts."
+        },
+        {
+          "line": 19,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| I-2015/01 Article 8(b), account family 322 (as reported in CL/CM) | PREVIOUS-REPORT ONLY; fresh source page unavailable | UNDETERMINED | BLOCKED | Need exact signed page and operative edition |"
+        },
+        {
+          "line": 20,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| I-2015/01 Article 8(d), printed 312 reference (as reported in CL/CM) | PREVIOUS-REPORT ONLY; fresh source page unavailable | UNDETERMINED | BLOCKED — AMBIGUOUS 312/322 | Context does not authorize substitution |"
+        },
+        {
+          "line": 21,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Article 8(d), 322-prefixed children (as reported in CL/CM) | PREVIOUS-REPORT ONLY; individual child codes NOT independently extracted | UNDETERMINED | BLOCKED | Do not fabricate leaf codes, labels or semantics |"
+        },
+        {
+          "line": 22,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Any pre-2015 source account affected by Article 8 | UNVERIFIED | UNDETERMINED | BLOCKED | Need original PCEC source and full amendment chain |"
+        },
+        {
+          "line": 23,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "| Any post-2018 affected account | UNVERIFIED | UNDETERMINED | BLOCKED | Need current signed PCEC amendments and institutional applicability |"
+        },
+        {
+          "line": 33,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "### Negative acceptance specifications (not executed)"
+        },
+        {
+          "line": 35,
+          "kind": "HISTORICAL_ASSERTION",
+          "excerpt": "1. Reject mapping of 312 to 322 solely from contextual inference."
+        },
+        {
+          "line": 45,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Regulatory: official clarification and signed amendment chain missing (P0). Financial: leaf mappings and institution-approved ledger impacts missing (P0). Architecture: versioned semantic identity specified, not implemented. Security: dual approval and tamper-evident audit required, not tested. Operations: reconciliation and recovery untested. Evidence: prim"
+        },
+        {
+          "line": 49,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "Attempted **1** work package (WP-ACC-005 continuation); completed **0**; kept open **1**; blocked from closure **1**. One safe partial documentation checkpoint CN; P0 blockers resolved **0**. Production code **0**; executable tests **0**. No dependent package attempted."
+        },
+        {
+          "line": 53,
+          "kind": "GAP_OR_HOLD",
+          "excerpt": "**WP-ACC-005 — Checkpoint CO:** Obtain an authenticated readable copy of I-2015/01 Article 8 and any official PCEC erratum/letter addressing 312/322; transcribe each affected printed leaf code and label with article/page provenance, then compare against original and subsequent signed PCEC editions. If still inaccessible, preserve the explicit block and refin"
+        }
+      ]
+    }
+  ],
+  "claimed_continuation_state": null,
+  "unique_historical_wp_mentions": [
+    "WP-ACC-005"
+  ],
+  "json_parse_failures": [],
+  "evidence_classification": "SOURCE_ASSERTION_NOT_INDEPENDENT_ACCEPTANCE",
+  "production_readiness": "NOT_EVALUATED_OR_AUTHORIZED",
+  "source_coverage": {
+    "expected": 1,
+    "read": 1,
+    "sha_matched": 1
+  },
+  "next_checkpoint": "GOV-REC-001 recovery batch 204"
+}
