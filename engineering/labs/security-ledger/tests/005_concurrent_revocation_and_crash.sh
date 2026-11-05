@@ -77,8 +77,12 @@ COMMIT;
 SQL
 crash_client=$!
 if ! wait_sleeping 'opes_precommit_crash_holder'; then cat "$tmp/crash_holder.log"; exit 1; fi
-terminated="$(pg "SELECT count(*) FROM pg_stat_activity WHERE application_name='opes_precommit_crash_holder' AND pg_terminate_backend(pid);")"
-if [[ "$terminated" != "1" ]]; then echo "ERROR: expected exactly one terminated backend" >&2; exit 1; fi
+# Never invoke pg_terminate_backend(pid) inside a WHERE predicate: SQL
+# evaluation order could terminate sessions other than the intended holder.
+target_pid="$(pg "SELECT pid FROM pg_stat_activity WHERE application_name='opes_precommit_crash_holder' AND state='active' AND query LIKE '%pg_sleep%' AND pid<>pg_backend_pid();")"
+if [[ ! "$target_pid" =~ ^[0-9]+$ ]]; then echo "ERROR: missing or ambiguous target backend PID" >&2; exit 1; fi
+terminated="$(pg "SELECT pg_terminate_backend($target_pid);")"
+if [[ "$terminated" != "t" ]]; then echo "ERROR: target backend termination rejected" >&2; exit 1; fi
 set +e
 wait "$crash_client"
 crash_code=$?
