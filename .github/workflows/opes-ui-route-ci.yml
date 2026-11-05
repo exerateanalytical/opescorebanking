@@ -24,3 +24,33 @@ jobs:
       - name: Check syntax of browser module
         run: node --check src/app.js
         working-directory: apps/opes-core-banking-ui
+
+  visual-browser-audit:
+    needs: route-catalogue
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: npm install --no-save playwright
+        working-directory: apps/opes-core-banking-ui
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+        working-directory: apps/opes-core-banking-ui
+      - name: Start static HTTP server
+        run: mkdir -p apps/opes-core-banking-ui/audit && (python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/opes-core-ui.log 2>&1 &)
+      - name: Audit 726 routes and viewport layout
+        run: node tests/visual-audit.mjs
+        working-directory: apps/opes-core-banking-ui
+      - name: Attach screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: opes-core-banking-viewports
+          path: apps/opes-core-banking-ui/audit/*.png
+          if-no-files-found: ignore
