@@ -31,6 +31,30 @@ const escapeCsv=value=>{const v=String(value);return /[,\n"]/.test(v)?'"'+v.repl
 const csv=columns.join(",")+"\n"+manifest.map(s=>columns.map(k=>escapeCsv(s[k])).join(",")).join("\n")+"\n";
 writeFileSync(join(root,"screen-register-export.csv"),csv);
 digests.push(checksum(csv)+"  screen-register-export.csv");
+const emitCsv=(name,columns,records)=>{
+ const payload=columns.join(",")+"\n"+records.map(row=>columns.map(key=>escapeCsv(row[key]??"")).join(",")).join("\n")+"\n";
+ writeFileSync(join(root,name),payload);
+ digests.push(checksum(payload)+"  "+name);
+};
+const actionRows=[],fieldRows=[],stateRows=[],tabRows=[],phaseRows=[];
+for(const s of SCREENS){
+ const c=SCREEN_BLUEPRINTS[s.id];
+ for(const [actionId,a] of Object.entries(c.actions))actionRows.push({screen_id:s.id,domain:s.domain,action_id:actionId,label:a.label,disposition:a.state,bank_backed:false});
+ for(const f of c.fields)fieldRows.push({screen_id:s.id,domain:s.domain,field_id:f.id,label:f.label,type:f.type,group:f.group,required:f.required,source:c.fieldSource,approved:false});
+ for(const state of c.stateList)stateRows.push({screen_id:s.id,state,mode:"LOCAL_VISUAL_PREVIEW",business_complete:false});
+ for(const [i,tab] of c.tabs.entries())tabRows.push({screen_id:s.id,tab_order:i+1,tab_id:tab,status:"UI_NAVIGATION_IMPLEMENTED",business_validated:false});
+ for(const p of c.phases)phaseRows.push({screen_id:s.id,phase:p.id,title:p.title,description:p.description,status:p.status});
+}
+if(actionRows.length!==7986||stateRows.length!==10164||tabRows.length!==2904||phaseRows.length!==2904)throw Error("Coverage count mismatch");
+emitCsv("SCREEN_ACTION_MATRIX_7986.csv",["screen_id","domain","action_id","label","disposition","bank_backed"],actionRows);
+emitCsv("SCREEN_FIELD_MATRIX.csv",["screen_id","domain","field_id","label","type","group","required","source","approved"],fieldRows);
+emitCsv("SCREEN_STATE_MATRIX_10164.csv",["screen_id","state","mode","business_complete"],stateRows);
+emitCsv("SCREEN_TAB_MATRIX_2904.csv",["screen_id","tab_order","tab_id","status","business_validated"],tabRows);
+emitCsv("SCREEN_WORKFLOW_STAGE_MATRIX_2904.csv",["screen_id","phase","title","description","status"],phaseRows);
+const coverage={screenCount:manifest.length,actionCount:actionRows.length,fieldCount:fieldRows.length,stateCount:stateRows.length,tabCount:tabRows.length,workflowStageCount:phaseRows.length,productionActionsEnabled:0,businessWorkflowsAccepted:0,state:"CLIENT_UI_COVERAGE_ONLY"};
+const coverageText=JSON.stringify(coverage,null,2)+"\n";writeFileSync(join(root,"CONTROL_COVERAGE.json"),coverageText);
+digests.push(checksum(coverageText)+"  CONTROL_COVERAGE.json");
+
 writeFileSync(join(root,"SHA256SUMS.txt"),digests.join("\n")+"\n");
 writeFileSync(join(root,"README.txt"),["OPES Core Banking — 726-screen client UI definition export","One distinct JSON file per screen in definitions/<DOMAIN>/<ID>.json","Executable web app is in ../index.html","All banking APIs and production transactions are NOT connected","All specifications are PROPOSED and NOT_ACCEPTED"].join("\n")+"\n");
 console.log("Generated",manifest.length,"individual screen JSON contracts across",domains.length,"domains");
