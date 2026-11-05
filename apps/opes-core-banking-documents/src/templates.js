@@ -1,4 +1,5 @@
 import {TEMPLATE_GROUPS} from "./registry-seeds.js";
+export {TEMPLATE_GROUPS} from "./registry-seeds.js";
 
 /**
  * A document definition is NOT a form, issued financial record, accounting mapping
