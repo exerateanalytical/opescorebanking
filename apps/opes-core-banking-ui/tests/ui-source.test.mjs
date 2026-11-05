@@ -16,14 +16,14 @@ test("no decorative glow/gradient or locally persisted customer data",()=>{
  assert.ok(!/box-shadow\s*:/i.test(css));
  assert.ok(!/linear-gradient|radial-gradient|filter:\s*blur/i.test(css));
  assert.ok(!/localStorage|sessionStorage/.test(app));
- assert.ok(app.includes("No data is transmitted or persisted"));
+ assert.ok(app.includes("No information is transmitted, posted, approved or saved outside browser memory"));
 });
 test("UI accessibility landmarks and guarded production actions",()=>{
  assert.match(html,/lang="en"/);
  assert.match(html,/class="skip-link"/);
  assert.ok(app.includes('role="tablist"'));
  assert.ok(app.includes('aria-live="polite"'));
- assert.ok(app.includes('disabled title="No trusted API connected"'));
+ assert.ok(app.includes('disabled title="No trusted submission endpoint"'));
  assert.ok(app.includes('dialog.showModal()'));
  assert.ok(app.includes('escape('));
 });

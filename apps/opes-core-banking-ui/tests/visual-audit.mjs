@@ -34,6 +34,8 @@ try{
   const type=await field.getAttribute("type");
   if(type==="date")await field.fill("2026-11-05");
   else if(type==="number")await field.fill("10000");
+  else if((await field.getAttribute("name"))==="debitGL")await field.fill("DR-100");
+  else if((await field.getAttribute("name"))==="creditGL")await field.fill("CR-200");
   else await field.fill("SYNTHETIC-REFERENCE");
  }
  await form.getByRole("button",{name:/Save local draft/i}).click();
