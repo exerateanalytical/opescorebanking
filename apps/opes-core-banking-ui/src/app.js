@@ -152,7 +152,7 @@ function showDraftForm(){
   else {
    let extra=' maxlength="160"';
    if(f.type==="number"){
-     const percentage=/percent/i.test(f.id),zero=/quantity|denom|count|pastdue|obligations/i.test(f.id);
+     const percentage=/percent/i.test(f.id),zero=/quantity|denom|count|pastdue|obligations|expectedMinor/i.test(f.id);
      extra=' min="'+(zero||percentage?0:1)+'" step="1"'+(percentage?' max="100"':'')+' inputmode="numeric"';
    }
    input='<input'+common+' type="'+escape(f.type)+'"'+extra+'>';
@@ -175,7 +175,7 @@ function showDraftForm(){
   if(s.domain==="LED"&&data.debitGL&&data.creditGL&&data.debitGL===data.creditGL)err.push("Debit and credit GL accounts cannot be the same");
   if(data.periodStart&&data.periodEnd&&data.periodStart>data.periodEnd)err.push("The end of the period must not precede the start");
   if(data.mandateEffective&&data.mandateExpiry&&data.mandateEffective>data.mandateExpiry)err.push("Mandate expiry must not precede the effective date");
-  if(data.dateOfBirth&&data.dateOfBirth>new Date().toISOString().slice(0,10))err.push("Birth date cannot be in the future");
+  if((data.dateOfBirth||data.birthOrIncorporationDate)&&(data.dateOfBirth||data.birthOrIncorporationDate)>new Date().toISOString().slice(0,10))err.push("Birth/incorporation date cannot be in the future");
   if(err.length){const host=dialog.querySelector("#form-error");host.hidden=false;host.textContent=err.join(". ");host.scrollIntoView({block:"nearest"});return;}
   if(s.id==="BRN-UI-004"){
    const counted=10000*Number(data.denom10000||0)+5000*Number(data.denom5000||0)+2000*Number(data.denom2000||0)+1000*Number(data.denom1000||0)+500*Number(data.denom500||0)+100*Number(data.denom100||0);

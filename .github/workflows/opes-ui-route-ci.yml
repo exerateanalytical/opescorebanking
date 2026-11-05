@@ -26,6 +26,7 @@ jobs:
         working-directory: apps/opes-core-banking-ui
 
   visual-browser-audit:
+    if: github.event_name == 'push'
     needs: route-catalogue
     runs-on: ubuntu-latest
     permissions:

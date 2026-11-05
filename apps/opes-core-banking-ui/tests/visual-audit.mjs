@@ -64,11 +64,14 @@ try{
   assert.deepEqual(checked,[],"priority screen issues at "+width+"px");
  }
  await page.setViewportSize({width:1440,height:900});
- for(const id of ["CIF-UI-002","ACT-UI-003","LED-UI-002","BRN-UI-004","CRD-UI-002"]){await page.goto(origin+"#/screen/"+id,{waitUntil:"load"});await page.locator("h1").waitFor();assert.ok(await page.locator(".field-group").count()>=1);await page.screenshot({path:"audit/priority-"+id+".png",fullPage:true});}
+ for(const id of ["CIF-UI-002","ACT-UI-003","LED-UI-002","BRN-UI-004","CRD-UI-002"]){await page.goto(origin+"#/screen/"+id,{waitUntil:"load"});await page.locator("h1").waitFor();assert.ok(await page.locator(".field-group").count()>=1);await page.screenshot({path:"audit/priority-"+id+".png",fullPage:true});await page.setViewportSize({width:375,height:812});await page.screenshot({path:"audit/priority-mobile-"+id+".png",fullPage:true});await page.setViewportSize({width:1440,height:900});}
  await page.goto(origin+"#/screen/CIF-UI-001");assert.equal(await page.getByRole("button",{name:/New local draft/i}).first().isDisabled(),true);
  await page.goto(origin+"#/screen/CIF-UI-002");assert.equal(await page.getByRole("button",{name:/New local draft/i}).first().isEnabled(),true);
  await page.locator("#screen-selector").selectOption("CIF-UI-003");assert.match(page.url(),/CIF-UI-003$/);
  await page.goto(origin+"#/screen/LED-UI-002");await page.getByRole("button",{name:/New local draft/i}).first().click();const ledgerForm=page.locator("#local-draft-form");assert.ok(await ledgerForm.locator("fieldset").count()>=2);await page.getByRole("button",{name:"Cancel"}).click();
+ await page.goto(origin+"#/screen/BRN-UI-004");await page.getByRole("button",{name:/New local draft/i}).first().click();
+ const countForm=page.locator("#local-draft-form");for(const input of await countForm.locator("input,select,textarea").all()){const tag=await input.evaluate(el=>el.tagName.toLowerCase());const name=await input.getAttribute("name");if(tag==="select"){await input.selectOption({index:1});continue;}const type=await input.getAttribute("type");if(type==="date"){await input.fill("2026-11-05");continue;}if(type==="number"){if(name==="expectedMinor")await input.fill("0");else if(name==="denom10000")await input.fill("2");else await input.fill("0");continue;}await input.fill("SYNTHETIC-REFERENCE");}
+ await countForm.getByRole("button",{name:/Save local draft/i}).click();await page.getByText("Not submitted").first().waitFor();await page.getByRole("tab",{name:"Overview"}).click();await page.getByText("Counted amount").waitFor();
  assert.deepEqual(errors,[]);
  console.log("PASS: 726 routes and desktop/mobile viewport audit, synthetic draft lifecycle, no browser page errors");
 }finally{await browser.close();}
