@@ -1,7 +1,7 @@
 /* OPES Banking UI prototype. Solid colors only; no gradients, blur, glow, or shadow effects. */
 :root {
  color-scheme:light;
- --ink:#15263C;--muted:#56667B;--subtle:#718198;
+ --ink:#15263C;--muted:#56667B;--subtle:#5E7085;
  --primary:#164B9C;--primary-strong:#103D82;--primary-soft:#EAF1FD;
  --sidebar:#10243E;--sidebar-text:#EEF4FB;--sidebar-muted:#B1C0D2;
  --canvas:#F5F7FA;--paper:#FFFFFF;--surface-alt:#F9FAFC;
@@ -164,7 +164,7 @@ td{overflow-wrap:anywhere}
 @media(max-width:1200px){.domain-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:920px){.sidebar{position:fixed;top:0;bottom:0;transform:translateX(-100%);transition:transform .18s ease;max-width:min(84vw,320px)}.sidebar.open{transform:translateX(0)}.mobile-backdrop.open{display:block;position:fixed;inset:0;background:rgba(9,23,42,.55);z-index:35}.menu-btn{display:grid!important}.two-col{grid-template-columns:1fr}.topbar{min-height:64px}.app-label{font-size:14px}}
 @media(min-width:921px){.menu-btn{display:none!important}}
-@media(max-width:680px){.domain-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-grid{grid-template-columns:1fr}.workspace{padding:18px 14px}.topbar{padding:10px 12px;gap:8px}.top-search{min-width:0}.app-label{display:none}.demo-select{max-width:103px;font-size:12px;padding-inline:6px}.page-actions{width:100%}.page-actions .btn{flex:1}.info-list{grid-template-columns:1fr}.panel{padding:16px}.footer{padding:16px 14px}.brand{padding-top:21px}}
-@media(max-width:440px){.topbar{gap:5px}.top-actions{gap:5px}.top-search input{font-size:12px}.top-search input::placeholder{color:transparent}.stats{gap:10px}.stat{padding:13px}.stat-value{font-size:22px}.domain-grid{gap:10px}.domain-card{padding:13px;min-height:145px}.form-grid{grid-template-columns:1fr}.modal-body{padding:18px}.modal-head{padding:18px}.modal-footer{padding:14px}.tabs .tab{padding-inline:13px;font-size:13px}}
+@media(max-width:680px){.top-actions .badge.warning{display:none}.domain-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-grid{grid-template-columns:1fr}.workspace{padding:18px 14px}.topbar{padding:10px 12px;gap:8px}.top-search{min-width:0}.app-label{display:none}.demo-select{max-width:103px;font-size:12px;padding-inline:6px}.page-actions{width:100%}.page-actions .btn{flex:1}.info-list{grid-template-columns:1fr}.panel{padding:16px}.footer{padding:16px 14px}.brand{padding-top:21px}}
+@media(max-width:440px){.topbar{flex-wrap:wrap}.top-search{order:3;flex-basis:100%;max-width:none;margin:3px 0 0}.app-label{display:none}.topbar{gap:5px}.top-actions{gap:5px}.top-search input{font-size:12px}.top-search input::placeholder{color:transparent}.stats{gap:10px}.stat{padding:13px}.stat-value{font-size:22px}.domain-grid{gap:10px}.domain-card{padding:13px;min-height:145px}.form-grid{grid-template-columns:1fr}.modal-body{padding:18px}.modal-head{padding:18px}.modal-footer{padding:14px}.tabs .tab{padding-inline:13px;font-size:13px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 @media print{.sidebar,.topbar,.footer,.page-actions,.tabs,.quick-grid,.toast-host{display:none!important}.content-shell{width:100%}.workspace{padding:0}.panel{break-inside:avoid;border:1px solid #AAA}body{background:#FFF;color:#000}}
