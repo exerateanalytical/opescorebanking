@@ -1,0 +1,2459 @@
+{
+  "schema": "opes.corebanking.code-evidence-crosswalk.v0.2",
+  "date": "2026-11-05",
+  "title": "Actual GitHub tree evidence crosswalk to provisional code workstreams",
+  "repository": "exerateanalytical/opescorebanking",
+  "inspected_commit": "c893783b8e60544f5bb8035664f005e32e058a3d",
+  "inspected_tree_sha": "dedeaa9fc200b7fbf7d9dbb4b7c5197015c50f7f",
+  "tree_truncated": false,
+  "repo_tree_entries": 1736,
+  "approved_domain_count": 25,
+  "provisional_slot_count": 115,
+  "provisional_domain_slot_count": 100,
+  "provisional_shared_and_client_count": 15,
+  "verified_total_leaf_level_coding_work_packages": null,
+  "production_accepted_count": 0,
+  "notes": [
+    "This file maps current source/code evidence to provisional workstreams, NOT accepted WP completions.",
+    "Historical delivered ZIPs under programme/batches are archival drafts and are not counted as executable banking modules.",
+    "Live PostgreSQL lab test pass exists for LED-LAB-003, which is not a production banking release.",
+    "All paths in source_evidence were verified present in inspected GitHub tree.",
+    "APIs for governance-only domains must be individually justified; overlapping platform/domain slots must be deduplicated.",
+    "15 production DoR gates remain unverified. Bank-local OIDC, revocation, HSM and atomic posting production gates remain open.",
+    "COBAC 312/322 external taxonomy mapping remains quarantined."
+  ],
+  "source_provenance": [
+    "governance/CANONICAL_PROGRAMME_STATE.json",
+    "governance/OWNER_APPROVED_DOMAIN_OWNERSHIP_REGISTER_2026-11-04.json",
+    "governance/plans/SOFTWARE_IMPLEMENTATION_SIZING_AND_CLIENT_ARCHITECTURE_V0_1_2026-11-05.md"
+  ],
+  "checkpoints": {
+    "historical_delivery_batches_observed_through": 210,
+    "latest_lab": "LED-LAB-003",
+    "pg_ci_run": 41940764696
+  },
+  "next_exact_task": "GOV-WBS-RECON-001: Inventory actual role/workflow screens, acceptance evidence and module implementations; deduplicate 115 provisional slots into dependency-correct leaf coding WPs; retain SEC-TENANT-ROUTING-001 as financial security critical path.",
+  "slots": [
+    {
+      "id": "GOV-API",
+      "kind": "API",
+      "domain": "GOV",
+      "domain_scope": "Vendor and institution policy management",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (GOV engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "GOV-DATA",
+      "kind": "DATA",
+      "domain": "GOV",
+      "domain_scope": "Vendor and institution policy management",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (GOV engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "GOV-SERVICE",
+      "kind": "SERVICE",
+      "domain": "GOV",
+      "domain_scope": "Vendor and institution policy management",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (GOV engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "GOV-TEST",
+      "kind": "TEST",
+      "domain": "GOV",
+      "domain_scope": "Vendor and institution policy management",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (GOV engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ARC-API",
+      "kind": "API",
+      "domain": "ARC",
+      "domain_scope": "DDD architecture and event boundaries",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (ARC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "GOV"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ARC-DATA",
+      "kind": "DATA",
+      "domain": "ARC",
+      "domain_scope": "DDD architecture and event boundaries",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (ARC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "GOV"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ARC-SERVICE",
+      "kind": "SERVICE",
+      "domain": "ARC",
+      "domain_scope": "DDD architecture and event boundaries",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (ARC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "GOV"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ARC-TEST",
+      "kind": "TEST",
+      "domain": "ARC",
+      "domain_scope": "DDD architecture and event boundaries",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (ARC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "GOV"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CIF-API",
+      "kind": "API",
+      "domain": "CIF",
+      "domain_scope": "Party identity KYC and KYB",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (CIF engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC",
+        "SEC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/contracts/CIF/openapi.json"
+      ],
+      "source_classification": "DRAFT_TYPED_CONTRACT_OR_LAB",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CIF-DATA",
+      "kind": "DATA",
+      "domain": "CIF",
+      "domain_scope": "Party identity KYC and KYB",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (CIF engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC",
+        "SEC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/domain-data-lab/001_schema.sql"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CIF-SERVICE",
+      "kind": "SERVICE",
+      "domain": "CIF",
+      "domain_scope": "Party identity KYC and KYB",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (CIF engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC",
+        "SEC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/domain-data-lab/001_schema.sql"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CIF-TEST",
+      "kind": "TEST",
+      "domain": "CIF",
+      "domain_scope": "Party identity KYC and KYB",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (CIF engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC",
+        "SEC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/contracts/tests/test_contracts.py"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "PRD-API",
+      "kind": "API",
+      "domain": "PRD",
+      "domain_scope": "Product factory and immutable terms",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (PRD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC",
+        "CIF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/contracts/PRD/openapi.json"
+      ],
+      "source_classification": "DRAFT_TYPED_CONTRACT_OR_LAB",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "PRD-DATA",
+      "kind": "DATA",
+      "domain": "PRD",
+      "domain_scope": "Product factory and immutable terms",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (PRD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC",
+        "CIF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/domain-data-lab/001_schema.sql"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "PRD-SERVICE",
+      "kind": "SERVICE",
+      "domain": "PRD",
+      "domain_scope": "Product factory and immutable terms",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (PRD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC",
+        "CIF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/domain-data-lab/001_schema.sql"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "PRD-TEST",
+      "kind": "TEST",
+      "domain": "PRD",
+      "domain_scope": "Product factory and immutable terms",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (PRD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC",
+        "CIF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/contracts/tests/test_contracts.py"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ACT-API",
+      "kind": "API",
+      "domain": "ACT",
+      "domain_scope": "Accounts and deposits",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (ACT engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "PRD",
+        "LED",
+        "CIF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/contracts/ACT/openapi.json"
+      ],
+      "source_classification": "DRAFT_TYPED_CONTRACT_OR_LAB",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ACT-DATA",
+      "kind": "DATA",
+      "domain": "ACT",
+      "domain_scope": "Accounts and deposits",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (ACT engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "PRD",
+        "LED",
+        "CIF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/domain-data-lab/001_schema.sql"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ACT-SERVICE",
+      "kind": "SERVICE",
+      "domain": "ACT",
+      "domain_scope": "Accounts and deposits",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (ACT engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "PRD",
+        "LED",
+        "CIF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/domain-data-lab/001_schema.sql"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ACT-TEST",
+      "kind": "TEST",
+      "domain": "ACT",
+      "domain_scope": "Accounts and deposits",
+      "planning_phase_proposal": "C04",
+      "owner": "OPESWARE TECHNOLOGIES (ACT engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "PRD",
+        "LED",
+        "CIF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/contracts/tests/test_contracts.py"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "LED-API",
+      "kind": "API",
+      "domain": "LED",
+      "domain_scope": "General ledger and posting invariants",
+      "planning_phase_proposal": "C03",
+      "owner": "OPESWARE TECHNOLOGIES (LED engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/contracts/LED/openapi.json"
+      ],
+      "source_classification": "DRAFT_TYPED_CONTRACT_OR_LAB",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "LED-DATA",
+      "kind": "DATA",
+      "domain": "LED",
+      "domain_scope": "General ledger and posting invariants",
+      "planning_phase_proposal": "C03",
+      "owner": "OPESWARE TECHNOLOGIES (LED engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/domain-data-lab/001_schema.sql"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "LED-SERVICE",
+      "kind": "SERVICE",
+      "domain": "LED",
+      "domain_scope": "General ledger and posting invariants",
+      "planning_phase_proposal": "C03",
+      "owner": "OPESWARE TECHNOLOGIES (LED engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/ledger-lab/ledger.py",
+        "engineering/labs/ledger/001_immutable_journal_lab.sql",
+        "engineering/labs/ledger/002_journal_header_commit_validation_lab.sql",
+        "engineering/labs/ledger/003_closed_journal_transaction_boundary_lab.sql"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "LED-TEST",
+      "kind": "TEST",
+      "domain": "LED",
+      "domain_scope": "General ledger and posting invariants",
+      "planning_phase_proposal": "C03",
+      "owner": "OPESWARE TECHNOLOGIES (LED engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/ledger-lab/tests/test_invariants.py",
+        "engineering/labs/ledger/tests/003_closed_journal_regressions.sql",
+        ".github/workflows/ledger-closure-pg16.yml"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "BRN-API",
+      "kind": "API",
+      "domain": "BRN",
+      "domain_scope": "Branches tellers vaults and cash",
+      "planning_phase_proposal": "C06",
+      "owner": "OPESWARE TECHNOLOGIES (BRN engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "BRN-DATA",
+      "kind": "DATA",
+      "domain": "BRN",
+      "domain_scope": "Branches tellers vaults and cash",
+      "planning_phase_proposal": "C06",
+      "owner": "OPESWARE TECHNOLOGIES (BRN engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "BRN-SERVICE",
+      "kind": "SERVICE",
+      "domain": "BRN",
+      "domain_scope": "Branches tellers vaults and cash",
+      "planning_phase_proposal": "C06",
+      "owner": "OPESWARE TECHNOLOGIES (BRN engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "BRN-TEST",
+      "kind": "TEST",
+      "domain": "BRN",
+      "domain_scope": "Branches tellers vaults and cash",
+      "planning_phase_proposal": "C06",
+      "owner": "OPESWARE TECHNOLOGIES (BRN engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "PAY-API",
+      "kind": "API",
+      "domain": "PAY",
+      "domain_scope": "Payments and external interfaces",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (PAY engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "LED",
+        "REC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "PAY-DATA",
+      "kind": "DATA",
+      "domain": "PAY",
+      "domain_scope": "Payments and external interfaces",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (PAY engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "LED",
+        "REC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "PAY-SERVICE",
+      "kind": "SERVICE",
+      "domain": "PAY",
+      "domain_scope": "Payments and external interfaces",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (PAY engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "LED",
+        "REC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "PAY-TEST",
+      "kind": "TEST",
+      "domain": "PAY",
+      "domain_scope": "Payments and external interfaces",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (PAY engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "LED",
+        "REC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CRD-API",
+      "kind": "API",
+      "domain": "CRD",
+      "domain_scope": "Credit and loan lifecycle",
+      "planning_phase_proposal": "C08",
+      "owner": "OPESWARE TECHNOLOGIES (CRD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "CIF",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CRD-DATA",
+      "kind": "DATA",
+      "domain": "CRD",
+      "domain_scope": "Credit and loan lifecycle",
+      "planning_phase_proposal": "C08",
+      "owner": "OPESWARE TECHNOLOGIES (CRD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "CIF",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CRD-SERVICE",
+      "kind": "SERVICE",
+      "domain": "CRD",
+      "domain_scope": "Credit and loan lifecycle",
+      "planning_phase_proposal": "C08",
+      "owner": "OPESWARE TECHNOLOGIES (CRD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "CIF",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CRD-TEST",
+      "kind": "TEST",
+      "domain": "CRD",
+      "domain_scope": "Credit and loan lifecycle",
+      "planning_phase_proposal": "C08",
+      "owner": "OPESWARE TECHNOLOGIES (CRD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "CIF",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "TRE-API",
+      "kind": "API",
+      "domain": "TRE",
+      "domain_scope": "Treasury and liquidity",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (TRE engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED",
+        "REC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "TRE-DATA",
+      "kind": "DATA",
+      "domain": "TRE",
+      "domain_scope": "Treasury and liquidity",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (TRE engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED",
+        "REC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "TRE-SERVICE",
+      "kind": "SERVICE",
+      "domain": "TRE",
+      "domain_scope": "Treasury and liquidity",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (TRE engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED",
+        "REC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "TRE-TEST",
+      "kind": "TEST",
+      "domain": "TRE",
+      "domain_scope": "Treasury and liquidity",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (TRE engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED",
+        "REC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "AML-API",
+      "kind": "API",
+      "domain": "AML",
+      "domain_scope": "AML sanctions fraud and monitoring",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (AML engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "CIF",
+        "ACT"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "AML-DATA",
+      "kind": "DATA",
+      "domain": "AML",
+      "domain_scope": "AML sanctions fraud and monitoring",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (AML engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "CIF",
+        "ACT"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "AML-SERVICE",
+      "kind": "SERVICE",
+      "domain": "AML",
+      "domain_scope": "AML sanctions fraud and monitoring",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (AML engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "CIF",
+        "ACT"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "AML-TEST",
+      "kind": "TEST",
+      "domain": "AML",
+      "domain_scope": "AML sanctions fraud and monitoring",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (AML engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "CIF",
+        "ACT"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REP-API",
+      "kind": "API",
+      "domain": "REP",
+      "domain_scope": "Management and regulatory reporting",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (REP engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED",
+        "AML"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REP-DATA",
+      "kind": "DATA",
+      "domain": "REP",
+      "domain_scope": "Management and regulatory reporting",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (REP engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED",
+        "AML"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REP-SERVICE",
+      "kind": "SERVICE",
+      "domain": "REP",
+      "domain_scope": "Management and regulatory reporting",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (REP engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED",
+        "AML"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REP-TEST",
+      "kind": "TEST",
+      "domain": "REP",
+      "domain_scope": "Management and regulatory reporting",
+      "planning_phase_proposal": "C09",
+      "owner": "OPESWARE TECHNOLOGIES (REP engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED",
+        "AML"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CHN-API",
+      "kind": "API",
+      "domain": "CHN",
+      "domain_scope": "Digital mobile agency corporate banking",
+      "planning_phase_proposal": "C10",
+      "owner": "OPESWARE TECHNOLOGIES (CHN engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "API",
+        "ACT"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CHN-DATA",
+      "kind": "DATA",
+      "domain": "CHN",
+      "domain_scope": "Digital mobile agency corporate banking",
+      "planning_phase_proposal": "C10",
+      "owner": "OPESWARE TECHNOLOGIES (CHN engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "API",
+        "ACT"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CHN-SERVICE",
+      "kind": "SERVICE",
+      "domain": "CHN",
+      "domain_scope": "Digital mobile agency corporate banking",
+      "planning_phase_proposal": "C10",
+      "owner": "OPESWARE TECHNOLOGIES (CHN engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "API",
+        "ACT"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CHN-TEST",
+      "kind": "TEST",
+      "domain": "CHN",
+      "domain_scope": "Digital mobile agency corporate banking",
+      "planning_phase_proposal": "C10",
+      "owner": "OPESWARE TECHNOLOGIES (CHN engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "API",
+        "ACT"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CARD-API",
+      "kind": "API",
+      "domain": "CARD",
+      "domain_scope": "Cards and processor interfaces",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (CARD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "PAY"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CARD-DATA",
+      "kind": "DATA",
+      "domain": "CARD",
+      "domain_scope": "Cards and processor interfaces",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (CARD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "PAY"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CARD-SERVICE",
+      "kind": "SERVICE",
+      "domain": "CARD",
+      "domain_scope": "Cards and processor interfaces",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (CARD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "PAY"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CARD-TEST",
+      "kind": "TEST",
+      "domain": "CARD",
+      "domain_scope": "Cards and processor interfaces",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (CARD engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "PAY"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CRM-API",
+      "kind": "API",
+      "domain": "CRM",
+      "domain_scope": "Customer services and communication",
+      "planning_phase_proposal": "C10",
+      "owner": "OPESWARE TECHNOLOGIES (CRM engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "CIF",
+        "CHN"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CRM-DATA",
+      "kind": "DATA",
+      "domain": "CRM",
+      "domain_scope": "Customer services and communication",
+      "planning_phase_proposal": "C10",
+      "owner": "OPESWARE TECHNOLOGIES (CRM engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "CIF",
+        "CHN"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CRM-SERVICE",
+      "kind": "SERVICE",
+      "domain": "CRM",
+      "domain_scope": "Customer services and communication",
+      "planning_phase_proposal": "C10",
+      "owner": "OPESWARE TECHNOLOGIES (CRM engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "CIF",
+        "CHN"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "CRM-TEST",
+      "kind": "TEST",
+      "domain": "CRM",
+      "domain_scope": "Customer services and communication",
+      "planning_phase_proposal": "C10",
+      "owner": "OPESWARE TECHNOLOGIES (CRM engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "CIF",
+        "CHN"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "FEE-API",
+      "kind": "API",
+      "domain": "FEE",
+      "domain_scope": "Fees schedules and billing",
+      "planning_phase_proposal": "C05",
+      "owner": "OPESWARE TECHNOLOGIES (FEE engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "PRD",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "FEE-DATA",
+      "kind": "DATA",
+      "domain": "FEE",
+      "domain_scope": "Fees schedules and billing",
+      "planning_phase_proposal": "C05",
+      "owner": "OPESWARE TECHNOLOGIES (FEE engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "PRD",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "FEE-SERVICE",
+      "kind": "SERVICE",
+      "domain": "FEE",
+      "domain_scope": "Fees schedules and billing",
+      "planning_phase_proposal": "C05",
+      "owner": "OPESWARE TECHNOLOGIES (FEE engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "PRD",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "FEE-TEST",
+      "kind": "TEST",
+      "domain": "FEE",
+      "domain_scope": "Fees schedules and billing",
+      "planning_phase_proposal": "C05",
+      "owner": "OPESWARE TECHNOLOGIES (FEE engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "PRD",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REC-API",
+      "kind": "API",
+      "domain": "REC",
+      "domain_scope": "Financial reconciliation",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (REC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REC-DATA",
+      "kind": "DATA",
+      "domain": "REC",
+      "domain_scope": "Financial reconciliation",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (REC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REC-SERVICE",
+      "kind": "SERVICE",
+      "domain": "REC",
+      "domain_scope": "Financial reconciliation",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (REC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REC-TEST",
+      "kind": "TEST",
+      "domain": "REC",
+      "domain_scope": "Financial reconciliation",
+      "planning_phase_proposal": "C07",
+      "owner": "OPESWARE TECHNOLOGIES (REC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "SEC-API",
+      "kind": "API",
+      "domain": "SEC",
+      "domain_scope": "Cybersecurity identity and authorization",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (SEC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "SEC-DATA",
+      "kind": "DATA",
+      "domain": "SEC",
+      "domain_scope": "Cybersecurity identity and authorization",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (SEC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "SEC-SERVICE",
+      "kind": "SERVICE",
+      "domain": "SEC",
+      "domain_scope": "Cybersecurity identity and authorization",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (SEC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/security/tenant-routing/authority.py"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "SEC-TEST",
+      "kind": "TEST",
+      "domain": "SEC",
+      "domain_scope": "Cybersecurity identity and authorization",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (SEC engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/security/tenant-routing/tests/test_authority.py"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "DAT-API",
+      "kind": "API",
+      "domain": "DAT",
+      "domain_scope": "Data governance privacy retention",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (DAT engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "DAT-DATA",
+      "kind": "DATA",
+      "domain": "DAT",
+      "domain_scope": "Data governance privacy retention",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (DAT engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "DAT-SERVICE",
+      "kind": "SERVICE",
+      "domain": "DAT",
+      "domain_scope": "Data governance privacy retention",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (DAT engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "DAT-TEST",
+      "kind": "TEST",
+      "domain": "DAT",
+      "domain_scope": "Data governance privacy retention",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (DAT engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "API-API",
+      "kind": "API",
+      "domain": "API",
+      "domain_scope": "API gateway developer contracts and events",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (API engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "API-DATA",
+      "kind": "DATA",
+      "domain": "API",
+      "domain_scope": "API gateway developer contracts and events",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (API engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "API-SERVICE",
+      "kind": "SERVICE",
+      "domain": "API",
+      "domain_scope": "API gateway developer contracts and events",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (API engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/foundation/tenant/openapi.yaml"
+      ],
+      "source_classification": "LAB_ARTIFACT_NOT_PRODUCTION_ACCEPTED",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "API-TEST",
+      "kind": "TEST",
+      "domain": "API",
+      "domain_scope": "API gateway developer contracts and events",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (API engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "INF-API",
+      "kind": "API",
+      "domain": "INF",
+      "domain_scope": "Infrastructure observability keys and resilience",
+      "planning_phase_proposal": "C12",
+      "owner": "OPESWARE TECHNOLOGIES (INF engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "INF-DATA",
+      "kind": "DATA",
+      "domain": "INF",
+      "domain_scope": "Infrastructure observability keys and resilience",
+      "planning_phase_proposal": "C12",
+      "owner": "OPESWARE TECHNOLOGIES (INF engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "INF-SERVICE",
+      "kind": "SERVICE",
+      "domain": "INF",
+      "domain_scope": "Infrastructure observability keys and resilience",
+      "planning_phase_proposal": "C12",
+      "owner": "OPESWARE TECHNOLOGIES (INF engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "INF-TEST",
+      "kind": "TEST",
+      "domain": "INF",
+      "domain_scope": "Infrastructure observability keys and resilience",
+      "planning_phase_proposal": "C12",
+      "owner": "OPESWARE TECHNOLOGIES (INF engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "DR-API",
+      "kind": "API",
+      "domain": "DR",
+      "domain_scope": "Disaster recovery business continuity",
+      "planning_phase_proposal": "C12",
+      "owner": "OPESWARE TECHNOLOGIES (DR engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "INF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "DR-DATA",
+      "kind": "DATA",
+      "domain": "DR",
+      "domain_scope": "Disaster recovery business continuity",
+      "planning_phase_proposal": "C12",
+      "owner": "OPESWARE TECHNOLOGIES (DR engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "INF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "DR-SERVICE",
+      "kind": "SERVICE",
+      "domain": "DR",
+      "domain_scope": "Disaster recovery business continuity",
+      "planning_phase_proposal": "C12",
+      "owner": "OPESWARE TECHNOLOGIES (DR engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "INF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "DR-TEST",
+      "kind": "TEST",
+      "domain": "DR",
+      "domain_scope": "Disaster recovery business continuity",
+      "planning_phase_proposal": "C12",
+      "owner": "OPESWARE TECHNOLOGIES (DR engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "INF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ADM-API",
+      "kind": "API",
+      "domain": "ADM",
+      "domain_scope": "Administration SoD maker-checker",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (ADM engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "GOV"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ADM-DATA",
+      "kind": "DATA",
+      "domain": "ADM",
+      "domain_scope": "Administration SoD maker-checker",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (ADM engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "GOV"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ADM-SERVICE",
+      "kind": "SERVICE",
+      "domain": "ADM",
+      "domain_scope": "Administration SoD maker-checker",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (ADM engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "GOV"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "ADM-TEST",
+      "kind": "TEST",
+      "domain": "ADM",
+      "domain_scope": "Administration SoD maker-checker",
+      "planning_phase_proposal": "C02",
+      "owner": "OPESWARE TECHNOLOGIES (ADM engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "GOV"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "TST-API",
+      "kind": "API",
+      "domain": "TST",
+      "domain_scope": "Independent testing contract and invariant evidence",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (TST engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "TST-DATA",
+      "kind": "DATA",
+      "domain": "TST",
+      "domain_scope": "Independent testing contract and invariant evidence",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (TST engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "TST-SERVICE",
+      "kind": "SERVICE",
+      "domain": "TST",
+      "domain_scope": "Independent testing contract and invariant evidence",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (TST engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "TST-TEST",
+      "kind": "TEST",
+      "domain": "TST",
+      "domain_scope": "Independent testing contract and invariant evidence",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (TST engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REL-API",
+      "kind": "API",
+      "domain": "REL",
+      "domain_scope": "Controlled releases migrations and deployment",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (REL engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "TST",
+        "INF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Field-level typed versioned OpenAPI; authentication, authorization, error responses, idempotency and contract tests backed by actual service handler.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REL-DATA",
+      "kind": "DATA",
+      "domain": "REL",
+      "domain_scope": "Controlled releases migrations and deployment",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (REL engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "TST",
+        "INF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "PostgreSQL physical migration; scoped keys/FKs; domain invariants, RLS, retention, rollback/restore, concurrent negatives and clean-state migration CI.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REL-SERVICE",
+      "kind": "SERVICE",
+      "domain": "REL",
+      "domain_scope": "Controlled releases migrations and deployment",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (REL engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "TST",
+        "INF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable domain state-machine, permissions/SoD, recovery, account consequences, telemetry, precise retry and failure behavior proven by integration tests.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "REL-TEST",
+      "kind": "TEST",
+      "domain": "REL",
+      "domain_scope": "Controlled releases migrations and deployment",
+      "planning_phase_proposal": "C01",
+      "owner": "OPESWARE TECHNOLOGIES (REL engineering lead)",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "TST",
+        "INF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "source_classification": "NO_VERIFIED_DOMAIN_SPECIFIC_CODE_PATH",
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Executable adversarial, property/invariant, concurrency, failure, reconciliation, observability and recovery evidence independently reviewed.",
+      "subdivision_needed": true,
+      "external_api_required": "REQUIRES_CONTEXT_VALIDATION"
+    },
+    {
+      "id": "PLAT-01",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "SEC",
+      "scope": "OIDC trusted token to bank principal mapping",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-02",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "SEC",
+      "scope": "Production HSM/credential custody",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-03",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "SEC",
+      "scope": "Bank-local revocation/membership fence",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/security/tenant-routing/schema.sql",
+        "engineering/security/tenant-routing/authority.py"
+      ],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-04",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "LED",
+      "scope": "Atomic immutable journal/outbox",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/labs/ledger/003_closed_journal_transaction_boundary_lab.sql",
+        "engineering/labs/ledger/tests/003_closed_journal_regressions.sql"
+      ],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-05",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "LED",
+      "scope": "Balance projection/rebuild",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-06",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "REC",
+      "scope": "Reversal, reconciliation and crash recovery",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-07",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "PAY",
+      "scope": "External rail UNKNOWN simulator",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "LED",
+        "REC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-08",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "DAT",
+      "scope": "Tamper-evident audit evidence pipeline",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-09",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "INF",
+      "scope": "Telemetry and incident response",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-10",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "DR",
+      "scope": "DR/restore evidence",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "INF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-11",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "REL",
+      "scope": "Migration and rollback mechanisms",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "TST",
+        "INF"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "PLAT-12",
+      "kind": "SHARED_FOUNDATION",
+      "domain": "TST",
+      "scope": "Performance, soak and fault injection",
+      "planning_phase_proposal": "C12_CROSS_CUTTING",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ARC"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [
+        "engineering/ledger-lab/tests/test_invariants.py"
+      ],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "CLIENT-01",
+      "kind": "CLIENT_APPLICATION",
+      "domain": "CHN",
+      "scope": "Responsive staff/browser banking workspace",
+      "planning_phase_proposal": "C11",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "API",
+        "ACT"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "CLIENT-02",
+      "kind": "CLIENT_APPLICATION",
+      "domain": "CHN",
+      "scope": "Customer mobile Android/iOS",
+      "planning_phase_proposal": "C11",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "SEC",
+        "API",
+        "ACT"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    },
+    {
+      "id": "CLIENT-03",
+      "kind": "CLIENT_APPLICATION",
+      "domain": "BRN",
+      "scope": "Desktop hardware/offline branch agent decision",
+      "planning_phase_proposal": "C11",
+      "owner": "OPESWARE TECHNOLOGIES",
+      "independent_reviewer": "UNASSIGNED",
+      "depends_on_domain_groups": [
+        "ACT",
+        "LED"
+      ],
+      "requires_all_15_production_DOR": true,
+      "source_evidence": [],
+      "implementation_accepted": false,
+      "status": "NOT_VERIFIED_COMPLETE",
+      "acceptance_criteria": "Dedicated signed ADR, measurable DoR/DoD, executable integration/security/evidence and operational acceptance",
+      "subdivision_needed": true,
+      "overlap_with_domain_slots": "TO_DEDUPLICATE_BEFORE_LEAF_WBS_APPROVAL"
+    }
+  ]
+}
