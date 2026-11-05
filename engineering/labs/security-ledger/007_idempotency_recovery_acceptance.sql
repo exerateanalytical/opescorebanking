@@ -20,7 +20,7 @@ BEGIN
  END IF;
 END $$;
 GRANT USAGE ON SCHEMA sec_idemp_006 TO lab006_runner;
-GRANT SELECT, INSERT ON ALL TABLES IN SCHEMA sec_idemp_006 TO lab006_runner;
+-- LAB-006 uses SELECT ... FOR UPDATE / FOR SHARE, requiring UPDATE privilege.\n-- This broad lab grant is unsafe for production and is confined to disposable DB.\nGRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA sec_idemp_006 TO lab006_runner;
 GRANT EXECUTE ON FUNCTION sec_idemp_006.post(uuid,bigint,text,uuid,uuid,uuid,text,jsonb) TO lab006_runner;
 INSERT INTO sec_idemp_006.member(member_id,db_principal,revision,state,can_post)
 VALUES ('00000000-0000-4000-8000-000000000001','lab006_runner',1,'ACTIVE',true)
