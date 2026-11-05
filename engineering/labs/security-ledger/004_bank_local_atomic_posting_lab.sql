@@ -125,7 +125,8 @@ BEGIN
     RAISE EXCEPTION 'one positive debit or credit required per line';
   END IF;
   SELECT currency,state INTO v_account_currency,v_account_state
-  FROM ledger_lab.ledger_account WHERE account_id=v_account FOR KEY SHARE;
+  -- FOR SHARE blocks a concurrent non-key UPDATE that would CLOSE the account.
+  FROM ledger_lab.ledger_account WHERE account_id=v_account FOR SHARE;
   IF NOT FOUND OR v_account_state<>'ACTIVE' OR v_account_currency<>p_currency THEN
     RAISE EXCEPTION 'inactive, missing or wrong-currency ledger account';
   END IF;
