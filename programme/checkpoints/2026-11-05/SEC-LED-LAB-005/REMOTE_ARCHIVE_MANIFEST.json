@@ -1,0 +1,83 @@
+{
+  "schema": "opes.checkpoint.manifest.v2",
+  "id": "SEC-LED-LAB-005",
+  "date": "2026-11-05",
+  "status": "TESTED_CROSS_SESSION_PG16_NOT_PRODUCTION_APPROVED",
+  "test_run": {
+    "id": 41943269917,
+    "conclusion": "success"
+  },
+  "source_commit": "181b4013a0464ddb3c5080d6f9d2dbca581e9ad7",
+  "entries": [
+    {
+      "path": "sources/001_immutable_journal_lab.sql",
+      "source_repo_path": "engineering/labs/ledger/001_immutable_journal_lab.sql",
+      "bytes": 2972,
+      "sha256": "d5c24b92c1ba4b1ab2eca3eab66e054991378e42358c152ec822598e3ed5e7c7",
+      "crc32": "c09fbecd"
+    },
+    {
+      "path": "sources/002_journal_header_commit_validation_lab.sql",
+      "source_repo_path": "engineering/labs/ledger/002_journal_header_commit_validation_lab.sql",
+      "bytes": 1532,
+      "sha256": "7118b549ef51c9b50414fa8156646f43609e0f7de4ea744c485453032aa3eede",
+      "crc32": "bfab920a"
+    },
+    {
+      "path": "sources/003_closed_journal_transaction_boundary_lab.sql",
+      "source_repo_path": "engineering/labs/ledger/003_closed_journal_transaction_boundary_lab.sql",
+      "bytes": 3994,
+      "sha256": "42cab2ddef9fdef3f15df8b1316a9a8384220fb7895c23ed0ad7ce929be3f61a",
+      "crc32": "bc7cbd60"
+    },
+    {
+      "path": "sources/004_bank_local_atomic_posting_lab.sql",
+      "source_repo_path": "engineering/labs/security-ledger/004_bank_local_atomic_posting_lab.sql",
+      "bytes": 9343,
+      "sha256": "fcb4b0c0d88753b5bebd8e9e2bdc220c62d4406d41f5641780ca11ef64dffc81",
+      "crc32": "7210e0ab"
+    },
+    {
+      "path": "tests/004_bank_local_posting_regressions.sql",
+      "source_repo_path": "engineering/labs/security-ledger/tests/004_bank_local_posting_regressions.sql",
+      "bytes": 7055,
+      "sha256": "d82c1744d0cee8872e58c8bce8e5f87f666027703ac8f4f5dfe5f7038d363668",
+      "crc32": "e9480e7b"
+    },
+    {
+      "path": "tests/005_concurrency_fixture.sql",
+      "source_repo_path": "engineering/labs/security-ledger/tests/005_concurrency_fixture.sql",
+      "bytes": 1011,
+      "sha256": "b23673b7b34c2df0de37c966822416e3ec61ccea1ee4c2d5e9a2b3ec5a956509",
+      "crc32": "a783f6bf"
+    },
+    {
+      "path": "tests/005_concurrent_revocation_and_crash.sh",
+      "source_repo_path": "engineering/labs/security-ledger/tests/005_concurrent_revocation_and_crash.sh",
+      "bytes": 5686,
+      "sha256": "e5184b2243f7ac010587364a6b395a9bcf28421e28c64b3881d6e4835ec8e48c",
+      "crc32": "a1aa1387"
+    },
+    {
+      "path": "ci/sec-ledger-lab-004.yml",
+      "source_repo_path": ".github/workflows/sec-ledger-lab-004.yml",
+      "bytes": 2112,
+      "sha256": "7745ebacbe05141153aa518fad6fde1f6d32dc4ca275b57550cac9fd971cb5c3",
+      "crc32": "8f3d87e6"
+    },
+    {
+      "path": "EVIDENCE.md",
+      "source_repo_path": null,
+      "bytes": 1750,
+      "sha256": "afcacc2358f09356178247688f0f8a078472e1b42b1160dae2253b520f863d8a",
+      "crc32": "c9070f25"
+    }
+  ],
+  "production_accepted_work_packages": 0,
+  "next_exact_task": "SEC-TENANT-ROUTING-001",
+  "archive": {
+    "path": "programme/checkpoints/2026-11-05/SEC-LED-LAB-005/OPES_SEC_LED_LAB_005_TESTED_CONCURRENCY_PG16_2026-11-05.zip",
+    "bytes": 39958,
+    "sha256": "d2221f79823785aa2acf2aeca556d56f08fd538f83d6d77ad7610a796a6e54bc"
+  }
+}
