@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'engineering/labs/security-ledger/**'
+      - 'engineering/labs/ledger/**'
       - '.github/workflows/sec-ledger-lab-004.yml'
   workflow_dispatch:
 permissions:
