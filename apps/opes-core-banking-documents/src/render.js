@@ -30,7 +30,7 @@ function familyContent(template,data){
   const line=row=>'<div class="pay-line"><span>'+escapeHtml(row[0])+'</span><strong>'+row[1]+'</strong></div>';
   return section("Employee & pay period",dataGrid(template.fields.filter(f=>["employeeReference","employeeName","position","payPeriodStart","payPeriodEnd"].includes(f.id)),data))+
    '<div class="payslip-panels"><section class="pay-panel"><h3>Earnings</h3>'+earnings.map(line).join("")+'</section><section class="pay-panel"><h3>Deductions</h3>'+deductions.map(line).join("")+'</section></div>'+
-   '<div class="strong-area"><div><small>Authorized net pay · requires payroll engine</small><strong>'+val(data,"netPayMinor")+'</strong></div><div><small>Currency</small><strong>XAF / verify institution</strong></div></div>'+
+   '<div class="strong-area"><div><small>Authorized net pay · requires payroll engine</small><strong>'+val(data,"netPayMinor")+'</strong></div><div><small>Currency</small><strong>XAF · DEMO</strong></div></div>'+
    '<div class="contract-note">Payroll, CNPS and tax calculations are not implemented by this template. No amount is validated or legally certified.</div>';
  }
  if(family==="amortization"){
@@ -92,6 +92,21 @@ function familyContent(template,data){
 const signatureHtml='<div class="signature-grid"><div class="signature-block"><label>Prepared / reviewed by</label><small>Signature not applied — bank authorization unavailable</small></div><div class="signature-block"><label>Authorized institution signatory</label><small>No signature, stamp or seal has been generated</small></div></div>';
 function groupFields(template,data){
  const skip=new Set(["Institution header","Document control"]);
+ const displayedByFamily={
+  payslip:["Employee identity","Payroll","Payroll earnings","Payroll deductions","Payroll net"],
+  statement:["Period","Account details","Tabular data"],
+  receipt:["Monetary details","Transaction"],
+  amortization:["Credit","Period","Tabular data"],
+  agreement:["Credit","Legal provisions"],
+  regulatory:["Regulatory mapping","Period","Tabular data"],
+  voucher:["Monetary details","Transaction"],
+  report:["Period","Tabular data"],
+  register:["Tabular data"],
+  certificate:["Record identity"],
+  application:["Customer identity"],
+  notice:["Communication"]
+ };
+ for(const group of displayedByFamily[template.family]||[])skip.add(group);
  const groups=template.sections.filter(x=>!skip.has(x));
  return groups.map(group=>{
   const fields=template.fields.filter(f=>f.section===group);
