@@ -1,0 +1,69 @@
+{
+  "schema": "opes.checkpoint.manifest.v2",
+  "id": "SEC-LED-LAB-004",
+  "date": "2026-11-05",
+  "status": "TESTED_SYNTHETIC_POSTGRESQL_16_NOT_PRODUCTION_APPROVED",
+  "source_commit": "8ace0cba9b340314e9d38222343b9100dcef8134",
+  "test_run": {
+    "id": 41942320193,
+    "conclusion": "success"
+  },
+  "entries": [
+    {
+      "path": "sources/001_immutable_journal_lab.sql",
+      "source_repo_path": "engineering/labs/ledger/001_immutable_journal_lab.sql",
+      "bytes": 2972,
+      "sha256": "d5c24b92c1ba4b1ab2eca3eab66e054991378e42358c152ec822598e3ed5e7c7",
+      "crc32": "c09fbecd"
+    },
+    {
+      "path": "sources/002_journal_header_commit_validation_lab.sql",
+      "source_repo_path": "engineering/labs/ledger/002_journal_header_commit_validation_lab.sql",
+      "bytes": 1532,
+      "sha256": "7118b549ef51c9b50414fa8156646f43609e0f7de4ea744c485453032aa3eede",
+      "crc32": "bfab920a"
+    },
+    {
+      "path": "sources/003_closed_journal_transaction_boundary_lab.sql",
+      "source_repo_path": "engineering/labs/ledger/003_closed_journal_transaction_boundary_lab.sql",
+      "bytes": 3994,
+      "sha256": "42cab2ddef9fdef3f15df8b1316a9a8384220fb7895c23ed0ad7ce929be3f61a",
+      "crc32": "bc7cbd60"
+    },
+    {
+      "path": "sources/004_bank_local_atomic_posting_lab.sql",
+      "source_repo_path": "engineering/labs/security-ledger/004_bank_local_atomic_posting_lab.sql",
+      "bytes": 9343,
+      "sha256": "fcb4b0c0d88753b5bebd8e9e2bdc220c62d4406d41f5641780ca11ef64dffc81",
+      "crc32": "7210e0ab"
+    },
+    {
+      "path": "tests/004_bank_local_posting_regressions.sql",
+      "source_repo_path": "engineering/labs/security-ledger/tests/004_bank_local_posting_regressions.sql",
+      "bytes": 7055,
+      "sha256": "d82c1744d0cee8872e58c8bce8e5f87f666027703ac8f4f5dfe5f7038d363668",
+      "crc32": "e9480e7b"
+    },
+    {
+      "path": "ci/sec-ledger-lab-004.yml",
+      "source_repo_path": ".github/workflows/sec-ledger-lab-004.yml",
+      "bytes": 1782,
+      "sha256": "a5d0fed9c94afb537f5823f8a79dd3d0952f861364b9c5043898bb367b40bf0c",
+      "crc32": "e1ed7d9b"
+    },
+    {
+      "path": "EVIDENCE.md",
+      "source_repo_path": null,
+      "bytes": 1977,
+      "sha256": "d8ecb20e51b024aecedd0196c8fab8f1928512612ddc165af5d9e2af7ccfbdc4",
+      "crc32": "397addea"
+    }
+  ],
+  "production_accepted_work_packages": 0,
+  "next_exact_task": "SEC-TENANT-ROUTING-001",
+  "archive": {
+    "path": "programme/checkpoints/2026-11-05/SEC-LED-LAB-004/OPES_SEC_LED_LAB_004_TESTED_PG16_2026-11-05.zip",
+    "sha256": "bda70fa4ad45225e07ea254d405c9d494a0717ed69d66a3cf8a823e96039da75",
+    "bytes": 32253
+  }
+}
