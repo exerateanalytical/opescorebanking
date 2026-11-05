@@ -54,3 +54,18 @@ jobs:
           name: opes-core-banking-viewports
           path: apps/opes-core-banking-ui/audit/*.png
           if-no-files-found: ignore
+
+  package-ui-prototype:
+    needs: [route-catalogue, visual-browser-audit]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package verified non-production UI files
+        run: zip -q -r opes-core-banking-ui-prototype.zip apps/opes-core-banking-ui -x 'apps/opes-core-banking-ui/node_modules/*' 'apps/opes-core-banking-ui/audit/*'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: opes-core-banking-ui-prototype
+          path: opes-core-banking-ui-prototype.zip
+          if-no-files-found: error
