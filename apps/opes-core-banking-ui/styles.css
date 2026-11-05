@@ -224,3 +224,28 @@ td{overflow-wrap:anywhere}
 .ratio-fill{height:100%;background:var(--primary);border-radius:10px;max-width:100%}
 @media(max-width:650px){.denomination-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:470px){.showcase-grid,.journal-legs{grid-template-columns:1fr}.denomination-item{padding:10px 8px}}
+
+/* Full 726-screen client workflow layouts, 320px to large desktop, without visual glow. */
+.ui-state-panel,.screen-specific{margin-bottom:18px}
+.state-panel-inner{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.state-panel-inner h2{font-size:16px}
+.state-panel-chooser{display:grid;gap:5px;min-width:min(100%,190px)}
+.state-panel-chooser label{font-size:12px;color:var(--muted);font-weight:700}
+.screen-specific-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(245px,1fr);gap:20px}
+.screen-specific-layout>div{min-width:0}
+.specific-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}
+.specific-field{border:1px solid var(--stroke);background:var(--surface-alt);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.specific-field strong{font-size:13px;overflow-wrap:anywhere}
+.specific-field small,.specific-field span{font-size:11px;color:var(--muted)}
+.specific-footer{display:flex;gap:8px;flex-wrap:wrap;padding-top:12px;color:var(--muted);font-size:12px}
+.specific-footer span{border:1px solid var(--stroke);border-radius:6px;padding:4px 6px}
+.action-scroll{max-height:360px;overflow:auto;border:1px solid var(--stroke);border-radius:9px;scrollbar-color:var(--stroke-strong) transparent}
+.action-row{padding:11px;border-bottom:1px solid var(--stroke);display:flex;gap:11px;align-items:center;justify-content:space-between}
+.action-row:last-child{border-bottom:0}
+.action-row .btn{min-width:79px;flex:none}
+.action-copy{min-width:0;display:grid;gap:4px}
+.action-copy strong{font-size:13px;overflow-wrap:anywhere}
+.action-copy small{font-size:11px;color:var(--muted)}
+@media(max-width:950px){.screen-specific-layout{grid-template-columns:1fr}}
+@media(max-width:640px){.state-panel-chooser{width:100%}}
+@media(max-width:400px){.specific-fields{grid-template-columns:1fr}}
