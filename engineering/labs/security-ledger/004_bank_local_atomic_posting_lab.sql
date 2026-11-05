@@ -45,7 +45,9 @@ ALTER TABLE ledger_lab.posting_command
 -- A production issuer/gateway must cryptographically bind subject -> bank membership.
 CREATE ROLE opes_lab_executor NOLOGIN;
 GRANT USAGE, CREATE ON SCHEMA ledger_lab TO opes_lab_executor;
-GRANT SELECT ON ledger_lab.ledger_account TO opes_lab_executor;
+-- FOR KEY SHARE requires UPDATE privilege on the locked account relation.
+-- This grant is to a NOLOGIN function owner only, never a bank service login.
+GRANT SELECT, UPDATE ON ledger_lab.ledger_account TO opes_lab_executor;
 GRANT SELECT, UPDATE ON ledger_lab.member_authority TO opes_lab_executor;
 GRANT SELECT, INSERT ON ledger_lab.posting_command,ledger_lab.journal,
  ledger_lab.journal_line,ledger_lab.outbox TO opes_lab_executor;
