@@ -24,7 +24,8 @@ DECLARE original_xid xid8;
 BEGIN
  SELECT j.creating_xid INTO original_xid
  FROM ledger_lab.journal AS j
- WHERE j.journal_id = NEW.journal_id FOR KEY SHARE;
+ -- The immutable header was created in THIS transaction; XID is the guard.
+ WHERE j.journal_id = NEW.journal_id;
  IF NOT FOUND OR original_xid IS DISTINCT FROM pg_current_xact_id() THEN
    RAISE EXCEPTION 'journal lines may only be inserted in journal creation transaction';
  END IF;
@@ -41,7 +42,8 @@ DECLARE original_xid xid8;
 BEGIN
  SELECT j.creating_xid INTO original_xid
  FROM ledger_lab.journal AS j
- WHERE j.journal_id = NEW.journal_id FOR KEY SHARE;
+ -- The immutable header was created in THIS transaction; XID is the guard.
+ WHERE j.journal_id = NEW.journal_id;
  IF NOT FOUND OR original_xid IS DISTINCT FROM pg_current_xact_id() THEN
    RAISE EXCEPTION 'journal outbox may only be inserted in journal creation transaction';
  END IF;
