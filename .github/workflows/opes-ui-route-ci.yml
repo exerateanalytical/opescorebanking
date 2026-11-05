@@ -1,0 +1,26 @@
+name: OPES Core Banking UI route and contract checks
+on:
+  push:
+    paths:
+      - 'apps/opes-core-banking-ui/**'
+      - '.github/workflows/opes-ui-route-ci.yml'
+  pull_request:
+    paths:
+      - 'apps/opes-core-banking-ui/**'
+      - '.github/workflows/opes-ui-route-ci.yml'
+jobs:
+  route-catalogue:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test screen register and domain field schemas
+        run: node --test tests/*.test.mjs
+        working-directory: apps/opes-core-banking-ui
+      - name: Check syntax of browser module
+        run: node --check src/app.js
+        working-directory: apps/opes-core-banking-ui
