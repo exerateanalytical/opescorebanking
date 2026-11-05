@@ -101,7 +101,9 @@ counts="$(pg "SELECT (SELECT count(*) FROM ledger_lab.posting_command)||':'||
  (SELECT count(*) FROM ledger_lab.journal)||':'||
  (SELECT count(*) FROM ledger_lab.journal_line)||':'||
  (SELECT count(*) FROM ledger_lab.outbox);")"
-if [[ "$counts" != "1:1:2:1" ]]; then
+# CI runs the 004 regression first (already persisted 1:1:2:1).
+# One additional 005 successful command produces exactly 2:2:4:2.
+if [[ "$counts" != "2:2:4:2" ]]; then
  echo "ERROR: unexpected post-crash persistence: $counts" >&2; exit 1
 fi
 echo "SEC-LED-LAB-005 PASS: revocation/account-lock ordering and crash-before-commit rollback"
