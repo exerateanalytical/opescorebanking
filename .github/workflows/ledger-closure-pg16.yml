@@ -1,0 +1,48 @@
+name: OPES Ledger Closed-Journal PostgreSQL Lab
+on:
+  push:
+    paths:
+      - 'engineering/labs/ledger/**'
+      - '.github/workflows/ledger-closure-pg16.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  closed-journal-pg16:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: opes_lab
+          POSTGRES_PASSWORD: synthetic_ci_only
+          POSTGRES_DB: opes_lab
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U opes_lab -d opes_lab"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      PGHOST: 127.0.0.1
+      PGPORT: 5432
+      PGUSER: opes_lab
+      PGDATABASE: opes_lab
+      PGPASSWORD: synthetic_ci_only
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PostgreSQL client if missing
+        run: |
+          if ! command -v psql >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y postgresql-client
+          fi
+      - name: Execute transactional migrations and adversarial assertions
+        run: |
+          set -euo pipefail
+          psql -X -v ON_ERROR_STOP=1 -f engineering/labs/ledger/001_immutable_journal_lab.sql
+          psql -X -v ON_ERROR_STOP=1 -f engineering/labs/ledger/002_journal_header_commit_validation_lab.sql
+          psql -X -v ON_ERROR_STOP=1 -f engineering/labs/ledger/003_closed_journal_transaction_boundary_lab.sql
+          psql -X -v ON_ERROR_STOP=1 -f engineering/labs/ledger/tests/003_closed_journal_regressions.sql
