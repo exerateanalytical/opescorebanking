@@ -16,7 +16,7 @@ function familyContent(template,data){
  if(family==="receipt"){
   const reference=val(data,"transactionReference");
   const body='<div class="receipt-amount"><small>TRANSACTION AMOUNT · SAMPLE / UNVERIFIED</small><strong>'+amount+' '+ccy+'</strong></div>';
-  const particulars=dataGrid(template.fields.filter(f=>["transactionReference","valueDate","transactionStatus","accountReference","customerReference"].includes(f.id)),data);
+  const particulars=dataGrid(template.fields.filter(f=>["transactionReference","valueDate","transactionStatus","accountReference","customerReference","customerName","productCode"].includes(f.id)),data);
   return body+section("Receipt particulars",particulars)+section("Processing evidence",dataGrid(template.fields.filter(f=>["processedBy","approvedBy","evidenceReference"].includes(f.id)),data));
  }
  if(family==="statement"){
@@ -95,7 +95,7 @@ function groupFields(template,data){
  const displayedByFamily={
   payslip:["Employee identity","Payroll","Payroll earnings","Payroll deductions","Payroll net"],
   statement:["Period","Account details","Tabular data"],
-  receipt:["Monetary details","Transaction"],
+  receipt:["Monetary details","Transaction","Account details"],
   amortization:["Credit","Period","Tabular data"],
   agreement:["Credit","Legal provisions"],
   regulatory:["Regulatory mapping","Period","Tabular data"],
