@@ -64,7 +64,14 @@ try{
   assert.deepEqual(checked,[],"priority screen issues at "+width+"px");
  }
  await page.setViewportSize({width:1440,height:900});
- for(const id of ["CIF-UI-002","ACT-UI-003","LED-UI-002","BRN-UI-004","CRD-UI-002"]){await page.goto(origin+"#/screen/"+id,{waitUntil:"load"});await page.locator("h1").waitFor();assert.ok(await page.locator(".field-group").count()>=1);await page.screenshot({path:"audit/priority-"+id+".png",fullPage:true});await page.setViewportSize({width:375,height:812});await page.screenshot({path:"audit/priority-mobile-"+id+".png",fullPage:true});await page.setViewportSize({width:1440,height:900});}
+ for(const id of ["CIF-UI-002","ACT-UI-003","LED-UI-002","BRN-UI-004","CRD-UI-002"]){await page.goto(origin+"#/screen/"+id,{waitUntil:"load"});await page.locator("h1").waitFor();assert.ok(await page.locator(".field-group").count()>=1);await page.screenshot({path:"audit/priority-"+id+".png",fullPage:true});await page.setViewportSize({width:375,height:812});await page.reload({waitUntil:"load"});await page.locator("h1").waitFor();
+  const widthAudit=await page.evaluate(()=>{const width=innerWidth;return {width,document:document.documentElement.scrollWidth,body:document.body.scrollWidth,over:[...document.querySelectorAll("*")].filter(e=>e.getBoundingClientRect().right>width+2).slice(0,8).map(e=>({tag:e.tagName,cls:typeof e.className==="string"?e.className:"",right:Math.round(e.getBoundingClientRect().right)}))};});
+  console.log("MOBILE FLAGSHIP AUDIT "+id+" "+JSON.stringify(widthAudit));
+  assert.ok(widthAudit.body<=widthAudit.width+2,"Body overflow on "+id+" "+JSON.stringify(widthAudit));
+  assert.ok(widthAudit.document<=widthAudit.width+2,"Document overflow on "+id+" "+JSON.stringify(widthAudit));
+  const shot=await page.screenshot({path:"audit/priority-mobile-"+id+".png",fullPage:true});
+  assert.ok(shot.readUInt32BE(16)<=widthAudit.width+2,"Screenshot wider than viewport: "+id+" "+shot.readUInt32BE(16)+" vs "+widthAudit.width);
+  await page.setViewportSize({width:1440,height:900});}
  await page.goto(origin+"#/screen/CIF-UI-001");assert.equal(await page.getByRole("button",{name:/New local draft/i}).first().isDisabled(),true);
  await page.goto(origin+"#/screen/CIF-UI-002");assert.equal(await page.getByRole("button",{name:/New local draft/i}).first().isEnabled(),true);
  await page.locator("#screen-selector").selectOption("CIF-UI-003");assert.match(page.url(),/CIF-UI-003$/);
