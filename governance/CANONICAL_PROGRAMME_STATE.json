@@ -39,8 +39,8 @@
   "last_integrity_verified_batch_id": 210,
   "last_local_archive_integrity_validated_batch_id": 210,
   "last_observed_delivery_batch_id": 210,
-  "next_action": "Do not enter production DoR. SEC-TENANT-ROUTING-001 cross-service identity/principal and concurrent revocation/crash/replay tests; retain the WBS and archival recovery as independent open tasks. Do not promote tested labs to accepted production code.",
-  "next_exact_task": "SEC-TENANT-ROUTING-001: execute cross-session revocation ordering, crash-before/after-commit, token-to-membership-to-db-principal gateway, and durable idempotent outbox replay tests.",
+  "next_action": "Do not promote three tested PostgreSQL labs to production. Continue SEC-TENANT-ROUTING-001 real OIDC/gateway/DB-principal identity and postcommit crash/replay/UNKNOWN tests; keep WBS leaf-level audit and statutory mapping quarantine open.",
+  "next_exact_task": "SEC-TENANT-ROUTING-001: integrate cryptographically verified OIDC subject to bank-local membership and bank PostgreSQL principal across real gateway/DB boundary; prove crash-after-COMMIT-before-HTTP-reply, replay/UNKNOWN and outbox dedup with credential rotation.",
   "next_exact_task_id": "SEC-TENANT-ROUTING-001",
   "original_archive_custody_status": "NOT_VERIFIED",
   "original_archive_custody_verified": false,
@@ -84,7 +84,7 @@
     "unbound_database_login": "NO_DATA_VISIBLE",
     "production_ready": false
   },
-  "last_verified_coding_commit": "8ace0cba9b340314e9d38222343b9100dcef8134",
+  "last_verified_coding_commit": "181b4013a0464ddb3c5080d6f9d2dbca581e9ad7",
   "tenant_data_isolation_level": "POSTGRESQL_LAB_TESTED_WITH_AUTHENTICATED_DB_SESSION_USER_BINDING; PRODUCTION_TENANT_ROUTER_NOT_YET_IMPLEMENTED",
   "security_active_wp": {
     "id": "SEC-TENANT-ROUTING-001",
@@ -102,7 +102,9 @@
     "distributed_ledger_boundary": "NOT_IMPLEMENTED_OR_PROVEN",
     "production_accepted": false,
     "bank_local_lab_checkpoint": "SEC-LED-LAB-004",
-    "bank_local_lab_ci_run": 41942320193
+    "bank_local_lab_ci_run": 41942320193,
+    "cross_session_lab_checkpoint": "SEC-LED-LAB-005",
+    "cross_session_lab_ci_run": 41943269917
   },
   "active_engineering_evidence_checkpoint": {
     "id": "ENG-REMEDIATION-001",
@@ -173,13 +175,25 @@
       "archive_path": "programme/checkpoints/2026-11-05/SEC-LED-LAB-004/OPES_SEC_LED_LAB_004_TESTED_PG16_2026-11-05.zip",
       "archive_sha256": "bda70fa4ad45225e07ea254d405c9d494a0717ed69d66a3cf8a823e96039da75",
       "note": "Lab posting/membership proof, not production OIDC authorization, revocation concurrency or maker-checker acceptance."
+    },
+    {
+      "id": "SEC-LED-LAB-005",
+      "status": "TESTED_CROSS_SESSION_PG16_NOT_PRODUCTION_APPROVED",
+      "ci_run_id": 41943269917,
+      "ci_conclusion": "success",
+      "checkpoint_commit": "445fa91eb6b6d3760b13b4329d1b6d247b8b6604",
+      "archive_path": "programme/checkpoints/2026-11-05/SEC-LED-LAB-005/OPES_SEC_LED_LAB_005_TESTED_CONCURRENCY_PG16_2026-11-05.zip",
+      "archive_sha256": "d2221f79823785aa2acf2aeca556d56f08fd538f83d6d77ad7610a796a6e54bc",
+      "scope": "membership revocation/account-closure ordering and precommit backend termination only; no OIDC or postcommit API UNKNOWN proof"
     }
   ],
   "current_run_2026_11_05": {
-    "attempted_subpackages": 3,
-    "tested_lab_checkpoints_delivered": 2,
+    "attempted_subpackages": 4,
+    "tested_lab_checkpoints_delivered": 3,
     "partial_planning_crosswalk_delivered": 1,
     "independently_accepted_production_work_packages": 0,
+    "additional_capacity_not_used": 26,
+    "capacity_reason": "Critical production identity/ledger/recovery DoR remains unsatisfied. Higher-volume untested/unregistered batches cannot be legitimately accepted; no artificial completion quota.",
     "open_registered_wps": [
       "SEC-TENANT-ROUTING-001",
       "GOV-WBS-RECON-001",
@@ -187,6 +201,6 @@
       "GOV-REC-001"
     ],
     "remaining_production_leaf_work_packages": "UNKNOWN",
-    "next_exact_task": "SEC-TENANT-ROUTING-001: execute cross-session revocation ordering, crash-before/after-commit, token-to-membership-to-db-principal gateway, and durable idempotent outbox replay tests."
+    "next_exact_task": "SEC-TENANT-ROUTING-001: integrate cryptographically verified OIDC subject to bank-local membership and bank PostgreSQL principal across real gateway/DB boundary; prove crash-after-COMMIT-before-HTTP-reply, replay/UNKNOWN and outbox dedup with credential rotation."
   }
 }
