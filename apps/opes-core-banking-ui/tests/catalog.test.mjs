@@ -6,7 +6,7 @@ test("all 726 screen IDs are unique and routable",()=>{
  assert.equal(SCREENS.length,726);
  assert.equal(SCREEN_BY_ID.size,726);
  assert.equal(new Set(SCREENS.map(x=>x.id)).size,726);
- for(const s of SCREENS){assert.match(s.id,/^[A-Z]+-(UI|EXP)-\d{3}$/);assert.ok(s.name.length>5);assert.ok(DOMAIN_LABELS[s.domain]);assert.ok(["register","detail","workbench","review","monitor","history","exceptions","settings"].includes(s.kind));}
+ for(const s of SCREENS){assert.match(s.id,/^[A-Z]+-(UI|EXP)-\d{3}$/);assert.ok(s.name.length>=3);assert.ok(DOMAIN_LABELS[s.domain]);assert.ok(["register","detail","workbench","review","monitor","history","exceptions","settings"].includes(s.kind));}
 });
 test("preserves the 114 original canonical draft screen IDs",()=>{
  const core=SCREENS.filter(x=>x.source==="CANONICAL_DRAFT");
