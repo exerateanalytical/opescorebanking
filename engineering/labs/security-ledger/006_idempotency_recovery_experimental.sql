@@ -106,6 +106,7 @@ BEGIN
   SELECT * INTO prior FROM sec_idemp_006.operation
    WHERE operation_type='SYNTHETIC_JOURNAL' AND idempotency_key=p_key;
   IF NOT FOUND THEN RAISE EXCEPTION 'unresolved concurrent operation'; END IF;
+  IF prior.member_id<>p_member THEN RAISE EXCEPTION 'idempotency owner conflict'; END IF;
   IF prior.digest<>dig THEN RAISE EXCEPTION 'idempotency conflict'; END IF;
   RETURN prior.journal_id;
  END IF;
