@@ -1,0 +1,63 @@
+{
+  "schema": "opes.checkpoint.manifest.v2",
+  "id": "LED-LAB-003",
+  "date": "2026-11-05",
+  "status": "TESTED_LAB_NOT_PRODUCTION_APPROVED",
+  "baseline_sha": "23502cecd61924f85f99d441cf31f19cf9e53fca",
+  "test_run": {
+    "id": 41940764696,
+    "conclusion": "success",
+    "postgres_version": "16"
+  },
+  "entries": [
+    {
+      "path": "sources/001_immutable_journal_lab.sql",
+      "source_repo_path": "engineering/labs/ledger/001_immutable_journal_lab.sql",
+      "bytes": 2972,
+      "sha256": "d5c24b92c1ba4b1ab2eca3eab66e054991378e42358c152ec822598e3ed5e7c7",
+      "crc32": "c09fbecd"
+    },
+    {
+      "path": "sources/002_journal_header_commit_validation_lab.sql",
+      "source_repo_path": "engineering/labs/ledger/002_journal_header_commit_validation_lab.sql",
+      "bytes": 1532,
+      "sha256": "7118b549ef51c9b50414fa8156646f43609e0f7de4ea744c485453032aa3eede",
+      "crc32": "bfab920a"
+    },
+    {
+      "path": "sources/003_closed_journal_transaction_boundary_lab.sql",
+      "source_repo_path": "engineering/labs/ledger/003_closed_journal_transaction_boundary_lab.sql",
+      "bytes": 3870,
+      "sha256": "512c9494c9aa32e8cea4007b4f8b6d83b029c125c8c13c936b437930e144ec7b",
+      "crc32": "f270b484"
+    },
+    {
+      "path": "tests/003_closed_journal_regressions.sql",
+      "source_repo_path": "engineering/labs/ledger/tests/003_closed_journal_regressions.sql",
+      "bytes": 4712,
+      "sha256": "bf1588499731aada430e89531cf964541dedb3b0b74bdee51cc8eddd11220b65",
+      "crc32": "00899555"
+    },
+    {
+      "path": "ci/ledger-closure-pg16.yml",
+      "source_repo_path": ".github/workflows/ledger-closure-pg16.yml",
+      "bytes": 1615,
+      "sha256": "1ace92264cb1f10e5f062d129b2e203caf375f0b156419729848f315f1e209dd",
+      "crc32": "37bec3d5"
+    },
+    {
+      "path": "EVIDENCE.md",
+      "source_repo_path": null,
+      "bytes": 1844,
+      "sha256": "1f42fdbce8ed0a74c2720b8b2ed123f4331e1d537007c8eabfdd0428ee340033",
+      "crc32": "d7364885"
+    }
+  ],
+  "production_accepted_work_packages": 0,
+  "next_exact_task": "SEC-TENANT-ROUTING-001",
+  "archive": {
+    "path": "programme/checkpoints/2026-11-05/LED-LAB-003/OPES_LED_LAB_003_TESTED_PG16_2026-11-05.zip",
+    "bytes": 19654,
+    "sha256": "e3bbbdcab53807d47d90b05fe2b4c175f74a3880a83d784ff760675311ce6358"
+  }
+}
