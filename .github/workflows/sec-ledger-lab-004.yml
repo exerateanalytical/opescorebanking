@@ -48,3 +48,8 @@ jobs:
           psql -X -v ON_ERROR_STOP=1 -f engineering/labs/ledger/003_closed_journal_transaction_boundary_lab.sql
           psql -X -v ON_ERROR_STOP=1 -f engineering/labs/security-ledger/004_bank_local_atomic_posting_lab.sql
           psql -X -v ON_ERROR_STOP=1 -f engineering/labs/security-ledger/tests/004_bank_local_posting_regressions.sql
+      - name: Execute cross-session revocation ordering and precommit crash laboratory
+        run: |
+          set -euo pipefail
+          psql -X -v ON_ERROR_STOP=1 -f engineering/labs/security-ledger/tests/005_concurrency_fixture.sql
+          bash engineering/labs/security-ledger/tests/005_concurrent_revocation_and_crash.sh
