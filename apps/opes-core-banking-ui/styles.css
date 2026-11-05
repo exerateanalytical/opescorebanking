@@ -195,3 +195,12 @@ td{overflow-wrap:anywhere}
 .form-error{border:1px solid var(--danger);background:var(--danger-soft);color:var(--danger);padding:12px 13px;border-radius:9px;margin:0 0 15px;font-size:14px}
 @media(max-width:700px){.screen-picker{padding:13px;align-items:stretch}.screen-picker-label{width:100%}.screen-picker-controls{width:100%}.screen-picker-controls .select-input{flex:1;min-width:0;max-width:none}.screen-picker-controls .btn{padding-inline:9px}.form-section{padding:12px}}
 @media(max-width:360px){.screen-picker-controls .btn{font-size:12px;min-width:44px}.screen-picker-controls .select-input{font-size:12px}}
+
+/* Distinguishable pictograms, no glow or color-filled button treatments. */
+.domain-card .quick-icon{background:transparent;border:1px solid var(--stroke);color:var(--primary)}
+.domain-card:nth-child(5n+2) .quick-icon{color:var(--success)}
+.domain-card:nth-child(5n+3) .quick-icon{color:var(--warning)}
+.domain-card:nth-child(5n+4) .quick-icon{color:#7953A6}
+.domain-card:nth-child(5n+5) .quick-icon{color:#0A7890}
+[data-theme="dark"] .domain-card:nth-child(5n+4) .quick-icon{color:#C8A9F7}
+[data-theme="dark"] .domain-card:nth-child(5n+5) .quick-icon{color:#9DE3EF}
