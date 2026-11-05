@@ -52,6 +52,19 @@ GRANT SELECT, UPDATE ON ledger_lab.member_authority TO opes_lab_executor;
 GRANT SELECT, INSERT ON ledger_lab.posting_command,ledger_lab.journal,
  ledger_lab.journal_line,ledger_lab.outbox TO opes_lab_executor;
 
+-- Deferred constraint triggers execute when the function's invoker context has
+-- returned. Keep them SECURITY DEFINER under a narrow NOLOGIN role, NOT the
+-- database superuser and NOT the bank login. Functions only read evidence.
+ALTER FUNCTION ledger_lab.assert_balanced() OWNER TO opes_lab_executor;
+ALTER FUNCTION ledger_lab.assert_balanced() SECURITY DEFINER;
+ALTER FUNCTION ledger_lab.assert_balanced() SET search_path = pg_catalog, ledger_lab, pg_temp;
+ALTER FUNCTION ledger_lab.assert_journal_complete() OWNER TO opes_lab_executor;
+ALTER FUNCTION ledger_lab.assert_journal_complete() SECURITY DEFINER;
+ALTER FUNCTION ledger_lab.assert_journal_complete() SET search_path = pg_catalog, ledger_lab, pg_temp;
+ALTER FUNCTION ledger_lab.assert_command_has_journal() OWNER TO opes_lab_executor;
+ALTER FUNCTION ledger_lab.assert_command_has_journal() SECURITY DEFINER;
+ALTER FUNCTION ledger_lab.assert_command_has_journal() SET search_path = pg_catalog, ledger_lab, pg_temp;
+
 CREATE FUNCTION ledger_lab.post_synthetic_bank_journal(
  p_membership_id uuid,
  p_expected_revision bigint,
