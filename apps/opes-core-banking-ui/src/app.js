@@ -47,7 +47,7 @@ const icons = {
 const DOMAIN_ICONS={GOV:"shield",ARC:"layers",CIF:"users",PRD:"wallet",ACT:"bank",LED:"calculator",BRN:"coins",PAY:"arrow",CRD:"file-check",TRE:"activity",AML:"shield",REP:"file",CHN:"wallet",CARD:"credit-card",CRM:"users",FEE:"coins",REC:"list",SEC:"lock",DAT:"database",API:"layers",INF:"server",DR:"shield",ADM:"settings",TST:"check",REL:"arrow",EDU:"graduation-cap"};
 function icon(name,size=20){return '<svg class="svg-icon" aria-hidden="true" width="'+size+'" height="'+size+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(icons[name]||icons.layers)+'</svg>';}
 function fieldsFor(s){return screenBlueprint(s)?.fields||[];}
-function canDraft(s){return !!(s&&state.role==="operator"&&screenBlueprint(s)?.captureAllowed);}
+function canDraft(s){return !!(s&&state.role==="operator"&&screenBlueprint(s)?.captureAllowed&&!["access_denied","offline_readonly","external_unknown","reconciliation_hold","loading","validating","pending_review"].includes(state.uiState));}
 function rows(domain){return SCREENS.filter(s=>s.domain===domain);}
 function getScreen(){return SCREEN_BY_ID.get(state.id)||null;}
 function parseHash(){const m=location.hash.match(/^#\/screen\/([A-Za-z0-9-]+)$/);return m&&SCREEN_BY_ID.has(m[1])?m[1]:null;}
@@ -210,7 +210,7 @@ function showDraftForm(){
    if(!Number.isSafeInteger(Number(data[f.id])))err.push(f.label+" must be a safe integer");
   }
   if(s.domain==="LED"&&data.debitGL&&data.creditGL&&data.debitGL===data.creditGL)err.push("Debit and credit GL accounts cannot be the same");
-  if(data.periodStart&&data.periodEnd&&data.periodStart>data.periodEnd)err.push("The end of the period must not precede the start");
+  for(const [a,b] of [["periodStart","periodEnd"],["fromDate","toDate"],["mandateEffective","mandateExpiry"],["effectiveDate","expiryDate"],["valueDate","maturityDate"]])if(data[a]&&data[b]&&data[a]>data[b])err.push("Date ordering invalid: "+a+" must be on or before "+b);
   if(data.mandateEffective&&data.mandateExpiry&&data.mandateEffective>data.mandateExpiry)err.push("Mandate expiry must not precede the effective date");
   if((data.dateOfBirth||data.birthOrIncorporationDate)&&(data.dateOfBirth||data.birthOrIncorporationDate)>new Date().toISOString().slice(0,10))err.push("Birth/incorporation date cannot be in the future");
   if(err.length){const host=dialog.querySelector("#form-error");host.hidden=false;host.textContent=err.join(". ");host.scrollIntoView({block:"nearest"});return;}

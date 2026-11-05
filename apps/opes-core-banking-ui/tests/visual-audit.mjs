@@ -57,10 +57,10 @@ try{
   return missing;
  },SCREENS.map(s=>s.id));
  assert.deepEqual(failures,[]);
- const priority=SCREENS.filter(s=>PRIORITY_DOMAINS.includes(s.domain)).map(s=>s.id);
+ const priority=SCREENS.map(s=>s.id); // Every route, not just the priority domains
  for(const width of [320,375,768,1024,1440]){
   await page.setViewportSize({width,height:900});
-  const checked=await page.evaluate(ids=>{const problems=[];for(const id of ids){location.hash="#/screen/"+id;window.dispatchEvent(new HashChangeEvent("hashchange"));const h=document.querySelector("h1"),selector=document.querySelector("#screen-selector");const over=document.documentElement.scrollWidth-innerWidth;if(!h?.textContent||!selector||over>2)problems.push({id,over,title:h?.textContent});}return problems;},priority);
+  const checked=await page.evaluate(ids=>{const problems=[];for(const id of ids){location.hash="#/screen/"+id;window.dispatchEvent(new HashChangeEvent("hashchange"));const h=document.querySelector("h1"),selector=document.querySelector("#screen-selector"),specific=document.querySelector(".screen-specific"),states=document.querySelector("#preview-state");const over=document.documentElement.scrollWidth-innerWidth;const actionRows=document.querySelectorAll(".screen-specific .action-row").length;if(!h?.textContent||!selector||!specific||!states||actionRows!==11||over>2)problems.push({id,over,title:h?.textContent,specific:!!specific,states:!!states,actionRows});}return problems;},priority);
   assert.deepEqual(checked,[],"priority screen issues at "+width+"px");
  }
  await page.setViewportSize({width:1440,height:900});
@@ -72,6 +72,24 @@ try{
   const shot=await page.screenshot({path:"audit/priority-mobile-"+id+".png",fullPage:true});
   assert.ok(shot.readUInt32BE(16)<=widthAudit.width+2,"Screenshot wider than viewport: "+id+" "+shot.readUInt32BE(16)+" vs "+widthAudit.width);
   await page.setViewportSize({width:1440,height:900});}
+ await page.goto(origin+"#/screen/REP-UI-001");
+ await page.locator("#preview-state").selectOption("access_denied");
+ await page.getByRole("heading",{name:"Access denied"}).waitFor();
+ await page.locator("#preview-state").selectOption("offline_readonly");
+ await page.getByRole("heading",{name:/Offline read-only preview/i}).waitFor();
+ for(const domain of [...new Set(SCREENS.map(s=>s.domain))]){
+  const screen=SCREENS.find(s=>s.domain===domain);
+  for(const width of [375,1440]){
+   await page.setViewportSize({width,height:900});
+   await page.goto(origin+"#/screen/"+screen.id,{waitUntil:"load"});
+   await page.locator(".screen-specific").waitFor();
+   const geometry=await page.evaluate(()=>({width:innerWidth,doc:document.documentElement.scrollWidth,body:document.body.scrollWidth}));
+   assert.ok(geometry.doc<=geometry.width+2,domain+" content clipping at "+width+" "+JSON.stringify(geometry));
+   const img=await page.screenshot({path:"audit/domain-"+domain+"-"+width+".png",fullPage:true});
+   assert.ok(img.readUInt32BE(16)<=width+2,domain+" wrong screenshot width "+width);
+  }
+ }
+ await page.setViewportSize({width:1440,height:900});
  await page.goto(origin+"#/screen/CIF-UI-001");assert.equal(await page.getByRole("button",{name:/New local draft/i}).first().isDisabled(),true);
  await page.goto(origin+"#/screen/CIF-UI-002");assert.equal(await page.getByRole("button",{name:/New local draft/i}).first().isEnabled(),true);
  await page.locator("#screen-selector").selectOption("CIF-UI-003");assert.match(page.url(),/CIF-UI-003$/);
@@ -80,5 +98,5 @@ try{
  const countForm=page.locator("#local-draft-form");for(const input of await countForm.locator("input,select,textarea").all()){const tag=await input.evaluate(el=>el.tagName.toLowerCase());const name=await input.getAttribute("name");if(tag==="select"){await input.selectOption({index:1});continue;}const type=await input.getAttribute("type");if(type==="date"){await input.fill("2026-11-05");continue;}if(type==="number"){if(name==="expectedMinor")await input.fill("0");else if(name==="denom10000")await input.fill("2");else await input.fill("0");continue;}await input.fill("SYNTHETIC-REFERENCE");}
  await countForm.getByRole("button",{name:/Save local draft/i}).click();await page.getByText("Not submitted").first().waitFor();await page.getByRole("tab",{name:"Overview"}).click();await page.getByText("Counted amount").waitFor();
  assert.deepEqual(errors,[]);
- console.log("PASS: 726 routes and desktop/mobile viewport audit, synthetic draft lifecycle, no browser page errors");
+ console.log("PASS: 726/726 routes at 5 viewport widths; 26 domain screenshots x mobile and desktop; 11 controls and 14 states per route; no browser exceptions");
 }finally{await browser.close();}
