@@ -2,8 +2,8 @@
 -- Disposable synthetic DB only. Requires 001, 002, 003 migration success.
 \set ON_ERROR_STOP on
 BEGIN;
-INSERT INTO ledger_lab.posting_command(command_id,request_digest)
- VALUES ('10000000-0000-4000-8000-000000000001',decode(repeat('aa',32),'hex'));
+INSERT INTO ledger_lab.posting_command(command_id,request_digest,state)
+ VALUES ('10000000-0000-4000-8000-000000000001',decode(repeat('aa',32),'hex'),'COMMITTED');
 INSERT INTO ledger_lab.journal(journal_id,command_id,currency)
  VALUES ('20000000-0000-4000-8000-000000000001','10000000-0000-4000-8000-000000000001','XAF');
 INSERT INTO ledger_lab.journal_line(journal_id,line_no,account_id,debit_minor,credit_minor)
@@ -63,8 +63,8 @@ END $test$;
 DO $test$
 BEGIN
  BEGIN
-  INSERT INTO ledger_lab.posting_command(command_id,request_digest)
-  VALUES('10000000-0000-4000-8000-000000000002',decode(repeat('bb',32),'hex'));
+  INSERT INTO ledger_lab.posting_command(command_id,request_digest,state)
+  VALUES('10000000-0000-4000-8000-000000000002',decode(repeat('bb',32),'hex'),'COMMITTED');
   EXECUTE 'SET CONSTRAINTS ALL IMMEDIATE';
   RAISE EXCEPTION 'TEST FAILED: orphan command accepted';
  EXCEPTION WHEN OTHERS THEN
@@ -76,8 +76,8 @@ END $test$;
 DO $test$
 BEGIN
  BEGIN
-  INSERT INTO ledger_lab.posting_command(command_id,request_digest)
-  VALUES('10000000-0000-4000-8000-000000000003',decode(repeat('cc',32),'hex'));
+  INSERT INTO ledger_lab.posting_command(command_id,request_digest,state)
+  VALUES('10000000-0000-4000-8000-000000000003',decode(repeat('cc',32),'hex'),'COMMITTED');
   INSERT INTO ledger_lab.journal(journal_id,command_id,currency)
   VALUES('20000000-0000-4000-8000-000000000003','10000000-0000-4000-8000-000000000003','XAF');
   INSERT INTO ledger_lab.outbox(event_id,journal_id,event_type,payload)
