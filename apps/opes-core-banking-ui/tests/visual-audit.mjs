@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import {chromium} from "playwright";
 import {SCREENS} from "../src/catalog.js";
+import {PRIORITY_DOMAINS} from "../src/priority-contracts.js";
 const origin="http://127.0.0.1:8765/apps/opes-core-banking-ui/";
 const browser=await chromium.launch({headless:true});
 const page=await browser.newPage({viewport:{width:1440,height:900},reducedMotion:"reduce"});
@@ -56,6 +57,18 @@ try{
   return missing;
  },SCREENS.map(s=>s.id));
  assert.deepEqual(failures,[]);
+ const priority=SCREENS.filter(s=>PRIORITY_DOMAINS.includes(s.domain)).map(s=>s.id);
+ for(const width of [320,375,768,1024,1440]){
+  await page.setViewportSize({width,height:900});
+  const checked=await page.evaluate(ids=>{const problems=[];for(const id of ids){location.hash="#/screen/"+id;window.dispatchEvent(new HashChangeEvent("hashchange"));const h=document.querySelector("h1"),selector=document.querySelector("#screen-selector");const over=document.documentElement.scrollWidth-innerWidth;if(!h?.textContent||!selector||over>2)problems.push({id,over,title:h?.textContent});}return problems;},priority);
+  assert.deepEqual(checked,[],"priority screen issues at "+width+"px");
+ }
+ await page.setViewportSize({width:1440,height:900});
+ for(const id of ["CIF-UI-002","ACT-UI-003","LED-UI-002","BRN-UI-004","CRD-UI-002"]){await page.goto(origin+"#/screen/"+id,{waitUntil:"load"});await page.locator("h1").waitFor();assert.ok(await page.locator(".field-group").count()>=1);await page.screenshot({path:"audit/priority-"+id+".png",fullPage:true});}
+ await page.goto(origin+"#/screen/CIF-UI-001");assert.equal(await page.getByRole("button",{name:/New local draft/i}).first().isDisabled(),true);
+ await page.goto(origin+"#/screen/CIF-UI-002");assert.equal(await page.getByRole("button",{name:/New local draft/i}).first().isEnabled(),true);
+ await page.locator("#screen-selector").selectOption("CIF-UI-003");assert.match(page.url(),/CIF-UI-003$/);
+ await page.goto(origin+"#/screen/LED-UI-002");await page.getByRole("button",{name:/New local draft/i}).first().click();const ledgerForm=page.locator("#local-draft-form");assert.ok(await ledgerForm.locator("fieldset").count()>=2);await page.getByRole("button",{name:"Cancel"}).click();
  assert.deepEqual(errors,[]);
  console.log("PASS: 726 routes and desktop/mobile viewport audit, synthetic draft lifecycle, no browser page errors");
 }finally{await browser.close();}

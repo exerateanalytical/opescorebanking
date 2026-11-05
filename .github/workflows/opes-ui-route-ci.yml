@@ -37,7 +37,7 @@ jobs:
         with:
           node-version: '22'
       - name: Install Playwright
-        run: npm install --no-save playwright
+        run: npm install --no-save playwright@1.55.1
         working-directory: apps/opes-core-banking-ui
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
