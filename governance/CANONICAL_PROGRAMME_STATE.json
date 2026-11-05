@@ -39,8 +39,8 @@
   "last_integrity_verified_batch_id": 210,
   "last_local_archive_integrity_validated_batch_id": 210,
   "last_observed_delivery_batch_id": 210,
-  "next_action": "At pinned main HEAD enumerate repository tree and inspect batch 209/210 original bytes and manifests; build artifact-to-WP crosswalk; do not promote unreviewed drafts to accepted.",
-  "next_exact_task": "Implement the bank-local, trusted-token-to-membership-to-PostgreSQL-principal gateway with an atomic journal/outbox fence. Add crash/revocation race, replay and UNKNOWN-outcome integration tests across genuine service boundaries before production promotion. Then continue the remaining 21 precise domain API/schema workstreams.",
+  "next_action": "Do not enter production DoR. SEC-TENANT-ROUTING-001 cross-service identity/principal and concurrent revocation/crash/replay tests; retain the WBS and archival recovery as independent open tasks. Do not promote tested labs to accepted production code.",
+  "next_exact_task": "SEC-TENANT-ROUTING-001: execute cross-session revocation ordering, crash-before/after-commit, token-to-membership-to-db-principal gateway, and durable idempotent outbox replay tests.",
   "next_exact_task_id": "SEC-TENANT-ROUTING-001",
   "original_archive_custody_status": "NOT_VERIFIED",
   "original_archive_custody_verified": false,
@@ -53,7 +53,7 @@
   "recovery_batch_paths_observed_through": 210,
   "source_reconciliation_baseline_commit": "a540f9f8c94682a5947dbf6edc4f3041ea1e9e9b",
   "source_reconciliation_commit": "425bc2776c7bb168b43de9bcd103ea8d4d4a7f91",
-  "updated_date": "2026-11-04",
+  "updated_date": "2026-11-05",
   "vendor": "OPESWARE TECHNOLOGIES",
   "work_package_contract_json_present": 120,
   "batch210_remote_sha256": "7ccfb5a703c9d290a6db46d185fbc649153191db8f384f5a05a2bfac822ed298",
@@ -84,7 +84,7 @@
     "unbound_database_login": "NO_DATA_VISIBLE",
     "production_ready": false
   },
-  "last_verified_coding_commit": "860fecdbb1d88c0dabc7590f87a2647d31ebe012",
+  "last_verified_coding_commit": "8ace0cba9b340314e9d38222343b9100dcef8134",
   "tenant_data_isolation_level": "POSTGRESQL_LAB_TESTED_WITH_AUTHENTICATED_DB_SESSION_USER_BINDING; PRODUCTION_TENANT_ROUTER_NOT_YET_IMPLEMENTED",
   "security_active_wp": {
     "id": "SEC-TENANT-ROUTING-001",
@@ -100,7 +100,9 @@
     "synthetic_token_router_tests_executed_passed": 20,
     "bank_local_single_transaction_fence": "LAB_TESTED",
     "distributed_ledger_boundary": "NOT_IMPLEMENTED_OR_PROVEN",
-    "production_accepted": false
+    "production_accepted": false,
+    "bank_local_lab_checkpoint": "SEC-LED-LAB-004",
+    "bank_local_lab_ci_run": 41942320193
   },
   "active_engineering_evidence_checkpoint": {
     "id": "ENG-REMEDIATION-001",
@@ -140,5 +142,51 @@
     "historical_generic_sql_domain_groups_still_unapproved": 25,
     "postable_production_journal": "NOT_IMPLEMENTED"
   },
-  "engineering_code_run_date": "2026-11-04"
+  "engineering_code_run_date": "2026-11-05",
+  "code_workstream_inventory": {
+    "status": "PROVISIONAL_SOURCE_CROSSWALK_COMPLETED_LEAF_WBS_OPEN",
+    "evidence_path": "governance/plans/CODE_REPOSITORY_EVIDENCE_CROSSWALK_115_SLOTS_2026-11-05.json",
+    "evidence_commit": "9a41c70fbab464b429b401cf1f9749e468ab7b2e",
+    "provisional_slots": 115,
+    "verified_repository_evidence_slots": 22,
+    "approved_exhaustive_leaf_wp_denominator": null,
+    "production_wps_accepted": 0
+  },
+  "tested_laboratory_checkpoints_2026_11_05": [
+    {
+      "id": "LED-LAB-003",
+      "status": "TESTED_LAB_NOT_PRODUCTION_APPROVED",
+      "ci_run_id": 41942148227,
+      "ci_conclusion": "success",
+      "checkpoint_commit": "c893783b8e60544f5bb8035664f005e32e058a3d",
+      "archive_path": "programme/checkpoints/2026-11-05/LED-LAB-003/OPES_LED_LAB_003_TESTED_PG16_2026-11-05.zip",
+      "archive_sha256": "e3bbbdcab53807d47d90b05fe2b4c175f74a3880a83d784ff760675311ce6358",
+      "source_updated_later": "8f6e5b9d21c6be3c0dc75adc5cb910b642c8cf48",
+      "note": "Archive captures the earlier tested version; source subsequently changed for least privilege, validated by separate CI run 41942148227. Exact archival bytes are retained, not silently replaced."
+    },
+    {
+      "id": "SEC-LED-LAB-004",
+      "status": "TESTED_LAB_NOT_PRODUCTION_APPROVED",
+      "ci_run_id": 41942320193,
+      "ci_conclusion": "success",
+      "checkpoint_commit": "afa71a85c0a0bf36cb960815208053419ff65ef8",
+      "archive_path": "programme/checkpoints/2026-11-05/SEC-LED-LAB-004/OPES_SEC_LED_LAB_004_TESTED_PG16_2026-11-05.zip",
+      "archive_sha256": "bda70fa4ad45225e07ea254d405c9d494a0717ed69d66a3cf8a823e96039da75",
+      "note": "Lab posting/membership proof, not production OIDC authorization, revocation concurrency or maker-checker acceptance."
+    }
+  ],
+  "current_run_2026_11_05": {
+    "attempted_subpackages": 3,
+    "tested_lab_checkpoints_delivered": 2,
+    "partial_planning_crosswalk_delivered": 1,
+    "independently_accepted_production_work_packages": 0,
+    "open_registered_wps": [
+      "SEC-TENANT-ROUTING-001",
+      "GOV-WBS-RECON-001",
+      "WP-ACC-005",
+      "GOV-REC-001"
+    ],
+    "remaining_production_leaf_work_packages": "UNKNOWN",
+    "next_exact_task": "SEC-TENANT-ROUTING-001: execute cross-session revocation ordering, crash-before/after-commit, token-to-membership-to-db-principal gateway, and durable idempotent outbox replay tests."
+  }
 }
