@@ -1,0 +1,71 @@
+name: OPES Core Banking - 589 form workflow prototype verification
+on:
+  push:
+    paths:
+      - 'apps/opes-core-banking-forms/**'
+      - '.github/workflows/opes-core-forms-ci.yml'
+  pull_request:
+    paths:
+      - 'apps/opes-core-banking-forms/**'
+      - '.github/workflows/opes-core-forms-ci.yml'
+permissions:
+  contents: read
+jobs:
+  verify-and-package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run form contract and safety tests
+        run: node --test tests/unit.test.mjs
+        working-directory: apps/opes-core-banking-forms
+      - name: Check JavaScript module syntax
+        run: |
+          node --check src/app.js
+          node --check src/forms.js
+          node --check src/validation.js
+        working-directory: apps/opes-core-banking-forms
+      - name: Export all 589 forms and traceability tables
+        run: node scripts/export-all.mjs
+        working-directory: apps/opes-core-banking-forms
+      - name: Validate individual assets and SHA-256 hashes
+        run: |
+          test "$(find apps/opes-core-banking-forms/dist/specifications -name '*.json' | wc -l)" -eq 589
+          (cd apps/opes-core-banking-forms/dist && sha256sum --check --quiet SHA256SUMS.txt)
+      - name: Build standalone source and 589 form definitions archive
+        run: zip -q -r OPES_Core_Banking_589_Forms_Prototype.zip apps/opes-core-banking-forms -x 'apps/opes-core-banking-forms/node_modules/*' 'apps/opes-core-banking-forms/audit/*'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OPES-589-banking-forms-source
+          path: OPES_Core_Banking_589_Forms_Prototype.zip
+  chromium-ui-audit:
+    if: github.event_name == 'push'
+    needs: verify-and-package
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: npm install --no-save playwright@1.55.1
+        working-directory: apps/opes-core-banking-forms
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+        working-directory: apps/opes-core-banking-forms
+      - name: Start local browser UI server
+        run: (python3 -m http.server 8769 --bind 127.0.0.1 > /tmp/opes-forms-http.log 2>&1 &)
+      - name: Run 589 form viewport, navigation and interaction sweep
+        run: node tests/browser-forms.mjs
+        working-directory: apps/opes-core-banking-forms
+      - name: Upload responsive form QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: OPES-589-banking-forms-visual-audit
+          path: apps/opes-core-banking-forms/audit/*
+          if-no-files-found: ignore
