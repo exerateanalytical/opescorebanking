@@ -1,0 +1,56 @@
+name: OPES Reporting PG16 Durable Review Lab
+on:
+  push:
+    paths:
+      - 'apps/opes-core-banking-reports/db/review-lab/**'
+      - '.github/workflows/opes-report-review-pg16.yml'
+  pull_request:
+    paths:
+      - 'apps/opes-core-banking-reports/db/review-lab/**'
+      - '.github/workflows/opes-report-review-pg16.yml'
+permissions:
+  contents: read
+jobs:
+  isolated-pg16-review-authorization-and-atomic-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: opes_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d opes_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bootstrap disposable PG16 lab schema
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/001_schema.sql
+      - name: Verify Bank A maker, replay denial, atomic audit rollback
+        env:
+          PGPASSWORD: only_disposable_a_maker
+        run: psql -h 127.0.0.1 -U opes_rpt_a_maker_lab -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/01_maker_a.sql
+      - name: Verify Bank A independent checker and publication denial
+        env:
+          PGPASSWORD: only_disposable_a_checker
+        run: psql -h 127.0.0.1 -U opes_rpt_a_checker_lab -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/02_checker_a.sql
+      - name: Verify Bank B isolation and forged tenant denial
+        env:
+          PGPASSWORD: only_disposable_b_maker
+        run: psql -h 127.0.0.1 -U opes_rpt_b_maker_lab -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/03_bank_b.sql
+      - name: Verify unbound principal cannot enumerate or mutate
+        env:
+          PGPASSWORD: only_disposable_unbound
+        run: psql -h 127.0.0.1 -U opes_rpt_unbound_lab -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/04_unbound.sql
+      - name: Verify durable state, rollback and audit immutability
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/05_verify_evidence.sql
