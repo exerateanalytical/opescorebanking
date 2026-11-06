@@ -1,0 +1,595 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OPES Banking Stage 3 — Bank-scoped security entitlement requests",
+    "version": "0.1.0-candidate",
+    "description": "Typed draft API. Bank tenant authority comes from authenticated backend. Not deployment-approved."
+  },
+  "servers": [
+    {
+      "url": "https://api.example.invalid"
+    }
+  ],
+  "tags": [
+    {
+      "name": "SEC",
+      "description": "Bank-scoped security entitlement requests"
+    }
+  ],
+  "paths": {
+    "/v1/banks/{bankId}/sec/draft-membership-change": {
+      "post": {
+        "operationId": "sec_draft_membership_change",
+        "tags": [
+          "SEC"
+        ],
+        "summary": "Bank-scoped security entitlement requests — draft-membership-change",
+        "description": "Trusted bank-scoped candidate operation. Never posts funds, settles a payment, activates entitlement, publishes a regulatory return or enforces policy.",
+        "security": [
+          {
+            "oidc": [
+              "banking.write"
+            ]
+          }
+        ],
+        "x-domain-id": "SEC",
+        "x-required-permission": "sec.draft-membership-change",
+        "x-bank-authority": "SERVER_VERIFIED_OIDC_MEMBERSHIP_PLUS_BANK_DATABASE_PRINCIPAL",
+        "x-lifecycle-transition": [
+          "NONE",
+          "DRAFT"
+        ],
+        "x-production-status": "BLOCKED_UNTIL_DOMAIN_ACCEPTANCE",
+        "parameters": [
+          {
+            "name": "bankId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "MUST match trusted bank membership; not an authority source"
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]+$"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCandidate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Candidate receipt only: no financial or regulatory effect",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidateReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Fail-closed domain error"
+          },
+          "401": {
+            "description": "Fail-closed domain error"
+          },
+          "403": {
+            "description": "Fail-closed domain error"
+          },
+          "404": {
+            "description": "Fail-closed domain error"
+          },
+          "409": {
+            "description": "Fail-closed domain error"
+          },
+          "422": {
+            "description": "Fail-closed domain error"
+          },
+          "503": {
+            "description": "Fail-closed domain error"
+          }
+        }
+      }
+    },
+    "/v1/banks/{bankId}/sec/submit-access-review": {
+      "post": {
+        "operationId": "sec_submit_access_review",
+        "tags": [
+          "SEC"
+        ],
+        "summary": "Bank-scoped security entitlement requests — submit-access-review",
+        "description": "Trusted bank-scoped candidate operation. Never posts funds, settles a payment, activates entitlement, publishes a regulatory return or enforces policy.",
+        "security": [
+          {
+            "oidc": [
+              "banking.write"
+            ]
+          }
+        ],
+        "x-domain-id": "SEC",
+        "x-required-permission": "sec.submit-access-review",
+        "x-bank-authority": "SERVER_VERIFIED_OIDC_MEMBERSHIP_PLUS_BANK_DATABASE_PRINCIPAL",
+        "x-lifecycle-transition": [
+          "DRAFT",
+          "PENDING_REVIEW"
+        ],
+        "x-production-status": "BLOCKED_UNTIL_DOMAIN_ACCEPTANCE",
+        "parameters": [
+          {
+            "name": "bankId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "MUST match trusted bank membership; not an authority source"
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]+$"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitCandidate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Candidate receipt only: no financial or regulatory effect",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidateReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Fail-closed domain error"
+          },
+          "401": {
+            "description": "Fail-closed domain error"
+          },
+          "403": {
+            "description": "Fail-closed domain error"
+          },
+          "404": {
+            "description": "Fail-closed domain error"
+          },
+          "409": {
+            "description": "Fail-closed domain error"
+          },
+          "422": {
+            "description": "Fail-closed domain error"
+          },
+          "503": {
+            "description": "Fail-closed domain error"
+          }
+        }
+      }
+    },
+    "/v1/banks/{bankId}/sec/review-access-change": {
+      "post": {
+        "operationId": "sec_review_access_change",
+        "tags": [
+          "SEC"
+        ],
+        "summary": "Bank-scoped security entitlement requests — review-access-change",
+        "description": "Trusted bank-scoped candidate operation. Never posts funds, settles a payment, activates entitlement, publishes a regulatory return or enforces policy.",
+        "security": [
+          {
+            "oidc": [
+              "banking.write"
+            ]
+          }
+        ],
+        "x-domain-id": "SEC",
+        "x-required-permission": "sec.review-access-change",
+        "x-bank-authority": "SERVER_VERIFIED_OIDC_MEMBERSHIP_PLUS_BANK_DATABASE_PRINCIPAL",
+        "x-lifecycle-transition": [
+          "PENDING_REVIEW",
+          "REVIEWED_NOT_EFFECTIVE_OR_REJECTED"
+        ],
+        "x-production-status": "BLOCKED_UNTIL_DOMAIN_ACCEPTANCE",
+        "parameters": [
+          {
+            "name": "bankId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "MUST match trusted bank membership; not an authority source"
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]+$"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewCandidate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Candidate receipt only: no financial or regulatory effect",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidateReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Fail-closed domain error"
+          },
+          "401": {
+            "description": "Fail-closed domain error"
+          },
+          "403": {
+            "description": "Fail-closed domain error"
+          },
+          "404": {
+            "description": "Fail-closed domain error"
+          },
+          "409": {
+            "description": "Fail-closed domain error"
+          },
+          "422": {
+            "description": "Fail-closed domain error"
+          },
+          "503": {
+            "description": "Fail-closed domain error"
+          }
+        }
+      }
+    },
+    "/v1/banks/{bankId}/sec/candidates/{aggregateId}": {
+      "get": {
+        "operationId": "sec_get_candidate",
+        "security": [
+          {
+            "oidc": [
+              "banking.read"
+            ]
+          }
+        ],
+        "x-required-permission": "sec.candidate.read",
+        "parameters": [
+          {
+            "name": "bankId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "MUST match trusted bank membership; not an authority source"
+          },
+          {
+            "name": "aggregateId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bank-scoped candidate only",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidateReceipt"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Access denied"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "503": {
+            "description": "Backend not configured"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.example.invalid/.well-known/openid-configuration"
+      }
+    },
+    "schemas": {
+      "CreateCandidate": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "aggregateId",
+          "expectedVersion",
+          "subjectId",
+          "requestedBankRole",
+          "branchScopeIds",
+          "expiryDate",
+          "requestReason",
+          "segregationPolicyId"
+        ],
+        "properties": {
+          "aggregateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "expectedVersion": {
+            "type": "integer",
+            "const": 0
+          },
+          "subjectId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "requestedBankRole": {
+            "type": "string",
+            "enum": [
+              "bank_teller",
+              "bank_credit_officer",
+              "bank_auditor",
+              "bank_admin"
+            ]
+          },
+          "branchScopeIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "minItems": 1,
+            "maxItems": 50,
+            "uniqueItems": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "requestReason": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 240,
+            "pattern": "^[^\\u0000-\\u001f]+$"
+          },
+          "segregationPolicyId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "SubmitCandidate": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "aggregateId",
+          "expectedVersion",
+          "accessRiskAssessmentId"
+        ],
+        "properties": {
+          "aggregateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "expectedVersion": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 2147483647
+          },
+          "accessRiskAssessmentId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "ReviewCandidate": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "aggregateId",
+          "expectedVersion",
+          "securityApprovalEvidenceId",
+          "decision"
+        ],
+        "properties": {
+          "aggregateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "expectedVersion": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 2147483647
+          },
+          "securityApprovalEvidenceId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "ACCEPT",
+              "REJECT"
+            ]
+          }
+        }
+      },
+      "CandidateReceipt": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "bankId",
+          "aggregateId",
+          "domain",
+          "version",
+          "state",
+          "financialEffective",
+          "regulatorySubmissionEnabled"
+        ],
+        "properties": {
+          "bankId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "aggregateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "domain": {
+            "type": "string",
+            "const": "SEC"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "PENDING_REVIEW",
+              "REVIEWED_NOT_EFFECTIVE",
+              "REJECTED"
+            ]
+          },
+          "financialEffective": {
+            "type": "boolean",
+            "const": false
+          },
+          "regulatorySubmissionEnabled": {
+            "type": "boolean",
+            "const": false
+          },
+          "correlationId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "Problem": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "status",
+          "correlationId"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "minimum": 400,
+            "maximum": 599
+          },
+          "correlationId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    }
+  },
+  "x-statutory-approval": "NOT_VERIFIED",
+  "x-stage3-status": "FIELD_SPECIFIC_CANDIDATE_IMPLEMENTATION",
+  "x-dependencies": [
+    "ARC"
+  ]
+}

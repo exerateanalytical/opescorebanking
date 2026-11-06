@@ -1,0 +1,1284 @@
+{
+  "schema": "opes.stage3.25domain.v1",
+  "date": "2026-11-06",
+  "domainCount": 25,
+  "productionAccepted": false,
+  "domains": [
+    {
+      "id": "GOV",
+      "title": "Institution policy lifecycle",
+      "entity": "policy",
+      "actions": [
+        "draft-policy",
+        "submit-policy-review",
+        "review-policy"
+      ],
+      "fields": [
+        {
+          "name": "policyCode",
+          "type": "text"
+        },
+        {
+          "name": "policyRevision",
+          "type": "text"
+        },
+        {
+          "name": "effectiveFrom",
+          "type": "date"
+        },
+        {
+          "name": "ownerActorId",
+          "type": "uuid"
+        },
+        {
+          "name": "institutionClass",
+          "type": "enum:BANK,MFI,FINTECH"
+        },
+        {
+          "name": "legalEvidenceId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "policyValidationEvidenceId",
+      "reviewEvidence": "policyDecisionEvidenceId",
+      "dependsOn": [],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "ARC",
+      "title": "Versioned bounded-context contracts",
+      "entity": "contract",
+      "actions": [
+        "register-contract",
+        "submit-compatibility-review",
+        "review-contract"
+      ],
+      "fields": [
+        {
+          "name": "boundedContext",
+          "type": "text"
+        },
+        {
+          "name": "contractVersion",
+          "type": "text"
+        },
+        {
+          "name": "ownerDomain",
+          "type": "enum:GOV,SEC,CIF,PRD,ACT,LED,BRN,PAY,CRD,TRE,AML,REP,CHN,CARD,CRM,FEE,REC,DAT,API,INF,DR,ADM,TST,REL,ARC"
+        },
+        {
+          "name": "compatibilityMode",
+          "type": "enum:BACKWARD,FULL,NONE"
+        },
+        {
+          "name": "schemaDigest",
+          "type": "sha256"
+        },
+        {
+          "name": "architectureDecisionId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "compatibilityEvidenceId",
+      "reviewEvidence": "contractApprovalEvidenceId",
+      "dependsOn": [
+        "GOV"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "CIF",
+      "title": "Customer party onboarding and KYC",
+      "entity": "party",
+      "actions": [
+        "register-party",
+        "submit-kyc-review",
+        "review-kyc"
+      ],
+      "fields": [
+        {
+          "name": "partyType",
+          "type": "enum:INDIVIDUAL,LEGAL_ENTITY"
+        },
+        {
+          "name": "residenceCountry",
+          "type": "country"
+        },
+        {
+          "name": "identityEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "consentEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "riskTier",
+          "type": "enum:LOW,STANDARD,HIGH"
+        },
+        {
+          "name": "duplicateCheckEvidenceId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "kycEvidenceBundleId",
+      "reviewEvidence": "kycDecisionEvidenceId",
+      "dependsOn": [
+        "ARC",
+        "SEC"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "PRD",
+      "title": "Versioned banking product terms",
+      "entity": "product",
+      "actions": [
+        "draft-product",
+        "submit-product-validation",
+        "review-product"
+      ],
+      "fields": [
+        {
+          "name": "productCode",
+          "type": "text"
+        },
+        {
+          "name": "productType",
+          "type": "enum:CURRENT,SAVINGS,TERM_DEPOSIT,LOAN"
+        },
+        {
+          "name": "currency",
+          "type": "currency"
+        },
+        {
+          "name": "minOpeningMinor",
+          "type": "minor"
+        },
+        {
+          "name": "effectiveFrom",
+          "type": "date"
+        },
+        {
+          "name": "pricingPolicyId",
+          "type": "uuid"
+        },
+        {
+          "name": "interestRateBasisPoints",
+          "type": "int"
+        }
+      ],
+      "submitEvidence": "productTermsEvidenceId",
+      "reviewEvidence": "productApprovalEvidenceId",
+      "dependsOn": [
+        "ARC",
+        "CIF"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "ACT",
+      "title": "Account opening and lifecycle",
+      "entity": "account_request",
+      "actions": [
+        "draft-account-request",
+        "submit-account-checks",
+        "review-account-request"
+      ],
+      "fields": [
+        {
+          "name": "partyId",
+          "type": "uuid"
+        },
+        {
+          "name": "productRevisionId",
+          "type": "uuid"
+        },
+        {
+          "name": "currency",
+          "type": "currency"
+        },
+        {
+          "name": "kycApprovalEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "accountPurpose",
+          "type": "enum:PERSONAL,BUSINESS,TREASURY_INTERNAL"
+        },
+        {
+          "name": "mandateEvidenceId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "accountEligibilityEvidenceId",
+      "reviewEvidence": "accountDecisionEvidenceId",
+      "dependsOn": [
+        "PRD",
+        "LED",
+        "CIF"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "LED",
+      "title": "Immutable journal proposal validation",
+      "entity": "journal_proposal",
+      "actions": [
+        "draft-journal",
+        "submit-journal-validation",
+        "review-journal-proposal"
+      ],
+      "fields": [
+        {
+          "name": "journalReference",
+          "type": "text"
+        },
+        {
+          "name": "businessDate",
+          "type": "date"
+        },
+        {
+          "name": "postingRuleRevisionId",
+          "type": "uuid"
+        },
+        {
+          "name": "accountingPeriodId",
+          "type": "uuid"
+        },
+        {
+          "name": "journalLines",
+          "type": "journalLines"
+        },
+        {
+          "name": "sourceEventId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "doubleEntryValidationEvidenceId",
+      "reviewEvidence": "journalReviewEvidenceId",
+      "dependsOn": [
+        "ARC"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "BRN",
+      "title": "Cash drawer custody operations",
+      "entity": "cash_drawer",
+      "actions": [
+        "draft-drawer-session",
+        "submit-custody-review",
+        "review-cash-drawer"
+      ],
+      "fields": [
+        {
+          "name": "branchId",
+          "type": "uuid"
+        },
+        {
+          "name": "drawerId",
+          "type": "uuid"
+        },
+        {
+          "name": "cashierActorId",
+          "type": "uuid"
+        },
+        {
+          "name": "currency",
+          "type": "currency"
+        },
+        {
+          "name": "openingFloatMinor",
+          "type": "minor"
+        },
+        {
+          "name": "custodyEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "cashCountEvidenceId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "denominationCountEvidenceId",
+      "reviewEvidence": "dualCustodyReviewEvidenceId",
+      "dependsOn": [
+        "ACT",
+        "LED"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "PAY",
+      "title": "Payment instruction and rail uncertainty",
+      "entity": "payment_instruction",
+      "actions": [
+        "draft-payment-instruction",
+        "submit-payment-controls",
+        "review-payment-instruction"
+      ],
+      "fields": [
+        {
+          "name": "debtorAccountId",
+          "type": "uuid"
+        },
+        {
+          "name": "creditorReference",
+          "type": "text"
+        },
+        {
+          "name": "amountMinor",
+          "type": "minor"
+        },
+        {
+          "name": "currency",
+          "type": "currency"
+        },
+        {
+          "name": "railCandidate",
+          "type": "enum:INTERNAL,SIMULATED_GIMAC,SIMULATED_SYGMA"
+        },
+        {
+          "name": "beneficiaryVerificationId",
+          "type": "uuid"
+        },
+        {
+          "name": "purposeCode",
+          "type": "text"
+        }
+      ],
+      "submitEvidence": "sanctionsCheckEvidenceId",
+      "reviewEvidence": "paymentReviewEvidenceId",
+      "dependsOn": [
+        "ACT",
+        "LED",
+        "REC"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "CRD",
+      "title": "Loan underwriting and facility proposal",
+      "entity": "credit_proposal",
+      "actions": [
+        "draft-credit-proposal",
+        "submit-underwriting",
+        "review-credit-proposal"
+      ],
+      "fields": [
+        {
+          "name": "borrowerPartyId",
+          "type": "uuid"
+        },
+        {
+          "name": "principalMinor",
+          "type": "minor"
+        },
+        {
+          "name": "currency",
+          "type": "currency"
+        },
+        {
+          "name": "tenorMonths",
+          "type": "int"
+        },
+        {
+          "name": "productRevisionId",
+          "type": "uuid"
+        },
+        {
+          "name": "affordabilityEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "collateralEvaluationId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "creditRiskAssessmentId",
+      "reviewEvidence": "creditCommitteeDecisionId",
+      "dependsOn": [
+        "ACT",
+        "CIF",
+        "LED"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "TRE",
+      "title": "Treasury liquidity positions",
+      "entity": "liquidity_position",
+      "actions": [
+        "draft-liquidity-position",
+        "submit-liquidity-review",
+        "review-liquidity-position"
+      ],
+      "fields": [
+        {
+          "name": "positionReference",
+          "type": "text"
+        },
+        {
+          "name": "asOfDate",
+          "type": "date"
+        },
+        {
+          "name": "currency",
+          "type": "currency"
+        },
+        {
+          "name": "availableLiquidityMinor",
+          "type": "minor"
+        },
+        {
+          "name": "limitPolicyId",
+          "type": "uuid"
+        },
+        {
+          "name": "independentPositionProofId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "limitCheckEvidenceId",
+      "reviewEvidence": "treasuryApprovalEvidenceId",
+      "dependsOn": [
+        "LED",
+        "REC"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "AML",
+      "title": "Sanctions screening and AML cases",
+      "entity": "screening_case",
+      "actions": [
+        "draft-screening-case",
+        "submit-analyst-review",
+        "review-screening-case"
+      ],
+      "fields": [
+        {
+          "name": "subjectPartyId",
+          "type": "uuid"
+        },
+        {
+          "name": "screeningListVersion",
+          "type": "text"
+        },
+        {
+          "name": "matchScoreBasisPoints",
+          "type": "int"
+        },
+        {
+          "name": "caseType",
+          "type": "enum:SANCTIONS,PEP,TRANSACTION_MONITORING"
+        },
+        {
+          "name": "screeningEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "riskReasonCode",
+          "type": "text"
+        }
+      ],
+      "submitEvidence": "analystEvidenceId",
+      "reviewEvidence": "complianceDecisionEvidenceId",
+      "dependsOn": [
+        "CIF",
+        "ACT"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "REP",
+      "title": "Regulatory management report requests",
+      "entity": "report_request",
+      "actions": [
+        "draft-report-request",
+        "submit-report-reconciliation",
+        "review-report-request"
+      ],
+      "fields": [
+        {
+          "name": "reportDefinitionId",
+          "type": "uuid"
+        },
+        {
+          "name": "period",
+          "type": "month"
+        },
+        {
+          "name": "sourceRevisionId",
+          "type": "uuid"
+        },
+        {
+          "name": "calculationVersion",
+          "type": "text"
+        },
+        {
+          "name": "mappingVersion",
+          "type": "text"
+        },
+        {
+          "name": "dataLineageEvidenceId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "reconciliationEvidenceId",
+      "reviewEvidence": "reportApprovalEvidenceId",
+      "dependsOn": [
+        "LED",
+        "AML"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "CHN",
+      "title": "Digital banking channel enrollment",
+      "entity": "channel_enrollment",
+      "actions": [
+        "draft-channel-enrollment",
+        "submit-device-verification",
+        "review-channel-enrollment"
+      ],
+      "fields": [
+        {
+          "name": "customerPartyId",
+          "type": "uuid"
+        },
+        {
+          "name": "deviceBindingId",
+          "type": "uuid"
+        },
+        {
+          "name": "channelType",
+          "type": "enum:MOBILE,WEB,CORPORATE,AGENCY"
+        },
+        {
+          "name": "mfaPolicyId",
+          "type": "uuid"
+        },
+        {
+          "name": "consentEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "deviceRiskEvidenceId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "deviceAttestationId",
+      "reviewEvidence": "channelAuthorizationEvidenceId",
+      "dependsOn": [
+        "SEC",
+        "API",
+        "ACT"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "CARD",
+      "title": "Tokenized card request operations",
+      "entity": "card_request",
+      "actions": [
+        "draft-card-request",
+        "submit-card-controls",
+        "review-card-request"
+      ],
+      "fields": [
+        {
+          "name": "linkedAccountId",
+          "type": "uuid"
+        },
+        {
+          "name": "cardProductRevisionId",
+          "type": "uuid"
+        },
+        {
+          "name": "tokenRequestId",
+          "type": "uuid"
+        },
+        {
+          "name": "cardNetwork",
+          "type": "enum:VISA,MASTERCARD,GIMAC_CANDIDATE"
+        },
+        {
+          "name": "holderVerificationEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "processorAgreementRef",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "cardRiskReviewEvidenceId",
+      "reviewEvidence": "cardApprovalEvidenceId",
+      "dependsOn": [
+        "ACT",
+        "PAY"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "CRM",
+      "title": "Customer service case management",
+      "entity": "service_case",
+      "actions": [
+        "draft-service-case",
+        "submit-service-review",
+        "review-service-case"
+      ],
+      "fields": [
+        {
+          "name": "partyId",
+          "type": "uuid"
+        },
+        {
+          "name": "serviceCategory",
+          "type": "enum:COMPLAINT,INQUIRY,DISPUTE,REQUEST"
+        },
+        {
+          "name": "caseDescription",
+          "type": "text"
+        },
+        {
+          "name": "consentEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "priority",
+          "type": "enum:LOW,NORMAL,HIGH,URGENT"
+        },
+        {
+          "name": "channelReferenceId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "customerContactEvidenceId",
+      "reviewEvidence": "serviceResolutionEvidenceId",
+      "dependsOn": [
+        "CIF",
+        "CHN"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "FEE",
+      "title": "Product-linked fee schedules",
+      "entity": "fee_schedule",
+      "actions": [
+        "draft-fee-schedule",
+        "submit-fee-validation",
+        "review-fee-schedule"
+      ],
+      "fields": [
+        {
+          "name": "productRevisionId",
+          "type": "uuid"
+        },
+        {
+          "name": "feeCode",
+          "type": "text"
+        },
+        {
+          "name": "feeAmountMinor",
+          "type": "minor"
+        },
+        {
+          "name": "currency",
+          "type": "currency"
+        },
+        {
+          "name": "effectiveFrom",
+          "type": "date"
+        },
+        {
+          "name": "taxPolicyId",
+          "type": "uuid"
+        },
+        {
+          "name": "waiverPolicyId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "feeSimulationEvidenceId",
+      "reviewEvidence": "feeApprovalEvidenceId",
+      "dependsOn": [
+        "PRD",
+        "LED"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "REC",
+      "title": "Independent reconciliation and breaks",
+      "entity": "reconciliation_case",
+      "actions": [
+        "draft-reconciliation",
+        "submit-break-analysis",
+        "review-reconciliation"
+      ],
+      "fields": [
+        {
+          "name": "statementId",
+          "type": "uuid"
+        },
+        {
+          "name": "sourceRevisionId",
+          "type": "uuid"
+        },
+        {
+          "name": "ledgerRevisionId",
+          "type": "uuid"
+        },
+        {
+          "name": "currency",
+          "type": "currency"
+        },
+        {
+          "name": "expectedMinor",
+          "type": "minor"
+        },
+        {
+          "name": "observedMinor",
+          "type": "minor"
+        },
+        {
+          "name": "breakEvidenceId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "independentMatchEvidenceId",
+      "reviewEvidence": "reconciliationDecisionEvidenceId",
+      "dependsOn": [
+        "LED"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "SEC",
+      "title": "Bank-scoped security entitlement requests",
+      "entity": "membership_request",
+      "actions": [
+        "draft-membership-change",
+        "submit-access-review",
+        "review-access-change"
+      ],
+      "fields": [
+        {
+          "name": "subjectId",
+          "type": "uuid"
+        },
+        {
+          "name": "requestedBankRole",
+          "type": "enum:bank_teller,bank_credit_officer,bank_auditor,bank_admin"
+        },
+        {
+          "name": "branchScopeIds",
+          "type": "uuidList"
+        },
+        {
+          "name": "expiryDate",
+          "type": "date"
+        },
+        {
+          "name": "requestReason",
+          "type": "text"
+        },
+        {
+          "name": "segregationPolicyId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "accessRiskAssessmentId",
+      "reviewEvidence": "securityApprovalEvidenceId",
+      "dependsOn": [
+        "ARC"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "DAT",
+      "title": "Data retention and legal hold policy",
+      "entity": "retention_policy",
+      "actions": [
+        "draft-retention-policy",
+        "submit-privacy-review",
+        "review-retention-policy"
+      ],
+      "fields": [
+        {
+          "name": "classification",
+          "type": "enum:BANK_CONFIDENTIAL,PERSONAL,SPECIAL_CATEGORY,OPERATIONAL"
+        },
+        {
+          "name": "retentionUntil",
+          "type": "date"
+        },
+        {
+          "name": "legalBasisRef",
+          "type": "text"
+        },
+        {
+          "name": "legalHold",
+          "type": "bool"
+        },
+        {
+          "name": "disposalPolicyRef",
+          "type": "uuid"
+        },
+        {
+          "name": "dataOwnerActorId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "legalBasisEvidenceId",
+      "reviewEvidence": "privacyApprovalEvidenceId",
+      "dependsOn": [
+        "SEC",
+        "ARC"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "API",
+      "title": "Third-party API client onboarding",
+      "entity": "api_client_request",
+      "actions": [
+        "draft-api-client",
+        "submit-client-security-review",
+        "review-api-client"
+      ],
+      "fields": [
+        {
+          "name": "clientApplicationId",
+          "type": "uuid"
+        },
+        {
+          "name": "requestedScopes",
+          "type": "scopeList"
+        },
+        {
+          "name": "redirectUri",
+          "type": "uri"
+        },
+        {
+          "name": "ownerPartyId",
+          "type": "uuid"
+        },
+        {
+          "name": "credentialPolicyId",
+          "type": "uuid"
+        },
+        {
+          "name": "dataProcessingAgreementId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "apiSecurityAssessmentId",
+      "reviewEvidence": "clientApprovalEvidenceId",
+      "dependsOn": [
+        "SEC",
+        "ARC"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "INF",
+      "title": "Infrastructure health and key inventory",
+      "entity": "service_health_case",
+      "actions": [
+        "draft-service-health-case",
+        "submit-infrastructure-review",
+        "review-infrastructure-case"
+      ],
+      "fields": [
+        {
+          "name": "serviceId",
+          "type": "uuid"
+        },
+        {
+          "name": "environment",
+          "type": "enum:LAB,STAGING,PRODUCTION"
+        },
+        {
+          "name": "healthStatus",
+          "type": "enum:HEALTHY,DEGRADED,DOWN"
+        },
+        {
+          "name": "observedAt",
+          "type": "dateTime"
+        },
+        {
+          "name": "telemetryEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "runbookVersion",
+          "type": "text"
+        }
+      ],
+      "submitEvidence": "operationsAssessmentId",
+      "reviewEvidence": "infrastructureDecisionEvidenceId",
+      "dependsOn": [
+        "SEC"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "DR",
+      "title": "Business continuity exercise recording",
+      "entity": "recovery_exercise",
+      "actions": [
+        "draft-recovery-exercise",
+        "submit-restore-evidence",
+        "review-recovery-exercise"
+      ],
+      "fields": [
+        {
+          "name": "recoveryPlanId",
+          "type": "uuid"
+        },
+        {
+          "name": "targetRpoMinutes",
+          "type": "int"
+        },
+        {
+          "name": "targetRtoMinutes",
+          "type": "int"
+        },
+        {
+          "name": "restoreChecksum",
+          "type": "sha256"
+        },
+        {
+          "name": "exerciseDate",
+          "type": "date"
+        },
+        {
+          "name": "testEnvironmentId",
+          "type": "uuid"
+        },
+        {
+          "name": "restoreEvidenceId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "recoveryTimingEvidenceId",
+      "reviewEvidence": "drIndependentReviewEvidenceId",
+      "dependsOn": [
+        "INF"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "ADM",
+      "title": "Privileged administration requests",
+      "entity": "privileged_request",
+      "actions": [
+        "draft-privileged-request",
+        "submit-privileged-review",
+        "review-privileged-request"
+      ],
+      "fields": [
+        {
+          "name": "requesterActorId",
+          "type": "uuid"
+        },
+        {
+          "name": "privilegedAction",
+          "type": "enum:ROLE_CHANGE,POLICY_CHANGE,EMERGENCY_ACCESS,CONFIG_CHANGE"
+        },
+        {
+          "name": "resourceReference",
+          "type": "text"
+        },
+        {
+          "name": "justification",
+          "type": "text"
+        },
+        {
+          "name": "segregationPolicyId",
+          "type": "uuid"
+        },
+        {
+          "name": "securityIncidentEvidenceId",
+          "type": "uuid"
+        }
+      ],
+      "submitEvidence": "privilegeRiskEvidenceId",
+      "reviewEvidence": "privilegedApprovalEvidenceId",
+      "dependsOn": [
+        "SEC",
+        "GOV"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "TST",
+      "title": "Independent test and assurance evidence",
+      "entity": "test_run_request",
+      "actions": [
+        "draft-test-run",
+        "submit-test-evidence",
+        "review-test-run"
+      ],
+      "fields": [
+        {
+          "name": "testSuiteId",
+          "type": "uuid"
+        },
+        {
+          "name": "buildCommitDigest",
+          "type": "sha256"
+        },
+        {
+          "name": "testType",
+          "type": "enum:UNIT,INTEGRATION,SECURITY,RECOVERY,ACCESSIBILITY"
+        },
+        {
+          "name": "expectedAssertionCount",
+          "type": "int"
+        },
+        {
+          "name": "environmentId",
+          "type": "uuid"
+        },
+        {
+          "name": "testPlanRevision",
+          "type": "text"
+        }
+      ],
+      "submitEvidence": "testExecutionEvidenceId",
+      "reviewEvidence": "independentTestReviewEvidenceId",
+      "dependsOn": [
+        "ARC"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    },
+    {
+      "id": "REL",
+      "title": "Controlled software release candidates",
+      "entity": "release_candidate",
+      "actions": [
+        "draft-release-candidate",
+        "submit-release-gates",
+        "review-release-candidate"
+      ],
+      "fields": [
+        {
+          "name": "releaseId",
+          "type": "uuid"
+        },
+        {
+          "name": "artifactDigest",
+          "type": "sha256"
+        },
+        {
+          "name": "deploymentDate",
+          "type": "date"
+        },
+        {
+          "name": "rollbackPlanId",
+          "type": "uuid"
+        },
+        {
+          "name": "testEvidenceId",
+          "type": "uuid"
+        },
+        {
+          "name": "changeTicketId",
+          "type": "uuid"
+        },
+        {
+          "name": "targetEnvironment",
+          "type": "enum:LAB,STAGING,PRODUCTION"
+        }
+      ],
+      "submitEvidence": "deploymentReadinessEvidenceId",
+      "reviewEvidence": "releaseDecisionEvidenceId",
+      "dependsOn": [
+        "TST",
+        "INF"
+      ],
+      "lifecycle": [
+        "DRAFT",
+        "PENDING_REVIEW",
+        "REVIEWED_NOT_EFFECTIVE",
+        "REJECTED"
+      ],
+      "effects": "ALL_EXTERNAL_FINANCIAL_AND_REGULATORY_EFFECTS_DISABLED",
+      "implementation": "STAGE3_TYPED_CANDIDATE_NOT_PRODUCTION_ACCEPTED"
+    }
+  ]
+}
