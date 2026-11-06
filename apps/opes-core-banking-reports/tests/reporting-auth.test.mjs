@@ -26,7 +26,7 @@ test("Reject missing, unsigned, expired and wrongly scoped access tokens",async(
     {headers:{}},req(token({exp:1762389800})),req(token({aud:"wrong-aud"})),
     req(token({iss:"https://evil.test"})),req(token({}, {alg:"none"})),
     req(token({}, {jku:"https://evil.test/keys"})),req(token({}, {kid:"KID-999"})),
-    req(token().replace(/.$/,"A"))
+    req(token().replace(/\.[^.]+$/, sig => "."+(sig[1]==="A"?"B":"A")+sig.slice(2)))
   ])await assert.rejects(auth(request));
 });
 test("Membership authority ignores JWT bank assertion and enforces report-specific role",async()=>{
