@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {createBankScopedSessionRouter}
   from "../src/report-bank-session-router.js";
+process.env.NODE_ENV="test";
 const issuer="https://login.bank.invalid/realm/reporting",identity={
  subjectId:"ACTOR-A",issuer
 };
