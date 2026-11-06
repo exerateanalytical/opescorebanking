@@ -182,7 +182,15 @@ BEGIN
   INSERT INTO opes_stage3.candidate_registry(
    bank_id,domain_id,aggregate_id,maker_actor,version,state)
   VALUES(b.bank_id,p_domain,p_aggregate,b.actor_id,1,v_state);
-  v_payload=p_fields||jsonb_build_object(
+  -- Domain API contracts use camelCase, but typed SQL columns use
+  -- snake_case. Convert each validated domain field before populating the
+  -- record; do not let JSONB silently ignore unmatched field names.
+  v_payload='{}'::jsonb;
+  FOR v_field IN SELECT jsonb_object_keys(p_fields) LOOP
+   v_key=lower(regexp_replace(v_field,'([A-Z])','_\1','g'));
+   v_payload=v_payload||jsonb_build_object(v_key,p_fields->v_field);
+  END LOOP;
+  v_payload=v_payload||jsonb_build_object(
    'bank_id',b.bank_id::text,'aggregate_id',p_aggregate::text,
    'maker_actor',b.actor_id::text,'version',1,'state',v_state,
    'created_at',clock_timestamp(),'updated_at',clock_timestamp());
