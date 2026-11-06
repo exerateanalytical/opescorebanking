@@ -355,7 +355,7 @@ BEGIN
  r2=opes_core.read_review('REL','10000000-0000-4000-8000-000000000025','https://auth.opes.example/realm/ci','ops-checker-002',gen_random_uuid());
  IF r2->>'state'<>'REVIEWED_NOT_EFFECTIVE' THEN RAISE EXCEPTION 'REL_READ_FAILED';END IF;
  BEGIN
-  PERFORM opes_core.apply_review('GOV',0,'10000000-0000-4000-8000-000000000001',0,'OPES-REVIEW-CI-GOV-STAGE-0',jsonb_build_object('fakeField','bad'),NULL,NULL,'https://auth.opes.example/realm/ci','ops-poster-001',gen_random_uuid());
+  PERFORM opes_core.apply_review('GOV',0,'10000000-0000-4000-8000-000000000001',0,'OPES-REVIEW-CI-GOV-STAGE-0','{"policyCode":"OPES-MODIFIED-POLICY","policyRevision":"OPES-CI-REVIEW-ONLY","effectiveFrom":"2026-11-06","ownerActorId":"0e000000-0000-4000-8000-000000000300","institutionClass":"BANK","legalEvidenceId":"0e000000-0000-4000-8000-000000000300"}'::jsonb,NULL,NULL,'https://auth.opes.example/realm/ci','ops-poster-001',gen_random_uuid());
   RAISE EXCEPTION 'FORGED_PAYLOAD_REPLAY_ACCEPTED';
  EXCEPTION WHEN unique_violation THEN NULL; END;
  BEGIN
