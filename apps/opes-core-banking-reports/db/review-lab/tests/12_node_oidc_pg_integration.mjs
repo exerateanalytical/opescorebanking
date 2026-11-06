@@ -8,10 +8,10 @@
 import assert from "node:assert/strict";
 import {generateKeyPairSync,sign} from "node:crypto";
 import pg from "pg";
-import {createPinnedOidcAuthenticator} from "../../src/reporting-auth.js";
-import {createBankScopedSessionRouter} from "../../src/report-bank-session-router.js";
-import {createScopedPgReviewStore} from "../../src/report-pg-review-store.js";
-import {createReportReviewWorkflow} from "../../src/report-publication-controls.js";
+import {createPinnedOidcAuthenticator} from "../../../src/reporting-auth.js";
+import {createBankScopedSessionRouter} from "../../../src/report-bank-session-router.js";
+import {createScopedPgReviewStore} from "../../../src/report-pg-review-store.js";
+import {createReportReviewWorkflow} from "../../../src/report-publication-controls.js";
 process.env.NODE_ENV="test";
 const {Client}=pg;
 const issuer="https://id.example.test/realms/opes";
