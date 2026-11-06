@@ -5,12 +5,12 @@
  * backend teams and enforce bank credentials/RLS within the storage engine.
  */
 export const REPORT_SOURCE_DOMAINS=Object.freeze({
-  LEDGER:Object.freeze(["LED","FIN","ACT","REG","RSK"]),
+  LEDGER:Object.freeze(["LED","FIN","ACT","REG","RSK","BI"]),
   DEPOSITS:Object.freeze(["DEP","PRD","CIF","KYC"]),
-  PAYMENTS:Object.freeze(["PAY","CLR","CARD","DIG"]),
+  PAYMENTS:Object.freeze(["PAY","CLR","CARD","CHN"]),
   CREDIT:Object.freeze(["CRD","COL"]),
   TREASURY:Object.freeze(["TRE"]),
-  CASH:Object.freeze(["BRN","OPS","HR","ADM","SEC","AML","FRD","EDU"])
+  CASH:Object.freeze(["BRN","OPS","HR","ADM","AML","FRD","EDU","PRC"])
 });
 const routing=new Map(Object.entries(REPORT_SOURCE_DOMAINS).flatMap(
   ([name,groups])=>groups.map(code=>[code,name])
