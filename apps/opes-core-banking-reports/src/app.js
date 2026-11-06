@@ -36,7 +36,7 @@ function barChart(result){
 }
 function table(result,report){
  const cols=["Group","Records",...report.measures.map(x=>x.label)];
- return '<div class="table-scroll"><table><thead><tr>'+cols.map(x=>'<th>'+safe(x)+'</th>').join("")+'</tr></thead><tbody>'+result.rows.map(row=>'<tr><td>'+safe(row.dimensionValue)+'</td><td class="num">'+(row.suppressed?"Suppressed":safe(row.count))+'</td>'+report.measures.map(metric=>'<td class="num">'+(row.suppressed?"SUPPRESSED":safe(formatMetric(row.metrics[metric.id],metric,result.currency)))+'</td>').join("")+'</tr>').join("")+'</tbody></table></div>';
+ return '<p class="scroll-hint">Scroll horizontally to inspect additional metrics.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Report metrics table, horizontally scrollable"><table><thead><tr>'+cols.map(x=>'<th>'+safe(x)+'</th>').join("")+'</tr></thead><tbody>'+result.rows.map(row=>'<tr><td>'+safe(row.dimensionValue)+'</td><td class="num">'+(row.suppressed?"Suppressed":safe(row.count))+'</td>'+report.measures.map(metric=>'<td class="num">'+(row.suppressed?"SUPPRESSED":safe(formatMetric(row.metrics[metric.id],metric,result.currency)))+'</td>').join("")+'</tr>').join("")+'</tbody></table></div>';
 }
 function preview(report){
  const result=state.result;
@@ -70,6 +70,12 @@ function render(){
  document.querySelector("#group-select")?.addEventListener("change",e=>{state.group=e.target.value;render();});
  document.querySelector("#kind-select")?.addEventListener("change",e=>{state.kind=e.target.value;render();});
  document.querySelectorAll("[data-filter]").forEach(el=>el.addEventListener("change",e=>{state.filters[e.target.dataset.filter]=e.target.value;rerun(selected());render();}));
+ const list=document.querySelector(".report-list"),active=list?.querySelector(".report-link.active");
+ if(list&&active){const parentRect=list.getBoundingClientRect(),entryRect=active.getBoundingClientRect();
+  if(entryRect.top<parentRect.top)list.scrollTop-=parentRect.top-entryRect.top+9;
+  else if(entryRect.bottom>parentRect.bottom)list.scrollTop+=entryRect.bottom-parentRect.bottom+9;
+ }
+
 }
 document.addEventListener("click",e=>{
  const el=e.target.closest("[data-action],[data-report],[data-group],[data-tab]");if(!el)return;

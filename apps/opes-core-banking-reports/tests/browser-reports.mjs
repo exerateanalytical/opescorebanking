@@ -71,6 +71,8 @@ try{
    await page.setViewportSize({width,height:900});
    await page.goto(origin+"#/report/"+r.id,{waitUntil:"load"});
    await page.locator(".report-head").waitFor();
+   const inView=await page.evaluate(()=>{const list=document.querySelector(".report-list"),active=list?.querySelector(".report-link.active");if(!list||!active)return false;const x=active.getBoundingClientRect(),y=list.getBoundingClientRect();return x.top>=y.top-3&&x.bottom<=y.bottom+3;});
+   assert.equal(inView,true,"Selected report not visible in list "+code+" at "+width);
    const d=await page.evaluate(()=>({width:innerWidth,doc:document.documentElement.scrollWidth}));
    assert.ok(d.doc<=width+2,"Domain "+code+" overflow at "+width+" "+JSON.stringify(d));
    await page.screenshot({path:join(audit,"domain-"+code+"-"+width+".png"),fullPage:true});
