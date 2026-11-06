@@ -72,6 +72,15 @@ try{
   await page.locator('[data-action="save"]').first().click();
   await page.getByText(/LOCAL_DRAFT_NOT_SUBMITTED/).first().waitFor();
  }
+ const corporate=FORMS.find(f=>f.code==="CIF"&&f.fields.some(x=>x.id==="companyRegistry"));
+ await page.goto(origin+"#/form/"+corporate.id,{waitUntil:"load"});
+ if(corporate.previewRole!=="operator")await page.locator("#preview-role").selectOption(corporate.previewRole);
+ await page.locator('[data-action="sample"]').first().click();
+ assert.equal(await page.locator('fieldset[data-field-group="Legal entity"]').isVisible(),false);
+ await page.locator("select#main-partyType").selectOption("Legal entity");
+ assert.equal(await page.locator('fieldset[data-field-group="Legal entity"]').isVisible(),true);
+ await page.locator("select#main-partyType").selectOption("Individual");
+ assert.equal(await page.locator('fieldset[data-field-group="Legal entity"]').isVisible(),false);
  const journal=FORMS.find(f=>f.repeaters.some(r=>r.id==="journalLines"));
  await page.goto(origin+"#/form/"+journal.id,{waitUntil:"load"});
  if(journal.previewRole!=="operator")await page.locator("#preview-role").selectOption(journal.previewRole);

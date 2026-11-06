@@ -71,7 +71,7 @@ function renderGroups(form,editable){
  return groups.map(group=>{
   const fields=form.fields.filter(f=>f.section===group);
   if(!fields.length)return"";
-  return '<fieldset class="fieldset"><legend>'+escape(group)+'</legend><div class="field-grid">'+fields.map(f=>renderField(f,d.values[f.id],editable,"main-")).join("")+'</div></fieldset>';
+  return '<fieldset class="fieldset" data-field-group="'+escape(group)+'" '+(fields.some(f=>isVisible(f,d.values))?"":'hidden')+'><legend>'+escape(group)+'</legend><div class="field-grid">'+fields.map(f=>renderField(f,d.values[f.id],editable,"main-")).join("")+'</div></fieldset>';
  }).join("");
 }
 function renderRepeater(form,editable){
@@ -180,6 +180,9 @@ function updateConditions(){
   wrap.hidden=!visible;
   const control=wrap.querySelector("input,select,textarea");
   if(control){control.disabled=!visible||!perm.canEdit;control.required=visible&&f.required;}
+ }
+ for(const fieldset of root.querySelectorAll("[data-field-group]")){
+  fieldset.hidden=![...fieldset.querySelectorAll("[data-field-wrap]")].some(w=>!w.hidden);
  }
 }
 function clickHandler(event){
