@@ -109,8 +109,8 @@ public final class DomainCatalog {
             }
         }
         if (body.size() != allowed.size()) bad("MISSING_DOMAIN_FIELDS");
-        Iterator<String> names = body.fieldNames();
-        while (names.hasNext()) if (!allowed.contains(names.next())) bad("UNKNOWN_DOMAIN_FIELD");
+        for (String name : body.propertyNames())
+            if (!allowed.contains(name)) bad("UNKNOWN_DOMAIN_FIELD");
         return new Command(domainId, stage, aggregate, version,
                 stage == 0 ? collected.toString() : null, evidence, decision);
     }
@@ -201,9 +201,9 @@ public final class DomainCatalog {
         Set<UUID> accounts = new HashSet<>();
         for (JsonNode line : lines) {
             if (!line.isObject() || line.size()!=4) bad("INVALID_DRAFT_LINE");
-            Iterator<String> names = line.fieldNames();
-            while (names.hasNext()) if (!Set.of("accountId","side","amountMinor","currency").contains(names.next()))
-                bad("INVALID_DRAFT_LINE");
+            for (String name : line.propertyNames())
+                if (!Set.of("accountId","side","amountMinor","currency").contains(name))
+                    bad("INVALID_DRAFT_LINE");
             accounts.add(canonicalUuid(line.path("accountId")));
             JsonNode side = line.path("side");
             if (!side.isTextual() || !Set.of("DEBIT","CREDIT").contains(side.asText()))
