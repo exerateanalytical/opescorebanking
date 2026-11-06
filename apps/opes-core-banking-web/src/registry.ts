@@ -25,3 +25,27 @@ if(screens.length!==726||documents.length!==407||reports.length!==378||
 export const byScreen=new Map(screens.map(x=>[x.id,x]));
 export const byDocument=new Map(documents.map(x=>[x.id,x]));
 export const byReport=new Map(reports.map(x=>[x.id,x]));
+
+import manifests from "./generated/full-manifest.json";
+export type SourceField={id:string;label:string;type:string;required?:boolean;options?:string[];section?:string;group?:string};
+export type FormContract={id:string;screenId:string;domain:string;name:string;mode:string;fields:SourceField[];validationRules:unknown[];conditionalRules:unknown[];approvedForProduction:boolean};
+export type Blueprint={id:string;fields:SourceField[];status:string};
+export type DocumentDefinition={id:string;name:string;fields:SourceField[];family:string;approvedForProduction:boolean};
+export type ReportDefinition={id:string;title:string;allowedFilters:SourceField[];measures:{id:string;label?:string}[];approvedForProduction:boolean};
+const migrated=manifests as unknown as {
+  operationalBankingEnabled:boolean;
+  counts:{screens:number;forms:number;documents:number;reports:number};
+  blueprints:Record<string,Blueprint>;
+  forms:FormContract[];templates:DocumentDefinition[];reports:ReportDefinition[];
+};
+if(migrated.operationalBankingEnabled || migrated.forms.length!==726 ||
+ migrated.templates.length!==407 || migrated.reports.length!==378 ||
+ Object.keys(migrated.blueprints).length!==726)
+ throw new Error("Unreviewed frontend source manifest");
+export const formContracts:readonly FormContract[]=migrated.forms;
+export const screenBlueprints:Readonly<Record<string,Blueprint>>=migrated.blueprints;
+export const templateContracts:readonly DocumentDefinition[]=migrated.templates;
+export const reportContracts:readonly ReportDefinition[]=migrated.reports;
+export const formById=new Map(formContracts.map(f=>[f.id,f]));
+export const templateById=new Map(templateContracts.map(t=>[t.id,t]));
+export const reportContractById=new Map(reportContracts.map(r=>[r.id,r]));

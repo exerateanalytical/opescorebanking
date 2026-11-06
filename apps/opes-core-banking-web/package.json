@@ -6,7 +6,11 @@
   "scripts": {
     "build": "vite build",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test tests/registries.test.mjs"
+    "test": "node --experimental-strip-types --test tests/registries.test.mjs",
+    "generate": "node scripts/generate-manifests.mjs",
+    "prebuild": "npm run generate",
+    "pretypecheck": "npm run generate",
+    "pretest": "npm run generate"
   },
   "engines": {
     "node": ">=24"
