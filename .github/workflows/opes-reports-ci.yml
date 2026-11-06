@@ -31,6 +31,14 @@ jobs:
       - name: Export all 378 report specifications and synthetic outputs
         run: node scripts/export-all.mjs
         working-directory: apps/opes-core-banking-reports
+      - name: Generate fail-closed integration certification records
+        run: node scripts/export-integration-readiness.mjs
+        working-directory: apps/opes-core-banking-reports
+      - name: Verify 378 integration records and 3780 acceptance gates
+        run: |
+          test "$(find apps/opes-core-banking-reports/dist/integration-readiness -name 'RPT-*.json' | wc -l)" -eq 378
+          (cd apps/opes-core-banking-reports/dist/integration-readiness && sha256sum --check --quiet SHA256SUMS.txt)
+          node -e "const x=require('./apps/opes-core-banking-reports/dist/integration-readiness/summary.json');if(x.productionAccepted!==0||x.requiredEvidenceRecords!==3780||x.reportCount!==378||x.groups!==25)process.exit(1)"
       - name: Integrity and exact export count
         run: |
           test "$(find apps/opes-core-banking-reports/dist/definitions -name '*.json' | wc -l)" -eq 378

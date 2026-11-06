@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "export": "node scripts/export-all.mjs"
+    "export": "node scripts/export-all.mjs",
+    "export:integration": "node scripts/export-integration-readiness.mjs"
   }
 }

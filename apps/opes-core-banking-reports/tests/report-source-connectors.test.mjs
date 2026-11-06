@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import {REPORT_GROUPS} from "../src/report-seeds.js";
 import {REPORT_SOURCE_DOMAINS,createScopedDomainSnapshotReader}
   from "../src/report-source-connectors.js";
 const groupCodes={LEDGER:"LED",DEPOSITS:"DEP",PAYMENTS:"PAY",
@@ -17,6 +18,11 @@ test("Exactly six explicit source groups are supported",()=>{
   assert.deepEqual(Object.keys(REPORT_SOURCE_DOMAINS).sort(),
     ["CASH","CREDIT","DEPOSITS","LEDGER","PAYMENTS","TREASURY"]);
   assert.throws(()=>createScopedDomainSnapshotReader(),/CONNECTORS_NOT_CONFIGURED/);
+});
+test("Every one of 25 reporting groups is exactly once routed to a source domain",()=>{
+  const defined=REPORT_GROUPS.map(g=>g[0]).sort();
+  const routed=Object.values(REPORT_SOURCE_DOMAINS).flat().sort();
+  assert.deepEqual(routed,defined);
 });
 test("Read-only bank/branch/period/currency scoped contract for all six domains",async()=>{
   const read=createScopedDomainSnapshotReader({reports,sources:build()});
