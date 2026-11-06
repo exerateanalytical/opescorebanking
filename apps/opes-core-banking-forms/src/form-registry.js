@@ -55,7 +55,7 @@ const formChecks=[
  ["CRD-UI-002",conditional("borrowerType","eq","SME",["incomeEvidence"])],
  ["LED-UI-002",conditional("currency","neq","XAF",["postingPeriod"])]
 ];
-const explicitConditional=new Map(formChecks);
+const explicitConditional=new Map(formChecks.map(([id,condition])=>[id,[condition]]));
 const statusText={
  FILTER_ONLY:"Filter preview-only references. A bank-scoped query API is not connected.",
  READ_ONLY:"Inspect a synthetic record only. No edit or approval action is enabled.",
