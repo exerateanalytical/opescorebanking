@@ -19,8 +19,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Unit tests for 378 report contracts and safe metric formulas
-        run: node --test tests/reports.test.mjs
+      - name: All report, metric, and source security boundary tests
+        run: node --test tests/*.test.mjs
+        working-directory: apps/opes-core-banking-reports
+      - name: Check source readiness boundary syntax
+        run: node --check src/report-source-preflight.js
         working-directory: apps/opes-core-banking-reports
       - name: Check UI module syntax
         run: node --check src/app.js
