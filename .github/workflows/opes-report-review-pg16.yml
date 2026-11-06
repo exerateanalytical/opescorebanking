@@ -38,6 +38,16 @@ jobs:
         env:
           PGPASSWORD: postgres
         run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/002_scope_introspection.sql
+      - name: Seed disposable OIDC-to-Postgres application test record
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/003_app_integration_fixture.sql
+      - name: Install node-postgres for isolated database integration
+        run: npm install --no-save --ignore-scripts pg@8.16.3
+        working-directory: apps/opes-core-banking-reports
+      - name: Verify signed OIDC token to dedicated bank DB login and maker-checker
+        run: node db/review-lab/tests/12_node_oidc_pg_integration.mjs
+        working-directory: apps/opes-core-banking-reports
       - name: Verify Bank A maker, replay denial, atomic audit rollback
         env:
           PGPASSWORD: only_disposable_a_maker
