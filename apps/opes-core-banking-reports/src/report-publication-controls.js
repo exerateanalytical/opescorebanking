@@ -19,7 +19,7 @@ export function createReportReviewWorkflow({authenticate,authorize,store}={}){
     const actor=await authenticate(requestContext);
     if(!actor||actor.verified!==true||!id(actor.subjectId))
       fail("AUTHENTICATION_REQUIRED");
-    const draft=await store.loadDraft(reportId);
+    const draft=await store.loadDraft(reportId,{principal:actor});
     if(!draft||draft.reportId!==reportId||!id(draft.institutionId)||
       !id(draft.makerId)||!id(draft.contentDigest)||
       !Number.isSafeInteger(draft.version)||draft.version<0)
@@ -40,7 +40,7 @@ export function createReportReviewWorkflow({authenticate,authorize,store}={}){
     const changed=await store.transitionWithAudit(Object.freeze({
       reportId,expectedVersion:draft.version,expectedState:draft.state,
       institutionId:draft.institutionId,contentDigest:draft.contentDigest,
-      actorId:actor.subjectId,nextState:next,auditEvent:
+      actorId:actor.subjectId,principal:actor,nextState:next,auditEvent:
         action==="SUBMIT"?"REPORT_REVIEW_SUBMITTED":"REPORT_REVIEW_CHECKED"
     }));
     if(changed!==true)fail("WORKFLOW_CONFLICT_OR_AUDIT_FAILURE");

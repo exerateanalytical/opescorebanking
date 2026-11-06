@@ -34,6 +34,10 @@ jobs:
         env:
           PGPASSWORD: postgres
         run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/001_schema.sql
+      - name: Expose scoped SQL session identity before role-specific tests
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/002_scope_introspection.sql
       - name: Verify Bank A maker, replay denial, atomic audit rollback
         env:
           PGPASSWORD: only_disposable_a_maker
