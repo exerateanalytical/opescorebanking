@@ -36,7 +36,8 @@ test("Cross-bank, branch, FX and unreconciled source responses all denied",async
   for(const change of [
     {institutionId:"BANK-B"},{branchIds:["BR-B"]},{currency:"USD"},
     {period:"2026-10"},{immutable:false},{reconciled:false},
-    {accessToken:"SECRET"},{bankRows:[{client:"no"}]}
+    {accessToken:"SECRET"},{bankRows:[{client:"no"}]},
+    {rows:[{customer:"PII"}]},{roles:["admin"]}
   ]){
     const read=createScopedDomainSnapshotReader({reports,sources:build(change)});
     await assert.rejects(read(criteria(mk("LED"))));

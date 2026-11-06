@@ -24,7 +24,7 @@ test("Reject missing, unsigned, expired and wrongly scoped access tokens",async(
   const auth=createPinnedOidcAuthenticator(config);
   for(const request of [
     {headers:{}},req(token({exp:1762389800})),req(token({aud:"wrong-aud"})),
-    req(token({iss:"https://evil.test"})),req(token({}, {alg:"none"})),
+    req(token({iss:"https://evil.test"})),req(token({}, {alg:"none"})),req(token({}, {typ:"JWT"})),
     req(token({}, {jku:"https://evil.test/keys"})),req(token({}, {kid:"KID-999"})),
     req(token().replace(/\.[^.]+$/, sig => "."+(sig[1]==="A"?"B":"A")+sig.slice(2)))
   ])await assert.rejects(auth(request));

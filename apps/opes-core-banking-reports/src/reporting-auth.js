@@ -39,7 +39,8 @@ export function createPinnedOidcAuthenticator({issuer,audience,trustedKeys,now=f
     const chunks=compact.split(".");
     if(chunks.length!==3||!chunks.every(b64))deny("INVALID_TOKEN");
     const [h,p,s]=chunks,header=decode(h),claims=decode(p);
-    if(header.typ!=="at+jwt"&&header.typ!=="JWT")deny("INVALID_TOKEN");
+    if(header.typ!=="at+jwt"&&!(header.typ==="JWT"&&claims.token_use==="access"))
+      deny("INVALID_TOKEN");
     if(header.crit!==undefined||header.jku!==undefined||header.jwk!==undefined||
        header.x5u!==undefined||header.x5c!==undefined)deny("UNTRUSTED_TOKEN_HEADER");
     if(!["RS256","EdDSA"].includes(header.alg)||!validId(header.kid))

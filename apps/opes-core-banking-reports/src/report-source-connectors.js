@@ -54,9 +54,14 @@ export function createScopedDomainSnapshotReader({reports,sources}={}){
       snapshot.sourceDomain!==domain)
       reject("SOURCE_SCOPE_OR_RECONCILIATION_FAILED");
     // Source credentials and raw observations remain with the source backend.
-    const prohibited=["accessToken","clientSecret","bankRows","customerData","credentials"];
-    if(prohibited.some(k=>Object.hasOwn(snapshot,k)))
+    // Only signed-manifest metadata can cross this boundary. A raw source
+    // adapter must NEVER pass client or bank data to the readiness handler.
+    const permitted=new Set(["reportId","reportVersion","institutionId","branchIds",
+      "period","currency","sourceDomain","immutable","reconciled",
+      "snapshotId","sourceSystem","sourceRevision","mappingVersion",
+      "reconciliationRef","digest","keyId","signature"]);
+    if(Object.keys(snapshot).some(k=>!permitted.has(k)))
       reject("UNSAFE_SOURCE_PAYLOAD");
-    return snapshot;
+    return Object.freeze({...snapshot,branchIds:Object.freeze([...snapshot.branchIds])});
   };
 }
