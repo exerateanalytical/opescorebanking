@@ -1,0 +1,73 @@
+name: OPES Core Banking - 378 report prototype verification
+on:
+  push:
+    paths:
+      - 'apps/opes-core-banking-reports/**'
+      - '.github/workflows/opes-reports-ci.yml'
+  pull_request:
+    paths:
+      - 'apps/opes-core-banking-reports/**'
+      - '.github/workflows/opes-reports-ci.yml'
+permissions:
+  contents: read
+jobs:
+  report-registry-and-packaging:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit tests for 378 report contracts and safe metric formulas
+        run: node --test tests/reports.test.mjs
+        working-directory: apps/opes-core-banking-reports
+      - name: Check UI module syntax
+        run: node --check src/app.js
+        working-directory: apps/opes-core-banking-reports
+      - name: Export all 378 report specifications and synthetic outputs
+        run: node scripts/export-all.mjs
+        working-directory: apps/opes-core-banking-reports
+      - name: Integrity and exact export count
+        run: |
+          test "$(find apps/opes-core-banking-reports/dist/definitions -name '*.json' | wc -l)" -eq 378
+          test "$(find apps/opes-core-banking-reports/dist/synthetic-csv -name '*.csv' | wc -l)" -eq 378
+          test "$(find apps/opes-core-banking-reports/dist/print-specimens -name '*.html' | wc -l)" -eq 378
+          (cd apps/opes-core-banking-reports/dist && sha256sum --check --quiet SHA256SUMS.txt)
+      - name: Package verified source, report specifications and specimens
+        run: zip -q -r OPES_Core_Banking_378_Reporting_Prototype.zip apps/opes-core-banking-reports -x 'apps/opes-core-banking-reports/node_modules/*' 'apps/opes-core-banking-reports/audit/*'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OPES-378-reporting-source-and-specimens
+          path: OPES_Core_Banking_378_Reporting_Prototype.zip
+  browser-report-audit:
+    if: github.event_name == 'push'
+    needs: report-registry-and-packaging
+    runs-on: ubuntu-latest
+    timeout-minutes: 17
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser runtime
+        run: npm install --no-save playwright@1.55.1
+        working-directory: apps/opes-core-banking-reports
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+        working-directory: apps/opes-core-banking-reports
+      - name: Create print specimens
+        run: node scripts/export-all.mjs
+        working-directory: apps/opes-core-banking-reports
+      - name: Start local-only static server
+        run: (python3 -m http.server 8770 --bind 127.0.0.1 > /tmp/opes-reports-http.log 2>&1 &)
+      - name: Audit report routes, viewports, filters, exports, PDF rendering
+        run: node tests/browser-reports.mjs
+        working-directory: apps/opes-core-banking-reports
+      - name: Upload audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: OPES-378-reporting-visual-evidence
+          path: apps/opes-core-banking-reports/audit/*
+          if-no-files-found: ignore
