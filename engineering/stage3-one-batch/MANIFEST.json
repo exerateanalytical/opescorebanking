@@ -38,5 +38,12 @@
   "artifactStatus": "CANDIDATE_EXECUTABLE_NOT_PRODUCTION_READY",
   "missingWorkPackages": "UNKNOWN_UNTIL_COMPLETE_WBS_RECONCILIATION",
   "supersedesExistingFiles": false,
-  "referenceCommit": "c93f72216734a210c32a96eb63c55f6cde70d390"
+  "referenceCommit": "c93f72216734a210c32a96eb63c55f6cde70d390",
+  "durableCandidateCommandCount": 75,
+  "durableAuditRecordCount": 75,
+  "inertOutboxEventCount": 75,
+  "postgresqlIntegrationRunPassed": 42164455541,
+  "postgresqlIntegrationEvidenceUrl": "https://github.com/exerateanalytical/opescorebanking/actions/runs/42164455541",
+  "activeSourceSystemConnectors": 0,
+  "mode": "SYNTHETIC_ALL_25_EXPLICIT_PRODUCTION_BLOCKERS"
 }
