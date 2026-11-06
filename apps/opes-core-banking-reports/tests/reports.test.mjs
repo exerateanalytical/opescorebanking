@@ -86,7 +86,7 @@ test("Small-group suppression removes counts, group names, row details and total
 });
 test("Zero denominator yields null instead of fabricated portfolio quality",()=>{
  const par=byTitle("Portfolio at Risk 30 Days");
- const rows=syntheticRows(par,{count:12}).map(x=>({...x,currency:"XAF",amountMinor:0}));
+ const rows=syntheticRows(par,{count:12}).map(x=>({...x,period:"2026-11",currency:"XAF",amountMinor:0}));
  const out=executeReport(par,rows,{currency:"XAF"});assert.equal(out.totals.PAR30,null);
  const empty=executeReport(par,[],{currency:"XAF"});assert.equal(empty.recordCount,0);assert.equal(empty.rows.length,0);
 });

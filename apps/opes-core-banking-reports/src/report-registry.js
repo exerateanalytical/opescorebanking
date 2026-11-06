@@ -114,7 +114,7 @@ function blueprint(code,owner,group,name,index){
   visual:layout,grain:groupBy,dimensions:dims,
   measures:measures.map(m=>({...m,calculationStatus:"PREVIEW_IMPLEMENTED_SYNTHETIC_ONLY"})),
   defaultFilters:["period",groupBy==="period"?"branch":groupBy].filter((x,i,a)=>a.indexOf(x)===i),
-  allowedFilters: [...new Set(["period",...dims,"minDaysPastDue"])].map(x=>INPUTS[x]),
+  allowedFilters: [...new Set(["period","currency",...dims,"minDaysPastDue"])].map(x=>INPUTS[x]),
   dataModel:{source:"SYNTHETIC_ONLY",fixtureCode:"DEMO",currencyPolicy:"ONE_CURRENCY_PER_REPORT_RESULT",timezone:"Africa/Douala",institutionScope:"DEMO-BANK-ONLY",recordVersion:"SYNTHETIC-V1"},
   sourceRequirements:{...strictSource,authoritativeOwner:owner,needLegalEffectiveText:regulated},
   privacy:{classification:code==="HR"?"HR_RESTRICTED":confidential?"CONFIDENTIAL":"INTERNAL",
