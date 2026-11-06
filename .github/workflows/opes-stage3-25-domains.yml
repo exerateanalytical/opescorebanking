@@ -44,6 +44,12 @@ jobs:
           for file in engineering/stage3-one-batch/db/[A-Z]*.sql; do
             psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -f "$file"
           done
+      - name: Install bank-candidate durable command SQL and checker scope
+        env:
+          PGPASSWORD: postgres
+        run: |
+          psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/100_durable_command_core.sql
+          psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/101_checker_scope_grant.sql
       - name: Seed 50 synthetic two-bank domain records
         env:
           PGPASSWORD: postgres
@@ -60,6 +66,16 @@ jobs:
         env:
           PGPASSWORD: only_disposable_stage3_unbound
         run: psql -h 127.0.0.1 -U opes_s3_unbound_lab -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/tests/004_role_unbound.sql
+      - name: Install node-postgres disposable integration dependency
+        working-directory: engineering/stage3-one-batch
+        run: npm install --no-save --ignore-scripts pg@8.16.3
+      - name: Exercise 25 signed identity-to-database candidate workflows
+        working-directory: engineering/stage3-one-batch
+        run: NODE_ENV=test node db/tests/006_pg_25_domain_integration.mjs
+      - name: Verify exactly 75 durable commands, audit events and inert outbox rows
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/tests/005_verify_durable.sql
       - name: Verify SQL role policy and 25 per-domain table structures
         env:
           PGPASSWORD: postgres

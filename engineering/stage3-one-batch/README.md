@@ -42,3 +42,9 @@ GitHub Actions workflow: \`.github/workflows/opes-stage3-25-domains.yml\` applie
 ## Next work without duplicate screens/forms
 
 The immutable financial posting and recovery P0 in \`SEC-TENANT-ROUTING-001\` must be closed with source-grounded executable evidence before activation. Contract snapshots should be reconciled with the existing screens/form/report PRs, not copy screen prototypes into backend implementation.
+
+## Extended PostgreSQL integration checkpoint (same Stage 3 batch)
+
+`db/100_durable_command_core.sql` adds a lab-only actor-bound command path spanning all 25 typed domain tables, with current authenticated DB login mapped to one bank and actor, versioned atomic state transitions, idempotency registry, immutable audit, and an inert candidate outbox. An independent checker can review but cannot create/submit; maker cannot self-review. Database privileges forbid direct table writes. `src/pg-candidate-store.mjs` exposes a scoped Postgres driver adapter for the existing services. `db/tests/006_pg_25_domain_integration.mjs` integrates ephemeral signed Ed25519 test JWTs with all 25 durable SQL transitions and checks 75 commands, 75 audit entries and 75 undelivered candidate outbox rows.
+
+**This does not make the Stage 3 financial and regulatory domain services complete or deployable.** Candidates remain non-effective, do not change customer balances or entitlements, and do not implement external payment settlement or live control data. Trust routing and source custody must be independently production implemented and accepted.
