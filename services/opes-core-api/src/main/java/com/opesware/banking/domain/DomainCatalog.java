@@ -196,7 +196,7 @@ public final class DomainCatalog {
     }
 
     private static void requireBalancedCandidateLines(JsonNode lines) {
-        if (!lines.isArray() || lines.size()<2 || lines.size()>500) bad("INVALID_DRAFT_JOURNAL");
+        if (!lines.isArray() || lines.size()<2 || lines.size()>200) bad("INVALID_DRAFT_JOURNAL");
         Map<String,BigInteger> perCurrency = new HashMap<>();
         Set<UUID> accounts = new HashSet<>();
         for (JsonNode line : lines) {

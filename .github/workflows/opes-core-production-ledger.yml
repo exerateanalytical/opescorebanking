@@ -99,3 +99,7 @@ jobs:
         env:
           PGPASSWORD: only_ci_opes_bank_a
         run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/007_revocation_denial.sql
+      - name: Revoked bank actor cannot read or replay any domain review
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/013_revoked_domain_actor.sql

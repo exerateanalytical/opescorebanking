@@ -175,7 +175,7 @@ CREATE TABLE opes_core.review_led (
   business_date date NOT NULL,
   posting_rule_revision_id uuid NOT NULL,
   accounting_period_id uuid NOT NULL,
-  journal_lines jsonb CHECK(jsonb_typeof(journal_lines)='array' AND jsonb_array_length(journal_lines) BETWEEN 2 AND 500) NOT NULL,
+  journal_lines jsonb CHECK(jsonb_typeof(journal_lines)='array' AND jsonb_array_length(journal_lines) BETWEEN 2 AND 200) NOT NULL,
   source_event_id uuid NOT NULL,
   PRIMARY KEY(bank_id,aggregate_id),
   FOREIGN KEY(bank_id,domain_id,aggregate_id) REFERENCES opes_core.review_case(bank_id,domain_id,aggregate_id)
