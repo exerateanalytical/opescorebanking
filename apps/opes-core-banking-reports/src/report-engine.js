@@ -64,7 +64,7 @@ function subset(rows,filters){
   return true;
  });
 }
-const suppressed=(value,size)=>({dimensionValue:String(value),count:size,suppressed:true,metrics:null});
+const suppressed=(value,size)=>({dimensionValue:"SUPPRESSED GROUP",count:null,suppressed:true,metrics:null});
 export function executeReport(report,records,filters={currency:"XAF"},opts={}){
  verify(report,records,filters);
  if(opts.authoritative===true||opts.sourceMode&&opts.sourceMode!=="synthetic")throw Error("No trusted bank query engine is connected");
@@ -88,7 +88,7 @@ export function executeReport(report,records,filters={currency:"XAF"},opts={}){
  });
  // Sum across different currencies is only safe when they have been explicitly
  // selected individually; a by-currency table may not publish a total amount.
- const totals=currencies.length>1?null:Object.fromEntries(report.measures.map(m=>[m.id,metricsFor(selected)[m.id]]));
+ const totals=currencies.length>1||rows.some(r=>r.suppressed)?null:Object.fromEntries(report.measures.map(m=>[m.id,metricsFor(selected)[m.id]]));
  const issues=[];
  if(rows.some(r=>r.suppressed))issues.push("Rows with fewer than "+threshold+" observations suppressed for confidentiality");
  if(currencies.length>1)issues.push("No aggregate monetary total across currencies");
@@ -111,7 +111,7 @@ export function formatMetric(value,metric,currency="XAF"){
 export function csvReport(report,result){
  if(result?.source!=="SYNTHETIC_ONLY"||result?.reportId!==report.id)throw Error("Only synthetic reports can export");
  const cols=["Group","Observations",...report.measures.map(m=>m.label)];
- const q=value=>{const s=String(value??"");return /[,"\n]/.test(s)?'"'+s.replaceAll('"','""')+'"':s};
+ const q=value=>{let s=String(value??"");if(/^\s*[=+@-]/.test(s)&&!/^[-]?[0-9]+(?:\.[0-9]+)?$/.test(s))s="'"+s;return /[,"\n]/.test(s)?'"'+s.replaceAll('"','""')+'"':s};
  const output=[["SYNTHETIC SPECIMEN — NOT A BANK/REGULATORY REPORT"],["Report",report.id,report.title],["Snapshot",result.asOf],cols];
  for(const row of result.rows)output.push([row.dimensionValue,row.count,...report.measures.map(m=>row.suppressed?"SUPPRESSED":row.metrics[m.id]??"N/A")]);
  return output.map(row=>row.map(q).join(",")).join("\n")+"\n";

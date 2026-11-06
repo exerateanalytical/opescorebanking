@@ -100,7 +100,7 @@ const roles={
 function blueprint(code,owner,group,name,index){
  const id="RPT-"+code+"-"+String(index+1).padStart(3,"0");
  const layout=classify(name,code),dims=dimensions(name,code,layout),measures=metrics(name,code,layout);
- const groupBy=layout==="TIMESERIES"?"period":dims.includes("branch")?"branch":dims[0];
+ const groupBy=/currency|foreign exchange|FX/i.test(name)&&dims.includes("currency")?"currency":layout==="TIMESERIES"?"period":dims.includes("branch")?"branch":dims[0];
  const confidential=CONFIDENTIAL.has(code)||/investigat|case|staff|employee|customer identity|client/i.test(name);
  const regulated=code==="REG"||/regulatory|supervisory|prudential|COBAC|BEAC|SYSTAC|SYGMA/i.test(name);
  const relevant=regulated?
