@@ -17,8 +17,8 @@ function items(groups:readonly Group[],kind:string):readonly Item[]{
  if(new Set(results.map(x=>x.id)).size!==results.length)throw new Error("Duplicate registry IDs");
  return results;
 }
-export const documents=items(TEMPLATE_GROUPS as readonly Group[],"DOC");
-export const reports=items(REPORT_GROUPS as readonly Group[],"RPT");
+export const documents=items(TEMPLATE_GROUPS as unknown as readonly Group[],"DOC");
+export const reports=items(REPORT_GROUPS as unknown as readonly Group[],"RPT");
 if(screens.length!==726||documents.length!==407||reports.length!==378||
  SCREEN_BASELINE.state!=="UI_ROUTE_SCAFFOLD_NOT_PRODUCTION")
  throw new Error("Source registry changed without approval");
