@@ -89,9 +89,9 @@
   "security_active_wp": {
     "id": "SEC-TENANT-ROUTING-001",
     "status": "IN_PROGRESS_BLOCKED_FROM_PRODUCTION",
-    "latest_review": "governance/reviews/SEC-TENANT-ROUTING-001_FORMAL_ORDERING_MODEL_06_2026-11-04.md",
+    "latest_review": "governance/reviews/SEC-TENANT-ROUTING-001_EVIDENCE_GATE_08_2026-11-06.md",
     "architectural_decision": "governance/decisions/ADR-OPES-003-BANK_LOCAL_AUTHORIZATION_FENCE.md",
-    "review_number": 6,
+    "review_number": 8,
     "p0": [
       "P0-SEC-01",
       "P0-SEC-02"
@@ -104,7 +104,8 @@
     "bank_local_lab_checkpoint": "SEC-LED-LAB-004",
     "bank_local_lab_ci_run": 41942320193,
     "cross_session_lab_checkpoint": "SEC-LED-LAB-005",
-    "cross_session_lab_ci_run": 41943269917
+    "cross_session_lab_ci_run": 41943269917,
+    "review_pointer_reconciled_from_commit": "699388f364f0bbb64e040594f73104564053ef8b"
   },
   "active_engineering_evidence_checkpoint": {
     "id": "ENG-REMEDIATION-001",
