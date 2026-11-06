@@ -1,7 +1,7 @@
 # OPES Core Banking production-source deployment runbook
 
 ## Build
-- JDK **21** and Maven 3.9+, pinned Spring Boot **4.1.2**: `mvn -B -ntp clean verify`.
+- JDK **25 LTS** and Maven 3.9+, pinned Spring Boot **4.1.2**: `mvn -B -ntp clean verify`.
 - The server fails startup unless `OPES_OIDC_ISSUER`, `OPES_OIDC_JWKS_URI`, `OPES_OIDC_AUDIENCE`, and `OPES_BANK_CREDENTIALS_FILE` are configured.
 - No default customer, bank, permission, app-role, TLS bypass, or payment-rail simulator exists.
 - Endpoints: `POST /v1/banks/{bankId}/ledger/journals` and `GET /v1/banks/{bankId}/ledger/commands/{commandId}`. Exact `Idempotency-Key` UUID header must equal `commandId` payload. Commands never represent external settlement.

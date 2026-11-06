@@ -1,4 +1,4 @@
-name: OPES Core Banking - Production Java 21 Ledger Service
+name: OPES Core Banking - Production Java 25 Ledger Service
 on:
   push:
     paths:
@@ -33,7 +33,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '21'
+          java-version: '25'
           cache: maven
           cache-dependency-path: services/opes-core-api/pom.xml
       - name: Compile and test production application code

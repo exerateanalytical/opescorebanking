@@ -6,7 +6,7 @@ Decision authority: OPESWARE owner directive “Now production. We must use prod
 Source baseline: `main` 237f9b59e0c9e54ae0d4fe8d0c43de3516e0174f.
 
 ## Decision
-- Core backend: **Java 21** on **Spring Boot 4.1.2**, maintained as a modular monolith with DDD ownership and API-first contracts. One bounded-context ledger posting slice is implemented first, not 25 generic microservices.
+- Core backend: **Java 25 LTS** on **Spring Boot 4.1.2**, maintained as a modular monolith with DDD ownership and API-first contracts. One bounded-context ledger posting slice is implemented first, not 25 generic microservices.
 - Data: **PostgreSQL 16+** with institution-scoped authenticated database principals, strong constraints, exact minor-unit arithmetic, immutable postings, transactions, explicit outbox and independent actor authorization.
 - Identity: OIDC access tokens with validated issuer, expected audience, algorithm allowlist, configured issuer/JWKS, then bank-local authorization **inside** the posting transaction.
 - Deployment: External identity, per-bank database credentials, owner-only mounted secret file, TLS certificate verification, separate migration and runtime duties. Production application does not bootstrap users/approve commands/seed fake accounts.
