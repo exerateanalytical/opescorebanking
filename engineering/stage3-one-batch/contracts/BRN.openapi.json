@@ -1,0 +1,589 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OPES Banking Stage 3 — Cash drawer custody operations",
+    "version": "0.1.0-candidate",
+    "description": "Typed draft API. Bank tenant authority comes from authenticated backend. Not deployment-approved."
+  },
+  "servers": [
+    {
+      "url": "https://api.example.invalid"
+    }
+  ],
+  "tags": [
+    {
+      "name": "BRN",
+      "description": "Cash drawer custody operations"
+    }
+  ],
+  "paths": {
+    "/v1/banks/{bankId}/brn/draft-drawer-session": {
+      "post": {
+        "operationId": "brn_draft_drawer_session",
+        "tags": [
+          "BRN"
+        ],
+        "summary": "Cash drawer custody operations — draft-drawer-session",
+        "description": "Trusted bank-scoped candidate operation. Never posts funds, settles a payment, activates entitlement, publishes a regulatory return or enforces policy.",
+        "security": [
+          {
+            "oidc": [
+              "banking.write"
+            ]
+          }
+        ],
+        "x-domain-id": "BRN",
+        "x-required-permission": "brn.draft-drawer-session",
+        "x-bank-authority": "SERVER_VERIFIED_OIDC_MEMBERSHIP_PLUS_BANK_DATABASE_PRINCIPAL",
+        "x-lifecycle-transition": [
+          "NONE",
+          "DRAFT"
+        ],
+        "x-production-status": "BLOCKED_UNTIL_DOMAIN_ACCEPTANCE",
+        "parameters": [
+          {
+            "name": "bankId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "MUST match trusted bank membership; not an authority source"
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]+$"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCandidate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Candidate receipt only: no financial or regulatory effect",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidateReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Fail-closed domain error"
+          },
+          "401": {
+            "description": "Fail-closed domain error"
+          },
+          "403": {
+            "description": "Fail-closed domain error"
+          },
+          "404": {
+            "description": "Fail-closed domain error"
+          },
+          "409": {
+            "description": "Fail-closed domain error"
+          },
+          "422": {
+            "description": "Fail-closed domain error"
+          },
+          "503": {
+            "description": "Fail-closed domain error"
+          }
+        }
+      }
+    },
+    "/v1/banks/{bankId}/brn/submit-custody-review": {
+      "post": {
+        "operationId": "brn_submit_custody_review",
+        "tags": [
+          "BRN"
+        ],
+        "summary": "Cash drawer custody operations — submit-custody-review",
+        "description": "Trusted bank-scoped candidate operation. Never posts funds, settles a payment, activates entitlement, publishes a regulatory return or enforces policy.",
+        "security": [
+          {
+            "oidc": [
+              "banking.write"
+            ]
+          }
+        ],
+        "x-domain-id": "BRN",
+        "x-required-permission": "brn.submit-custody-review",
+        "x-bank-authority": "SERVER_VERIFIED_OIDC_MEMBERSHIP_PLUS_BANK_DATABASE_PRINCIPAL",
+        "x-lifecycle-transition": [
+          "DRAFT",
+          "PENDING_REVIEW"
+        ],
+        "x-production-status": "BLOCKED_UNTIL_DOMAIN_ACCEPTANCE",
+        "parameters": [
+          {
+            "name": "bankId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "MUST match trusted bank membership; not an authority source"
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]+$"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitCandidate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Candidate receipt only: no financial or regulatory effect",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidateReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Fail-closed domain error"
+          },
+          "401": {
+            "description": "Fail-closed domain error"
+          },
+          "403": {
+            "description": "Fail-closed domain error"
+          },
+          "404": {
+            "description": "Fail-closed domain error"
+          },
+          "409": {
+            "description": "Fail-closed domain error"
+          },
+          "422": {
+            "description": "Fail-closed domain error"
+          },
+          "503": {
+            "description": "Fail-closed domain error"
+          }
+        }
+      }
+    },
+    "/v1/banks/{bankId}/brn/review-cash-drawer": {
+      "post": {
+        "operationId": "brn_review_cash_drawer",
+        "tags": [
+          "BRN"
+        ],
+        "summary": "Cash drawer custody operations — review-cash-drawer",
+        "description": "Trusted bank-scoped candidate operation. Never posts funds, settles a payment, activates entitlement, publishes a regulatory return or enforces policy.",
+        "security": [
+          {
+            "oidc": [
+              "banking.write"
+            ]
+          }
+        ],
+        "x-domain-id": "BRN",
+        "x-required-permission": "brn.review-cash-drawer",
+        "x-bank-authority": "SERVER_VERIFIED_OIDC_MEMBERSHIP_PLUS_BANK_DATABASE_PRINCIPAL",
+        "x-lifecycle-transition": [
+          "PENDING_REVIEW",
+          "REVIEWED_NOT_EFFECTIVE_OR_REJECTED"
+        ],
+        "x-production-status": "BLOCKED_UNTIL_DOMAIN_ACCEPTANCE",
+        "parameters": [
+          {
+            "name": "bankId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "MUST match trusted bank membership; not an authority source"
+          },
+          {
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 16,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9._:-]+$"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReviewCandidate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "202": {
+            "description": "Candidate receipt only: no financial or regulatory effect",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidateReceipt"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Fail-closed domain error"
+          },
+          "401": {
+            "description": "Fail-closed domain error"
+          },
+          "403": {
+            "description": "Fail-closed domain error"
+          },
+          "404": {
+            "description": "Fail-closed domain error"
+          },
+          "409": {
+            "description": "Fail-closed domain error"
+          },
+          "422": {
+            "description": "Fail-closed domain error"
+          },
+          "503": {
+            "description": "Fail-closed domain error"
+          }
+        }
+      }
+    },
+    "/v1/banks/{bankId}/brn/candidates/{aggregateId}": {
+      "get": {
+        "operationId": "brn_get_candidate",
+        "security": [
+          {
+            "oidc": [
+              "banking.read"
+            ]
+          }
+        ],
+        "x-required-permission": "brn.candidate.read",
+        "parameters": [
+          {
+            "name": "bankId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "description": "MUST match trusted bank membership; not an authority source"
+          },
+          {
+            "name": "aggregateId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "X-Correlation-ID",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Bank-scoped candidate only",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CandidateReceipt"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Authentication required"
+          },
+          "403": {
+            "description": "Access denied"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "503": {
+            "description": "Backend not configured"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.example.invalid/.well-known/openid-configuration"
+      }
+    },
+    "schemas": {
+      "CreateCandidate": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "aggregateId",
+          "expectedVersion",
+          "branchId",
+          "drawerId",
+          "cashierActorId",
+          "currency",
+          "openingFloatMinor",
+          "custodyEvidenceId",
+          "cashCountEvidenceId"
+        ],
+        "properties": {
+          "aggregateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "expectedVersion": {
+            "type": "integer",
+            "const": 0
+          },
+          "branchId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "drawerId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "cashierActorId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "currency": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "openingFloatMinor": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]{0,15})$",
+            "description": "Canonical nonnegative integer minor-unit decimal string, <=9e15 checked by service"
+          },
+          "custodyEvidenceId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "cashCountEvidenceId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "SubmitCandidate": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "aggregateId",
+          "expectedVersion",
+          "denominationCountEvidenceId"
+        ],
+        "properties": {
+          "aggregateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "expectedVersion": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 2147483647
+          },
+          "denominationCountEvidenceId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "ReviewCandidate": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "aggregateId",
+          "expectedVersion",
+          "dualCustodyReviewEvidenceId",
+          "decision"
+        ],
+        "properties": {
+          "aggregateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "expectedVersion": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 2147483647
+          },
+          "dualCustodyReviewEvidenceId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "ACCEPT",
+              "REJECT"
+            ]
+          }
+        }
+      },
+      "CandidateReceipt": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "bankId",
+          "aggregateId",
+          "domain",
+          "version",
+          "state",
+          "financialEffective",
+          "regulatorySubmissionEnabled"
+        ],
+        "properties": {
+          "bankId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "aggregateId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "domain": {
+            "type": "string",
+            "const": "BRN"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "DRAFT",
+              "PENDING_REVIEW",
+              "REVIEWED_NOT_EFFECTIVE",
+              "REJECTED"
+            ]
+          },
+          "financialEffective": {
+            "type": "boolean",
+            "const": false
+          },
+          "regulatorySubmissionEnabled": {
+            "type": "boolean",
+            "const": false
+          },
+          "correlationId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "Problem": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "status",
+          "correlationId"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "minimum": 400,
+            "maximum": 599
+          },
+          "correlationId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      }
+    }
+  },
+  "x-statutory-approval": "NOT_VERIFIED",
+  "x-stage3-status": "FIELD_SPECIFIC_CANDIDATE_IMPLEMENTATION",
+  "x-dependencies": [
+    "ACT",
+    "LED"
+  ]
+}
