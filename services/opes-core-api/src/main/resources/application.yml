@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: opes-core-api
+  main:
+    banner-mode: off
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+server:
+  shutdown: graceful
+  error:
+    include-message: never
+    include-binding-errors: never
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+opes:
+  ledger:
+    max-lines: 500
+# All identity and bank-specific credentials are REQUIRED externally.
+# No bootstrap user, memory database, synthetic tenant, default key or issuer.
