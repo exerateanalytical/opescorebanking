@@ -1,3 +1,4 @@
+import {OpsWorkspace} from "./ops/operations";
 import {useState} from "react";
 import {screens,documents,reports,labels,byScreen,byDocument,byReport,
  formContracts,formById,screenBlueprints,templateById,reportContractById} from "./registry";
@@ -14,7 +15,7 @@ const entries={
 function Badge(){return <span className="badge">Production source · live banking blocked</span>}
 function Nav(){return <header className="header">
  <a href="/" className="brand">OPES CORE BANKING<small>Enterprise workspace</small></a>
- <nav aria-label="Product sections">{groups.map(g=>
+ <nav aria-label="Product sections"><a href="/operations">Operational controls</a>{groups.map(g=>
   <a href={"/"+g} key={g}>{headings[g]}</a>)}</nav>
  <Badge/></header>}
 function Home(){return <main className="wrap">
@@ -24,6 +25,7 @@ function Home(){return <main className="wrap">
  document fields and report metric definitions are preserved in a typed
  React application. Real banking actions require authoritative server access and
  remain unavailable until acceptance.</p>
+ <p><a href="/operations">Open six operational control modules</a></p>
  <div className="tiles">{groups.map(g=><a key={g} href={"/"+g} className="tile">
  <strong>{entries[g].length}</strong><span>{headings[g]}</span>
  <small>Review source specifications</small></a>)}</div>
@@ -113,7 +115,7 @@ function Detail({kind,id}:{kind:Kind;id:string}){
 export function App(){
  const [section,id]=location.pathname.split("/").filter(Boolean);
  const kind=groups.find(x=>x===section);
- return <><Nav/>{!kind?<Home/>:id?
+ return <><Nav/>{section==="operations"||section==="auth"?<OpsWorkspace/>:!kind?<Home/>:id?
    <Detail kind={kind} id={decodeURIComponent(id)}/>:<Index kind={kind}/>}
   <footer>OPES Core Banking · Controlled production integration ·
    No synthetic real-money results</footer></>;
