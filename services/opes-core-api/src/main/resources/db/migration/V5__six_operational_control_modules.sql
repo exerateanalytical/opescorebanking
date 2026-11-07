@@ -270,7 +270,8 @@ DECLARE b uuid;cfg record; old record; duplicate record; body jsonb; digest text
  table_name text;typed_data jsonb; col text; result jsonb; changed integer;
 BEGIN
  b=opes_core.current_bank_id();
- IF b IS NULL OR p_domain NOT IN('GOV','ARC','TST','INF','DR','REL') OR
+ IF b IS NULL THEN RAISE EXCEPTION 'UNBOUND_OPERATIONS_BANK' USING ERRCODE='42501';END IF;
+ IF p_domain NOT IN('GOV','ARC','TST','INF','DR','REL') OR
  p_operation NOT IN('CREATE','SUBMIT','DECIDE','RETIRE') OR p_item IS NULL OR
  p_expected IS NULL OR p_expected<0 OR p_expected>=100000 OR
  p_key IS NULL OR p_key !~ '^[A-Za-z0-9._:-]{16,128}$' OR
@@ -425,7 +426,8 @@ CREATE FUNCTION opes_core.ops_read(
 DECLARE b uuid;found jsonb; auth_payload text;
 BEGIN
  b=opes_core.current_bank_id();
- IF b IS NULL OR p_domain NOT IN('GOV','ARC','TST','INF','DR','REL') OR
+ IF b IS NULL THEN RAISE EXCEPTION 'UNBOUND_OPERATIONS_BANK' USING ERRCODE='42501';END IF;
+ IF p_domain NOT IN('GOV','ARC','TST','INF','DR','REL') OR
    p_operation NOT IN('READ','LIST','HISTORY') OR
    p_limit IS NULL OR p_limit<1 OR p_limit>100 OR p_offset IS NULL OR
    p_offset<0 OR p_offset>10000 OR p_issuer IS NULL OR p_subject IS NULL
