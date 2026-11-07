@@ -50,10 +50,23 @@ class PinnedBankRouter:
     """Trusted bank directory is local control-plane data, not request headers."""
 
     def __init__(self,issuer:PinnedIssuer,
-                 memberships:Mapping[tuple[str,str],Membership],
+                 memberships:Mapping[tuple[str,str,str],Membership],
                  principals:Mapping[str,str]):
         self.issuer=issuer
-        self.memberships=dict(memberships)
+        self.memberships = {}
+        for directory_key, member in memberships.items():
+            if (not isinstance(directory_key, tuple) or len(directory_key) != 3
+                    or not isinstance(member, Membership)):
+                raise ValueError("membership directory requires (institution, issuer, subject) keys")
+            institution, issuer, subject = directory_key
+            if (not self._uuid(institution) or member.institution_id != institution
+                    or member.issuer != issuer or member.subject != subject
+                    or not isinstance(member.revision, int) or isinstance(member.revision, bool)
+                    or member.revision < 1):
+                raise ValueError("invalid bank-scoped membership directory entry")
+            if directory_key in self.memberships:
+                raise ValueError("duplicate membership directory entry")
+            self.memberships[directory_key] = member
         self.principals=dict(principals)
         # Do not allow shared DB principals across distinct banks.
         if len(set(self.principals.values())) != len(self.principals):
@@ -117,7 +130,7 @@ class PinnedBankRouter:
         if not isinstance(token_scopes,str) or permission not in token_scopes.split():
             raise AccessDenied("token permission absent")
         # Token institution is *not* authority; it must match the server-held membership.
-        member=self.memberships.get((claims["iss"],claims["sub"]))
+        member=self.memberships.get((institution_path_id,claims["iss"],claims["sub"]))
         if member is None or not member.active or member.revision<1:
             raise AccessDenied("unknown, disabled or stale subject membership")
         if member.issuer!=claims["iss"] or member.subject!=claims["sub"]:
