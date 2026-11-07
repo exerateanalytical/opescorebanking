@@ -45,7 +45,7 @@ class OpsCatalogTest {
   assertThrows(RuntimeException.class,()->catalog.validate("GOV",row));
  }
  @Test void testEvidenceCannotBeZero(){
-  var row=build("TST");row.put("passedCount",0);
+  var row=build("TST");row.put("passedCount",0);row.put("failedCount",0);
   assertThrows(RuntimeException.class,()->catalog.validate("TST",row));
  }
  @Test void cannotRecordDownInfrastructureWithoutIncident(){
