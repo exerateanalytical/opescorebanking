@@ -26,7 +26,7 @@ class TokenRoutingTests(unittest.TestCase):
         cls.member=Membership(BANK_A,ISS,SUB,True,frozenset({PERM}),3)
 
     def setUp(self):
-        self.router=PinnedBankRouter(self.issuer,{(ISS,SUB):self.member},
+        self.router=PinnedBankRouter(self.issuer,{(BANK_A,ISS,SUB):self.member},
                                       {BANK_A:"opes_bank_a_test",BANK_B:"opes_bank_b_test"})
         now=int(time.time())
         self.claims={"iss":ISS,"aud":AUD,"sub":SUB,"iat":now-10,"nbf":now-10,
@@ -49,6 +49,21 @@ class TokenRoutingTests(unittest.TestCase):
         self.assertEqual(route.database_principal,"opes_bank_a_test")
         self.assertEqual(route.membership_revision,3)
 
+    def test_same_subject_separate_bank_memberships_are_scoped(self):
+        other=Membership(BANK_B,ISS,SUB,True,frozenset({PERM}),7)
+        router=PinnedBankRouter(self.issuer,{
+            (BANK_A,ISS,SUB):self.member,
+            (BANK_B,ISS,SUB):other,
+        },{BANK_A:"opes_bank_a_test",BANK_B:"opes_bank_b_test"})
+        a=router.authorize(self.signed(),BANK_A,PERM)
+        self.assertEqual(a.database_principal,"opes_bank_a_test")
+        with self.assertRaises(AccessDenied):
+            router.authorize(self.signed(),BANK_B,PERM)
+        bank_b_claims={**self.claims,"institution_id":BANK_B}
+        b=router.authorize(self.signed(bank_b_claims),BANK_B,PERM)
+        self.assertEqual(b.database_principal,"opes_bank_b_test")
+        self.assertEqual(b.membership_revision,7)
+
     def test_bank_b_path_idor_denied(self):
         with self.assertRaises(AccessDenied):self.auth(bank=BANK_B)
 
@@ -67,13 +82,13 @@ class TokenRoutingTests(unittest.TestCase):
             missing.authorize(self.signed(),BANK_A,PERM)
 
     def test_revoked_membership_denied(self):
-        router=PinnedBankRouter(self.issuer,{(ISS,SUB):Membership(BANK_A,ISS,SUB,False,frozenset({PERM}),4)},
+        router=PinnedBankRouter(self.issuer,{(BANK_A,ISS,SUB):Membership(BANK_A,ISS,SUB,False,frozenset({PERM}),4)},
                                 {BANK_A:"opes_bank_a_test"})
         with self.assertRaises(AccessDenied):
             router.authorize(self.signed(),BANK_A,PERM)
 
     def test_missing_membership_permission_denied(self):
-        router=PinnedBankRouter(self.issuer,{(ISS,SUB):Membership(BANK_A,ISS,SUB,True,frozenset(),4)},
+        router=PinnedBankRouter(self.issuer,{(BANK_A,ISS,SUB):Membership(BANK_A,ISS,SUB,True,frozenset(),4)},
                                 {BANK_A:"opes_bank_a_test"})
         with self.assertRaises(AccessDenied):
             router.authorize(self.signed(),BANK_A,PERM)
@@ -133,7 +148,7 @@ class TokenRoutingTests(unittest.TestCase):
 
     def test_invalid_database_principal_registry_denied(self):
         with self.assertRaises(ValueError):
-            PinnedBankRouter(self.issuer,{(ISS,SUB):self.member},
+            PinnedBankRouter(self.issuer,{(BANK_A,ISS,SUB):self.member},
                              {BANK_A:"same_login",BANK_B:"same_login"})
 
 if __name__=="__main__":unittest.main(verbosity=2)
