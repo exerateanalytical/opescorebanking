@@ -38,7 +38,7 @@ BEGIN
  v=coalesce(v,'');
  msg=msg||octet_length(v)::text||':'||v||chr(10);
  END LOOP;
- RETURN encode(hmac(convert_to(msg,'UTF8'),decode(repeat('ab',32),'hex'),'sha256'),'hex');
+ RETURN encode(public.hmac(convert_to(msg,'UTF8'),decode(repeat('ab',32),'hex'),'sha256'),'hex');
 END $$;
 CREATE FUNCTION opes_ci.ci_command(
  p_domain text,p_item uuid,p_op text,p_expected integer,p_key text,

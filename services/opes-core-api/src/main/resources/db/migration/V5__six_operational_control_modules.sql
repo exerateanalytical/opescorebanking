@@ -234,7 +234,7 @@ BEGIN
   val=coalesce(val,'');
   input=input||octet_length(val)::text||':'||val||chr(10);
  END LOOP;
- IF encode(hmac(convert_to(input,'UTF8'),stored,'sha256'),'hex')<>p_mac THEN
+ IF encode(public.hmac(convert_to(input,'UTF8'),stored,'sha256'),'hex')<>p_mac THEN
   RAISE EXCEPTION 'OPERATOR_ATTESTATION_INVALID' USING ERRCODE='42501';
  END IF;
  INSERT INTO opes_core.ops_nonce(bank_id,nonce) VALUES(p_bank,p_nonce);
