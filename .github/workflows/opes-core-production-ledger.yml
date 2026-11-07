@@ -59,6 +59,10 @@ jobs:
         env:
           PGPASSWORD: postgres
         run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f services/opes-core-api/ci/008_domain_fixture.sql
+      - name: Provision six-module CI-only signing keys and scoped grants
+        env:
+          PGPASSWORD: postgres
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f services/opes-core-api/ci/014_six_module_ci_setup.sql
       - name: Bank A authenticated principal — real POST, replay, recovery, write denial
         env:
           PGPASSWORD: only_ci_opes_bank_a
@@ -91,6 +95,22 @@ jobs:
         env:
           PGPASSWORD: only_ci_opes_unbound
         run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_unbound -d opes_bank_ci -f services/opes-core-api/ci/012_25_domain_unbound.sql
+      - name: Run all six real PostgreSQL operational-control lifecycles as bank A
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/015_six_module_lifecycle.sql
+      - name: Check six typed domain tables, 24 idempotent actions and immutable evidence
+        env:
+          PGPASSWORD: postgres
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f services/opes-core-api/ci/016_six_module_assert.sql
+      - name: Refuse another institution's authenticated control-module records
+        env:
+          PGPASSWORD: only_ci_opes_bank_b
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_b -d opes_bank_ci -f services/opes-core-api/ci/017_six_module_cross_bank.sql
+      - name: Refuse database principals without institution membership
+        env:
+          PGPASSWORD: only_ci_opes_unbound
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_unbound -d opes_bank_ci -f services/opes-core-api/ci/018_six_module_unbound.sql
       - name: Revoke actor membership in durable authoritative database
         env:
           PGPASSWORD: postgres
@@ -103,3 +123,7 @@ jobs:
         env:
           PGPASSWORD: only_ci_opes_bank_a
         run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/013_revoked_domain_actor.sql
+      - name: Revoked operator cannot read operational-control records
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/019_six_module_revoked.sql
