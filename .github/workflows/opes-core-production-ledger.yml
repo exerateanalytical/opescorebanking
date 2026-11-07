@@ -111,6 +111,10 @@ jobs:
         env:
           PGPASSWORD: only_ci_opes_unbound
         run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_unbound -d opes_bank_ci -f services/opes-core-api/ci/018_six_module_unbound.sql
+      - name: Verify binary evidence upload, SHA-256 integrity, independent verification, unverified-denial
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/020_evidence_integrity_lifecycle.sql
       - name: Revoke actor membership in durable authoritative database
         env:
           PGPASSWORD: postgres

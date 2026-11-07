@@ -74,3 +74,87 @@ GRANT EXECUTE ON FUNCTION opes_ci.ci_command(
 GRANT EXECUTE ON FUNCTION opes_ci.ci_read(
  text,uuid,text,text,integer,integer,text,text)
  TO opes_prodtest_a,opes_prodtest_b,opes_prodtest_unbound;
+
+-- Synthetic fixture evidence for each control operation. This is CI-only and
+-- cannot create proof records in any live bank deployment.
+INSERT INTO opes_core.ops_evidence(
+ bank_id,domain,evidence_id,sha256_hex,original_name,content_type,content,
+ status,creator_issuer,creator_subject,reviewer_issuer,reviewer_subject,reviewed_at)
+SELECT 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa'::uuid,d.domain,e.evidence_id,
+ encode(sha256(convert_to('CI-ONLY-'||d.domain||'-'||e.evidence_id::text,'UTF8')),'hex'),
+ 'ci-proof.txt','text/plain',convert_to('CI-ONLY-'||d.domain||'-'||e.evidence_id::text,'UTF8'),
+ 'VERIFIED','https://auth.opes.example/realm/ci','ops-poster-001',
+ 'https://auth.opes.example/realm/ci','ops-checker-002',clock_timestamp()
+FROM opes_core.ops_definition d CROSS JOIN (
+ VALUES
+ ('22222222-2222-4222-8222-222222222222'::uuid),
+ ('33333333-3333-4333-8333-333333333333'::uuid),
+ ('44444444-4444-4444-8444-444444444444'::uuid)
+) AS e(evidence_id);
+INSERT INTO opes_core.ops_grant(
+ bank_id,issuer,subject_id,domain,operation,active,expires_at)
+ SELECT 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',
+ 'https://auth.opes.example/realm/ci','ops-poster-001',domain,'UPLOAD',true,
+ clock_timestamp()+interval '2 hours'
+ FROM opes_core.ops_definition;
+INSERT INTO opes_core.ops_grant(
+ bank_id,issuer,subject_id,domain,operation,active,expires_at)
+ SELECT 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',
+ 'https://auth.opes.example/realm/ci','ops-checker-002',domain,'VERIFY',true,
+ clock_timestamp()+interval '2 hours'
+ FROM opes_core.ops_definition;
+INSERT INTO opes_core.ops_grant(
+ bank_id,issuer,subject_id,domain,operation,active,expires_at)
+ VALUES('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',
+ 'https://auth.opes.example/realm/ci','ops-poster-001','GOV','VERIFY',
+ true,clock_timestamp()+interval '2 hours');
+GRANT EXECUTE ON FUNCTION opes_core.ops_upload_evidence(
+ text,uuid,text,text,bytea,text,text,text,uuid,bigint,text)
+ TO opes_prodtest_a,opes_prodtest_b,opes_prodtest_unbound;
+GRANT EXECUTE ON FUNCTION opes_core.ops_verify_evidence(
+ text,uuid,text,text,text,uuid,bigint,text)
+ TO opes_prodtest_a,opes_prodtest_b,opes_prodtest_unbound;
+GRANT EXECUTE ON FUNCTION opes_core.ops_get_evidence(
+ text,uuid,text,text,uuid,bigint,text)
+ TO opes_prodtest_a,opes_prodtest_b,opes_prodtest_unbound;
+
+CREATE FUNCTION opes_ci.ci_upload(
+ p_domain text,p_id uuid,p_name text,p_mime text,p_bytes bytea,
+ p_sha text,p_issuer text,p_subject text)
+RETURNS jsonb LANGUAGE plpgsql AS $$
+DECLARE b uuid=opes_core.current_bank_id();n uuid=gen_random_uuid();
+ exp bigint=extract(epoch from clock_timestamp())::bigint+30;sig text;
+BEGIN
+ sig=opes_ci.ci_signature(b,'UPLOAD',p_domain,p_id,0,p_id::text,
+   p_sha||':'||p_name||':'||p_mime,NULL,NULL,p_issuer,p_subject,n,exp);
+ RETURN opes_core.ops_upload_evidence(p_domain,p_id,p_name,p_mime,p_bytes,
+   p_sha,p_issuer,p_subject,n,exp,sig);
+END $$;
+CREATE FUNCTION opes_ci.ci_verify_evidence(
+ p_domain text,p_id uuid,p_decision text,p_issuer text,p_subject text)
+RETURNS jsonb LANGUAGE plpgsql AS $$
+DECLARE b uuid=opes_core.current_bank_id();n uuid=gen_random_uuid();
+ exp bigint=extract(epoch from clock_timestamp())::bigint+30;sig text;
+BEGIN
+ sig=opes_ci.ci_signature(b,'VERIFY',p_domain,p_id,0,p_id::text,
+   NULL,NULL,p_decision,p_issuer,p_subject,n,exp);
+ RETURN opes_core.ops_verify_evidence(p_domain,p_id,p_decision,p_issuer,p_subject,n,exp,sig);
+END $$;
+CREATE FUNCTION opes_ci.ci_get_evidence(
+ p_domain text,p_id uuid,p_issuer text,p_subject text)
+RETURNS TABLE(file_name text,media_type text,checksum text,data bytea,status text)
+ LANGUAGE plpgsql AS $$
+DECLARE b uuid=opes_core.current_bank_id();n uuid=gen_random_uuid();
+ exp bigint=extract(epoch from clock_timestamp())::bigint+30;sig text;
+BEGIN
+ sig=opes_ci.ci_signature(b,'EVIDENCE_READ',p_domain,p_id,0,p_id::text,
+   NULL,NULL,NULL,p_issuer,p_subject,n,exp);
+ RETURN QUERY SELECT * FROM opes_core.ops_get_evidence(
+  p_domain,p_id,p_issuer,p_subject,n,exp,sig);
+END $$;
+GRANT EXECUTE ON FUNCTION opes_ci.ci_upload(
+ text,uuid,text,text,bytea,text,text,text) TO opes_prodtest_a,opes_prodtest_b,opes_prodtest_unbound;
+GRANT EXECUTE ON FUNCTION opes_ci.ci_verify_evidence(
+ text,uuid,text,text,text) TO opes_prodtest_a,opes_prodtest_b,opes_prodtest_unbound;
+GRANT EXECUTE ON FUNCTION opes_ci.ci_get_evidence(
+ text,uuid,text,text) TO opes_prodtest_a,opes_prodtest_b,opes_prodtest_unbound;
