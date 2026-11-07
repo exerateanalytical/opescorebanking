@@ -1,0 +1,14 @@
+\set ON_ERROR_STOP on
+DO $test$
+BEGIN
+ IF opes_core.current_bank_id() IS NOT NULL
+ THEN RAISE EXCEPTION 'UNBOUND_SQL_LOGIN_ASSIGNED_BANK';END IF;
+ BEGIN
+  PERFORM opes_core.resolve_command(
+   '11111111-1111-4111-8111-111111111111',
+   'https://auth.opes.example/realm/ci','ops-poster-001');
+  RAISE EXCEPTION 'UNBOUND_RECOVERY_AUTHORIZATION';
+ EXCEPTION WHEN insufficient_privilege THEN NULL;
+ END;
+END $test$;
+SELECT 'PRODUCTION_LEDGER_UNBOUND_DENIAL_PASS';

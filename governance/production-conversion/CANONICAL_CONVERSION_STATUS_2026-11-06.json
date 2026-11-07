@@ -1,0 +1,104 @@
+{
+  "program": "OPES_CORE_BANKING",
+  "checkpoint": "2026-11-06-JAVA25-REACT-FULL-SOURCE",
+  "canonicalBackend": {
+    "language": "Java",
+    "version": 25,
+    "framework": "Spring Boot",
+    "frameworkVersion": "4.1.2",
+    "persistence": "PostgreSQL 16+",
+    "source": "services/opes-core-api",
+    "verifiedBy": "https://github.com/exerateanalytical/opescorebanking/actions/runs/42306434437"
+  },
+  "canonicalFrontend": {
+    "language": "TypeScript",
+    "framework": "React",
+    "source": "apps/opes-core-banking-web",
+    "verifiedBy": "https://github.com/exerateanalytical/opescorebanking/actions/runs/42306434472"
+  },
+  "ledger": {
+    "sourceRuntime": "Java25",
+    "baselineLedgerSlice": "IMPLEMENTED_TESTED",
+    "realMoneyAuthorized": false,
+    "unresolvedSecurityAttestation": true
+  },
+  "domains": {
+    "catalogGroups": 25,
+    "apiOperations": 100,
+    "openApiCopied": 25,
+    "postgresTypedReviewTables": 25,
+    "javaRuntimePorted": true,
+    "dbReviewCommandsVerified": 75,
+    "reviewCases": 25,
+    "terminalState": "REVIEWED_NOT_EFFECTIVE",
+    "liveBusinessEffectsImplemented": false,
+    "productionAccepted": 0,
+    "original": "PR11 candidate JavaScript/PG16",
+    "source": "services/opes-core-api/src/main"
+  },
+  "frontend": {
+    "screens": {
+      "sourceDefinitions": 726,
+      "blueprintsCarried": 726,
+      "reactRoutes": 726,
+      "bankWorkflowConnected": 0,
+      "status": "SOURCE_SPEC_AND_READONLY_RENDER"
+    },
+    "forms": {
+      "sourceDefinitions": 726,
+      "validationSpecsCarried": 726,
+      "reactPreviewRoutes": 726,
+      "serverSubmitted": 0,
+      "status": "SOURCE_RULES_AND_DISABLED_CAPTURE"
+    },
+    "documents": {
+      "sourceDefinitions": 407,
+      "fieldSchemasCarried": 407,
+      "reactPreviewRoutes": 407,
+      "legallyIssued": 0,
+      "status": "SOURCE_SPEC_AND_DISABLED_ISSUANCE"
+    },
+    "reports": {
+      "sourceDefinitions": 378,
+      "metricFilterSpecsCarried": 378,
+      "reactPreviewRoutes": 378,
+      "authorityBacked": 0,
+      "status": "SOURCE_SPEC_AND_DISABLED_REPORTING"
+    }
+  },
+  "archiveStatus": {
+    "originalPythonSecurityLedgerLabs": "RETAINED_AS_EVIDENCE_NOT_PROMOTED",
+    "originalNodeCandidateServices": "REPLACED_FOR_25_REVIEW_ONLY_FLOWS_NOT_DELETED",
+    "originalReportNodeAndPG16ReviewLabs": "NOT_YET_REBUILT_AS_BANK_AUTHORITATIVE_SPRING_SERVICES",
+    "originalJsSpecModules": "BUILD_TIME_ONLY_SOURCE_MANIFEST_GENERATOR",
+    "originalDesktopShell": "NOT IMPLEMENTED"
+  },
+  "release": {
+    "draftOnly": true,
+    "mergedToMain": false,
+    "acceptedBankingDomains": 0,
+    "realMoneyDeploymentAllowed": false,
+    "blockers": [
+      "Trusted per-request actor attestation at database command boundary",
+      "Independent approved maker-checker authorization issuance",
+      "Production OIDC, TLS, key custody and rotation operating controls",
+      "Financial reversals, settlement, cash management and scheme reconciliation",
+      "Complete CIF/ACT/PAY/CRD/CARD/TRE operational domain APIs and workflows",
+      "Institution-approved product and client screen schemas",
+      "Secure authenticated React BFF and server-bound form capture",
+      "Legally authorised template issuance, QR validation, signature and retention controls",
+      "Bank-authoritative report data sources, lineage, reconciliation and regulator mapping",
+      "COBAC/BEAC classification mapping gaps including 312/322",
+      "Concurrency/failover, DR restored-state, independent penetration/regulatory reviews"
+    ]
+  },
+  "sources": {
+    "ui": "PR #2",
+    "forms": "PR #5",
+    "documents": "PR #3",
+    "reports": "PR #6 through #10",
+    "domains": "PR #11",
+    "productionLedger": "PR #12",
+    "productionConversion": "PR #13"
+  }
+}

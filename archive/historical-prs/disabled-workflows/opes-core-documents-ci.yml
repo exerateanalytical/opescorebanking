@@ -1,0 +1,71 @@
+name: OPES Core Banking - 407 document specimen verification
+on:
+  push:
+    paths:
+      - 'apps/opes-core-banking-documents/**'
+      - '.github/workflows/opes-core-documents-ci.yml'
+  pull_request:
+    paths:
+      - 'apps/opes-core-banking-documents/**'
+      - '.github/workflows/opes-core-documents-ci.yml'
+permissions:
+  contents: read
+jobs:
+  verify-and-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit and 407 render tests
+        run: node --test tests/*.test.mjs
+        working-directory: apps/opes-core-banking-documents
+      - name: Browser script syntax
+        run: node --check src/app.js
+        working-directory: apps/opes-core-banking-documents
+      - name: Export 407 HTML and 407 JSON specs
+        run: node scripts/export-all.mjs
+        working-directory: apps/opes-core-banking-documents
+      - name: Count and verify exported assets
+        run: |
+          test "$(find apps/opes-core-banking-documents/dist/printable -name '*.html' | wc -l)" -eq 407
+          test "$(find apps/opes-core-banking-documents/dist/schemas -name '*.json' | wc -l)" -eq 407
+          (cd apps/opes-core-banking-documents/dist && sha256sum --check --quiet SHA256SUMS.txt)
+      - name: Package source and complete print specimens
+        run: zip -q -r OPES_407_Document_Print_Specimens.zip apps/opes-core-banking-documents -x 'apps/opes-core-banking-documents/node_modules/*' 'apps/opes-core-banking-documents/audit/*'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OPES-407-document-specimens
+          path: OPES_407_Document_Print_Specimens.zip
+  print-browser-audit:
+    if: github.event_name == 'push'
+    needs: verify-and-package
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: npm install --no-save playwright@1.55.1
+        working-directory: apps/opes-core-banking-documents
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+        working-directory: apps/opes-core-banking-documents
+      - name: Generate 407 printable files
+        run: node scripts/export-all.mjs
+        working-directory: apps/opes-core-banking-documents
+      - name: Start static server
+        run: (python3 -m http.server 8768 --bind 127.0.0.1 > /tmp/opes-docs-server.log 2>&1 &)
+      - name: Browser smoke and PDF specimen tests
+        run: node tests/browser-print.mjs
+        working-directory: apps/opes-core-banking-documents
+      - name: Attach PDF and screenshot evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: OPES-407-document-visual-audit
+          path: apps/opes-core-banking-documents/audit/*
+          if-no-files-found: ignore

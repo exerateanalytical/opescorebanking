@@ -1,0 +1,94 @@
+name: OPES Reporting PG16 Durable Review Lab
+on:
+  push:
+    paths:
+      - 'apps/opes-core-banking-reports/db/review-lab/**'
+      - '.github/workflows/opes-report-review-pg16.yml'
+  pull_request:
+    paths:
+      - 'apps/opes-core-banking-reports/db/review-lab/**'
+      - '.github/workflows/opes-report-review-pg16.yml'
+permissions:
+  contents: read
+jobs:
+  isolated-pg16-review-authorization-and-atomic-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: opes_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d opes_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bootstrap disposable PG16 lab schema
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/001_schema.sql
+      - name: Expose scoped SQL session identity before role-specific tests
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/002_scope_introspection.sql
+      - name: Seed disposable OIDC-to-Postgres application test record
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/003_app_integration_fixture.sql
+      - name: Install node-postgres for isolated database integration
+        run: npm install --no-save --ignore-scripts pg@8.16.3
+        working-directory: apps/opes-core-banking-reports
+      - name: Verify signed OIDC token to dedicated bank DB login and maker-checker
+        run: node db/review-lab/tests/12_node_oidc_pg_integration.mjs
+        working-directory: apps/opes-core-banking-reports
+      - name: Verify Bank A maker, replay denial, atomic audit rollback
+        env:
+          PGPASSWORD: only_disposable_a_maker
+        run: psql -h 127.0.0.1 -U opes_rpt_a_maker_lab -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/01_maker_a.sql
+      - name: Verify Bank A independent checker and publication denial
+        env:
+          PGPASSWORD: only_disposable_a_checker
+        run: psql -h 127.0.0.1 -U opes_rpt_a_checker_lab -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/02_checker_a.sql
+      - name: Verify Bank B isolation and forged tenant denial
+        env:
+          PGPASSWORD: only_disposable_b_maker
+        run: psql -h 127.0.0.1 -U opes_rpt_b_maker_lab -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/03_bank_b.sql
+      - name: Verify unbound principal cannot enumerate or mutate
+        env:
+          PGPASSWORD: only_disposable_unbound
+        run: psql -h 127.0.0.1 -U opes_rpt_unbound_lab -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/04_unbound.sql
+      - name: Verify durable state, rollback and audit immutability
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/05_verify_evidence.sql
+      - name: Seed concurrent and crash-rollback test records
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/06_prepare_concurrency.sql
+      - name: Concurrent same-version submissions serialize to exactly one winner
+        env:
+          PGPASSWORD: only_disposable_a_maker
+        run: bash apps/opes-core-banking-reports/db/review-lab/tests/07_concurrent_submit.sh
+      - name: Client transaction abort reverts review state and audit
+        env:
+          PGPASSWORD: only_disposable_a_maker
+        run: psql -h 127.0.0.1 -U opes_rpt_a_maker_lab -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/08_client_rollback.sql
+      - name: Verify exact committed audit multiplicity and no aborted side effects
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/09_verify_extended.sql
+      - name: Revoke bank A maker membership at trusted database authority
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/10_revoke_account.sql
+      - name: Revoked user loses access on next database function invocation
+        env:
+          PGPASSWORD: only_disposable_a_maker
+        run: psql -h 127.0.0.1 -U opes_rpt_a_maker_lab -d opes_test -X -v ON_ERROR_STOP=1 -f apps/opes-core-banking-reports/db/review-lab/tests/11_revoked.sql

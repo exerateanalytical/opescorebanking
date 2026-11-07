@@ -1,0 +1,24 @@
+\set ON_ERROR_STOP on
+DO $assert$
+DECLARE n integer;
+BEGIN
+ SELECT count(*) INTO n FROM opes_core.journal;
+ IF n<>1 THEN RAISE EXCEPTION 'JOURNAL_COUNT_NOT_ONE %',n;END IF;
+ SELECT count(*) INTO n FROM opes_core.journal_line;
+ IF n<>2 THEN RAISE EXCEPTION 'JOURNAL_LINES_NOT_TWO %',n;END IF;
+ SELECT count(*) INTO n FROM opes_core.posting_command;
+ IF n<>1 THEN RAISE EXCEPTION 'POSTING_REGISTRY_NOT_ONE %',n;END IF;
+ SELECT count(*) INTO n FROM opes_core.audit_event;
+ IF n<>1 THEN RAISE EXCEPTION 'AUDIT_EVENT_NOT_ONE %',n;END IF;
+ SELECT count(*) INTO n FROM opes_core.outbox WHERE state='PENDING';
+ IF n<>1 THEN RAISE EXCEPTION 'OUTBOX_EVENT_NOT_ONE %',n;END IF;
+ SELECT count(*) INTO n FROM opes_core.posting_authorization
+ WHERE consumed_by_journal IS NOT NULL;
+ IF n<>1 THEN RAISE EXCEPTION 'CHECKER_APPROVAL_NOT_CONSUMED %',n;END IF;
+ BEGIN
+  DELETE FROM opes_core.journal_line;
+  RAISE EXCEPTION 'IMMUTABILITY_BYPASSED';
+ EXCEPTION WHEN check_violation THEN NULL;
+ END;
+END $assert$;
+SELECT 'PRODUCTION_LEDGER_ATOMIC_JOURNAL_AUDIT_OUTBOX_PASS';

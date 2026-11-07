@@ -1,0 +1,1 @@
+This path is intentionally empty of fixture credentials. Real database role, JWT and outbox integration tests are executed in isolated GitHub CI fixtures under services/opes-core-api/ci, never shipped as application configuration.

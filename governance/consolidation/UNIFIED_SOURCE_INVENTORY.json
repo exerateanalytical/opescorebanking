@@ -1,0 +1,975 @@
+{
+  "schema": "opes-core-banking-unified-source-inventory-v1",
+  "generatedAt": "2026-11-07",
+  "repository": "exerateanalytical/opescorebanking",
+  "purpose": "Canonical ONE production codebase; historical source archived but not on runtime classpath",
+  "productionBaseline": {
+    "sourceCommit": "e5755aa5083c1ac5e3de3a11393dbf73290a8e6b",
+    "previousDraftPrs": [
+      12,
+      13,
+      14
+    ],
+    "backend": "services/opes-core-api",
+    "frontend": "apps/opes-core-banking-web",
+    "backendStack": "Java 25 + Spring Boot 4.1.2 + PostgreSQL 16",
+    "frontendStack": "React + TypeScript",
+    "status": "TESTED_ENGINEERING_CANDIDATE_NOT_ACCEPTED_FOR_LIVE_BANK"
+  },
+  "mainReconciliation": {
+    "originalMainCommit": "56c6387b0da0221aca29ea8c4292e4fd79352734",
+    "retainedLatestMainFiles": [
+      "engineering/security/token-router/router.py",
+      "engineering/security/token-router/tests/test_router.py",
+      "governance/CANONICAL_PROGRAMME_STATE.json"
+    ],
+    "reason": "Retain newer token-router security and governance work, do not overwrite with stale branch"
+  },
+  "artifacts": {
+    "screens": {
+      "totalDefined": 726,
+      "canonical": "apps/opes-core-banking-web/src/registries/screen-catalog.ts",
+      "sourceBlueprints": 726,
+      "operationalBankScreensAccepted": 0
+    },
+    "forms": {
+      "totalDefined": 726,
+      "canonical": "apps/opes-core-banking-web/build/source/forms/form-registry.mjs",
+      "rulesCarried": 726,
+      "operationalSubmitFormsAccepted": 0,
+      "legacySupersededForms": 589
+    },
+    "documents": {
+      "totalDefined": 407,
+      "canonical": "apps/opes-core-banking-web/build/source/documents/templates.mjs",
+      "legallyIssuableAccepted": 0
+    },
+    "reports": {
+      "totalDefined": 378,
+      "canonical": "apps/opes-core-banking-web/build/source/reports/report-registry.mjs",
+      "authoritativeGeneratedAccepted": 0
+    },
+    "domainContracts": {
+      "typedCandidateDomains": 25,
+      "readWriteReviewOperations": 100,
+      "operationalFullBankingModulesAccepted": 0
+    },
+    "controlModules": {
+      "count": 6,
+      "ids": [
+        "GOV",
+        "ARC",
+        "TST",
+        "INF",
+        "DR",
+        "REL"
+      ],
+      "implemented": "persistent signed control RECORD workflows",
+      "liveBankCertified": false
+    },
+    "ledger": {
+      "scope": "verified posting slice only",
+      "fullGeneralLedgerCertified": false
+    }
+  },
+  "financeSafety": {
+    "realMoneyDeploymentApproved": false,
+    "productionAccepted": false,
+    "regulatoryCertification": false,
+    "blocker": "Complete COBAC/BEAC classification review, security P0, operational posting, reconciliation and disaster recovery approvals"
+  },
+  "domains": {
+    "GOV": "Operational control record workflow implemented; governance policy activation and bank signoff unverified",
+    "ARC": "API/architecture contract record workflow implemented; compatibility governance requires review",
+    "CIF": "Typed candidate review only; customer master, full onboarding and KYC unavailable",
+    "PRD": "Typed candidate review only; bank product factory rule engine unavailable",
+    "ACT": "Typed candidate review only; real account opening and servicing unavailable",
+    "LED": "Limited double-entry posting vertical slice with PG16 tests; not full ledger general-availability accepted",
+    "BRN": "Typed candidate review only; teller/vault workflows unavailable",
+    "PAY": "Typed candidate review only; payment rails and settlement unavailable",
+    "CRD": "Typed candidate review only; origination, underwriting and loan servicing unavailable",
+    "TRE": "Typed candidate review only; treasury position workflows unavailable",
+    "AML": "Typed candidate review only; screening/transaction monitoring and filing unavailable",
+    "REP": "Typed candidate review only; 378 report source specs, no authoritative report generation",
+    "CHN": "Typed candidate review only; digital channels unavailable",
+    "CARD": "Typed candidate review only; card issuance and processor authorization unavailable",
+    "CRM": "Typed candidate review only; service and complaint operations unavailable",
+    "FEE": "Typed candidate review only; actual fee engine and posting unavailable",
+    "REC": "Typed candidate review only; reconciliation engine unavailable",
+    "SEC": "Typed candidate review only; production security operations are not accepted",
+    "DAT": "Typed candidate review only; data governance retention enforcement unavailable",
+    "API": "Typed candidate review only; partner management unavailable",
+    "INF": "Service inventory/health observation evidence records implemented; no live telemetry ingestor",
+    "DR": "DR plan/exercise evidence records implemented; no automated backup restore",
+    "ADM": "Typed candidate review only; bank administration and employee workflow unavailable",
+    "TST": "Test execution evidence workflow implemented; not automated test orchestration",
+    "REL": "Evidence-gated release approval records implemented; no deployment execution"
+  },
+  "archives": [
+    {
+      "name": "726 UI screens",
+      "sourcePr": "#2–#10",
+      "sourceCommit": "38c7aea8807fb778b44271da0120106f89fd2b13",
+      "sourcePrefix": "apps/opes-core-banking-ui/",
+      "archivePrefix": "archive/historical-prs/screens-726/",
+      "fileCount": 17,
+      "files": [
+        {
+          "path": "archive/historical-prs/screens-726/README.md",
+          "blob": "38873fa5f5c8af2c33740a666a6b78a8b4f475c3"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/SCREEN_CONTROL_MATRIX.csv",
+          "blob": "77acf298bec385a52133671e15cb9ba92e73504a"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/SCREEN_REGISTER.csv",
+          "blob": "8fb47822a340b9a3710ef731a6cfe036e4431dc9"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/index.html",
+          "blob": "03f39190532709080460b63542bbfed739d07e0a"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/package.json",
+          "blob": "5487d0eb7d7c6fd9e4896a55d8720b1ec5044ab0"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/scripts/export-screen-pack.mjs",
+          "blob": "0b6631f54ef83ed83e28eadb3cb75835c0b64b12"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/src/all-screen-blueprints.js",
+          "blob": "2548f049102e98a69f986b32da1635272b1f7320"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/src/app.js",
+          "blob": "a47f7ed98aa42e23fbc1180aa767109c030c9bf9"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/src/catalog.js",
+          "blob": "77e33be3d8a13ca78a0258bc16e9168fd0bee34f"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/src/priority-contracts.js",
+          "blob": "ee7a44897ddc795daa14f1c0f19cf2fa5d5340a1"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/styles.css",
+          "blob": "a7b44cd296c4a068e56419cf060d127a74ad31dc"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/tests/all-screen-blueprints.test.mjs",
+          "blob": "58c37bb61ee35d00eece3dce7151a16a59079669"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/tests/catalog.test.mjs",
+          "blob": "cb713e2b8bae639d75bbb18ca9001c44bec8fba0"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/tests/color-contrast.test.mjs",
+          "blob": "086a13ce7cd6a373303396e175463579f07f809b"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/tests/priority-contracts.test.mjs",
+          "blob": "93bbca5e29cea8db9bcf66c8ad5bcb1e1aaec755"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/tests/ui-source.test.mjs",
+          "blob": "dac43ec9be9be90263504ae48e4233ce6cf0decc"
+        },
+        {
+          "path": "archive/historical-prs/screens-726/tests/visual-audit.mjs",
+          "blob": "5112b6e54736d5facacd56700b7f4f6bda9fb095"
+        }
+      ]
+    },
+    {
+      "name": "726 aligned forms",
+      "sourcePr": "#5–#10",
+      "sourceCommit": "38c7aea8807fb778b44271da0120106f89fd2b13",
+      "sourcePrefix": "apps/opes-core-banking-forms/",
+      "archivePrefix": "archive/historical-prs/forms-726/",
+      "fileCount": 10,
+      "files": [
+        {
+          "path": "archive/historical-prs/forms-726/README.md",
+          "blob": "24526895b40d58400ae6a21fade3aa42d663549c"
+        },
+        {
+          "path": "archive/historical-prs/forms-726/index.html",
+          "blob": "2418d6fce0f0a63eb325f5f8d2e5fd3c3e71bd9d"
+        },
+        {
+          "path": "archive/historical-prs/forms-726/package.json",
+          "blob": "209f8f7e7cdba01334a03377f6c3971b0736d5de"
+        },
+        {
+          "path": "archive/historical-prs/forms-726/scripts/export-all.mjs",
+          "blob": "c21efbdf86d17326c0c6815ee0fc1f950bf983a5"
+        },
+        {
+          "path": "archive/historical-prs/forms-726/src/app.js",
+          "blob": "2240627db4220efe4fb3dfddda89586b1f6b0fc0"
+        },
+        {
+          "path": "archive/historical-prs/forms-726/src/form-registry.js",
+          "blob": "b0796fdd5b1bb1eaff8186f609ad4dbef06d80fc"
+        },
+        {
+          "path": "archive/historical-prs/forms-726/src/validation.js",
+          "blob": "6fa82be7085c59f11da97eb0af1c2d1451cba2fd"
+        },
+        {
+          "path": "archive/historical-prs/forms-726/styles.css",
+          "blob": "b1365ffa425a9fa80ced566c56a31da2da0b9164"
+        },
+        {
+          "path": "archive/historical-prs/forms-726/tests/browser-forms.mjs",
+          "blob": "81bcf3b7fa3a3b55bd34fb76c68cf8e85d5796a6"
+        },
+        {
+          "path": "archive/historical-prs/forms-726/tests/forms.test.mjs",
+          "blob": "2be116d8cfa2896505fb5af513d6990398141e04"
+        }
+      ]
+    },
+    {
+      "name": "378 reports",
+      "sourcePr": "#6–#10",
+      "sourceCommit": "38c7aea8807fb778b44271da0120106f89fd2b13",
+      "sourcePrefix": "apps/opes-core-banking-reports/",
+      "archivePrefix": "archive/historical-prs/reports-378/",
+      "fileCount": 59,
+      "files": [
+        {
+          "path": "archive/historical-prs/reports-378/README.md",
+          "blob": "a75123f60b2a56bdcf83a7a9fd06ded1575d82ec"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/001_schema.sql",
+          "blob": "a3e50de5c3d77b177b5947ff7e0a4401c7081bed"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/002_scope_introspection.sql",
+          "blob": "8c55527053cf70e08fa5e5db9885e87731c2cdd9"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/003_app_integration_fixture.sql",
+          "blob": "366d5a4067890a2aa85b7e232139c546f453b597"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/README.md",
+          "blob": "d36e1a4d73d744cd7bd5b5aedd1c242db92c77fb"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/01_maker_a.sql",
+          "blob": "5f4626f7f7fd47866cdf3332875a224f710b498f"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/02_checker_a.sql",
+          "blob": "a2c4e5622e683c38ab8c2474d619055a967e57ae"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/03_bank_b.sql",
+          "blob": "a3bfee1bcc0ee5de0badc4a92046d523c04173e3"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/04_unbound.sql",
+          "blob": "666b5d3dc4d7db7e0535591ac01fad15dd659e89"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/05_verify_evidence.sql",
+          "blob": "3a443304e0e0820d38b870c50e537d776a12e4a3"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/06_prepare_concurrency.sql",
+          "blob": "97a1f527a945b6f7cba58576228d125b032fcc69"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/07_concurrent_submit.sh",
+          "blob": "4e9e6462c7cb8b3b66f83660fc206ab9c7dac5a3"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/08_client_rollback.sql",
+          "blob": "8cf2b9cbcba4e5583dbeef1251adb5cd4e55e676"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/09_verify_extended.sql",
+          "blob": "ba116c23234694bbfb5e7395a026b92fd4b1068b"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/10_revoke_account.sql",
+          "blob": "5ba8c160c26ab50324fd6a38599e6cfdb81d4522"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/11_revoked.sql",
+          "blob": "27526b485c49b1c6a3b0e6afe1bd874a7b2ed4a2"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/db/review-lab/tests/12_node_oidc_pg_integration.mjs",
+          "blob": "49baca2a23046f3f966a2fca8ec9a1c78286939d"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/docs/authoritative-source-preflight.md",
+          "blob": "854081de181c02d3339890d77981c8b87c17c4a6"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/docs/bank-session-ledger-evidence-checkpoint-2026-11-06.md",
+          "blob": "3a06cf0c45a7b5a4b8e2b87dcf79b39bc6576861"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/docs/cryptographic-source-evidence.md",
+          "blob": "0623485ad66cafea83f7557c538c5ca2928b0817"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/docs/five-workstream-integration-checkpoint-2026-11-06.md",
+          "blob": "a99108aeba17017fbc6b6b7e8a23e07d0e118387"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/index.html",
+          "blob": "cbc28bddf0bc837fdd8e1e5d812c2324289afa5c"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/package.json",
+          "blob": "1cf04a56e2df6df530140f77c5398e34f75c772d"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/scripts/export-all.mjs",
+          "blob": "1c0604a9ff05716cdba7c5d2ca1266dfc6cf3628"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/scripts/export-integration-readiness.mjs",
+          "blob": "cae1fa8e1f2d77d496c7e2b2a10b9db74cc4ee67"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/app.js",
+          "blob": "ba025aeccb222e08b874bd272bde311ef4482b68"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/fixtures.js",
+          "blob": "de90ee29377370cc8641eeb5c8a17a9eefe754f5"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-bank-session-router.js",
+          "blob": "d1a150c7d19dfe732c4e95e8de594be7582b6149"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-candidate-calculations.js",
+          "blob": "77eb185053b411c79e8a16c3043258a8cd12f17e"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-certification-register.js",
+          "blob": "4e8d55208b393f505a61eacf7417c98ec281dbdd"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-engine.js",
+          "blob": "e95639711ad3d36d8a12e46b76847964552c2ce2"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-ledger-evidence.js",
+          "blob": "7aae357e7ebcecddac7bfedccf94b569354aba03"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-pg-review-store.js",
+          "blob": "4810fd2b938c10b7226bfaaec9d4800fa20e876a"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-publication-controls.js",
+          "blob": "15180412fd69c9de62013e8958dc81032052cb80"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-reconciliation.js",
+          "blob": "642b3eec167f10874e80b0b99afc2473552dd7b2"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-registry.js",
+          "blob": "179cbf6410bdf021f78741f10bacd86f8e2253e9"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-regulatory-mapping.js",
+          "blob": "7856954d54a1d92d65da0037867cb67e9e9d857d"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-seeds.js",
+          "blob": "41016dcdb0c94c3f6ac93569f61482aae220bd79"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-server-composition.js",
+          "blob": "5298ef975ef90899caeb3356feadff6e8a93b2db"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-source-connectors.js",
+          "blob": "788d4e1b8bb0120a33dd6812830983ff7625e9ab"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/report-source-preflight.js",
+          "blob": "e9f2283118529780550564b5fc85d32de75ec78a"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/reporting-auth.js",
+          "blob": "ecb211dad819253d14cfa9fea9a5221a689edd60"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/src/snapshot-evidence-verifier.js",
+          "blob": "7bc7062100cb58a7781f7ec2577ea5f5312d110d"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/styles.css",
+          "blob": "8b4ccb94ce4bfe4abf7b9ab5c2c56921fc917ede"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/browser-reports.mjs",
+          "blob": "571d4e7db0ab6d0ca287dd0df8e1c582ae4a5204"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-bank-session-router.test.mjs",
+          "blob": "c541275b7731d60585be6a45410089f2ababe9c6"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-candidate-calculations.test.mjs",
+          "blob": "eec74bcf82ff78cd6ce0fc191ea0ef566938adfb"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-certification-register.test.mjs",
+          "blob": "3164b9a1992f4f51dc70d13a273591a0d37fd661"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-ledger-evidence.test.mjs",
+          "blob": "5e4cd014644affe2fe7a29b0fb7af7dc07dbc4e6"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-pg-review-store.test.mjs",
+          "blob": "7a68cf5c960272442fd98be4297c791850871cbd"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-publication-controls.test.mjs",
+          "blob": "7614cbe40314a75e4d06606a11c9eef048bf3401"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-reconciliation.test.mjs",
+          "blob": "f453548c51e8ff04c88bbb2d4e0c44aa0754c7cb"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-regulatory-mapping.test.mjs",
+          "blob": "91a79465cb459cf3cea664009260fd21cdf18727"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-server-composition.test.mjs",
+          "blob": "62631526261b436e6b0b1ad8f1fb22b7fb99df2b"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-source-connectors.test.mjs",
+          "blob": "746f9413a35a165724440a26dd57bf587892b698"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/report-source-preflight.test.mjs",
+          "blob": "d5c9149dfd6b0da42585589a608ea38c91f19552"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/reporting-auth.test.mjs",
+          "blob": "b65aa6f8d91a57197c1dc4b5a14da03b48474d2c"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/reports.test.mjs",
+          "blob": "c30335d587f278eea9e5853db29d246cdc63bbbd"
+        },
+        {
+          "path": "archive/historical-prs/reports-378/tests/snapshot-evidence-verifier.test.mjs",
+          "blob": "4efc442332c838f8ca0085af8704b00bc373fc25"
+        }
+      ]
+    },
+    {
+      "name": "407 printable specimen templates",
+      "sourcePr": "#3",
+      "sourceCommit": "33a34bedef9005c7aa6c900088c69749bd9598df",
+      "sourcePrefix": "apps/opes-core-banking-documents/",
+      "archivePrefix": "archive/historical-prs/documents-407/",
+      "fileCount": 12,
+      "files": [
+        {
+          "path": "archive/historical-prs/documents-407/README.md",
+          "blob": "177afd14ad55c603235ace4a6fe321311105a2a0"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/index.html",
+          "blob": "b08e93415f3ba32addc07951ba9db9d656e84e63"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/package.json",
+          "blob": "0fd0bfc244611eaec403eadca7fe61282304a7a9"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/scripts/export-all.mjs",
+          "blob": "0ed1da1ae51590dc8e893c6e46288c192a07b31e"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/src/app.js",
+          "blob": "81600b051e97b4a3e9b60888ddd3dab4c4efbcc9"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/src/print-css.js",
+          "blob": "a3f28f7e10609007d96b676c58d42294ee75eaac"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/src/registry-seeds.js",
+          "blob": "554c8f285602da935cd359527aaa650c4721b497"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/src/render.js",
+          "blob": "f1c9d4d232aee152992e054d27c50455a735ad61"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/src/templates.js",
+          "blob": "8e11325b68ec483de25ffda8f084128d53cd3ef9"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/styles.css",
+          "blob": "752694fdd8205b6dbb2b29f88e6373288dcc9e21"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/tests/browser-print.mjs",
+          "blob": "0092332c4d2ee4b7975ce2f21544a94d8d952061"
+        },
+        {
+          "path": "archive/historical-prs/documents-407/tests/documents.test.mjs",
+          "blob": "00a884b5272a6559e3f3520bc097037727f607d4"
+        }
+      ]
+    },
+    {
+      "name": "589 superseded forms",
+      "sourcePr": "#4",
+      "sourceCommit": "2653e0f391c0f31303a926320fb3fed1d18cd80b",
+      "sourcePrefix": "apps/opes-core-banking-forms/",
+      "archivePrefix": "archive/historical-prs/forms-589-superseded/",
+      "fileCount": 11,
+      "files": [
+        {
+          "path": "archive/historical-prs/forms-589-superseded/README.md",
+          "blob": "6df01b9b862eb87f4388e100ea6b221015de5dc1"
+        },
+        {
+          "path": "archive/historical-prs/forms-589-superseded/index.html",
+          "blob": "0356f63aafca0afb9a98e61bb50321b4edc60fe7"
+        },
+        {
+          "path": "archive/historical-prs/forms-589-superseded/package.json",
+          "blob": "0752dfb6dc8a8f814c558876d1b4ad081a19b3fc"
+        },
+        {
+          "path": "archive/historical-prs/forms-589-superseded/scripts/export-all.mjs",
+          "blob": "b1d6c75b4d0f8880932761264dc25aba75b54818"
+        },
+        {
+          "path": "archive/historical-prs/forms-589-superseded/src/app.js",
+          "blob": "cc3c507ec28d96949f64973ed3b1d57c1307bc8b"
+        },
+        {
+          "path": "archive/historical-prs/forms-589-superseded/src/forms.js",
+          "blob": "037aff4b20c51fee23a8822b2b1795aec6f4cd54"
+        },
+        {
+          "path": "archive/historical-prs/forms-589-superseded/src/registry-seeds.js",
+          "blob": "7b1c65a0ed5715bc958649362df58737853d4879"
+        },
+        {
+          "path": "archive/historical-prs/forms-589-superseded/src/validation.js",
+          "blob": "d5fd6128e09feb05d5f3748ac71d605874fa34d1"
+        },
+        {
+          "path": "archive/historical-prs/forms-589-superseded/styles.css",
+          "blob": "6445639bbc3fb2208a23d30af6e3787f0c8d13fd"
+        },
+        {
+          "path": "archive/historical-prs/forms-589-superseded/tests/browser-forms.mjs",
+          "blob": "43b1ec2506853f8f19e76a8466df7944b0ebed78"
+        },
+        {
+          "path": "archive/historical-prs/forms-589-superseded/tests/unit.test.mjs",
+          "blob": "e251a6e8100ca481460099d906ef35e268a364cb"
+        }
+      ]
+    },
+    {
+      "name": "Node.js Stage3 25-domain candidates",
+      "sourcePr": "#11",
+      "sourceCommit": "7d1cb5dd6aa80003bd5e31e03bbb8769f43639b9",
+      "sourcePrefix": "engineering/stage3-one-batch/",
+      "archivePrefix": "archive/historical-prs/node-stage3-candidates/",
+      "fileCount": 68,
+      "files": [
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/MANIFEST.json",
+          "blob": "bff9989027d1c694144ed7d96404ee6d79ea0942"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/README.md",
+          "blob": "cdc22b63c9c71ddaab9507344595676403a1fe13"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/STAGE3_COVERAGE_MATRIX.csv",
+          "blob": "1b5c7e591d828f3e7f08d6dda067958cbe6ff82c"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/catalog/domains.json",
+          "blob": "4a1f04fb46c35a8ea9590b6fa4571818559ac9a8"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/ACT.openapi.json",
+          "blob": "ebf0114f54f2e977c7ab2733b3c1da83721f2034"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/ADM.openapi.json",
+          "blob": "9325a303ec54a1ccb2c840ced0a25e7bf59c5e82"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/AML.openapi.json",
+          "blob": "f86f4d396779baf84138fe741ff29bbb6d7557f5"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/API.openapi.json",
+          "blob": "14f814bf71a112f5406b9474a497fb663a1ad3bb"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/ARC.openapi.json",
+          "blob": "e355aacdf5dd8c357576d437c72124b8411e922d"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/BRN.openapi.json",
+          "blob": "8570dbbe153fc32dab058ceb3ae769910ca7947a"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/CARD.openapi.json",
+          "blob": "acb0fcd9c732909fe1ef07aa19ecc41f2e12586e"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/CHN.openapi.json",
+          "blob": "814130e298961d63d39039ac0aaf0abe87773bb8"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/CIF.openapi.json",
+          "blob": "c2f3c0eb8bb678b9daa243a954b0f4a4dbf84daa"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/CRD.openapi.json",
+          "blob": "adb6b30ce95c842a6f94b7df73e878f07e9cd589"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/CRM.openapi.json",
+          "blob": "e5a547f08d6af8189b7b6b9379d64195f62483e9"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/DAT.openapi.json",
+          "blob": "b63b8eb923969cf72b038d3d891d04c4b674c24f"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/DR.openapi.json",
+          "blob": "72dee95cf87a12606b9638d3b3fdde02638abf4d"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/FEE.openapi.json",
+          "blob": "5271aa39f69a4638398e04d8fa0dafcdc7c5fa2d"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/GOV.openapi.json",
+          "blob": "0b3a095fc6f0486116251dc68e2dd3e58dc78d94"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/INF.openapi.json",
+          "blob": "ff7b20d83096596e69b57f4eb264bd6a6dc20e5e"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/LED.openapi.json",
+          "blob": "955b21fd9568680a95ed867c76ff359ae191a34a"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/PAY.openapi.json",
+          "blob": "e9386622ee5dac8ba4042314d573bdd2f1d35007"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/PRD.openapi.json",
+          "blob": "8e6e1cfee8946b4be1c3175db2507b80edb209ee"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/REC.openapi.json",
+          "blob": "743650a2cc6a1be9e06ced3d260e449fcef34b82"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/REL.openapi.json",
+          "blob": "531b95ed79912a66030ba7dde9a07929e8e6350c"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/REP.openapi.json",
+          "blob": "ca98cf3ea04474f24f2ada55e8e11b52eca11d36"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/SEC.openapi.json",
+          "blob": "0229cabaf963383f2adf834ec3133dd84a332902"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/TRE.openapi.json",
+          "blob": "b926cd08f7b7e8224231a6ddcdc3972e10152557"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/contracts/TST.openapi.json",
+          "blob": "1d6414aea62d8ec9188883c5d9f11d188558deee"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/000_bootstrap_disposable_pg16.sql",
+          "blob": "dc155510e0c16277e929a7c9763ac9778713bf81"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/100_durable_command_core.sql",
+          "blob": "6f7c5dfa9e673a7afe3092e3eeda8dd92b3957a7"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/101_checker_scope_grant.sql",
+          "blob": "cbf03edbe2d58ccbef37ae671ef1dd23e5f620bb"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/ACT.sql",
+          "blob": "a97db6ced98c01952ad88d3859decea73751a135"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/ADM.sql",
+          "blob": "fa36e9b170cdb6e4e83e7f95e9fed9a67ce2cde4"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/AML.sql",
+          "blob": "21b7909b1c79a6f3080e70825e8e21756be6ba5f"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/API.sql",
+          "blob": "f0289b8de7849ef48f122655da2fc377c89a10ed"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/ARC.sql",
+          "blob": "137561762691ab66a9d75d573fe40fe963de0e82"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/BRN.sql",
+          "blob": "c4da5695c62aec8510c82d9c2e5e4f5398609910"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/CARD.sql",
+          "blob": "6db768b79975c738d881d447bb5ed7a2b9b44dfc"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/CHN.sql",
+          "blob": "8623666314cc4ac866fa422b552164ca522d1517"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/CIF.sql",
+          "blob": "dd26f38c842b161295b3ba46b9d26f8476e53243"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/CRD.sql",
+          "blob": "88d35ca509f1a0995d02fcb60f4c58485d3110b1"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/CRM.sql",
+          "blob": "e50ad838e1edc617b3255f430687868e99328a39"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/DAT.sql",
+          "blob": "f5ee7bbe7988bdaf5d77ee9245a4113afaf85dcb"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/DR.sql",
+          "blob": "bf9cd2f4291b3ef6b4a03f3f50c35696535d3d9a"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/FEE.sql",
+          "blob": "b9f61aa043256979e22881bc2dd94d2f6d7593cb"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/GOV.sql",
+          "blob": "e33fb0dcf4733107c905a6bafc66bba19b961025"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/INF.sql",
+          "blob": "728fca93d4df93b97857080ee59ae66fbe412254"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/LED.sql",
+          "blob": "995de840c8cca81e56ac936c7dd496ceeb48c520"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/PAY.sql",
+          "blob": "30490cf7ff6ed772a23905153e75eabdb35f53f0"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/PRD.sql",
+          "blob": "b7e0e55c4029c141437eeafa48642571d1324acb"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/REC.sql",
+          "blob": "ac96cfdbac0c3a402d7d371edd130f93e6023571"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/REL.sql",
+          "blob": "c730e0807fb6c6d03b3b1124e9f7968ab0bf0a93"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/REP.sql",
+          "blob": "811b487125418c027d416f5cf6ec61ff431d7618"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/SEC.sql",
+          "blob": "326f4642903a91e239dce6ac033603b1e0ca8973"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/TRE.sql",
+          "blob": "736d80e4d9f08527e076c7a9721e4294f0a820ad"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/TST.sql",
+          "blob": "84679fdc7f8855876a08465e0340b4c2e4cdd5ee"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/tests/001_synthetic_seed.sql",
+          "blob": "6d3e70afa173ea8ee5f9b521480f38042d14f43a"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/tests/002_role_bank_a.sql",
+          "blob": "918f0fea4743bcdcc6902239fdd356d38bc91092"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/tests/003_role_bank_b.sql",
+          "blob": "b31d278b7402dad0047d416aa458790b0ec181fa"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/tests/004_role_unbound.sql",
+          "blob": "b55c3bef05caff5e22acd23a93ea8865b0b5241d"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/tests/005_verify_durable.sql",
+          "blob": "3cdb75bb65ad1cea2b560105ab782b7419bc52d7"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/tests/006_pg_25_domain_integration.mjs",
+          "blob": "0ee661bf2f80aed491ad86391466215f37494bcf"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/tests/007_unbound_command_denial.sql",
+          "blob": "31b49e5a04f8bfdcd1b16ca5ac99e564cd023482"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/db/tests/008_revoked_denied.sql",
+          "blob": "f33dc183bf32a8ee5664f64cd1b10eab004d0c48"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/src/domain-services.mjs",
+          "blob": "fdef6c13a01e4ce1b75f748fbf3efce43edc3ebb"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/src/pg-candidate-store.mjs",
+          "blob": "3d26a408a8ab61d120ed9a210d3368c8189680b9"
+        },
+        {
+          "path": "archive/historical-prs/node-stage3-candidates/tests/all-domains.test.mjs",
+          "blob": "745b86157dc5cb709574123075c8e3c899e530d9"
+        }
+      ]
+    }
+  ],
+  "archivedWorkflows": [
+    {
+      "path": "archive/historical-prs/disabled-workflows/opes-ui-route-ci.yml",
+      "blob": "d2e2a48a1836100539ca786ba6aacd61fe350680"
+    },
+    {
+      "path": "archive/historical-prs/disabled-workflows/opes-forms-ci.yml",
+      "blob": "9d0849739002f30e74e5433c621d053766fd7187"
+    },
+    {
+      "path": "archive/historical-prs/disabled-workflows/opes-reports-ci.yml",
+      "blob": "c59dbeec12beb6c3d7fd8dfad4a9e83900dd083d"
+    },
+    {
+      "path": "archive/historical-prs/disabled-workflows/opes-report-review-pg16.yml",
+      "blob": "d8d39e9270983d380c94049f45dbf8be29acde53"
+    },
+    {
+      "path": "archive/historical-prs/disabled-workflows/opes-core-documents-ci.yml",
+      "blob": "2722312cd81ac989283d1b4de4197a54fb9534b5"
+    },
+    {
+      "path": "archive/historical-prs/disabled-workflows/opes-core-forms-ci.yml",
+      "blob": "0b99f47ab38bcf4838e64acd5640ec9ca60768bd"
+    },
+    {
+      "path": "archive/historical-prs/disabled-workflows/opes-stage3-25-domains.yml",
+      "blob": "d856fb351b2d3190d6c405f1be8016979235e31f"
+    }
+  ],
+  "provenance": {
+    "historicalGitParents": [
+      "e5755aa5083c1ac5e3de3a11393dbf73290a8e6b",
+      "38c7aea8807fb778b44271da0120106f89fd2b13",
+      "33a34bedef9005c7aa6c900088c69749bd9598df",
+      "2653e0f391c0f31303a926320fb3fed1d18cd80b",
+      "7d1cb5dd6aa80003bd5e31e03bbb8769f43639b9"
+    ],
+    "groups": [
+      {
+        "prs": [
+          2,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "includedThrough": "reports",
+        "sourceHead": "38c7aea8807fb778b44271da0120106f89fd2b13"
+      },
+      {
+        "prs": [
+          3
+        ],
+        "includedThrough": "docs",
+        "sourceHead": "33a34bedef9005c7aa6c900088c69749bd9598df"
+      },
+      {
+        "prs": [
+          4
+        ],
+        "includedThrough": "oldforms",
+        "sourceHead": "2653e0f391c0f31303a926320fb3fed1d18cd80b"
+      },
+      {
+        "prs": [
+          11
+        ],
+        "includedThrough": "stage3",
+        "sourceHead": "7d1cb5dd6aa80003bd5e31e03bbb8769f43639b9"
+      },
+      {
+        "prs": [
+          12,
+          13,
+          14
+        ],
+        "includedThrough": "prod",
+        "sourceHead": "e5755aa5083c1ac5e3de3a11393dbf73290a8e6b"
+      }
+    ]
+  },
+  "runtimeSingleSources": [
+    "services/opes-core-api",
+    "apps/opes-core-banking-web"
+  ],
+  "activeReferences": "Archive files are inert and outside Maven/Vite app roots; no archived workflows under .github/workflows.",
+  "nextPriority": [
+    "Trusted bank identity/session boundary and signed actor attestation review across all operations",
+    "Authoritative CIF/ACT/PRD and full ledger/account settlement invariants",
+    "Connect screen/form flows with real bank-scoped services; accessibility and visual QA",
+    "Secure document issuance (407 specifications), QR, signatures, retention",
+    "Report SQL/metric authority, source lineage and reconciled regulatory returns (378 specifications)",
+    "Full maker-checker, DR restore, malware scanning, encryption/secrets rotation, external audit and signoff"
+  ]
+}

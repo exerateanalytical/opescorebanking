@@ -1,0 +1,11 @@
+{
+  "name": "opes-core-banking-forms",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "589 synthetic banking form workflows, not bank-side submissions",
+  "scripts": {
+    "test": "node --test tests/unit.test.mjs",
+    "export": "node scripts/export-all.mjs"
+  }
+}
