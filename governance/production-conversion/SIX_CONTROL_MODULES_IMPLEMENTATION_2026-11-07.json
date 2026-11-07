@@ -1,0 +1,43 @@
+{
+  "checkpoint": "OPES-6-CONTROL-OPERATIONAL-MODULES-2026-11-07",
+  "backend": "Java 25 + Spring Boot 4.1.2 + PostgreSQL 16+",
+  "frontend": "React 19 + TypeScript 7",
+  "modules": [
+    "GOV",
+    "ARC",
+    "TST",
+    "INF",
+    "DR",
+    "REL"
+  ],
+  "implemented": [
+    "6 typed bank-specific record schemas and business rules",
+    "Persisted create, maker submit, independent decision, retire, scoped read/list/history",
+    "Short-lived HMAC per-request attestation, bank principal, nonces",
+    "Record-version concurrency, idempotency, immutable audit and internal outbox",
+    "Immutable binary evidence upload with server/database SHA-256 and independent verification",
+    "Evidence references require VERIFIED same-bank same-domain provenance",
+    "React OIDC/PKCE pages, live API calls and controlled evidence workflow"
+  ],
+  "tests": {
+    "java": 13,
+    "dbLifecycleCases": 6,
+    "dbExpectedActions": 24,
+    "firstSixPassed": "https://github.com/exerateanalytical/opescorebanking/actions/runs/42327443854",
+    "evidencePassed": "https://github.com/exerateanalytical/opescorebanking/actions/runs/42328125732"
+  },
+  "acceptedForRealBank": false,
+  "actualInfrastructureMonitoring": false,
+  "actualDRRestoreExecution": false,
+  "actualReleaseDeployment": false,
+  "sourceCoverage": "Operational control records, not entire enterprise banking domains",
+  "blockers": [
+    "Real institution IdP and approved JWT issuer and audience",
+    "Approved bank HMAC key provisioning/rotation and SQL login custody",
+    "External malware scanner integration and acceptance evidence",
+    "Complete browser E2E tests including authenticated dual-operator flows",
+    "Real monitoring integration, DR backup restore integration, deployment automation",
+    "Disaster-recovery restore and performance/failover tests",
+    "Independent security and banking governance acceptance"
+  ]
+}

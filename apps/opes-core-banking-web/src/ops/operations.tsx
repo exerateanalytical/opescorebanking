@@ -7,6 +7,7 @@ import type {Config,LoginToken} from "./auth";
 import {apiClient,ApiIssue} from "./client";
 import type {OpsCase,RecordState,HistoryItem,Receipt} from "./client";
 import "./ops.css";
+import {EvidencePanel} from "./evidence-panel";
 
 type Field={name:string;type:string};
 type Module={id:string;label:string;businessReferenceField:string;
@@ -238,6 +239,8 @@ export function OpsWorkspace(){
            <Plus size={16}/> New record</button>
        </div>
       </div>
+      <EvidencePanel domain={module.id} client={client!}
+       onVerified={id=>{setEvidence(id);setNote("Verified evidence selected: "+id)}}/>
       {formVisible&&<section className="ops-panel">
        <h3>Create {module.label.toLowerCase()} record</h3>
        <p>All fields are persisted with a bank-scoped version. Content hashes must reference actual evidence.</p>

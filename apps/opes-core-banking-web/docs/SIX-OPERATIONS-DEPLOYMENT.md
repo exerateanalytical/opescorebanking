@@ -1,26 +1,18 @@
-# Six live control-record modules — frontend operational routes
+# Six-module staff web deployment
 
-**Runtime:** React 19/TypeScript 7; server Java 25/Spring Boot/PostgreSQL 16.
+Build-time Vite configuration (never contains secrets):
 
-- `/operations` and `/operations/{gov|arc|tst|inf|dr|rel}`: scoped module pages
-- Configured OIDC authorization code + PKCE with state, nonce, short-lived tokens in memory
-- Bank is selected by deployment configuration, not by untrusted browser input
-- `CREATE`, `SUBMIT`, independent `DECIDE`, `RETIRE`, scoped `LIST`, `READ`, `HISTORY` routed to bank-bound Spring Boot APIs
-- No fabricated records or balances, no automatic release deployment, no external execution
-- Response-uncertainty retry keeps the SAME item ID and idempotency key within page lifetime
-- No tokens in localStorage/sessionStorage; sessionStorage temporarily holds the PKCE verifier and state only
-
-**Required deployment settings:**
-
-```text
+```
 VITE_OPES_BANK_ID=<institution UUID>
 VITE_OPES_OIDC_ISSUER=https://...
-VITE_OPES_OIDC_CLIENT_ID=<public SPA client>
-VITE_OPES_OIDC_AUTHORIZE_URL=https://.../protocol/openid-connect/auth
-VITE_OPES_OIDC_TOKEN_URL=https://.../protocol/openid-connect/token
-VITE_OPES_API_BASE=<empty for same-origin secured API reverse proxy>
+VITE_OPES_OIDC_CLIENT_ID=<public PKCE client>
+VITE_OPES_OIDC_AUTHORIZE_URL=https://.../authorize
+VITE_OPES_OIDC_TOKEN_URL=https://.../token
+VITE_OPES_API_BASE=<empty for preferred same-origin API gateway>
 ```
 
-OIDC public client must enforce approved exact redirect URI `https://<staff-origin>/auth/callback` and Authorization Code + PKCE S256. Same-origin HTTPS is preferred; no CORS wildcard. Backend validates JWT issuer/audience and SQL role + signed command; no browser data is considered authoritative.
+The public OIDC client must be registered for exact `https://<staff-app-host>/auth/callback` redirect and S256 PKCE. No implicit grant, client secret, or persistent browser token is used. Deploy via trusted TLS/reverse proxy; configure CSP to include the trusted IdP authorization/token origins as appropriate. Proxy `/v1/banks` requests to the Spring Boot service with strict request body limits and no wildcard CORS.
 
-**Remaining pre-deployment controls:** reverse proxy/TLS/session gateway, approved evidence store/issuance, database operator proof key rotation, browser security and pentest, legal/regulatory review and application monitoring. These six modules manage records and decision evidence; they do not trigger real bank settlement, actual infrastructure monitoring, automated DR restores, or release deployment.
+A true bank user can sign in, select GOV/ARC/TST/INF/DR/REL, create typed records, list, open, submit with verified proof, get an independent decision, retire, and read immutable history. Evidence files are uploaded as private immutable binary records with SHA-256, and independently approved before decisions use their UUIDs. Server-side institution membership and SQL grants decide every operation. No test users, default bank or fictitious financial results.
+
+The front-end still requires a human-run browser acceptance audit on supported devices and live IdP setup, accessibility review, threat model, incident/DR runbook, and institution acceptance before production operation.
