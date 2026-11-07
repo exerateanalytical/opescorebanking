@@ -1,0 +1,29 @@
+name: OPES Core Banking — unified source provenance
+on:
+  push:
+    paths:
+      - 'archive/historical-prs/**'
+      - 'governance/consolidation/**'
+      - 'tools/verify_unified_repository.py'
+      - 'README.md'
+      - '.github/workflows/opes-unified-integrity.yml'
+  pull_request:
+    paths:
+      - 'archive/historical-prs/**'
+      - 'governance/consolidation/**'
+      - 'tools/verify_unified_repository.py'
+      - 'README.md'
+      - '.github/workflows/opes-unified-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-sources:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Verify canonical source registry and exact historical blob identity
+        run: python3 tools/verify_unified_repository.py

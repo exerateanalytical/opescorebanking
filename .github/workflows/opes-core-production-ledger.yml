@@ -1,0 +1,133 @@
+name: OPES Core Banking - Production Java 25 Ledger Service
+on:
+  push:
+    paths:
+      - 'services/opes-core-api/**'
+      - '.github/workflows/opes-core-production-ledger.yml'
+      - 'governance/decisions/ADR-OPES-004-PRODUCTION-STACK.md'
+  pull_request:
+    paths:
+      - 'services/opes-core-api/**'
+      - '.github/workflows/opes-core-production-ledger.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  production-ledger-compile-and-postgres:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: opes_bank_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d opes_bank_ci"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+          cache: maven
+          cache-dependency-path: services/opes-core-api/pom.xml
+      - name: Compile and test production application code
+        working-directory: services/opes-core-api
+        run: mvn -B -ntp clean verify
+      - name: Provision isolated CI-only PostgreSQL logins
+        env:
+          PGPASSWORD: postgres
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f services/opes-core-api/ci/001_ci_roles.sql
+      - name: Apply production SQL migrations (no database-name test guard)
+        env:
+          PGPASSWORD: postgres
+        run: |
+          set -euo pipefail
+          for sql in services/opes-core-api/src/main/resources/db/migration/V*.sql; do
+            psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f "$sql"
+          done
+      - name: Provision bank test actors, accounts, periods and independent approval
+        env:
+          PGPASSWORD: postgres
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f services/opes-core-api/ci/002_ci_fixture.sql
+      - name: Install 25-domain signed-review PostgreSQL fixtures (CI only)
+        env:
+          PGPASSWORD: postgres
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f services/opes-core-api/ci/008_domain_fixture.sql
+      - name: Provision six-module CI-only signing keys and scoped grants
+        env:
+          PGPASSWORD: postgres
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f services/opes-core-api/ci/014_six_module_ci_setup.sql
+      - name: Bank A authenticated principal — real POST, replay, recovery, write denial
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/003_bank_a_post_replay.sql
+      - name: Bank B principal — strict cross-bank denial
+        env:
+          PGPASSWORD: only_ci_opes_bank_b
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_b -d opes_bank_ci -f services/opes-core-api/ci/004_bank_b_isolation.sql
+      - name: Unbound principal — fail-closed
+        env:
+          PGPASSWORD: only_ci_opes_unbound
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_unbound -d opes_bank_ci -f services/opes-core-api/ci/005_unbound_denial.sql
+      - name: Verify balanced posted journal, atomic registry/audit/outbox and immutability
+        env:
+          PGPASSWORD: postgres
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f services/opes-core-api/ci/006_assert_posted_facts.sql
+      - name: Validate all 25 typed review domains and 75 maker-checker commands against PostgreSQL
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/009_25_domain_review.sql
+      - name: Verify all domain RLS, typed rows, atomic audit and internal outbox
+        env:
+          PGPASSWORD: postgres
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f services/opes-core-api/ci/010_25_domain_assertions.sql
+      - name: Deny review reads from another bank principal
+        env:
+          PGPASSWORD: only_ci_opes_bank_b
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_b -d opes_bank_ci -f services/opes-core-api/ci/011_25_domain_bank_b.sql
+      - name: Deny review reads from unbound database principal
+        env:
+          PGPASSWORD: only_ci_opes_unbound
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_unbound -d opes_bank_ci -f services/opes-core-api/ci/012_25_domain_unbound.sql
+      - name: Run all six real PostgreSQL operational-control lifecycles as bank A
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/015_six_module_lifecycle.sql
+      - name: Check six typed domain tables, 24 idempotent actions and immutable evidence
+        env:
+          PGPASSWORD: postgres
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -f services/opes-core-api/ci/016_six_module_assert.sql
+      - name: Refuse another institution's authenticated control-module records
+        env:
+          PGPASSWORD: only_ci_opes_bank_b
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_b -d opes_bank_ci -f services/opes-core-api/ci/017_six_module_cross_bank.sql
+      - name: Refuse database principals without institution membership
+        env:
+          PGPASSWORD: only_ci_opes_unbound
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_unbound -d opes_bank_ci -f services/opes-core-api/ci/018_six_module_unbound.sql
+      - name: Verify binary evidence upload, SHA-256 integrity, independent verification, unverified-denial
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/020_evidence_integrity_lifecycle.sql
+      - name: Revoke actor membership in durable authoritative database
+        env:
+          PGPASSWORD: postgres
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U postgres -d opes_bank_ci -c "UPDATE opes_core.actor_membership SET active=false,revision=revision+1 WHERE bank_id='aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa'"
+      - name: Previously authenticated actor cannot read committed outcome or replay after revocation
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/007_revocation_denial.sql
+      - name: Revoked bank actor cannot read or replay any domain review
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/013_revoked_domain_actor.sql
+      - name: Revoked operator cannot read operational-control records
+        env:
+          PGPASSWORD: only_ci_opes_bank_a
+        run: psql -X -v ON_ERROR_STOP=1 -h 127.0.0.1 -U opes_prodtest_a -d opes_bank_ci -f services/opes-core-api/ci/019_six_module_revoked.sql

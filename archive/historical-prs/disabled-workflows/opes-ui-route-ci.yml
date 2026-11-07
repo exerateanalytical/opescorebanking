@@ -1,0 +1,75 @@
+name: OPES Core Banking UI route and contract checks
+on:
+  push:
+    paths:
+      - 'apps/opes-core-banking-ui/**'
+      - '.github/workflows/opes-ui-route-ci.yml'
+  pull_request:
+    paths:
+      - 'apps/opes-core-banking-ui/**'
+      - '.github/workflows/opes-ui-route-ci.yml'
+jobs:
+  route-catalogue:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test screen register and domain field schemas
+        run: node --test tests/*.test.mjs
+        working-directory: apps/opes-core-banking-ui
+      - name: Check syntax of browser module
+        run: node --check src/app.js
+        working-directory: apps/opes-core-banking-ui
+
+  visual-browser-audit:
+    if: github.event_name == 'push'
+    needs: route-catalogue
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: npm install --no-save playwright@1.55.1
+        working-directory: apps/opes-core-banking-ui
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+        working-directory: apps/opes-core-banking-ui
+      - name: Start static HTTP server
+        run: mkdir -p apps/opes-core-banking-ui/audit && (python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/opes-core-ui.log 2>&1 &)
+      - name: Audit 726 routes and viewport layout
+        run: node tests/visual-audit.mjs
+        working-directory: apps/opes-core-banking-ui
+      - name: Attach screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: opes-core-banking-viewports
+          path: apps/opes-core-banking-ui/audit/*.png
+          if-no-files-found: ignore
+
+  package-ui-prototype:
+    needs: [route-catalogue, visual-browser-audit]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Export all 726 screen definitions with SHA-256 manifest
+        run: node scripts/export-screen-pack.mjs
+        working-directory: apps/opes-core-banking-ui
+      - name: Package verified non-production UI files
+        run: zip -q -r opes-core-banking-ui-prototype.zip apps/opes-core-banking-ui -x 'apps/opes-core-banking-ui/node_modules/*' 'apps/opes-core-banking-ui/audit/*'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: opes-core-banking-ui-prototype
+          path: opes-core-banking-ui-prototype.zip
+          if-no-files-found: error

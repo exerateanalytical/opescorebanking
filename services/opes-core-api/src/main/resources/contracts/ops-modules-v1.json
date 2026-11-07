@@ -1,0 +1,274 @@
+{
+  "schema": "opes.ops.v1",
+  "modules": [
+    {
+      "id": "GOV",
+      "label": "Governance policies",
+      "businessReferenceField": "policyCode",
+      "revisionField": "policyRevision",
+      "fields": [
+        {
+          "name": "policyCode",
+          "type": "text"
+        },
+        {
+          "name": "policyRevision",
+          "type": "integer"
+        },
+        {
+          "name": "title",
+          "type": "text"
+        },
+        {
+          "name": "category",
+          "type": "text"
+        },
+        {
+          "name": "effectiveDate",
+          "type": "date"
+        },
+        {
+          "name": "reviewDate",
+          "type": "date"
+        },
+        {
+          "name": "evidenceSha",
+          "type": "text"
+        },
+        {
+          "name": "ownerRef",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "ARC",
+      "label": "Architecture contract registry",
+      "businessReferenceField": "contractName",
+      "revisionField": "contractRevision",
+      "fields": [
+        {
+          "name": "contractName",
+          "type": "text"
+        },
+        {
+          "name": "contractRevision",
+          "type": "integer"
+        },
+        {
+          "name": "boundedContext",
+          "type": "text"
+        },
+        {
+          "name": "semanticVersion",
+          "type": "text"
+        },
+        {
+          "name": "compatibility",
+          "type": "text"
+        },
+        {
+          "name": "specificationSha",
+          "type": "text"
+        },
+        {
+          "name": "ownerRef",
+          "type": "text"
+        },
+        {
+          "name": "approvedAdrRef",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "TST",
+      "label": "Test execution evidence",
+      "businessReferenceField": "suiteRef",
+      "revisionField": "executionSeq",
+      "fields": [
+        {
+          "name": "suiteRef",
+          "type": "text"
+        },
+        {
+          "name": "executionSeq",
+          "type": "integer"
+        },
+        {
+          "name": "buildSha",
+          "type": "text"
+        },
+        {
+          "name": "environment",
+          "type": "text"
+        },
+        {
+          "name": "passedCount",
+          "type": "integer"
+        },
+        {
+          "name": "failedCount",
+          "type": "integer"
+        },
+        {
+          "name": "executedAt",
+          "type": "timestamptz"
+        },
+        {
+          "name": "evidenceSha",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "INF",
+      "label": "Infrastructure service evidence",
+      "businessReferenceField": "serviceCode",
+      "revisionField": "observationSeq",
+      "fields": [
+        {
+          "name": "serviceCode",
+          "type": "text"
+        },
+        {
+          "name": "observationSeq",
+          "type": "integer"
+        },
+        {
+          "name": "environment",
+          "type": "text"
+        },
+        {
+          "name": "observedStatus",
+          "type": "text"
+        },
+        {
+          "name": "observedAt",
+          "type": "timestamptz"
+        },
+        {
+          "name": "telemetrySha",
+          "type": "text"
+        },
+        {
+          "name": "runbookRef",
+          "type": "text"
+        },
+        {
+          "name": "incidentRef",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "DR",
+      "label": "Disaster recovery exercise evidence",
+      "businessReferenceField": "planRef",
+      "revisionField": "exerciseSeq",
+      "fields": [
+        {
+          "name": "planRef",
+          "type": "text"
+        },
+        {
+          "name": "exerciseSeq",
+          "type": "integer"
+        },
+        {
+          "name": "targetRpoMinutes",
+          "type": "integer"
+        },
+        {
+          "name": "measuredRpoMinutes",
+          "type": "integer"
+        },
+        {
+          "name": "targetRtoMinutes",
+          "type": "integer"
+        },
+        {
+          "name": "measuredRtoMinutes",
+          "type": "integer"
+        },
+        {
+          "name": "restoreSha",
+          "type": "text"
+        },
+        {
+          "name": "exercisedAt",
+          "type": "timestamptz"
+        },
+        {
+          "name": "evidenceSha",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "REL",
+      "label": "Release approval register",
+      "businessReferenceField": "releaseVersion",
+      "revisionField": "releaseSeq",
+      "fields": [
+        {
+          "name": "releaseVersion",
+          "type": "text"
+        },
+        {
+          "name": "releaseSeq",
+          "type": "integer"
+        },
+        {
+          "name": "artifactSha",
+          "type": "text"
+        },
+        {
+          "name": "targetEnvironment",
+          "type": "text"
+        },
+        {
+          "name": "changeTicket",
+          "type": "text"
+        },
+        {
+          "name": "rollbackPlanRef",
+          "type": "text"
+        },
+        {
+          "name": "testCaseId",
+          "type": "uuid"
+        },
+        {
+          "name": "infrastructureCaseId",
+          "type": "uuid"
+        },
+        {
+          "name": "recoveryCaseId",
+          "type": "uuid"
+        },
+        {
+          "name": "scheduledAt",
+          "type": "timestamptz"
+        }
+      ]
+    }
+  ],
+  "operations": [
+    "CREATE",
+    "SUBMIT",
+    "DECIDE",
+    "RETIRE",
+    "READ",
+    "LIST",
+    "HISTORY"
+  ],
+  "lifecycle": [
+    "DRAFT",
+    "PENDING_APPROVAL",
+    "APPROVED_RECORD",
+    "REJECTED",
+    "RETIRED"
+  ],
+  "realDeployment": false
+}

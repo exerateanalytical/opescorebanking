@@ -1,0 +1,10 @@
+{
+  "name": "opes-core-banking-screen-workbench",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Non-production prototype of the OPES Core Banking screen routes",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  }
+}

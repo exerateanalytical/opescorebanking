@@ -1,0 +1,135 @@
+name: OPES Core Banking Stage 3 - One Batch 25 Domain Engineering
+on:
+  push:
+    paths:
+      - 'engineering/stage3-one-batch/**'
+      - '.github/workflows/opes-stage3-25-domains.yml'
+  pull_request:
+    paths:
+      - 'engineering/stage3-one-batch/**'
+      - '.github/workflows/opes-stage3-25-domains.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stage3-25-domain-contracts-services-and-sql:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: opes_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d opes_test"
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify 25 typed domain contracts, shared strict service and 75 lifecycle operations
+        run: NODE_ENV=test node --test engineering/stage3-one-batch/tests/*.test.mjs
+      - name: Bootstrap isolated PostgreSQL 16 bank-principal binding
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/000_bootstrap_disposable_pg16.sql
+      - name: Apply ALL 25 domain-specific typed candidate schemas (no partial builds)
+        env:
+          PGPASSWORD: postgres
+        run: |
+          set -euo pipefail
+          test "$(find engineering/stage3-one-batch/db -maxdepth 1 -name '[A-Z]*.sql' | wc -l)" -eq 25
+          for file in engineering/stage3-one-batch/db/[A-Z]*.sql; do
+            psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -f "$file"
+          done
+      - name: Install bank-candidate durable command SQL and checker scope
+        env:
+          PGPASSWORD: postgres
+        run: |
+          psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/100_durable_command_core.sql
+          psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/101_checker_scope_grant.sql
+      - name: Seed 50 synthetic two-bank domain records
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/tests/001_synthetic_seed.sql
+      - name: Bank A reads exactly its own 25 domain records; DML denied
+        env:
+          PGPASSWORD: only_disposable_stage3_bank_a
+        run: psql -h 127.0.0.1 -U opes_s3_bank_a_lab -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/tests/002_role_bank_a.sql
+      - name: Bank B reads exactly its own 25 domain records; DML denied
+        env:
+          PGPASSWORD: only_disposable_stage3_bank_b
+        run: psql -h 127.0.0.1 -U opes_s3_bank_b_lab -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/tests/003_role_bank_b.sql
+      - name: Unbound bank principal sees zero records in all 25 domains
+        env:
+          PGPASSWORD: only_disposable_stage3_unbound
+        run: psql -h 127.0.0.1 -U opes_s3_unbound_lab -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/tests/004_role_unbound.sql
+      - name: Install node-postgres disposable integration dependency
+        working-directory: engineering/stage3-one-batch
+        run: npm install --no-save --ignore-scripts pg@8.16.3
+      - name: Exercise 25 signed identity-to-database candidate workflows
+        working-directory: engineering/stage3-one-batch
+        run: NODE_ENV=test node db/tests/006_pg_25_domain_integration.mjs
+      - name: Verify exactly 75 durable commands, audit events and inert outbox rows
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/tests/005_verify_durable.sql
+      - name: Unbound authenticated database role cannot call domain mutation or read candidate
+        env:
+          PGPASSWORD: only_disposable_stage3_unbound
+        run: psql -h 127.0.0.1 -U opes_s3_unbound_lab -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/tests/007_unbound_command_denial.sql
+      - name: Revoke bank A maker at trusted database authority
+        env:
+          PGPASSWORD: postgres
+        run: psql -h 127.0.0.1 -U postgres -d opes_test -v ON_ERROR_STOP=1 -X -c "UPDATE opes_stage3.database_binding SET enabled=false WHERE login_role='opes_s3_bank_a_lab'"
+      - name: Previously authenticated but revoked bank login cannot read or mutate
+        env:
+          PGPASSWORD: only_disposable_stage3_bank_a
+        run: psql -h 127.0.0.1 -U opes_s3_bank_a_lab -d opes_test -v ON_ERROR_STOP=1 -X -f engineering/stage3-one-batch/db/tests/008_revoked_denied.sql
+      - name: Verify SQL role policy and 25 per-domain table structures
+        env:
+          PGPASSWORD: postgres
+        run: |
+          set -euo pipefail
+          count=$(psql -h 127.0.0.1 -U postgres -d opes_test -XAtq -v ON_ERROR_STOP=1 -c "SELECT count(*) FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='opes_stage3' AND c.relkind='r' AND c.relname LIKE '%_candidate' AND c.relrowsecurity AND c.relforcerowsecurity")
+          test "$count" = 25
+          echo "STAGE3_ALL_25_PG16_RLS_TABLES_VERIFIED"
+      - name: Produce one complete deterministic Stage3 25-domain ZIP bundle
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
+          from hashlib import sha256
+          import json
+          root=Path('engineering/stage3-one-batch')
+          out=Path('dist');out.mkdir(exist_ok=True)
+          manifest=json.loads((root/'MANIFEST.json').read_text())
+          names=manifest['domainIds']
+          assert len(names)==25 and len(set(names))==25
+          assert len(list((root/'contracts').glob('*.openapi.json')))==25
+          assert len(list((root/'db').glob('[A-Z]*.sql')))==25
+          src=sorted(p for p in root.rglob('*') if p.is_file() and 'node_modules' not in p.parts and
+             p.suffix not in ['.pyc'] and '__pycache__' not in p.parts)
+          assert len(src)>=65
+          name='OPES_STAGE3_ALL_25_DOMAINS_ONE_BATCH_2026-11-06.zip'
+          fp=out/name
+          with ZipFile(fp,'w') as z:
+            for p in src:
+              zi=ZipInfo(str(p.relative_to(root)),date_time=(2026,11,6,0,0,0))
+              zi.compress_type=ZIP_DEFLATED
+              zi.external_attr=0o644 << 16
+              z.writestr(zi,p.read_bytes())
+          digest=sha256(fp.read_bytes()).hexdigest()
+          (out/'SHA256SUMS.txt').write_text(f'{digest}  {name}\n')
+          print('STAGE3_SINGLE_ZIP_PACKAGED',len(src),'files',len(names),'domains',digest)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OPES-STAGE3-25-DOMAIN-ONE-BATCH
+          path: |
+            dist/OPES_STAGE3_ALL_25_DOMAINS_ONE_BATCH_2026-11-06.zip
+            dist/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,35 @@
+\set ON_ERROR_STOP on
+SET opes.reporting_institution='BANK-B';
+DO $test$
+DECLARE v record;ok boolean;
+BEGIN
+ SELECT * INTO v FROM opes_rpt_review_lab.read_review('RPT-LED-001');
+ IF v.institution_id IS DISTINCT FROM 'BANK-A' OR v.state IS DISTINCT FROM 'DRAFT'
+ THEN RAISE EXCEPTION 'BANK_A_READ_FAILED';END IF;
+ IF (SELECT count(*) FROM opes_rpt_review_lab.read_review('RPT-LED-002'))<>1
+ THEN RAISE EXCEPTION 'BANK_A_SECOND_RECORD_MISSING';END IF;
+ SELECT opes_rpt_review_lab.advance_review('RPT-LED-001',0,'DRAFT','sha256-SYNTHETIC-A-001') INTO ok;
+ IF ok IS DISTINCT FROM true THEN RAISE EXCEPTION 'MAKER_SUBMISSION_FAILED';END IF;
+ IF opes_rpt_review_lab.advance_review('RPT-LED-001',0,'DRAFT','sha256-SYNTHETIC-A-001')
+ THEN RAISE EXCEPTION 'DUPLICATE_SUBMISSION_ACCEPTED';END IF;
+ IF opes_rpt_review_lab.advance_review('RPT-LED-001',1,'PENDING_REVIEW','sha256-SYNTHETIC-A-001')
+ THEN RAISE EXCEPTION 'MAKER_SELF_REVIEW';END IF;
+ BEGIN
+  PERFORM opes_rpt_review_lab.advance_review('RPT-LED-002',0,'DRAFT','sha256-SYNTHETIC-A-002');
+  RAISE EXCEPTION 'EXPECTED_ATOMIC_AUDIT_CONFLICT';
+ EXCEPTION WHEN unique_violation THEN NULL;
+ END;
+ SELECT * INTO v FROM opes_rpt_review_lab.read_review('RPT-LED-002');
+ IF v.state<>'DRAFT' OR v.version<>0 THEN RAISE EXCEPTION 'AUDIT_CONFLICT_DID_NOT_ROLL_BACK';END IF;
+ BEGIN
+  PERFORM count(*) FROM opes_rpt_review_lab.review_record;
+  RAISE EXCEPTION 'DIRECT_READ_PRIVILEGE_BYPASS';
+ EXCEPTION WHEN insufficient_privilege THEN NULL;
+ END;
+ BEGIN
+  UPDATE opes_rpt_review_lab.review_record SET state='REVIEWED_NOT_PUBLISHED';
+  RAISE EXCEPTION 'DIRECT_WRITE_PRIVILEGE_BYPASS';
+ EXCEPTION WHEN insufficient_privilege THEN NULL;
+ END;
+END $test$;
+SELECT 'PG16_BANK_A_MAKER_PASS';

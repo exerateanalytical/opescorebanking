@@ -1,0 +1,15 @@
+\set ON_ERROR_STOP on
+DO $test$ DECLARE v record;
+BEGIN
+ SELECT * INTO v FROM opes_rpt_review_lab.read_review('RPT-LED-001');
+ IF v.institution_id<>'BANK-A' OR v.state<>'PENDING_REVIEW' OR v.version<>1
+ THEN RAISE EXCEPTION 'PENDING_STATE_MISSING';END IF;
+ IF NOT opes_rpt_review_lab.advance_review('RPT-LED-001',1,'PENDING_REVIEW','sha256-SYNTHETIC-A-001')
+ THEN RAISE EXCEPTION 'CHECKER_FAILED';END IF;
+ IF opes_rpt_review_lab.advance_review('RPT-LED-001',2,'REVIEWED_NOT_PUBLISHED','sha256-SYNTHETIC-A-001')
+ THEN RAISE EXCEPTION 'UNAUTHORIZED_PUBLICATION';END IF;
+ SELECT * INTO v FROM opes_rpt_review_lab.read_review('RPT-LED-001');
+ IF v.state<>'REVIEWED_NOT_PUBLISHED' OR v.version<>2 OR v.checker_id<>'A-CHECKER'
+ THEN RAISE EXCEPTION 'CHECKER_STATE_INVALID';END IF;
+END $test$;
+SELECT 'PG16_BANK_A_CHECKER_PASS';
